@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1rem; /* un poco más pequeño que el valor base */
+  font-weight: 600; /* peso ligeramente más grueso */
+  line-height: 1.6;
+}
+
+h1,
+h2,
+.titulo {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
   --vt-c-white: #ffffff;

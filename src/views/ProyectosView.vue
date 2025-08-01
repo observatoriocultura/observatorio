@@ -1,11 +1,19 @@
 <template>
-  <NavbarComponent />
   <div class="container mt-5">
-    <h2 class="text-success">Nuestros Proyectos</h2>
-    <p>Listado de proyectos e iniciativas en desarrollo.</p>
+    <h2>Nuestros Proyectos</h2>
+    <ul class="list-group mt-4">
+      <li class="list-group-item">
+        <RouterLink
+          to="/analisis-participaciones-plan-cultura-2038"
+          class="text-decoration-none fw-bold"
+        >
+          📘 Plan de Cultura 2038 - Análisis de Participaciones
+        </RouterLink>
+        <p class="mb-0 text-muted">
+          Informe interactivo del resultado de procesamiento y análisis de participaciones
+          ciudadanas en 2025
+        </p>
+      </li>
+    </ul>
   </div>
 </template>
-
-<script setup>
-import NavbarComponent from '../components/NavbarComponent.vue'
-</script>

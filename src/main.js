@@ -6,4 +6,7 @@ import router from './router'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
+// ✅ Importar estilos globales
+import './assets/main.css'
+
 createApp(App).use(router).mount('#app')

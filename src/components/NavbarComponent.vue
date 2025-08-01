@@ -1,6 +1,6 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
       <a class="navbar-brand" href="#">Observatorio</a>
       <button
         class="navbar-toggler"
@@ -17,9 +17,6 @@
           </li>
           <li class="nav-item">
             <RouterLink class="nav-link" to="/proyectos">Proyectos</RouterLink>
-          </li>
-          <li class="nav-item">
-            <RouterLink class="nav-link" to="/contacto">Contacto</RouterLink>
           </li>
         </ul>
       </div>
