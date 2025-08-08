@@ -12,18 +12,21 @@
   </ul>
   <GlosarioComponent v-if="currentSection === 'glosario'" />
   <InicioComponent v-else-if="currentSection === 'inicio'" />
+  <ResultadosF2M1 v-else-if="currentSection === 'resultadosF2M1'" />
 </template>
 
 <script setup>
 import { ref } from 'vue'
 import InicioComponent from '../../components/i100_plan_cultura/InicioComponent.vue'
 import GlosarioComponent from '../../components/i100_plan_cultura/GlosarioComponent.vue'
+import ResultadosF2M1 from '../../components/i100_plan_cultura/ResultadosF2M1.vue'
 
 // Variables
 //-----------------------------------------------------------------------------
-const currentSection = ref('glosario')
+const currentSection = ref('inicio')
 const sections = ref([
   { name: 'inicio', title: 'Inicio', component: InicioComponent },
   { name: 'glosario', title: 'Glosario', component: GlosarioComponent },
+  { name: 'resultadosF2M1', title: 'Resultados', component: ResultadosF2M1 },
 ])
 </script>
