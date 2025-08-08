@@ -1,0 +1,82 @@
+[
+  {
+    "término":"Plan de Cultura de Bogotá",
+    "sigla":"PCB",
+    "definición":"Documento estratégico que orienta las políticas, acciones y metas culturales de la ciudad hacia 2038."
+  },
+  {
+    "término":"Encuentro",
+    "sigla":null,
+    "definición":"Sesión participativa de cocreación con ciudadanía y actores clave para recoger insumos del Plan."
+  },
+  {
+    "término":"Fase",
+    "sigla":"F",
+    "definición":"Etapa técnica del procesamiento de la información levantada en los encuentros."
+  },
+  {
+    "término":"Fase 1",
+    "sigla":"F1",
+    "definición":"Limpieza, segmentación y trazabilidad de las transcripciones (preparación del dato)."
+  },
+  {
+    "término":"Fase 2",
+    "sigla":"F2",
+    "definición":"Codificación automática y validación de variables analíticas en cada fragmento orientadas a conclusiones por encuentros y por dimensiones culturales. "
+  },
+  {
+    "término":"Fase 3",
+    "sigla":"F3",
+    "definición":"Síntesis y agregación de resultados en conclusiones y orientaciones accionables en focadas unicamente por dimensiones culturales y temáticas."
+  },
+  {
+    "término":"Momento",
+    "sigla":"M",
+    "definición":"Bloque temático de análisis dentro de los encuentros, definido por la pregunta guía."
+  },
+  {
+    "término":"Momento 1",
+    "sigla":"M1",
+    "definición":"¿Cómo imaginas tu experiencia en la vida cultural de Bogotá hacia 2038? Explora los sueños, visiones e imaginarios colectivos sobre la experiencia cultural futura en la ciudad."
+  },
+  {
+    "término":"Momento 2",
+    "sigla":"M2",
+    "definición":"¿Qué problema o barrera identifica actualmente en esta dimensión, y qué cambio le gustaría ver hacia 2038? Identifica obstáculos actuales y transformaciones necesarias según las voces participantes, organizadas en torno a seis dimensiones estratégicas del Plan de Cultura"
+  },
+  {
+    "término":"Momento 3",
+    "sigla":"M3",
+    "definición":"¿Qué papel pueden tener las prácticas y proyectos en cultura para generar cambios en temas como la relación con el medio ambiente, la salud y el bienestar, la movilidad, el cambio tecnológico, el cambio demográfico, la educación y el trabajo, o la convivencia en la ciudad? Identifica obstáculos actuales y transformaciones necesarias según las voces participantes, organizadas en torno a seis dimensiones estratégicas del Plan de Cultura "
+  },
+  {
+    "término":"Nodo",
+    "sigla":null,
+    "definición":"Unidad de trabajo dentro de los encuentros que agrupa participantes según un criterio común —territorial, sectorial\/instancial, poblacional o temático para desarrollar la discusión y recoger insumos de manera focalizada."
+  },
+  {
+    "término":"Tipología",
+    "sigla":null,
+    "definición":"Criterio de agrupación del nodo según el tipo de enfoque aplicado (Territorial, sectorial, poblacional, interinstitucional) "
+  },
+  {
+    "término":"Horizonte Estratégico",
+    "sigla":null,
+    "definición":"Un Horizonte Estratégico es una categoría prospectiva que identifica los grandes retos, transformaciones y tendencias estructurales que condicionan el presente y proyectan escenarios de futuro para la vida urbana y cultural. Estos horizontes permiten enmarcar la planificación cultural a largo plazo dentro de contextos amplios que trascienden las acciones inmediatas, proporcionando una base para anticipar cambios y orientar políticas públicas sostenibles."
+  },
+  {
+    "término":"Dimensión-Coordendada",
+    "sigla":null,
+    "definición":"Una Dimensión-Coordenada es una categoría conceptual que organiza y agrupa las perspectivas, enfoques o temas clave a partir de los cuales se interpreta y analiza la información recolectada en ejercicios de participación, estudios e investigaciones culturales. Estas dimensiones representan ejes estratégicos de sentido que permiten clasificar y comprender los aportes ciudadanos, estableciendo conexiones entre los discursos, prácticas y expectativas de los actores culturales frente a los retos y objetivos del sector."
+  },
+  {
+    "término":"Grupo poblacional",
+    "sigla":null,
+    "definición":"Es una variable cualitativa categórica que indica el segmento social, etario, institucional o territorial al que se orientan o sobre el cual se refieren los aportes y propuestas recogidos en los espacios presenciales de construcción del Plan de Cultura 2038. Esta variable permite clasificar y analizar la participación según actores específicos, reconociendo sus particularidades, necesidades y roles dentro del ecosistema cultural y social de Bogotá."
+  },
+  {
+    "término":"Enfoque transversal",
+    "sigla":null,
+    "definición":"Variable que indica si el texto incorpora perspectivas que atraviesan de manera integral las reflexiones culturales, orientadas a garantizar derechos, equidad, inclusión y reconocimiento de las diferencias. Este enfoque puede expresarse de forma explícita o implícita en cómo se entienden, analizan o proyectan los temas culturales, considerando principios de justicia social y las realidades de poblaciones históricamente excluidas o en contextos de desigualdad."
+  }
+]
