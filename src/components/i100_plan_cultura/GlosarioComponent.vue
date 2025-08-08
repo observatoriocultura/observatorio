@@ -27,7 +27,9 @@ import { ref, onMounted } from 'vue'
 const glosario = ref([])
 
 onMounted(async () => {
-  const res = await fetch('public/content/2025/projects/i100_plan_cultura/glosario.json')
+  const res = await fetch(
+    `${import.meta.env.BASE_URL}content/2025/projects/i100_plan_cultura/glosario.json`,
+  )
   glosario.value = await res.json()
 })
 </script>

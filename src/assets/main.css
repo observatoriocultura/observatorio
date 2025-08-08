@@ -9,6 +9,11 @@
   font-weight: 600;
 }
 
+.center-box-750 {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
 /*a,
 .green {
   text-decoration: none;
