@@ -1,5 +1,5 @@
 <template>
-  <ul class="nav nav-tabs mb-4">
+  <ul class="nav nav-pills mb-4">
     <li v-for="section in sections" :key="section" class="nav-item">
       <button
         class="nav-link"
@@ -30,3 +30,11 @@ const sections = ref([
   { name: 'resultadosF2M1', title: 'Resultados', component: ResultadosF2M1 },
 ])
 </script>
+
+<style>
+.sentimiento {
+  padding: 0.1em 0.4em;
+  border-radius: 0.2em;
+  background-color: antiquewhite;
+}
+</style>

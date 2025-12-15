@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
+:root {
+  color-scheme: light; /* o dark */
+}
+
 body {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 1rem; /* un poco más pequeño que el valor base */
@@ -51,7 +55,7 @@ h2,
   --section-gap: 160px;
 }
 
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: light) {
   :root {
     --color-background: var(--vt-c-black);
     --color-background-soft: var(--vt-c-black-soft);
@@ -63,7 +67,7 @@ h2,
     --color-heading: var(--vt-c-text-dark-1);
     --color-text: var(--vt-c-text-dark-2);
   }
-}
+}*/
 
 *,
 *::before,
