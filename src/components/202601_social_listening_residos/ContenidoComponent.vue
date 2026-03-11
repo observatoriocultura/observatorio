@@ -1,0 +1,730 @@
+<script setup>
+/**
+ * Componente: Análisis de comentarios ciudadanos sobre residuos.
+ * Fecha: Febrero 2026
+ * Autor: Mabel Ayala Meneses
+ */
+
+const scrollTo = (id) => {
+  const element = document.getElementById(id)
+  if (element) {
+    // Offset for non-sticky header (small breathing room)
+    const headerOffset = 24
+    const elementPosition = element.getBoundingClientRect().top
+    const offsetPosition = elementPosition + window.scrollY - headerOffset
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth',
+    })
+  }
+}
+</script>
+
+<template>
+  <div class="report-container">
+    <meta
+      name="description"
+      content="Documento: Análisis de comentarios ciudadanos sobre la problemática de residuos en el espacio público en Bogotá. Febrero de 2026."
+    />
+
+    <header>
+      <div class="wrap">
+        <div class="title">
+          <h1>
+            Análisis de comentarios ciudadanos sobre la problemática de residuos en el espacio
+            público en Bogotá
+          </h1>
+          <div class="meta">
+            <span class="pill">📅 <span>Febrero de 2026</span></span>
+            <span class="pill"
+              >✍️ <span>Elaborado por: <strong>Mabel Ayala Meneses</strong></span></span
+            >
+            <span class="pill">👥 <span>Equipo: Sistemas de Información y Narrativas</span></span>
+            <span class="pill"
+              >🏛️ <span>Dirección Observatorio y Gestión del Conocimiento Cultural</span></span
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="wrap">
+      <div class="grid">
+        <nav aria-label="Tabla de contenido">
+          <div class="nav-head">
+            <strong>Contenido</strong>
+            <span class="badge">v1.0</span>
+          </div>
+          <div class="nav-body">
+            <a href="#intro" @click.prevent="scrollTo('intro')">1. Introducción</a>
+            <a href="#metodo" @click.prevent="scrollTo('metodo')">2. Metodología</a>
+            <a href="#resultados" @click.prevent="scrollTo('resultados')"
+              >3. Resultados del análisis</a
+            >
+            <a href="#r31" @click.prevent="scrollTo('r31')">3.1 Sentimiento</a>
+            <a href="#r32" @click.prevent="scrollTo('r32')">3.2 DOFA</a>
+            <a href="#r33" @click.prevent="scrollTo('r33')">3.3 Categorías</a>
+            <a href="#r34" @click.prevent="scrollTo('r34')">3.4 Sentimiento por categoría</a>
+            <a href="#r35" @click.prevent="scrollTo('r35')">3.5 Ideas de solución</a>
+            <a href="#r36" @click.prevent="scrollTo('r36')">3.6 Nube de palabras</a>
+            <a href="#r37" @click.prevent="scrollTo('r37')">3.7 Actores</a>
+            <a href="#r38" @click.prevent="scrollTo('r38')">3.8 Referencias territoriales</a>
+          </div>
+        </nav>
+
+        <main>
+          <section id="intro">
+            <h2>1. Introducción <span class="badge">Sección</span></h2>
+            <p>
+              Con el fin de comprender las percepciones, preocupaciones y propuestas de la
+              ciudadanía frente a la problemática de los residuos en el espacio público en Bogotá,
+              se realizó un análisis de comentarios ciudadanos publicados en red social X
+              específicamente en la cuenta del alcalde Carlos F. Galán. Este ejercicio busca
+              identificar los principales focos de inconformidad relacionados con la acumulación de
+              basura, el uso indebido del espacio público, la limpieza urbana y la actuación
+              institucional, así como el tono emocional y el enfoque desde el cual la ciudadanía
+              aborda esta problemática.
+            </p>
+            <p>
+              El análisis se orienta a reconocer no solo los problemas más mencionados, sino también
+              la forma en que son interpretados por la ciudadanía, los actores que se consideran
+              responsables y el grado en que se formulan ideas de solución, como insumo para
+              fortalecer la gestión pública y las estrategias de intervención en el territorio.
+            </p>
+          </section>
+
+          <section id="metodo">
+            <h2>2. Metodología <span class="badge">Sección</span></h2>
+            <p>
+              El ejercicio se desarrolló a partir de una base de comentarios ciudadanos recopilados
+              desde redes sociales, relacionados explícitamente con la problemática de los residuos
+              en el espacio público. Los comentarios fueron organizados en una tabla estructurada y
+              analizados individualmente mediante técnicas de Procesamiento de Lenguaje Natural
+              (NLP), apoyadas en el uso de inteligencia artificial generativa a través del API de
+              Gemini, con el fin de extraer información clave de manera sistemática y consistente.
+            </p>
+
+            <div class="callout">
+              <strong>Procesos aplicados por comentario</strong>
+              <ul>
+                <li>
+                  Identificación de ubicación (direcciones, barrios, localidades o sitios
+                  específicos).
+                </li>
+                <li>
+                  Identificación del problema manifestado (residuos, suciedad, limpieza o uso del
+                  espacio público).
+                </li>
+                <li>Análisis de sentimiento (escala de -1 a 1: negativo, neutral, positivo).</li>
+                <li>
+                  Identificación de ideas de solución (acciones, alternativas o cambios propuestos).
+                </li>
+                <li>Identificación de actores clave (mencionados directa o indirectamente).</li>
+                <li>
+                  Clasificación estratégica DOFA (Debilidad, Oportunidad, Fortaleza o Amenaza).
+                </li>
+                <li>
+                  Vinculación territorial (tramos viales, localidades o puntos concretos del espacio
+                  público).
+                </li>
+              </ul>
+            </div>
+
+            <p class="muted">
+              Posteriormente, los resultados fueron consolidados y analizados de forma agregada,
+              apoyándose en visualizaciones gráficas para facilitar la identificación de patrones,
+              tendencias y relaciones entre variables.
+            </p>
+          </section>
+
+          <section id="resultados">
+            <h2>3. Resultados del análisis <span class="badge">Sección</span></h2>
+
+            <div class="kpi-row" aria-label="Indicadores destacados">
+              <div class="kpi">
+                <div class="label">Comentarios con sentimiento negativo</div>
+                <div class="value">86%</div>
+                <div class="muted">Predominio de inconformidad</div>
+              </div>
+              <div class="kpi">
+                <div class="label">Comentarios clasificados como Debilidad (DOFA)</div>
+                <div class="value">79%</div>
+                <div class="muted">Fallas estructurales/operativas</div>
+              </div>
+              <div class="kpi">
+                <div class="label">Ideas de solución (máxima presencia)</div>
+                <div class="value">75%</div>
+                <div class="muted">Cultura ciudadana y corresponsabilidad</div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <h3 id="r31">3.1 Distribución del sentimiento en los comentarios ciudadanos</h3>
+            <p>
+              El análisis de sentimiento de los comentarios ciudadanos sobre la problemática de los
+              residuos en el espacio público muestra un claro predominio de percepciones negativas.
+              Como se observa en la distribución general, el <strong>86 %</strong> de los
+              comentarios presenta un sentimiento negativo, lo que evidencia un alto nivel de
+              inconformidad, malestar y frustración por parte de la ciudadanía frente a la situación
+              actual.
+            </p>
+            <p>
+              Los comentarios con sentimiento neutro representan el <strong>9 %</strong>, y suelen
+              corresponder a mensajes descriptivos, solicitudes de información o menciones del
+              problema sin una carga emocional explícita. Por su parte, solo el
+              <strong>5 %</strong> de los comentarios presenta un sentimiento positivo, generalmente
+              asociado a reconocimientos puntuales, expectativas de mejora o menciones aisladas de
+              acciones correctivas.
+            </p>
+            <p class="muted">
+              Este resultado sugiere que la problemática de los residuos en el espacio público es
+              percibida mayoritariamente como un problema crítico y persistente, con impacto
+              negativo en la calidad del entorno urbano y en la experiencia cotidiana.
+            </p>
+
+            <h3 id="r32">3.2 Distribución estratégica de los comentarios (análisis DOFA)</h3>
+            <p>
+              El análisis DOFA evidencia un marcado predominio de percepciones asociadas a
+              <strong>debilidades (79 %)</strong>. Esto indica que la ciudadanía identifica
+              principalmente fallas estructurales, operativas e institucionales en la gestión de
+              residuos (recolección, mantenimiento del espacio público, control y efectividad).
+            </p>
+            <p>
+              Las <strong>oportunidades</strong> corresponden al <strong>11 %</strong> y se
+              relacionan con mejoras o expectativas (fortalecer cultura ciudadana, ajustes en
+              gestión, articulación entre actores). Las <strong>amenazas</strong> representan el
+              <strong>6 %</strong> (factores externos como aumento de habitantes de calle y
+              prácticas inadecuadas). Las <strong>fortalezas</strong> constituyen solo el
+              <strong>4 %</strong>, reflejando una percepción limitada de avances consolidados.
+            </p>
+            <p class="muted">
+              En conjunto, la discusión pública se centra principalmente en problemas no resueltos y
+              debilidades del sistema.
+            </p>
+
+            <h3 id="r33">
+              3.3 Principales categorías de problemáticas asociadas a los residuos en el espacio
+              público
+            </h3>
+            <p>
+              La clasificación temática muestra una concentración en aspectos operativos e
+              institucionales. <strong>Gestión de residuos y limpieza</strong> agrupa el
+              <strong>25 %</strong> de los comentarios.
+              <strong>Gestión institucional y gobernanza</strong> representa el
+              <strong>15 %</strong>. <strong>Inseguridad y deterioro urbano</strong> y
+              <strong>Habitantes de calle y uso del espacio público</strong> registran
+              <strong>14 %</strong> cada una.
+            </p>
+            <p>
+              <strong>Contratos, costos y operadores de aseo</strong> concentra el
+              <strong>13 %</strong>. Un <strong>13 %</strong> no pudo ser clasificado por menciones
+              generales o ambiguas. Finalmente,
+              <strong>Cultura ciudadana y corresponsabilidad</strong> (4 %) y
+              <strong>Comunicación, transparencia y pedagogía</strong> (2 %) aparecen de forma
+              marginal.
+            </p>
+
+            <h3 id="r34">
+              3.4 Sentimiento promedio de la problemática de residuos identificada por ciudadanos en
+              el espacio público
+            </h3>
+            <p>
+              El sentimiento por categoría presenta valoraciones negativas en todas las dimensiones.
+              Las categorías con sentimiento más negativo son
+              <strong>Contratos, costos y operadores de aseo (-0,86)</strong> y
+              <strong>Gestión institucional y gobernanza (-0,83)</strong>, asociadas a reclamos por
+              tarifas, percepción de ineficiencia, prórrogas sin mejoras visibles y desconfianza
+              frente al uso de recursos.
+            </p>
+            <p>
+              <strong>Habitantes de calle y uso del espacio público (-0,81)</strong> se asocia a
+              basuras, cambuches, riesgos sanitarios e inseguridad. En
+              <strong>Gestión de residuos y limpieza (-0,66)</strong> e
+              <strong>Inseguridad y deterioro urbano (-0,58)</strong> aparecen relatos sobre
+              contenedores rebosados, malos olores, roedores y fallas en rutas de recolección.
+            </p>
+            <p>
+              <strong>Comunicación, transparencia y pedagogía (-0,45)</strong> y
+              <strong>Sin clasificar (-0,37)</strong> mantienen una negatividad moderada. Por su
+              parte, <strong>Cultura ciudadana y corresponsabilidad (0,00)</strong> refleja una
+              narrativa ambivalente sobre el rol ciudadano y la carga institucional.
+            </p>
+
+            <h3 id="r35">3.5 Presencia de ideas de solución por categoría</h3>
+            <p>
+              Una proporción significativa de la ciudadanía propone soluciones. La mayor presencia
+              de ideas está en <strong>Cultura ciudadana y corresponsabilidad (75%)</strong>, con
+              énfasis en cambios de comportamiento, sentido de pertenencia, normas, pedagogía y
+              sanciones.
+            </p>
+            <p>
+              En <strong>Inseguridad y deterioro urbano (64%)</strong> se proponen intervenciones
+              integrales, vigilancia y mantenimiento. En
+              <strong>Habitantes de calle y uso del espacio público (50%)</strong> aparecen
+              propuestas de atención social y control coordinado. En
+              <strong>Gestión de residuos y limpieza (40%)</strong> y
+              <strong>Contratos, costos y operadores de aseo (31%)</strong> se plantean ajustes de
+              frecuencia, revisión de tarifas y exigencia de cumplimiento a operadores.
+              <strong>Gestión institucional y gobernanza</strong> registra menor traducción a
+              propuestas (27%), y en <strong>Comunicación, transparencia y pedagogía</strong> no se
+              identifican ideas de solución explícitas.
+            </p>
+
+            <iframe
+              title="Homicidios por cada cien mil habitantes - 2025"
+              aria-label="Gráfico de barras"
+              id="datawrapper-chart-WEWGR"
+              src="https://datawrapper.dwcdn.net/WEWGR/1/"
+              scrolling="no"
+              frameborder="0"
+              class="p-4"
+              style="width: 0; min-width: 100% !important; border: 1px solid #ccc"
+              height="528"
+              data-external="1"
+            ></iframe>
+
+            <h3 id="r36">
+              3.6 Nube de palabras: ejes del discurso ciudadano sobre residuos en el espacio público
+            </h3>
+            <p>
+              La nube de palabras sugiere cuatro ejes: <strong>gestión</strong>,
+              <strong>limpieza</strong>, <strong>seguridad</strong> y
+              <strong>uso del espacio público</strong>. Palabras como basura, calle, aseo y gestión
+              aparecen con alta frecuencia. También destacan inseguridad, habitantes de calle,
+              parques y espacio público, conectando residuos con deterioro social y urbano.
+            </p>
+            <p>
+              Además, conceptos como contratos, operadores de aseo, tarifas y servicio reflejan una
+              lectura crítica del modelo de prestación. Con menor peso, se mencionan cultura
+              ciudadana, corresponsabilidad, normas y soluciones, sugiriendo la necesidad de
+              combinar acciones institucionales con cambios de comportamiento.
+            </p>
+
+            <h3 id="r37">3.7 Actores mencionados: responsabilidades y tensiones percibidas</h3>
+            <p>
+              La comunidad es el actor más mencionado, confirmando el reconocimiento del rol
+              ciudadano y una responsabilidad compartida. También aparecen con fuerza operadores y
+              empresas de aseo, habitantes de calle y recicladores, concentrando tensiones por
+              frecuencia/calidad del servicio, costos y uso del espacio público.
+            </p>
+            <p>
+              La mención de la Alcaldía, entidades distritales y cuentas oficiales refleja
+              expectativas de liderazgo y acción, aunque con críticas por falta de resultados
+              visibles. En conjunto, la problemática se percibe como multiactor y demanda respuestas
+              integrales y coordinadas.
+            </p>
+
+            <h3 id="r38">3.8 Referencias territoriales y puntos críticos mencionados</h3>
+            <p>
+              Se identificaron puntos de la ciudad mencionados reiteradamente como focos del
+              problema (vías, barrios, parques y entornos de infraestructura urbana), con reportes
+              de acumulación de basuras, desbordamiento de contenedores, ocupación indebida del
+              espacio público y deterioro del entorno.
+            </p>
+
+            <table aria-label="Puntos críticos mencionados por la ciudadanía">
+              <thead>
+                <tr>
+                  <th style="width: 44%">Dirección</th>
+                  <th>Observación</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Avenida el ferrocarril entre 96 y 99</td>
+                  <td>Invasión al espacio público</td>
+                </tr>
+                <tr>
+                  <td>Barrio La Aurora</td>
+                  <td>Basuras, no pasa el camión de la basura</td>
+                </tr>
+                <tr>
+                  <td>Carrera 9 desde la 161 hasta la 183</td>
+                  <td>Recicladores, basuras, escombros y cambuches</td>
+                </tr>
+                <tr>
+                  <td>La ‘Y’ en Fontibón</td>
+                  <td>Botadero de escombros de construcción</td>
+                </tr>
+                <tr>
+                  <td>Cl. 36 Sur #23</td>
+                  <td>Retirar el contenedor por malos olores</td>
+                </tr>
+                <tr>
+                  <td>Avenida Cali con 153</td>
+                  <td>Habitantes de calle y basuras</td>
+                </tr>
+                <tr>
+                  <td>Calle 67 # 11</td>
+                  <td>Basuras</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="table-note">
+              Nota: En el texto se menciona la identificación de “9 puntos”, pero en el listado
+              suministrado aparecen 7 filas. Puedes agregar las 2 restantes si las tienes.
+            </div>
+
+            <p class="muted">
+              Estas observaciones evidencian invasión del espacio público, acumulación persistente
+              de basuras, fallas en recolección, presencia de recicladores y habitantes de calle,
+              malos olores, escombros y ubicación inadecuada de contenedores. La geolocalización
+              complementa el análisis temático y ofrece un insumo para priorización de acciones de
+              seguimiento, control o intervención.
+            </p>
+          </section>
+        </main>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.report-container {
+  /* Clean, Minimalist Light Theme Variables */
+  --bg: #ffffff;
+  --card: #ffffff;
+  --text: #1a1a1a;
+  --muted: #666666;
+  --line: #e5e7eb; /* Light gray border */
+  --accent: #2563eb; /* Royal blue for links/highlights */
+  --accent-light: #eff6ff;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --ok: #10b981;
+  --radius: 8px; /* Slightly sharper corners for minimalist feel */
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Very subtle shadow */
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+  --font-sans:
+    'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+
+  font-family: var(--font-sans);
+  color: var(--text);
+  background-color: var(--bg);
+  line-height: 1.6;
+  min-height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Reset for internal elements */
+.report-container * {
+  box-sizing: border-box;
+}
+
+.report-container a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.report-container a:hover {
+  color: #1d4ed8; /* Darker blue */
+  text-decoration: underline;
+}
+
+header {
+  padding: 60px 20px 40px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  position: relative;
+  z-index: 100;
+}
+
+.wrap {
+  margin: 0 auto;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title h1 {
+  margin: 0;
+  font-size: clamp(24px, 4vw, 36px);
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.2;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 99px;
+  background: #f3f4f6; /* Light gray background */
+  color: #374151;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  padding: 40px 20px 80px;
+}
+
+@media (min-width: 980px) {
+  .grid {
+    grid-template-columns: 260px 1fr;
+    gap: 60px;
+  }
+}
+
+nav {
+  position: sticky;
+  top: 140px;
+  align-self: start;
+  font-size: 14px;
+}
+
+nav .nav-head {
+  padding-bottom: 12px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #111;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.nav-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+nav a {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: var(--muted);
+  border-left: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+nav a:hover {
+  background: #f9fafb;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 48px; /* More breathing room between sections */
+}
+
+section {
+  /* Removed card style for a cleaner document look */
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+section h2 {
+  margin: 0 0 24px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #111;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+section h3 {
+  margin: 40px 0 16px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0 0 16px;
+  color: #374151; /* Dark gray for body text */
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.divider {
+  height: 1px;
+  background: var(--line);
+  margin: 32px 0;
+}
+
+/* Callouts */
+.callout {
+  border: 1px solid #dbeafe;
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 16px 20px;
+  background: #eff6ff; /* Light blue tint */
+  margin: 24px 0;
+}
+
+.callout strong {
+  display: block;
+  margin-bottom: 12px;
+  color: #1e40af;
+}
+
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.kpi {
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fafafa;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.kpi:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.kpi .label {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.kpi .value {
+  font-size: 32px;
+  font-weight: 800;
+  color: #111;
+  margin: 8px 0;
+  letter-spacing: -0.03em;
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: #f3f4f6;
+  color: var(--muted);
+  border: 1px solid #e5e7eb;
+  margin-left: auto;
+}
+
+/* Lists */
+ul {
+  margin: 16px 0 16px 20px;
+  padding: 0;
+}
+
+li {
+  margin: 8px 0;
+  color: #374151;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Cleaner lines */
+  margin-top: 24px;
+  font-size: 15px;
+}
+
+th,
+td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+th {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  background: #f9fafb;
+}
+
+tr:hover td {
+  background: #f9fafb;
+}
+
+.table-note {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 12px;
+  font-style: italic;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 40px 20px;
+  margin-top: 60px;
+  background: #f9fafb;
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Print Enhancements */
+@media print {
+  .report-container {
+    background: white;
+  }
+  header {
+    background: white;
+    padding: 20px 0;
+    position: relative;
+    backdrop-filter: none;
+  }
+  .grid {
+    display: block;
+    padding: 0;
+  }
+  nav {
+    display: none;
+  }
+  .wrap {
+    max-width: 100%;
+  }
+}
+</style>

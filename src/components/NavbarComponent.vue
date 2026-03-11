@@ -1,7 +1,14 @@
 <template>
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Observatorio</a>
+      <a href="/">
+        <img
+          src="/resources/images/app/logotipo-navbar.png"
+          alt="Observatorio"
+          class="me-2"
+          style="height: 35px"
+        />
+      </a>
       <button
         class="navbar-toggler"
         type="button"

@@ -4,6 +4,8 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ProyectosView from '../views/ProyectosView.vue'
 import PlanCultura from '../views/2025/PlanCultura.vue'
+import ContenidosView from '../views/ContenidosView.vue'
+import ArticleView from '../views/ArticleView.vue'
 
 const routes = [
   { path: '/', name: 'Inicio', component: HomeView, meta: { title: 'Inicio | Observatorio' } },
@@ -18,6 +20,18 @@ const routes = [
     name: 'Análisis Participaciones Plan Distrital de Cultura 2038',
     component: PlanCultura,
     meta: { title: 'Análisis Participaciones Plan Distrital de Cultura 2038' },
+  },
+  {
+    path: '/contenidos',
+    name: 'Contenidos',
+    component: ContenidosView,
+    meta: { title: 'Contenidos' },
+  },
+  {
+    path: '/:year/:slug',
+    name: 'Article',
+    component: ArticleView,
+    meta: { title: 'Artículo' },
   },
 ]
 

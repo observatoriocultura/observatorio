@@ -8,5 +8,6 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
 // ✅ Importar estilos globales
 import './assets/main.css'
+import './assets/css/pacarina.css'
 
 createApp(App).use(router).mount('#app')
