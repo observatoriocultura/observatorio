@@ -1,0 +1,68 @@
+﻿{
+  "title": "Análisis de reel sobre cultura ciudadana en el metro",
+  "author": "Mabel Ayala Meneses",
+  "date": "2026-03-10",
+  "table_of_contents": [
+    {
+      "title": "1. Introducción",
+      "slug": "intro",
+      "level": 1
+    },
+    {
+      "title": "2. Metodología de análisis",
+      "slug": "metodologia",
+      "level": 1
+    },
+    {
+      "title": "3. Resultados del análisis",
+      "slug": "resultados",
+      "level": 1
+    },
+    {
+      "title": "3.1 Reacción generada por el reel",
+      "slug": "r31",
+      "level": 2
+    },
+    {
+      "title": "3.2 Tipo de conversación que abrió el reel",
+      "slug": "r32",
+      "level": 2
+    },
+    {
+      "title": "3.3 Problemas mencionados por los usuarios",
+      "slug": "r33",
+      "level": 2
+    },
+    {
+      "title": "3.4 Normas de cultura ciudadana mencionadas",
+      "slug": "r34",
+      "level": 2
+    },
+    {
+      "title": "3.5 Normas que generan mayor reacción emocional",
+      "slug": "r35",
+      "level": 2
+    },
+    {
+      "title": "3.6 Actores y responsabilidades percibidas",
+      "slug": "r36",
+      "level": 2
+    },
+    {
+      "title": "3.7 Problemas asociados por actor",
+      "slug": "r37",
+      "level": 2
+    },
+    {
+      "title": "4. Hallazgos clave",
+      "slug": "hallazgos",
+      "level": 1
+    },
+    {
+      "title": "5. Conclusiones",
+      "slug": "conclusiones",
+      "level": 1
+    }
+  ],
+  "abstract": "Análisis de 127 comentarios en Instagram sobre un reel relacionado con cultura ciudadana en el transporte público de Bogotá. El estudio identifica percepciones, críticas y expectativas sobre convivencia, normas sociales, actores responsables y el futuro metro, a partir de técnicas de procesamiento de lenguaje natural y categorización temática."
+}
