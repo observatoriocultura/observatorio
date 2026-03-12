@@ -110,8 +110,11 @@ watchEffect(async () => {
         <header class="article-header">
           <h1>{{ article.title }}</h1>
           <div class="meta">
-            <p><i class="bi bi-person-circle me-1"></i> <strong>Por:</strong> {{ article.author }}</p>
-            <p><i class="bi bi-calendar3 me-1"></i> <strong>Fecha:</strong> {{ formatDate(article.date) }}</p>
+            <p title="Autor/a"><i class="bi bi-person-circle me-1"></i> {{ article.author }}</p>
+            <p title="Fecha de publicación">
+              <i class="bi bi-calendar3 me-1"></i>
+              {{ formatDate(article.date) }}
+            </p>
           </div>
         </header>
 
@@ -281,7 +284,7 @@ h1 {
   color: #4b5563;
   margin-bottom: 2rem;
   font-style: italic;
-  border-left: 4px solid #50c878;
+  border-left: 4px solid #d5c7e7;
   padding-left: 1.5rem;
 }
 </style>

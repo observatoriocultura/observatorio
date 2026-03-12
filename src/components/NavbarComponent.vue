@@ -1,14 +1,14 @@
 <template>
   <nav class="navbar navbar-expand-lg">
     <div class="nav-container">
-      <a href="/" title="Ir al inicio">
+      <RouterLink to="/" title="Ir al inicio">
         <img
           src="/resources/images/app/logo-navbar.png"
           alt="Observatorio"
           class="me-2"
           style="height: 25px"
         />
-      </a>
+      </RouterLink>
       <button
         class="navbar-toggler"
         type="button"
@@ -20,6 +20,10 @@
     </div>
   </nav>
 </template>
+
+<script setup>
+import { RouterLink } from 'vue-router'
+</script>
 
 <style scoped>
 .navbar {
