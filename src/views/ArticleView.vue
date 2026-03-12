@@ -7,6 +7,19 @@ const article = ref(null)
 const error = ref(null)
 const loading = ref(false)
 
+const formatDate = (dateString) => {
+  if (!dateString) return ''
+  // Split to avoid timezone shift issues with "YYYY-MM-DD"
+  const [year, month, day] = dateString.split('-').map(Number)
+  const date = new Date(year, month - 1, day)
+
+  return date.toLocaleDateString('es-ES', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  })
+}
+
 const scrollTo = (id) => {
   const element = document.getElementById(id)
   if (element) {
@@ -51,6 +64,7 @@ watchEffect(async () => {
     }
 
     article.value = data
+    document.title = `${data.title} | Observatorio`
   } catch (e) {
     console.error(e)
     error.value = 'Artículo no encontrado'
@@ -96,8 +110,8 @@ watchEffect(async () => {
         <header class="article-header">
           <h1>{{ article.title }}</h1>
           <div class="meta">
-            <p><strong>Por:</strong> {{ article.author }}</p>
-            <p><strong>Fecha:</strong> {{ article.date }}</p>
+            <p><i class="bi bi-person-circle me-1"></i> <strong>Por:</strong> {{ article.author }}</p>
+            <p><i class="bi bi-calendar3 me-1"></i> <strong>Fecha:</strong> {{ formatDate(article.date) }}</p>
           </div>
         </header>
 
@@ -137,7 +151,7 @@ watchEffect(async () => {
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1em;
 }
 
 @media (min-width: 980px) {
@@ -267,7 +281,7 @@ h1 {
   color: #4b5563;
   margin-bottom: 2rem;
   font-style: italic;
-  border-left: 4px solid #2563eb;
+  border-left: 4px solid #50c878;
   padding-left: 1.5rem;
 }
 </style>

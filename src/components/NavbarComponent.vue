@@ -1,12 +1,12 @@
 <template>
   <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-      <a href="/">
+    <div class="nav-container">
+      <a href="/" title="Ir al inicio">
         <img
-          src="/resources/images/app/logotipo-navbar.png"
+          src="/resources/images/app/logo-navbar.png"
           alt="Observatorio"
           class="me-2"
-          style="height: 35px"
+          style="height: 25px"
         />
       </a>
       <button
@@ -17,20 +17,41 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <RouterLink class="nav-link" to="/">Inicio</RouterLink>
-          </li>
-          <li class="nav-item">
-            <RouterLink class="nav-link" to="/proyectos">Proyectos</RouterLink>
-          </li>
-        </ul>
-      </div>
     </div>
   </nav>
 </template>
 
-<script setup>
-import { RouterLink } from 'vue-router'
-</script>
+<style scoped>
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%; /* Asegura que la línea y el fondo ocupen todo el ancho */
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid #fcdea0;
+  padding: 0.3rem 0; /* Padding vertical, el horizontal lo maneja el container */
+  transition: background 0.3s ease;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0.3rem; /* Margen interno para que no toque los bordes en pantallas medianas */
+}
+
+/* Opcional: Ajuste suave para los enlaces */
+.nav-link {
+  font-weight: 500;
+  color: #18232b;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #000;
+}
+</style>

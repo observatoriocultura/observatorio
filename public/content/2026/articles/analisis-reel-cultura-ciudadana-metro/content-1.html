@@ -1,0 +1,424 @@
+<div class="article-content">
+  <style>
+    .article-content {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --muted: #666666;
+      --line: #e5e7eb;
+      --accent: #2563eb;
+      --shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      --font-sans:
+        'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+        sans-serif;
+
+      font-family: var(--font-sans);
+      color: var(--text);
+      background-color: var(--bg);
+      line-height: 1.6;
+      box-sizing: border-box;
+    }
+
+    .article-content * {
+      box-sizing: border-box;
+    }
+
+    .article-content a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .article-content a:hover {
+      text-decoration: underline;
+    }
+
+    .article-content main {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    .article-content section {
+      padding: 0;
+      background: transparent;
+      border: none;
+    }
+
+    .article-content section h2 {
+      margin: 0 0 24px;
+      font-size: 22px;
+      font-weight: 700;
+      color: #111;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .article-content p {
+      margin: 0 0 16px;
+      color: #374151;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .article-content ul {
+      margin: 16px 0 16px 20px;
+      padding: 0;
+    }
+
+    .article-content li {
+      margin: 8px 0;
+      color: #374151;
+    }
+
+    .article-content img {
+      display: block;
+      width: 100%;
+      max-width: 920px;
+      height: auto;
+      margin: 24px auto;
+      border: 1px solid #f0f2f5; /* Borde más claro */
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04); /* Sombra más suave y extendida */
+      background: #fff;
+    }
+
+    .article-content figure {
+      margin: 24px 0 32px;
+    }
+
+    .article-content figcaption {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .article-content .muted {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .article-content .callout {
+      border: 1px solid #f4df9a;
+      border-left: 4px solid #c89b1d;
+      border-radius: 8px;
+      padding: 16px 20px;
+      background: #fffdf3;
+      margin: 24px 0;
+    }
+
+    .article-content .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin: 24px 0 32px;
+    }
+
+    .article-content .kpi {
+      padding: 18px;
+      border: 1px solid #fff7cd;
+      border-radius: 8px;
+      background: #fffdf3;
+    }
+
+    .article-content .kpi .label {
+      color: var(--muted);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .article-content .kpi .value {
+      font-size: 28px;
+      font-weight: 700;
+      margin: 8px 0;
+      color: #111;
+    }
+  </style>
+
+  <main>
+    <section id="intro">
+      <h2>1. Introducción</h2>
+      <p>
+        Este artículo presenta el análisis de la conversación generada por un reel de Instagram
+        sobre cultura ciudadana en el sistema de transporte y el futuro metro de Bogotá. El estudio
+        parte de 127 comentarios extraídos de la publicación original y busca identificar
+        percepciones, preocupaciones y temas recurrentes asociados al comportamiento ciudadano
+        dentro del transporte público.
+      </p>
+      <p>
+        La publicación analizada corresponde al reel
+        <a href="https://www.instagram.com/reel/DVimL0mDV8l/?igsh=MTFrdnhiaTBrcWg0Yg=="
+          >publicado en Instagram</a
+        >, y la extracción de comentarios se realizó con corte al 9 de marzo de 2026 a las 12:00
+        p. m. El objetivo del ejercicio es comprender qué tipo de discusión abrió el contenido,
+        cuáles son las normas de convivencia más visibles en la conversación y cómo se distribuyen
+        las responsabilidades entre ciudadanía, instituciones y otros actores.
+      </p>
+      <figure>
+        <img
+          src="content/2026/articles/analisis-reel-cultura-ciudadana-metro/images/0_captura_reel_instagram.png"
+          alt="Captura del reel de Instagram analizado"
+          loading="lazy"
+        />
+        <figcaption>Captura del reel de Instagram que dio origen al análisis.</figcaption>
+      </figure>
+      <p class="muted">
+        Documento base elaborado por la Subsecretaría de Cultura Ciudadana y Gestión del
+        Conocimiento, Dirección Observatorio y Gestión del Conocimiento Cultural. Autora:
+        Mabel Ayala Meneses.
+      </p>
+    </section>
+
+    <section id="metodologia">
+      <h2>2. Metodología de análisis</h2>
+      <p>
+        Los comentarios fueron procesados mediante un enfoque de procesamiento de lenguaje natural
+        (PNL) y categorización temática. Cada comentario se clasificó según diferentes dimensiones
+        analíticas para estructurar la conversación y facilitar la identificación de patrones.
+      </p>
+      <div class="callout">
+        <strong>Variables extraídas en el análisis</strong>
+        <ul>
+          <li>Problema mencionado.</li>
+          <li>Norma social mencionada.</li>
+          <li>Actor mencionado.</li>
+          <li>Sentimiento en escala de -1 a 1.</li>
+          <li>Clasificación DOFA.</li>
+        </ul>
+      </div>
+      <p class="muted">
+        Este proceso permitió organizar la conversación en categorías analíticas comparables y
+        sintetizar los principales patrones de percepción ciudadana sobre convivencia y transporte.
+      </p>
+    </section>
+
+    <section id="resultados">
+      <h2>3. Resultados del análisis</h2>
+      <div class="kpi-row" aria-label="Indicadores destacados del análisis">
+        <div class="kpi">
+          <div class="label">Comentarios analizados</div>
+          <div class="value">127</div>
+          <div class="muted">Corte al 9 de marzo de 2026</div>
+        </div>
+        <div class="kpi">
+          <div class="label">Sentimiento positivo fuerte</div>
+          <div class="value">29,9 %</div>
+          <div class="muted">Mayor proporción individual</div>
+        </div>
+        <div class="kpi">
+          <div class="label">Comentarios como debilidad</div>
+          <div class="value">35 %</div>
+          <div class="muted">Principal categoría DOFA</div>
+        </div>
+        <div class="kpi">
+          <div class="label">Problema más mencionado</div>
+          <div class="value">23,6 %</div>
+          <div class="muted">Cultura ciudadana</div>
+        </div>
+      </div>
+
+      <h2 id="r31">3.1 Reacción generada por el reel</h2>
+      <p>
+        La conversación generada por el reel presenta una distribución diversa de opiniones. El
+        29,9 % de los comentarios expresa un sentimiento positivo fuerte, mientras que el 26 %
+        registra un sentimiento negativo marcado. Adicionalmente, el 13,4 % de los comentarios es
+        neutral y el resto se distribuye entre valoraciones moderadamente positivas y negativas.
+      </p>
+      <figure>
+        <img
+          src="content/2026/articles/analisis-reel-cultura-ciudadana-metro/images/1_distribucion_sentimiento_en%20los%20comentarios.png"
+          alt="Distribución del sentimiento en los comentarios"
+          loading="lazy"
+        />
+        <figcaption>Distribución del sentimiento en los comentarios del reel.</figcaption>
+      </figure>
+      <p>
+        Este comportamiento sugiere que el contenido logró activar una conversación significativa en
+        la que conviven tanto valoraciones favorables como críticas sobre la cultura ciudadana en el
+        transporte público. La coexistencia de tonos opuestos indica un alto involucramiento de los
+        usuarios con el tema.
+      </p>
+
+      <h2 id="r32">3.2 Tipo de conversación que abrió el reel</h2>
+      <p>
+        La clasificación DOFA muestra que la conversación se orienta principalmente hacia la
+        identificación de debilidades y oportunidades relacionadas con la convivencia en el sistema
+        de transporte. El 35 % de los comentarios fue clasificado como debilidad, el 28,5 % como
+        fortaleza, el 26,8 % como oportunidad y el 9,8 % como amenaza.
+      </p>
+      <figure>
+        <img
+          src="content/2026/articles/analisis-reel-cultura-ciudadana-metro/images/2_clasificacion_dofa_comentarios.png"
+          alt="Clasificación DOFA de los comentarios"
+          loading="lazy"
+        />
+        <figcaption>Clasificación DOFA de la conversación generada por el reel.</figcaption>
+      </figure>
+      <p>
+        En conjunto, esto indica que el reel no solo generó un espacio para la crítica, sino también
+        para proponer mejoras y resaltar prácticas de convivencia que los usuarios consideran
+        valiosas. Las amenazas aparecen ligadas sobre todo a la preocupación por que los problemas
+        actuales se reproduzcan en el futuro metro.
+      </p>
+
+      <h2 id="r33">3.3 Problemas mencionados por los usuarios</h2>
+      <p>
+        La categoría más mencionada corresponde a problemas de cultura ciudadana, con el 23,6 % de
+        los comentarios analizados. Le siguen gestión institucional (7,9 %), seguridad y delitos
+        (4,7 %), comercio informal (4,7 %) e infraestructura y servicio (4,7 %).
+      </p>
+      <figure>
+        <img
+          src="content/2026/articles/analisis-reel-cultura-ciudadana-metro/images/3_problematicas_mas_mencionadas.png"
+          alt="Problemáticas más mencionadas en los comentarios"
+          loading="lazy"
+        />
+        <figcaption>Principales problemáticas identificadas en la conversación.</figcaption>
+      </figure>
+      <p>
+        También aparecen referencias a convivencia y ruido (3,9 %), evasión del sistema (3,1 %) y
+        problemas sociales (2,4 %). En términos generales, la conversación se centra más en el
+        comportamiento ciudadano dentro del sistema que en aspectos exclusivamente técnicos o de
+        infraestructura.
+      </p>
+
+      <h2 id="r34">3.4 Normas de cultura ciudadana mencionadas</h2>
+      <p>
+        Los comentarios hacen visibles normas de comportamiento que los usuarios consideran
+        necesarias para una convivencia adecuada en el transporte público. La norma más mencionada
+        es el respeto y civismo entre usuarios, con el 26,7 % de las menciones.
+      </p>
+      <figure>
+        <img
+          src="content/2026/articles/analisis-reel-cultura-ciudadana-metro/images/4_normas_cultura_ciudadana_mencionadas.png"
+          alt="Normas de cultura ciudadana mencionadas"
+          loading="lazy"
+        />
+        <figcaption>Normas de cultura ciudadana destacadas por los usuarios.</figcaption>
+      </figure>
+      <p>
+        Luego aparecen alimentación y consumo dentro del sistema (14,7 %), limpieza y cuidado del
+        espacio (13,3 %), ruido y convivencia sonora (12 %) y pago y uso formal del sistema
+        (12 %). En menor proporción se mencionan el orden de ingreso y circulación (8 %), el uso
+        adecuado del espacio (5,3 %) y el cumplimiento general de normas (5,3 %).
+      </p>
+
+      <h2 id="r35">3.5 Normas que generan mayor reacción emocional</h2>
+      <p>
+        El análisis del sentimiento promedio por categoría de norma social permite identificar qué
+        comportamientos despiertan reacciones más críticas. Las normas relacionadas con el pago y
+        uso formal del sistema presentan el valor más negativo (-0,57), seguidas por el uso
+        adecuado del espacio (-0,50) y las normas sobre ruido y convivencia sonora (-0,21).
+      </p>
+      <figure>
+        <img
+          src="content/2026/articles/analisis-reel-cultura-ciudadana-metro/images/5_sentimiento_promedio_normas.png"
+          alt="Sentimiento promedio según categoría de norma social"
+          loading="lazy"
+        />
+        <figcaption>Sentimiento promedio asociado a cada categoría de norma social.</figcaption>
+      </figure>
+      <p>
+        En contraste, las referencias a respeto y civismo presentan un valor positivo (0,25), lo
+        que sugiere un tono más constructivo cuando los usuarios hablan de comportamientos deseables.
+        Los hallazgos muestran que las prácticas que afectan de forma directa la experiencia de
+        viaje son las que generan mayor frustración.
+      </p>
+
+      <h2 id="r36">3.6 Actores y responsabilidades percibidas</h2>
+      <p>
+        Los valores de sentimiento más negativos se concentran en actores asociados a comportamientos
+        incívicos o delincuenciales, como atracadores, grafiteros, ñeros y otros grupos similares,
+        con puntajes cercanos a -1. También aparecen valoraciones negativas hacia habitantes de
+        calle, vendedores informales y colados, con sentimientos entre aproximadamente -0,80 y
+        -0,67.
+      </p>
+      <figure>
+        <img
+          src="content/2026/articles/analisis-reel-cultura-ciudadana-metro/images/6_fuerza_promedio_sentimiento_comentario.png"
+          alt="Fuerza promedio del sentimiento por actor mencionado"
+          loading="lazy"
+        />
+        <figcaption>Fuerza promedio del sentimiento según los actores mencionados.</figcaption>
+      </figure>
+      <p>
+        En un nivel intermedio se ubican actores relacionados con la operación del sistema, como
+        Transmilenio, SITP o conductores, con valores alrededor de -0,50. En cambio, las menciones
+        a Bogotá y a la ciudadanía en general se mueven cerca de la neutralidad. Los valores más
+        positivos aparecen en referencias a Medellín (0,33), al Metro (0,37) y a músicos (0,75),
+        lo que muestra que el futuro metro se asocia con expectativas de mejora.
+      </p>
+
+      <h2 id="r37">3.7 Problemas asociados por actor</h2>
+      <p>
+        Cuando se menciona a la ciudadanía, cerca del 49 % de las referencias se asocia con
+        problemas de cultura ciudadana, lo que indica que buena parte de los usuarios atribuye estas
+        conductas a prácticas sociales de los propios viajeros.
+      </p>
+      <figure>
+        <img
+          src="content/2026/articles/analisis-reel-cultura-ciudadana-metro/images/7_distribucion_problemas_actor.png"
+          alt="Distribución de problemas según actor mencionado"
+          loading="lazy"
+        />
+        <figcaption>Distribución de problemas según el top de actores mencionados.</figcaption>
+      </figure>
+      <p>
+        En el caso de la Alcaldía, los comentarios se reparten principalmente entre gestión
+        institucional (30 %) y cultura ciudadana (30 %), lo que refleja expectativas tanto de
+        liderazgo institucional como de promoción de comportamientos adecuados. Las menciones a
+        Transmilenio se vinculan con infraestructura y servicio (22 %) y otros problemas operativos,
+        mientras que las referencias al metro se conectan con expectativas sobre cultura ciudadana y
+        funcionamiento futuro del sistema.
+      </p>
+    </section>
+
+    <section id="hallazgos">
+      <h2>4. Hallazgos clave</h2>
+      <ul>
+        <li>
+          La conversación se concentra principalmente en la cultura ciudadana dentro del transporte
+          público, por encima de los asuntos puramente técnicos.
+        </li>
+        <li>
+          Los usuarios formulan normas claras de convivencia, especialmente en torno a respeto,
+          civismo, limpieza, ruido y pago del pasaje.
+        </li>
+        <li>
+          Las prácticas que afectan directamente la experiencia de viaje, como la evasión del pago o
+          el uso inadecuado del espacio, generan las reacciones más negativas.
+        </li>
+        <li>
+          Las responsabilidades se distribuyen entre actores sociales e institucionales, con un peso
+          importante en la ciudadanía, la Alcaldía y los operadores del sistema.
+        </li>
+        <li>
+          El metro aparece asociado con expectativas positivas y con la idea de una mejora futura en
+          movilidad y convivencia.
+        </li>
+      </ul>
+    </section>
+
+    <section id="conclusiones">
+      <h2>5. Conclusiones</h2>
+      <p>
+        El reel logró abrir una conversación amplia sobre convivencia en el transporte público de
+        Bogotá. Aunque emergen críticas relevantes sobre comportamientos incívicos, ruido, evasión y
+        uso del espacio, también se observa una disposición ciudadana a enunciar normas, valores y
+        expectativas de mejora.
+      </p>
+      <p>
+        El análisis sugiere que la cultura ciudadana sigue siendo leída por los usuarios como una
+        condición central para el buen funcionamiento del sistema de transporte. En ese marco, el
+        futuro metro aparece menos como un simple proyecto de infraestructura y más como una
+        oportunidad simbólica para reconfigurar prácticas de convivencia y elevar las expectativas
+        sobre la experiencia urbana.
+      </p>
+    </section>
+  </main>
+</div>
+
+
+
+
+
