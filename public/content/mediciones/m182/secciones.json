@@ -1,0 +1,58 @@
+[
+    {
+        "num_seccion":1,
+        "nombre_seccion":"Sociodemográfico",
+        "descripcion":"Recoge información básica sobre la identidad, trayectoria de vida y características personales de los encuestados, como sexo, género, edad, lugar de origen, estado civil, nivel educativo, pertenencia étnica y situación familiar. Estos datos permiten contextualizar y segmentar los análisis, facilitando la comprensión de patrones y diferencias entre grupos poblacionales.",
+        "cantidad_preguntas":18,
+        "notas":null
+    },
+    {
+        "num_seccion":2,
+        "nombre_seccion":"Calidad de vida y valores",
+        "descripcion":"Indaga sobre hábitos de sueño, actividad física, sedentarismo, bienestar emocional y percepción de salud y felicidad. Busca comprender cómo estas prácticas cotidianas se relacionan con el bienestar integral de las personas, aportando información clave sobre calidad de vida en Bogotá.",
+        "cantidad_preguntas":24,
+        "notas":null
+    },
+    {
+        "num_seccion":3,
+        "nombre_seccion":"Prácticas Deportivas y Actividad Física",
+        "descripcion":"Explora prácticas deportivas y de actividad física entre los habitantes de Bogotá. Indaga sobre la frecuencia, duración, espacios, compañía, motivos, barreras, inversión económica y beneficios percibidos de estas prácticas. Su objetivo es entender el papel del deporte y la actividad física en la vida cotidiana y su vínculo con el bienestar individual y social.",
+        "cantidad_preguntas":22,
+        "notas":null
+    },
+    {
+        "num_seccion":4,
+        "nombre_seccion":"Programas IDRD",
+        "descripcion":"Examina el conocimiento, participación y percepciones ciudadanas sobre los programas del Instituto Distrital de Recreación y Deporte, con énfasis en la ciclovía y la cultura del uso de la bicicleta. Indaga sobre barreras de acceso, motivaciones, experiencias de uso, participación en colectivos ciclistas e iniciativas relacionadas. Busca entender cómo estos programas e infraestructuras impactan la vida urbana, la inclusión y el disfrute del espacio público en Bogotá.",
+        "cantidad_preguntas":21,
+        "notas":"Programas IDRD Nivel CIUDAD"
+    },
+    {
+        "num_seccion":5,
+        "nombre_seccion":"Uso de parques y equipamientos",
+        "descripcion":"Analiza el acceso, uso, percepción de seguridad, estado físico y nivel de satisfacción con parques y escenarios recreodeportivos públicos. Indaga sobre actividades realizadas, frecuencia de uso, compañía, uso de equipamientos como gimnasios al aire libre y juegos infantiles, así como la participación en escenarios de nuevas tendencias deportivas. También explora el conocimiento ciudadano sobre mecanismos de solicitud para eventos, brindando insumos sobre el papel de estos espacios en la vida cotidiana, el bienestar y la apropiación del espacio público.",
+        "cantidad_preguntas":20,
+        "notas":null
+    },
+    {
+        "num_seccion":6,
+        "nombre_seccion":"Capítulo CEFE",
+        "descripcion":"Evalúa el conocimiento, uso y preferencias ciudadanas respecto a los Centros Felicidad (CEFE). Indaga qué centros se conocen, si se han utilizado sus servicios recientemente, así como los días y horarios preferidos de asistencia. También recoge información sobre los tipos de servicios utilizados, con el fin de comprender la apropiación y el impacto de estos espacios en la vida comunitaria y el bienestar de los hogares.",
+        "cantidad_preguntas":6,
+        "notas":"Sólo localidades: Chapinero, Tunjuelito, Ciudad Bolívar, Usme, San Cristóbal y Suba"
+    },
+    {
+        "num_seccion":7,
+        "nombre_seccion":"Para menores de edad",
+        "descripcion":"Preguntas específicas para menores de edad, si residen en la vivienda.",
+        "cantidad_preguntas":1,
+        "notas":null
+    },
+    {
+        "num_seccion":8,
+        "nombre_seccion":"Registro",
+        "descripcion":"La sección \"Registro\" contiene variables técnicas relacionadas con el diseño muestral de la encuesta, como el factor de expansión, que permite extrapolar los resultados a la población total, y los filtros, que organizan y segmentan las respuestas según criterios definidos. Estas variables son esenciales para el análisis estadístico y la representatividad de los datos.",
+        "cantidad_preguntas":0,
+        "notas":null
+    }
+]
