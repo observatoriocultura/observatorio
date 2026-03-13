@@ -4,7 +4,7 @@ import IccChart from './IccChart.vue'
 import DonutChart from './donutChart.vue'
 import BarChart from './barChart.vue'
 
-const contentSection = ref('table')
+const contentSection = ref('chart')
 const codigoMedicion = inject('codigoMedicion')
 const secciones = ref([])
 const preguntas = ref([])
@@ -13,6 +13,26 @@ const respuestas = ref([])
 const loading = ref(true)
 const seccionSeleccionada = ref(null)
 const preguntaSeleccionada = ref(null)
+
+/**
+ * Calcula la promedio de una variable numérica en función de los factores de expansión
+ */
+const calcularPromedioPonderado = (listaRespuestas) => {
+  let sumaPonderada = 0
+  let sumaFactores = 0
+
+  listaRespuestas.forEach((r) => {
+    const val = parseFloat(r.respuesta)
+    const f = parseFloat(r.suma_factor)
+    if (!isNaN(val) && !isNaN(f)) {
+      sumaPonderada += val * f
+      sumaFactores += f
+    }
+  })
+
+  return sumaFactores > 0 ? sumaPonderada / sumaFactores : null
+}
+
 const categorias = computed(() => {
   return variablesFiltradas.value.map((v) => v.enunciado_2 || v.codigo_variable)
 })
@@ -29,12 +49,21 @@ const variablesFiltradas = computed(() => {
   return variables.value
     .filter((v) => v.indice_pregunta === preguntaSeleccionada.value.indice_pregunta)
     .map((v) => {
+      const respuestasDeVariable = respuestasPregunta.value.filter(
+        (r) => r.indice_variable === v.indice_variable,
+      )
       // Sumar los factores de todas las respuestas asociadas a esta variable
-      const sumaTotal = respuestasPregunta.value
-        .filter((r) => r.indice_variable === v.indice_variable)
-        .reduce((acc, r) => acc + (r.suma_factor || 0), 0)
-      return { ...v, suma_factor: sumaTotal }
+      const sumaTotal = respuestasDeVariable.reduce((acc, r) => acc + (r.suma_factor || 0), 0)
+      // Calcular promedio ponderado
+      const promedio = calcularPromedioPonderado(respuestasDeVariable)
+
+      return { ...v, suma_factor: sumaTotal, promedio_ponderado: promedio }
     })
+})
+
+/** Asignar la sumatoria del factor, al máximo entre las variables */
+const sumatoriaFactor = computed(() => {
+  return Math.max(...variablesFiltradas.value.map((v) => v.suma_factor), 0)
 })
 
 /** Obtener los tipos de respuestas únicas (V2) para generar las series */
@@ -132,13 +161,25 @@ const actualizarSeries = () => {
 const actualizarRespuestas = () => {
   if (!preguntaSeleccionada.value || !respuestas.value.length) return
 
-  respuestasPregunta.value = respuestas.value.filter(
+  const filtradas = respuestas.value.filter(
     (r) => r.indice_pregunta === preguntaSeleccionada.value.indice_pregunta,
   )
-  console.log(
-    `Respuestas filtradas para la pregunta ${preguntaSeleccionada.value.etiqueta_1}:`,
-    respuestasPregunta.value,
-  )
+
+  // Calcular totales por variable para obtener el porcentaje local
+  const totalesPorVariable = {}
+  filtradas.forEach((r) => {
+    const idVar = r.indice_variable
+    totalesPorVariable[idVar] = (totalesPorVariable[idVar] || 0) + (r.suma_factor || 0)
+  })
+
+  // Asignar el porcentaje respecto al total de su propia variable
+  respuestasPregunta.value = filtradas.map((r) => {
+    const totalVar = totalesPorVariable[r.indice_variable] || 0
+    return {
+      ...r,
+      porcentaje: totalVar > 0 ? (r.suma_factor / totalVar) * 100 : 0,
+    }
+  })
 }
 </script>
 
@@ -229,13 +270,32 @@ const actualizarRespuestas = () => {
                 :class="{ active: contentSection === 'table' }"
                 @click="contentSection = 'table'"
               >
-                <i class="bi bi-bug me-1"></i>Depuración (Data)
+                <i class="bi bi-gear me-1"></i>Inspección (Data)
               </button>
             </li>
           </ul>
 
           <!-- MOSTRAR GRÁFICO SEGÚN EL TIPO DE PREGUNTA -->
           <div v-if="contentSection === 'chart'" class="mt-4">
+            <!-- KPI de Promedio Ponderado -->
+            <div
+              v-if="variablesFiltradas.length > 0 && variablesFiltradas[0].unidad_medida"
+              class="kpi-dashboard mb-4"
+            >
+              <div class="kpi-card shadow-sm">
+                <div class="kpi-content">
+                  <div class="kpi-question-name mb-1">{{ preguntaSeleccionada.nombre }}</div>
+                  <div class="kpi-value-wrapper">
+                    <span class="kpi-value">{{
+                      variablesFiltradas[0].promedio_ponderado?.toFixed(1) || '0.0'
+                    }}</span>
+                  </div>
+                  <span class="kpi-label mt-1">{{ variablesFiltradas[0].unidad_medida }}</span>
+                </div>
+                <div class="kpi-decoration"></div>
+              </div>
+            </div>
+
             <div class="graph-container card border-0 shadow-sm">
               <div class="card-body p-0">
                 <!-- TIPO DE GRÁFICO BAR MULTIPLE -->
@@ -276,14 +336,31 @@ const actualizarRespuestas = () => {
             </div>
           </div>
 
-          <p v-if="preguntaSeleccionada.instruccion" class="text-muted italic small mt-3">
-            <i class="bi bi-info-circle me-1"></i>{{ preguntaSeleccionada.instruccion }}
-          </p>
+          <div class="d-flex justify-content-between py-3">
+            <div>
+              <p v-if="preguntaSeleccionada.instruccion" class="text-muted italic small mt-3">
+                <i class="bi bi-info-circle me-1"></i>{{ preguntaSeleccionada.instruccion }}
+              </p>
+            </div>
+            <div>
+              <p
+                class="small"
+                title="Población representada, pregunta o subpregunta con más respuestas"
+              >
+                <small class="text-muted">
+                  Población representada:
+                  {{ sumatoriaFactor.toLocaleString('es-CO', { maximumFractionDigits: 0 }) }}
+                </small>
+              </p>
+            </div>
+          </div>
 
           <!-- MOSTRAR TABLA DE DATOS (DEBUG) -->
           <div v-if="contentSection === 'table'">
             <div id="debug-tables" class="mt-4">
-              <h6 class="text-uppercase text-muted small fw-bold mb-3">Variables</h6>
+              <h6 class="text-uppercase text-muted small fw-bold mb-3">
+                Variables (Suma Máxima: {{ sumatoriaFactor.toFixed(2) }})
+              </h6>
               <table class="table table-sm table-bordered small mb-4">
                 <thead class="bg-light">
                   <tr>
@@ -292,6 +369,7 @@ const actualizarRespuestas = () => {
                     <th>enunciado_2</th>
                     <th>unidad_medida</th>
                     <th class="text-end">suma_factor (total)</th>
+                    <th class="text-end">promedio_ponderado</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -307,6 +385,13 @@ const actualizarRespuestas = () => {
                     <td class="text-end fw-bold text-primary font-monospace">
                       {{ variable.suma_factor.toFixed(2) }}
                     </td>
+                    <td class="text-end fw-bold text-success font-monospace">
+                      {{
+                        variable.promedio_ponderado !== null
+                          ? variable.promedio_ponderado.toFixed(2)
+                          : '-'
+                      }}
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -320,6 +405,7 @@ const actualizarRespuestas = () => {
                     <th class="text-center">respuesta</th>
                     <th class="text-center">respuesta_v2</th>
                     <th class="text-end">suma_factor</th>
+                    <th class="text-end">porcentaje</th>
                     <th class="text-end">cantidad_respuestas</th>
                   </tr>
                 </thead>
@@ -332,10 +418,13 @@ const actualizarRespuestas = () => {
                     <td class="text-start">{{ resp.respuesta }}</td>
                     <td class="text-start">{{ resp.respuesta_v2 }}</td>
                     <td class="text-end font-monospace">{{ resp.suma_factor.toFixed(2) }}</td>
+                    <td class="text-end font-monospace text-success">
+                      {{ resp.porcentaje.toFixed(1) }}%
+                    </td>
                     <td class="text-end">{{ resp.cantidad_respuestas }}</td>
                   </tr>
                   <tr v-if="respuestasPregunta.length === 0">
-                    <td colspan="6" class="text-center py-3 text-muted">No entries found</td>
+                    <td colspan="7" class="text-center py-3 text-muted">No entries found</td>
                   </tr>
                 </tbody>
               </table>
@@ -558,5 +647,89 @@ const actualizarRespuestas = () => {
   .content-area {
     padding-left: 0;
   }
+}
+
+/* ESTILOS KPI */
+.kpi-dashboard {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.kpi-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  min-width: 240px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(50, 32, 74, 0.05);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.kpi-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(50, 32, 74, 0.08) !important;
+}
+
+.kpi-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.kpi-question-name {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #5c6972;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+}
+
+.kpi-label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #8c96a0;
+  display: block;
+}
+
+.kpi-value-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  justify-content: center;
+}
+
+.kpi-value {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #32204a;
+  line-height: 1.2;
+}
+
+.kpi-icon {
+  font-size: 1rem;
+  color: #b39ddb;
+}
+
+.kpi-decoration {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(50, 32, 74, 0.03) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
 }
 </style>

@@ -25,7 +25,7 @@ const initChart = () => {
 
   // Extraer las categorías y los datos de las respuestas
   const categories = props.respuestas.map((d) => d.respuesta_v2)
-  const data = props.respuestas.map((d) => parseFloat(d.suma_factor))
+  const data = props.respuestas.map((d) => parseFloat(d.porcentaje))
 
   chartInstance = Highcharts.chart(chartContainer.value, {
     chart: {
@@ -59,18 +59,20 @@ const initChart = () => {
     },
     yAxis: {
       title: {
-        text: 'Suma Factor',
+        text: 'Porcentaje (%)',
         style: { color: '#8c96a0' },
       },
       labels: {
+        format: '{value}',
         style: { color: '#5c6972' },
       },
       gridLineColor: '#f1f3f5',
+      max: 100,
     },
     tooltip: {
       pointFormat:
         '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-        '<td style="padding:0"><b>{point.y:,.0f}</b></td></tr>',
+        '<td style="padding:0"><b>{point.y:.1f}%</b></td></tr>',
       footerFormat: '</table>',
       shared: true,
       useHTML: true,
@@ -86,7 +88,7 @@ const initChart = () => {
         borderRadius: 4,
         dataLabels: {
           enabled: true,
-          format: '{point.y:,.0f}',
+          format: '{point.y:.1f}%',
           style: {
             textOutline: 'none',
             color: '#5c6972',
