@@ -7,9 +7,6 @@ import PlanCultura from '../views/2025/PlanCultura.vue'
 import ContenidosView from '../views/ContenidosView.vue'
 import ArticleView from '../views/ArticleView.vue'
 import IccLayout2025 from '../views/ebc/2025/IccLayout.vue'
-import IccPortada2025 from '../views/ebc/2025/tabs/IccPortada.vue'
-import IccResultados2025 from '../views/ebc/2025/tabs/IccResultados.vue'
-import IccFicha2025 from '../views/ebc/2025/tabs/IccFicha.vue'
 
 const routes = [
   { path: '/', name: 'Inicio', component: HomeView, meta: { title: 'Inicio | Observatorio' } },
@@ -33,27 +30,9 @@ const routes = [
   },
   {
     path: '/ebc/encuesta-cultura-ciudadana-2025',
+    name: 'Encuesta Cultura Ciudadana 2025',
     component: IccLayout2025,
-    children: [
-      {
-        path: '',
-        name: 'Encuesta Cultura Ciudadana 2025',
-        component: IccPortada2025,
-        meta: { title: 'Encuesta Cultura Ciudadana 2025' },
-      },
-      {
-        path: 'resultados',
-        name: 'Resultados ICC 2025',
-        component: IccResultados2025,
-        meta: { title: 'Resultados ICC 2025' },
-      },
-      {
-        path: 'ficha-tecnica',
-        name: 'Ficha Técnica ICC 2025',
-        component: IccFicha2025,
-        meta: { title: 'Ficha Técnica ICC 2025' },
-      },
-    ],
+    meta: { title: 'Encuesta Cultura Ciudadana 2025' },
   },
   {
     path: '/:year/:slug',

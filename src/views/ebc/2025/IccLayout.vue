@@ -1,11 +1,18 @@
 <script setup>
-import { ref, onMounted, provide } from 'vue'
-import { RouterLink, RouterView } from 'vue-router'
+import { ref, onMounted, provide, computed } from 'vue'
+import { useRoute } from 'vue-router'
+import IccPortada from './icc/IccPortada.vue'
+import IccResultados from './icc/IccResultados.vue'
+import IccFicha from './icc/IccFicha.vue'
 
+const route = useRoute()
 const codigoMedicion = 'm194'
 const surveyInfo = ref(null)
 const loading = ref(true)
 const error = ref(null)
+
+// Determinar la pestaña actual basada en el parámetro ?tab=
+const currentTab = computed(() => route.query.tab || 'inicio')
 
 // Proveemos los datos y el código para que cualquier subvista los use
 provide('surveyInfo', surveyInfo)
@@ -31,24 +38,25 @@ onMounted(async () => {
   <div class="icc-layout">
     <div class="icc-shell">
       <nav class="survey-nav">
+        <!-- Navegación basada en Query Params -->
         <RouterLink
-          to="/ebc/encuesta-cultura-ciudadana-2025"
+          :to="{ path: route.path, query: { tab: 'inicio' } }"
           class="nav-tab"
-          exact-active-class="active"
+          :class="{ active: currentTab === 'inicio' }"
         >
           <i class="bi bi-house-door me-2"></i>Inicio
         </RouterLink>
         <RouterLink
-          to="/ebc/encuesta-cultura-ciudadana-2025/resultados"
+          :to="{ path: route.path, query: { tab: 'resultados' } }"
           class="nav-tab"
-          active-class="active"
+          :class="{ active: currentTab === 'resultados' }"
         >
           <i class="bi bi-bar-chart me-2"></i>Resultados
         </RouterLink>
         <RouterLink
-          to="/ebc/encuesta-cultura-ciudadana-2025/ficha-tecnica"
+          :to="{ path: route.path, query: { tab: 'ficha' } }"
           class="nav-tab"
-          active-class="active"
+          :class="{ active: currentTab === 'ficha' }"
         >
           <i class="bi bi-file-earmark-text me-2"></i>Ficha Técnica
         </RouterLink>
@@ -63,7 +71,12 @@ onMounted(async () => {
           <i class="bi bi-exclamation-triangle"></i>
           <p>{{ error }}</p>
         </div>
-        <RouterView v-else />
+        <div v-else class="icc-tabs-container">
+          <!-- Usamos v-show para que el estado de los componentes se mantenga al cambiar de pestaña -->
+          <IccPortada v-show="currentTab === 'inicio'" />
+          <IccResultados v-show="currentTab === 'resultados'" />
+          <IccFicha v-show="currentTab === 'ficha'" />
+        </div>
       </main>
     </div>
   </div>
@@ -72,7 +85,7 @@ onMounted(async () => {
 <style scoped>
 .icc-layout {
   min-height: 100vh;
-  padding: 1rem 1.5em; /* Padding lateral de 1.5em como se solicitó */
+  padding: 0.3rem 1.5em; /* Padding lateral de 1.5em como se solicitó */
   background-color: #ffffff;
 }
 
