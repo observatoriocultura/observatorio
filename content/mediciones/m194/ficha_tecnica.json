@@ -1,0 +1,98 @@
+[
+    {
+        "num":110,
+        "variable":"Nombre de la encuesta",
+        "nivel":1,
+        "valor":"Encuesta de Indicadores de Cultura Ciudadana y Garantía de Derechos 2024"
+    },
+    {
+        "num":120,
+        "variable":"Módulo temático de",
+        "nivel":1,
+        "valor":"Encuesta Bienal de Culturas"
+    },
+    {
+        "num":130,
+        "variable":"Entidad",
+        "nivel":1,
+        "valor":"Secretaría de Cultura, Recreación y Deporte"
+    },
+    {
+        "num":131,
+        "variable":"Diseñada e implementada por",
+        "nivel":2,
+        "valor":"Dirección Observatorio y Gestión del Conocimiento Cultural"
+    },
+    {
+        "num":140,
+        "variable":"Universo en estudio",
+        "nivel":1,
+        "valor":"Población mayor de 13 años residente en la ciudad de Bogotá área Urbana y rural, residencia habitual por lo menos durante los últimos 6 años."
+    },
+    {
+        "num":150,
+        "variable":"Diseño de muestreo",
+        "nivel":1,
+        "valor":"Las encuestas probabilísticas presenciales en hogares se realizan en la zona residencial estratificada de 20 localidades de Bogotá. Las estimaciones se publican desagregadas por las localidades de Usaquén, Chapinero, Santafé, San Cristóbal, Usme, Tunjuelito, Bosa, Kennedy, Fontibón, Engativá, Suba, Barrios Unidos, Teusaquillo, Los Mártires, Antonio Nariño, Puente Aranda, La Candelaria, Rafael Uribe Uribe, Ciudad Bolívar y Sumapaz además para el agregado Distrital."
+    },
+    {
+        "num":151,
+        "variable":"Primera etapa",
+        "nivel":2,
+        "valor":"La unidad de muestreo son las manzanas estratificadas."
+    },
+    {
+        "num":152,
+        "variable":"Segunda etapa",
+        "nivel":2,
+        "valor":"La unidad de muestreo son los predios de uso residencial o habitacional dentro de las manzanas pre-seleccionadas. "
+    },
+    {
+        "num":152,
+        "variable":"Tercera etapa",
+        "nivel":2,
+        "valor":"La unidad de muestreo son las personas de 13 años y más a encuestar dentro de cada hogar. "
+    },
+    {
+        "num":160,
+        "variable":"Tamaño de muestra",
+        "nivel":1,
+        "valor":5860
+    },
+    {
+        "num":170,
+        "variable":"Población representada",
+        "nivel":1,
+        "valor":6869000
+    },
+    {
+        "num":180,
+        "variable":"Periodo de referencia",
+        "nivel":1,
+        "valor":"Año 2025"
+    },
+    {
+        "num":190,
+        "variable":"Periodo de recolección",
+        "nivel":1,
+        "valor":"PENDIENTE"
+    },
+    {
+        "num":200,
+        "variable":"Confiabilidad",
+        "nivel":1,
+        "valor":null
+    },
+    {
+        "num":210,
+        "variable":"Error",
+        "nivel":1,
+        "valor":null
+    },
+    {
+        "num":230,
+        "variable":"Recolección de la Información",
+        "nivel":1,
+        "valor":"Gloria Gallego Sigma Dos Internacional S.A.S."
+    }
+]
