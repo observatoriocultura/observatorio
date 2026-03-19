@@ -4,6 +4,7 @@ import { useRoute } from 'vue-router'
 import IccPortada from './icc/IccPortada.vue'
 import IccResultados from './icc/IccResultados.vue'
 import IccFicha from './icc/IccFicha.vue'
+import IccDocs from './icc/IccDocs.vue'
 
 const route = useRoute()
 const codigoMedicion = 'm194'
@@ -60,6 +61,13 @@ onMounted(async () => {
         >
           <i class="bi bi-file-earmark-text me-2"></i>Ficha Técnica
         </RouterLink>
+        <RouterLink
+          :to="{ path: route.path, query: { tab: 'docs' } }"
+          class="nav-tab"
+          :class="{ active: currentTab === 'docs' }"
+        >
+          <i class="bi bi-journal-code me-2"></i>Docs Técnica
+        </RouterLink>
       </nav>
 
       <main class="icc-view-content">
@@ -76,6 +84,7 @@ onMounted(async () => {
           <IccPortada v-show="currentTab === 'inicio'" />
           <IccResultados v-show="currentTab === 'resultados'" />
           <IccFicha v-show="currentTab === 'ficha'" />
+          <IccDocs v-show="currentTab === 'docs'" />
         </div>
       </main>
     </div>

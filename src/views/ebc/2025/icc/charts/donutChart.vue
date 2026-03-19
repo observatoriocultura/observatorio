@@ -25,12 +25,22 @@ const initChart = () => {
     chartInstance.destroy()
   }
 
-  // Extraer los valores de la suma_factor para cada categoría
-  // Nota: Considerar agregar reduce si se espera más de una variable por donut
-  const serieData = props.respuestas.map((d) => ({
-    name: d.respuesta_v2,
-    y: parseFloat(d.suma_factor),
-  }))
+  // Agrupar los valores de la suma_factor para cada categoría
+  const uniqueCategories = [...new Set(props.respuestas.map((d) => d.respuesta_v2))]
+  uniqueCategories.sort((a, b) => {
+    const numA = parseFloat(a)
+    const numB = parseFloat(b)
+    if (!isNaN(numA) && !isNaN(numB)) return numA - numB
+    return 0
+  })
+
+  const serieData = uniqueCategories.map((cat) => {
+    const matches = props.respuestas.filter((r) => r.respuesta_v2 === cat)
+    return {
+      name: cat,
+      y: matches.reduce((sum, r) => sum + (parseFloat(r.suma_factor) || 0), 0)
+    }
+  })
 
   chartInstance = Highcharts.chart(chartContainer.value, {
     chart: {
@@ -151,6 +161,6 @@ watch(
 
 .highcharts-container {
   width: 100%;
-  height: calc(100vh - 480px);
+  height: calc(100vh - 220px);
 }
 </style>

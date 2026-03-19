@@ -23,9 +23,21 @@ const initChart = () => {
     chartInstance.destroy()
   }
 
-  // Extraer las categorías y los datos de las respuestas
-  const categories = props.respuestas.map((d) => d.respuesta_v2)
-  const data = props.respuestas.map((d) => parseFloat(d.porcentaje))
+  // Extraer las categorías y los datos agrupados por respuesta_v2
+  const uniqueCategories = [...new Set(props.respuestas.map((d) => d.respuesta_v2))]
+  // Intenta ordenar numéricamente si es posible, sino queda el orden original
+  uniqueCategories.sort((a, b) => {
+    const numA = parseFloat(a)
+    const numB = parseFloat(b)
+    if (!isNaN(numA) && !isNaN(numB)) return numA - numB
+    return 0
+  })
+
+  const categories = uniqueCategories
+  const data = uniqueCategories.map((cat) => {
+    const matches = props.respuestas.filter((r) => r.respuesta_v2 === cat)
+    return matches.reduce((sum, r) => sum + (parseFloat(r.porcentaje) || 0), 0)
+  })
 
   chartInstance = Highcharts.chart(chartContainer.value, {
     chart: {

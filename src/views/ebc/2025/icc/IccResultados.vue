@@ -1,9 +1,11 @@
 <script setup>
-import { ref, onMounted, inject, computed, watch } from 'vue'
+import { ref, onMounted, inject, provide, computed, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import BarMultipleChart from './charts/barMultipleChart.vue'
 import DonutChart from './charts/donutChart.vue'
 import BarChart from './charts/barChart.vue'
+import LocalidadChart from './charts/LocalidadChart.vue'
+import IccDebug from './charts/IccDebug.vue'
 
 const contentSection = ref('chart')
 const codigoMedicion = inject('codigoMedicion')
@@ -11,14 +13,51 @@ const secciones = ref([])
 const preguntas = ref([])
 const variables = ref([])
 const respuestas = ref([])
+const localidades = ref([])
+provide('localidades', localidades)
 const loading = ref(true)
 const seccionSeleccionada = ref(null)
 const preguntaSeleccionada = ref(null)
-
+const localidadSeleccionada = ref(null)
 const route = useRoute()
 const router = useRouter()
 
-/** Sincroniza la URL con el estado actual */
+/** Datos desagregados — null = aún no cargados (lazy load) */
+const respuestasLocalidad = ref(null)
+const loadingDimension = ref(false)
+
+/** Cache en módulo: persiste mientras la SPA esté montada */
+const cacheDimensiones = {}
+
+/**
+ * Carga un archivo de respuestas desagregadas bajo demanda.
+ * Si ya fue cargado (en ref o en cache), no hace ningún fetch.
+ * @param {string} nombreArchivo - Nombre del archivo JSON
+ * @param {import('vue').Ref} refDato - La ref donde guardar los datos
+ */
+const cargarDimension = async (nombreArchivo, refDato) => {
+  if (refDato.value !== null) return // ya cargado
+
+  if (cacheDimensiones[nombreArchivo]) {
+    refDato.value = cacheDimensiones[nombreArchivo]
+    return
+  }
+
+  loadingDimension.value = true
+  try {
+    const baseUrl = import.meta.env.BASE_URL
+    const res = await fetch(`${baseUrl}content/mediciones/${codigoMedicion}/${nombreArchivo}`)
+    const data = await res.json()
+    cacheDimensiones[nombreArchivo] = data
+    refDato.value = data
+  } catch (e) {
+    console.error(`Error cargando dimensión ${nombreArchivo}:`, e)
+  } finally {
+    loadingDimension.value = false
+  }
+}
+
+/** Refleja la sección y pregunta activas como query params en la URL (?num_seccion=&num_pregunta=) */
 const actualizarUrl = () => {
   const query = { ...route.query }
   if (seccionSeleccionada.value) query.num_seccion = seccionSeleccionada.value.num_seccion
@@ -27,15 +66,13 @@ const actualizarUrl = () => {
   router.replace({ query })
 }
 
-/**
- * Calcula la promedio de una variable numérica en función de los factores de expansión
- */
+/** Calcula el promedio ponderado de una variable usando suma_factor como peso. Retorna null si no hay factores. */
 const calcularPromedioPonderado = (listaRespuestas) => {
   let sumaPonderada = 0
   let sumaFactores = 0
 
   listaRespuestas.forEach((r) => {
-    const val = parseFloat(r.respuesta)
+    const val = parseFloat(r.respuesta_number)
     const f = parseFloat(r.suma_factor)
     if (!isNaN(val) && !isNaN(f)) {
       sumaPonderada += val * f
@@ -46,17 +83,23 @@ const calcularPromedioPonderado = (listaRespuestas) => {
   return sumaFactores > 0 ? sumaPonderada / sumaFactores : null
 }
 
+/** Etiquetas del eje X para los gráficos: usa enunciado_2 o, en su defecto, el código de variable */
 const categorias = computed(() => {
   return variablesFiltradas.value.map((v) => v.enunciado_2 || v.codigo_variable)
 })
 const series = ref([])
 const respuestasPregunta = ref([])
 
+/** Lista de preguntas que pertenecen a la sección actualmente seleccionada */
 const preguntasFiltradas = computed(() => {
   if (!seccionSeleccionada.value) return []
   return preguntas.value.filter((p) => p.num_seccion === seccionSeleccionada.value.num_seccion)
 })
 
+/**
+ * Variables de la pregunta activa, enriquecidas con suma_factor total y promedio_ponderado.
+ * Cruza variables[] con respuestasPregunta para agregar los factores de expansión por variable.
+ */
 const variablesFiltradas = computed(() => {
   if (!preguntaSeleccionada.value) return []
   return variables.value
@@ -65,42 +108,46 @@ const variablesFiltradas = computed(() => {
       const respuestasDeVariable = respuestasPregunta.value.filter(
         (r) => r.indice_variable === v.indice_variable,
       )
-      // Sumar los factores de todas las respuestas asociadas a esta variable
       const sumaTotal = respuestasDeVariable.reduce((acc, r) => acc + (r.suma_factor || 0), 0)
-      // Calcular promedio ponderado
       const promedio = calcularPromedioPonderado(respuestasDeVariable)
 
       return { ...v, suma_factor: sumaTotal, promedio_ponderado: promedio }
     })
 })
 
-/** Asignar la sumatoria del factor, al máximo entre las variables */
+/** Población representada: toma el máximo de suma_factor entre todas las variables de la pregunta */
 const sumatoriaFactor = computed(() => {
   return Math.max(...variablesFiltradas.value.map((v) => v.suma_factor), 0)
 })
 
-/** Obtener los tipos de respuestas únicas (V2) para generar las series */
+/** Valores únicos de respuesta_v2 presentes en la pregunta activa, ordenados numericamente. Definen las series del gráfico bar-multiple. */
 const posiblesRespuestas = computed(() => {
   const valores = respuestasPregunta.value.map((r) => r.respuesta_v2)
   return [...new Set(valores)].sort((a, b) => a - b)
 })
 
+/**
+ * Carga en paralelo los 5 archivos base de la medición y establece la selección inicial
+ * de sección y pregunta (respetando query params de la URL si los hay).
+ */
 onMounted(async () => {
   try {
     const baseUrl = import.meta.env.BASE_URL
 
     // 1. Cargar todas las definiciones básicas
-    const [resSec, resPre, resVar, resRes] = await Promise.all([
+    const [resSec, resPre, resVar, resRes, resLoc] = await Promise.all([
       fetch(`${baseUrl}content/mediciones/${codigoMedicion}/secciones.json`),
       fetch(`${baseUrl}content/mediciones/${codigoMedicion}/preguntas.json`),
       fetch(`${baseUrl}content/mediciones/${codigoMedicion}/variables.json`),
       fetch(`${baseUrl}content/mediciones/${codigoMedicion}/respuestas.json`),
+      fetch(`${baseUrl}content/mediciones/${codigoMedicion}/localidades.json`),
     ])
 
-    secciones.value = await resSec.json()
-    preguntas.value = await resPre.json()
+    secciones.value = (await resSec.json()).filter((s) => Number(s.dataviz_display) === 1)
+    preguntas.value = (await resPre.json()).filter((p) => Number(p.dataviz_display) === 1)
     variables.value = await resVar.json()
     respuestas.value = await resRes.json()
+    localidades.value = await resLoc.json()
 
     // 2. Determinar selección inicial (URL o defecto)
     const urlSeccion = route.query.num_seccion
@@ -135,7 +182,7 @@ onMounted(async () => {
   }
 })
 
-// Observar cambios en la URL (por ejemplo, si el usuario navega atrás)
+/** Sincroniza el estado interno si el usuario navega con el historial del navegador (atrás/adelante) */
 watch(
   () => [route.query.num_seccion, route.query.num_pregunta],
   ([newSec, newPre]) => {
@@ -155,27 +202,16 @@ watch(
   },
 )
 
-/**
- * Selecciona una sección y actualiza la pregunta seleccionada
- * @param {Object} seccion - Objeto de sección
- */
+/** Cambia la sección activa y reinicia la pregunta a la primera de esa sección */
 const seleccionarSeccion = (seccion) => {
   seccionSeleccionada.value = seccion
-  // Resetear pregunta al cambiar de sección
-  if (preguntasFiltradas.value.length > 0) {
-    preguntaSeleccionada.value = preguntasFiltradas.value[0]
-  } else {
-    preguntaSeleccionada.value = null
-  }
+  preguntaSeleccionada.value = preguntasFiltradas.value[0] ?? null
   actualizarUrl()
   actualizarRespuestas()
   actualizarSeries()
 }
 
-/**
- * Selecciona una pregunta y actualiza las respuestas y series
- * @param {Object} pregunta - Objeto de pregunta
- */
+/** Cambia la pregunta activa y refresca respuestas, series y URL */
 const seleccionarPregunta = (pregunta) => {
   preguntaSeleccionada.value = pregunta
   actualizarUrl()
@@ -184,7 +220,8 @@ const seleccionarPregunta = (pregunta) => {
 }
 
 /**
- * Actualiza las series del gráfico
+ * Construye el array `series` para el gráfico bar-multiple.
+ * Genera una serie por cada valor único de respuesta_v2, con suma_factor de cada variable como dato.
  */
 const actualizarSeries = () => {
   if (!variablesFiltradas.value.length || !respuestasPregunta.value.length) {
@@ -192,40 +229,54 @@ const actualizarSeries = () => {
     return
   }
 
-  // Generamos una serie por cada tipo de respuesta única
   series.value = posiblesRespuestas.value.map((tipoResp) => {
     return {
-      name: `${tipoResp}`, // Dejamos solo el valor de la respuesta para una leyenda más limpia
+      name: `${tipoResp}`,
       data: variablesFiltradas.value.map((variable) => {
-        // Buscamos la respuesta que coincida con esta variable y este tipo de respuesta
-        const r = respuestasPregunta.value.find(
+        const matches = respuestasPregunta.value.filter(
           (res) =>
             res.indice_variable === variable.indice_variable && res.respuesta_v2 === tipoResp,
         )
-        return r ? r.suma_factor : 0 // Si no hay dato para esa combinación, ponemos 0
+        return matches.reduce((sum, r) => sum + (r.suma_factor || 0), 0)
       }),
     }
   })
 }
 
-/** Calcular las categorías (Variables) */
-// Eliminado: ahora es una propiedad computada
-
+/**
+ * Filtra las respuestas de la pregunta activa y calcula el porcentaje por variable.
+ * La fuente de datos varía según el filtro activo:
+ *   - Sin filtro       → respuestas.json (datos agregados, ya en memoria)
+ *   - Con localidad    → respuestas_localidad.json, pre-filtrado por localidad_cod
+ *   - (futuro) Sexo / grupo_edad → mismo patrón con sus propios archivos
+ */
 const actualizarRespuestas = () => {
   if (!preguntaSeleccionada.value || !respuestas.value.length) return
 
-  const filtradas = respuestas.value.filter(
+  // 1. Elegir la fuente de datos según los filtros activos
+  let fuente = respuestas.value
+
+  if (localidadSeleccionada.value && respuestasLocalidad.value) {
+    fuente = respuestasLocalidad.value.filter(
+      (r) => r.localidad_cod === localidadSeleccionada.value,
+    )
+  }
+  // else if (sexoSeleccionado.value && respuestasSexo.value) { ... }
+  // else if (grupoEdadSeleccionado.value && respuestasEdad.value) { ... }
+
+  // 2. Filtrar por pregunta seleccionada
+  const filtradas = fuente.filter(
     (r) => r.indice_pregunta === preguntaSeleccionada.value.indice_pregunta,
   )
 
-  // Calcular totales por variable para obtener el porcentaje local
+  // 3. Sumar factores por variable (denominador para el porcentaje)
   const totalesPorVariable = {}
   filtradas.forEach((r) => {
     const idVar = r.indice_variable
     totalesPorVariable[idVar] = (totalesPorVariable[idVar] || 0) + (r.suma_factor || 0)
   })
 
-  // Asignar el porcentaje respecto al total de su propia variable
+  // 4. Calcular porcentaje de cada respuesta respecto al total de su variable
   respuestasPregunta.value = filtradas.map((r) => {
     const totalVar = totalesPorVariable[r.indice_variable] || 0
     return {
@@ -234,6 +285,22 @@ const actualizarRespuestas = () => {
     }
   })
 }
+
+/** Cuando cambia la localidad: descarga respuestas_localidad.json si es la primera vez (lazy), luego recalcula */
+watch(localidadSeleccionada, async (nuevaLocalidad) => {
+  if (nuevaLocalidad) {
+    await cargarDimension('respuestas_localidad.json', respuestasLocalidad)
+  }
+  actualizarRespuestas()
+  actualizarSeries()
+})
+
+/** Asegurar carga de dimensión_localidad al entrar a la pestaña Localidad */
+watch(contentSection, async (nuevaSeccion) => {
+  if (nuevaSeccion === 'localidad') {
+    await cargarDimension('respuestas_localidad.json', respuestasLocalidad)
+  }
+})
 </script>
 
 <template>
@@ -272,7 +339,7 @@ const actualizarRespuestas = () => {
                 data-bs-target="#listaSecciones"
                 @click="seleccionarSeccion(seccion)"
               >
-                <div class="d-flex w-100 justify-content-between align-items-center">
+                <div class="d-flex w-100 justify-content-start align-items-center">
                   <span class="section-number">{{ seccion.num_seccion }}</span>
                   <span class="section-name text-truncate ms-2">{{ seccion.nombre_seccion }}</span>
                 </div>
@@ -326,7 +393,44 @@ const actualizarRespuestas = () => {
                 <i class="bi bi-gear me-1"></i>Inspección (Data)
               </button>
             </li>
+            <li class="nav-item">
+              <button
+                class="nav-link"
+                :class="{ active: contentSection === 'localidad' }"
+                @click="contentSection = 'localidad'"
+              >
+                <i class="bi bi-gear me-1"></i>Localidad
+              </button>
+            </li>
           </ul>
+
+          <div class="d-flex align-items-center gap-2">
+            <select
+              v-model="localidadSeleccionada"
+              class="form-select"
+              :disabled="loadingDimension"
+            >
+              <option :value="null">Todas las localidades</option>
+              <option
+                v-for="localidad in localidades"
+                :key="localidad.localidad_cod"
+                :value="localidad.localidad_cod"
+              >
+                {{ localidad.localidad_residencia }}
+              </option>
+            </select>
+            <div
+              v-if="loadingDimension"
+              class="text-muted small d-flex align-items-center gap-1 text-nowrap"
+            >
+              <span
+                class="spinner-border spinner-border-sm"
+                role="status"
+                aria-hidden="true"
+              ></span>
+              Cargando datos...
+            </div>
+          </div>
 
           <!-- MOSTRAR GRÁFICO SEGÚN EL TIPO DE PREGUNTA -->
           <div v-if="contentSection === 'chart'" class="mt-4">
@@ -410,78 +514,20 @@ const actualizarRespuestas = () => {
 
           <!-- MOSTRAR TABLA DE DATOS (DEBUG) -->
           <div v-if="contentSection === 'table'">
-            <div id="debug-tables" class="mt-4">
-              <h6 class="text-uppercase text-muted small fw-bold mb-3">
-                Variables (Suma Máxima: {{ sumatoriaFactor.toFixed(2) }})
-              </h6>
-              <table class="table table-sm table-bordered small mb-4">
-                <thead class="bg-light">
-                  <tr>
-                    <th class="text-center">indice_variable</th>
-                    <th>codigo_variable</th>
-                    <th>enunciado_2</th>
-                    <th>unidad_medida</th>
-                    <th class="text-end">suma_factor (total)</th>
-                    <th class="text-end">promedio_ponderado</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr v-for="variable in variablesFiltradas" :key="variable.codigo_variable">
-                    <td class="text-center">{{ variable.indice_variable }}</td>
-                    <td>
-                      <code>{{ variable.codigo_variable }}</code>
-                    </td>
-                    <td>{{ variable.enunciado_2 }}</td>
-                    <td>
-                      <span class="text-muted">{{ variable.unidad_medida }}</span>
-                    </td>
-                    <td class="text-end fw-bold text-primary font-monospace">
-                      {{ variable.suma_factor.toFixed(2) }}
-                    </td>
-                    <td class="text-end fw-bold text-success font-monospace">
-                      {{
-                        variable.promedio_ponderado !== null
-                          ? variable.promedio_ponderado.toFixed(2)
-                          : '-'
-                      }}
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+            <IccDebug
+              :variablesFiltradas="variablesFiltradas"
+              :respuestasPregunta="respuestasPregunta"
+              :sumatoriaFactor="sumatoriaFactor"
+            />
+          </div>
 
-              <h6 class="text-uppercase text-muted small fw-bold mb-3">RESPUESTAS</h6>
-              <table class="table table-sm table-bordered small">
-                <thead class="bg-light">
-                  <tr>
-                    <th>codigo_variable</th>
-                    <th class="text-center">indice_variable</th>
-                    <th class="text-center">respuesta</th>
-                    <th class="text-center">respuesta_v2</th>
-                    <th class="text-end">suma_factor</th>
-                    <th class="text-end">porcentaje</th>
-                    <th class="text-end">cantidad_respuestas</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr v-for="(resp, index) in respuestasPregunta" :key="index">
-                    <td>
-                      <code>{{ resp.codigo_variable }}</code>
-                    </td>
-                    <td class="text-center">{{ resp.indice_variable }}</td>
-                    <td class="text-start">{{ resp.respuesta }}</td>
-                    <td class="text-start">{{ resp.respuesta_v2 }}</td>
-                    <td class="text-end font-monospace">{{ resp.suma_factor.toFixed(2) }}</td>
-                    <td class="text-end font-monospace text-success">
-                      {{ resp.porcentaje.toFixed(1) }}%
-                    </td>
-                    <td class="text-end">{{ resp.cantidad_respuestas }}</td>
-                  </tr>
-                  <tr v-if="respuestasPregunta.length === 0">
-                    <td colspan="7" class="text-center py-3 text-muted">No entries found</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+          <div v-if="contentSection === 'localidad'">
+            <LocalidadChart 
+              :variables="variablesFiltradas"
+              :posiblesRespuestas="posiblesRespuestas"
+              :respuestasLocalidad="respuestasLocalidad"
+              :loading="loadingDimension"
+            />
           </div>
         </div>
         <div v-else-if="seccionSeleccionada" class="section-welcome py-5 text-center">
