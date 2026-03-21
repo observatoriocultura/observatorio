@@ -4,8 +4,9 @@ import { useRoute, useRouter } from 'vue-router'
 import BarMultipleChart from './charts/barMultipleChart.vue'
 import DonutChart from './charts/donutChart.vue'
 import BarChart from './charts/barChart.vue'
-import LocalidadChart from './charts/LocalidadChart.vue'
+import LocalidadesView from './LocalidadesView.vue'
 import IccDebug from './charts/IccDebug.vue'
+import * as bootstrap from 'bootstrap'
 
 const contentSection = ref('chart')
 const codigoMedicion = inject('codigoMedicion')
@@ -175,6 +176,10 @@ onMounted(async () => {
         actualizarSeries()
       }
     }
+
+    // Inicializar Tooltips de Bootstrap
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    tooltipTriggerList.forEach((el) => new bootstrap.Tooltip(el))
   } catch (e) {
     console.error('Error cargando datos de resultados:', e)
   } finally {
@@ -209,6 +214,13 @@ const seleccionarSeccion = (seccion) => {
   actualizarUrl()
   actualizarRespuestas()
   actualizarSeries()
+
+  // Cerrar manualmente el colapsable después de seleccionar
+  const el = document.getElementById('listaSecciones')
+  if (el) {
+    const bsCollapse = bootstrap.Collapse.getInstance(el) || new bootstrap.Collapse(el)
+    bsCollapse.hide()
+  }
 }
 
 /** Cambia la pregunta activa y refresca respuestas, series y URL */
@@ -295,9 +307,9 @@ watch(localidadSeleccionada, async (nuevaLocalidad) => {
   actualizarSeries()
 })
 
-/** Asegurar carga de dimensión_localidad al entrar a la pestaña Localidad */
+/** Asegurar carga de dimensión_localidad al entrar a la pestañas de Localidades */
 watch(contentSection, async (nuevaSeccion) => {
-  if (nuevaSeccion === 'localidad') {
+  if (nuevaSeccion === 'localidades') {
     await cargarDimension('respuestas_localidad.json', respuestasLocalidad)
   }
 })
@@ -313,7 +325,7 @@ watch(contentSection, async (nuevaSeccion) => {
           <div
             class="selector-seccion"
             data-bs-toggle="collapse"
-            href="#listaSecciones"
+            data-bs-target="#listaSecciones"
             role="button"
             aria-expanded="false"
             aria-controls="listaSecciones"
@@ -335,8 +347,6 @@ watch(contentSection, async (nuevaSeccion) => {
                 type="button"
                 class="list-group-item list-group-item-action section-item"
                 :class="{ active: seccionSeleccionada?.num_seccion === seccion.num_seccion }"
-                data-bs-toggle="collapse"
-                data-bs-target="#listaSecciones"
                 @click="seleccionarSeccion(seccion)"
               >
                 <div class="d-flex w-100 justify-content-start align-items-center">
@@ -374,7 +384,7 @@ watch(contentSection, async (nuevaSeccion) => {
       <main class="col-md-8 col-lg-9 content-area">
         <div v-if="preguntaSeleccionada" class="question-detail">
           <!-- SELECTOR DE VISTA -->
-          <ul class="nav nav-tabs mb-4">
+          <ul class="nav nav-tabs mb-2">
             <li class="nav-item">
               <button
                 class="nav-link"
@@ -387,50 +397,59 @@ watch(contentSection, async (nuevaSeccion) => {
             <li class="nav-item">
               <button
                 class="nav-link"
+                :class="{ active: contentSection === 'localidades' }"
+                @click="contentSection = 'localidades'"
+              >
+                <i class="bi bi-geo-alt me-1"></i>Localidades
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="nav-link"
                 :class="{ active: contentSection === 'table' }"
                 @click="contentSection = 'table'"
               >
                 <i class="bi bi-gear me-1"></i>Inspección (Data)
               </button>
             </li>
-            <li class="nav-item">
-              <button
-                class="nav-link"
-                :class="{ active: contentSection === 'localidad' }"
-                @click="contentSection = 'localidad'"
-              >
-                <i class="bi bi-gear me-1"></i>Localidad
-              </button>
-            </li>
           </ul>
 
-          <div class="d-flex align-items-center gap-2">
-            <select
-              v-model="localidadSeleccionada"
-              class="form-select"
-              :disabled="loadingDimension"
-            >
-              <option :value="null">Todas las localidades</option>
-              <option
-                v-for="localidad in localidades"
-                :key="localidad.localidad_cod"
-                :value="localidad.localidad_cod"
-              >
-                {{ localidad.localidad_residencia }}
-              </option>
-            </select>
-            <div
-              v-if="loadingDimension"
-              class="text-muted small d-flex align-items-center gap-1 text-nowrap"
-            >
-              <span
-                class="spinner-border spinner-border-sm"
-                role="status"
-                aria-hidden="true"
-              ></span>
-              Cargando datos...
+          <section class="section-filters mb-4 px-1" v-if="contentSection === 'chart'">
+            <div class="row align-items-center g-3">
+              <div class="col-md-6">
+                <select
+                  v-model="localidadSeleccionada"
+                  class="form-select select-premium"
+                  :disabled="loadingDimension"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Filtra los resultados generales por una localidad específica de Bogotá"
+                >
+                  <option :value="null">Todas las localidades (Total)</option>
+                  <option
+                    v-for="localidad in localidades"
+                    :key="localidad.localidad_cod"
+                    :value="localidad.localidad_cod"
+                  >
+                    {{ localidad.localidad_residencia }}
+                  </option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <div
+                  v-if="loadingDimension"
+                  class="text-muted small d-flex align-items-center gap-1 text-nowrap"
+                >
+                  <span
+                    class="spinner-border spinner-border-sm"
+                    role="status"
+                    aria-hidden="true"
+                  ></span>
+                  Cargando datos por localidad...
+                </div>
+              </div>
             </div>
-          </div>
+          </section>
 
           <!-- MOSTRAR GRÁFICO SEGÚN EL TIPO DE PREGUNTA -->
           <div v-if="contentSection === 'chart'" class="mt-4">
@@ -493,6 +512,25 @@ watch(contentSection, async (nuevaSeccion) => {
             </div>
           </div>
 
+          <!-- MOSTRAR TABLA DE DATOS (DEBUG) -->
+          <div v-if="contentSection === 'table'">
+            <IccDebug
+              :variablesFiltradas="variablesFiltradas"
+              :respuestasPregunta="respuestasPregunta"
+              :sumatoriaFactor="sumatoriaFactor"
+            />
+          </div>
+
+          <div v-if="contentSection === 'localidades'">
+            <LocalidadesView
+              :preguntaSeleccionada="preguntaSeleccionada"
+              :variables="variablesFiltradas"
+              :posiblesRespuestas="posiblesRespuestas"
+              :respuestasLocalidad="respuestasLocalidad"
+              :loading="loadingDimension"
+            />
+          </div>
+
           <div class="d-flex justify-content-between py-3">
             <div>
               <p v-if="preguntaSeleccionada.instruccion" class="text-muted italic small mt-3">
@@ -510,24 +548,6 @@ watch(contentSection, async (nuevaSeccion) => {
                 </small>
               </p>
             </div>
-          </div>
-
-          <!-- MOSTRAR TABLA DE DATOS (DEBUG) -->
-          <div v-if="contentSection === 'table'">
-            <IccDebug
-              :variablesFiltradas="variablesFiltradas"
-              :respuestasPregunta="respuestasPregunta"
-              :sumatoriaFactor="sumatoriaFactor"
-            />
-          </div>
-
-          <div v-if="contentSection === 'localidad'">
-            <LocalidadChart 
-              :variables="variablesFiltradas"
-              :posiblesRespuestas="posiblesRespuestas"
-              :respuestasLocalidad="respuestasLocalidad"
-              :loading="loadingDimension"
-            />
           </div>
         </div>
         <div v-else-if="seccionSeleccionada" class="section-welcome py-5 text-center">
@@ -832,5 +852,24 @@ watch(contentSection, async (nuevaSeccion) => {
   background: radial-gradient(circle, rgba(50, 32, 74, 0.03) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
+}
+
+.select-premium {
+  border: 1px solid #eef0f2;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  background-color: #f8fafc;
+}
+
+.select-premium:focus {
+  border-color: #32204a;
+  box-shadow: 0 0 0 4px rgba(50, 32, 74, 0.05);
+  background-color: #fff;
+}
+
+.rounded-4 {
+  border-radius: 1rem !important;
 }
 </style>

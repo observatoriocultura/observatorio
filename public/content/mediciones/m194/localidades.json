@@ -1,163 +1,142 @@
 [
-    {
-        "localidad_cod":1,
-        "localidad_residencia":"Usaquén",
-        "latitud":4.749,
-        "longitud":-74.031,
-        "es_localidad":1
-    },
-    {
-        "localidad_cod":2,
-        "localidad_residencia":"Chapinero",
-        "latitud":4.657,
-        "longitud":-74.047,
-        "es_localidad":1
-    },
-    {
-        "localidad_cod":3,
-        "localidad_residencia":"Santa Fe",
-        "latitud":4.596,
-        "longitud":-74.03,
-        "es_localidad":1
-    },
-    {
-        "localidad_cod":4,
-        "localidad_residencia":"San Cristóbal",
-        "latitud":4.546,
-        "longitud":-74.088,
-        "es_localidad":1
-    },
-    {
-        "localidad_cod":5,
-        "localidad_residencia":"Usme",
-        "latitud":4.477,
-        "longitud":-74.103,
-        "es_localidad":1
-    },
-    {
-        "localidad_cod":6,
-        "localidad_residencia":"Tunjuelito",
-        "latitud":4.588,
-        "longitud":-74.141,
-        "es_localidad":1
-    },
-    {
-        "localidad_cod":7,
-        "localidad_residencia":"Bosa",
-        "latitud":4.631,
-        "longitud":-74.195,
-        "es_localidad":1
-    },
-    {
-        "localidad_cod":8,
-        "localidad_residencia":"Kennedy",
-        "latitud":4.627,
-        "longitud":-74.157,
-        "es_localidad":1
-    },
-    {
-        "localidad_cod":9,
-        "localidad_residencia":"Fontibón",
-        "latitud":4.683,
-        "longitud":-74.148,
-        "es_localidad":1
-    },
-    {
-        "localidad_cod":10,
-        "localidad_residencia":"Engativá",
-        "latitud":4.707,
-        "longitud":-74.107,
-        "es_localidad":1
-    },
-    {
-        "localidad_cod":11,
-        "localidad_residencia":"Suba",
-        "latitud":4.765,
-        "longitud":-74.082,
-        "es_localidad":1
-    },
-    {
-        "localidad_cod":12,
-        "localidad_residencia":"Barrios Unidos",
-        "latitud":4.666,
-        "longitud":-74.084,
-        "es_localidad":1
-    },
-    {
-        "localidad_cod":13,
-        "localidad_residencia":"Teusaquillo",
-        "latitud":4.645,
-        "longitud":-74.094,
-        "es_localidad":1
-    },
-    {
-        "localidad_cod":14,
-        "localidad_residencia":"Los Mártires",
-        "latitud":4.603,
-        "longitud":-74.091,
-        "es_localidad":1
-    },
-    {
-        "localidad_cod":15,
-        "localidad_residencia":"Antonio Nariño",
-        "latitud":4.549,
-        "longitud":-74.101,
-        "es_localidad":1
-    },
-    {
-        "localidad_cod":16,
-        "localidad_residencia":"Puente Aranda",
-        "latitud":4.615,
-        "longitud":-74.123,
-        "es_localidad":1
-    },
-    {
-        "localidad_cod":17,
-        "localidad_residencia":"La Candelaria",
-        "latitud":4.594,
-        "longitud":-74.074,
-        "es_localidad":1
-    },
-    {
-        "localidad_cod":18,
-        "localidad_residencia":"Rafael Uribe Uribe",
-        "latitud":4.565,
-        "longitud":-74.116,
-        "es_localidad":1
-    },
-    {
-        "localidad_cod":19,
-        "localidad_residencia":"Ciudad Bolívar",
-        "latitud":4.507,
-        "longitud":-74.154,
-        "es_localidad":1
-    },
-    {
-        "localidad_cod":20,
-        "localidad_residencia":"Sumapaz",
-        "latitud":null,
-        "longitud":null,
-        "es_localidad":1
-    },
-    {
-        "localidad_cod":21,
-        "localidad_residencia":"Fuera de Bogotá",
-        "latitud":0.0,
-        "longitud":0.0,
-        "es_localidad":0
-    },
-    {
-        "localidad_cod":99,
-        "localidad_residencia":"NS\/NR",
-        "latitud":0.0,
-        "longitud":0.0,
-        "es_localidad":0
-    },
-    {
-        "localidad_cod":22,
-        "localidad_residencia":"Bogotá D.C.",
-        "latitud":4.6194736842,
-        "longitud":-74.1034736842,
-        "es_localidad":0
-    }
+  {
+    "localidad_cod": 1,
+    "localidad_residencia": "Usaquén",
+    "latitud": 4.749,
+    "longitud": -74.031,
+    "es_localidad": 1
+  },
+  {
+    "localidad_cod": 2,
+    "localidad_residencia": "Chapinero",
+    "latitud": 4.657,
+    "longitud": -74.047,
+    "es_localidad": 1
+  },
+  {
+    "localidad_cod": 3,
+    "localidad_residencia": "Santa Fe",
+    "latitud": 4.596,
+    "longitud": -74.03,
+    "es_localidad": 1
+  },
+  {
+    "localidad_cod": 4,
+    "localidad_residencia": "San Cristóbal",
+    "latitud": 4.546,
+    "longitud": -74.088,
+    "es_localidad": 1
+  },
+  {
+    "localidad_cod": 5,
+    "localidad_residencia": "Usme",
+    "latitud": 4.477,
+    "longitud": -74.103,
+    "es_localidad": 1
+  },
+  {
+    "localidad_cod": 6,
+    "localidad_residencia": "Tunjuelito",
+    "latitud": 4.588,
+    "longitud": -74.141,
+    "es_localidad": 1
+  },
+  {
+    "localidad_cod": 7,
+    "localidad_residencia": "Bosa",
+    "latitud": 4.631,
+    "longitud": -74.195,
+    "es_localidad": 1
+  },
+  {
+    "localidad_cod": 8,
+    "localidad_residencia": "Kennedy",
+    "latitud": 4.627,
+    "longitud": -74.157,
+    "es_localidad": 1
+  },
+  {
+    "localidad_cod": 9,
+    "localidad_residencia": "Fontibón",
+    "latitud": 4.683,
+    "longitud": -74.148,
+    "es_localidad": 1
+  },
+  {
+    "localidad_cod": 10,
+    "localidad_residencia": "Engativá",
+    "latitud": 4.707,
+    "longitud": -74.107,
+    "es_localidad": 1
+  },
+  {
+    "localidad_cod": 11,
+    "localidad_residencia": "Suba",
+    "latitud": 4.765,
+    "longitud": -74.082,
+    "es_localidad": 1
+  },
+  {
+    "localidad_cod": 12,
+    "localidad_residencia": "Barrios Unidos",
+    "latitud": 4.666,
+    "longitud": -74.084,
+    "es_localidad": 1
+  },
+  {
+    "localidad_cod": 13,
+    "localidad_residencia": "Teusaquillo",
+    "latitud": 4.645,
+    "longitud": -74.094,
+    "es_localidad": 1
+  },
+  {
+    "localidad_cod": 14,
+    "localidad_residencia": "Los Mártires",
+    "latitud": 4.603,
+    "longitud": -74.091,
+    "es_localidad": 1
+  },
+  {
+    "localidad_cod": 15,
+    "localidad_residencia": "Antonio Nariño",
+    "latitud": 4.549,
+    "longitud": -74.101,
+    "es_localidad": 1
+  },
+  {
+    "localidad_cod": 16,
+    "localidad_residencia": "Puente Aranda",
+    "latitud": 4.615,
+    "longitud": -74.123,
+    "es_localidad": 1
+  },
+  {
+    "localidad_cod": 17,
+    "localidad_residencia": "La Candelaria",
+    "latitud": 4.594,
+    "longitud": -74.074,
+    "es_localidad": 1
+  },
+  {
+    "localidad_cod": 18,
+    "localidad_residencia": "Rafael Uribe Uribe",
+    "latitud": 4.565,
+    "longitud": -74.116,
+    "es_localidad": 1
+  },
+  {
+    "localidad_cod": 19,
+    "localidad_residencia": "Ciudad Bolívar",
+    "latitud": 4.507,
+    "longitud": -74.154,
+    "es_localidad": 1
+  },
+  {
+    "localidad_cod": 20,
+    "localidad_residencia": "Sumapaz",
+    "latitud": null,
+    "longitud": null,
+    "es_localidad": 1
+  }
 ]

@@ -146,6 +146,46 @@
           </div>
         </section>
 
+        <!-- CARD 5: ANÁLISIS TERRITORIAL AVANZADO -->
+        <section class="docs-section mb-5">
+          <div class="card shadow-sm border-0 docs-card">
+            <div class="card-body p-4 p-lg-5">
+              <div class="d-flex align-items-center mb-4">
+                <div class="icon-wrapper feature-icon-5 me-3">
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <h3 class="section-title mb-0">5. Análisis Territorial (Localidades)</h3>
+              </div>
+              <p>
+                El módulo <code>LocalidadesView.vue</code> centraliza el desglose geográfico profundo. A diferencia del dashboard general, este orquestador permite una comparación multivariada entre las 20 localidades de Bogotá mediante visualización síncrona.
+              </p>
+              
+              <h5 class="mt-4 mb-3 fw-bold text-dark">Arquitectura de Visualización División (Split View)</h5>
+              <p>
+                La herramienta implementa una vista dividida que permite correlacionar dos dimensiones analíticas al mismo tiempo:
+              </p>
+              <ul>
+                <li><strong>Ranking (60%):</strong> Ejecutado por <code>LocalidadChart.vue</code>, presenta un diagrama de barras ordenado descendente para detectar líderes y rezagados.</li>
+                <li><strong>Cartografía Coroplética (40%):</strong> Gestionado por <code>LocalidadMap.vue</code>, utiliza polígonos GeoJSON para asignar intensidades de color según el valor porcentual, permitiendo identificar clústeres geográficos y patrones de proximidad.</li>
+              </ul>
+
+              <h5 class="mt-4 mb-3 fw-bold text-dark">Lógica de Cálculo Proporcional</h5>
+              <p>
+                Para garantizar un comparativo justo entre localidades de distinto peso demográfico (ej: Suba vs La Candelaria), la herramienta normaliza el dato:
+              </p>
+              <div class="bg-light p-3 rounded mb-3 border-start border-primary border-4 text-center">
+                <code>% Relativo = (Σ fact_resp_especifica / Σ fact_total_variable) * 100</code>
+              </div>
+              
+              <h5 class="mt-4 mb-3 fw-bold code-color">Optimización Dinámica</h5>
+              <ul>
+                <li><strong>Geoprocesamiento Ligero:</strong> Los polígonos de las localidades se cargan bajo demanda desde <code>localidades_bogota_urbano.json</code>, optimizando el rendimiento inicial de la página.</li>
+                <li><strong>Unificación de Filtros:</strong> Mediante <code>computed props</code>, una única selección de variable/respuesta redirige los datos transformados a la gráfica, el mapa y la tabla de forma reactiva y simultánea.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
       </div>
     </div>
   </div>
@@ -216,6 +256,7 @@
 .feature-icon-2 { background: linear-gradient(135deg, #48DBFB 0%, #0ABDE3 100%); }
 .feature-icon-3 { background: linear-gradient(135deg, #1DD1A1 0%, #10AC84 100%); }
 .feature-icon-4 { background: linear-gradient(135deg, #FECA57 0%, #FF9F43 100%); }
+.feature-icon-5 { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
 
 .code-color {
   color: #5f4481;

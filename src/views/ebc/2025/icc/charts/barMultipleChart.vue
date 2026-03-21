@@ -186,6 +186,6 @@ watch(
 
 .highcharts-container {
   width: 100%;
-  height: calc(100vh - 280px);
+  min-height: calc(100vh - 280px);
 }
 </style>

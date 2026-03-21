@@ -164,7 +164,7 @@
     {
         "num_seccion":1,
         "indice_pregunta":9,
-        "nombre":null,
+        "nombre":"Hogares en la vivienda",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -176,13 +176,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":9,
         "num_seccion_bis":1,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":1,
         "indice_pregunta":10,
-        "nombre":null,
+        "nombre":"Personas en el hogar",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -194,8 +194,8 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":10,
         "num_seccion_bis":1,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":2,
@@ -488,7 +488,7 @@
     {
         "num_seccion":3,
         "indice_pregunta":27,
-        "nombre":null,
+        "nombre":"Formas de relacionarse en la diversidad",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -506,7 +506,7 @@
     {
         "num_seccion":3,
         "indice_pregunta":28,
-        "nombre":null,
+        "nombre":"Sobre castigos físicos a niñas y niños",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -519,12 +519,12 @@
         "indice_pregunta_bis":28,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"donut"
     },
     {
         "num_seccion":3,
         "indice_pregunta":29,
-        "nombre":null,
+        "nombre":"Sobre discriminación y respeto la diferencia",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -542,7 +542,7 @@
     {
         "num_seccion":3,
         "indice_pregunta":30,
-        "nombre":null,
+        "nombre":"No le gustarían estos vecinos",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -560,7 +560,7 @@
     {
         "num_seccion":3,
         "indice_pregunta":31,
-        "nombre":null,
+        "nombre":"Sobre población LGBTIQ",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -578,7 +578,7 @@
     {
         "num_seccion":3,
         "indice_pregunta":32,
-        "nombre":null,
+        "nombre":"Presenciar hechos violentos de discriminación",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -591,12 +591,12 @@
         "indice_pregunta_bis":32,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"donut"
     },
     {
         "num_seccion":3,
         "indice_pregunta":33,
-        "nombre":null,
+        "nombre":"Sentir discriminación",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -609,12 +609,12 @@
         "indice_pregunta_bis":33,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"donut"
     },
     {
         "num_seccion":3,
         "indice_pregunta":34,
-        "nombre":null,
+        "nombre":"Motivo para sentir discriminación",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -623,28 +623,28 @@
         "instruccion":null,
         "url_imagen":null,
         "palabras_clave":null,
-        "cantidad_variables":2,
+        "cantidad_variables":1,
         "indice_pregunta_bis":34,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":3,
         "indice_pregunta":35,
-        "nombre":null,
+        "nombre":"Otro motivo para sentir discriminación",
         "descripcion":null,
         "rol":null,
         "codigo":null,
         "etiqueta_1":"9.1",
-        "enunciado_1":"Cuál ?",
+        "enunciado_1":"¿Cuál ?",
         "instruccion":null,
         "url_imagen":null,
         "palabras_clave":null,
-        "cantidad_variables":0,
+        "cantidad_variables":1,
         "indice_pregunta_bis":35,
         "num_seccion_bis":3,
-        "dataviz_display":1,
+        "dataviz_display":0,
         "dataviz_chart_type":null
     },
     {
@@ -2606,7 +2606,7 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":144,
         "num_seccion_bis":1,
-        "dataviz_display":0,
+        "dataviz_display":1,
         "dataviz_chart_type":"bar"
     },
     {
@@ -2724,7 +2724,7 @@
         "descripcion":null,
         "rol":null,
         "codigo":null,
-        "etiqueta_1":"D8",
+        "etiqueta_1":"D8.1",
         "enunciado_1":"Cuál ?",
         "instruccion":null,
         "url_imagen":null,
@@ -2787,7 +2787,7 @@
         "indice_pregunta_bis":154,
         "num_seccion_bis":1,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":1,
@@ -2858,8 +2858,8 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":158,
         "num_seccion_bis":1,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":1,
