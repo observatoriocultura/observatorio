@@ -24,6 +24,10 @@ const getImagePath = (imageName) => {
   return `${baseUrl}content/mediciones/${codigoMedicion}/images/carrusel/${imageName}`
 }
 
+const getGeneralImagePath = (imageName) => {
+  return `${baseUrl}content/mediciones/${codigoMedicion}/images/${imageName}`
+}
+
 const nextImage = () => {
   currentIndex.value = (currentIndex.value + 1) % imagesCarousel.length
 }
@@ -109,6 +113,18 @@ const goToSection = (numSection) => {
   })
 }
 
+const goToResumenGeneral = () => {
+  router.push({
+    path: route.path,
+    query: {
+      ...route.query,
+      tab: 'resultados',
+      num_seccion: 1,
+      num_pregunta: 22,
+    },
+  })
+}
+
 onMounted(() => {
   timer = setInterval(nextImage, 5000)
 })
@@ -174,6 +190,9 @@ const logoBogotaPath = computed(() => {
     <!-- Menú Inferior -->
     <div class="hero-menu">
       <div class="menu-grid">
+        <button class="btn-arrow" @click="goToResumenGeneral">
+          <img :src="getGeneralImagePath('flecha-flecha.svg')" alt="Flecha" />
+        </button>
         <button
           v-for="item in menuPrincipal"
           :key="item.key"
@@ -196,13 +215,17 @@ const logoBogotaPath = computed(() => {
 </template>
 
 <style scoped>
+/* ==========================================================================
+   ESTILOS BASE: LAPTOP & DESKTOP (VISTA PREDETERMINADA)
+   ========================================================================== */
+
 .icc-portada-hero {
   position: relative;
   width: 100%;
-  height: calc(100vh - 75px); /* Ocupa la mayor parte de la altura disponible */
-  min-height: 500px;
+  height: calc(100vh - 75px);
+  min-height: 600px;
   overflow: hidden;
-  border-radius: 2em;
+  border-radius: 0.8rem;
   display: flex;
   align-items: center;
   background: #32204a;
@@ -226,7 +249,7 @@ const logoBogotaPath = computed(() => {
 .hero-logo-right img {
   height: 60px;
   width: auto;
-  filter: brightness(0) invert(1); /* Asegura que el logo sea blanco para contrastar */
+  filter: brightness(0) invert(1);
 }
 
 .background-carousel {
@@ -270,9 +293,37 @@ const logoBogotaPath = computed(() => {
   color: #ffffff;
   width: 100%;
   padding: 0 5rem;
-  margin-top: -10%; /* Sube un poco el contenido para no pisar el menú */
+  margin-top: -10%;
 }
 
+.hero-container {
+  max-width: 900px;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-year {
+  color: #ffca28;
+  font-size: 1.1em;
+}
+
+/* MENÚ GRID DESKTOP */
 .hero-menu {
   position: absolute;
   bottom: 0;
@@ -290,17 +341,19 @@ const logoBogotaPath = computed(() => {
 
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr;
   gap: 1.25rem;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1250px;
 }
 
+/* BOTONES DEL MENÚ */
 .menu-btn {
   background: rgba(255, 255, 255, 0.1);
   color: #ffffff;
   border: 1px solid #f0ebf7;
-  padding: 0.8rem 1.5rem;
+  padding: 0.85rem 1.5rem;
   border-radius: 50px;
   font-weight: 700;
   font-size: 0.9rem;
@@ -309,18 +362,11 @@ const logoBogotaPath = computed(() => {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  text-align: left;
   backdrop-filter: blur(8px);
-}
-
-.menu-icon-mask {
-  width: 32px;
-  height: 32px;
-  mask-repeat: no-repeat;
-  mask-size: contain;
-  mask-position: center;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  -webkit-mask-position: center;
+  height: 100%;
+  width: 100%;
+  min-height: 85px;
 }
 
 .menu-btn:hover {
@@ -330,35 +376,43 @@ const logoBogotaPath = computed(() => {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-.hero-container {
-  max-width: 900px;
+.menu-icon-mask {
+  width: 30px;
+  height: 30px;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
 }
 
-.hero-title {
-  font-size: clamp(2rem, 4.5vw, 3.5rem);
-  font-weight: 900;
-  line-height: 1.1;
-  margin-bottom: 0; /* Eliminado margen ya que no hay contenido debajo */
-  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+/* BOTÓN ESPECIAL: FLECHA */
+.btn-arrow {
+  background: #ffca28;
+  border: 1px solid #ffca28;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0 50px 50px 0;
+  cursor: pointer;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  height: 100%;
+  width: 100%;
 }
 
-.hero-year {
-  color: #ffca28; /* Color resaltado para el año */
-  font-size: 1.1em;
+.btn-arrow img {
+  height: 22px;
+  width: auto;
 }
 
-.hero-subtitle {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 0.75rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
+.btn-arrow:hover {
+  background: #ffb300;
+  transform: scale(1.05);
 }
 
-/* Transición Fade */
+/* ANIMACIONES */
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 1.5s ease-in-out;
@@ -369,23 +423,67 @@ const logoBogotaPath = computed(() => {
   opacity: 0;
 }
 
+/* ==========================================================================
+   ESTILOS RESPONSIVE: MOBILE & TABLET
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 992px) {
+  .hero-menu {
+    height: auto;
+    padding: 2.5rem 2rem;
+    position: relative;
+    background: #32204a;
+  }
   .hero-content {
     padding: 0 3rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .icc-portada-hero {
+    height: auto;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 6rem 0 0;
+    border-radius: 0;
   }
 }
 
 @media (max-width: 768px) {
-  .icc-portada-hero {
-    height: auto;
-    min-height: 500px;
-    padding: 4rem 0;
+  .hero-logo-left img,
+  .hero-logo-right img {
+    height: 45px;
   }
   .hero-content {
     padding: 0 1.5rem;
   }
   .hero-title {
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+  }
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .menu-btn {
+    font-size: 0.85rem;
+    padding: 0.75rem 1.25rem;
+  }
+  .btn-arrow {
+    padding: 0.75rem;
   }
 }
 </style>

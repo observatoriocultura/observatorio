@@ -7,6 +7,7 @@ import PlanCultura from '../views/2025/PlanCultura.vue'
 import ContenidosView from '../views/ContenidosView.vue'
 import ArticleView from '../views/ArticleView.vue'
 import IccLayout2025 from '../views/ebc/2025/IccLayout.vue'
+import InvestigacionesView from '../views/InvestigacionesView.vue'
 
 const routes = [
   { path: '/', name: 'Inicio', component: HomeView, meta: { title: 'Inicio | Observatorio' } },
@@ -33,6 +34,12 @@ const routes = [
     name: 'Encuesta Cultura Ciudadana 2025',
     component: IccLayout2025,
     meta: { title: 'Encuesta Cultura Ciudadana 2025' },
+  },
+  {
+    path: '/investigaciones',
+    name: 'Investigaciones',
+    component: InvestigacionesView,
+    meta: { title: 'Investigaciones' },
   },
   {
     path: '/:year/:slug',

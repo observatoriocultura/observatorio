@@ -17103,6 +17103,16 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
+        "respuesta":383.0,
+        "respuesta_v2":null,
+        "respuesta_number":null,
+        "suma_factor":2502.8596519352,
+        "cantidad_respuestas":1
+    },
+    {
+        "codigo_variable":"P109",
+        "indice_pregunta":141,
+        "indice_variable":487,
         "respuesta":146.0,
         "respuesta_v2":null,
         "respuesta_number":null,
@@ -17114,16 +17124,6 @@
         "indice_pregunta":141,
         "indice_variable":487,
         "respuesta":398.0,
-        "respuesta_v2":null,
-        "respuesta_number":null,
-        "suma_factor":2502.8596519352,
-        "cantidad_respuestas":1
-    },
-    {
-        "codigo_variable":"P109",
-        "indice_pregunta":141,
-        "indice_variable":487,
-        "respuesta":383.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":2502.8596519352,
@@ -17233,7 +17233,7 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
-        "respuesta":184.0,
+        "respuesta":69.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":2080.2741583031,
@@ -17243,7 +17243,7 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
-        "respuesta":69.0,
+        "respuesta":184.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":2080.2741583031,
@@ -17913,7 +17913,7 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
-        "respuesta":298.0,
+        "respuesta":344.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":1107.4595716199,
@@ -17923,7 +17923,7 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
-        "respuesta":344.0,
+        "respuesta":298.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":1107.4595716199,
@@ -18053,7 +18053,7 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
-        "respuesta":67.0,
+        "respuesta":181.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":993.2303946477,
@@ -18073,7 +18073,7 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
-        "respuesta":181.0,
+        "respuesta":67.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":993.2303946477,
@@ -18153,7 +18153,7 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
-        "respuesta":5.0,
+        "respuesta":278.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":864.9094159547,
@@ -18163,7 +18163,7 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
-        "respuesta":278.0,
+        "respuesta":5.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":864.9094159547,
@@ -18293,7 +18293,7 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
-        "respuesta":277.0,
+        "respuesta":9.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":775.453772519,
@@ -18303,7 +18303,7 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
-        "respuesta":9.0,
+        "respuesta":277.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":775.453772519,
@@ -18343,6 +18343,16 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
+        "respuesta":377.0,
+        "respuesta_v2":null,
+        "respuesta_number":null,
+        "suma_factor":717.3486002687,
+        "cantidad_respuestas":1
+    },
+    {
+        "codigo_variable":"P109",
+        "indice_pregunta":141,
+        "indice_variable":487,
         "respuesta":414.0,
         "respuesta_v2":null,
         "respuesta_number":null,
@@ -18354,16 +18364,6 @@
         "indice_pregunta":141,
         "indice_variable":487,
         "respuesta":7.0,
-        "respuesta_v2":null,
-        "respuesta_number":null,
-        "suma_factor":717.3486002687,
-        "cantidad_respuestas":1
-    },
-    {
-        "codigo_variable":"P109",
-        "indice_pregunta":141,
-        "indice_variable":487,
-        "respuesta":377.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":717.3486002687,
@@ -18433,16 +18433,6 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
-        "respuesta":57.0,
-        "respuesta_v2":null,
-        "respuesta_number":null,
-        "suma_factor":685.8011013299,
-        "cantidad_respuestas":1
-    },
-    {
-        "codigo_variable":"P109",
-        "indice_pregunta":141,
-        "indice_variable":487,
         "respuesta":351.0,
         "respuesta_v2":null,
         "respuesta_number":null,
@@ -18453,7 +18443,17 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
-        "respuesta":217.0,
+        "respuesta":57.0,
+        "respuesta_v2":null,
+        "respuesta_number":null,
+        "suma_factor":685.8011013299,
+        "cantidad_respuestas":1
+    },
+    {
+        "codigo_variable":"P109",
+        "indice_pregunta":141,
+        "indice_variable":487,
+        "respuesta":381.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":683.4903853059,
@@ -18463,7 +18463,7 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
-        "respuesta":381.0,
+        "respuesta":217.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":683.4903853059,
@@ -18483,16 +18483,6 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
-        "respuesta":136.0,
-        "respuesta_v2":null,
-        "respuesta_number":null,
-        "suma_factor":677.3826611231,
-        "cantidad_respuestas":1
-    },
-    {
-        "codigo_variable":"P109",
-        "indice_pregunta":141,
-        "indice_variable":487,
         "respuesta":357.0,
         "respuesta_v2":null,
         "respuesta_number":null,
@@ -18503,10 +18493,10 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
-        "respuesta":305.0,
+        "respuesta":136.0,
         "respuesta_v2":null,
         "respuesta_number":null,
-        "suma_factor":675.7932302707,
+        "suma_factor":677.3826611231,
         "cantidad_respuestas":1
     },
     {
@@ -18523,11 +18513,31 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
+        "respuesta":305.0,
+        "respuesta_v2":null,
+        "respuesta_number":null,
+        "suma_factor":675.7932302707,
+        "cantidad_respuestas":1
+    },
+    {
+        "codigo_variable":"P109",
+        "indice_pregunta":141,
+        "indice_variable":487,
         "respuesta":231.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":659.3561714332,
         "cantidad_respuestas":2
+    },
+    {
+        "codigo_variable":"P109",
+        "indice_pregunta":141,
+        "indice_variable":487,
+        "respuesta":3.0,
+        "respuesta_v2":null,
+        "respuesta_number":null,
+        "suma_factor":638.3797933723,
+        "cantidad_respuestas":1
     },
     {
         "codigo_variable":"P109",
@@ -18553,7 +18563,7 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
-        "respuesta":3.0,
+        "respuesta":101.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":638.3797933723,
@@ -18563,10 +18573,10 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
-        "respuesta":101.0,
+        "respuesta":126.0,
         "respuesta_v2":null,
         "respuesta_number":null,
-        "suma_factor":638.3797933723,
+        "suma_factor":624.6144666644,
         "cantidad_respuestas":1
     },
     {
@@ -18584,16 +18594,6 @@
         "indice_pregunta":141,
         "indice_variable":487,
         "respuesta":306.0,
-        "respuesta_v2":null,
-        "respuesta_number":null,
-        "suma_factor":624.6144666644,
-        "cantidad_respuestas":1
-    },
-    {
-        "codigo_variable":"P109",
-        "indice_pregunta":141,
-        "indice_variable":487,
-        "respuesta":126.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":624.6144666644,
@@ -18713,6 +18713,16 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
+        "respuesta":375.0,
+        "respuesta_v2":null,
+        "respuesta_number":null,
+        "suma_factor":460.6204924212,
+        "cantidad_respuestas":1
+    },
+    {
+        "codigo_variable":"P109",
+        "indice_pregunta":141,
+        "indice_variable":487,
         "respuesta":115.0,
         "respuesta_v2":null,
         "respuesta_number":null,
@@ -18724,16 +18734,6 @@
         "indice_pregunta":141,
         "indice_variable":487,
         "respuesta":227.0,
-        "respuesta_v2":null,
-        "respuesta_number":null,
-        "suma_factor":460.6204924212,
-        "cantidad_respuestas":1
-    },
-    {
-        "codigo_variable":"P109",
-        "indice_pregunta":141,
-        "indice_variable":487,
-        "respuesta":375.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":460.6204924212,
@@ -18813,7 +18813,7 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
-        "respuesta":34.0,
+        "respuesta":245.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":329.901171989,
@@ -18823,7 +18823,7 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
-        "respuesta":245.0,
+        "respuesta":34.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":329.901171989,
@@ -18923,7 +18923,7 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
-        "respuesta":189.0,
+        "respuesta":362.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":282.3620891052,
@@ -18933,7 +18933,7 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
-        "respuesta":362.0,
+        "respuesta":189.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":282.3620891052,
@@ -18993,7 +18993,7 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
-        "respuesta":287.0,
+        "respuesta":170.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":211.6062711612,
@@ -19003,7 +19003,7 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
-        "respuesta":170.0,
+        "respuesta":287.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":211.6062711612,
@@ -19043,7 +19043,7 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
-        "respuesta":253.0,
+        "respuesta":225.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":137.4885382825,
@@ -19053,7 +19053,7 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
-        "respuesta":225.0,
+        "respuesta":253.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":137.4885382825,
@@ -19203,7 +19203,7 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
-        "respuesta":242.0,
+        "respuesta":68.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":19.8306095114,
@@ -19213,7 +19213,7 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
-        "respuesta":68.0,
+        "respuesta":242.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":19.8306095114,
@@ -19263,7 +19263,7 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
-        "respuesta":252.0,
+        "respuesta":405.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":16.7521351159,
@@ -19273,7 +19273,7 @@
         "codigo_variable":"P109",
         "indice_pregunta":141,
         "indice_variable":487,
-        "respuesta":405.0,
+        "respuesta":252.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":16.7521351159,
@@ -20401,77 +20401,37 @@
     },
     {
         "codigo_variable":"D3_1",
-        "indice_pregunta":145,
+        "indice_pregunta":146,
         "indice_variable":503,
         "respuesta":3.0,
-        "respuesta_v2":null,
+        "respuesta_v2":"29 a 59 - Adultos",
         "respuesta_number":null,
-        "suma_factor":1542214.6733624281,
-        "cantidad_respuestas":1442
+        "suma_factor":3514331.4376586592,
+        "cantidad_respuestas":3484
     },
     {
         "codigo_variable":"D3_1",
-        "indice_pregunta":145,
-        "indice_variable":503,
-        "respuesta":4.0,
-        "respuesta_v2":null,
-        "respuesta_number":null,
-        "suma_factor":1222223.4899312952,
-        "cantidad_respuestas":1296
-    },
-    {
-        "codigo_variable":"D3_1",
-        "indice_pregunta":145,
-        "indice_variable":503,
-        "respuesta":5.0,
-        "respuesta_v2":null,
-        "respuesta_number":null,
-        "suma_factor":925287.834918817,
-        "cantidad_respuestas":953
-    },
-    {
-        "codigo_variable":"D3_1",
-        "indice_pregunta":145,
-        "indice_variable":503,
-        "respuesta":6.0,
-        "respuesta_v2":null,
-        "respuesta_number":null,
-        "suma_factor":919279.76524317,
-        "cantidad_respuestas":814
-    },
-    {
-        "codigo_variable":"D3_1",
-        "indice_pregunta":145,
+        "indice_pregunta":146,
         "indice_variable":503,
         "respuesta":2.0,
-        "respuesta_v2":null,
+        "respuesta_v2":"13 a 28 - Jóvenes",
         "respuesta_number":null,
-        "suma_factor":890973.2825419315,
-        "cantidad_respuestas":626
+        "suma_factor":1953323.4246834989,
+        "cantidad_respuestas":1345
     },
     {
         "codigo_variable":"D3_1",
-        "indice_pregunta":145,
+        "indice_pregunta":146,
         "indice_variable":503,
-        "respuesta":7.0,
-        "respuesta_v2":null,
+        "respuesta":4.0,
+        "respuesta_v2":"60 o más - Adultos mayores",
         "respuesta_number":null,
-        "suma_factor":811267.3492168017,
-        "cantidad_respuestas":508
-    },
-    {
-        "codigo_variable":"D3_1",
-        "indice_pregunta":145,
-        "indice_variable":503,
-        "respuesta":1.0,
-        "respuesta_v2":null,
-        "respuesta_number":null,
-        "suma_factor":557753.3493681081,
-        "cantidad_respuestas":221
+        "suma_factor":1401344.8822403932,
+        "cantidad_respuestas":1031
     },
     {
         "codigo_variable":"D4",
-        "indice_pregunta":146,
+        "indice_pregunta":147,
         "indice_variable":504,
         "respuesta":1.0,
         "respuesta_v2":"Bogotá",
@@ -20481,7 +20441,7 @@
     },
     {
         "codigo_variable":"D4",
-        "indice_pregunta":146,
+        "indice_pregunta":147,
         "indice_variable":504,
         "respuesta":2.0,
         "respuesta_v2":"Otro municipio",
@@ -20491,7 +20451,7 @@
     },
     {
         "codigo_variable":"D4",
-        "indice_pregunta":146,
+        "indice_pregunta":147,
         "indice_variable":504,
         "respuesta":3.0,
         "respuesta_v2":"Otro país",
@@ -20501,7 +20461,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":10.0,
         "respuesta_v2":null,
@@ -20511,7 +20471,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":1.0,
         "respuesta_v2":null,
@@ -20521,7 +20481,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":5.0,
         "respuesta_v2":null,
@@ -20531,7 +20491,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":20.0,
         "respuesta_v2":null,
@@ -20541,7 +20501,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":15.0,
         "respuesta_v2":null,
@@ -20551,7 +20511,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":30.0,
         "respuesta_v2":null,
@@ -20561,7 +20521,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":50.0,
         "respuesta_v2":null,
@@ -20571,7 +20531,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":4.0,
         "respuesta_v2":null,
@@ -20581,7 +20541,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":8.0,
         "respuesta_v2":null,
@@ -20591,7 +20551,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":40.0,
         "respuesta_v2":null,
@@ -20601,7 +20561,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":2.0,
         "respuesta_v2":null,
@@ -20611,7 +20571,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":60.0,
         "respuesta_v2":null,
@@ -20621,7 +20581,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":3.0,
         "respuesta_v2":null,
@@ -20631,7 +20591,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":18.0,
         "respuesta_v2":null,
@@ -20641,7 +20601,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":12.0,
         "respuesta_v2":null,
@@ -20651,7 +20611,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":35.0,
         "respuesta_v2":null,
@@ -20661,7 +20621,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":6.0,
         "respuesta_v2":null,
@@ -20671,7 +20631,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":7.0,
         "respuesta_v2":null,
@@ -20681,7 +20641,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":25.0,
         "respuesta_v2":null,
@@ -20691,7 +20651,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":16.0,
         "respuesta_v2":null,
@@ -20701,7 +20661,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":13.0,
         "respuesta_v2":null,
@@ -20711,7 +20671,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":45.0,
         "respuesta_v2":null,
@@ -20721,7 +20681,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":55.0,
         "respuesta_v2":null,
@@ -20731,7 +20691,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":9.0,
         "respuesta_v2":null,
@@ -20741,7 +20701,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":14.0,
         "respuesta_v2":null,
@@ -20751,7 +20711,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":17.0,
         "respuesta_v2":null,
@@ -20761,7 +20721,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":22.0,
         "respuesta_v2":null,
@@ -20771,7 +20731,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":38.0,
         "respuesta_v2":null,
@@ -20781,7 +20741,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":58.0,
         "respuesta_v2":null,
@@ -20791,7 +20751,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":32.0,
         "respuesta_v2":null,
@@ -20801,7 +20761,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":53.0,
         "respuesta_v2":null,
@@ -20811,7 +20771,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":51.0,
         "respuesta_v2":null,
@@ -20821,7 +20781,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":24.0,
         "respuesta_v2":null,
@@ -20831,7 +20791,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":26.0,
         "respuesta_v2":null,
@@ -20841,7 +20801,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":27.0,
         "respuesta_v2":null,
@@ -20851,7 +20811,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":37.0,
         "respuesta_v2":null,
@@ -20861,7 +20821,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":28.0,
         "respuesta_v2":null,
@@ -20871,7 +20831,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":62.0,
         "respuesta_v2":null,
@@ -20881,7 +20841,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":61.0,
         "respuesta_v2":null,
@@ -20891,7 +20851,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":42.0,
         "respuesta_v2":null,
@@ -20901,7 +20861,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":33.0,
         "respuesta_v2":null,
@@ -20911,7 +20871,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":49.0,
         "respuesta_v2":null,
@@ -20921,7 +20881,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":23.0,
         "respuesta_v2":null,
@@ -20931,7 +20891,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":43.0,
         "respuesta_v2":null,
@@ -20941,7 +20901,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":65.0,
         "respuesta_v2":null,
@@ -20951,7 +20911,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":36.0,
         "respuesta_v2":null,
@@ -20961,7 +20921,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":39.0,
         "respuesta_v2":null,
@@ -20971,7 +20931,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":52.0,
         "respuesta_v2":null,
@@ -20981,7 +20941,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":63.0,
         "respuesta_v2":null,
@@ -20991,7 +20951,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":19.0,
         "respuesta_v2":null,
@@ -21001,7 +20961,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":44.0,
         "respuesta_v2":null,
@@ -21011,7 +20971,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":48.0,
         "respuesta_v2":null,
@@ -21021,7 +20981,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":11.0,
         "respuesta_v2":null,
@@ -21031,7 +20991,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":72.0,
         "respuesta_v2":null,
@@ -21041,7 +21001,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":59.0,
         "respuesta_v2":null,
@@ -21051,7 +21011,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":74.0,
         "respuesta_v2":null,
@@ -21061,7 +21021,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":47.0,
         "respuesta_v2":null,
@@ -21071,7 +21031,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":21.0,
         "respuesta_v2":null,
@@ -21081,7 +21041,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":54.0,
         "respuesta_v2":null,
@@ -21091,7 +21051,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":29.0,
         "respuesta_v2":null,
@@ -21101,7 +21061,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":56.0,
         "respuesta_v2":null,
@@ -21111,7 +21071,7 @@
     },
     {
         "codigo_variable":"D5",
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "respuesta":46.0,
         "respuesta_v2":null,
@@ -21121,7 +21081,7 @@
     },
     {
         "codigo_variable":"D6",
-        "indice_pregunta":148,
+        "indice_pregunta":149,
         "indice_variable":506,
         "respuesta":1.0,
         "respuesta_v2":"Motivos laborales",
@@ -21131,7 +21091,7 @@
     },
     {
         "codigo_variable":"D6",
-        "indice_pregunta":148,
+        "indice_pregunta":149,
         "indice_variable":506,
         "respuesta":4.0,
         "respuesta_v2":"Motivos familiares",
@@ -21141,7 +21101,7 @@
     },
     {
         "codigo_variable":"D6",
-        "indice_pregunta":148,
+        "indice_pregunta":149,
         "indice_variable":506,
         "respuesta":2.0,
         "respuesta_v2":"Estudiar",
@@ -21151,7 +21111,7 @@
     },
     {
         "codigo_variable":"D6",
-        "indice_pregunta":148,
+        "indice_pregunta":149,
         "indice_variable":506,
         "respuesta":6.0,
         "respuesta_v2":"Otros motivos",
@@ -21161,7 +21121,7 @@
     },
     {
         "codigo_variable":"D6",
-        "indice_pregunta":148,
+        "indice_pregunta":149,
         "indice_variable":506,
         "respuesta":3.0,
         "respuesta_v2":"Conflicto armado",
@@ -21171,7 +21131,7 @@
     },
     {
         "codigo_variable":"D6",
-        "indice_pregunta":148,
+        "indice_pregunta":149,
         "indice_variable":506,
         "respuesta":5.0,
         "respuesta_v2":"Desastres naturales",
@@ -21181,7 +21141,7 @@
     },
     {
         "codigo_variable":"D7",
-        "indice_pregunta":149,
+        "indice_pregunta":150,
         "indice_variable":507,
         "respuesta":2.0,
         "respuesta_v2":"Soltero a",
@@ -21191,7 +21151,7 @@
     },
     {
         "codigo_variable":"D7",
-        "indice_pregunta":149,
+        "indice_pregunta":150,
         "indice_variable":507,
         "respuesta":1.0,
         "respuesta_v2":"Casada\/o",
@@ -21201,7 +21161,7 @@
     },
     {
         "codigo_variable":"D7",
-        "indice_pregunta":149,
+        "indice_pregunta":150,
         "indice_variable":507,
         "respuesta":3.0,
         "respuesta_v2":"Vive en pareja hace más de dos años",
@@ -21211,7 +21171,7 @@
     },
     {
         "codigo_variable":"D7",
-        "indice_pregunta":149,
+        "indice_pregunta":150,
         "indice_variable":507,
         "respuesta":5.0,
         "respuesta_v2":"Divorciado a",
@@ -21221,7 +21181,7 @@
     },
     {
         "codigo_variable":"D7",
-        "indice_pregunta":149,
+        "indice_pregunta":150,
         "indice_variable":507,
         "respuesta":6.0,
         "respuesta_v2":"Viudo a",
@@ -21231,7 +21191,7 @@
     },
     {
         "codigo_variable":"D7",
-        "indice_pregunta":149,
+        "indice_pregunta":150,
         "indice_variable":507,
         "respuesta":4.0,
         "respuesta_v2":"Vive en pareja hace menos de dos años",
@@ -21241,7 +21201,7 @@
     },
     {
         "codigo_variable":"D8",
-        "indice_pregunta":150,
+        "indice_pregunta":151,
         "indice_variable":508,
         "respuesta":1.0,
         "respuesta_v2":"Trabajar",
@@ -21251,7 +21211,7 @@
     },
     {
         "codigo_variable":"D8",
-        "indice_pregunta":150,
+        "indice_pregunta":151,
         "indice_variable":508,
         "respuesta":3.0,
         "respuesta_v2":"Trabajar y estudiar",
@@ -21261,7 +21221,7 @@
     },
     {
         "codigo_variable":"D8",
-        "indice_pregunta":150,
+        "indice_pregunta":151,
         "indice_variable":508,
         "respuesta":4.0,
         "respuesta_v2":"Exclusivamente a oficios del hogar",
@@ -21271,7 +21231,7 @@
     },
     {
         "codigo_variable":"D8",
-        "indice_pregunta":150,
+        "indice_pregunta":151,
         "indice_variable":508,
         "respuesta":2.0,
         "respuesta_v2":"Estudiar",
@@ -21281,7 +21241,7 @@
     },
     {
         "codigo_variable":"D8",
-        "indice_pregunta":150,
+        "indice_pregunta":151,
         "indice_variable":508,
         "respuesta":5.0,
         "respuesta_v2":"Buscar trabajo",
@@ -21291,7 +21251,7 @@
     },
     {
         "codigo_variable":"D8",
-        "indice_pregunta":150,
+        "indice_pregunta":151,
         "indice_variable":508,
         "respuesta":98.0,
         "respuesta_v2":"Otra Cuál",
@@ -21301,7 +21261,7 @@
     },
     {
         "codigo_variable":"D9",
-        "indice_pregunta":152,
+        "indice_pregunta":153,
         "indice_variable":510,
         "respuesta":4.0,
         "respuesta_v2":"04 Secundaria completa",
@@ -21311,7 +21271,7 @@
     },
     {
         "codigo_variable":"D9",
-        "indice_pregunta":152,
+        "indice_pregunta":153,
         "indice_variable":510,
         "respuesta":6.0,
         "respuesta_v2":"06 Técnica o tecnológica completa",
@@ -21321,7 +21281,7 @@
     },
     {
         "codigo_variable":"D9",
-        "indice_pregunta":152,
+        "indice_pregunta":153,
         "indice_variable":510,
         "respuesta":8.0,
         "respuesta_v2":"08 Universitaria completa",
@@ -21331,7 +21291,7 @@
     },
     {
         "codigo_variable":"D9",
-        "indice_pregunta":152,
+        "indice_pregunta":153,
         "indice_variable":510,
         "respuesta":3.0,
         "respuesta_v2":"03 Secundaria incompleta",
@@ -21341,7 +21301,7 @@
     },
     {
         "codigo_variable":"D9",
-        "indice_pregunta":152,
+        "indice_pregunta":153,
         "indice_variable":510,
         "respuesta":5.0,
         "respuesta_v2":"05 Técnica o tecnológica Incompleta",
@@ -21351,7 +21311,7 @@
     },
     {
         "codigo_variable":"D9",
-        "indice_pregunta":152,
+        "indice_pregunta":153,
         "indice_variable":510,
         "respuesta":7.0,
         "respuesta_v2":"07 Universitaria incompleta",
@@ -21361,7 +21321,7 @@
     },
     {
         "codigo_variable":"D9",
-        "indice_pregunta":152,
+        "indice_pregunta":153,
         "indice_variable":510,
         "respuesta":2.0,
         "respuesta_v2":"02 Primaria completa",
@@ -21371,7 +21331,7 @@
     },
     {
         "codigo_variable":"D9",
-        "indice_pregunta":152,
+        "indice_pregunta":153,
         "indice_variable":510,
         "respuesta":9.0,
         "respuesta_v2":"09 Especialización",
@@ -21381,7 +21341,7 @@
     },
     {
         "codigo_variable":"D9",
-        "indice_pregunta":152,
+        "indice_pregunta":153,
         "indice_variable":510,
         "respuesta":1.0,
         "respuesta_v2":"01 Primaria incompleta",
@@ -21391,7 +21351,7 @@
     },
     {
         "codigo_variable":"D9",
-        "indice_pregunta":152,
+        "indice_pregunta":153,
         "indice_variable":510,
         "respuesta":10.0,
         "respuesta_v2":"10 Maestría",
@@ -21401,7 +21361,7 @@
     },
     {
         "codigo_variable":"D9",
-        "indice_pregunta":152,
+        "indice_pregunta":153,
         "indice_variable":510,
         "respuesta":12.0,
         "respuesta_v2":"12 Ninguno",
@@ -21411,7 +21371,7 @@
     },
     {
         "codigo_variable":"D9",
-        "indice_pregunta":152,
+        "indice_pregunta":153,
         "indice_variable":510,
         "respuesta":11.0,
         "respuesta_v2":"11 Doctorado",
@@ -21421,7 +21381,7 @@
     },
     {
         "codigo_variable":"D10",
-        "indice_pregunta":153,
+        "indice_pregunta":154,
         "indice_variable":511,
         "respuesta":7.0,
         "respuesta_v2":"Ninguno",
@@ -21431,7 +21391,7 @@
     },
     {
         "codigo_variable":"D10",
-        "indice_pregunta":153,
+        "indice_pregunta":154,
         "indice_variable":511,
         "respuesta":3.0,
         "respuesta_v2":"Blanca\/o",
@@ -21441,7 +21401,7 @@
     },
     {
         "codigo_variable":"D10",
-        "indice_pregunta":153,
+        "indice_pregunta":154,
         "indice_variable":511,
         "respuesta":5.0,
         "respuesta_v2":"Mestiza\/o",
@@ -21451,7 +21411,7 @@
     },
     {
         "codigo_variable":"D10",
-        "indice_pregunta":153,
+        "indice_pregunta":154,
         "indice_variable":511,
         "respuesta":98.0,
         "respuesta_v2":"Otro",
@@ -21461,7 +21421,7 @@
     },
     {
         "codigo_variable":"D10",
-        "indice_pregunta":153,
+        "indice_pregunta":154,
         "indice_variable":511,
         "respuesta":1.0,
         "respuesta_v2":"Afrocolombiana\/o Negra\/",
@@ -21471,7 +21431,7 @@
     },
     {
         "codigo_variable":"D10",
-        "indice_pregunta":153,
+        "indice_pregunta":154,
         "indice_variable":511,
         "respuesta":4.0,
         "respuesta_v2":"Indígena",
@@ -21481,7 +21441,7 @@
     },
     {
         "codigo_variable":"D10",
-        "indice_pregunta":153,
+        "indice_pregunta":154,
         "indice_variable":511,
         "respuesta":2.0,
         "respuesta_v2":"Rom",
@@ -21491,7 +21451,7 @@
     },
     {
         "codigo_variable":"D10",
-        "indice_pregunta":153,
+        "indice_pregunta":154,
         "indice_variable":511,
         "respuesta":6.0,
         "respuesta_v2":"Raizal",
@@ -21501,7 +21461,7 @@
     },
     {
         "codigo_variable":"D11.1",
-        "indice_pregunta":154,
+        "indice_pregunta":155,
         "indice_variable":512,
         "respuesta":2.0,
         "respuesta_v2":"No",
@@ -21511,7 +21471,7 @@
     },
     {
         "codigo_variable":"D11.1",
-        "indice_pregunta":154,
+        "indice_pregunta":155,
         "indice_variable":512,
         "respuesta":1.0,
         "respuesta_v2":"Sí",
@@ -21521,7 +21481,7 @@
     },
     {
         "codigo_variable":"D11.2",
-        "indice_pregunta":154,
+        "indice_pregunta":155,
         "indice_variable":513,
         "respuesta":2.0,
         "respuesta_v2":"No",
@@ -21531,7 +21491,7 @@
     },
     {
         "codigo_variable":"D11.2",
-        "indice_pregunta":154,
+        "indice_pregunta":155,
         "indice_variable":513,
         "respuesta":1.0,
         "respuesta_v2":"Sí",
@@ -21541,7 +21501,7 @@
     },
     {
         "codigo_variable":"D11.3",
-        "indice_pregunta":154,
+        "indice_pregunta":155,
         "indice_variable":514,
         "respuesta":2.0,
         "respuesta_v2":"No",
@@ -21551,7 +21511,7 @@
     },
     {
         "codigo_variable":"D11.3",
-        "indice_pregunta":154,
+        "indice_pregunta":155,
         "indice_variable":514,
         "respuesta":1.0,
         "respuesta_v2":"Sí",
@@ -21561,7 +21521,7 @@
     },
     {
         "codigo_variable":"D11.4",
-        "indice_pregunta":154,
+        "indice_pregunta":155,
         "indice_variable":515,
         "respuesta":2.0,
         "respuesta_v2":"No",
@@ -21571,7 +21531,7 @@
     },
     {
         "codigo_variable":"D11.4",
-        "indice_pregunta":154,
+        "indice_pregunta":155,
         "indice_variable":515,
         "respuesta":1.0,
         "respuesta_v2":"Sí",
@@ -21581,7 +21541,7 @@
     },
     {
         "codigo_variable":"D11.5",
-        "indice_pregunta":154,
+        "indice_pregunta":155,
         "indice_variable":516,
         "respuesta":2.0,
         "respuesta_v2":"No",
@@ -21591,7 +21551,7 @@
     },
     {
         "codigo_variable":"D11.5",
-        "indice_pregunta":154,
+        "indice_pregunta":155,
         "indice_variable":516,
         "respuesta":1.0,
         "respuesta_v2":"Sí",
@@ -21601,7 +21561,7 @@
     },
     {
         "codigo_variable":"D11.6",
-        "indice_pregunta":154,
+        "indice_pregunta":155,
         "indice_variable":517,
         "respuesta":2.0,
         "respuesta_v2":"No",
@@ -21611,7 +21571,7 @@
     },
     {
         "codigo_variable":"D11.6",
-        "indice_pregunta":154,
+        "indice_pregunta":155,
         "indice_variable":517,
         "respuesta":1.0,
         "respuesta_v2":"Sí",
@@ -21621,7 +21581,7 @@
     },
     {
         "codigo_variable":"D11.7",
-        "indice_pregunta":154,
+        "indice_pregunta":155,
         "indice_variable":518,
         "respuesta":2.0,
         "respuesta_v2":"No",
@@ -21631,7 +21591,7 @@
     },
     {
         "codigo_variable":"D11.7",
-        "indice_pregunta":154,
+        "indice_pregunta":155,
         "indice_variable":518,
         "respuesta":1.0,
         "respuesta_v2":"Sí",
@@ -21641,7 +21601,7 @@
     },
     {
         "codigo_variable":"D11.8",
-        "indice_pregunta":154,
+        "indice_pregunta":155,
         "indice_variable":519,
         "respuesta":2.0,
         "respuesta_v2":"No",
@@ -21651,7 +21611,7 @@
     },
     {
         "codigo_variable":"D11.8",
-        "indice_pregunta":154,
+        "indice_pregunta":155,
         "indice_variable":519,
         "respuesta":1.0,
         "respuesta_v2":"Sí",
@@ -21661,7 +21621,7 @@
     },
     {
         "codigo_variable":"D11.9",
-        "indice_pregunta":154,
+        "indice_pregunta":155,
         "indice_variable":520,
         "respuesta":2.0,
         "respuesta_v2":"No",
@@ -21671,7 +21631,7 @@
     },
     {
         "codigo_variable":"D11.11",
-        "indice_pregunta":154,
+        "indice_pregunta":155,
         "indice_variable":521,
         "respuesta":2.0,
         "respuesta_v2":"No",
@@ -21681,7 +21641,7 @@
     },
     {
         "codigo_variable":"D11.11",
-        "indice_pregunta":154,
+        "indice_pregunta":155,
         "indice_variable":521,
         "respuesta":1.0,
         "respuesta_v2":"Sí",
@@ -21691,7 +21651,7 @@
     },
     {
         "codigo_variable":"D12",
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":522,
         "respuesta":2.0,
         "respuesta_v2":"Mujer",
@@ -21701,7 +21661,7 @@
     },
     {
         "codigo_variable":"D12",
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":522,
         "respuesta":1.0,
         "respuesta_v2":"Hombre",
@@ -21711,7 +21671,7 @@
     },
     {
         "codigo_variable":"D12.1",
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":523,
         "respuesta":2.0,
         "respuesta_v2":"Mujer",
@@ -21721,7 +21681,7 @@
     },
     {
         "codigo_variable":"D12.1",
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":523,
         "respuesta":1.0,
         "respuesta_v2":"Hombre",
@@ -21731,7 +21691,7 @@
     },
     {
         "codigo_variable":"D12.1",
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":523,
         "respuesta":4.0,
         "respuesta_v2":"De identidad femenina",
@@ -21741,7 +21701,7 @@
     },
     {
         "codigo_variable":"D12.1",
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":523,
         "respuesta":3.0,
         "respuesta_v2":"Intersexual",
@@ -21751,7 +21711,7 @@
     },
     {
         "codigo_variable":"D12.1",
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":523,
         "respuesta":10.0,
         "respuesta_v2":"Heterosexual",
@@ -21761,7 +21721,7 @@
     },
     {
         "codigo_variable":"D12.1",
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":523,
         "respuesta":7.0,
         "respuesta_v2":"Lesbiana",
@@ -21771,7 +21731,7 @@
     },
     {
         "codigo_variable":"D12.1",
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":523,
         "respuesta":5.0,
         "respuesta_v2":"De identidad masculina",
@@ -21781,7 +21741,7 @@
     },
     {
         "codigo_variable":"D12.1",
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":523,
         "respuesta":6.0,
         "respuesta_v2":"De identidad transgénero",
@@ -21791,7 +21751,7 @@
     },
     {
         "codigo_variable":"D12.1",
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":523,
         "respuesta":8.0,
         "respuesta_v2":"Gay",
@@ -21801,7 +21761,7 @@
     },
     {
         "codigo_variable":"D12.1",
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":523,
         "respuesta":9.0,
         "respuesta_v2":"Bisexual",
@@ -21811,7 +21771,7 @@
     },
     {
         "codigo_variable":"D12.1",
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":523,
         "respuesta":11.0,
         "respuesta_v2":"Ninguno",
@@ -21821,7 +21781,7 @@
     },
     {
         "codigo_variable":"D12.2",
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":524,
         "respuesta":10.0,
         "respuesta_v2":"Heterosexual",
@@ -21831,7 +21791,7 @@
     },
     {
         "codigo_variable":"D12.2",
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":524,
         "respuesta":5.0,
         "respuesta_v2":"De identidad masculina",
@@ -21841,7 +21801,7 @@
     },
     {
         "codigo_variable":"D12.2",
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":524,
         "respuesta":4.0,
         "respuesta_v2":"De identidad femenina",
@@ -21851,7 +21811,7 @@
     },
     {
         "codigo_variable":"D12.2",
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":524,
         "respuesta":9.0,
         "respuesta_v2":"Bisexual",
@@ -21861,7 +21821,7 @@
     },
     {
         "codigo_variable":"D12.2",
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":524,
         "respuesta":1.0,
         "respuesta_v2":"Hombre",
@@ -21871,7 +21831,7 @@
     },
     {
         "codigo_variable":"D12.2",
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":524,
         "respuesta":3.0,
         "respuesta_v2":"Intersexual",
@@ -21881,7 +21841,7 @@
     },
     {
         "codigo_variable":"D12.2",
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":524,
         "respuesta":8.0,
         "respuesta_v2":"Gay",
@@ -21891,7 +21851,7 @@
     },
     {
         "codigo_variable":"D12.2",
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":524,
         "respuesta":2.0,
         "respuesta_v2":"Mujer",
@@ -21901,7 +21861,7 @@
     },
     {
         "codigo_variable":"D12.2",
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":524,
         "respuesta":7.0,
         "respuesta_v2":"Lesbiana",
@@ -21911,7 +21871,7 @@
     },
     {
         "codigo_variable":"D12.2",
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":524,
         "respuesta":6.0,
         "respuesta_v2":"De identidad transgénero",
@@ -21921,7 +21881,7 @@
     },
     {
         "codigo_variable":"D12.2",
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":524,
         "respuesta":11.0,
         "respuesta_v2":"Ninguno",
@@ -21931,7 +21891,7 @@
     },
     {
         "codigo_variable":"D12.3",
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":525,
         "respuesta":10.0,
         "respuesta_v2":"Heterosexual",
@@ -21941,7 +21901,7 @@
     },
     {
         "codigo_variable":"D12.3",
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":525,
         "respuesta":4.0,
         "respuesta_v2":"De identidad femenina",
@@ -21951,7 +21911,7 @@
     },
     {
         "codigo_variable":"D12.3",
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":525,
         "respuesta":5.0,
         "respuesta_v2":"De identidad masculina",
@@ -21961,7 +21921,7 @@
     },
     {
         "codigo_variable":"D12.3",
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":525,
         "respuesta":9.0,
         "respuesta_v2":"Bisexual",
@@ -21971,7 +21931,7 @@
     },
     {
         "codigo_variable":"D13",
-        "indice_pregunta":157,
+        "indice_pregunta":158,
         "indice_variable":534,
         "respuesta":1.0,
         "respuesta_v2":"Sí",
@@ -21981,7 +21941,7 @@
     },
     {
         "codigo_variable":"D13",
-        "indice_pregunta":157,
+        "indice_pregunta":158,
         "indice_variable":534,
         "respuesta":2.0,
         "respuesta_v2":"No",
@@ -21991,91 +21951,91 @@
     },
     {
         "codigo_variable":"D14",
-        "indice_pregunta":158,
+        "indice_pregunta":159,
         "indice_variable":535,
         "respuesta":1.0,
         "respuesta_v2":"1) $ 0 a $1.423.500",
-        "respuesta_number":711750.0,
+        "respuesta_number":null,
         "suma_factor":592547.7177841269,
         "cantidad_respuestas":506
     },
     {
         "codigo_variable":"D14",
-        "indice_pregunta":158,
+        "indice_pregunta":159,
         "indice_variable":535,
         "respuesta":3.0,
         "respuesta_v2":"3) 1.500.001  a $ 2.000.000",
-        "respuesta_number":1750000.0,
+        "respuesta_number":null,
         "suma_factor":519494.1038103682,
         "cantidad_respuestas":475
     },
     {
         "codigo_variable":"D14",
-        "indice_pregunta":158,
+        "indice_pregunta":159,
         "indice_variable":535,
         "respuesta":4.0,
         "respuesta_v2":"4) $2.000.001 a $2.500.000",
-        "respuesta_number":2250000.5,
+        "respuesta_number":null,
         "suma_factor":358889.259124388,
         "cantidad_respuestas":267
     },
     {
         "codigo_variable":"D14",
-        "indice_pregunta":158,
+        "indice_pregunta":159,
         "indice_variable":535,
         "respuesta":2.0,
         "respuesta_v2":"2) $1.423.500 a $1.500.000",
-        "respuesta_number":1461750.0,
+        "respuesta_number":null,
         "suma_factor":295659.063422444,
         "cantidad_respuestas":264
     },
     {
         "codigo_variable":"D14",
-        "indice_pregunta":158,
+        "indice_pregunta":159,
         "indice_variable":535,
         "respuesta":5.0,
         "respuesta_v2":"5) $2.500.001  a $3.500.000",
-        "respuesta_number":3000000.5,
+        "respuesta_number":null,
         "suma_factor":273656.8776533444,
         "cantidad_respuestas":205
     },
     {
         "codigo_variable":"D14",
-        "indice_pregunta":158,
+        "indice_pregunta":159,
         "indice_variable":535,
         "respuesta":6.0,
         "respuesta_v2":"6) $3.500.001 a $4.900.000",
-        "respuesta_number":4200000.5,
+        "respuesta_number":null,
         "suma_factor":54544.717286744,
         "cantidad_respuestas":48
     },
     {
         "codigo_variable":"D14",
-        "indice_pregunta":158,
+        "indice_pregunta":159,
         "indice_variable":535,
         "respuesta":7.0,
         "respuesta_v2":"7) $4.900.001 a $6.800.000",
-        "respuesta_number":5850000.5,
+        "respuesta_number":null,
         "suma_factor":29560.5189002651,
         "cantidad_respuestas":28
     },
     {
         "codigo_variable":"D14",
-        "indice_pregunta":158,
+        "indice_pregunta":159,
         "indice_variable":535,
         "respuesta":9.0,
         "respuesta_v2":"9) Más de $9.000.000",
-        "respuesta_number":10100000.5,
+        "respuesta_number":null,
         "suma_factor":6914.8605247938,
         "cantidad_respuestas":6
     },
     {
         "codigo_variable":"D14",
-        "indice_pregunta":158,
+        "indice_pregunta":159,
         "indice_variable":535,
         "respuesta":8.0,
         "respuesta_v2":"8) $6.800.001 a $9.000.000",
-        "respuesta_number":7900000.5,
+        "respuesta_number":null,
         "suma_factor":6509.4351954644,
         "cantidad_respuestas":7
     }

@@ -170,7 +170,7 @@ watch(
 </script>
 
 <template>
-  <div class="icc-chart-wrapper">
+  <div class="icc-chart-wrapper card-premium">
     <div ref="chartContainer" class="highcharts-container"></div>
   </div>
 </template>
@@ -179,8 +179,6 @@ watch(
 .icc-chart-wrapper {
   width: 100%;
   min-height: 400px;
-  background: #ffffff;
-  border-radius: 16px;
   padding: 1rem;
 }
 

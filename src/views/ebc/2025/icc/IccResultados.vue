@@ -5,8 +5,10 @@ import BarMultipleChart from './charts/barMultipleChart.vue'
 import DonutChart from './charts/donutChart.vue'
 import BarChart from './charts/barChart.vue'
 import LocalidadesView from './LocalidadesView.vue'
+import GruposEdadView from './GruposEdadView.vue'
 import IccDebug from './charts/IccDebug.vue'
 import * as bootstrap from 'bootstrap'
+import { GRUPOS_EDAD, getNombreGrupoEdad } from './iccConstants'
 
 const contentSection = ref('chart')
 const codigoMedicion = inject('codigoMedicion')
@@ -20,11 +22,13 @@ const loading = ref(true)
 const seccionSeleccionada = ref(null)
 const preguntaSeleccionada = ref(null)
 const localidadSeleccionada = ref(null)
+const grupoEdadSeleccionado = ref(null)
 const route = useRoute()
 const router = useRouter()
 
 /** Datos desagregados — null = aún no cargados (lazy load) */
 const respuestasLocalidad = ref(null)
+const respuestasEdad = ref(null)
 const loadingDimension = ref(false)
 
 /** Cache en módulo: persiste mientras la SPA esté montada */
@@ -125,6 +129,27 @@ const sumatoriaFactor = computed(() => {
 const posiblesRespuestas = computed(() => {
   const valores = respuestasPregunta.value.map((r) => r.respuesta_v2)
   return [...new Set(valores)].sort((a, b) => a - b)
+})
+
+/** Etiqueta de filtros activos para añadir al título de los gráficos */
+const labelFiltroActivo = computed(() => {
+  if (localidadSeleccionada.value) {
+    const loc = localidades.value.find(
+      (l) => String(l.localidad_cod) === String(localidadSeleccionada.value),
+    )
+    return loc ? ` (Localidad ${loc.localidad_residencia})` : ''
+  }
+  if (grupoEdadSeleccionado.value) {
+    const nombre = getNombreGrupoEdad(grupoEdadSeleccionado.value)
+    return ` (${nombre})`
+  }
+  return ''
+})
+
+/** Título principal del gráfico que incluye el filtro si está activo */
+const tituloConFiltro = computed(() => {
+  if (!preguntaSeleccionada.value) return ''
+  return preguntaSeleccionada.value.nombre + labelFiltroActivo.value
 })
 
 /**
@@ -270,11 +295,13 @@ const actualizarRespuestas = () => {
 
   if (localidadSeleccionada.value && respuestasLocalidad.value) {
     fuente = respuestasLocalidad.value.filter(
-      (r) => r.localidad_cod === localidadSeleccionada.value,
+      (r) => String(r.localidad_cod) === String(localidadSeleccionada.value),
+    )
+  } else if (grupoEdadSeleccionado.value && respuestasEdad.value) {
+    fuente = respuestasEdad.value.filter(
+      (r) => Number(r.grupo_edad_pp_cod) === Number(grupoEdadSeleccionado.value),
     )
   }
-  // else if (sexoSeleccionado.value && respuestasSexo.value) { ... }
-  // else if (grupoEdadSeleccionado.value && respuestasEdad.value) { ... }
 
   // 2. Filtrar por pregunta seleccionada
   const filtradas = fuente.filter(
@@ -301,7 +328,18 @@ const actualizarRespuestas = () => {
 /** Cuando cambia la localidad: descarga respuestas_localidad.json si es la primera vez (lazy), luego recalcula */
 watch(localidadSeleccionada, async (nuevaLocalidad) => {
   if (nuevaLocalidad) {
+    grupoEdadSeleccionado.value = null // resetear otro filtro
     await cargarDimension('respuestas_localidad.json', respuestasLocalidad)
+  }
+  actualizarRespuestas()
+  actualizarSeries()
+})
+
+/** Cuando cambia el grupo de edad */
+watch(grupoEdadSeleccionado, async (nuevoGrupo) => {
+  if (nuevoGrupo) {
+    localidadSeleccionada.value = null // resetear otro filtro
+    await cargarDimension('respuestas_edad.json', respuestasEdad)
   }
   actualizarRespuestas()
   actualizarSeries()
@@ -311,6 +349,8 @@ watch(localidadSeleccionada, async (nuevaLocalidad) => {
 watch(contentSection, async (nuevaSeccion) => {
   if (nuevaSeccion === 'localidades') {
     await cargarDimension('respuestas_localidad.json', respuestasLocalidad)
+  } else if (nuevaSeccion === 'edades') {
+    await cargarDimension('respuestas_edad.json', respuestasEdad)
   }
 })
 </script>
@@ -406,6 +446,15 @@ watch(contentSection, async (nuevaSeccion) => {
             <li class="nav-item">
               <button
                 class="nav-link"
+                :class="{ active: contentSection === 'edades' }"
+                @click="contentSection = 'edades'"
+              >
+                <i class="bi bi-people me-1"></i>Grupos de Edad
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="nav-link"
                 :class="{ active: contentSection === 'table' }"
                 @click="contentSection = 'table'"
               >
@@ -416,10 +465,11 @@ watch(contentSection, async (nuevaSeccion) => {
 
           <section class="section-filters mb-4 px-1" v-if="contentSection === 'chart'">
             <div class="row align-items-center g-3">
-              <div class="col-md-6">
+              <div class="col-md-5">
                 <select
                   v-model="localidadSeleccionada"
                   class="form-select select-premium"
+                  :class="{ 'active-filter': localidadSeleccionada !== null }"
                   :disabled="loadingDimension"
                   data-bs-toggle="tooltip"
                   data-bs-placement="top"
@@ -435,7 +485,27 @@ watch(contentSection, async (nuevaSeccion) => {
                   </option>
                 </select>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-4">
+                <select
+                  v-model="grupoEdadSeleccionado"
+                  class="form-select select-premium"
+                  :class="{ 'active-filter': grupoEdadSeleccionado !== null }"
+                  :disabled="loadingDimension"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Filtra los resultados por rango de edad"
+                >
+                  <option :value="null">Todos los grupos de edad</option>
+                  <option
+                    v-for="grupo in GRUPOS_EDAD"
+                    :key="grupo.id"
+                    :value="grupo.id"
+                  >
+                    {{ grupo.nombre }}
+                  </option>
+                </select>
+              </div>
+              <div class="col-md-3">
                 <div
                   v-if="loadingDimension"
                   class="text-muted small d-flex align-items-center gap-1 text-nowrap"
@@ -445,7 +515,7 @@ watch(contentSection, async (nuevaSeccion) => {
                     role="status"
                     aria-hidden="true"
                   ></span>
-                  Cargando datos por localidad...
+                  Cargando...
                 </div>
               </div>
             </div>
@@ -460,7 +530,7 @@ watch(contentSection, async (nuevaSeccion) => {
             >
               <div class="kpi-card shadow-sm">
                 <div class="kpi-content">
-                  <div class="kpi-question-name mb-1">{{ preguntaSeleccionada.nombre }}</div>
+                  <div class="kpi-question-name mb-1">{{ tituloConFiltro }}</div>
                   <div class="kpi-value-wrapper">
                     <span class="kpi-value">{{
                       variablesFiltradas[0].promedio_ponderado?.toFixed(1) || '0.0'
@@ -472,12 +542,12 @@ watch(contentSection, async (nuevaSeccion) => {
               </div>
             </div>
 
-            <div class="graph-container card border-0 shadow-sm">
+            <div class="graph-container card-premium overflow-hidden">
               <div class="card-body p-0">
                 <!-- TIPO DE GRÁFICO BAR MULTIPLE -->
                 <BarMultipleChart
                   v-if="preguntaSeleccionada.dataviz_chart_type === 'bar-multiple'"
-                  :title="preguntaSeleccionada.nombre"
+                  :title="tituloConFiltro"
                   :subtitle="preguntaSeleccionada.enunciado_1"
                   :type="'bar'"
                   :series="series"
@@ -487,6 +557,7 @@ watch(contentSection, async (nuevaSeccion) => {
                 <!-- TIPO DE GRÁFICO column -->
                 <BarChart
                   v-else-if="preguntaSeleccionada.dataviz_chart_type === 'bar'"
+                  :title="tituloConFiltro"
                   :pregunta="preguntaSeleccionada"
                   :respuestas="respuestasPregunta"
                 />
@@ -494,6 +565,7 @@ watch(contentSection, async (nuevaSeccion) => {
                 <!-- TIPO DE GRÁFICO DONUT -->
                 <DonutChart
                   v-else-if="preguntaSeleccionada.dataviz_chart_type === 'donut'"
+                  :title="tituloConFiltro"
                   :pregunta="preguntaSeleccionada"
                   :respuestas="respuestasPregunta"
                 />
@@ -527,6 +599,16 @@ watch(contentSection, async (nuevaSeccion) => {
               :variables="variablesFiltradas"
               :posiblesRespuestas="posiblesRespuestas"
               :respuestasLocalidad="respuestasLocalidad"
+              :loading="loadingDimension"
+            />
+          </div>
+
+          <div v-if="contentSection === 'edades'">
+            <GruposEdadView
+              :preguntaSeleccionada="preguntaSeleccionada"
+              :variables="variablesFiltradas"
+              :posiblesRespuestas="posiblesRespuestas"
+              :respuestasEdad="respuestasEdad"
               :loading="loadingDimension"
             />
           </div>
@@ -668,7 +750,7 @@ watch(contentSection, async (nuevaSeccion) => {
 
 /* ESTILOS PREGUNTAS */
 .questions-menu {
-  border-radius: 12px 0 0 12px;
+  border-radius: var(--radius-premium) 0 0 var(--radius-premium);
   max-height: 60vh;
   overflow-y: auto;
   border: 1px solid #eef0f2;
@@ -679,6 +761,7 @@ watch(contentSection, async (nuevaSeccion) => {
   border-bottom: 1px solid #f8f9fa;
   border-left: 3px solid transparent;
   transition: all 0.2s ease;
+  background: transparent;
 }
 
 .question-item:last-child {
@@ -686,22 +769,23 @@ watch(contentSection, async (nuevaSeccion) => {
 }
 
 .question-item:hover {
-  background-color: #f9f9fb;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
 }
 
 .question-item.active {
   background-color: #ffffff;
-  color: #32204a;
-  border-top: 1px solid #5f4481;
-  border-bottom: 1px solid #5f4481;
-  border-left: 4px solid #32204a;
+  color: var(--color-primary);
+  border-top: 1px solid var(--color-primary-light);
+  border-bottom: 1px solid var(--color-primary-light);
+  border-left: 4px solid var(--color-primary);
   box-shadow: inset 0 0 10px rgba(50, 32, 74, 0.02);
 }
 
 .question-code {
   font-size: 0.7rem;
   font-weight: 800;
-  color: #8c96a0;
+  color: var(--color-muted);
   background: #f1f3f5;
   padding: 2px 6px;
   border-radius: 4px;
@@ -710,7 +794,7 @@ watch(contentSection, async (nuevaSeccion) => {
 }
 
 .question-item.active .question-code {
-  background: #32204a;
+  background: var(--color-primary);
   color: #fff;
 }
 
@@ -854,22 +938,35 @@ watch(contentSection, async (nuevaSeccion) => {
   pointer-events: none;
 }
 
-.select-premium {
-  border: 1px solid #eef0f2;
-  border-radius: 12px;
-  padding: 0.75rem 1rem;
-  font-weight: 500;
-  transition: all 0.2s ease;
-  background-color: #f8fafc;
-}
-
-.select-premium:focus {
-  border-color: #32204a;
-  box-shadow: 0 0 0 4px rgba(50, 32, 74, 0.05);
-  background-color: #fff;
-}
-
 .rounded-4 {
-  border-radius: 1rem !important;
+  border-radius: var(--radius-premium) !important;
+}
+
+/* --- ESTILOS SELECTOR DE VISTA (TABS) --- */
+.nav-tabs {
+  border-bottom: 1px solid #eef0f2 !important;
+  gap: 1rem;
+}
+
+.nav-tabs .nav-link {
+  border: none !important;
+  color: var(--color-muted) !important;
+  font-weight: 600;
+  padding: 0.6rem 0.5rem;
+  background: transparent !important;
+  transition: all 0.3s ease;
+  position: relative;
+  font-size: 0.95rem;
+}
+
+.nav-tabs .nav-link:hover {
+  color: var(--color-primary) !important;
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--color-primary) !important;
+  font-weight: 800 !important;
+  border-bottom: 2px solid #FFCA28 !important;
+  border-radius: 0;
 }
 </style>

@@ -230,7 +230,7 @@ onUnmounted(() => {
 
     <div
       v-show="!loading && !loadingMap && dataMap.length > 0"
-      class="map-wrapper shadow-sm border-0 rounded-4 bg-white"
+      class="map-wrapper card-premium"
     >
       <div ref="chartContainer" class="highcharts-map-container"></div>
     </div>
@@ -247,9 +247,5 @@ onUnmounted(() => {
 .highcharts-map-container {
   width: 100%;
   height: 600px;
-}
-
-.rounded-4 {
-  border-radius: 1rem !important;
 }
 </style>

@@ -8645,17 +8645,17 @@
         "unidad_medida":"años"
     },
     {
-        "indice_pregunta":145,
+        "indice_pregunta":146,
         "indice_variable":503,
         "columna":"SJ",
         "codigo_variable":"D3_1",
         "num_seccion":null,
-        "pregunta":"D3",
-        "titulo":null,
+        "pregunta":"D3.1",
+        "titulo":"Grupo de edad",
         "tipo":"category",
-        "etiqueta_orden":"b",
-        "enunciado_2":"Rango de edad",
-        "etiqueta_enunciado":"b. Rango de edad",
+        "etiqueta_orden":null,
+        "enunciado_2":"Grupo de edad",
+        "etiqueta_enunciado":"Grupo de edad",
         "etiqueta_corta":null,
         "grupo":null,
         "en_cubo":1,
@@ -8664,7 +8664,7 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":146,
+        "indice_pregunta":147,
         "indice_variable":504,
         "columna":"SK",
         "codigo_variable":"D4",
@@ -8683,7 +8683,7 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":147,
+        "indice_pregunta":148,
         "indice_variable":505,
         "columna":"SL",
         "codigo_variable":"D5",
@@ -8702,7 +8702,7 @@
         "unidad_medida":"años"
     },
     {
-        "indice_pregunta":148,
+        "indice_pregunta":149,
         "indice_variable":506,
         "columna":"SM",
         "codigo_variable":"D6",
@@ -8721,7 +8721,7 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":149,
+        "indice_pregunta":150,
         "indice_variable":507,
         "columna":"SN",
         "codigo_variable":"D7",
@@ -8740,7 +8740,7 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":150,
+        "indice_pregunta":151,
         "indice_variable":508,
         "columna":"SO",
         "codigo_variable":"D8",
@@ -8759,7 +8759,7 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":152,
+        "indice_pregunta":153,
         "indice_variable":510,
         "columna":"SQ",
         "codigo_variable":"D9",
@@ -8778,7 +8778,7 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":153,
+        "indice_pregunta":154,
         "indice_variable":511,
         "columna":"SR",
         "codigo_variable":"D10",
@@ -8797,7 +8797,7 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":154,
+        "indice_pregunta":155,
         "indice_variable":512,
         "columna":"SS",
         "codigo_variable":"D11.1",
@@ -8816,7 +8816,7 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":154,
+        "indice_pregunta":155,
         "indice_variable":513,
         "columna":"ST",
         "codigo_variable":"D11.2",
@@ -8835,7 +8835,7 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":154,
+        "indice_pregunta":155,
         "indice_variable":514,
         "columna":"SU",
         "codigo_variable":"D11.3",
@@ -8854,7 +8854,7 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":154,
+        "indice_pregunta":155,
         "indice_variable":515,
         "columna":"SV",
         "codigo_variable":"D11.4",
@@ -8873,7 +8873,7 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":154,
+        "indice_pregunta":155,
         "indice_variable":516,
         "columna":"SW",
         "codigo_variable":"D11.5",
@@ -8892,7 +8892,7 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":154,
+        "indice_pregunta":155,
         "indice_variable":517,
         "columna":"SX",
         "codigo_variable":"D11.6",
@@ -8911,7 +8911,7 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":154,
+        "indice_pregunta":155,
         "indice_variable":518,
         "columna":"SY",
         "codigo_variable":"D11.7",
@@ -8930,7 +8930,7 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":154,
+        "indice_pregunta":155,
         "indice_variable":519,
         "columna":"SZ",
         "codigo_variable":"D11.8",
@@ -8949,7 +8949,7 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":154,
+        "indice_pregunta":155,
         "indice_variable":520,
         "columna":"TA",
         "codigo_variable":"D11.9",
@@ -8968,7 +8968,7 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":154,
+        "indice_pregunta":155,
         "indice_variable":521,
         "columna":"TB",
         "codigo_variable":"D11.11",
@@ -8987,7 +8987,7 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":522,
         "columna":"TC",
         "codigo_variable":"D12",
@@ -9006,7 +9006,7 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":523,
         "columna":"TD",
         "codigo_variable":"D12.1",
@@ -9025,7 +9025,7 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":524,
         "columna":"TE",
         "codigo_variable":"D12.2",
@@ -9044,7 +9044,7 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":525,
         "columna":"TF",
         "codigo_variable":"D12.3",
@@ -9063,7 +9063,7 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":526,
         "columna":"TG",
         "codigo_variable":"D12.4",
@@ -9082,7 +9082,7 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":527,
         "columna":"TH",
         "codigo_variable":"D12.5",
@@ -9101,7 +9101,7 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":528,
         "columna":"TI",
         "codigo_variable":"D12.6",
@@ -9120,7 +9120,7 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":529,
         "columna":"TJ",
         "codigo_variable":"D12.7",
@@ -9139,7 +9139,7 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":530,
         "columna":"TK",
         "codigo_variable":"D12.8",
@@ -9158,7 +9158,7 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":531,
         "columna":"TL",
         "codigo_variable":"D12.9",
@@ -9177,7 +9177,7 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":532,
         "columna":"TM",
         "codigo_variable":"D12.10",
@@ -9196,7 +9196,7 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "indice_variable":533,
         "columna":"TN",
         "codigo_variable":"D12.11",
@@ -9215,7 +9215,7 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":157,
+        "indice_pregunta":158,
         "indice_variable":534,
         "columna":"TO",
         "codigo_variable":"D13",
@@ -9234,7 +9234,7 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":158,
+        "indice_pregunta":159,
         "indice_variable":535,
         "columna":"TP",
         "codigo_variable":"D14",
@@ -9253,7 +9253,7 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":159,
+        "indice_pregunta":160,
         "indice_variable":536,
         "columna":"TQ",
         "codigo_variable":"FACTOR",

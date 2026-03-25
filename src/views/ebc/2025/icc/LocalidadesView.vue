@@ -86,17 +86,21 @@ onMounted(() => {
               class="btn btn-view" 
               :class="{ active: currentSubView === 'combined' }"
               @click="currentSubView = 'combined'"
-              title="Visualización Combinada"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              title="Ver Visualización Gráfica y Mapa"
             >
-              <i class="bi bi-layout-split me-1"></i> Gráficos
+              <i class="bi bi-bar-chart-fill"></i>
             </button>
             <button 
               class="btn btn-view" 
               :class="{ active: currentSubView === 'table' }"
               @click="currentSubView = 'table'"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
               title="Ver Tabla de Datos"
             >
-              <i class="bi bi-table me-1"></i> Tabla
+              <i class="bi bi-table"></i>
             </button>
           </div>
         </div>
@@ -174,14 +178,6 @@ onMounted(() => {
 <style scoped>
 .localidades-view {
   animation: fadeIn 0.4s ease-out;
-}
-
-.select-premium {
-  border: 1px solid #eef0f2;
-  border-radius: 12px;
-  padding: 0.65rem 1rem;
-  font-weight: 500;
-  background-color: #f8fafc;
 }
 
 .view-toggle-group {

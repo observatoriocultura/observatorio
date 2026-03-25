@@ -91,11 +91,69 @@ onMounted(async () => {
   </div>
 </template>
 
+<style>
+/* ==========================================================================
+   DESIGN SYSTEM GLOBAL (Variables y Utilidades)
+   ========================================================================== */
+:root {
+  --color-primary: #32204a;
+  --color-primary-light: #f0ebf7;
+  --color-secondary: #5c6972;
+  --color-muted: #8c96a0;
+  --radius-premium: 12px;
+  --radius-pill: 50px;
+  --shadow-premium: 0 4px 12px rgba(50, 32, 74, 0.05);
+}
+
+/* Selectores Premium Unificados */
+.select-premium {
+  border: 1px solid #eef0f2 !important;
+  border-radius: var(--radius-premium) !important;
+  padding: 0.75rem 1rem !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+  background-color: #f8fafc !important;
+  color: var(--color-primary) !important;
+}
+
+.select-premium.active-filter {
+  border-color: var(--color-primary) !important;
+  background-color: var(--color-primary-light) !important;
+  box-shadow: 0 0 0 4px rgba(50, 32, 74, 0.03) !important;
+}
+
+.select-premium:focus {
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 0 0 4px rgba(50, 32, 74, 0.05) !important;
+  background-color: #fff !important;
+}
+
+/* Tarjetas y Contenedores */
+.card-premium {
+  background: #ffffff;
+  border: 0 !important;
+  border-radius: var(--radius-premium) !important;
+  box-shadow: var(--shadow-premium) !important;
+}
+
+/* Tipografía */
+.text-premium {
+  color: var(--color-primary);
+}
+
+.title-premium {
+  color: var(--color-primary);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+</style>
+
 <style scoped>
 .icc-layout {
   min-height: 100vh;
   padding: 0.3rem 1.5em; /* Padding lateral de 1.5em como se solicitó */
   background-color: #ffffff;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 .icc-shell {
@@ -103,41 +161,19 @@ onMounted(async () => {
   margin: 0;
 }
 
-.icc-header-main {
-  margin-bottom: 2.5rem;
-}
-
-.eyebrow {
-  display: block;
-  margin-bottom: 0.5rem;
-  color: #8c96a0;
-  font-size: 0.85rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.main-title {
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 900;
-  color: #32204a;
-  line-height: 1.1;
-}
-
 .survey-nav {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.25rem;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid #eef0f2;
-  padding-bottom: 0.25rem;
+  padding-bottom: 0.5rem;
 }
 
 .nav-tab {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
-  color: #5c6972;
+  color: var(--color-secondary);
   font-weight: 700;
   font-size: 0.9rem;
   padding: 0.45rem 1rem;
@@ -146,13 +182,13 @@ onMounted(async () => {
 }
 
 .nav-tab:hover {
-  color: #32204a;
+  color: var(--color-primary);
   background: #f9f9fb;
 }
 
 .nav-tab.active {
-  color: #32204a;
-  background: #f0ebf7;
+  color: var(--color-primary);
+  background: var(--color-primary-light);
 }
 
 .icc-view-content {
@@ -168,7 +204,7 @@ onMounted(async () => {
   width: 40px;
   height: 40px;
   border: 4px solid #f3f3f3;
-  border-top: 4px solid #32204a;
+  border-top: 4px solid var(--color-primary);
   border-radius: 50%;
   animation: spin 1s linear infinite;
   margin: 0 auto 1rem;
@@ -178,39 +214,21 @@ onMounted(async () => {
   text-align: center;
   padding: 3rem;
   background: #fff5f5;
-  border-radius: 12px;
+  border-radius: var(--radius-premium);
   color: #c53030;
 }
 
-.error-box i {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @media (max-width: 600px) {
-  .survey-nav {
-    gap: 0.25rem;
-  }
   .nav-tab {
     padding: 0.6rem 0.8rem;
     font-size: 0.85rem;

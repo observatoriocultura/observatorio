@@ -3,6 +3,10 @@ import { onMounted, onUnmounted, ref, watch } from 'vue'
 import Highcharts from 'highcharts'
 
 const props = defineProps({
+  title: {
+    type: String,
+    default: '',
+  },
   pregunta: {
     type: Object,
     default: () => ({
@@ -48,7 +52,7 @@ const initChart = () => {
       backgroundColor: 'transparent',
     },
     title: {
-      text: props.pregunta.enunciado_1,
+      text: props.title || props.pregunta.enunciado_1,
       style: {
         fontWeight: '800',
         color: '#32204a',
@@ -140,11 +144,21 @@ watch(
   { deep: true },
 )
 
-// Observar cambios en la pregunta para actualizar solo el título
+// Observar cambios en el título para actualizarlo sin redibujar todo
+watch(
+  () => props.title,
+  (newTitle) => {
+    if (chartInstance && newTitle) {
+      chartInstance.setTitle({ text: newTitle })
+    }
+  },
+)
+
+// Observar cambios en la pregunta para actualizar solo el título como fallback
 watch(
   () => props.pregunta,
   (newPregunta) => {
-    if (chartInstance && newPregunta) {
+    if (chartInstance && newPregunta && !props.title) {
       chartInstance.setTitle({ text: newPregunta.enunciado_1 })
     }
   },
@@ -153,7 +167,7 @@ watch(
 </script>
 
 <template>
-  <div class="bar-chart-wrapper">
+  <div class="bar-chart-wrapper card-premium">
     <div ref="chartContainer" class="highcharts-container"></div>
   </div>
 </template>
@@ -162,8 +176,6 @@ watch(
 .bar-chart-wrapper {
   width: 100%;
   min-height: 400px;
-  background: #ffffff;
-  border-radius: 16px;
   padding: 1rem;
 }
 

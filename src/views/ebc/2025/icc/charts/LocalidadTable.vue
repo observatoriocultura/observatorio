@@ -17,10 +17,10 @@ defineProps({
 
 <template>
   <div class="localidad-table">
-    <div class="card border-0 shadow-sm rounded-4 overflow-hidden bg-white">
+    <div class="card-premium overflow-hidden">
       <div class="card-header bg-white border-0 py-3 px-4 d-flex justify-content-between align-items-center">
         <h6 class="text-uppercase text-muted fw-bold small mb-0">
-          <i class="bi bi-table text-primary me-2"></i>Resultados por Localidad
+          <i class="bi bi-table text-premium me-2"></i>Resultados por Localidad
         </h6>
         <span v-if="respuestaSeleccionada" class="badge rounded-pill bg-light text-dark border fw-normal">
           Filtrado por: {{ respuestaSeleccionada }}
@@ -46,26 +46,26 @@ defineProps({
         <table class="table table-hover align-middle mb-0">
           <thead class="table-light text-muted small text-uppercase">
             <tr>
-              <th scope="col" class="text-center border-0 py-3" style="width: 100px">Código</th>
-              <th scope="col" class="border-0 py-3">Localidad</th>
-              <th scope="col" class="text-end text-nowrap border-0 py-3">
+              <th scope="col" class="text-center border-0 py-2" style="width: 100px">Código</th>
+              <th scope="col" class="border-0 py-2">Localidad</th>
+              <th scope="col" class="text-end text-nowrap border-0 py-2">
                 Población (Opc. Seleccionada)
               </th>
-              <th scope="col" class="text-end text-nowrap border-0 py-3">Total Variable</th>
-              <th scope="col" class="text-end text-nowrap border-0 py-3">% Respuesta</th>
+              <th scope="col" class="text-end text-nowrap border-0 py-2">Total Variable</th>
+              <th scope="col" class="text-end text-nowrap border-0 py-2">% Respuesta</th>
             </tr>
           </thead>
           <tbody>
             <tr v-for="fila in tablaAgrupada" :key="fila.codigo">
-              <td class="text-center text-muted small">{{ fila.codigo }}</td>
-              <td class="fw-semibold text-dark">{{ fila.nombre }}</td>
-              <td class="text-end fw-bold text-primary">
+              <td class="text-center text-muted small py-2">{{ fila.codigo }}</td>
+              <td class="fw-semibold text-dark py-2">{{ fila.nombre }}</td>
+              <td class="text-end fw-bold text-premium py-2">
                 {{ Math.round(fila.suma_factor).toLocaleString('es-CO') }}
               </td>
-              <td class="text-end text-muted small">
+              <td class="text-end text-muted small py-2">
                 {{ Math.round(fila.suma_factor_total).toLocaleString('es-CO') }}
               </td>
-              <td class="text-end fw-bold text-success" style="font-size: 1.1rem">
+              <td class="text-end fw-bold text-premium py-2" style="font-size: 1rem">
                 {{ fila.porcentaje.toFixed(1) }}%
               </td>
             </tr>
@@ -92,10 +92,6 @@ defineProps({
 
 .table tbody tr:hover {
   background-color: #f1f5f9;
-}
-
-.rounded-4 {
-  border-radius: 1rem !important;
 }
 
 .badge {

@@ -157,31 +157,40 @@
                 <h3 class="section-title mb-0">5. Análisis Territorial (Localidades)</h3>
               </div>
               <p>
-                El módulo <code>LocalidadesView.vue</code> centraliza el desglose geográfico profundo. A diferencia del dashboard general, este orquestador permite una comparación multivariada entre las 20 localidades de Bogotá mediante visualización síncrona.
+                El módulo <code>LocalidadesView.vue</code> centraliza el desglose geográfico profundo. A diferencia del dashboard general, este orquestador permite una comparación síncrona entre las 20 localidades de Bogotá mediante un Ranking (Gráfico) y una Cartografía Coroplética (Mapa).
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- CARD 6: ANÁLISIS DEMOGRÁFICO POR EDAD -->
+        <section class="docs-section mb-5">
+          <div class="card shadow-sm border-0 docs-card">
+            <div class="card-body p-4 p-lg-5">
+              <div class="d-flex align-items-center mb-4">
+                <div class="icon-wrapper feature-icon-3 me-3">
+                  <i class="bi bi-people"></i>
+                </div>
+                <h3 class="section-title mb-0">6. Análisis Demográfico (Grupos de Edad)</h3>
+              </div>
+              <p>
+                El módulo <code>GruposEdadView.vue</code> permite el desglose de resultados por rangos etarios. A diferencia del análisis geográfico, este se centra en la comparación de comportamientos y percepciones según el ciclo de vida del ciudadano.
               </p>
               
-              <h5 class="mt-4 mb-3 fw-bold text-dark">Arquitectura de Visualización División (Split View)</h5>
+              <h5 class="mt-4 mb-3 fw-bold text-dark">Estructura de Datos</h5>
               <p>
-                La herramienta implementa una vista dividida que permite correlacionar dos dimensiones analíticas al mismo tiempo:
+                Consume el archivo <code>respuestas_edad.json</code>, el cual categoriza la muestra en tres grandes bloques:
               </p>
               <ul>
-                <li><strong>Ranking (60%):</strong> Ejecutado por <code>LocalidadChart.vue</code>, presenta un diagrama de barras ordenado descendente para detectar líderes y rezagados.</li>
-                <li><strong>Cartografía Coroplética (40%):</strong> Gestionado por <code>LocalidadMap.vue</code>, utiliza polígonos GeoJSON para asignar intensidades de color según el valor porcentual, permitiendo identificar clústeres geográficos y patrones de proximidad.</li>
+                <li><strong>Jóvenes (13-28 años):</strong> Código 2.</li>
+                <li><strong>Adultos (29-59 años):</strong> Código 3.</li>
+                <li><strong>Personas Mayores (60+ años):</strong> Código 4.</li>
               </ul>
 
-              <h5 class="mt-4 mb-3 fw-bold text-dark">Lógica de Cálculo Proporcional</h5>
+              <h5 class="mt-4 mb-3 fw-bold code-color">Visualización Diferenciada</h5>
               <p>
-                Para garantizar un comparativo justo entre localidades de distinto peso demográfico (ej: Suba vs La Candelaria), la herramienta normaliza el dato:
+                Al ser una dimensión con pocas categorías (3), el sistema utiliza un <strong>Gráfico de Columnas</strong> (<code>GrupoEdadChart.vue</code>) para una comparación directa y legible, manteniendo la coherencia estética del sistema de diseño premium.
               </p>
-              <div class="bg-light p-3 rounded mb-3 border-start border-primary border-4 text-center">
-                <code>% Relativo = (Σ fact_resp_especifica / Σ fact_total_variable) * 100</code>
-              </div>
-              
-              <h5 class="mt-4 mb-3 fw-bold code-color">Optimización Dinámica</h5>
-              <ul>
-                <li><strong>Geoprocesamiento Ligero:</strong> Los polígonos de las localidades se cargan bajo demanda desde <code>localidades_bogota_urbano.json</code>, optimizando el rendimiento inicial de la página.</li>
-                <li><strong>Unificación de Filtros:</strong> Mediante <code>computed props</code>, una única selección de variable/respuesta redirige los datos transformados a la gráfica, el mapa y la tabla de forma reactiva y simultánea.</li>
-              </ul>
             </div>
           </div>
         </section>

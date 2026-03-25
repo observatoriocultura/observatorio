@@ -5,6 +5,10 @@ import Highcharts from 'highcharts'
 const colorsPalette = ['#003366', '#00AEEF', '#F9A825', '#D32F2F', '#388E3C', '#7B1FA2']
 
 const props = defineProps({
+  title: {
+    type: String,
+    default: '',
+  },
   pregunta: {
     type: Object,
     default: () => ({
@@ -38,7 +42,7 @@ const initChart = () => {
     const matches = props.respuestas.filter((r) => r.respuesta_v2 === cat)
     return {
       name: cat,
-      y: matches.reduce((sum, r) => sum + (parseFloat(r.suma_factor) || 0), 0)
+      y: matches.reduce((sum, r) => sum + (parseFloat(r.suma_factor) || 0), 0),
     }
   })
 
@@ -51,7 +55,7 @@ const initChart = () => {
       backgroundColor: 'transparent',
     },
     title: {
-      text: props.pregunta.enunciado_1,
+      text: props.title || props.pregunta.enunciado_1,
       style: {
         fontWeight: '800',
         color: '#32204a',
@@ -132,11 +136,21 @@ watch(
   { deep: true },
 )
 
-// Observar cambios en la pregunta para actualizar solo el título
+// Observar cambios en el título
+watch(
+  () => props.title,
+  (newTitle) => {
+    if (chartInstance && newTitle) {
+      chartInstance.setTitle({ text: newTitle })
+    }
+  },
+)
+
+// Observar cambios en la pregunta como fallback
 watch(
   () => props.pregunta,
   (newPregunta) => {
-    if (chartInstance && newPregunta) {
+    if (chartInstance && newPregunta && !props.title) {
       chartInstance.setTitle({ text: newPregunta.enunciado_1 })
     }
   },
@@ -145,7 +159,7 @@ watch(
 </script>
 
 <template>
-  <div class="donut-chart-wrapper">
+  <div class="donut-chart-wrapper card-premium">
     <div ref="chartContainer" class="highcharts-container"></div>
   </div>
 </template>
@@ -154,13 +168,11 @@ watch(
 .donut-chart-wrapper {
   width: 100%;
   min-height: 400px;
-  background: #ffffff;
-  border-radius: 16px;
   padding: 1rem;
 }
 
 .highcharts-container {
   width: 100%;
-  height: calc(100vh - 220px);
+  height: calc(100vh - 320px);
 }
 </style>

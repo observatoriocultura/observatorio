@@ -82,7 +82,7 @@ const initChart = () => {
         style: { color: '#8c96a0' },
       },
       labels: {
-        format: '{value}%',
+        format: '{value}',
         style: { color: '#5c6972' },
       },
       gridLineColor: '#f1f3f5',
@@ -104,7 +104,7 @@ const initChart = () => {
         borderRadius: 4,
         dataLabels: {
           enabled: true,
-          format: '{point.y:.1f}%',
+          format: '{point.y:.1f}',
           style: {
             textOutline: 'none',
             color: '#5c6972',
@@ -157,7 +157,7 @@ onUnmounted(() => {
     </div>
 
     <section v-show="!loading && tablaAgrupada.length > 0" class="section-chart">
-      <div class="chart-wrapper shadow-sm border-0 rounded-4 bg-white">
+      <div class="chart-wrapper card-premium">
         <div ref="chartContainer" class="highcharts-container"></div>
       </div>
     </section>
@@ -174,9 +174,5 @@ onUnmounted(() => {
 .highcharts-container {
   width: 100%;
   height: 600px;
-}
-
-.rounded-4 {
-  border-radius: 1rem !important;
 }
 </style>
