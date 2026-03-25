@@ -4,83 +4,95 @@
         "cod_seccion":null,
         "nombre_seccion":"Sociodemográfico",
         "descripcion":null,
-        "notas":null
+        "notas":null,
+        "dataviz_display":1
     },
     {
         "num_seccion":2,
         "cod_seccion":null,
         "nombre_seccion":"Identificación",
         "descripcion":null,
-        "notas":null
+        "notas":null,
+        "dataviz_display":0
     },
     {
         "num_seccion":3,
         "cod_seccion":1.0,
         "nombre_seccion":"Inclusión e Identidades sociales diversas",
         "descripcion":null,
-        "notas":"P1 a P9"
+        "notas":"P1 a P9",
+        "dataviz_display":1
     },
     {
         "num_seccion":4,
         "cod_seccion":2.0,
         "nombre_seccion":"Equidad de género y eliminación del machismo",
         "descripcion":null,
-        "notas":"P10"
+        "notas":"P10",
+        "dataviz_display":1
     },
     {
         "num_seccion":5,
         "cod_seccion":3.0,
         "nombre_seccion":"Sexualidad, maternidad y paternidad temprana",
         "descripcion":null,
-        "notas":"P13"
+        "notas":"P13",
+        "dataviz_display":1
     },
     {
         "num_seccion":6,
         "cod_seccion":4.0,
         "nombre_seccion":"Cultura Política y Ciudadana",
         "descripcion":null,
-        "notas":"P14 a P49"
+        "notas":"P14 a P49",
+        "dataviz_display":1
     },
     {
         "num_seccion":7,
         "cod_seccion":5.0,
         "nombre_seccion":"Convivencia y Cultura de Paz",
         "descripcion":null,
-        "notas":"P50"
+        "notas":"P50",
+        "dataviz_display":1
     },
     {
         "num_seccion":8,
         "cod_seccion":6.0,
         "nombre_seccion":"Espacio Público",
         "descripcion":null,
-        "notas":"P55"
+        "notas":"P55",
+        "dataviz_display":1
     },
     {
         "num_seccion":9,
         "cod_seccion":7.0,
         "nombre_seccion":"Cultura Ambiental",
         "descripcion":null,
-        "notas":"P78"
+        "notas":"P78",
+        "dataviz_display":1
     },
     {
         "num_seccion":10,
         "cod_seccion":8.0,
         "nombre_seccion":"Movilidad",
         "descripcion":null,
-        "notas":"P100"
+        "notas":"P100",
+        "dataviz_display":1
     },
     {
         "num_seccion":11,
         "cod_seccion":9.0,
         "nombre_seccion":"Bogota Cultura+Consciente | Plan de Cultura",
         "descripcion":null,
-        "notas":"P110"
+        "notas":"P110",
+        "dataviz_display":1
     },
     {
         "num_seccion":99,
         "cod_seccion":null,
         "nombre_seccion":"Registro",
         "descripcion":null,
-        "notas":null
+        "notas":null,
+        "dataviz_display":0
     }
 ]

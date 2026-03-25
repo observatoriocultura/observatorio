@@ -164,7 +164,7 @@
     {
         "num_seccion":1,
         "indice_pregunta":9,
-        "nombre":null,
+        "nombre":"Hogares en la vivienda",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -176,13 +176,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":9,
         "num_seccion_bis":1,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":1,
         "indice_pregunta":10,
-        "nombre":null,
+        "nombre":"Personas en el hogar",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -194,8 +194,8 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":10,
         "num_seccion_bis":1,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":2,
@@ -488,7 +488,7 @@
     {
         "num_seccion":3,
         "indice_pregunta":27,
-        "nombre":null,
+        "nombre":"Formas de relacionarse en la diversidad",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -506,7 +506,7 @@
     {
         "num_seccion":3,
         "indice_pregunta":28,
-        "nombre":null,
+        "nombre":"Sobre castigos físicos a niñas y niños",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -518,13 +518,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":28,
         "num_seccion_bis":3,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"donut"
     },
     {
         "num_seccion":3,
         "indice_pregunta":29,
-        "nombre":null,
+        "nombre":"Sobre discriminación y respeto la diferencia",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -536,13 +536,13 @@
         "cantidad_variables":11,
         "indice_pregunta_bis":29,
         "num_seccion_bis":3,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":3,
         "indice_pregunta":30,
-        "nombre":null,
+        "nombre":"No le gustarían estos vecinos",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -554,13 +554,13 @@
         "cantidad_variables":17,
         "indice_pregunta_bis":30,
         "num_seccion_bis":3,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":3,
         "indice_pregunta":31,
-        "nombre":null,
+        "nombre":"Sobre población LGBTIQ",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -572,13 +572,13 @@
         "cantidad_variables":7,
         "indice_pregunta_bis":31,
         "num_seccion_bis":3,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":3,
         "indice_pregunta":32,
-        "nombre":null,
+        "nombre":"Presenciar hechos violentos de discriminación",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -590,13 +590,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":32,
         "num_seccion_bis":3,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"donut"
     },
     {
         "num_seccion":3,
         "indice_pregunta":33,
-        "nombre":null,
+        "nombre":"Sentir discriminación",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -608,13 +608,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":33,
         "num_seccion_bis":3,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"donut"
     },
     {
         "num_seccion":3,
         "indice_pregunta":34,
-        "nombre":null,
+        "nombre":"Motivo para sentir discriminación",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -623,25 +623,25 @@
         "instruccion":null,
         "url_imagen":null,
         "palabras_clave":null,
-        "cantidad_variables":2,
+        "cantidad_variables":1,
         "indice_pregunta_bis":34,
         "num_seccion_bis":3,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":3,
         "indice_pregunta":35,
-        "nombre":null,
+        "nombre":"Otro motivo para sentir discriminación",
         "descripcion":null,
         "rol":null,
         "codigo":null,
         "etiqueta_1":"9.1",
-        "enunciado_1":"Cuál ?",
+        "enunciado_1":"¿Cuál ?",
         "instruccion":null,
         "url_imagen":null,
         "palabras_clave":null,
-        "cantidad_variables":0,
+        "cantidad_variables":1,
         "indice_pregunta_bis":35,
         "num_seccion_bis":3,
         "dataviz_display":0,
@@ -650,7 +650,7 @@
     {
         "num_seccion":4,
         "indice_pregunta":36,
-        "nombre":null,
+        "nombre":"Sobre la mujer",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -662,13 +662,13 @@
         "cantidad_variables":11,
         "indice_pregunta_bis":36,
         "num_seccion_bis":4,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":4,
         "indice_pregunta":37,
-        "nombre":null,
+        "nombre":"Situaciones presenciadas",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -680,13 +680,13 @@
         "cantidad_variables":4,
         "indice_pregunta_bis":37,
         "num_seccion_bis":4,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":4,
         "indice_pregunta":38,
-        "nombre":null,
+        "nombre":"Sobre relaciones de pareja",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -698,13 +698,13 @@
         "cantidad_variables":6,
         "indice_pregunta_bis":38,
         "num_seccion_bis":4,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":5,
         "indice_pregunta":39,
-        "nombre":null,
+        "nombre":"Sobre tener hijos",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -716,8 +716,8 @@
         "cantidad_variables":5,
         "indice_pregunta_bis":39,
         "num_seccion_bis":5,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":6,
@@ -740,7 +740,7 @@
     {
         "num_seccion":6,
         "indice_pregunta":41,
-        "nombre":null,
+        "nombre":"Formas de participación",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -752,13 +752,13 @@
         "cantidad_variables":12,
         "indice_pregunta_bis":41,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":6,
         "indice_pregunta":42,
-        "nombre":null,
+        "nombre":"Motivación para votar",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -770,13 +770,13 @@
         "cantidad_variables":10,
         "indice_pregunta_bis":42,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":6,
         "indice_pregunta":43,
-        "nombre":null,
+        "nombre":"Votar por",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -788,13 +788,13 @@
         "cantidad_variables":10,
         "indice_pregunta_bis":43,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":6,
         "indice_pregunta":44,
-        "nombre":null,
+        "nombre":"Participación en procesos asociativos",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -806,13 +806,13 @@
         "cantidad_variables":6,
         "indice_pregunta_bis":44,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":6,
         "indice_pregunta":45,
-        "nombre":null,
+        "nombre":"Participación en espacios Distrito",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -824,31 +824,31 @@
         "cantidad_variables":15,
         "indice_pregunta_bis":45,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":6,
         "indice_pregunta":46,
-        "nombre":null,
+        "nombre":"Motivo principal de participación",
         "descripcion":null,
         "rol":null,
         "codigo":null,
         "etiqueta_1":20,
-        "enunciado_1":"¿Cuál es la principal razón por la que participa? Solo para quienes respondieron Sí en algunas de las opciones de las preguntas 22 y 23.",
-        "instruccion":null,
+        "enunciado_1":"¿Cuál es la principal razón por la que participa?",
+        "instruccion":"Solo para quienes respondieron Sí en algunas de las opciones de las preguntas 22 y 23.",
         "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":2,
         "indice_pregunta_bis":46,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":6,
         "indice_pregunta":47,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -860,13 +860,13 @@
         "cantidad_variables":0,
         "indice_pregunta_bis":47,
         "num_seccion_bis":6,
-        "dataviz_display":0,
+        "dataviz_display":1,
         "dataviz_chart_type":null
     },
     {
         "num_seccion":6,
         "indice_pregunta":48,
-        "nombre":null,
+        "nombre":"Efectividad de la participación",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -878,13 +878,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":48,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":6,
         "indice_pregunta":49,
-        "nombre":null,
+        "nombre":"Utilidad de condiciones para la participación",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -896,49 +896,49 @@
         "cantidad_variables":7,
         "indice_pregunta_bis":49,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":6,
         "indice_pregunta":50,
-        "nombre":null,
-        "descripcion":null,
+        "nombre":"🚧 En construcción",
+        "descripcion":"Es decir una participación ciudadana con capacidad de influir, modificar o determinar decisiones públicas, y no se limita únicamente a informar, consultar o escuchar a la ciudadanía.",
         "rol":null,
         "codigo":null,
         "etiqueta_1":23,
-        "enunciado_1":"¿Qué tanto cree que el Distrito facilita o incentiva la participación incidente? Es decir una participación ciudadana con capacidad de influir, modificar o determinar decisiones públicas, y no se limita únicamente a informar, consultar o escuchar a la ciudadanía.",
+        "enunciado_1":"¿Qué tanto cree que el Distrito facilita o incentiva la participación incidente?",
         "instruccion":null,
         "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":50,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":6,
         "indice_pregunta":51,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
         "etiqueta_1":24,
-        "enunciado_1":"¿Qué tan de acuerdo está con las siguientes afirmaciones",
+        "enunciado_1":"¿Qué tan de acuerdo está con las siguientes afirmaciones?",
         "instruccion":null,
         "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":6,
         "indice_pregunta_bis":51,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":6,
         "indice_pregunta":52,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -950,13 +950,13 @@
         "cantidad_variables":4,
         "indice_pregunta_bis":52,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":6,
         "indice_pregunta":53,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -968,13 +968,13 @@
         "cantidad_variables":7,
         "indice_pregunta_bis":53,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":6,
         "indice_pregunta":54,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -986,13 +986,13 @@
         "cantidad_variables":2,
         "indice_pregunta_bis":54,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":6,
         "indice_pregunta":55,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1004,13 +1004,13 @@
         "cantidad_variables":12,
         "indice_pregunta_bis":55,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":6,
         "indice_pregunta":56,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1022,13 +1022,13 @@
         "cantidad_variables":4,
         "indice_pregunta_bis":56,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":6,
         "indice_pregunta":57,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1040,13 +1040,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":57,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":6,
         "indice_pregunta":58,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1058,13 +1058,13 @@
         "cantidad_variables":9,
         "indice_pregunta_bis":58,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":6,
         "indice_pregunta":59,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1076,13 +1076,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":59,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":6,
         "indice_pregunta":60,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1094,13 +1094,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":60,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":6,
         "indice_pregunta":61,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1112,13 +1112,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":61,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":6,
         "indice_pregunta":62,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1130,13 +1130,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":62,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":6,
         "indice_pregunta":63,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1148,13 +1148,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":63,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":6,
         "indice_pregunta":64,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1166,13 +1166,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":64,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":6,
         "indice_pregunta":65,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1184,13 +1184,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":65,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":6,
         "indice_pregunta":66,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1202,13 +1202,13 @@
         "cantidad_variables":5,
         "indice_pregunta_bis":66,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":6,
         "indice_pregunta":67,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1220,13 +1220,13 @@
         "cantidad_variables":4,
         "indice_pregunta_bis":67,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":6,
         "indice_pregunta":68,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1238,13 +1238,13 @@
         "cantidad_variables":4,
         "indice_pregunta_bis":68,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":6,
         "indice_pregunta":69,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1256,13 +1256,13 @@
         "cantidad_variables":6,
         "indice_pregunta_bis":69,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":6,
         "indice_pregunta":70,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1274,13 +1274,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":70,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":6,
         "indice_pregunta":71,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1292,13 +1292,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":71,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":6,
         "indice_pregunta":72,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1310,13 +1310,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":72,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":6,
         "indice_pregunta":73,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1328,13 +1328,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":73,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":6,
         "indice_pregunta":74,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1346,13 +1346,13 @@
         "cantidad_variables":11,
         "indice_pregunta_bis":74,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":6,
         "indice_pregunta":75,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1364,13 +1364,13 @@
         "cantidad_variables":7,
         "indice_pregunta_bis":75,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":6,
         "indice_pregunta":76,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1382,13 +1382,13 @@
         "cantidad_variables":0,
         "indice_pregunta_bis":76,
         "num_seccion_bis":6,
-        "dataviz_display":0,
+        "dataviz_display":1,
         "dataviz_chart_type":null
     },
     {
         "num_seccion":6,
         "indice_pregunta":77,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1397,34 +1397,34 @@
         "instruccion":null,
         "url_imagen":null,
         "palabras_clave":null,
-        "cantidad_variables":8,
+        "cantidad_variables":7,
         "indice_pregunta_bis":77,
         "num_seccion_bis":6,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":6,
         "indice_pregunta":78,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
-        "etiqueta_1":49,
+        "etiqueta_1":"49.1",
         "enunciado_1":"Cuál?",
         "instruccion":null,
         "url_imagen":null,
         "palabras_clave":null,
-        "cantidad_variables":0,
+        "cantidad_variables":1,
         "indice_pregunta_bis":78,
         "num_seccion_bis":6,
-        "dataviz_display":0,
+        "dataviz_display":1,
         "dataviz_chart_type":null
     },
     {
         "num_seccion":7,
         "indice_pregunta":79,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1436,13 +1436,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":79,
         "num_seccion_bis":7,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":7,
         "indice_pregunta":80,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1454,13 +1454,13 @@
         "cantidad_variables":5,
         "indice_pregunta_bis":80,
         "num_seccion_bis":7,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":7,
         "indice_pregunta":81,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1472,13 +1472,13 @@
         "cantidad_variables":3,
         "indice_pregunta_bis":81,
         "num_seccion_bis":7,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":7,
         "indice_pregunta":82,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1490,13 +1490,13 @@
         "cantidad_variables":13,
         "indice_pregunta_bis":82,
         "num_seccion_bis":7,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":7,
         "indice_pregunta":83,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1508,13 +1508,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":83,
         "num_seccion_bis":7,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":8,
         "indice_pregunta":84,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1526,13 +1526,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":84,
         "num_seccion_bis":8,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":8,
         "indice_pregunta":85,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1544,13 +1544,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":85,
         "num_seccion_bis":8,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":8,
         "indice_pregunta":86,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1562,13 +1562,13 @@
         "cantidad_variables":10,
         "indice_pregunta_bis":86,
         "num_seccion_bis":8,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":8,
         "indice_pregunta":87,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1580,13 +1580,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":87,
         "num_seccion_bis":8,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":8,
         "indice_pregunta":88,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1598,13 +1598,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":88,
         "num_seccion_bis":8,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":8,
         "indice_pregunta":89,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1616,13 +1616,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":89,
         "num_seccion_bis":8,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":8,
         "indice_pregunta":90,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1634,13 +1634,13 @@
         "cantidad_variables":10,
         "indice_pregunta_bis":90,
         "num_seccion_bis":8,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":8,
         "indice_pregunta":91,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1652,13 +1652,13 @@
         "cantidad_variables":9,
         "indice_pregunta_bis":91,
         "num_seccion_bis":8,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":8,
         "indice_pregunta":92,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1670,13 +1670,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":92,
         "num_seccion_bis":8,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":8,
         "indice_pregunta":93,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1688,13 +1688,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":93,
         "num_seccion_bis":8,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":8,
         "indice_pregunta":94,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1706,13 +1706,13 @@
         "cantidad_variables":7,
         "indice_pregunta_bis":94,
         "num_seccion_bis":8,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":8,
         "indice_pregunta":95,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1724,13 +1724,13 @@
         "cantidad_variables":9,
         "indice_pregunta_bis":95,
         "num_seccion_bis":8,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":8,
         "indice_pregunta":96,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1742,13 +1742,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":96,
         "num_seccion_bis":8,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":8,
         "indice_pregunta":97,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1760,13 +1760,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":97,
         "num_seccion_bis":8,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":8,
         "indice_pregunta":98,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1778,13 +1778,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":98,
         "num_seccion_bis":8,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":8,
         "indice_pregunta":99,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1796,13 +1796,13 @@
         "cantidad_variables":2,
         "indice_pregunta_bis":99,
         "num_seccion_bis":8,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":8,
         "indice_pregunta":100,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1814,13 +1814,13 @@
         "cantidad_variables":0,
         "indice_pregunta_bis":100,
         "num_seccion_bis":8,
-        "dataviz_display":0,
+        "dataviz_display":1,
         "dataviz_chart_type":null
     },
     {
         "num_seccion":8,
         "indice_pregunta":101,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1832,13 +1832,13 @@
         "cantidad_variables":6,
         "indice_pregunta_bis":101,
         "num_seccion_bis":8,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":8,
         "indice_pregunta":102,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1850,13 +1850,13 @@
         "cantidad_variables":15,
         "indice_pregunta_bis":102,
         "num_seccion_bis":8,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":8,
         "indice_pregunta":103,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1868,13 +1868,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":103,
         "num_seccion_bis":8,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":8,
         "indice_pregunta":104,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1886,13 +1886,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":104,
         "num_seccion_bis":8,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":8,
         "indice_pregunta":105,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1904,13 +1904,13 @@
         "cantidad_variables":2,
         "indice_pregunta_bis":105,
         "num_seccion_bis":8,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":8,
         "indice_pregunta":106,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1922,13 +1922,13 @@
         "cantidad_variables":0,
         "indice_pregunta_bis":106,
         "num_seccion_bis":8,
-        "dataviz_display":0,
+        "dataviz_display":1,
         "dataviz_chart_type":null
     },
     {
         "num_seccion":8,
         "indice_pregunta":107,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1940,13 +1940,13 @@
         "cantidad_variables":2,
         "indice_pregunta_bis":107,
         "num_seccion_bis":8,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":8,
         "indice_pregunta":108,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1958,13 +1958,13 @@
         "cantidad_variables":0,
         "indice_pregunta_bis":108,
         "num_seccion_bis":8,
-        "dataviz_display":0,
+        "dataviz_display":1,
         "dataviz_chart_type":null
     },
     {
         "num_seccion":8,
         "indice_pregunta":109,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1976,13 +1976,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":109,
         "num_seccion_bis":8,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":9,
         "indice_pregunta":110,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1994,13 +1994,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":110,
         "num_seccion_bis":9,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":9,
         "indice_pregunta":111,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2012,13 +2012,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":111,
         "num_seccion_bis":9,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":9,
         "indice_pregunta":112,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2030,13 +2030,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":112,
         "num_seccion_bis":9,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":9,
         "indice_pregunta":113,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2048,13 +2048,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":113,
         "num_seccion_bis":9,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":9,
         "indice_pregunta":114,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2066,13 +2066,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":114,
         "num_seccion_bis":9,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":9,
         "indice_pregunta":115,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2084,13 +2084,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":115,
         "num_seccion_bis":9,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":9,
         "indice_pregunta":116,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2102,13 +2102,13 @@
         "cantidad_variables":13,
         "indice_pregunta_bis":116,
         "num_seccion_bis":9,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":9,
         "indice_pregunta":117,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2120,13 +2120,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":117,
         "num_seccion_bis":9,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":9,
         "indice_pregunta":118,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2138,13 +2138,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":118,
         "num_seccion_bis":9,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":9,
         "indice_pregunta":119,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2156,13 +2156,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":119,
         "num_seccion_bis":9,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":9,
         "indice_pregunta":120,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2174,13 +2174,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":120,
         "num_seccion_bis":9,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":9,
         "indice_pregunta":121,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2192,13 +2192,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":121,
         "num_seccion_bis":9,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":9,
         "indice_pregunta":122,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2210,13 +2210,13 @@
         "cantidad_variables":7,
         "indice_pregunta_bis":122,
         "num_seccion_bis":9,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":9,
         "indice_pregunta":123,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2228,13 +2228,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":123,
         "num_seccion_bis":9,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":9,
         "indice_pregunta":124,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2246,13 +2246,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":124,
         "num_seccion_bis":9,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":9,
         "indice_pregunta":125,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2264,13 +2264,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":125,
         "num_seccion_bis":9,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":9,
         "indice_pregunta":126,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2282,13 +2282,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":126,
         "num_seccion_bis":9,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":9,
         "indice_pregunta":127,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2300,13 +2300,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":127,
         "num_seccion_bis":9,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":9,
         "indice_pregunta":128,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2318,13 +2318,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":128,
         "num_seccion_bis":9,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":9,
         "indice_pregunta":129,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2336,13 +2336,13 @@
         "cantidad_variables":9,
         "indice_pregunta_bis":129,
         "num_seccion_bis":9,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":9,
         "indice_pregunta":130,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2354,13 +2354,13 @@
         "cantidad_variables":8,
         "indice_pregunta_bis":130,
         "num_seccion_bis":9,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":9,
         "indice_pregunta":131,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2372,13 +2372,13 @@
         "cantidad_variables":8,
         "indice_pregunta_bis":131,
         "num_seccion_bis":9,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":10,
         "indice_pregunta":132,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2390,13 +2390,13 @@
         "cantidad_variables":3,
         "indice_pregunta_bis":132,
         "num_seccion_bis":10,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":10,
         "indice_pregunta":133,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2408,13 +2408,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":133,
         "num_seccion_bis":10,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":10,
         "indice_pregunta":134,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2426,13 +2426,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":134,
         "num_seccion_bis":10,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":10,
         "indice_pregunta":135,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2444,13 +2444,13 @@
         "cantidad_variables":11,
         "indice_pregunta_bis":135,
         "num_seccion_bis":10,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":10,
         "indice_pregunta":136,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2462,13 +2462,13 @@
         "cantidad_variables":2,
         "indice_pregunta_bis":136,
         "num_seccion_bis":10,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":10,
         "indice_pregunta":137,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2480,13 +2480,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":137,
         "num_seccion_bis":10,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":10,
         "indice_pregunta":138,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2498,13 +2498,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":138,
         "num_seccion_bis":10,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":10,
         "indice_pregunta":139,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2516,13 +2516,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":139,
         "num_seccion_bis":10,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":10,
         "indice_pregunta":140,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2534,13 +2534,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":140,
         "num_seccion_bis":10,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":10,
         "indice_pregunta":141,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2552,13 +2552,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":141,
         "num_seccion_bis":10,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":11,
         "indice_pregunta":142,
-        "nombre":null,
+        "nombre":"🚧 En construcción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2570,8 +2570,8 @@
         "cantidad_variables":12,
         "indice_pregunta_bis":142,
         "num_seccion_bis":11,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":1,
@@ -2594,7 +2594,7 @@
     {
         "num_seccion":1,
         "indice_pregunta":144,
-        "nombre":null,
+        "nombre":"Género",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2606,13 +2606,13 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":144,
         "num_seccion_bis":1,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":1,
         "indice_pregunta":145,
-        "nombre":null,
+        "nombre":"Edad (Años cumplidos)",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2621,16 +2621,34 @@
         "instruccion":null,
         "url_imagen":null,
         "palabras_clave":null,
-        "cantidad_variables":2,
+        "cantidad_variables":1,
         "indice_pregunta_bis":145,
         "num_seccion_bis":1,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":1,
         "indice_pregunta":146,
-        "nombre":null,
+        "nombre":"Grupo de edad",
+        "descripcion":null,
+        "rol":null,
+        "codigo":null,
+        "etiqueta_1":"D3.1",
+        "enunciado_1":"Grupo de edad",
+        "instruccion":null,
+        "url_imagen":null,
+        "palabras_clave":null,
+        "cantidad_variables":1,
+        "indice_pregunta_bis":146,
+        "num_seccion_bis":1,
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
+    },
+    {
+        "num_seccion":1,
+        "indice_pregunta":147,
+        "nombre":"Lugar de nacimiento",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2640,33 +2658,33 @@
         "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
-        "indice_pregunta_bis":146,
-        "num_seccion_bis":1,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
-    },
-    {
-        "num_seccion":1,
-        "indice_pregunta":147,
-        "nombre":null,
-        "descripcion":null,
-        "rol":null,
-        "codigo":null,
-        "etiqueta_1":"D5",
-        "enunciado_1":"¿Desde hace cuántos años usted habita en esta ciudad? AÑOS",
-        "instruccion":null,
-        "url_imagen":null,
-        "palabras_clave":null,
-        "cantidad_variables":1,
         "indice_pregunta_bis":147,
         "num_seccion_bis":1,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":1,
         "indice_pregunta":148,
-        "nombre":null,
+        "nombre":"Años viviendo en Bogotá",
+        "descripcion":null,
+        "rol":null,
+        "codigo":null,
+        "etiqueta_1":"D5",
+        "enunciado_1":"¿Desde hace cuántos años usted habita en esta ciudad?",
+        "instruccion":"Cantidad de años",
+        "url_imagen":null,
+        "palabras_clave":null,
+        "cantidad_variables":1,
+        "indice_pregunta_bis":148,
+        "num_seccion_bis":1,
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
+    },
+    {
+        "num_seccion":1,
+        "indice_pregunta":149,
+        "nombre":"Motivo para venir a Bogotá",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2676,15 +2694,15 @@
         "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
-        "indice_pregunta_bis":148,
+        "indice_pregunta_bis":149,
         "num_seccion_bis":1,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":1,
-        "indice_pregunta":149,
-        "nombre":null,
+        "indice_pregunta":150,
+        "nombre":"Estado civil",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2694,15 +2712,15 @@
         "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
-        "indice_pregunta_bis":149,
+        "indice_pregunta_bis":150,
         "num_seccion_bis":1,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":1,
-        "indice_pregunta":150,
-        "nombre":null,
+        "indice_pregunta":151,
+        "nombre":"Actividad de la persona encuestada",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2712,33 +2730,33 @@
         "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":2,
-        "indice_pregunta_bis":150,
-        "num_seccion_bis":1,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
-    },
-    {
-        "num_seccion":1,
-        "indice_pregunta":151,
-        "nombre":null,
-        "descripcion":null,
-        "rol":null,
-        "codigo":null,
-        "etiqueta_1":"D8",
-        "enunciado_1":"Cuál ?",
-        "instruccion":null,
-        "url_imagen":null,
-        "palabras_clave":null,
-        "cantidad_variables":0,
         "indice_pregunta_bis":151,
         "num_seccion_bis":1,
         "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":1,
         "indice_pregunta":152,
         "nombre":null,
+        "descripcion":null,
+        "rol":null,
+        "codigo":null,
+        "etiqueta_1":"D8.1",
+        "enunciado_1":"Cuál ?",
+        "instruccion":null,
+        "url_imagen":null,
+        "palabras_clave":null,
+        "cantidad_variables":0,
+        "indice_pregunta_bis":152,
+        "num_seccion_bis":1,
+        "dataviz_display":0,
+        "dataviz_chart_type":"bar"
+    },
+    {
+        "num_seccion":1,
+        "indice_pregunta":153,
+        "nombre":"Nivel educativo",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2748,15 +2766,15 @@
         "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
-        "indice_pregunta_bis":152,
+        "indice_pregunta_bis":153,
         "num_seccion_bis":1,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":1,
-        "indice_pregunta":153,
-        "nombre":null,
+        "indice_pregunta":154,
+        "nombre":"Grupo étnico, racial o cultural",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2766,15 +2784,15 @@
         "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
-        "indice_pregunta_bis":153,
+        "indice_pregunta_bis":154,
         "num_seccion_bis":1,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":1,
-        "indice_pregunta":154,
-        "nombre":null,
+        "indice_pregunta":155,
+        "nombre":"Limitaciones permanentes",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2784,14 +2802,14 @@
         "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":10,
-        "indice_pregunta_bis":154,
+        "indice_pregunta_bis":155,
         "num_seccion_bis":1,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar-multiple"
     },
     {
         "num_seccion":1,
-        "indice_pregunta":155,
+        "indice_pregunta":156,
         "nombre":null,
         "descripcion":null,
         "rol":null,
@@ -2802,24 +2820,6 @@
         "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":12,
-        "indice_pregunta_bis":155,
-        "num_seccion_bis":1,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
-    },
-    {
-        "num_seccion":1,
-        "indice_pregunta":156,
-        "nombre":null,
-        "descripcion":null,
-        "rol":null,
-        "codigo":null,
-        "etiqueta_1":"D12",
-        "enunciado_1":"¿Usted se identifica como...? Por favor marque todas aquellas con las que más se identifica.",
-        "instruccion":null,
-        "url_imagen":null,
-        "palabras_clave":null,
-        "cantidad_variables":0,
         "indice_pregunta_bis":156,
         "num_seccion_bis":1,
         "dataviz_display":0,
@@ -2832,21 +2832,39 @@
         "descripcion":null,
         "rol":null,
         "codigo":null,
+        "etiqueta_1":"D12",
+        "enunciado_1":"¿Usted se identifica como...? Por favor marque todas aquellas con las que más se identifica.",
+        "instruccion":null,
+        "url_imagen":null,
+        "palabras_clave":null,
+        "cantidad_variables":0,
+        "indice_pregunta_bis":157,
+        "num_seccion_bis":1,
+        "dataviz_display":0,
+        "dataviz_chart_type":null
+    },
+    {
+        "num_seccion":1,
+        "indice_pregunta":158,
+        "nombre":"Tenencia de hijos",
+        "descripcion":null,
+        "rol":null,
+        "codigo":null,
         "etiqueta_1":"D13",
         "enunciado_1":"¿Usted tiene hijos?",
         "instruccion":null,
         "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
-        "indice_pregunta_bis":157,
+        "indice_pregunta_bis":158,
         "num_seccion_bis":1,
         "dataviz_display":1,
-        "dataviz_chart_type":null
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":1,
-        "indice_pregunta":158,
-        "nombre":null,
+        "indice_pregunta":159,
+        "nombre":"Nivel de ingreso",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2856,15 +2874,15 @@
         "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
-        "indice_pregunta_bis":158,
+        "indice_pregunta_bis":159,
         "num_seccion_bis":1,
-        "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_display":1,
+        "dataviz_chart_type":"bar"
     },
     {
         "num_seccion":1,
-        "indice_pregunta":159,
-        "nombre":null,
+        "indice_pregunta":160,
+        "nombre":"Factor",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2874,15 +2892,15 @@
         "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
-        "indice_pregunta_bis":159,
+        "indice_pregunta_bis":160,
         "num_seccion_bis":1,
         "dataviz_display":0,
         "dataviz_chart_type":null
     },
     {
         "num_seccion":1,
-        "indice_pregunta":160,
-        "nombre":null,
+        "indice_pregunta":161,
+        "nombre":"Teléfonodelencuestado",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2892,7 +2910,7 @@
         "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":0,
-        "indice_pregunta_bis":160,
+        "indice_pregunta_bis":161,
         "num_seccion_bis":1,
         "dataviz_display":0,
         "dataviz_chart_type":null
