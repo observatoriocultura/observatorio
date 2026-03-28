@@ -6,7 +6,7 @@ import ProyectosView from '../views/ProyectosView.vue'
 import PlanCultura from '../views/2025/PlanCultura.vue'
 import ContenidosView from '../views/ContenidosView.vue'
 import ArticleView from '../views/ArticleView.vue'
-import IccLayout2025 from '../views/ebc/2025/IccLayout.vue'
+import IccLayout2025 from '../views/ebc/2025/icc/IccLayout.vue'
 import InvestigacionesView from '../views/InvestigacionesView.vue'
 
 const routes = [

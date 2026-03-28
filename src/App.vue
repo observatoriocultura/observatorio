@@ -2,7 +2,7 @@
   <div class="app-layout">
     <SidebarComponent v-model="isCollapsed" />
 
-    <main class="main-content" :style="{ marginLeft: isCollapsed ? '68px' : '280px' }">
+    <main class="main-content" :style="{ marginLeft: isCollapsed ? '50px' : '240px' }">
       <router-view v-slot="{ Component }">
         <transition name="page-fade" mode="out-in">
           <component :is="Component" />

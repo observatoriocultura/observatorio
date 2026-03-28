@@ -2618,8 +2618,8 @@
         "grupo":null,
         "en_cubo":1,
         "tags":null,
-        "variable_nombre":null,
-        "unidad_medida":null
+        "variable_nombre":"Efectividad",
+        "unidad_medida":"de 1 a 10"
     },
     {
         "indice_pregunta":49,

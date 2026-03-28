@@ -133,11 +133,6 @@ onUnmounted(() => {
   if (timer) clearInterval(timer)
 })
 
-const displayTitle = computed(() => {
-  if (!surveyInfo.value?.nombre_medicion) return ''
-  return surveyInfo.value.nombre_medicion.replace(/\s\d{4}$/, '')
-})
-
 const displayYear = computed(() => {
   if (!surveyInfo.value?.año_referencia) return ''
   return surveyInfo.value.año_referencia
@@ -161,6 +156,15 @@ const logoBogotaPath = computed(() => {
     <div class="hero-logo-right">
       <img :src="logoBogotaPath" alt="Logo Bogotá" />
     </div>
+    <div class="hero-logo-bottom-left">
+      <img :src="getGeneralImagePath('dogcc-logotipo-blanco.png')" alt="Logo DOGCC" />
+    </div>
+    <div class="hero-logo-bottom-right">
+      <img
+        :src="getGeneralImagePath('logo-sectretaria-cultura-blanco.png')"
+        alt="Logo Secretaría Cultura"
+      />
+    </div>
 
     <!-- Carrusel de Fondo -->
     <div class="background-carousel">
@@ -179,9 +183,11 @@ const logoBogotaPath = computed(() => {
     <!-- Contenido Superpuesto -->
     <div v-if="surveyInfo" class="hero-content">
       <div class="hero-container">
-        <h2 class="hero-subtitle">Encuesta Bienal de Culturas</h2>
+        <p class="hero-eyebrow">Encuesta Bienal de Culturas</p>
         <h1 class="hero-title">
-          {{ displayTitle }}
+          <span>Encuesta de</span>
+          <span>Indicadores de Cultura Ciudadana</span>
+          <span>y Garantía de Derechos</span>
           <span class="hero-year">{{ displayYear }}</span>
         </h1>
       </div>
@@ -252,6 +258,26 @@ const logoBogotaPath = computed(() => {
   filter: brightness(0) invert(1);
 }
 
+.hero-logo-bottom-left {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 10;
+}
+
+.hero-logo-bottom-left img,
+.hero-logo-bottom-right img {
+  height: 30px;
+  width: auto;
+}
+
+.hero-logo-bottom-right {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 10;
+}
+
 .background-carousel {
   position: absolute;
   top: 0;
@@ -293,20 +319,21 @@ const logoBogotaPath = computed(() => {
   color: #ffffff;
   width: 100%;
   padding: 0 5rem;
-  margin-top: -10%;
+  margin-top: calc(-10% - 50px);
 }
 
 .hero-container {
   max-width: 900px;
 }
 
-.hero-subtitle {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 0.75rem;
-  letter-spacing: 0.15em;
+.hero-eyebrow {
   text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.5rem;
+  display: block;
 }
 
 .hero-title {
@@ -320,7 +347,9 @@ const logoBogotaPath = computed(() => {
 
 .hero-year {
   color: #ffca28;
-  font-size: 1.1em;
+  font-size: 1.4em;
+  font-weight: 900;
+  margin-top: 0.2rem;
 }
 
 /* MENÚ GRID DESKTOP */
@@ -336,7 +365,7 @@ const logoBogotaPath = computed(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 5rem 2rem;
+  padding: 0 5rem calc(3.5rem + 50px);
 }
 
 .menu-grid {
@@ -427,6 +456,31 @@ const logoBogotaPath = computed(() => {
    ESTILOS RESPONSIVE: MOBILE & TABLET
    ========================================================================== */
 
+@media (max-width: 1400px) {
+  .hero-content {
+    padding: 0 3rem;
+    margin-top: -8%;
+  }
+  .hero-title {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+  }
+  .hero-eyebrow {
+    font-size: 0.8rem;
+    margin-bottom: 0.35rem;
+  }
+  .menu-btn {
+    padding: 0.75rem 1.25rem;
+    min-height: 75px;
+    font-size: 0.85rem;
+  }
+  .menu-grid {
+    gap: 0.85rem;
+  }
+  .hero-menu {
+    padding-bottom: 2.5rem;
+  }
+}
+
 @media (max-width: 1200px) {
   .menu-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -462,14 +516,29 @@ const logoBogotaPath = computed(() => {
   .hero-logo-right img {
     height: 45px;
   }
+  .hero-logo-bottom-left,
+  .hero-logo-bottom-right {
+    bottom: 1rem;
+  }
+  .hero-logo-bottom-left {
+    left: 1rem;
+  }
+  .hero-logo-bottom-right {
+    right: 1rem;
+  }
+  .hero-logo-bottom-left img,
+  .hero-logo-bottom-right img {
+    height: 30px;
+  }
   .hero-content {
     padding: 0 1.5rem;
   }
   .hero-title {
     font-size: clamp(1.8rem, 8vw, 2.5rem);
   }
-  .hero-subtitle {
-    font-size: 0.9rem;
+  .hero-eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
   }
 }
 

@@ -6,7 +6,7 @@
           src="/resources/images/app/logo-navbar.png"
           alt="Observatorio"
           class="me-2"
-          style="height: 25px"
+          style="height: 22px"
         />
       </RouterLink>
       <button
@@ -35,7 +35,7 @@ import { RouterLink } from 'vue-router'
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid #fcdea0;
-  padding: 0.3rem 0; /* Padding vertical, el horizontal lo maneja el container */
+  padding: 0; /* Reducido para hacerla más angosta (delgada) */
   transition: background 0.3s ease;
 }
 
@@ -44,8 +44,9 @@ import { RouterLink } from 'vue-router'
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  max-width: 1240px;
   margin: 0 auto;
-  padding: 0 0.3rem; /* Margen interno para que no toque los bordes en pantallas medianas */
+  padding: 0 1rem; /* Margen interno para que no toque los bordes */
 }
 
 /* Opcional: Ajuste suave para los enlaces */
