@@ -55,14 +55,17 @@ const initChart = () => {
       backgroundColor: 'transparent',
     },
     title: {
-      text: props.title || props.pregunta.enunciado_1,
+      text: props.title,
       style: {
         fontWeight: '800',
         color: '#32204a',
       },
     },
     subtitle: {
-      text: null,
+      text: props.pregunta?.enunciado_1 || '',
+      style: {
+        color: '#8c96a0',
+      },
     },
     credits: {
       enabled: false,

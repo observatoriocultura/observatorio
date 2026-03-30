@@ -4510,29 +4510,10 @@
         "num_seccion":null,
         "pregunta":48,
         "titulo":null,
-        "tipo":"text",
-        "etiqueta_orden":null,
-        "enunciado_2":"Otro ¿cuál?",
-        "etiqueta_enunciado":"Otro ¿cuál?",
-        "etiqueta_corta":null,
-        "grupo":null,
-        "en_cubo":1,
-        "tags":null,
-        "variable_nombre":null,
-        "unidad_medida":null
-    },
-    {
-        "indice_pregunta":75,
-        "indice_variable":286,
-        "columna":"KA",
-        "codigo_variable":"P48.7",
-        "num_seccion":null,
-        "pregunta":48,
-        "titulo":null,
         "tipo":"category",
         "etiqueta_orden":null,
-        "enunciado_2":null,
-        "etiqueta_enunciado":null,
+        "enunciado_2":"Otro",
+        "etiqueta_enunciado":"Otro",
         "etiqueta_corta":null,
         "grupo":null,
         "en_cubo":1,
@@ -4666,25 +4647,6 @@
         "etiqueta_orden":null,
         "enunciado_2":"Otro",
         "etiqueta_enunciado":"Otro",
-        "etiqueta_corta":null,
-        "grupo":null,
-        "en_cubo":1,
-        "tags":null,
-        "variable_nombre":null,
-        "unidad_medida":null
-    },
-    {
-        "indice_pregunta":78,
-        "indice_variable":294,
-        "columna":"KI",
-        "codigo_variable":"P49.8",
-        "num_seccion":null,
-        "pregunta":"49.1",
-        "titulo":null,
-        "tipo":"text",
-        "etiqueta_orden":null,
-        "enunciado_2":"¿Cuál otro?",
-        "etiqueta_enunciado":"¿Cuál otro?",
         "etiqueta_corta":null,
         "grupo":null,
         "en_cubo":1,
@@ -5392,8 +5354,8 @@
         "grupo":null,
         "en_cubo":1,
         "tags":null,
-        "variable_nombre":null,
-        "unidad_medida":null
+        "variable_nombre":"personas satisfechas",
+        "unidad_medida":"1 a 10"
     },
     {
         "indice_pregunta":89,
@@ -6144,7 +6106,7 @@
         "num_seccion":null,
         "pregunta":68,
         "titulo":null,
-        "tipo":"category",
+        "tipo":"number",
         "etiqueta_orden":null,
         "enunciado_2":null,
         "etiqueta_enunciado":null,
@@ -6152,8 +6114,8 @@
         "grupo":null,
         "en_cubo":1,
         "tags":null,
-        "variable_nombre":null,
-        "unidad_medida":null
+        "variable_nombre":"Tiempo para llegar al parque",
+        "unidad_medida":"minutos"
     },
     {
         "indice_pregunta":98,
@@ -6194,12 +6156,12 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":99,
+        "indice_pregunta":100,
         "indice_variable":374,
         "columna":"NK",
         "codigo_variable":"P70.1",
         "num_seccion":null,
-        "pregunta":70,
+        "pregunta":"70.1",
         "titulo":null,
         "tipo":"category",
         "etiqueta_orden":null,
@@ -6771,7 +6733,7 @@
         "num_seccion":null,
         "pregunta":79,
         "titulo":null,
-        "tipo":"category",
+        "tipo":"number",
         "etiqueta_orden":null,
         "enunciado_2":null,
         "etiqueta_enunciado":null,
@@ -6779,8 +6741,8 @@
         "grupo":null,
         "en_cubo":1,
         "tags":null,
-        "variable_nombre":null,
-        "unidad_medida":null
+        "variable_nombre":"vecinos que reciclan",
+        "unidad_medida":"1 a 10 personas"
     },
     {
         "indice_pregunta":112,
@@ -7987,7 +7949,7 @@
         "num_seccion":null,
         "pregunta":101,
         "titulo":null,
-        "tipo":"category",
+        "tipo":"number",
         "etiqueta_orden":null,
         "enunciado_2":null,
         "etiqueta_enunciado":null,
@@ -7995,8 +7957,8 @@
         "grupo":null,
         "en_cubo":1,
         "tags":null,
-        "variable_nombre":null,
-        "unidad_medida":null
+        "variable_nombre":"satisfación movilidad",
+        "unidad_medida":"1 a 5"
     },
     {
         "indice_pregunta":134,
@@ -8006,7 +7968,7 @@
         "num_seccion":null,
         "pregunta":102,
         "titulo":null,
-        "tipo":"category",
+        "tipo":"number",
         "etiqueta_orden":null,
         "enunciado_2":null,
         "etiqueta_enunciado":null,
@@ -8014,8 +7976,8 @@
         "grupo":null,
         "en_cubo":1,
         "tags":null,
-        "variable_nombre":null,
-        "unidad_medida":null
+        "variable_nombre":"tiempo desplazamiento",
+        "unidad_medida":"minutos"
     },
     {
         "indice_pregunta":135,
@@ -8310,7 +8272,7 @@
         "num_seccion":null,
         "pregunta":107,
         "titulo":null,
-        "tipo":"category",
+        "tipo":"number",
         "etiqueta_orden":null,
         "enunciado_2":null,
         "etiqueta_enunciado":null,
@@ -8318,8 +8280,8 @@
         "grupo":null,
         "en_cubo":1,
         "tags":null,
-        "variable_nombre":null,
-        "unidad_medida":null
+        "variable_nombre":"necesidad de Metro",
+        "unidad_medida":"1 a 5"
     },
     {
         "indice_pregunta":140,
@@ -9249,8 +9211,8 @@
         "grupo":null,
         "en_cubo":1,
         "tags":null,
-        "variable_nombre":null,
-        "unidad_medida":null
+        "variable_nombre":"ingresos",
+        "unidad_medida":"COP\/mes"
     },
     {
         "indice_pregunta":160,

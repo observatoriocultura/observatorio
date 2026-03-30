@@ -100,6 +100,7 @@ onMounted(async () => {
   --color-primary-light: #f0ebf7;
   --color-secondary: #5c6972;
   --color-muted: #8c96a0;
+  --color-contrast: #ffca28;
   --radius-premium: 12px;
   --radius-pill: 50px;
   --shadow-premium: 0 4px 12px rgba(50, 32, 74, 0.05);
@@ -153,7 +154,11 @@ onMounted(async () => {
   min-height: 100vh;
   padding: 0.3rem 1.5em; /* Padding lateral de 1.5em como se solicitó */
   background-color: #ffffff;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family:
+    'Inter',
+    system-ui,
+    -apple-system,
+    sans-serif;
 }
 
 .icc-shell {
@@ -219,13 +224,23 @@ onMounted(async () => {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 600px) {

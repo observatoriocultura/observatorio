@@ -17,6 +17,14 @@ const props = defineProps({
     type: Array,
     default: () => [],
   },
+  kpiValue: {
+    type: Number,
+    default: null,
+  },
+  kpiLabel: {
+    type: String,
+    default: null,
+  },
 })
 
 const chartContainer = ref(null)
@@ -52,14 +60,17 @@ const initChart = () => {
       backgroundColor: 'transparent',
     },
     title: {
-      text: props.title || props.pregunta.enunciado_1,
+      text: props.title,
       style: {
         fontWeight: '800',
         color: '#32204a',
       },
     },
     subtitle: {
-      text: null,
+      text: props.pregunta?.enunciado_1 || '',
+      style: {
+        color: '#8c96a0',
+      },
     },
     credits: {
       enabled: false,
@@ -167,12 +178,82 @@ watch(
 </script>
 
 <template>
-  <div class="bar-chart-wrapper card-premium">
+  <div class="bar-chart-wrapper card-premium position-relative">
+    
+    <!-- KPI Overlay -->
+    <div v-if="kpiValue !== null && kpiLabel" class="kpi-overlay shadow-sm">
+      <div class="kpi-content text-center">
+        <div class="kpi-value-wrapper">
+          <span class="kpi-value">{{ Number(kpiValue).toFixed(1) }}</span>
+        </div>
+        <span class="kpi-label mt-1">{{ kpiLabel }}</span>
+      </div>
+      <div class="kpi-decoration"></div>
+    </div>
+
     <div ref="chartContainer" class="highcharts-container"></div>
   </div>
 </template>
 
 <style scoped>
+.position-relative {
+  position: relative;
+}
+
+.kpi-overlay {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  z-index: 10;
+  background: white;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  border: 1px solid rgba(238, 240, 242, 0.5);
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.kpi-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.kpi-label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #8c96a0;
+  display: block;
+}
+
+.kpi-value-wrapper {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.kpi-value {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #32204a;
+  line-height: 1.2;
+}
+
+.kpi-decoration {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(50, 32, 74, 0.03) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
 .bar-chart-wrapper {
   width: 100%;
   min-height: 400px;

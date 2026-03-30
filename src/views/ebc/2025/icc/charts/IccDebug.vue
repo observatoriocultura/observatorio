@@ -12,6 +12,10 @@ defineProps({
     type: Number,
     required: true,
   },
+  posiblesRespuestas: {
+    type: Array,
+    default: () => [],
+  },
 })
 </script>
 
@@ -51,6 +55,25 @@ defineProps({
                 : '-'
             }}
           </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h6 class="text-uppercase text-muted small fw-bold mb-3 mt-4">POSIBLES RESPUESTAS</h6>
+    <table class="table table-sm table-bordered small mb-4">
+      <thead class="bg-light">
+        <tr>
+          <th class="text-center">#</th>
+          <th>respuesta_v2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(respuesta, index) in posiblesRespuestas" :key="index">
+          <td class="text-center">{{ index + 1 }}</td>
+          <td>{{ respuesta }}</td>
+        </tr>
+        <tr v-if="posiblesRespuestas.length === 0">
+          <td colspan="2" class="text-center py-3 text-muted">No entries found</td>
         </tr>
       </tbody>
     </table>

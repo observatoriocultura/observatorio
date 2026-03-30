@@ -72,6 +72,7 @@ const initChart = () => {
     },
     yAxis: {
       min: 0,
+      reversedStacks: false,
       title: {
         text: 'Porcentaje (%)',
         style: { color: '#8c96a0' },
@@ -124,6 +125,7 @@ const initChart = () => {
       align: 'center',
       verticalAlign: 'top',
       layout: 'horizontal',
+      reversed: false,
       itemStyle: {
         color: '#5c6972',
         fontWeight: '600',

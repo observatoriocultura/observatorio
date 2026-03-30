@@ -15,7 +15,9 @@
         "indice_pregunta_bis":0,
         "num_seccion_bis":99,
         "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":1,
@@ -33,7 +35,9 @@
         "indice_pregunta_bis":1,
         "num_seccion_bis":1,
         "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":2,
@@ -51,7 +55,9 @@
         "indice_pregunta_bis":2,
         "num_seccion_bis":2,
         "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":2,
@@ -69,7 +75,9 @@
         "indice_pregunta_bis":3,
         "num_seccion_bis":2,
         "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":2,
@@ -87,7 +95,9 @@
         "indice_pregunta_bis":4,
         "num_seccion_bis":2,
         "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":2,
@@ -105,7 +115,9 @@
         "indice_pregunta_bis":5,
         "num_seccion_bis":2,
         "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":2,
@@ -123,7 +135,9 @@
         "indice_pregunta_bis":6,
         "num_seccion_bis":2,
         "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":2,
@@ -141,7 +155,9 @@
         "indice_pregunta_bis":7,
         "num_seccion_bis":2,
         "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":2,
@@ -159,7 +175,9 @@
         "indice_pregunta_bis":8,
         "num_seccion_bis":2,
         "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":1,
@@ -177,7 +195,9 @@
         "indice_pregunta_bis":9,
         "num_seccion_bis":1,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":1,
@@ -195,7 +215,9 @@
         "indice_pregunta_bis":10,
         "num_seccion_bis":1,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":2,
@@ -213,7 +235,9 @@
         "indice_pregunta_bis":11,
         "num_seccion_bis":2,
         "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":2,
@@ -231,7 +255,9 @@
         "indice_pregunta_bis":12,
         "num_seccion_bis":2,
         "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":2,
@@ -249,7 +275,9 @@
         "indice_pregunta_bis":13,
         "num_seccion_bis":2,
         "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":2,
@@ -267,7 +295,9 @@
         "indice_pregunta_bis":14,
         "num_seccion_bis":2,
         "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":2,
@@ -285,7 +315,9 @@
         "indice_pregunta_bis":15,
         "num_seccion_bis":2,
         "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":2,
@@ -303,7 +335,9 @@
         "indice_pregunta_bis":16,
         "num_seccion_bis":2,
         "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":2,
@@ -321,7 +355,9 @@
         "indice_pregunta_bis":17,
         "num_seccion_bis":2,
         "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":2,
@@ -339,7 +375,9 @@
         "indice_pregunta_bis":18,
         "num_seccion_bis":2,
         "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":2,
@@ -357,7 +395,9 @@
         "indice_pregunta_bis":19,
         "num_seccion_bis":2,
         "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":99,
@@ -375,7 +415,9 @@
         "indice_pregunta_bis":20,
         "num_seccion_bis":99,
         "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":1,
@@ -393,7 +435,9 @@
         "indice_pregunta_bis":21,
         "num_seccion_bis":1,
         "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":1,
@@ -411,7 +455,9 @@
         "indice_pregunta_bis":22,
         "num_seccion_bis":1,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":1,
@@ -429,7 +475,9 @@
         "indice_pregunta_bis":23,
         "num_seccion_bis":1,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":1,
@@ -447,7 +495,9 @@
         "indice_pregunta_bis":24,
         "num_seccion_bis":1,
         "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":1,
@@ -465,7 +515,9 @@
         "indice_pregunta_bis":25,
         "num_seccion_bis":1,
         "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":3,
@@ -483,7 +535,9 @@
         "indice_pregunta_bis":26,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":3,
@@ -501,7 +555,9 @@
         "indice_pregunta_bis":27,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":3,
@@ -519,7 +575,9 @@
         "indice_pregunta_bis":28,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"donut"
+        "dataviz_chart_type":"donut",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":3,
@@ -537,7 +595,9 @@
         "indice_pregunta_bis":29,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":3,
@@ -555,7 +615,9 @@
         "indice_pregunta_bis":30,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":3,
@@ -573,7 +635,9 @@
         "indice_pregunta_bis":31,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":3,
@@ -591,7 +655,9 @@
         "indice_pregunta_bis":32,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"donut"
+        "dataviz_chart_type":"donut",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":3,
@@ -609,7 +675,9 @@
         "indice_pregunta_bis":33,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"donut"
+        "dataviz_chart_type":"donut",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":3,
@@ -627,7 +695,9 @@
         "indice_pregunta_bis":34,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":3,
@@ -645,7 +715,9 @@
         "indice_pregunta_bis":35,
         "num_seccion_bis":3,
         "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":4,
@@ -663,7 +735,9 @@
         "indice_pregunta_bis":36,
         "num_seccion_bis":4,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":4,
@@ -681,7 +755,9 @@
         "indice_pregunta_bis":37,
         "num_seccion_bis":4,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":4,
@@ -699,7 +775,9 @@
         "indice_pregunta_bis":38,
         "num_seccion_bis":4,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":5,
@@ -717,7 +795,9 @@
         "indice_pregunta_bis":39,
         "num_seccion_bis":5,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -735,7 +815,9 @@
         "indice_pregunta_bis":40,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -753,7 +835,9 @@
         "indice_pregunta_bis":41,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -763,15 +847,17 @@
         "rol":null,
         "codigo":null,
         "etiqueta_1":16,
-        "enunciado_1":"¿Usted en general, se siente mucho, poco o nada motivado para votar por…? Aplica para mayores de 18 años.",
-        "instruccion":null,
+        "enunciado_1":"¿Usted en general, se siente mucho, poco o nada motivado para votar por…?",
+        "instruccion":"Aplica para mayores de 18 años.",
         "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":10,
         "indice_pregunta_bis":42,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -789,7 +875,9 @@
         "indice_pregunta_bis":43,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -807,7 +895,9 @@
         "indice_pregunta_bis":44,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -825,7 +915,9 @@
         "indice_pregunta_bis":45,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -843,12 +935,14 @@
         "indice_pregunta_bis":46,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
         "indice_pregunta":47,
-        "nombre":"🚧 En construcción",
+        "nombre":null,
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -861,7 +955,9 @@
         "indice_pregunta_bis":47,
         "num_seccion_bis":6,
         "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":6,
@@ -879,7 +975,9 @@
         "indice_pregunta_bis":48,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -897,7 +995,9 @@
         "indice_pregunta_bis":49,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -915,7 +1015,9 @@
         "indice_pregunta_bis":50,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -933,7 +1035,9 @@
         "indice_pregunta_bis":51,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -951,7 +1055,9 @@
         "indice_pregunta_bis":52,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -969,7 +1075,9 @@
         "indice_pregunta_bis":53,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -987,7 +1095,9 @@
         "indice_pregunta_bis":54,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1005,7 +1115,9 @@
         "indice_pregunta_bis":55,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1023,7 +1135,9 @@
         "indice_pregunta_bis":56,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1041,7 +1155,9 @@
         "indice_pregunta_bis":57,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1059,7 +1175,9 @@
         "indice_pregunta_bis":58,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1077,7 +1195,9 @@
         "indice_pregunta_bis":59,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1095,7 +1215,9 @@
         "indice_pregunta_bis":60,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1113,7 +1235,9 @@
         "indice_pregunta_bis":61,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1131,7 +1255,9 @@
         "indice_pregunta_bis":62,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1149,7 +1275,9 @@
         "indice_pregunta_bis":63,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1167,7 +1295,9 @@
         "indice_pregunta_bis":64,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1185,7 +1315,9 @@
         "indice_pregunta_bis":65,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1203,7 +1335,9 @@
         "indice_pregunta_bis":66,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1221,7 +1355,9 @@
         "indice_pregunta_bis":67,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1239,12 +1375,14 @@
         "indice_pregunta_bis":68,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
         "indice_pregunta":69,
-        "nombre":"🚧 En construcción",
+        "nombre":"Factores que motivan la corrupción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1257,12 +1395,14 @@
         "indice_pregunta_bis":69,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
         "indice_pregunta":70,
-        "nombre":"🚧 En construcción",
+        "nombre":"Efectividad distrital contra la corrupción",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1275,12 +1415,14 @@
         "indice_pregunta_bis":70,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
         "indice_pregunta":71,
-        "nombre":"🚧 En construcción",
+        "nombre":"Conocimiento de canales distritales",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1293,12 +1435,14 @@
         "indice_pregunta_bis":71,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"donut",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
         "indice_pregunta":72,
-        "nombre":"🚧 En construcción",
+        "nombre":"Uso de canales distritales",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1311,12 +1455,14 @@
         "indice_pregunta_bis":72,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"donut",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
         "indice_pregunta":73,
-        "nombre":"🚧 En construcción",
+        "nombre":"Recomendación de canales distritales",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1329,12 +1475,14 @@
         "indice_pregunta_bis":73,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"donut",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
         "indice_pregunta":74,
-        "nombre":"🚧 En construcción",
+        "nombre":"Acciones para defender derechos",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1347,12 +1495,14 @@
         "indice_pregunta_bis":74,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
         "indice_pregunta":75,
-        "nombre":"🚧 En construcción",
+        "nombre":"Derechos vulnerados en adultos",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1365,7 +1515,9 @@
         "indice_pregunta_bis":75,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1382,13 +1534,15 @@
         "cantidad_variables":0,
         "indice_pregunta_bis":76,
         "num_seccion_bis":6,
-        "dataviz_display":1,
-        "dataviz_chart_type":null
+        "dataviz_display":0,
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":6,
         "indice_pregunta":77,
-        "nombre":"🚧 En construcción",
+        "nombre":"Derechos vulnerados en niños y niñas",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1401,7 +1555,9 @@
         "indice_pregunta_bis":77,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1418,13 +1574,15 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":78,
         "num_seccion_bis":6,
-        "dataviz_display":1,
-        "dataviz_chart_type":null
+        "dataviz_display":0,
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":7,
         "indice_pregunta":79,
-        "nombre":"🚧 En construcción",
+        "nombre":"Importancia de ayudar a otros",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1437,12 +1595,14 @@
         "indice_pregunta_bis":79,
         "num_seccion_bis":7,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":7,
         "indice_pregunta":80,
-        "nombre":"🚧 En construcción",
+        "nombre":"Confianza en personas cercanas",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1455,12 +1615,14 @@
         "indice_pregunta_bis":80,
         "num_seccion_bis":7,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":7,
         "indice_pregunta":81,
-        "nombre":"🚧 En construcción",
+        "nombre":"Libertad de expresión con desconocidos",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1473,12 +1635,14 @@
         "indice_pregunta_bis":81,
         "num_seccion_bis":7,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":7,
         "indice_pregunta":82,
-        "nombre":"🚧 En construcción",
+        "nombre":"Situaciones de conflicto entre vecinos",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1491,12 +1655,14 @@
         "indice_pregunta_bis":82,
         "num_seccion_bis":7,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":7,
         "indice_pregunta":83,
-        "nombre":"🚧 En construcción",
+        "nombre":"Actitud ante inseguridad y armas",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1509,12 +1675,14 @@
         "indice_pregunta_bis":83,
         "num_seccion_bis":7,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"donut",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
         "indice_pregunta":84,
-        "nombre":"🚧 En construcción",
+        "nombre":"Orgullo de vivir en Bogotá",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1527,12 +1695,14 @@
         "indice_pregunta_bis":84,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"donut",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
         "indice_pregunta":85,
-        "nombre":"🚧 En construcción",
+        "nombre":"Percepción de orgullo ciudadano",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1545,12 +1715,14 @@
         "indice_pregunta_bis":85,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"donut",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
         "indice_pregunta":86,
-        "nombre":"🚧 En construcción",
+        "nombre":"Orgullo por aspectos de la ciudad",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1563,12 +1735,14 @@
         "indice_pregunta_bis":86,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
         "indice_pregunta":87,
-        "nombre":"🚧 En construcción",
+        "nombre":"Recomendación de vivir en Bogotá",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1581,7 +1755,9 @@
         "indice_pregunta_bis":87,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"donut",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
@@ -1599,7 +1775,9 @@
         "indice_pregunta_bis":88,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
@@ -1617,7 +1795,9 @@
         "indice_pregunta_bis":89,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
@@ -1635,7 +1815,9 @@
         "indice_pregunta_bis":90,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
@@ -1653,7 +1835,9 @@
         "indice_pregunta_bis":91,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
@@ -1671,7 +1855,9 @@
         "indice_pregunta_bis":92,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
@@ -1689,12 +1875,14 @@
         "indice_pregunta_bis":93,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
         "indice_pregunta":94,
-        "nombre":"🚧 En construcción",
+        "nombre":"Situaciones presenciadas en el espacio público",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1707,7 +1895,9 @@
         "indice_pregunta_bis":94,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
@@ -1725,7 +1915,9 @@
         "indice_pregunta_bis":95,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
@@ -1743,7 +1935,9 @@
         "indice_pregunta_bis":96,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"donut",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
@@ -1761,7 +1955,9 @@
         "indice_pregunta_bis":97,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
@@ -1779,7 +1975,9 @@
         "indice_pregunta_bis":98,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
@@ -1793,34 +1991,38 @@
         "instruccion":null,
         "url_imagen":null,
         "palabras_clave":null,
-        "cantidad_variables":2,
+        "cantidad_variables":1,
         "indice_pregunta_bis":99,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
         "indice_pregunta":100,
-        "nombre":"🚧 En construcción",
+        "nombre":null,
         "descripcion":null,
         "rol":null,
         "codigo":null,
-        "etiqueta_1":70,
+        "etiqueta_1":"70.1",
         "enunciado_1":"Cuál ?",
         "instruccion":null,
         "url_imagen":null,
         "palabras_clave":null,
-        "cantidad_variables":0,
+        "cantidad_variables":1,
         "indice_pregunta_bis":100,
         "num_seccion_bis":8,
-        "dataviz_display":1,
-        "dataviz_chart_type":null
+        "dataviz_display":0,
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":8,
         "indice_pregunta":101,
-        "nombre":"🚧 En construcción",
+        "nombre":"Características de parques cercanos",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1833,12 +2035,14 @@
         "indice_pregunta_bis":101,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
         "indice_pregunta":102,
-        "nombre":"🚧 En construcción",
+        "nombre":"Situaciones en el parque más cercano",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1851,12 +2055,14 @@
         "indice_pregunta_bis":102,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
         "indice_pregunta":103,
-        "nombre":"🚧 En construcción",
+        "nombre":"Inseguridad por situaciones en el barrio",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1869,12 +2075,14 @@
         "indice_pregunta_bis":103,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"donut",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
         "indice_pregunta":104,
-        "nombre":"🚧 En construcción",
+        "nombre":"Calificación de seguridad en la ciudad",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1887,12 +2095,14 @@
         "indice_pregunta_bis":104,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
         "indice_pregunta":105,
-        "nombre":"🚧 En construcción",
+        "nombre":"Razón principal de inseguridad",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1905,12 +2115,14 @@
         "indice_pregunta_bis":105,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
         "indice_pregunta":106,
-        "nombre":"🚧 En construcción",
+        "nombre":null,
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1922,13 +2134,15 @@
         "cantidad_variables":0,
         "indice_pregunta_bis":106,
         "num_seccion_bis":8,
-        "dataviz_display":1,
-        "dataviz_chart_type":null
+        "dataviz_display":0,
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":8,
         "indice_pregunta":107,
-        "nombre":"🚧 En construcción",
+        "nombre":"Razón principal de seguridad",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1941,12 +2155,14 @@
         "indice_pregunta_bis":107,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
         "indice_pregunta":108,
-        "nombre":"🚧 En construcción",
+        "nombre":null,
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1958,13 +2174,15 @@
         "cantidad_variables":0,
         "indice_pregunta_bis":108,
         "num_seccion_bis":8,
-        "dataviz_display":1,
-        "dataviz_chart_type":null
+        "dataviz_display":0,
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":8,
         "indice_pregunta":109,
-        "nombre":"🚧 En construcción",
+        "nombre":"Percepción de seguridad vs año anterior",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1977,12 +2195,14 @@
         "indice_pregunta_bis":109,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
         "indice_pregunta":110,
-        "nombre":"🚧 En construcción",
+        "nombre":"Separación de residuos en el hogar",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -1995,12 +2215,14 @@
         "indice_pregunta_bis":110,
         "num_seccion_bis":9,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
         "indice_pregunta":111,
-        "nombre":"🚧 En construcción",
+        "nombre":"Estimación de vecinos que reciclan",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2013,12 +2235,14 @@
         "indice_pregunta_bis":111,
         "num_seccion_bis":9,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
         "indice_pregunta":112,
-        "nombre":"🚧 En construcción",
+        "nombre":"Percepción de reciclaje en Bogotá",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2031,12 +2255,14 @@
         "indice_pregunta_bis":112,
         "num_seccion_bis":9,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"donut",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
         "indice_pregunta":113,
-        "nombre":"🚧 En construcción",
+        "nombre":"Justificación para arrojar residuos",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2049,12 +2275,14 @@
         "indice_pregunta_bis":113,
         "num_seccion_bis":9,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
         "indice_pregunta":114,
-        "nombre":"🚧 En construcción",
+        "nombre":"Reutilización de materiales",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2067,12 +2295,14 @@
         "indice_pregunta_bis":114,
         "num_seccion_bis":9,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"donut",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
         "indice_pregunta":115,
-        "nombre":"🚧 En construcción",
+        "nombre":"Ruta de reciclaje en el barrio",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2085,12 +2315,14 @@
         "indice_pregunta_bis":115,
         "num_seccion_bis":9,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"donut",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
         "indice_pregunta":116,
-        "nombre":"🚧 En construcción",
+        "nombre":"Clasificación de residuos por bolsas",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2103,12 +2335,14 @@
         "indice_pregunta_bis":116,
         "num_seccion_bis":9,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
         "indice_pregunta":117,
-        "nombre":"🚧 En construcción",
+        "nombre":"Limpieza de residuos aprovechables",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2121,12 +2355,14 @@
         "indice_pregunta_bis":117,
         "num_seccion_bis":9,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"donut",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
         "indice_pregunta":118,
-        "nombre":"🚧 En construcción",
+        "nombre":"Conocimiento del compostaje",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2139,30 +2375,34 @@
         "indice_pregunta_bis":118,
         "num_seccion_bis":9,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"donut",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
         "indice_pregunta":119,
-        "nombre":"🚧 En construcción",
+        "nombre":"Participación en proyectos de compostaje",
         "descripcion":null,
         "rol":null,
         "codigo":null,
         "etiqueta_1":87,
-        "enunciado_1":"¿Usted se asegura de que los residuos organicos que genera en su hogar, sean aprovechados en proyectos de compostaje? Por ejemplo proyectos de compostaje comunitario. Compostaje: El compostaje es un proceso biológico aerobio (con presencia de oxígeno) que, bajo condiciones controladas, transforma los residuos orgánicos degradables en un material llamado compost, que se puede utilizar como abono orgánico.",
-        "instruccion":null,
+        "enunciado_1":"¿Usted se asegura de que los residuos organicos que genera en su hogar, sean aprovechados en proyectos de compostaje? Por ejemplo proyectos de compostaje comunitario.",
+        "instruccion":"Compostaje: El compostaje es un proceso biológico aerobio (con presencia de oxígeno) que, bajo condiciones controladas, transforma los residuos orgánicos degradables en un material llamado compost, que se puede utilizar como abono orgánico.",
         "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":119,
         "num_seccion_bis":9,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"donut",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
         "indice_pregunta":120,
-        "nombre":"🚧 En construcción",
+        "nombre":"Ubicación del proyecto de compostaje",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2175,12 +2415,14 @@
         "indice_pregunta_bis":120,
         "num_seccion_bis":9,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
         "indice_pregunta":121,
-        "nombre":"🚧 En construcción",
+        "nombre":"Criterio de compra en supermercado",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2193,12 +2435,14 @@
         "indice_pregunta_bis":121,
         "num_seccion_bis":9,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
         "indice_pregunta":122,
-        "nombre":"🚧 En construcción",
+        "nombre":"Comportamientos ambientales en el barrio",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2211,12 +2455,14 @@
         "indice_pregunta_bis":122,
         "num_seccion_bis":9,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
         "indice_pregunta":123,
-        "nombre":"🚧 En construcción",
+        "nombre":"Reacción ante animal silvestre en peligro",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2229,12 +2475,14 @@
         "indice_pregunta_bis":123,
         "num_seccion_bis":9,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
         "indice_pregunta":124,
-        "nombre":"🚧 En construcción",
+        "nombre":"Preocupación por calidad del aire",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2247,12 +2495,14 @@
         "indice_pregunta_bis":124,
         "num_seccion_bis":9,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
         "indice_pregunta":125,
-        "nombre":"🚧 En construcción",
+        "nombre":"Capacidad personal de mejorar el aire",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2265,12 +2515,14 @@
         "indice_pregunta_bis":125,
         "num_seccion_bis":9,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
         "indice_pregunta":126,
-        "nombre":"🚧 En construcción",
+        "nombre":"Importancia del ambiente para ciudadanos",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2283,12 +2535,14 @@
         "indice_pregunta_bis":126,
         "num_seccion_bis":9,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
         "indice_pregunta":127,
-        "nombre":"🚧 En construcción",
+        "nombre":"Acciones que afectan fuentes de agua",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2301,12 +2555,14 @@
         "indice_pregunta_bis":127,
         "num_seccion_bis":9,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
         "indice_pregunta":128,
-        "nombre":"🚧 En construcción",
+        "nombre":"Estado de los cerros orientales",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2319,12 +2575,14 @@
         "indice_pregunta_bis":128,
         "num_seccion_bis":9,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
         "indice_pregunta":129,
-        "nombre":"🚧 En construcción",
+        "nombre":"Visita a lugares naturales de Bogotá",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2337,12 +2595,14 @@
         "indice_pregunta_bis":129,
         "num_seccion_bis":9,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
         "indice_pregunta":130,
-        "nombre":"🚧 En construcción",
+        "nombre":"Entornos naturales en el barrio",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2355,12 +2615,14 @@
         "indice_pregunta_bis":130,
         "num_seccion_bis":9,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
         "indice_pregunta":131,
-        "nombre":"🚧 En construcción",
+        "nombre":"Estado de entornos naturales del barrio",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2373,12 +2635,14 @@
         "indice_pregunta_bis":131,
         "num_seccion_bis":9,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":10,
         "indice_pregunta":132,
-        "nombre":"🚧 En construcción",
+        "nombre":"Medios de transporte habituales",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2391,12 +2655,14 @@
         "indice_pregunta_bis":132,
         "num_seccion_bis":10,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":10,
         "indice_pregunta":133,
-        "nombre":"🚧 En construcción",
+        "nombre":"Satisfacción con movilidad habitual",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2409,12 +2675,14 @@
         "indice_pregunta_bis":133,
         "num_seccion_bis":10,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":10,
         "indice_pregunta":134,
-        "nombre":"🚧 En construcción",
+        "nombre":"Tiempo de desplazamiento habitual",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2427,12 +2695,14 @@
         "indice_pregunta_bis":134,
         "num_seccion_bis":10,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":10,
         "indice_pregunta":135,
-        "nombre":"🚧 En construcción",
+        "nombre":"Situaciones viales presenciadas",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2445,12 +2715,14 @@
         "indice_pregunta_bis":135,
         "num_seccion_bis":10,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":10,
         "indice_pregunta":136,
-        "nombre":"🚧 En construcción",
+        "nombre":"Justificación de infracciones de tránsito",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2463,12 +2735,14 @@
         "indice_pregunta_bis":136,
         "num_seccion_bis":10,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":10,
         "indice_pregunta":137,
-        "nombre":"🚧 En construcción",
+        "nombre":"Opinión sobre la bicicleta en Bogotá",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2481,12 +2755,14 @@
         "indice_pregunta_bis":137,
         "num_seccion_bis":10,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":10,
         "indice_pregunta":138,
-        "nombre":"🚧 En construcción",
+        "nombre":"Orgullo por el Metro de Bogotá",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2499,12 +2775,14 @@
         "indice_pregunta_bis":138,
         "num_seccion_bis":10,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":10,
         "indice_pregunta":139,
-        "nombre":"🚧 En construcción",
+        "nombre":"Percepción de necesidad del Metro",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2517,12 +2795,14 @@
         "indice_pregunta_bis":139,
         "num_seccion_bis":10,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":10,
         "indice_pregunta":140,
-        "nombre":"🚧 En construcción",
+        "nombre":"Disposición a usar el Metro",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2535,12 +2815,14 @@
         "indice_pregunta_bis":140,
         "num_seccion_bis":10,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"donut",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":10,
         "indice_pregunta":141,
-        "nombre":"🚧 En construcción",
+        "nombre":"Aporte esperado del Metro",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2553,12 +2835,14 @@
         "indice_pregunta_bis":141,
         "num_seccion_bis":10,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":11,
         "indice_pregunta":142,
-        "nombre":"🚧 En construcción",
+        "nombre":"Perfil ciudadano de Bogotá en 2038",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2571,7 +2855,9 @@
         "indice_pregunta_bis":142,
         "num_seccion_bis":11,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":1,
@@ -2589,7 +2875,9 @@
         "indice_pregunta_bis":143,
         "num_seccion_bis":1,
         "dataviz_display":1,
-        "dataviz_chart_type":"donut"
+        "dataviz_chart_type":"donut",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":1,
@@ -2607,7 +2895,9 @@
         "indice_pregunta_bis":144,
         "num_seccion_bis":1,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"donut",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":1,
@@ -2625,7 +2915,9 @@
         "indice_pregunta_bis":145,
         "num_seccion_bis":1,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":1,
@@ -2643,7 +2935,9 @@
         "indice_pregunta_bis":146,
         "num_seccion_bis":1,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":1,
@@ -2661,7 +2955,9 @@
         "indice_pregunta_bis":147,
         "num_seccion_bis":1,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"donut",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":1,
@@ -2679,7 +2975,9 @@
         "indice_pregunta_bis":148,
         "num_seccion_bis":1,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":1,
@@ -2697,7 +2995,9 @@
         "indice_pregunta_bis":149,
         "num_seccion_bis":1,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":1,
@@ -2715,7 +3015,9 @@
         "indice_pregunta_bis":150,
         "num_seccion_bis":1,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":1,
@@ -2733,7 +3035,9 @@
         "indice_pregunta_bis":151,
         "num_seccion_bis":1,
         "dataviz_display":0,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":null
     },
     {
         "num_seccion":1,
@@ -2751,7 +3055,9 @@
         "indice_pregunta_bis":152,
         "num_seccion_bis":1,
         "dataviz_display":0,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":null
     },
     {
         "num_seccion":1,
@@ -2769,7 +3075,9 @@
         "indice_pregunta_bis":153,
         "num_seccion_bis":1,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":1,
@@ -2787,7 +3095,9 @@
         "indice_pregunta_bis":154,
         "num_seccion_bis":1,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":1,
@@ -2805,30 +3115,34 @@
         "indice_pregunta_bis":155,
         "num_seccion_bis":1,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple"
+        "dataviz_chart_type":"bar-multiple",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":1,
         "indice_pregunta":156,
-        "nombre":null,
+        "nombre":"Sobre sexualidad",
         "descripcion":null,
         "rol":null,
         "codigo":null,
         "etiqueta_1":"D12",
-        "enunciado_1":"Por último, ¿estaría dispuesto(a) a responder una pregunta sobre su sexualidad? Si NO está dispuesto(a), termine la encuesta. Si dice estar dispuesto(a) a responder, por favor pásele el formulario al\/la encuestado(a) y que sea él\/ella quien marque las opciones libremente.",
-        "instruccion":null,
+        "enunciado_1":"Por último, ¿estaría dispuesto(a) a responder una pregunta sobre su sexualidad? Si NO está dispuesto(a), termine la encuesta.",
+        "instruccion":"Si dice estar dispuesto(a) a responder, por favor pásele el formulario al\/la encuestado(a) y que sea él\/ella quien marque las opciones libremente.",
         "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":12,
         "indice_pregunta_bis":156,
         "num_seccion_bis":1,
         "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":1,
         "indice_pregunta":157,
-        "nombre":null,
+        "nombre":"Autoidentificación",
         "descripcion":null,
         "rol":null,
         "codigo":null,
@@ -2841,7 +3155,9 @@
         "indice_pregunta_bis":157,
         "num_seccion_bis":1,
         "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":1,
@@ -2859,7 +3175,9 @@
         "indice_pregunta_bis":158,
         "num_seccion_bis":1,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"donut",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":1,
@@ -2872,12 +3190,14 @@
         "enunciado_1":"Su nivel de ingreso se encuentra entre:",
         "instruccion":null,
         "url_imagen":null,
-        "palabras_clave":null,
+        "palabras_clave":"economía, finanzas, dinero",
         "cantidad_variables":1,
         "indice_pregunta_bis":159,
         "num_seccion_bis":1,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar"
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":1,
@@ -2895,7 +3215,9 @@
         "indice_pregunta_bis":160,
         "num_seccion_bis":1,
         "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":1,
@@ -2913,6 +3235,8 @@
         "indice_pregunta_bis":161,
         "num_seccion_bis":1,
         "dataviz_display":0,
-        "dataviz_chart_type":null
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     }
 ]

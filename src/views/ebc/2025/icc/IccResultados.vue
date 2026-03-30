@@ -88,7 +88,11 @@ const calcularPromedioPonderado = (listaRespuestas) => {
   return sumaFactores > 0 ? sumaPonderada / sumaFactores : null
 }
 
-/** Etiquetas del eje X para los gráficos: usa enunciado_2 o, en su defecto, el código de variable */
+/**
+ * Etiquetas del eje X para los gráficos: usa enunciado_2 o, en su defecto, el código de variable
+ * Las categorías (para dataviz) son las variables en el modelo de datos
+ * 2026-03-29
+ */
 const categorias = computed(() => {
   return variablesFiltradas.value.map((v) => v.enunciado_2 || v.codigo_variable)
 })
@@ -125,10 +129,35 @@ const sumatoriaFactor = computed(() => {
   return Math.max(...variablesFiltradas.value.map((v) => v.suma_factor), 0)
 })
 
-/** Valores únicos de respuesta_v2 presentes en la pregunta activa, ordenados numericamente. Definen las series del gráfico bar-multiple. */
+/** Valores únicos de respuesta_v2 presentes en la pregunta activa, ordenados según dataviz_order_type. Definen las series del gráfico bar-multiple. */
 const posiblesRespuestas = computed(() => {
-  const valores = respuestasPregunta.value.map((r) => r.respuesta_v2)
-  return [...new Set(valores)].sort((a, b) => a - b)
+  const valores = [...new Set(respuestasPregunta.value.map((r) => r.respuesta_v2))]
+  const orderType = preguntaSeleccionada.value?.dataviz_order_type
+  console.log('orderType', orderType)
+
+  if (orderType === 'frecuency') {
+    // Calcular el peso total de cada respuesta para ordenar por frecuencia descendente
+    const pesos = {}
+    respuestasPregunta.value.forEach((r) => {
+      pesos[r.respuesta_v2] = (pesos[r.respuesta_v2] || 0) + (r.suma_factor || 0)
+    })
+    return valores.sort((a, b) => (pesos[b] || 0) - (pesos[a] || 0))
+  }
+
+  if (orderType === 'answer') {
+    // Ordenar alfabéticamente (tratando de detectar números)
+    return valores.sort((a, b) =>
+      String(a).localeCompare(String(b), undefined, { numeric: true, sensitivity: 'base' }),
+    )
+  }
+
+  // Orden por defecto: numérico ascendente
+  return valores.sort((a, b) => {
+    const numA = parseFloat(a)
+    const numB = parseFloat(b)
+    if (!isNaN(numA) && !isNaN(numB)) return numA - numB
+    return String(a).localeCompare(String(b))
+  })
 })
 
 /** Etiqueta de filtros activos para añadir al título de los gráficos */
@@ -496,11 +525,7 @@ watch(contentSection, async (nuevaSeccion) => {
                   title="Filtra los resultados por rango de edad"
                 >
                   <option :value="null">Todos los grupos de edad</option>
-                  <option
-                    v-for="grupo in GRUPOS_EDAD"
-                    :key="grupo.id"
-                    :value="grupo.id"
-                  >
+                  <option v-for="grupo in GRUPOS_EDAD" :key="grupo.id" :value="grupo.id">
                     {{ grupo.nombre }}
                   </option>
                 </select>
@@ -523,24 +548,6 @@ watch(contentSection, async (nuevaSeccion) => {
 
           <!-- MOSTRAR GRÁFICO SEGÚN EL TIPO DE PREGUNTA -->
           <div v-if="contentSection === 'chart'" class="mt-4">
-            <!-- KPI de Promedio Ponderado -->
-            <div
-              v-if="variablesFiltradas.length > 0 && variablesFiltradas[0].unidad_medida"
-              class="kpi-dashboard mb-4"
-            >
-              <div class="kpi-card shadow-sm">
-                <div class="kpi-content">
-                  <div class="kpi-question-name mb-1">{{ tituloConFiltro }}</div>
-                  <div class="kpi-value-wrapper">
-                    <span class="kpi-value">{{
-                      variablesFiltradas[0].promedio_ponderado?.toFixed(1) || '0.0'
-                    }}</span>
-                  </div>
-                  <span class="kpi-label mt-1">{{ variablesFiltradas[0].unidad_medida }}</span>
-                </div>
-                <div class="kpi-decoration"></div>
-              </div>
-            </div>
 
             <div class="graph-container card-premium overflow-hidden">
               <div class="card-body p-0">
@@ -560,6 +567,9 @@ watch(contentSection, async (nuevaSeccion) => {
                   :title="tituloConFiltro"
                   :pregunta="preguntaSeleccionada"
                   :respuestas="respuestasPregunta"
+                  :posiblesRespuestas="posiblesRespuestas"
+                  :kpi-value="variablesFiltradas.length > 0 ? variablesFiltradas[0].promedio_ponderado : null"
+                  :kpi-label="variablesFiltradas.length > 0 ? variablesFiltradas[0].unidad_medida : null"
                 />
 
                 <!-- TIPO DE GRÁFICO DONUT -->
@@ -568,6 +578,7 @@ watch(contentSection, async (nuevaSeccion) => {
                   :title="tituloConFiltro"
                   :pregunta="preguntaSeleccionada"
                   :respuestas="respuestasPregunta"
+                  :posiblesRespuestas="posiblesRespuestas"
                 />
 
                 <!-- PARA TIPOS DE GRÁFICOS AÚN NO IMPEMENTADOS -->
@@ -590,6 +601,7 @@ watch(contentSection, async (nuevaSeccion) => {
               :variablesFiltradas="variablesFiltradas"
               :respuestasPregunta="respuestasPregunta"
               :sumatoriaFactor="sumatoriaFactor"
+              :posiblesRespuestas="posiblesRespuestas"
             />
           </div>
 
@@ -966,7 +978,7 @@ watch(contentSection, async (nuevaSeccion) => {
 .nav-tabs .nav-link.active {
   color: var(--color-primary) !important;
   font-weight: 800 !important;
-  border-bottom: 2px solid #FFCA28 !important;
+  border-bottom: 2px solid #ffca28 !important;
   border-radius: 0;
 }
 </style>
