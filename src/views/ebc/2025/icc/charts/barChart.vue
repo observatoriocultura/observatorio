@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted, onUnmounted, ref, watch } from 'vue'
 import Highcharts from 'highcharts'
+import { getPaletaColor } from '../constants.js'
 
 const props = defineProps({
   title: {
@@ -11,6 +12,7 @@ const props = defineProps({
     type: Object,
     default: () => ({
       enunciado_1: 'Cargando...',
+      dataviz_palette: null,
     }),
   },
   respuestas: {
@@ -34,6 +36,11 @@ const initChart = () => {
   if (chartInstance) {
     chartInstance.destroy()
   }
+
+  // Obtener la paleta de colores según la configuración de la pregunta
+  const currentPalette = getPaletaColor(props.pregunta?.dataviz_palette)
+  // Usar el primer color de la paleta para todo el gráfico
+  const seriesColor = currentPalette[0] || '#5d4294'
 
   // Extraer las categorías y los datos agrupados por respuesta_v2
   const uniqueCategories = [...new Set(props.respuestas.map((d) => d.respuesta_v2))]
@@ -69,7 +76,9 @@ const initChart = () => {
     subtitle: {
       text: props.pregunta?.enunciado_1 || '',
       style: {
-        color: '#8c96a0',
+        color: '#212529',
+        fontSize: '15px',
+        fontWeight: '500',
       },
     },
     credits: {
@@ -111,7 +120,7 @@ const initChart = () => {
     },
     plotOptions: {
       bar: {
-        colorByPoint: false, // Desactivado para usar el color único de la serie
+        colorByPoint: false, // Desactivado: todas las barras del mismo color
         borderRadius: 4,
         dataLabels: {
           enabled: true,
@@ -124,12 +133,12 @@ const initChart = () => {
       },
     },
     legend: {
-      enabled: false, // En un gráfico de barras simple con una serie, solemos ocultar la leyenda
+      enabled: false,
     },
     series: [
       {
         name: 'Porcentaje',
-        color: '#D7C9E9',
+        color: seriesColor,
         data: data,
       },
     ],
@@ -255,6 +264,7 @@ watch(
 }
 
 .bar-chart-wrapper {
+  font-family: 'Inter', sans-serif;
   width: 100%;
   min-height: 400px;
   padding: 1rem;

@@ -3,6 +3,14 @@ import { RouterLink } from 'vue-router'
 
 const projects = [
   {
+    title: 'Lectura, Escritura y Oralidad (LEO) 2025',
+    excerpt:
+      'Estudio de percepciones y expectativas ciudadanas sobre lectura, escritura y oralidad en Bogotá.',
+    link: '/ebc/lectura-escritura-y-oralidad-2025',
+    tag: 'Análisis 2026',
+    date: 'Abril 2026',
+  },
+  {
     title: 'Análisis de reel sobre cultura ciudadana en el metro',
     excerpt:
       'Estudio de percepciones y expectativas ciudadanas sobre convivencia y normas en el futuro sistema de transporte masivo de la ciudad.',

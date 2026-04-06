@@ -151,9 +151,9 @@ onUnmounted(() => {
     <div v-if="loading" class="text-center p-5">
       <div class="spinner-border text-primary" role="status"></div>
     </div>
-    
+
     <div v-else-if="tablaAgrupada.length === 0" class="alert alert-light border m-4 text-center">
-       No hay datos para graficar con la selección actual.
+      No hay datos para graficar con la selección actual.
     </div>
 
     <section v-show="!loading && tablaAgrupada.length > 0" class="section-chart">

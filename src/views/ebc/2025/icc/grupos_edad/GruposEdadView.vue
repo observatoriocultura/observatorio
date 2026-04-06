@@ -3,7 +3,7 @@ import { ref, watch, computed, onMounted } from 'vue'
 import * as bootstrap from 'bootstrap'
 import GrupoEdadChart from './GrupoEdadChart.vue'
 import GrupoEdadTable from './GrupoEdadTable.vue'
-import { GRUPOS_EDAD as gruposEdad } from '../iccConstants'
+import { GRUPOS_EDAD as gruposEdad } from '../constants'
 
 const props = defineProps({
   preguntaSeleccionada: { type: Object, default: () => ({}) },

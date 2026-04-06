@@ -6,7 +6,8 @@ import ProyectosView from '../views/ProyectosView.vue'
 import PlanCultura from '../views/2025/PlanCultura.vue'
 import ContenidosView from '../views/ContenidosView.vue'
 import ArticleView from '../views/ArticleView.vue'
-import IccLayout2025 from '../views/ebc/2025/icc/IccLayout.vue'
+import AdvLayout2025 from '../views/ebc/2025/icc/AdvLayout.vue'
+import LeoLayout2025 from '../views/ebc/2025/leo/AdvLayout.vue'
 import InvestigacionesView from '../views/InvestigacionesView.vue'
 
 const routes = [
@@ -32,8 +33,14 @@ const routes = [
   {
     path: '/ebc/encuesta-cultura-ciudadana-2025',
     name: 'Encuesta Cultura Ciudadana 2025',
-    component: IccLayout2025,
+    component: AdvLayout2025,
     meta: { title: 'Encuesta Cultura Ciudadana 2025' },
+  },
+  {
+    path: '/ebc/lectura-escritura-y-oralidad-2025',
+    name: 'Lectura Escritura y Oralidad 2025',
+    component: LeoLayout2025,
+    meta: { title: 'Lectura Escritura y Oralidad 2025' },
   },
   {
     path: '/investigaciones',

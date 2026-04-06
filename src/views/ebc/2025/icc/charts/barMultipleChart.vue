@@ -5,7 +5,7 @@ import Highcharts from 'highcharts'
 // import Exporting from 'highcharts/modules/exporting';
 // Exporting(Highcharts);
 
-const colorsPalette = ['#003366', '#00AEEF', '#F9A825', '#D32F2F', '#388E3C', '#7B1FA2']
+import { getPaletaColor } from '../constants.js'
 
 const props = defineProps({
   title: {
@@ -15,6 +15,12 @@ const props = defineProps({
   subtitle: {
     type: String,
     default: 'Fuente: Observatorio de Cultura',
+  },
+  pregunta: {
+    type: Object,
+    default: () => ({
+      dataviz_palette: null,
+    }),
   },
   type: {
     type: String,
@@ -38,6 +44,9 @@ const initChart = () => {
     chartInstance.destroy()
   }
 
+  // Obtener la paleta de colores según la configuración de la pregunta
+  const currentPalette = getPaletaColor(props.pregunta?.dataviz_palette)
+
   chartInstance = Highcharts.chart(chartContainer.value, {
     chart: {
       type: 'bar',
@@ -56,13 +65,15 @@ const initChart = () => {
     subtitle: {
       text: props.subtitle,
       style: {
-        color: '#8c96a0',
+        color: '#212529',
+        fontSize: '15px',
+        fontWeight: '500',
       },
     },
     credits: {
       enabled: false,
     },
-    colors: colorsPalette,
+     colors: currentPalette,
     xAxis: {
       categories: props.categorias,
       crosshair: true,
@@ -179,6 +190,7 @@ watch(
 
 <style scoped>
 .icc-chart-wrapper {
+  font-family: 'Inter', sans-serif;
   width: 100%;
   min-height: 400px;
   padding: 1rem;
