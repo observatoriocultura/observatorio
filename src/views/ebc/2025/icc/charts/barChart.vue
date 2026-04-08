@@ -1,7 +1,11 @@
 <script setup>
 import { onMounted, onUnmounted, ref, watch } from 'vue'
 import Highcharts from 'highcharts'
-import { getPaletaColor } from '../constants.js'
+import { inject } from 'vue'
+import { getPaletaColor as defaultGetPaletaColor } from '../constants.js'
+
+const surveyConstants = inject('surveyConstants', {})
+const getPaletaColor = surveyConstants.getPaletaColor || defaultGetPaletaColor
 
 const props = defineProps({
   title: {

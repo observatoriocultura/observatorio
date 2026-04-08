@@ -1,7 +1,14 @@
 <script setup>
 import { ref, onMounted, onUnmounted, inject, computed } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
-import { MENU_PRINCIPAL, IMAGES_CAROUSEL } from './constants'
+import {
+  MENU_PRINCIPAL as DEFAULT_MENU_PRINCIPAL,
+  IMAGES_CAROUSEL as DEFAULT_IMAGES_CAROUSEL,
+} from './constants'
+
+const surveyConstants = inject('surveyConstants', {})
+const MENU_PRINCIPAL = surveyConstants.MENU_PRINCIPAL || DEFAULT_MENU_PRINCIPAL
+const IMAGES_CAROUSEL = surveyConstants.IMAGES_CAROUSEL || DEFAULT_IMAGES_CAROUSEL
 
 const surveyInfo = inject('surveyInfo')
 const codigoMedicion = inject('codigoMedicion')

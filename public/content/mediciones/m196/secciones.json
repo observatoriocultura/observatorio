@@ -1,90 +1,58 @@
 [
     {
-        "num_seccion":99.0,
-        "cod_seccion":"REG",
+        "num_seccion":99,
+        "cod_seccion":99,
         "nombre_seccion":"Registro",
         "descripcion":"Variables internas de control del proceso de captura: identificadores de encuesta, consentimiento informado y coordenadas geográficas.",
         "notas":"Incluye Ida, Bd, consentimiento adulto (Con1) y consentimiento para menores 12–17 años. No se presenta directamente al encuestado como sección.",
         "dataviz_display":0
     },
     {
-        "num_seccion":1.0,
-        "cod_seccion":"HOG",
-        "nombre_seccion":"Caracterización del hogar",
+        "num_seccion":1,
+        "cod_seccion":1,
+        "nombre_seccion":"Sociodemográfico",
         "descripcion":"Registro de las personas que componen el hogar: cantidad de hogares y personas por vivienda, nombre, edad, sexo y parentesco de cada miembro (hasta 9 personas). Incluye la selección aleatoria del encuestado.",
         "notas":"Preguntas H1 a H7. La persona encuestada se selecciona con H7 tras registrar a todos los miembros. El JEFE DE HOGAR siempre es la persona 1.",
         "dataviz_display":1
     },
     {
-        "num_seccion":2.0,
-        "cod_seccion":"VIV",
-        "nombre_seccion":"Caracterización de la vivienda",
-        "descripcion":"Atributos de la vivienda y el entorno residencial: localidad, estrato socioeconómico, tipo de vivienda y modalidad de tenencia.",
-        "notas":"Preguntas V1 a V4. Incluye ubicación GPS (Cx, Cy) capturada automáticamente por el dispositivo.",
-        "dataviz_display":1
-    },
-    {
-        "num_seccion":3.0,
-        "cod_seccion":"GEN",
+        "num_seccion":2,
+        "cod_seccion":2,
         "nombre_seccion":"General",
         "descripcion":"Percepciones generales sobre lectura, escritura y oralidad como prácticas culturales y derechos ciudadanos. Asistencia y organización de actividades culturales en Bogotá. Conocimiento y participación en programas distritales de fomento lector.",
         "notas":"Preguntas 1 a 3. Aplica a toda la población encuestada. Sirve de introducción temática antes de profundizar en cada práctica.",
         "dataviz_display":1
     },
     {
-        "num_seccion":4.0,
-        "cod_seccion":"LEC",
+        "num_seccion":3,
+        "cod_seccion":3,
         "nombre_seccion":"Lectura",
         "descripcion":"Prácticas, hábitos y percepciones en torno a la lectura: definición personal, gusto lector, frecuencia, razones de lectura o no lectura, tipos de material y formatos utilizados, cantidad de libros leídos, acceso a materiales e influencias en el proceso lector.",
         "notas":"Preguntas 4 a 23. Indaga tanto lectura impresa como digital. Incluye sub-módulos sobre dispositivos, inversión en materiales, factores de compra, géneros preferidos y acceso a recursos de lectura.",
         "dataviz_display":1
     },
     {
-        "num_seccion":5.0,
-        "cod_seccion":"ESC",
+        "num_seccion":4,
+        "cod_seccion":4,
         "nombre_seccion":"Escritura",
         "descripcion":"Prácticas, hábitos y percepciones sobre la escritura: definición personal, gusto por escribir, frecuencia, razones de escritura o no escritura, propósitos, prácticas preferidas, soporte utilizado, espacios que acercaron a la escritura e influencias en el proceso.",
         "notas":"Preguntas 24 a 34. Incluye afirmaciones de identidad sobre la escritura (P32) y reconocimiento de instituciones o espacios que promovieron el hábito escritor. Aplica a toda la población haya escrito o no en el último año.",
         "dataviz_display":1
     },
     {
-        "num_seccion":6.0,
-        "cod_seccion":"ORA",
+        "num_seccion":5,
+        "cod_seccion":5,
         "nombre_seccion":"Oralidad",
         "descripcion":"Prácticas, hábitos y percepciones sobre la oralidad: definición personal, gusto por participar en espacios orales, formas de participación (cuentería, podcasts, debates, etc.), contextos, proceso creativo, frecuencia de participación en bibliotecas y acuerdo con afirmaciones sobre el rol social de la oralidad.",
         "notas":"Preguntas 35 a 45. Distingue entre el rol de quien habla\/cuenta, quien organiza y quien escucha. Abarca oralidad en espacios formales e informales.",
         "dataviz_display":1
     },
     {
-        "num_seccion":7.0,
-        "cod_seccion":"ESP",
+        "num_seccion":6,
+        "cod_seccion":6,
         "nombre_seccion":"Espacios de lectura, escritura y oralidad",
         "descripcion":"Acceso, uso, conocimiento y percepción de espacios de lectura tradicionales y alternativos en la localidad: bibliotecas públicas, casas de cultura, bibloestaciones, PPP, librerías, entre otros. Incluye preferencias de oferta, afiliación, criterios de elección y disponibilidad del fondo bibliográfico.",
         "notas":"Preguntas 46 a 56. Contiene baterías de percepción para cada tipo de espacio (P49) y módulo específico sobre la Biblioteca Digital de Bogotá (P56). P48.2 y P49 se despliegan condicionalmente según uso reportado.",
         "dataviz_display":1
-    },
-    {
-        "num_seccion":8.0,
-        "cod_seccion":"DEM",
-        "nombre_seccion":"Caracterización sociodemográfica",
-        "descripcion":"Variables de perfil del encuestado: sexo, género, edad, lugar de nacimiento, años de residencia en Bogotá, motivo de migración, estado civil, ocupación, nivel educativo, pertenencia étnico-racial, limitaciones permanentes e identidad de género.",
-        "notas":"Preguntas D1 a D13. La pregunta D12 (identidad de género) es voluntaria y se responde de forma autoadministrada para garantizar privacidad. D11k (ninguna limitación) actúa como opción de exclusión mutua.",
-        "dataviz_display":1
-    },
-    {
-        "num_seccion":null,
-        "cod_seccion":null,
-        "nombre_seccion":null,
-        "descripcion":null,
-        "notas":null,
-        "dataviz_display":1
-    },
-    {
-        "num_seccion":null,
-        "cod_seccion":null,
-        "nombre_seccion":null,
-        "descripcion":null,
-        "notas":null,
-        "dataviz_display":0
     }
 ]

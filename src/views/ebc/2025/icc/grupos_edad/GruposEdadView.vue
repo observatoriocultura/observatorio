@@ -3,7 +3,11 @@ import { ref, watch, computed, onMounted } from 'vue'
 import * as bootstrap from 'bootstrap'
 import GrupoEdadChart from './GrupoEdadChart.vue'
 import GrupoEdadTable from './GrupoEdadTable.vue'
-import { GRUPOS_EDAD as gruposEdad } from '../constants'
+import { inject } from 'vue'
+import { GRUPOS_EDAD as DEFAULT_GRUPOS_EDAD } from '../constants'
+
+const surveyConstants = inject('surveyConstants', {})
+const gruposEdad = surveyConstants.GRUPOS_EDAD || DEFAULT_GRUPOS_EDAD
 
 const props = defineProps({
   preguntaSeleccionada: { type: Object, default: () => ({}) },

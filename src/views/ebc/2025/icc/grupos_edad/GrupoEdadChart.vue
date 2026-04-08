@@ -1,6 +1,10 @@
 <script setup>
-import { ref, watch, onMounted, onUnmounted } from 'vue'
+import { ref, watch, onMounted, onUnmounted, inject } from 'vue'
 import Highcharts from 'highcharts'
+import { getPaletaColor as defaultGetPaletaColor } from '../constants.js'
+
+const surveyConstants = inject('surveyConstants', {})
+const getPaletaColor = surveyConstants.getPaletaColor || defaultGetPaletaColor
 
 const props = defineProps({
   preguntaSeleccionada: {
@@ -113,7 +117,7 @@ const initChart = () => {
         },
       },
     },
-    colors: ['#D7C9E9', '#A29BFE', '#6C5CE7'],
+    colors: getPaletaColor(props.preguntaSeleccionada?.dataviz_palette),
     legend: {
       enabled: false,
     },

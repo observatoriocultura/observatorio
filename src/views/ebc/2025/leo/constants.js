@@ -19,16 +19,16 @@ export const getNombreGrupoEdad = (id) => {
  * 2026-03-29
  */
 export const PALETAS_COLOR = {
-  main: ['#D9CBEA'],
+  main: ['#0F52BA'],
   category: [
-    '#D9CBEA',
-    '#9BBAE9',
-    '#E8D6B8',
-    '#A8D4C8',
-    '#C3B2E0',
-    '#C5DEBA',
-    '#7DA9E5',
-    '#DEB8C5',
+    '#0F52BA',
+    '#50C878',
+    '#E0115F',
+    '#5D4294',
+    '#FF9800',
+    '#00BCD4',
+    '#AB47BC',
+    '#FF4081',
   ],
   scale_asc_4: ['#D9CBEA', '#c1a0e9ff', '#8962bdff', '#654096'],
   scale_desc_4: ['#388E3C', '#00AEEF', '#F9A825', '#D32F2F'],
@@ -101,6 +101,7 @@ export const MENU_PRINCIPAL = [
  */
 export const IMAGES_CAROUSEL = [
   'oralidad.png',
+  'oralidad-3.jpg',
   'lectura-1.jpg',
   'lectura-2.jpg',
   'escritura-1.jpg',

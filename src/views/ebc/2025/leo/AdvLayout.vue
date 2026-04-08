@@ -4,12 +4,16 @@ import { useRoute } from 'vue-router'
 import AdvPortada from './AdvPortada.vue'
 import AdvResultados from '../icc/AdvResultados.vue'
 import AdvFicha from '../icc/AdvFicha.vue'
+import * as surveyConstants from './constants'
 
 const route = useRoute()
 const codigoMedicion = 'm196'
 const surveyInfo = ref(null)
 const loading = ref(true)
 const error = ref(null)
+
+// Proveemos las constantes locales para que cualquier subvista las use
+provide('surveyConstants', surveyConstants)
 
 // Determinar la pestaña actual basada en el parámetro ?tab=
 const currentTab = computed(() => route.query.tab || 'inicio')

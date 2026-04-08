@@ -4,12 +4,18 @@ import { useRoute, useRouter } from 'vue-router'
 import BarMultipleChart from './charts/BarMultipleChart.vue'
 import DonutChart from './charts/DonutChart.vue'
 import BarChart from './charts/BarChart.vue'
+import WordCloudChart from './charts/WordCloudChart.vue'
 import LocalidadesView from './localidades/LocalidadesView.vue'
 import GruposEdadView from './grupos_edad/GruposEdadView.vue'
 import AdvDebug from './charts/AdvDebug.vue'
 import * as bootstrap from 'bootstrap'
-import { GRUPOS_EDAD, getNombreGrupoEdad } from './constants'
+import { GRUPOS_EDAD as DEFAULT_GRUPOS_EDAD, getNombreGrupoEdad as defaultGetNombreGrupoEdad } from './constants'
 import AdvSearchQuestion from './AdvSearchQuestion.vue'
+
+// Inyectar constantes dinámicas si están disponibles, si no usar las locales (ICC)
+const surveyConstants = inject('surveyConstants', {})
+const gruposEdad = surveyConstants.GRUPOS_EDAD || DEFAULT_GRUPOS_EDAD
+const getNombreGrupoEdad = surveyConstants.getNombreGrupoEdad || defaultGetNombreGrupoEdad
 
 const contentSection = ref('chart')
 const codigoMedicion = inject('codigoMedicion')
@@ -28,10 +34,12 @@ const route = useRoute()
 const router = useRouter()
 
 provide('seleccionarPreguntaDesdeBuscador', (pregunta) => {
-  const seccionFound = secciones.value.find((s) => s.num_seccion === pregunta.num_seccion)
+  const seccionFound = secciones.value.find(
+    (s) => String(s.num_seccion) === String(pregunta.num_seccion),
+  )
   if (seccionFound) {
     seccionSeleccionada.value = seccionFound
-    preguntaSeleccionada.value = pregunta
+    seleccionarPregunta(pregunta)
   }
 })
 
@@ -591,7 +599,7 @@ watch(contentSection, async (nuevaSeccion) => {
                   title="Filtra los resultados por rango de edad"
                 >
                   <option :value="null">Todos los grupos de edad</option>
-                  <option v-for="grupo in GRUPOS_EDAD" :key="grupo.id" :value="grupo.id">
+                  <option v-for="grupo in gruposEdad" :key="grupo.id" :value="grupo.id">
                     {{ grupo.nombre }}
                   </option>
                 </select>
@@ -649,6 +657,14 @@ watch(contentSection, async (nuevaSeccion) => {
                   :pregunta="preguntaSeleccionada"
                   :respuestas="respuestasPregunta"
                   :posiblesRespuestas="posiblesRespuestas"
+                />
+
+                <!-- TIPO DE GRÁFICO WORD CLOUD -->
+                <WordCloudChart
+                  v-else-if="preguntaSeleccionada.dataviz_chart_type === 'wordcloud'"
+                  :title="tituloConFiltro"
+                  :pregunta="preguntaSeleccionada"
+                  :respuestas="respuestasPregunta"
                 />
 
                 <!-- PARA TIPOS DE GRÁFICOS AÚN NO IMPEMENTADOS -->

@@ -2,8 +2,8 @@
   <div class="search-question-wrapper bg-white">
     <!-- Header con Búsqueda -->
     <div class="search-header p-4 bg-white sticky-top">
-      <div class="input-group input-group-lg border-bottom">
-        <span class="input-group-text bg-white border-0 ps-0">
+      <div class="input-group input-group-lg search-bar-pill">
+        <span class="input-group-text border-0">
           <i class="bi bi-search text-muted"></i>
         </span>
         <input
@@ -13,7 +13,7 @@
           v-model="searchText"
           ref="searchInput"
         />
-        <button v-if="searchText" class="btn bg-white border-0 text-muted" @click="searchText = ''">
+        <button v-if="searchText" class="btn border-0 text-muted" @click="searchText = ''">
           <i class="bi bi-x-lg"></i>
         </button>
       </div>
@@ -70,7 +70,7 @@ const loading = ref(true)
 const searchInput = ref(null)
 
 /**
- * Selecciona una pregunta. El modal se cierra automáticamente 
+ * Selecciona una pregunta. El modal se cierra automáticamente
  * vía el atributo data-bs-dismiss del template.
  */
 const seleccionarYMinimizar = (p) => {
@@ -85,10 +85,14 @@ onMounted(async () => {
     const res = await fetch(`${baseUrl}content/mediciones/${codigoMedicion}/preguntas.json`)
     const data = await res.json()
     preguntas.value = data.filter((p) => Number(p.dataviz_display) === 1)
-    
-    setTimeout(() => {
-      searchInput.value?.focus()
-    }, 400)
+
+    // Escuchar el evento de Bootstrap para cuando el modal termina de abrirse
+    const modalEl = document.getElementById('searchQuestionModal')
+    if (modalEl) {
+      modalEl.addEventListener('shown.bs.modal', () => {
+        searchInput.value?.focus()
+      })
+    }
   } catch (e) {
     console.error('Error:', e)
   } finally {
@@ -115,6 +119,33 @@ const filteredPreguntas = computed(() => {
 .search-header {
   top: 0;
   z-index: 100;
+}
+
+.search-bar-pill {
+  background-color: #f8fafc;
+  height: 48px;
+  border-radius: 24px;
+  border: 1px solid #eef0f2;
+  padding: 0 1.25rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.search-bar-pill:focus-within {
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(50, 32, 74, 0.05);
+}
+
+.search-bar-pill .form-control,
+.search-bar-pill .input-group-text {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.search-bar-pill .form-control {
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .search-results {
