@@ -739,20 +739,20 @@ watch(contentSection, async (nuevaSeccion) => {
         </div>
       </main>
     </div>
-  </div>
 
-  <!-- MODAL BUSCADOR DE PREGUNTAS -->
-  <div
-    class="modal fade"
-    id="searchQuestionModal"
-    tabindex="-1"
-    aria-labelledby="searchModalLabel"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-xl modal-dialog-centered">
-      <div class="modal-content border-0 rounded-4 shadow-lg">
-        <div class="p-2">
-          <AdvSearchQuestion />
+    <!-- MODAL BUSCADOR DE PREGUNTAS -->
+    <div
+      class="modal fade"
+      id="searchQuestionModal"
+      tabindex="-1"
+      aria-labelledby="searchModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content border-0 rounded-4 shadow-lg">
+          <div class="p-2">
+            <AdvSearchQuestion />
+          </div>
         </div>
       </div>
     </div>

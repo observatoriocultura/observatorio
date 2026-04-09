@@ -23,6 +23,10 @@ const props = defineProps({
     type: Array,
     default: () => [],
   },
+  posiblesRespuestas: {
+    type: Array,
+    default: () => [],
+  },
   kpiValue: {
     type: Number,
     default: null,
@@ -46,18 +50,17 @@ const initChart = () => {
   // Usar el primer color de la paleta para todo el gráfico
   const seriesColor = currentPalette[0] || '#5d4294'
 
-  // Extraer las categorías y los datos agrupados por respuesta_v2
-  const uniqueCategories = [...new Set(props.respuestas.map((d) => d.respuesta_v2))]
-  // Intenta ordenar numéricamente si es posible, sino queda el orden original
-  uniqueCategories.sort((a, b) => {
-    const numA = parseFloat(a)
-    const numB = parseFloat(b)
-    if (!isNaN(numA) && !isNaN(numB)) return numA - numB
-    return 0
-  })
+  // Usamos las posiblesRespuestas pasadas por el padre para respetar el orden deseado (dataviz_order_type)
+  const categories = props.posiblesRespuestas.length > 0 
+    ? props.posiblesRespuestas 
+    : [...new Set(props.respuestas.map((d) => d.respuesta_v2))].sort((a, b) => {
+        const numA = parseFloat(a)
+        const numB = parseFloat(b)
+        if (!isNaN(numA) && !isNaN(numB)) return numA - numB
+        return String(a).localeCompare(String(b))
+      })
 
-  const categories = uniqueCategories
-  const data = uniqueCategories.map((cat) => {
+  const data = categories.map((cat) => {
     const matches = props.respuestas.filter((r) => r.respuesta_v2 === cat)
     return matches.reduce((sum, r) => sum + (parseFloat(r.porcentaje) || 0), 0)
   })
@@ -161,7 +164,7 @@ onUnmounted(() => {
 
 // Observar cambios en las respuestas para redibujar el gráfico
 watch(
-  () => props.respuestas,
+  () => [props.respuestas, props.posiblesRespuestas],
   () => {
     initChart()
   },

@@ -30,15 +30,16 @@ export const PALETAS_COLOR = {
     '#AB47BC',
     '#FF4081',
   ],
-  scale_asc_4: ['#D9CBEA', '#c1a0e9ff', '#8962bdff', '#654096'],
-  scale_desc_4: ['#388E3C', '#00AEEF', '#F9A825', '#D32F2F'],
+  scale_asc_4: ['#94b5e7ff', '#6796dbff', '#316fccff', '#0F52BA'],
+  scale_desc_4: ['#0F52BA', '#316fccff', '#6796dbff', '#94b5e7ff'],
+  scale_asc_5: ['#94b5e7ff', '#739cdcff', '#5283d1ff', '#316bc5ff', '#0f52baff'],
+  scale_desc_5: ['#0f52baff', '#316bc5ff', '#5283d1ff', '#739cdcff', '#94b5e7ff'],
   boolean_asc_4: ['#D32F2F', '#cf8b8bff', '#9cc9ab', '#50c878'],
-  boolean_desc_4: ['#50c878', '#9cc9ab', '#cf8b8bff', '#D32F2F'],
+  boolean_desc_4: ['#50C878', '#9cc9ab', '#cf8b8bff', '#D32F2F'],
   boolean_asc_2: ['#dfdbe4ff', '#50c878'],
   boolean_desc_2: ['#dfdbe4ff', '#e0115f'],
   yes_no_asc: ['#003366', '#00AEEF'],
   yes_no_desc: ['#654096', '#D9CBEA'],
-  custom_84: ['#CCCCCC', '#000000', '#D9CBEA', '#50c878'],
 }
 
 /**

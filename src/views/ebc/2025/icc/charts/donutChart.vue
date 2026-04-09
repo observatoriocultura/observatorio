@@ -24,6 +24,10 @@ const props = defineProps({
     type: Array,
     default: () => [],
   },
+  posiblesRespuestas: {
+    type: Array,
+    default: () => [],
+  },
 })
 
 const chartContainer = ref(null)
@@ -38,15 +42,17 @@ const initChart = () => {
   const currentPalette = getPaletaColor(props.pregunta?.dataviz_palette)
 
   // Agrupar los valores de la suma_factor para cada categoría
-  const uniqueCategories = [...new Set(props.respuestas.map((d) => d.respuesta_v2))]
-  uniqueCategories.sort((a, b) => {
-    const numA = parseFloat(a)
-    const numB = parseFloat(b)
-    if (!isNaN(numA) && !isNaN(numB)) return numA - numB
-    return 0
-  })
+  // Usamos las posiblesRespuestas pasadas por el padre para respetar el orden deseado (dataviz_order_type)
+  const categories = props.posiblesRespuestas.length > 0 
+    ? props.posiblesRespuestas 
+    : [...new Set(props.respuestas.map((d) => d.respuesta_v2))].sort((a, b) => {
+        const numA = parseFloat(a)
+        const numB = parseFloat(b)
+        if (!isNaN(numA) && !isNaN(numB)) return numA - numB
+        return String(a).localeCompare(String(b))
+      })
 
-  const serieData = uniqueCategories.map((cat) => {
+  const serieData = categories.map((cat) => {
     const matches = props.respuestas.filter((r) => r.respuesta_v2 === cat)
     return {
       name: cat,
@@ -143,7 +149,7 @@ onUnmounted(() => {
 
 // Observar cambios en las respuestas para redibujar el gráfico
 watch(
-  () => props.respuestas,
+  () => [props.respuestas, props.posiblesRespuestas],
   () => {
     initChart()
   },

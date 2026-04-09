@@ -3,7 +3,9 @@ import { ref, onMounted, provide, computed } from 'vue'
 import { useRoute } from 'vue-router'
 import AdvPortada from './AdvPortada.vue'
 import AdvResultados from '../icc/AdvResultados.vue'
+import AdvIndice from '../icc/AdvIndice.vue'
 import AdvFicha from '../icc/AdvFicha.vue'
+import AdvDocs from '../icc/AdvDocs.vue'
 import * as surveyConstants from './constants'
 
 const route = useRoute()

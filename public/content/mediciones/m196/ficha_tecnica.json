@@ -3,7 +3,7 @@
         "num":110,
         "variable":"Nombre de la encuesta",
         "nivel":1,
-        "valor":null
+        "valor":"Encuesta de Lectura, Escritura y Oralidad 2025"
     },
     {
         "num":120,
@@ -27,55 +27,49 @@
         "num":140,
         "variable":"Universo en estudio",
         "nivel":1,
-        "valor":null
+        "valor":"Población mayor de 13 años residente en la ciudad de Bogotá área Urbana, residencia habitual por lo menos durante los últimos 6 años."
     },
     {
         "num":150,
         "variable":"Diseño de muestreo",
         "nivel":1,
-        "valor":null
+        "valor":"Las encuestas probabilísticas presenciales en hogares se realizarán en la zona residencial estratificada de 20 localidades de Bogotá. Las estimaciones se publican desagregadas por las localidades de Usaquén, Chapinero, Santafé, San Cristóbal, Usme, Tunjuelito, Bosa, Kennedy, Fontibón, Engativá, Suba, Barrios Unidos, Teusaquillo, Los Mártires, Antonio Nariño, Puente Aranda, La Candelaria, Rafael Uribe Uribe, Ciudad Bolívar y Sumapaz además para el agregado Distrital."
     },
     {
         "num":151,
         "variable":"Primera etapa",
         "nivel":2,
-        "valor":null
+        "valor":"La unidad de muestreo son las manzanas estratificadas."
     },
     {
         "num":152,
         "variable":"Segunda etapa",
         "nivel":2,
-        "valor":null
+        "valor":"La unidad de muestreo son los predios de uso residencial o habitacional dentro de las manzanas pre-seleccionadas. "
     },
     {
         "num":152,
         "variable":"Tercera etapa",
         "nivel":2,
-        "valor":null
+        "valor":"La unidad de muestreo son las personas de 10 años y más a encuestar dentro de cada hogar. "
     },
     {
         "num":160,
         "variable":"Tamaño de muestra",
         "nivel":1,
-        "valor":null
+        "valor":"5.449"
     },
     {
         "num":170,
         "variable":"Población representada",
         "nivel":1,
-        "valor":null
+        "valor":"6.763.679"
     },
     {
         "num":180,
         "variable":"Periodo de referencia",
         "nivel":1,
         "valor":"Año 2025"
-    },
-    {
-        "num":190,
-        "variable":"Periodo de recolección",
-        "nivel":1,
-        "valor":"PENDIENTE"
     },
     {
         "num":200,
