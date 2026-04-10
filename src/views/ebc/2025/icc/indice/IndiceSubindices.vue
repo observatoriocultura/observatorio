@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed, watch, onMounted, onBeforeUnmount } from 'vue'
 import Highcharts from 'highcharts'
+import { PALETAS_COLOR } from '../constants.js'
 
 const props = defineProps({
   datosPorLocalidad: { type: Array, default: () => [] },
@@ -42,68 +43,74 @@ function renderChart() {
       : props.localidades.find((l) => l.cod === locCod)?.nombre || 'Localidad'
 
   // Preparar series (una por cada año)
-  const seriesData = años.value.map(año => {
+  const seriesData = años.value.map((año) => {
     return {
       name: `Año ${año}`,
-      data: subindices.value.map(idx => {
+      data: subindices.value.map((idx) => {
         const registro = props.iccData.find(
-          (d) => d.localidad_cod === locCod && d.indice_cod === idx.cod && d.año === año
+          (d) => d.localidad_cod === locCod && d.indice_cod === idx.cod && d.año === año,
         )
         const val = registro ? registro.valor : 0
         // Retornamos el valor truncado/redondeado o 0 si no existe
         return Number(val.toFixed(4))
-      })
+      }),
     }
   })
 
   chartInstance = Highcharts.chart(chartContainer.value, {
+    colors: PALETAS_COLOR.icc_years,
     chart: {
       type: 'column',
-      height: 500
+      height: 500,
     },
     title: {
-      text: `Resultados Históricos Subíndices - ${locNombre}`
+      text: `Resultados Históricos Subíndices - ${locNombre}`,
     },
     subtitle: {
-      text: 'Comparativa de las dimensiones del ICC por periodo de medición'
+      text: 'Comparativa de las dimensiones del ICC por periodo de medición',
     },
     xAxis: {
       categories: categories.value,
       title: {
-        text: null
+        text: null,
       },
       gridLineWidth: 1,
       lineWidth: 0,
-       labels: {
+      labels: {
         style: {
-          fontSize: '12px'
-        }
-      }
+          fontSize: '12px',
+        },
+      },
     },
     yAxis: {
       min: 0,
       max: 1, // El índice se mueve entre 0 y 1
       title: {
         text: 'Valor del Índice (0 - 1)',
-        align: 'high'
+        align: 'high',
       },
       labels: {
-        overflow: 'justify'
+        overflow: 'justify',
       },
-      gridLineWidth: 1
+      gridLineWidth: 1,
     },
     tooltip: {
       valueDecimals: 4,
-      shared: true
+      shared: true,
     },
     plotOptions: {
       column: {
         borderRadius: 4,
         dataLabels: {
-          enabled: false // Desactivado por defecto para no saturar, el tooltip ayuda
+          enabled: true,
+          format: '{point.y:.3f}',
+          style: {
+            fontSize: '12px',
+            fontWeight: '600',
+          },
         },
-        groupPadding: 0.1
-      }
+        groupPadding: 0.1,
+      },
     },
     legend: {
       layout: 'horizontal',
@@ -112,32 +119,34 @@ function renderChart() {
       floating: false,
       borderWidth: 1,
       backgroundColor: 'var(--highcharts-background-color, #ffffff)',
-      shadow: true
+      shadow: true,
     },
     credits: {
-      enabled: false
+      enabled: false,
     },
     series: seriesData,
     responsive: {
-      rules: [{
-        condition: {
-          maxWidth: 600
-        },
-        chartOptions: {
-          legend: {
-            layout: 'horizontal',
-            align: 'center',
-            verticalAlign: 'bottom'
+      rules: [
+        {
+          condition: {
+            maxWidth: 600,
           },
-          xAxis: {
-            labels: {
-              rotation: -45,
-              step: 1
-            }
-          }
-        }
-      }]
-    }
+          chartOptions: {
+            legend: {
+              layout: 'horizontal',
+              align: 'center',
+              verticalAlign: 'bottom',
+            },
+            xAxis: {
+              labels: {
+                rotation: -45,
+                step: 1,
+              },
+            },
+          },
+        },
+      ],
+    },
   })
 }
 

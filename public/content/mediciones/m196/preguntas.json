@@ -585,7 +585,7 @@
         "num_seccion_bis":3,
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
-        "dataviz_order_type":"answer",
+        "dataviz_order_type":"frecuency",
         "dataviz_palette":"category"
     },
     {
@@ -623,7 +623,7 @@
         "num_seccion_bis":3,
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
-        "dataviz_order_type":"answer",
+        "dataviz_order_type":"frecuency",
         "dataviz_palette":"category"
     },
     {
@@ -642,7 +642,7 @@
         "num_seccion_bis":3,
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
-        "dataviz_order_type":"answer",
+        "dataviz_order_type":"frecuency",
         "dataviz_palette":"category"
     },
     {
@@ -699,7 +699,7 @@
         "num_seccion_bis":3,
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
-        "dataviz_order_type":"answer",
+        "dataviz_order_type":"frecuency",
         "dataviz_palette":"category"
     },
     {
@@ -718,7 +718,7 @@
         "num_seccion_bis":3,
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
-        "dataviz_order_type":"answer",
+        "dataviz_order_type":"frecuency",
         "dataviz_palette":"category"
     },
     {
@@ -756,7 +756,7 @@
         "num_seccion_bis":3,
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
-        "dataviz_order_type":"answer",
+        "dataviz_order_type":"frecuency",
         "dataviz_palette":"category"
     },
     {

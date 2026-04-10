@@ -1,8 +1,8 @@
 {
   "nombre_medicion": "Encuesta de indicadores de Cultura Ciudadana y Garantía de Derechos 2025",
   "año_referencia": 2025,
-  "fecha_inicio": "2025-01-01",
-  "fecha_fin": "2025-02-01",
-  "tamano_muestra": 5449,
-  "sumatoria_factor": 6763679.19715
+  "fecha_inicio": "2025-10-01",
+  "fecha_fin": "2025-12-01",
+  "tamano_muestra": 5438,
+  "sumatoria_factor": 6763092.666342
 }

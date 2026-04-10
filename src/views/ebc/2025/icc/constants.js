@@ -39,6 +39,7 @@ export const PALETAS_COLOR = {
   yes_no_asc: ['#003366', '#00AEEF'],
   yes_no_desc: ['#654096', '#D9CBEA'],
   custom_84: ['#CCCCCC', '#000000', '#D9CBEA', '#50c878'],
+  icc_years: ['#D9CBEA', '#8d6abbff', '#ffca28'],
 }
 
 /**

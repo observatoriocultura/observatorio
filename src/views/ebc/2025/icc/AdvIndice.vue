@@ -3,6 +3,8 @@ import { ref, onMounted, inject, computed } from 'vue'
 import IndiceResumen from './indice/IndiceResumen.vue'
 import IndiceTabla from './indice/IndiceTabla.vue'
 import IndiceSubindices from './indice/IndiceSubindices.vue'
+import IndiceLocalidades from './indice/IndiceLocalidades.vue'
+import IndiceInfo from './indice/IndiceInfo.vue'
 
 const codigoMedicion = inject('codigoMedicion')
 const loading = ref(true)
@@ -11,7 +13,7 @@ const iccData = ref([])
 const indicesRef = ref([]) // especificación canónica de índices desde indices.json
 
 /** Vista activa: resumen o tabla */
-const vistaActiva = ref('resumen')
+const vistaActiva = ref('tabla')
 
 /**
  * Normaliza un string para comparación: minúsculas, sin acentos, sin espacios extra.
@@ -64,6 +66,7 @@ const indices = computed(() => {
         abreviatura: ref.abreviatura,
         key: ref.key,
         nivel: ref.nivel,
+        descripcion: ref.descripcion,
       }
     })
     .filter(Boolean)
@@ -146,21 +149,14 @@ onMounted(async () => {
   <div class="adv-indice">
     <!-- Encabezado -->
     <header class="indice-header">
-      <div class="header-content">
-        <h2 class="indice-title">
-          <i class="bi bi-speedometer2 me-2"></i>Índice General
-        </h2>
-        <p class="indice-subtitle">Resultados por localidad y dimensiones del índice</p>
-      </div>
-
       <!-- Selector de vista -->
-      <div class="vista-selector">
+      <div class="vista-selector d-flex justify-content-center">
         <button
           class="vista-btn"
-          :class="{ active: vistaActiva === 'resumen' }"
-          @click="vistaActiva = 'resumen'"
+          :class="{ active: vistaActiva === 'info' }"
+          @click="vistaActiva = 'info'"
         >
-          <i class="bi bi-grid-3x3-gap me-1"></i>Resumen
+          <i class="bi bi-info-circle me-1"></i>Info
         </button>
         <button
           class="vista-btn"
@@ -175,6 +171,20 @@ onMounted(async () => {
           @click="vistaActiva = 'subindices'"
         >
           <i class="bi bi-layers me-1"></i>Subíndices
+        </button>
+        <button
+          class="vista-btn"
+          :class="{ active: vistaActiva === 'localidades' }"
+          @click="vistaActiva = 'localidades'"
+        >
+          <i class="bi bi-geo-alt me-1"></i>Localidades
+        </button>
+        <button
+          class="vista-btn"
+          :class="{ active: vistaActiva === 'resumen' }"
+          @click="vistaActiva = 'resumen'"
+        >
+          <i class="bi bi-grid-3x3-gap me-1"></i>Resumen
         </button>
       </div>
     </header>
@@ -193,6 +203,7 @@ onMounted(async () => {
 
     <!-- Contenido -->
     <div v-else>
+      <IndiceInfo v-show="vistaActiva === 'info'" :indices="indicesRef" />
       <IndiceResumen
         v-show="vistaActiva === 'resumen'"
         :datos-por-localidad="datosPorLocalidad"
@@ -206,9 +217,18 @@ onMounted(async () => {
         :indices="indices"
         :localidades="localidades"
         :num-periodos="numPeriodos"
+        :icc-data="iccData"
       />
       <IndiceSubindices
         v-show="vistaActiva === 'subindices'"
+        :datos-por-localidad="datosPorLocalidad"
+        :indices="indices"
+        :localidades="localidades"
+        :num-periodos="numPeriodos"
+        :icc-data="iccData"
+      />
+      <IndiceLocalidades
+        v-show="vistaActiva === 'localidades'"
         :datos-por-localidad="datosPorLocalidad"
         :indices="indices"
         :localidades="localidades"
@@ -226,25 +246,11 @@ onMounted(async () => {
 
 .indice-header {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.indice-title {
-  font-size: 1.4rem;
-  font-weight: 800;
-  color: var(--color-primary);
-  margin: 0;
-  letter-spacing: -0.02em;
-}
-
-.indice-subtitle {
-  font-size: 0.85rem;
-  color: var(--color-muted);
-  margin: 0.25rem 0 0;
+  margin-bottom: 2rem;
 }
 
 .vista-selector {

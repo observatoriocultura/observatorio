@@ -6,6 +6,7 @@ const props = defineProps({
   indices: { type: Array, required: true },
   localidades: { type: Array, required: true },
   numPeriodos: { type: Number, required: true },
+  iccData: { type: Array, default: () => [] },
 })
 
 /** Índice seleccionado para la tabla (se inicializa al primer índice disponible) */
@@ -24,11 +25,12 @@ watch(
 /** Orden de la tabla */
 const ordenAsc = ref(false)
 
-/** Nombres de los periodos (genéricos) */
+/** Años de referencia */
+const añosReferencia = [2021, 2023, 2025]
+
+/** Nombres de los periodos a mostrar */
 const nombresPeriodos = computed(() => {
-  const labels = ['2021', '2023', '2025']
-  // Devolver solo los últimos N periodos correspondientes
-  return labels.slice(labels.length - props.numPeriodos)
+  return añosReferencia.slice(añosReferencia.length - props.numPeriodos)
 })
 
 /** Nombre del índice seleccionado */
@@ -37,28 +39,71 @@ const nombreIndice = computed(() => {
   return idx ? idx.nombre : ''
 })
 
-/** Datos de tabla: localidad + valores por periodo */
+/** Datos de tabla: localidad + valores alineados por año */
 const filas = computed(() => {
-  return props.datosPorLocalidad
-    .map((d) => {
-      const vals = d.indices[indiceSeleccionado.value] || []
-      return {
-        localidad_cod: d.localidad_cod,
-        localidad: d.localidad,
-        valores: vals,
-        ultimo: vals.length > 0 ? vals[vals.length - 1] : null,
+  const añosAMostrar = nombresPeriodos.value
+
+  const todasLasFilas = props.localidades.map((loc) => {
+    // Buscamos los valores para cada año específico
+    const valoresAlineados = añosAMostrar.map((año) => {
+      const registro = props.iccData.find(
+        (d) =>
+          Number(d.localidad_cod) === Number(loc.cod) &&
+          d.indice_cod === indiceSeleccionado.value &&
+          Number(d.año) === Number(año),
+      )
+      const valor = registro ? registro.valor : null
+
+      // Tendencia respecto al periodo anterior (aunque el anterior no se muestre)
+      let tendencia = null
+      if (valor !== null) {
+        const añoAnterior = año === 2025 ? 2023 : año === 2023 ? 2021 : null
+        if (añoAnterior) {
+          const registroAnt = props.iccData.find(
+            (d) =>
+              Number(d.localidad_cod) === Number(loc.cod) &&
+              d.indice_cod === indiceSeleccionado.value &&
+              Number(d.año) === Number(añoAnterior),
+          )
+          if (registroAnt) {
+            if (valor > registroAnt.valor) tendencia = 'up'
+            else if (valor < registroAnt.valor) tendencia = 'down'
+          }
+        }
       }
+
+      return { valor, tendencia }
     })
-    .sort((a, b) => {
-      const va = a.ultimo ?? -1
-      const vb = b.ultimo ?? -1
-      return ordenAsc.value ? va - vb : vb - va
-    })
+
+    const ultimo =
+      valoresAlineados.length > 0 ? valoresAlineados[valoresAlineados.length - 1].valor : null
+
+    return {
+      localidad_cod: loc.cod,
+      localidad: loc.nombre,
+      valores: valoresAlineados,
+      ultimo: ultimo,
+    }
+  })
+
+  // Separamos Bogotá (Total) para que sea siempre la primera fila
+  const filaBogota = todasLasFilas.find((f) => Number(f.localidad_cod) === 22)
+  const restoFilas = todasLasFilas.filter((f) => Number(f.localidad_cod) !== 22)
+
+  // Ordenamos el resto de las localidades según el criterio seleccionado
+  restoFilas.sort((a, b) => {
+    const va = a.ultimo ?? -1
+    const vb = b.ultimo ?? -1
+    return ordenAsc.value ? va - vb : vb - va
+  })
+
+  // Retornamos la combinación (Bogotá primero)
+  return filaBogota ? [filaBogota, ...restoFilas] : restoFilas
 })
 
 const formatValor = (v) => {
   if (v === null || v === undefined) return '—'
-  return (v * 100).toFixed(1)
+  return v.toFixed(3)
 }
 
 const colorCelda = (valor) => {
@@ -70,89 +115,128 @@ const colorCelda = (valor) => {
 </script>
 
 <template>
-  <div class="indice-tabla container">
-    <!-- Controles -->
-    <div class="tabla-controles mb-3">
-      <div class="row align-items-center g-3">
-        <div class="col-md-6">
-          <select v-model="indiceSeleccionado" class="form-select select-premium">
-            <option v-for="idx in indices" :key="idx.cod" :value="idx.cod">
-              {{ idx.nombre }}
-            </option>
-          </select>
-        </div>
-        <div class="col-md-3">
-          <button class="btn btn-sm btn-outline-secondary w-100" @click="ordenAsc = !ordenAsc">
-            <i :class="ordenAsc ? 'bi bi-sort-numeric-up' : 'bi bi-sort-numeric-down-alt'"></i>
-            {{ ordenAsc ? 'Menor a mayor' : 'Mayor a menor' }}
-          </button>
+  <div class="indice-tabla">
+    <div class="row g-4">
+      <!-- Sidebar de Índices (Izquierda) -->
+      <div class="col-md-3">
+        <div class="indices-sidebar shadow-sm rounded bg-white p-2">
+          <label class="sidebar-label mb-2 px-2">Índice y subíndices</label>
+          <div class="list-group list-group-flush">
+            <button
+              v-for="idx in indices"
+              :key="idx.cod"
+              type="button"
+              class="list-group-item list-group-item-action sidebar-item"
+              :class="{ active: indiceSeleccionado === idx.cod }"
+              @click="indiceSeleccionado = idx.cod"
+            >
+              <div class="d-flex w-100 justify-content-between align-items-center">
+                <span class="indice-nombre">{{ idx.nombre }}</span>
+                <i v-if="indiceSeleccionado === idx.cod" class="bi bi-chevron-right small"></i>
+              </div>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Título -->
-    <h5 class="tabla-titulo mb-3">{{ nombreIndice }}</h5>
+      <!-- Contenido de la Tabla (Derecha) -->
+      <div class="col-md-9">
+        <div class="tabla-container shadow-sm rounded bg-white p-3">
+          <!-- Controles superiores -->
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="tabla-titulo m-0 text-uppercase small ls-wide">{{ nombreIndice }}</h5>
+            <button class="btn btn-sm btn-outline-secondary" @click="ordenAsc = !ordenAsc">
+              <i :class="ordenAsc ? 'bi bi-sort-numeric-up' : 'bi bi-sort-numeric-down-alt'"></i>
+              {{ ordenAsc ? 'Menor a mayor' : 'Mayor a menor' }}
+            </button>
+          </div>
 
-    <!-- Tabla responsiva -->
-    <div class="table-responsive">
-      <table class="table table-hover tabla-indice">
-        <thead>
-          <tr>
-            <th class="th-pos">#</th>
-            <th class="th-localidad">Localidad</th>
-            <th v-for="(nombre, i) in nombresPeriodos" :key="'p' + i" class="th-valor text-center">
-              {{ nombre }}
-            </th>
-            <th class="th-valor text-center">Var.</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="(fila, idx) in filas" :key="fila.localidad_cod">
-            <td class="td-pos">{{ idx + 1 }}</td>
-            <td class="td-localidad">
-              <span class="localidad-nombre">{{ fila.localidad }}</span>
-            </td>
-            <td
-              v-for="(val, i) in fila.valores"
-              :key="'v' + i"
-              class="td-valor text-center"
-              :class="i === fila.valores.length - 1 ? colorCelda(val) : ''"
+          <!-- Tabla responsiva -->
+          <div class="table-responsive">
+            <table class="table table-hover tabla-indice">
+              <thead>
+                <tr>
+                  <th class="th-pos">#</th>
+                  <th class="th-localidad">Localidad</th>
+                  <th v-for="(nombre, i) in nombresPeriodos" :key="'p' + i" class="th-valor text-center">
+                    {{ nombre }}
+                  </th>
+                  <th class="th-valor text-center">Var.</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  v-for="(fila, idx) in filas"
+                  :key="fila.localidad_cod"
+                  :class="{ 'fila-total': Number(fila.localidad_cod) === 22 }"
+                >
+                  <td class="td-pos">
+                    {{ Number(fila.localidad_cod) === 22 ? '' : idx }}
+                  </td>
+                  <td class="td-localidad">
+                    <span class="localidad-nombre">{{ fila.localidad }}</span>
+                  </td>
+                  <td
+                    v-for="(obj, i) in fila.valores"
+                    :key="'v' + i"
+                    class="td-valor text-center"
+                    :class="i === fila.valores.length - 1 ? colorCelda(obj.valor) : ''"
+                  >
+                    <div class="d-flex align-items-center justify-content-center">
+                      {{ formatValor(obj.valor) }}
+                      <i
+                        v-if="obj.tendencia === 'up'"
+                        class="bi bi-arrow-up-short text-success fs-5"
+                        title="Aumentó"
+                      ></i>
+                      <i
+                        v-if="obj.tendencia === 'down'"
+                        class="bi bi-arrow-down-short text-danger fs-5"
+                        title="Disminuyó"
+                      ></i>
+                    </div>
+                  </td>
+                  <td class="td-valor text-center">
+                    <span
+                      v-if="
+                        fila.valores.length >= 2 &&
+                        fila.valores[fila.valores.length - 1].valor !== null &&
+                        fila.valores[fila.valores.length - 2].valor !== null
+                      "
+                      class="variacion-pill"
+                      :class="
+                        fila.valores[fila.valores.length - 1].valor -
+                          fila.valores[fila.valores.length - 2].valor >=
+                        0
+                          ? 'up'
+                          : 'down'
+                      "
+                    >
+                      {{
+                        (
+                          fila.valores[fila.valores.length - 1].valor -
+                          fila.valores[fila.valores.length - 2].valor
+                        ).toFixed(3)
+                      }}
+                    </span>
+                    <span v-else class="text-muted">—</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Leyenda -->
+          <div class="leyenda-colores mt-3">
+            <span class="leyenda-item"><span class="dot alta"></span>≥ 0.600</span>
+            <span class="leyenda-item"><span class="dot media"></span>0.450 – 0.599</span>
+            <span class="leyenda-item"><span class="dot baja"></span>&lt; 0.450</span>
+            <span class="leyenda-item text-muted ms-3 small"
+              >Valores en escala 0-1; variación en puntos absolutos</span
             >
-              {{ formatValor(val) }}
-            </td>
-            <td class="td-valor text-center">
-              <span
-                v-if="fila.valores.length >= 2"
-                class="variacion-pill"
-                :class="
-                  fila.valores[fila.valores.length - 1] - fila.valores[fila.valores.length - 2] >= 0
-                    ? 'up'
-                    : 'down'
-                "
-              >
-                {{
-                  (
-                    (fila.valores[fila.valores.length - 1] -
-                      fila.valores[fila.valores.length - 2]) *
-                    100
-                  ).toFixed(1)
-                }}
-              </span>
-              <span v-else class="text-muted">—</span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- Leyenda -->
-    <div class="leyenda-colores mt-3">
-      <span class="leyenda-item"><span class="dot alta"></span>≥ 60</span>
-      <span class="leyenda-item"><span class="dot media"></span>45 – 59.9</span>
-      <span class="leyenda-item"><span class="dot baja"></span>&lt; 45</span>
-      <span class="leyenda-item text-muted ms-3 small"
-        >Valores ×100; variación en puntos porcentuales</span
-      >
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -160,6 +244,49 @@ const colorCelda = (valor) => {
 <style scoped>
 .indice-tabla {
   animation: fadeSlideIn 0.4s ease-out;
+  padding: 1rem 0;
+}
+
+.indices-sidebar {
+  position: sticky;
+  top: 1rem;
+}
+
+.sidebar-label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #adb5bd;
+  letter-spacing: 0.1em;
+}
+
+.sidebar-item {
+  border: none !important;
+  border-radius: 8px !important;
+  margin-bottom: 2px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #495057;
+  transition: all 0.2s ease;
+}
+
+.sidebar-item:hover {
+  background-color: #f8f9fa;
+  color: var(--color-primary);
+}
+
+.sidebar-item.active {
+  background-color: var(--color-primary-light) !important;
+  color: var(--color-primary) !important;
+  font-weight: 800;
+}
+
+.ls-wide {
+  letter-spacing: 0.05em;
+}
+
+.tabla-container {
+  max-width: 800px;
 }
 
 .tabla-titulo {
@@ -182,7 +309,7 @@ const colorCelda = (valor) => {
   letter-spacing: 0.05em;
   color: var(--color-secondary);
   border-bottom: 2px solid #eef0f2;
-  padding: 0.7rem 0.8rem;
+  padding: 0.4rem 0.8rem;
   position: sticky;
   top: 0;
   z-index: 2;
@@ -220,7 +347,17 @@ const colorCelda = (valor) => {
 .td-valor {
   font-weight: 700;
   font-variant-numeric: tabular-nums;
-  padding: 0.6rem 0.8rem;
+  padding: 0.3rem 0.8rem;
+}
+
+.fila-total {
+    font-size: 0.95rem;
+    background-color: #f8f9fa;
+}
+
+.fila-total td, .fila-total th {
+    border-top: 2px solid #6c757d !important;
+    border-bottom: 2px solid #6c757d !important;
 }
 
 .celda-alta {

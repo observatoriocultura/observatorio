@@ -77,7 +77,7 @@ const initChart = () => {
     credits: {
       enabled: false,
     },
-     colors: currentPalette,
+    colors: currentPalette,
     xAxis: {
       categories: props.categorias,
       crosshair: true,
