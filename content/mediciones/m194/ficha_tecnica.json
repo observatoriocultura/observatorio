@@ -3,7 +3,7 @@
         "num":110,
         "variable":"Nombre de la encuesta",
         "nivel":1,
-        "valor":"Encuesta de Indicadores de Cultura Ciudadana y Garantía de Derechos 2024"
+        "valor":"Encuesta de Indicadores de Cultura Ciudadana y Garantía de Derechos 2025"
     },
     {
         "num":120,
@@ -81,13 +81,13 @@
         "num":200,
         "variable":"Confiabilidad",
         "nivel":1,
-        "valor":null
+        "valor":0.95
     },
     {
         "num":210,
-        "variable":"Error",
+        "variable":"Margen de error",
         "nivel":1,
-        "valor":null
+        "valor":0.018
     },
     {
         "num":230,
