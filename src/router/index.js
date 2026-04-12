@@ -9,6 +9,11 @@ import ArticleView from '../views/ArticleView.vue'
 import AdvLayout2025 from '../views/ebc/2025/icc/AdvLayout.vue'
 import LeoLayout2025 from '../views/ebc/2025/leo/AdvLayout.vue'
 import InvestigacionesView from '../views/InvestigacionesView.vue'
+import SolicitudesPai from '../views/2026/solicitudes_pai/SolicitudesPai.vue'
+import SolicitudesPortada from '../views/2026/solicitudes_pai/SolicitudesPortada.vue'
+import SolicitudesListado from '../views/2026/solicitudes_pai/SolicitudesListado.vue'
+import SolicitudesInfo from '../views/2026/solicitudes_pai/SolicitudesInfo.vue'
+import SolicitudesTablero from '../views/2026/solicitudes_pai/SolicitudesTablero.vue'
 
 const routes = [
   { path: '/', name: 'Inicio', component: HomeView, meta: { title: 'Inicio | Observatorio' } },
@@ -47,6 +52,36 @@ const routes = [
     name: 'Investigaciones',
     component: InvestigacionesView,
     meta: { title: 'Investigaciones' },
+  },
+  {
+    path: '/2026/solicitudes-pai',
+    component: SolicitudesPai,
+    children: [
+      {
+        path: '',
+        name: 'Solicitudes PAÍ 2026 Inicio',
+        component: SolicitudesPortada,
+        meta: { title: 'Solicitudes PAI | Observatorio' },
+      },
+      {
+        path: 'listado',
+        name: 'Solicitudes PAÍ 2026 Listado',
+        component: SolicitudesListado,
+        meta: { title: 'Listado Solicitudes PAI | Observatorio' },
+      },
+      {
+        path: 'detalle',
+        name: 'Solicitudes PAÍ 2026 Detalle',
+        component: SolicitudesInfo,
+        meta: { title: 'Detalle Solicitudes PAI | Observatorio' },
+      },
+      {
+        path: 'tablero',
+        name: 'Solicitudes PAÍ 2026 Tablero',
+        component: SolicitudesTablero,
+        meta: { title: 'Tablero Solicitudes PAI | Observatorio' },
+      }
+    ]
   },
   {
     path: '/:year/:slug',
