@@ -9,6 +9,7 @@
         "etiqueta_1":"R1",
         "enunciado_1":"ID",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":0,
@@ -28,6 +29,7 @@
         "etiqueta_1":"R2",
         "enunciado_1":"Caracterización del hogar",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":1,
@@ -47,6 +49,7 @@
         "etiqueta_1":"U1",
         "enunciado_1":"Sector",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":2,
@@ -66,6 +69,7 @@
         "etiqueta_1":"U2",
         "enunciado_1":"Seccion",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":3,
@@ -85,6 +89,7 @@
         "etiqueta_1":"U3",
         "enunciado_1":"Manzana",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":4,
@@ -104,6 +109,7 @@
         "etiqueta_1":"U4",
         "enunciado_1":"Clase",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":5,
@@ -123,6 +129,7 @@
         "etiqueta_1":"U5",
         "enunciado_1":"Dirección de la vivienda",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":6,
@@ -142,6 +149,7 @@
         "etiqueta_1":"U6",
         "enunciado_1":"CX",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":7,
@@ -161,6 +169,7 @@
         "etiqueta_1":"U7",
         "enunciado_1":"CY",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":8,
@@ -180,6 +189,7 @@
         "etiqueta_1":"H1",
         "enunciado_1":"Número de hogares dentro de la vivienda",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":9,
@@ -187,7 +197,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":1,
@@ -199,6 +209,7 @@
         "etiqueta_1":"H2",
         "enunciado_1":"Número de personas del hogar",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":10,
@@ -206,7 +217,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":2,
@@ -218,6 +229,7 @@
         "etiqueta_1":"H3.P1",
         "enunciado_1":"Datos Persona 1 - Jefe de Hogar",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":3,
         "indice_pregunta_bis":11,
@@ -237,6 +249,7 @@
         "etiqueta_1":"H3.P2",
         "enunciado_1":"Datos Persona 2",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":4,
         "indice_pregunta_bis":12,
@@ -256,6 +269,7 @@
         "etiqueta_1":"H3.P3",
         "enunciado_1":"Datos Persona 3",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":4,
         "indice_pregunta_bis":13,
@@ -275,6 +289,7 @@
         "etiqueta_1":"H3.P4",
         "enunciado_1":"Datos Persona 4",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":4,
         "indice_pregunta_bis":14,
@@ -294,6 +309,7 @@
         "etiqueta_1":"H3.P5",
         "enunciado_1":"Datos Persona 5",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":4,
         "indice_pregunta_bis":15,
@@ -313,6 +329,7 @@
         "etiqueta_1":"H3.P6",
         "enunciado_1":"Datos Persona 6",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":4,
         "indice_pregunta_bis":16,
@@ -332,6 +349,7 @@
         "etiqueta_1":"H3.P7",
         "enunciado_1":"Datos Persona 7",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":4,
         "indice_pregunta_bis":17,
@@ -351,6 +369,7 @@
         "etiqueta_1":"H3.P8",
         "enunciado_1":"Datos Persona 8",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":4,
         "indice_pregunta_bis":18,
@@ -370,6 +389,7 @@
         "etiqueta_1":"H3.P9",
         "enunciado_1":"Datos Persona 9",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":4,
         "indice_pregunta_bis":19,
@@ -389,6 +409,7 @@
         "etiqueta_1":"H7.1",
         "enunciado_1":"Selección de la persona a encuestar",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":20,
@@ -408,6 +429,7 @@
         "etiqueta_1":"H7.2",
         "enunciado_1":"Edad de la persona que va a encuestar",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":21,
@@ -427,6 +449,7 @@
         "etiqueta_1":"V1",
         "enunciado_1":"Localidad",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":22,
@@ -434,7 +457,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":1,
@@ -446,6 +469,7 @@
         "etiqueta_1":"V2",
         "enunciado_1":"Estrato",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":23,
@@ -453,7 +477,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":1,
@@ -465,6 +489,7 @@
         "etiqueta_1":"V3",
         "enunciado_1":"Tipo de vivienda",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":24,
@@ -484,6 +509,7 @@
         "etiqueta_1":"V4",
         "enunciado_1":"El lugar donde habita es:",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":25,
@@ -503,6 +529,7 @@
         "etiqueta_1":1,
         "enunciado_1":"Diga por favor si está en desacuerdo o de acuerdo con las siguientes afirmaciones",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":2,
         "indice_pregunta_bis":26,
@@ -522,6 +549,7 @@
         "etiqueta_1":2,
         "enunciado_1":"Frente a personas de origen social, costumbres, creencias y opiniones distintas a las suyas o de las de su hogar, usted normalmente",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":27,
@@ -529,7 +557,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":3,
@@ -541,6 +569,7 @@
         "etiqueta_1":3,
         "enunciado_1":"Diga por favor si está en desacuerdo o de acuerdo con la siguiente afirmación: \"Para educar a los niños y a las niñas está bien que los padres recurran a castigos físicos como palmadas\"",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":28,
@@ -548,7 +577,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"boolean_desc_2"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":3,
@@ -560,6 +589,7 @@
         "etiqueta_1":4,
         "enunciado_1":"Dígame por favor su nivel de acuerdo o desacuerdo con las siguientes armaciones relacionadas con discriminación y respeto a la diferencia.",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":11,
         "indice_pregunta_bis":29,
@@ -567,7 +597,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"scale_asc_4"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":3,
@@ -579,13 +609,14 @@
         "etiqueta_1":5,
         "enunciado_1":"Diga a cuáles de las siguientes personas NO le gustaría tener como vecinos(as)",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":17,
         "indice_pregunta_bis":30,
         "num_seccion_bis":3,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":"answer",
+        "dataviz_order_type":"frecuency",
         "dataviz_palette":"category"
     },
     {
@@ -598,6 +629,7 @@
         "etiqueta_1":6,
         "enunciado_1":"Usted considera que está bien que a las personas LGBTIQ, se les permita.",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":7,
         "indice_pregunta_bis":31,
@@ -617,6 +649,7 @@
         "etiqueta_1":7,
         "enunciado_1":"Ahora voy a leerle una situación. Dígame si la presenció durante el último mes. Hechos violentos de discriminación en el espacio público, hacia personas por su condición étnica, identidad de género, orientación sexual, condición de discapacidad o nivel socioeconómico",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":32,
@@ -624,7 +657,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"boolean_desc_2"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":3,
@@ -636,6 +669,7 @@
         "etiqueta_1":8,
         "enunciado_1":"¿Usted se ha sentido discriminado(a) en Bogotá durante los últimos dos años?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":33,
@@ -643,7 +677,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"boolean_desc_2"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":3,
@@ -655,6 +689,7 @@
         "etiqueta_1":9,
         "enunciado_1":"¿Cuál fue la principal razón por la que se sintió discriminado(a)?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":34,
@@ -662,7 +697,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":3,
@@ -674,6 +709,7 @@
         "etiqueta_1":"9.1",
         "enunciado_1":"¿Cuál ?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":35,
@@ -693,14 +729,15 @@
         "etiqueta_1":10,
         "enunciado_1":"Dígame por favor si está en desacuerdo o de acuerdo con las siguientes afirmaciones.",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":11,
         "indice_pregunta_bis":36,
         "num_seccion_bis":4,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":"answer",
-        "dataviz_palette":"boolean_desc_2"
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":4,
@@ -712,14 +749,15 @@
         "etiqueta_1":11,
         "enunciado_1":"Ahora voy a leerle una lista de situaciones. Dígame si las presenció durante el último mes.",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":4,
         "indice_pregunta_bis":37,
         "num_seccion_bis":4,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":"answer",
-        "dataviz_palette":"boolean_desc_2"
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":4,
@@ -731,14 +769,15 @@
         "etiqueta_1":12,
         "enunciado_1":"Dígame por favor si está en desacuerdo o de acuerdo con las siguientes afirmaciones.",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":6,
         "indice_pregunta_bis":38,
         "num_seccion_bis":4,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":"answer",
-        "dataviz_palette":"boolean_desc_2"
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":5,
@@ -750,6 +789,7 @@
         "etiqueta_1":13,
         "enunciado_1":"Dígame por favor si está en desacuerdo o de acuerdo con las siguientes afirmaciones",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":5,
         "indice_pregunta_bis":39,
@@ -769,6 +809,7 @@
         "etiqueta_1":14,
         "enunciado_1":"Por su propia iniciativa, ¿usted actualmente participa o ha participado en los últimos doce (12) meses en algún proyecto, actividad o campaña orientada al mejoramiento de…",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":8,
         "indice_pregunta_bis":40,
@@ -776,7 +817,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"boolean_asc_2"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -788,6 +829,7 @@
         "etiqueta_1":15,
         "enunciado_1":"¿De las siguientes formas de participación, dígame cuáles conoce",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":12,
         "indice_pregunta_bis":41,
@@ -807,6 +849,7 @@
         "etiqueta_1":16,
         "enunciado_1":"¿Usted en general, se siente mucho, poco o nada motivado para votar por…?",
         "instruccion":"Aplica para mayores de 18 años.",
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":10,
         "indice_pregunta_bis":42,
@@ -814,7 +857,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"scale_asc_4"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -826,6 +869,7 @@
         "etiqueta_1":17,
         "enunciado_1":"En los últimos 5 años, usted ha votado por.",
         "instruccion":"Aplica para mayores de 18 años",
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":10,
         "indice_pregunta_bis":43,
@@ -833,7 +877,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"boolean_asc_2"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -845,6 +889,7 @@
         "etiqueta_1":18,
         "enunciado_1":"¿Usted ha participado en alguno de los siguientes tipos de procesos asociativos\/ organizaciones sociales",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":6,
         "indice_pregunta_bis":44,
@@ -852,7 +897,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"boolean_asc_2"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -864,6 +909,7 @@
         "etiqueta_1":19,
         "enunciado_1":"¿Usted ha participado en alguno de los siguientes espacios promovidos por el Distrito",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":15,
         "indice_pregunta_bis":45,
@@ -871,7 +917,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"boolean_asc_2"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -883,6 +929,7 @@
         "etiqueta_1":20,
         "enunciado_1":"¿Cuál es la principal razón por la que participa?",
         "instruccion":"Solo para quienes respondieron Sí en algunas de las opciones de las preguntas 22 y 23.",
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":2,
         "indice_pregunta_bis":46,
@@ -902,6 +949,7 @@
         "etiqueta_1":"20.1",
         "enunciado_1":"Cuál ?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":0,
         "indice_pregunta_bis":47,
@@ -921,6 +969,7 @@
         "etiqueta_1":21,
         "enunciado_1":"¿Qué tan efectivo considera usted resulta participar en espacios promovidos por el Distrito para la solución de los problemas de la ciudad?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":48,
@@ -928,7 +977,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -940,6 +989,7 @@
         "etiqueta_1":22,
         "enunciado_1":"Las instituciones públicas distritales ofrecen siete condiciones que permiten facilitar el ejercicio de la participación ciudadana. Para cada una de estas califique si la considera",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":7,
         "indice_pregunta_bis":49,
@@ -959,6 +1009,7 @@
         "etiqueta_1":23,
         "enunciado_1":"¿Qué tanto cree que el Distrito facilita o incentiva la participación incidente?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":50,
@@ -966,7 +1017,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -978,6 +1029,7 @@
         "etiqueta_1":24,
         "enunciado_1":"¿Qué tan de acuerdo está con las siguientes afirmaciones?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":6,
         "indice_pregunta_bis":51,
@@ -997,6 +1049,7 @@
         "etiqueta_1":25,
         "enunciado_1":"Diga qué tan de acuerdo está con cada una de las siguientes formas para gobernar este país",
         "instruccion":"Siendo 1 nada de acuerdo y 4 totalmente de acuerdo.",
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":4,
         "indice_pregunta_bis":52,
@@ -1004,7 +1057,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"scale_asc_4"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1016,6 +1069,7 @@
         "etiqueta_1":26,
         "enunciado_1":"A la hora de votar ¿Qué tan importante es para usted...?",
         "instruccion":"Aplica solo para mayores de 18 años.",
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":7,
         "indice_pregunta_bis":53,
@@ -1023,7 +1077,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"scale_asc_4"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1035,6 +1089,7 @@
         "etiqueta_1":27,
         "enunciado_1":"Dígame por favor, ¿qué tan importante es en su vida...?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":2,
         "indice_pregunta_bis":54,
@@ -1042,7 +1097,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"scale_asc_4"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1054,6 +1109,7 @@
         "etiqueta_1":28,
         "enunciado_1":"Dígame que tanto confía en...",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":"IndicadorI+C, legado",
         "cantidad_variables":12,
         "indice_pregunta_bis":55,
@@ -1061,7 +1117,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"scale_asc_4"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1073,6 +1129,7 @@
         "etiqueta_1":29,
         "enunciado_1":"En su opinión, ¿qué tan transparentes son las decisiones que toma…",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":4,
         "indice_pregunta_bis":56,
@@ -1080,7 +1137,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"scale_asc_4"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1092,6 +1149,7 @@
         "etiqueta_1":30,
         "enunciado_1":"Qué tan libre se siente para expresar su opinión frente a la policía",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":57,
@@ -1099,7 +1157,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1111,6 +1169,7 @@
         "etiqueta_1":31,
         "enunciado_1":"¿En cuáles de las siguientes situaciones se justifica desobedecer la ley",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":9,
         "indice_pregunta_bis":58,
@@ -1118,7 +1177,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"boolean_desc_2"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1130,6 +1189,7 @@
         "etiqueta_1":32,
         "enunciado_1":"¿Para usted, qué tan justificable es evadir el pago de impuestos?",
         "instruccion":"En una escala de 1 a 4, donde 1 es “para nada justificable” y 4 es “totalmente justificable”",
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":59,
@@ -1137,7 +1197,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1149,6 +1209,7 @@
         "etiqueta_1":33,
         "enunciado_1":"Diga qué tan de acuerdo está con la afirmación:\"Los dineros que se recaudan por los impuestos se invierten totalmente en la ciudad y el bienestar de la gente\"",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":60,
@@ -1156,7 +1217,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1168,6 +1229,7 @@
         "etiqueta_1":34,
         "enunciado_1":"¿Cuántos funcionarios públicos cree usted que son corruptos?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":61,
@@ -1175,7 +1237,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1187,6 +1249,7 @@
         "etiqueta_1":35,
         "enunciado_1":"¿Cuántas personas de esta ciudad cree usted que son corruptas?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":62,
@@ -1194,7 +1257,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1206,6 +1269,7 @@
         "etiqueta_1":36,
         "enunciado_1":"¿Cuántos personas de esta ciudad cree usted que son honestas ?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":63,
@@ -1213,7 +1277,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1225,6 +1289,7 @@
         "etiqueta_1":37,
         "enunciado_1":"¿En cuantas personas cree que podría confiar?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":"IndicadorI+C, legado",
         "cantidad_variables":1,
         "indice_pregunta_bis":64,
@@ -1232,7 +1297,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1244,6 +1309,7 @@
         "etiqueta_1":38,
         "enunciado_1":"¿Cuántas personas de esta ciudad cree usted que harían trampa si se les da la oportunidad?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":65,
@@ -1251,7 +1317,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1263,6 +1329,7 @@
         "etiqueta_1":39,
         "enunciado_1":"En el último año, ha conocido (no por noticias ni redes sociales) a algún(a) servidor(a) público(a) en Bogotá que haya cometido alguna de las siguientes acciones:",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":5,
         "indice_pregunta_bis":66,
@@ -1282,6 +1349,7 @@
         "etiqueta_1":40,
         "enunciado_1":"En el último año, ha conocido (no por noticias sino en su círculo social) a alguien en Bogotá, diferente a una o un servidor(a) público, que haya cometido alguna de las siguientes acciones.",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":4,
         "indice_pregunta_bis":67,
@@ -1301,6 +1369,7 @@
         "etiqueta_1":41,
         "enunciado_1":"Cuál considera usted es el nivel de corrupción de los siguientes grupos o actores",
         "instruccion":"En una escala de 1 a 4, en la que 1 es nada corrupto y 4 muy corrupto.",
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":4,
         "indice_pregunta_bis":68,
@@ -1308,7 +1377,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"boolean_desc_4"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1320,6 +1389,7 @@
         "etiqueta_1":42,
         "enunciado_1":"Según su opinión, de los siguientes factores cuál o cuáles pueden motivar o inducir a que se presenten actos de corrupción",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":6,
         "indice_pregunta_bis":69,
@@ -1339,6 +1409,7 @@
         "etiqueta_1":43,
         "enunciado_1":"En una escala de 1 a 4, en la que 1 significa nada efectivas y 4 muy efectivas, ¿qué tan efectivas cree usted que han sido las acciones o políticas del distrito para reducir o combatir la corrupción?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":70,
@@ -1346,7 +1417,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1358,6 +1429,7 @@
         "etiqueta_1":44,
         "enunciado_1":"¿Conoce usted los canales de información pública del Distrito?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":71,
@@ -1377,6 +1449,7 @@
         "etiqueta_1":45,
         "enunciado_1":"¿Usa usted los canales de información pública del Distrito?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":72,
@@ -1396,6 +1469,7 @@
         "etiqueta_1":46,
         "enunciado_1":"¿Recomienda usted usar los canales de información pública del Distrito?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":73,
@@ -1415,6 +1489,7 @@
         "etiqueta_1":47,
         "enunciado_1":"¿Durante los últimos 12 meses, usted adelantó alguna de las siguientes acciones para defender sus derechos o los de otros?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":11,
         "indice_pregunta_bis":74,
@@ -1434,6 +1509,7 @@
         "etiqueta_1":48,
         "enunciado_1":"¿En cuáles de éstos derechos considera usted que la población adulta, entre los 29 y 59 años ha sido vulnerada en los últimos 5 años?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":7,
         "indice_pregunta_bis":75,
@@ -1453,6 +1529,7 @@
         "etiqueta_1":48,
         "enunciado_1":"Cuál ?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":0,
         "indice_pregunta_bis":76,
@@ -1472,6 +1549,7 @@
         "etiqueta_1":49,
         "enunciado_1":"¿En cuáles de éstos derechos considera usted que la población de niños o niñas entre los 5 y 12 años ha sido vulnerada en los últimos 5 años?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":7,
         "indice_pregunta_bis":77,
@@ -1491,6 +1569,7 @@
         "etiqueta_1":"49.1",
         "enunciado_1":"Cuál?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":78,
@@ -1510,6 +1589,7 @@
         "etiqueta_1":50,
         "enunciado_1":"En una escala de 1 a 4, donde 1 es Nada importante y 4 Muy importante, ¿qué tan importante es en su vida poder ayudar a otros?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":79,
@@ -1517,7 +1597,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":7,
@@ -1529,6 +1609,7 @@
         "etiqueta_1":51,
         "enunciado_1":"Por lo general usted confía en",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":5,
         "indice_pregunta_bis":80,
@@ -1548,6 +1629,7 @@
         "etiqueta_1":52,
         "enunciado_1":"Qué tan libre se siente para expresar su opinión frente a desconocidos en…",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":3,
         "indice_pregunta_bis":81,
@@ -1567,6 +1649,7 @@
         "etiqueta_1":53,
         "enunciado_1":"Dígame si en su barrio se presentan las siguientes situaciones entre vecinos…",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":13,
         "indice_pregunta_bis":82,
@@ -1586,6 +1669,7 @@
         "etiqueta_1":54,
         "enunciado_1":"Dígame por favor si está en desacuerdo o de acuerdo con la siguiente afirmación: \"Pensando en la inseguridad de la ciudad, lo mejor es tener un arma para protegerse\".",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":83,
@@ -1605,6 +1689,7 @@
         "etiqueta_1":55,
         "enunciado_1":"Dígame si usted se siente orgulloso de vivir en Bogotá",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":84,
@@ -1624,6 +1709,7 @@
         "etiqueta_1":56,
         "enunciado_1":"¿Usted cree que la mayoría de las personas habitantes de Bogotá se sienten orgullosas de la ciudad?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":85,
@@ -1643,6 +1729,7 @@
         "etiqueta_1":57,
         "enunciado_1":"Dígame qué tan orgulloso se siente de los siguientes aspectos de la ciudad:",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":10,
         "indice_pregunta_bis":86,
@@ -1662,6 +1749,7 @@
         "etiqueta_1":58,
         "enunciado_1":"¿Recomendaría usted a otra persona, vivir en Bogotá?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":87,
@@ -1681,6 +1769,7 @@
         "etiqueta_1":59,
         "enunciado_1":"De 10 personas como usted, ¿Cuántas cree que están satisfechas con su vida en Bogotá?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":88,
@@ -1688,7 +1777,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
@@ -1700,6 +1789,7 @@
         "etiqueta_1":60,
         "enunciado_1":"Principalmente, ¿qué hace cuando tiene tiempo libre?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":89,
@@ -1707,7 +1797,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
@@ -1719,13 +1809,14 @@
         "etiqueta_1":61,
         "enunciado_1":"En una escala de 1 a 4, donde 1 es Nada satisfecho(a) y 4 es Muy satisfecho(a). Cuál es su nivel de satisfacción con...",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":10,
         "indice_pregunta_bis":90,
         "num_seccion_bis":8,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":"answer",
+        "dataviz_order_type":"frecuency",
         "dataviz_palette":"category"
     },
     {
@@ -1738,6 +1829,7 @@
         "etiqueta_1":62,
         "enunciado_1":"Para usted el espacio público es un lugar",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":9,
         "indice_pregunta_bis":91,
@@ -1757,6 +1849,7 @@
         "etiqueta_1":63,
         "enunciado_1":"¿Principalmente, qué emoción le genera el estar en el espacio público de Bogotá?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":92,
@@ -1764,7 +1857,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
@@ -1776,6 +1869,7 @@
         "etiqueta_1":64,
         "enunciado_1":"¿Qué tan fácil es encontrar un servicio de baño público en Bogotá?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":93,
@@ -1783,7 +1877,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
@@ -1795,6 +1889,7 @@
         "etiqueta_1":65,
         "enunciado_1":"Ahora voy a leerle una lista de situaciones. Díga si las presenció durante la semana pasada.",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":7,
         "indice_pregunta_bis":94,
@@ -1814,13 +1909,14 @@
         "etiqueta_1":66,
         "enunciado_1":"Cómo califica los siguientes aspectos del barrio donde vive?",
         "instruccion":"En una escala de 1 a 4, donde 1 es Muy Malo y 4 es Muy Bueno. ",
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":9,
         "indice_pregunta_bis":95,
         "num_seccion_bis":8,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":"answer",
+        "dataviz_order_type":"frecuency",
         "dataviz_palette":"category"
     },
     {
@@ -1833,6 +1929,7 @@
         "etiqueta_1":67,
         "enunciado_1":"Cerca a su casa hay parques o espacios públicos recreativos",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":96,
@@ -1852,6 +1949,7 @@
         "etiqueta_1":68,
         "enunciado_1":"¿Cuánto tiempo le toma llegar desde su vivienda al parque o al lugar de encuentro más cercano?",
         "instruccion":"Tiempo en MINUTOS",
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":97,
@@ -1859,7 +1957,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
@@ -1871,14 +1969,15 @@
         "etiqueta_1":69,
         "enunciado_1":"¿Con qué frecuencia visita este parque?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":98,
         "num_seccion_bis":8,
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
-        "dataviz_order_type":"answer",
-        "dataviz_palette":"main"
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
@@ -1890,6 +1989,7 @@
         "etiqueta_1":70,
         "enunciado_1":"¿Cuál es la principal actividad que usted realiza?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":99,
@@ -1897,7 +1997,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
@@ -1909,6 +2009,7 @@
         "etiqueta_1":"70.1",
         "enunciado_1":"Cuál ?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":100,
@@ -1928,6 +2029,7 @@
         "etiqueta_1":71,
         "enunciado_1":"Los parques y espacios públicos de uso recreativos cercanos a su casa son",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":6,
         "indice_pregunta_bis":101,
@@ -1947,6 +2049,7 @@
         "etiqueta_1":72,
         "enunciado_1":"Ahora piense en el parque más cercano a su casa. ¿En ese parque, se presentan las siguientes situaciones",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":15,
         "indice_pregunta_bis":102,
@@ -1966,6 +2069,7 @@
         "etiqueta_1":73,
         "enunciado_1":"¿Usted considera que su barrio o las zonas cercanas a su vivienda son inseguros debido a dichas situaciones?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":103,
@@ -1985,6 +2089,7 @@
         "etiqueta_1":74,
         "enunciado_1":"¿De 1 a 5, donde 1 es muy insegura y 5 es muy segura qué calificación le da a esta ciudad en seguridad?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":104,
@@ -1992,7 +2097,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
@@ -2004,6 +2109,7 @@
         "etiqueta_1":75,
         "enunciado_1":"¿Cuál es la razón principal por la que considera que esta ciudad es insegura? (Elija una sola opción)",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":2,
         "indice_pregunta_bis":105,
@@ -2023,6 +2129,7 @@
         "etiqueta_1":75,
         "enunciado_1":"Cuál",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":0,
         "indice_pregunta_bis":106,
@@ -2042,6 +2149,7 @@
         "etiqueta_1":76,
         "enunciado_1":"¿Cuál es la razón principal por la que considera que esta ciudad es segura? (Elija una sola opción)",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":2,
         "indice_pregunta_bis":107,
@@ -2061,6 +2169,7 @@
         "etiqueta_1":76,
         "enunciado_1":"Cuál ?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":0,
         "indice_pregunta_bis":108,
@@ -2080,6 +2189,7 @@
         "etiqueta_1":77,
         "enunciado_1":"En términos generales, cree usted que respecto al año pasado esta ciudad es: (actualmente)",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":109,
@@ -2087,7 +2197,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
@@ -2099,12 +2209,13 @@
         "etiqueta_1":78,
         "enunciado_1":"En general, ¿usted separa los residuos que se generan en su casa?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":110,
         "num_seccion_bis":9,
         "dataviz_display":1,
-        "dataviz_chart_type":"donut",
+        "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
         "dataviz_palette":"category"
     },
@@ -2118,6 +2229,7 @@
         "etiqueta_1":79,
         "enunciado_1":"¿De 10 personas en su barrio, cuántas cree que separan los residuos?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":111,
@@ -2125,7 +2237,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
@@ -2137,6 +2249,7 @@
         "etiqueta_1":80,
         "enunciado_1":"¿Usted cree que más de la mitad de los habitantes de Bogotá separa los residuos en sus hogares?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":112,
@@ -2156,6 +2269,7 @@
         "etiqueta_1":81,
         "enunciado_1":"En una escala de 1 a 4, donde 1 es “para nada justificable” y 4 es “totalmente justificable”, ¿qué tan justificable considera usted que es arrojar elementos o residuos a la calle en horarios no permitidos?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":113,
@@ -2163,7 +2277,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
@@ -2175,6 +2289,7 @@
         "etiqueta_1":82,
         "enunciado_1":"¿Usted reutiliza envases, papel, cajas, llantas o algún otro material?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":114,
@@ -2194,6 +2309,7 @@
         "etiqueta_1":83,
         "enunciado_1":"¿Por su hogar pasa una ruta de reciclaje o una persona recicladora de oficio?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":115,
@@ -2213,6 +2329,7 @@
         "etiqueta_1":84,
         "enunciado_1":"¿En cuál de las siguientes bolsas deposita los residuos",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":13,
         "indice_pregunta_bis":116,
@@ -2220,7 +2337,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"custom_84"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
@@ -2232,6 +2349,7 @@
         "etiqueta_1":85,
         "enunciado_1":"¿En su hogar, lavan o limpian los residuos que son aprovechables (vasos de yogurt, latas, tetrapak, etc) antes de depositarlos en la caneca?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":117,
@@ -2251,6 +2369,7 @@
         "etiqueta_1":86,
         "enunciado_1":"¿Sabe usted qué es el compostaje?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":118,
@@ -2270,6 +2389,7 @@
         "etiqueta_1":87,
         "enunciado_1":"¿Usted se asegura de que los residuos organicos que genera en su hogar, sean aprovechados en proyectos de compostaje? Por ejemplo proyectos de compostaje comunitario.",
         "instruccion":"Compostaje: El compostaje es un proceso biológico aerobio (con presencia de oxígeno) que, bajo condiciones controladas, transforma los residuos orgánicos degradables en un material llamado compost, que se puede utilizar como abono orgánico.",
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":119,
@@ -2289,6 +2409,7 @@
         "etiqueta_1":88,
         "enunciado_1":"Solo para quienes respondieron Sí en la pregunta anterior ¿Dónde se ubica este proyecto de compostaje?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":120,
@@ -2296,7 +2417,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
@@ -2308,6 +2429,7 @@
         "etiqueta_1":89,
         "enunciado_1":"Cuando usted va al supermercado, ¿Cuál criterio tiene en cuenta principalmente para escoger sus productos?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":121,
@@ -2315,7 +2437,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
@@ -2327,6 +2449,7 @@
         "etiqueta_1":90,
         "enunciado_1":"En el último mes ha visto en su barrio, ¿personas que…",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":7,
         "indice_pregunta_bis":122,
@@ -2346,6 +2469,7 @@
         "etiqueta_1":91,
         "enunciado_1":"Si usted viera en la ciudad a un animal silvestre que se encuentra en peligro, ¿qué haría? (tortugas, cóndor, oso, buhos, zorrillo, etc)",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":123,
@@ -2353,7 +2477,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
@@ -2365,6 +2489,7 @@
         "etiqueta_1":92,
         "enunciado_1":"¿Qué tanto le preocupa la calidad del aire en Bogotá?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":124,
@@ -2372,7 +2497,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
@@ -2384,6 +2509,7 @@
         "etiqueta_1":93,
         "enunciado_1":"En su opinión, ¿qué tanto puede hacer usted por la calidad del aire de Bogotá?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":125,
@@ -2391,7 +2517,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
@@ -2403,6 +2529,7 @@
         "etiqueta_1":94,
         "enunciado_1":"En su opinión, para la mayoría de los habitantes de Bogotá, cuidar el ambiente y la biodiversidad de la ciudad y sus alrededores es:",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":126,
@@ -2410,7 +2537,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
@@ -2422,6 +2549,7 @@
         "etiqueta_1":95,
         "enunciado_1":"De las siguientes acciones, ¿cuál cree que más afecta las fuentes de agua, canales y ríos de la ciudad?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":127,
@@ -2429,7 +2557,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
@@ -2441,6 +2569,7 @@
         "etiqueta_1":96,
         "enunciado_1":"En una escala de 1 a 4, donde 1 es Muy Malo (MM) y 4 es Muy Bueno (MB). ¿Cómo califica el estado general de los cerros orientales? Cerros orientales: Los cerros Orientales son un conjunto orográfico situado al oriente de Bogotá, el cual sirve como frontera natural de la ciudad. A grandes líneas sigue una dirección sur-norte. Se encuentra principalmente en las zonas rurales en las localidades de Sumapaz, Usme, San Cristóbal, Santa Fe, Chapinero y Usaquén. Por ejemplo Monserrate, Guadalupe, etc.",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":128,
@@ -2448,7 +2577,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
@@ -2460,6 +2589,7 @@
         "etiqueta_1":97,
         "enunciado_1":"En el último año, ¿usted ha visitado alguno de los siguientes lugares de Bogotá",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":9,
         "indice_pregunta_bis":129,
@@ -2479,6 +2609,7 @@
         "etiqueta_1":98,
         "enunciado_1":"Dígame si su barrio cuenta con",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":8,
         "indice_pregunta_bis":130,
@@ -2496,15 +2627,16 @@
         "rol":null,
         "codigo":null,
         "etiqueta_1":99,
-        "enunciado_1":"Ahora dígame el estado en que se encuentra cada uno de ellos…",
-        "instruccion":"Responder únicamente en caso de respuesta afirmativa (\"Sí\") en la pregunta anterior",
+        "enunciado_1":"Ahora dígame el estado en que se encuentra cada uno de ellos... Responder únicamente en caso de respuesta afirmativa (\"Sí\") en la pregunta anterior",
+        "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":8,
         "indice_pregunta_bis":131,
         "num_seccion_bis":9,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":"answer",
+        "dataviz_order_type":"frecuency",
         "dataviz_palette":"category"
     },
     {
@@ -2517,12 +2649,13 @@
         "etiqueta_1":100,
         "enunciado_1":"En un recorrido habitual de la casa al trabajo o de la casa al lugar de estudio, ¿Qué medios de transporte utiliza? Selecciónelos en orden de uso:",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":3,
         "indice_pregunta_bis":132,
         "num_seccion_bis":10,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
+        "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
         "dataviz_palette":"category"
     },
@@ -2536,6 +2669,7 @@
         "etiqueta_1":101,
         "enunciado_1":"Por favor califique de 1 a 5 su nivel de satisfacción con la manera como usted se moviliza principalmente, siendo 1 la peor calificación y 5 la mejor calificación.",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":133,
@@ -2543,7 +2677,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":10,
@@ -2555,6 +2689,7 @@
         "etiqueta_1":102,
         "enunciado_1":"En un día habitual ¿cuánto tiempo se demora en llegar desde su casa hasta su punto de destino (por ejemplo al lugar de estudio o al lugar de trabajo)?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":134,
@@ -2562,7 +2697,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":10,
@@ -2574,6 +2709,7 @@
         "etiqueta_1":103,
         "enunciado_1":"Ahora voy a leerle una lista de situaciones que se presentan en la ciudad. Dígame si las presenció durante la semana pasada.",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":11,
         "indice_pregunta_bis":135,
@@ -2593,13 +2729,14 @@
         "etiqueta_1":104,
         "enunciado_1":"En una escala de 1 a 4, donde 1 es “nada justificable” y 4 es “totalmente justificable”, ¿para usted, qué tan justificable es...?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":2,
         "indice_pregunta_bis":136,
         "num_seccion_bis":10,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":"answer",
+        "dataviz_order_type":"frecuency",
         "dataviz_palette":"category"
     },
     {
@@ -2612,6 +2749,7 @@
         "etiqueta_1":105,
         "enunciado_1":"Dígame si está de acuerdo o en desacuerdo con las siguientes afirmaciones",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":137,
@@ -2619,7 +2757,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":10,
@@ -2631,6 +2769,7 @@
         "etiqueta_1":106,
         "enunciado_1":"¿Qué tan orgullo se siente de la llegada del Metro en Bogotá?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":138,
@@ -2638,7 +2777,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":10,
@@ -2650,6 +2789,7 @@
         "etiqueta_1":107,
         "enunciado_1":"¿Cómo califica la llegada del metro en Bogotá, siendo 1 nada necesaria y 4 muy necesaria?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":139,
@@ -2657,7 +2797,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":10,
@@ -2669,6 +2809,7 @@
         "etiqueta_1":108,
         "enunciado_1":"¿Usaría el Metro de Bogotá?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":140,
@@ -2688,6 +2829,7 @@
         "etiqueta_1":109,
         "enunciado_1":"En una palabra, ¿Qué cree que aportará la llegada del Metro a Bogotá?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":141,
@@ -2695,7 +2837,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":11,
@@ -2707,6 +2849,7 @@
         "etiqueta_1":110,
         "enunciado_1":"¿Cuáles características definirían a la ciudadanía que habita la Bogotá en el 2038?",
         "instruccion":"Seleccione máximo 2 opciones",
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":12,
         "indice_pregunta_bis":142,
@@ -2726,6 +2869,7 @@
         "etiqueta_1":"D1",
         "enunciado_1":"Sexo",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":143,
@@ -2745,6 +2889,7 @@
         "etiqueta_1":"D2",
         "enunciado_1":"Género",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":144,
@@ -2764,6 +2909,7 @@
         "etiqueta_1":"D3",
         "enunciado_1":"Edad (Años cumplidos)",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":145,
@@ -2771,7 +2917,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":1,
@@ -2783,6 +2929,7 @@
         "etiqueta_1":"D3.1",
         "enunciado_1":"Grupo de edad",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":146,
@@ -2790,7 +2937,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":1,
@@ -2802,6 +2949,7 @@
         "etiqueta_1":"D4",
         "enunciado_1":"Por favor dígame su lugar de nacimiento",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":147,
@@ -2821,6 +2969,7 @@
         "etiqueta_1":"D5",
         "enunciado_1":"¿Desde hace cuántos años usted habita en esta ciudad?",
         "instruccion":"Cantidad de años",
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":148,
@@ -2828,7 +2977,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":1,
@@ -2840,6 +2989,7 @@
         "etiqueta_1":"D6",
         "enunciado_1":"¿Cuál fue el principal motivo para venir a Bogotá?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":149,
@@ -2847,7 +2997,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":1,
@@ -2859,6 +3009,7 @@
         "etiqueta_1":"D7",
         "enunciado_1":"¿Cuál es su estado civil?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":150,
@@ -2866,7 +3017,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":1,
@@ -2878,6 +3029,7 @@
         "etiqueta_1":"D8",
         "enunciado_1":"Usted actualmente se dedica a:",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":2,
         "indice_pregunta_bis":151,
@@ -2897,6 +3049,7 @@
         "etiqueta_1":"D8.1",
         "enunciado_1":"Cuál ?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":0,
         "indice_pregunta_bis":152,
@@ -2916,6 +3069,7 @@
         "etiqueta_1":"D9",
         "enunciado_1":"¿Cuál fue el nivel educativo más alto alcanzado por usted?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":153,
@@ -2923,7 +3077,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":1,
@@ -2935,6 +3089,7 @@
         "etiqueta_1":"D10",
         "enunciado_1":"¿Con cuál de los siguientes grupos étnicos, raciales y\/o culturales se identifica usted?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":154,
@@ -2942,7 +3097,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":1,
@@ -2954,6 +3109,7 @@
         "etiqueta_1":"D11",
         "enunciado_1":"¿Usted tiene alguna limitación permanente para...?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":10,
         "indice_pregunta_bis":155,
@@ -2973,6 +3129,7 @@
         "etiqueta_1":"D12",
         "enunciado_1":"Por último, ¿estaría dispuesto(a) a responder una pregunta sobre su sexualidad? Si NO está dispuesto(a), termine la encuesta.",
         "instruccion":"Si dice estar dispuesto(a) a responder, por favor pásele el formulario al\/la encuestado(a) y que sea él\/ella quien marque las opciones libremente.",
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":12,
         "indice_pregunta_bis":156,
@@ -2992,6 +3149,7 @@
         "etiqueta_1":"D12",
         "enunciado_1":"¿Usted se identifica como...? Por favor marque todas aquellas con las que más se identifica.",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":0,
         "indice_pregunta_bis":157,
@@ -3011,6 +3169,7 @@
         "etiqueta_1":"D13",
         "enunciado_1":"¿Usted tiene hijos?",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":158,
@@ -3018,7 +3177,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_no_desc"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":1,
@@ -3030,6 +3189,7 @@
         "etiqueta_1":"D14",
         "enunciado_1":"Su nivel de ingreso se encuentra entre:",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":"economía, finanzas, dinero",
         "cantidad_variables":1,
         "indice_pregunta_bis":159,
@@ -3037,7 +3197,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":1,
@@ -3049,6 +3209,7 @@
         "etiqueta_1":"R3",
         "enunciado_1":"Factor",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":160,
@@ -3068,6 +3229,7 @@
         "etiqueta_1":"R4",
         "enunciado_1":"Teléfonodelencuestado",
         "instruccion":null,
+        "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":0,
         "indice_pregunta_bis":161,
