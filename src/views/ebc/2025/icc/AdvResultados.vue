@@ -7,17 +7,32 @@ import BarChart from './charts/BarChart.vue'
 import WordCloudChart from './charts/WordCloudChart.vue'
 import LocalidadesView from './localidades/LocalidadesView.vue'
 import GruposEdadView from './grupos_edad/GruposEdadView.vue'
+import SexoView from './sexos/SexoView.vue'
+import ClaseView from './clases/ClaseView.vue'
 import AdvDebug from './charts/AdvDebug.vue'
+import AdvTable from './charts/AdvTable.vue'
 import * as bootstrap from 'bootstrap'
-import { GRUPOS_EDAD as DEFAULT_GRUPOS_EDAD, getNombreGrupoEdad as defaultGetNombreGrupoEdad } from './constants'
+import {
+  GRUPOS_EDAD as DEFAULT_GRUPOS_EDAD,
+  getNombreGrupoEdad as defaultGetNombreGrupoEdad,
+  SEXOS as DEFAULT_SEXOS,
+  getNombreSexo as defaultGetNombreSexo,
+  CLASES as DEFAULT_CLASES,
+  getNombreClase as defaultGetNombreClase,
+} from './constants'
 import AdvSearchQuestion from './AdvSearchQuestion.vue'
 
 // Inyectar constantes dinámicas si están disponibles, si no usar las locales (ICC)
 const surveyConstants = inject('surveyConstants', {})
 const gruposEdad = surveyConstants.GRUPOS_EDAD || DEFAULT_GRUPOS_EDAD
 const getNombreGrupoEdad = surveyConstants.getNombreGrupoEdad || defaultGetNombreGrupoEdad
+const sexos = surveyConstants.SEXOS || DEFAULT_SEXOS
+const getNombreSexo = surveyConstants.getNombreSexo || defaultGetNombreSexo
+const clases = surveyConstants.CLASES || DEFAULT_CLASES
+const getNombreClase = surveyConstants.getNombreClase || defaultGetNombreClase
 
 const contentSection = ref('chart')
+const totalesSubView = ref('viz') // 'viz' (Gráfico) o 'table' (Tabla)
 const codigoMedicion = inject('codigoMedicion')
 const secciones = ref([])
 const preguntas = ref([])
@@ -30,6 +45,8 @@ const seccionSeleccionada = ref(null)
 const preguntaSeleccionada = ref(null)
 const localidadSeleccionada = ref(null)
 const grupoEdadSeleccionado = ref(null)
+const sexoSeleccionado = ref(null)
+const claseSeleccionada = ref(null)
 const route = useRoute()
 const router = useRouter()
 
@@ -46,6 +63,8 @@ provide('seleccionarPreguntaDesdeBuscador', (pregunta) => {
 /** Datos desagregados — null = aún no cargados (lazy load) */
 const respuestasLocalidad = ref(null)
 const respuestasEdad = ref(null)
+const respuestasSexo = ref(null)
+const respuestasClase = ref(null)
 const loadingDimension = ref(false)
 
 /** Cache en módulo: persiste mientras la SPA esté montada */
@@ -188,6 +207,14 @@ const labelFiltroActivo = computed(() => {
   }
   if (grupoEdadSeleccionado.value) {
     const nombre = getNombreGrupoEdad(grupoEdadSeleccionado.value)
+    return ` (${nombre})`
+  }
+  if (sexoSeleccionado.value) {
+    const nombre = getNombreSexo(sexoSeleccionado.value)
+    return ` (${nombre})`
+  }
+  if (claseSeleccionada.value) {
+    const nombre = getNombreClase(claseSeleccionada.value)
     return ` (${nombre})`
   }
   return ''
@@ -378,6 +405,12 @@ const actualizarRespuestas = () => {
     fuente = respuestasEdad.value.filter(
       (r) => Number(r.grupo_edad_pp_cod) === Number(grupoEdadSeleccionado.value),
     )
+  } else if (sexoSeleccionado.value && respuestasSexo.value) {
+    fuente = respuestasSexo.value.filter((r) => Number(r.sexo) === Number(sexoSeleccionado.value))
+  } else if (claseSeleccionada.value && respuestasClase.value) {
+    fuente = respuestasClase.value.filter(
+      (r) => Number(r.clase) === Number(claseSeleccionada.value),
+    )
   }
 
   // 2. Filtrar por pregunta seleccionada
@@ -406,6 +439,8 @@ const actualizarRespuestas = () => {
 watch(localidadSeleccionada, async (nuevaLocalidad) => {
   if (nuevaLocalidad) {
     grupoEdadSeleccionado.value = null // resetear otro filtro
+    sexoSeleccionado.value = null // resetear otro filtro
+    claseSeleccionada.value = null
     await cargarDimension('respuestas_localidad.json', respuestasLocalidad)
   }
   actualizarRespuestas()
@@ -416,7 +451,33 @@ watch(localidadSeleccionada, async (nuevaLocalidad) => {
 watch(grupoEdadSeleccionado, async (nuevoGrupo) => {
   if (nuevoGrupo) {
     localidadSeleccionada.value = null // resetear otro filtro
+    sexoSeleccionado.value = null // resetear otro filtro
+    claseSeleccionada.value = null
     await cargarDimension('respuestas_edad.json', respuestasEdad)
+  }
+  actualizarRespuestas()
+  actualizarSeries()
+})
+
+/** Cuando cambia el sexo */
+watch(sexoSeleccionado, async (nuevoSexo) => {
+  if (nuevoSexo) {
+    localidadSeleccionada.value = null // resetear otro filtro
+    grupoEdadSeleccionado.value = null // resetear otro filtro
+    claseSeleccionada.value = null
+    await cargarDimension('respuestas_sexo.json', respuestasSexo)
+  }
+  actualizarRespuestas()
+  actualizarSeries()
+})
+
+/** Cuando cambia la clase */
+watch(claseSeleccionada, async (nuevaClase) => {
+  if (nuevaClase) {
+    localidadSeleccionada.value = null
+    grupoEdadSeleccionado.value = null
+    sexoSeleccionado.value = null
+    await cargarDimension('respuestas_clase.json', respuestasClase)
   }
   actualizarRespuestas()
   actualizarSeries()
@@ -428,6 +489,10 @@ watch(contentSection, async (nuevaSeccion) => {
     await cargarDimension('respuestas_localidad.json', respuestasLocalidad)
   } else if (nuevaSeccion === 'edades') {
     await cargarDimension('respuestas_edad.json', respuestasEdad)
+  } else if (nuevaSeccion === 'sexos') {
+    await cargarDimension('respuestas_sexo.json', respuestasSexo)
+  } else if (nuevaSeccion === 'clases') {
+    await cargarDimension('respuestas_clase.json', respuestasClase)
   }
 })
 </script>
@@ -552,7 +617,25 @@ watch(contentSection, async (nuevaSeccion) => {
                 :class="{ active: contentSection === 'edades' }"
                 @click="contentSection = 'edades'"
               >
-                <i class="bi bi-people me-1"></i>Grupos de Edad
+                <i class="bi bi-person-vcard me-1"></i>Grupos de Edad
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="nav-link"
+                :class="{ active: contentSection === 'sexos' }"
+                @click="contentSection = 'sexos'"
+              >
+                <i class="bi bi-people me-1"></i>Sexo
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="nav-link"
+                :class="{ active: contentSection === 'clases' }"
+                @click="contentSection = 'clases'"
+              >
+                <i class="bi bi-house-door me-1"></i>Clase Vivienda
               </button>
             </li>
             <li class="nav-item">
@@ -567,8 +650,34 @@ watch(contentSection, async (nuevaSeccion) => {
           </ul>
 
           <section class="section-filters mb-4 px-1" v-if="contentSection === 'chart'">
-            <div class="row align-items-center g-3">
-              <div class="col-md-5">
+            <div class="row align-items-center g-2 g-md-3">
+              <!-- SUB-MENU DE ICONOS (A LA IZQUIERDA) -->
+              <div class="col-auto">
+                <div class="view-toggle-group shadow-sm">
+                  <button
+                    class="btn btn-view btn-sm px-3"
+                    :class="{ active: totalesSubView === 'viz' }"
+                    @click="totalesSubView = 'viz'"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Ver Visualización Gráfica"
+                  >
+                    <i class="bi bi-bar-chart-fill"></i>
+                  </button>
+                  <button
+                    class="btn btn-view btn-sm px-3"
+                    :class="{ active: totalesSubView === 'table' }"
+                    @click="totalesSubView = 'table'"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Ver Tabla de Datos"
+                  >
+                    <i class="bi bi-table"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="col-md">
                 <select
                   v-model="localidadSeleccionada"
                   class="form-select select-premium"
@@ -576,9 +685,9 @@ watch(contentSection, async (nuevaSeccion) => {
                   :disabled="loadingDimension"
                   data-bs-toggle="tooltip"
                   data-bs-placement="top"
-                  title="Filtra los resultados generales por una localidad específica de Bogotá"
+                  title="Filtra los resultados generales por localidad"
                 >
-                  <option :value="null">Todas las localidades (Total)</option>
+                  <option :value="null">Todas las localidades</option>
                   <option
                     v-for="localidad in localidades"
                     :key="localidad.localidad_cod"
@@ -588,7 +697,7 @@ watch(contentSection, async (nuevaSeccion) => {
                   </option>
                 </select>
               </div>
-              <div class="col-md-4">
+              <div class="col-md">
                 <select
                   v-model="grupoEdadSeleccionado"
                   class="form-select select-premium"
@@ -604,7 +713,39 @@ watch(contentSection, async (nuevaSeccion) => {
                   </option>
                 </select>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-2 text-nowrap">
+                <select
+                  v-model="sexoSeleccionado"
+                  class="form-select select-premium"
+                  :class="{ 'active-filter': sexoSeleccionado !== null }"
+                  :disabled="loadingDimension"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Filtra los resultados por sexo"
+                >
+                  <option :value="null">Sexos</option>
+                  <option v-for="sexo in sexos" :key="sexo.id" :value="sexo.id">
+                    {{ sexo.nombre }}
+                  </option>
+                </select>
+              </div>
+              <div class="col-md-2">
+                <select
+                  v-model="claseSeleccionada"
+                  class="form-select select-premium"
+                  :class="{ 'active-filter': claseSeleccionada !== null }"
+                  :disabled="loadingDimension"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Filtra por clase de vivienda"
+                >
+                  <option :value="null">Todas las clases de vivienda</option>
+                  <option v-for="clase in clases" :key="clase.id" :value="clase.id">
+                    {{ clase.nombre }}
+                  </option>
+                </select>
+              </div>
+              <div class="col-auto">
                 <div
                   v-if="loadingDimension"
                   class="text-muted small d-flex align-items-center gap-1 text-nowrap"
@@ -614,15 +755,18 @@ watch(contentSection, async (nuevaSeccion) => {
                     role="status"
                     aria-hidden="true"
                   ></span>
-                  Cargando...
                 </div>
               </div>
             </div>
           </section>
 
-          <!-- MOSTRAR GRÁFICO SEGÚN EL TIPO DE PREGUNTA -->
+          <!-- MOSTRAR CONTENIDO DE TOTALES (GRÁFICO O TABLA) -->
           <div v-if="contentSection === 'chart'" class="mt-4">
-            <div class="graph-container card-premium overflow-hidden">
+            <!-- 1. VISTA DE GRÁFICOS -->
+            <div
+              v-if="totalesSubView === 'viz'"
+              class="graph-container card-premium overflow-hidden"
+            >
               <div class="card-body p-0">
                 <!-- TIPO DE GRÁFICO BAR MULTIPLE -->
                 <BarMultipleChart
@@ -679,6 +823,16 @@ watch(contentSection, async (nuevaSeccion) => {
                 </div>
               </div>
             </div>
+
+            <!-- 2. VISTA DE TABLA PÚBLICA -->
+            <div v-if="totalesSubView === 'table'">
+              <AdvTable
+                :variablesFiltradas="variablesFiltradas"
+                :respuestasPregunta="respuestasPregunta"
+                :sumatoriaFactor="sumatoriaFactor"
+                :posiblesRespuestas="posiblesRespuestas"
+              />
+            </div>
           </div>
 
           <!-- MOSTRAR TABLA DE DATOS (DEBUG) -->
@@ -707,6 +861,26 @@ watch(contentSection, async (nuevaSeccion) => {
               :variables="variablesFiltradas"
               :posiblesRespuestas="posiblesRespuestas"
               :respuestasEdad="respuestasEdad"
+              :loading="loadingDimension"
+            />
+          </div>
+
+          <div v-if="contentSection === 'sexos'">
+            <SexoView
+              :preguntaSeleccionada="preguntaSeleccionada"
+              :variables="variablesFiltradas"
+              :posiblesRespuestas="posiblesRespuestas"
+              :respuestasSexo="respuestasSexo"
+              :loading="loadingDimension"
+            />
+          </div>
+
+          <div v-if="contentSection === 'clases'">
+            <ClaseView
+              :preguntaSeleccionada="preguntaSeleccionada"
+              :variables="variablesFiltradas"
+              :posiblesRespuestas="posiblesRespuestas"
+              :respuestasClase="respuestasClase"
               :loading="loadingDimension"
             />
           </div>
@@ -1097,5 +1271,32 @@ watch(contentSection, async (nuevaSeccion) => {
   font-weight: 800 !important;
   border-bottom: 2px solid #ffca28 !important;
   border-radius: 0;
+}
+
+.view-toggle-group {
+  display: flex;
+  background: #f1f5f9;
+  padding: 4px;
+  border-radius: 14px;
+}
+
+.btn-view {
+  border: none;
+  background: transparent;
+  color: #64748b;
+  padding: 8px 16px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.btn-view:hover {
+  color: #32204a;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.btn-view.active {
+  background: #ffffff;
+  color: #32204a;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 </style>

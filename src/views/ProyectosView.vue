@@ -3,6 +3,14 @@ import { RouterLink } from 'vue-router'
 
 const projects = [
   {
+    title: 'Encuesta de Cultura Ciudadana y Garantía de Derechos 2025',
+    excerpt:
+      'Encuesta de Cultura Ciudadana y Garantía de Derechos 2025, resultados del índice y subíndices de cultura ciudadana: Convivencia, espacio público, movilidad, participación y más.',
+    link: '/ebc/encuesta-cultura-ciudadana-2025',
+    tag: 'Análisis 2026',
+    date: 'Abril 2026',
+  },
+  {
     title: 'Lectura, Escritura y Oralidad (LEO) 2025',
     excerpt:
       'Estudio de percepciones y expectativas ciudadanas sobre lectura, escritura y oralidad en Bogotá.',

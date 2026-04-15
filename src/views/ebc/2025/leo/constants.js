@@ -15,6 +15,20 @@ export const getNombreGrupoEdad = (id) => {
 }
 
 /**
+ * Sexos
+ */
+export const SEXOS = [
+  { id: 1, nombre: 'Hombre' },
+  { id: 2, nombre: 'Mujer' },
+]
+
+/** Helper para obtener el nombre de un sexo por su CÓDIGO */
+export const getNombreSexo = (id) => {
+  const sexo = SEXOS.find((s) => Number(s.id) === Number(id))
+  return sexo ? sexo.nombre : `Sexo ${id}`
+}
+
+/**
  * Paleta de colores para gráficos, según las opciones de respuesta de cada pregunta
  * 2026-03-29
  */
@@ -101,10 +115,13 @@ export const MENU_PRINCIPAL = [
  * Imágenes para el carrusel de la portada del tablero
  */
 export const IMAGES_CAROUSEL = [
-  'oralidad.png',
-  'oralidad-3.jpg',
+  'espacios-1.jpg',
   'lectura-1.jpg',
   'lectura-2.jpg',
   'escritura-1.jpg',
+  'escritura-2.jpg',
+  'espacios-2.jpg',
+  'oralidad-1.jpg',
+  'oralidad-3.jpg',
   'oralidad-2.jpg',
 ]

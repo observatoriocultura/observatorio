@@ -10,30 +10,29 @@ const props = defineProps({
 
 const localidadSeleccionada = ref(null)
 
-/** Sub-índices (excluye el índice general num=0, key='indice') */
+/** Sub-indices (excluye el indice general num=0, key='indice') */
 const subIndices = computed(() => props.indices.filter((i) => i.key !== 'indice'))
 
-/** Índice general (key='indice', num=0) */
+/** Indice general (key='indice', num=0) */
 const indiceGeneral = computed(() => props.indices.find((i) => i.key === 'indice'))
 
-/** Datos de la localidad activa (o Bogotá D.C. si no hay selección) */
+/** Datos de la localidad activa (o Bogota D.C. si no hay seleccion) */
 const datosActivos = computed(() => {
   const cod = localidadSeleccionada.value
   if (cod !== null) {
     return props.datosPorLocalidad.find((d) => d.localidad_cod === cod) || null
   }
-  // Bogotá D.C. = cod 22
   return props.datosPorLocalidad.find((d) => d.localidad_cod === 22) || null
 })
 
-/** Valor del último periodo para un índice dado (usa cod = indice_cod de icc.json) */
+/** Valor del ultimo periodo para un indice dado (usa cod = indice_cod de icc.json) */
 const ultimoValor = (indice_cod) => {
   if (!datosActivos.value) return null
   const vals = datosActivos.value.indices[indice_cod]
   return vals ? vals[vals.length - 1] : null
 }
 
-/** Variación respecto al periodo anterior */
+/** Variacion respecto al periodo anterior */
 const variacion = (indice_cod) => {
   if (!datosActivos.value) return null
   const vals = datosActivos.value.indices[indice_cod]
@@ -41,47 +40,119 @@ const variacion = (indice_cod) => {
   return vals[vals.length - 1] - vals[vals.length - 2]
 }
 
-/** Color de barra según el valor (0-1) */
+/** Color de barra segun el valor (0-1) */
 const colorBarra = (valor) => {
-  if (valor === null) return '#e2e8f0'
+  if (valor === null || valor === undefined) return '#e2e8f0'
   if (valor >= 0.6) return '#48bb78'
   if (valor >= 0.45) return '#ecc94b'
   return '#f56565'
 }
 
-/** Formato porcentual */
+const getColor = (key) => {
+  const colors = {
+    indice: '#654096',
+    inclusion: '#FF9800',
+    genero: '#AB47BC',
+    politica: '#2196F3',
+    convivencia: '#FF4081',
+    espacio: '#00BCD4',
+    ambiental: '#4CAF50',
+    movilidad: '#78909C',
+  }
+  return colors[key] || '#6c757d'
+}
+
+const getIcon = (key) => {
+  const icons = {
+    indice: 'bi-speedometer2',
+    inclusion: 'bi-people-fill',
+    genero: 'bi-gender-ambiguous',
+    politica: 'bi-bank',
+    convivencia: 'bi-chat-heart',
+    espacio: 'bi-tree',
+    ambiental: 'bi-leaf',
+    movilidad: 'bi-bicycle',
+  }
+  return icons[key] || 'bi-info-circle'
+}
+
 const formatValor = (v) => {
   if (v === null || v === undefined) return '—'
-  return (v * 100).toFixed(1)
+  return Number(v).toFixed(3)
+}
+
+const formatVariacion = (v) => {
+  if (v === null || v === undefined) return '—'
+  return Math.abs(Number(v)).toFixed(3)
+}
+
+const barraWidth = (v) => {
+  const value = Number(v)
+  if (!Number.isFinite(value)) return '0%'
+  return `${Math.min(Math.max(value, 0), 1) * 100}%`
 }
 </script>
 
 <template>
   <div class="indice-resumen">
-    <!-- Filtro de localidad -->
-    <div class="filtro-localidad mb-4">
-      <select
-        v-model="localidadSeleccionada"
-        class="form-select select-premium"
-        :class="{ 'active-filter': localidadSeleccionada !== null }"
-      >
-        <option :value="null">Bogotá D.C. (Total)</option>
-        <option v-for="loc in localidades" :key="loc.cod" :value="loc.cod">
-          {{ loc.nombre }}
-        </option>
-      </select>
+    <div class="resumen-toolbar mb-4">
+      <div>
+        <p class="eyebrow mb-1">Resumen ICC</p>
+        <h3 class="resumen-title mb-0">Qué mide cada índice y cómo va</h3>
+        <p class="resumen-intro mb-0">
+          Consulta la definición y el resultado más reciente en escala 0 - 1.
+        </p>
+      </div>
+      <div class="filtro-localidad">
+        <label class="form-label" for="localidad-resumen">Localidad</label>
+        <select
+          id="localidad-resumen"
+          v-model="localidadSeleccionada"
+          class="form-select select-premium"
+          :class="{ 'active-filter': localidadSeleccionada !== null }"
+        >
+          <option :value="null">Bogotá D.C. (Total)</option>
+          <option v-for="loc in localidades" :key="loc.cod" :value="loc.cod">
+            {{ loc.nombre }}
+          </option>
+        </select>
+      </div>
     </div>
 
-    <!-- Tarjeta del índice general -->
-    <div v-if="indiceGeneral && datosActivos" class="card-icc-general card-premium mb-4">
+    <div
+      v-if="indiceGeneral && datosActivos"
+      class="card-icc-general card-premium mb-4"
+      :style="{ '--indice-color': getColor(indiceGeneral.key) }"
+    >
       <div class="general-inner">
-        <div class="general-label">
-          <i class="bi bi-award me-2"></i>{{ indiceGeneral.nombre }}
+        <div class="general-icon" aria-hidden="true">
+          <i :class="getIcon(indiceGeneral.key)"></i>
         </div>
-        <div class="general-abrev">{{ indiceGeneral.abreviatura }}</div>
+        <div class="general-heading">
+          <div class="general-label">
+            {{ indiceGeneral.nombre }}
+          </div>
+          <div class="general-abrev">{{ indiceGeneral.abreviatura }}</div>
+        </div>
+
         <div class="general-valor">
           {{ formatValor(ultimoValor(indiceGeneral.cod)) }}
         </div>
+
+        <div class="general-scale">
+          <span>0.000</span>
+          <div class="general-scale-track">
+            <div
+              class="general-scale-fill"
+              :style="{
+                width: barraWidth(ultimoValor(indiceGeneral.cod)),
+                backgroundColor: colorBarra(ultimoValor(indiceGeneral.cod)),
+              }"
+            ></div>
+          </div>
+          <span>1.000</span>
+        </div>
+
         <div class="general-meta">
           <span
             v-if="variacion(indiceGeneral.cod) !== null"
@@ -95,19 +166,31 @@ const formatValor = (v) => {
                   : 'bi bi-arrow-down-short'
               "
             ></i>
-            {{ (variacion(indiceGeneral.cod) * 100).toFixed(1) }} pp
+            {{ formatVariacion(variacion(indiceGeneral.cod)) }}
           </span>
           <span class="periodo-label">vs. periodo anterior</span>
         </div>
+
+        <p v-if="indiceGeneral.descripcion" class="general-descripcion mb-0">
+          {{ indiceGeneral.descripcion }}
+        </p>
       </div>
     </div>
 
-    <!-- Grid de sub-índices -->
     <div class="subindices-grid">
-      <div v-for="idx in subIndices" :key="idx.cod" class="subindice-card card-premium">
+      <div
+        v-for="idx in subIndices"
+        :key="idx.cod"
+        class="subindice-card card-premium"
+        :style="{ '--indice-color': getColor(idx.key) }"
+      >
         <div class="subindice-header-row">
-          <span class="subindice-abrev">{{ idx.abreviatura }}</span>
-          <span class="subindice-nombre-corto">{{ idx.nombre_corto }}</span>
+          <span class="subindice-icon" aria-hidden="true">
+            <i :class="getIcon(idx.key)"></i>
+          </span>
+          <div class="subindice-heading">
+            <span class="subindice-nombre-corto">{{ idx.nombre_corto }}</span>
+          </div>
         </div>
         <div class="subindice-nombre">{{ idx.nombre }}</div>
         <div class="subindice-valor-row">
@@ -120,18 +203,21 @@ const formatValor = (v) => {
             <i
               :class="variacion(idx.cod) >= 0 ? 'bi bi-caret-up-fill' : 'bi bi-caret-down-fill'"
             ></i>
-            {{ Math.abs(variacion(idx.cod) * 100).toFixed(1) }}
+            {{ formatVariacion(variacion(idx.cod)) }}
           </span>
         </div>
         <div class="subindice-barra-bg">
           <div
             class="subindice-barra-fill"
             :style="{
-              width: (ultimoValor(idx.cod) || 0) * 100 + '%',
+              width: barraWidth(ultimoValor(idx.cod)),
               backgroundColor: colorBarra(ultimoValor(idx.cod)),
             }"
           ></div>
         </div>
+        <p v-if="idx.descripcion" class="subindice-descripcion">
+          {{ idx.descripcion }}
+        </p>
       </div>
     </div>
   </div>
@@ -140,176 +226,311 @@ const formatValor = (v) => {
 <style scoped>
 .indice-resumen {
   animation: fadeSlideIn 0.4s ease-out;
+  padding: 0.25rem 0;
+}
+
+.resumen-toolbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #edf0f2;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(33, 37, 41, 0.05);
+}
+
+.eyebrow {
+  color: #6c757d;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.resumen-title {
+  color: #212529;
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.resumen-intro {
+  color: #6c757d;
+  font-size: 0.86rem;
+  margin-top: 0.25rem;
 }
 
 .filtro-localidad {
-  max-width: 400px;
+  min-width: min(360px, 100%);
 }
 
-/* ── Tarjeta índice general ── */
-.card-icc-general {
-  background: linear-gradient(135deg, #32204a 0%, #4a3068 100%);
-  color: #fff;
-  border-radius: var(--radius-premium);
-  padding: 1.5rem 2rem;
-}
-
-.general-inner {
-  text-align: center;
-}
-
-.general-label {
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  opacity: 0.85;
+.form-label {
+  color: #495057;
+  font-size: 0.76rem;
+  font-weight: 800;
   margin-bottom: 0.25rem;
 }
 
+.select-premium {
+  border-color: #dfe3e6;
+  border-radius: 8px;
+  color: #212529;
+  font-weight: 600;
+}
+
+.select-premium:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 0.18rem rgba(101, 64, 150, 0.12);
+}
+
+.card-icc-general {
+  background: #fff;
+  border: 1px solid #edf0f2;
+  border-left: 6px solid var(--indice-color, var(--color-primary));
+  border-radius: 8px;
+  color: #212529;
+  padding: 1.4rem 1.6rem;
+  box-shadow: 0 6px 22px rgba(33, 37, 41, 0.06);
+}
+
+.general-inner {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.5rem 1.5rem;
+}
+
+.general-icon {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  color: #fff;
+  background: var(--indice-color, var(--color-primary));
+  border-radius: 8px;
+  font-size: 1.5rem;
+}
+
+.general-heading {
+  min-width: 0;
+}
+
+.general-label {
+  color: #495057;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
 .general-abrev {
+  color: var(--indice-color, var(--color-primary));
   font-size: 0.7rem;
   font-weight: 800;
-  letter-spacing: 0.15em;
-  opacity: 0.5;
-  margin-bottom: 0.5rem;
+  letter-spacing: 0.08em;
+  margin-top: 0.25rem;
+  text-transform: uppercase;
 }
 
 .general-valor {
-  font-size: 3rem;
+  color: #343a40;
+  font-size: 3.4rem;
   font-weight: 900;
+  letter-spacing: 0;
   line-height: 1;
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.02em;
+  text-align: right;
+}
+
+.general-scale {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.7rem;
+  color: #6c757d;
+  font-size: 0.72rem;
+  font-weight: 700;
+  margin-top: 0.6rem;
+}
+
+.general-scale-track {
+  height: 8px;
+  background: #edf0f2;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.general-scale-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.6s ease;
 }
 
 .general-meta {
+  grid-column: 1 / -1;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 0.5rem;
+  margin-top: 0.35rem;
   font-size: 0.8rem;
 }
 
-.variacion-badge {
+.variacion-badge,
+.variacion-mini {
   display: inline-flex;
   align-items: center;
-  gap: 2px;
-  padding: 0.15rem 0.5rem;
-  border-radius: 20px;
+  border-radius: 8px;
   font-weight: 700;
+}
+
+.variacion-badge {
+  gap: 2px;
+  padding: 0.2rem 0.55rem;
   font-size: 0.78rem;
 }
 
-.variacion-badge.up {
-  background: rgba(72, 187, 120, 0.25);
-  color: #9ae6b4;
+.variacion-badge.up,
+.variacion-mini.up {
+  background: rgba(72, 187, 120, 0.13);
+  color: #1f7a43;
 }
 
-.variacion-badge.down {
-  background: rgba(245, 101, 101, 0.25);
-  color: #feb2b2;
+.variacion-badge.down,
+.variacion-mini.down {
+  background: rgba(245, 101, 101, 0.13);
+  color: #c53030;
 }
 
 .periodo-label {
-  opacity: 0.6;
+  color: #6c757d;
   font-size: 0.75rem;
 }
 
-/* ── Grid de sub-índices ── */
+.general-descripcion {
+  grid-column: 1 / -1;
+  color: #495057;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  margin-top: 0.35rem;
+  padding-top: 0.95rem;
+  border-top: 1px solid #edf0f2;
+}
+
 .subindices-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 1rem;
 }
 
 .subindice-card {
-  padding: 1.2rem 1.3rem;
+  background: #fff;
+  border: 1px solid #edf0f2;
+  border-top: 4px solid var(--indice-color, var(--color-primary));
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 1.1rem;
   transition:
     transform 0.2s ease,
+    border-color 0.2s ease,
     box-shadow 0.2s ease;
 }
 
 .subindice-card:hover {
+  border-color: rgba(33, 37, 41, 0.1);
+  border-top-color: var(--indice-color, var(--color-primary));
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(50, 32, 74, 0.08);
+  box-shadow: 0 8px 22px rgba(33, 37, 41, 0.07);
 }
 
 .subindice-header-row {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 0.4rem;
 }
 
-.subindice-abrev {
-  font-size: 0.6rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
+.subindice-icon {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
   color: #fff;
-  background: var(--color-primary);
-  padding: 0.1rem 0.4rem;
-  border-radius: 4px;
-  text-transform: uppercase;
+  background: var(--indice-color, var(--color-primary));
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.subindice-heading {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  min-width: 0;
 }
 
 .subindice-nombre-corto {
+  color: var(--color-muted);
   font-size: 0.72rem;
   font-weight: 700;
-  color: var(--color-muted);
+  letter-spacing: 0.03em;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
 }
 
 .subindice-nombre {
-  font-size: 0.82rem;
+  color: #343a40;
+  font-size: 0.86rem;
   font-weight: 700;
-  color: var(--color-primary);
+  line-height: 1.35;
   margin-bottom: 0.6rem;
-  line-height: 1.3;
+  min-height: 2.35em;
+}
+
+.subindice-descripcion {
+  color: #5c6972;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  margin: 0.9rem 0 0;
 }
 
 .subindice-valor-row {
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
   gap: 0.5rem;
   margin-bottom: 0.6rem;
 }
 
 .subindice-valor {
-  font-size: 1.8rem;
+  color: #343a40;
+  font-size: 1.9rem;
   font-weight: 900;
-  color: var(--color-primary);
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
   line-height: 1;
 }
 
 .variacion-mini {
-  font-size: 0.7rem;
-  font-weight: 700;
-  display: inline-flex;
-  align-items: center;
   gap: 1px;
-}
-
-.variacion-mini.up {
-  color: #38a169;
-}
-
-.variacion-mini.down {
-  color: #e53e3e;
+  padding: 0.18rem 0.45rem;
+  font-size: 0.72rem;
 }
 
 .subindice-barra-bg {
-  height: 6px;
+  height: 8px;
   background: #f0f0f4;
-  border-radius: 3px;
+  border-radius: 4px;
   overflow: hidden;
 }
 
 .subindice-barra-fill {
   height: 100%;
-  border-radius: 3px;
+  border-radius: 4px;
   transition: width 0.6s ease;
 }
 
@@ -325,11 +546,33 @@ const formatValor = (v) => {
 }
 
 @media (max-width: 600px) {
+  .resumen-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .filtro-localidad {
+    min-width: 100%;
+  }
   .subindices-grid {
     grid-template-columns: 1fr;
   }
+  .general-inner {
+    grid-template-columns: 1fr;
+  }
+  .general-icon {
+    width: 46px;
+    height: 46px;
+  }
   .general-valor {
-    font-size: 2.4rem;
+    font-size: 2.6rem;
+    text-align: left;
+  }
+  .subindice-descripcion,
+  .subindice-nombre {
+    min-height: 0;
+  }
+  .general-meta {
+    justify-content: flex-start;
   }
   .card-icc-general {
     padding: 1.2rem;

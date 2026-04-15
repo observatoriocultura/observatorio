@@ -15,6 +15,34 @@ export const getNombreGrupoEdad = (id) => {
 }
 
 /**
+ * Sexos
+ */
+export const SEXOS = [
+  { id: 1, nombre: 'Hombre' },
+  { id: 2, nombre: 'Mujer' },
+]
+
+/** Helper para obtener el nombre de un sexo por su CÓDIGO */
+export const getNombreSexo = (id) => {
+  const sexo = SEXOS.find((s) => Number(s.id) === Number(id))
+  return sexo ? sexo.nombre : `Sexo ${id}`
+}
+
+/**
+ * Clases de vivienda
+ */
+export const CLASES = [
+  { id: 1, nombre: 'Urbano' },
+  { id: 2, nombre: 'Rural' },
+]
+
+/** Helper para obtener el nombre de una clase por su CÓDIGO */
+export const getNombreClase = (id) => {
+  const clase = CLASES.find((s) => Number(s.id) === Number(id))
+  return clase ? clase.nombre : `Clase ${id}`
+}
+
+/**
  * Paleta de colores para gráficos, según las opciones de respuesta de cada pregunta
  * 2026-03-29
  */
