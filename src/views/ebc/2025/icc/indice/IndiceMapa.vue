@@ -20,6 +20,10 @@ const selectedYear = ref(2025)
 const selectedIndex = ref(null)
 let chartInstance = null
 
+const TOP_COLOR = '#DBF0E0'
+const BOTTOM_COLOR = '#F3BEC4'
+const DEFAULT_COLOR = '#FFF0C1'
+
 const availableYears = computed(() => {
   const years = new Set()
   props.iccData.forEach((d) => {
@@ -54,7 +58,7 @@ const bogotaValue = computed(() => {
   return record ? Number(record.valor) : null
 })
 
-const dataMap = computed(() => {
+const baseMapData = computed(() => {
   if (selectedIndex.value === null || !selectedYear.value) return []
 
   return props.localidades
@@ -81,9 +85,42 @@ const dataMap = computed(() => {
     .filter(Boolean)
 })
 
+const highlightedKeys = computed(() => {
+  const sortedDesc = [...baseMapData.value].sort((a, b) => b.value - a.value)
+  const sortedAsc = [...baseMapData.value].sort((a, b) => a.value - b.value)
+
+  return {
+    top: new Set(sortedDesc.slice(0, 3).map((item) => item['hc-key'])),
+    bottom: new Set(sortedAsc.slice(0, 3).map((item) => item['hc-key'])),
+  }
+})
+
+const getHighlightType = (item) => {
+  if (highlightedKeys.value.top.has(item['hc-key'])) return 'top'
+  if (highlightedKeys.value.bottom.has(item['hc-key'])) return 'bottom'
+  return 'middle'
+}
+
+const getHighlightColor = (item) => {
+  const type = getHighlightType(item)
+  if (type === 'top') return TOP_COLOR
+  if (type === 'bottom') return BOTTOM_COLOR
+  return DEFAULT_COLOR
+}
+
+const dataMap = computed(() => {
+  return baseMapData.value.map((item) => ({
+    ...item,
+    color: getHighlightColor(item),
+    highlightType: getHighlightType(item),
+  }))
+})
+
 const rankedData = computed(() => {
   return [...dataMap.value].sort((a, b) => b.value - a.value)
 })
+
+const getRowClass = (item) => `row-${item.highlightType}`
 
 const formatValue = (value) => {
   if (value === null || value === undefined || Number.isNaN(Number(value))) return '—'
@@ -118,26 +155,8 @@ const initChart = async () => {
         verticalAlign: 'bottom',
       },
     },
-    colorAxis: {
-      min: 0,
-      max: 1,
-      stops: [
-        [0, '#F0ACAC'],
-        [0.5, '#FEF1C5'],
-        [1, '#DBEDD8'],
-      ],
-      labels: {
-        format: '{value:.1f}',
-        style: { color: '#64748b', fontWeight: '700' },
-      },
-    },
     legend: {
-      layout: 'vertical',
-      align: 'left',
-      verticalAlign: 'bottom',
-      backgroundColor: 'rgba(255,255,255,0.88)',
-      borderRadius: 8,
-      padding: 10,
+      enabled: false,
     },
     tooltip: {
       backgroundColor: 'rgba(255, 255, 255, 0.96)',
@@ -276,12 +295,12 @@ onUnmounted(() => {
         </div>
 
         <div class="legend-note">
-          <span class="legend-swatch low"></span>
-          <span>Bajo</span>
-          <span class="legend-swatch mid"></span>
-          <span>Medio</span>
           <span class="legend-swatch high"></span>
-          <span>Alto</span>
+          <span>3 mayores</span>
+          <span class="legend-swatch mid"></span>
+          <span>Intermedias</span>
+          <span class="legend-swatch low"></span>
+          <span>3 menores</span>
         </div>
       </aside>
 
@@ -297,7 +316,11 @@ onUnmounted(() => {
           </div>
         </div>
 
-        <div v-show="!loadingMap && dataMap.length > 0" ref="chartContainer" class="map-chart"></div>
+        <div
+          v-show="!loadingMap && dataMap.length > 0"
+          ref="chartContainer"
+          class="map-chart"
+        ></div>
       </div>
 
       <aside class="results-panel card-premium">
@@ -317,7 +340,11 @@ onUnmounted(() => {
               </tr>
             </thead>
             <tbody>
-              <tr v-for="(item, index) in rankedData" :key="item['hc-key']">
+              <tr
+                v-for="(item, index) in rankedData"
+                :key="item['hc-key']"
+                :class="getRowClass(item)"
+              >
                 <td>{{ index + 1 }}</td>
                 <td>{{ item.nombre }}</td>
                 <td>{{ formatValue(item.value) }}</td>
@@ -476,15 +503,15 @@ onUnmounted(() => {
 }
 
 .legend-swatch.low {
-  background: #f0acac;
+  background: #dc3545;
 }
 
 .legend-swatch.mid {
-  background: #fef1c5;
+  background: #d9cbea;
 }
 
 .legend-swatch.high {
-  background: #dbedd8;
+  background: #28a745;
 }
 
 .results-table-wrap {
@@ -530,6 +557,38 @@ onUnmounted(() => {
 
 .results-table tbody tr:hover {
   background: #f8f9fa;
+}
+
+.results-table tbody tr.row-top {
+  background: rgba(40, 167, 69, 0.16);
+}
+
+.results-table tbody tr.row-middle {
+  background: #d9cbea;
+}
+
+.results-table tbody tr.row-bottom {
+  background: rgba(220, 53, 69, 0.16);
+}
+
+.results-table tbody tr.row-top:hover {
+  background: rgba(40, 167, 69, 0.18);
+}
+
+.results-table tbody tr.row-middle:hover {
+  background: #cbb8e2;
+}
+
+.results-table tbody tr.row-bottom:hover {
+  background: rgba(220, 53, 69, 0.18);
+}
+
+.results-table tbody tr.row-top td:last-child {
+  color: #146c2e;
+}
+
+.results-table tbody tr.row-bottom td:last-child {
+  color: #a71d2a;
 }
 
 @keyframes fadeSlideIn {

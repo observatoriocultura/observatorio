@@ -1,22 +1,20 @@
 <script setup>
-// Componente de Documentación Técnica de la Herramienta EBC
+// Documentacion tecnica de la herramienta AutoDataViz (ADV)
 </script>
 
 <template>
   <div class="adv-docs-container container my-5">
     <div class="row justify-content-center">
       <div class="col-lg-10">
-        
-        <!-- HEADER -->
         <header class="docs-header mb-5 text-center">
           <div class="eyebrow mb-2">Arquitectura Frontend</div>
-          <h1 class="docs-title">Documentación Técnica: Visualizador ADV</h1>
+          <h1 class="docs-title">Documentacion Tecnica: Visualizador ADV</h1>
           <p class="docs-subtitle text-muted mt-3">
-            Estructura lógica, flujo de datos relacional y procesamiento reactivo del dashboard de la Medición.
+            Estructura logica, flujo de datos relacional y procesamiento reactivo del dashboard de
+            la medicion.
           </p>
         </header>
 
-        <!-- CARD 1: ARQUITECTURA GENERAL -->
         <section class="docs-section mb-5">
           <div class="card shadow-sm border-0 docs-card">
             <div class="card-body p-4 p-lg-5">
@@ -27,17 +25,26 @@
                 <h3 class="section-title mb-0">1. Arquitectura Base (AdvLayout.vue)</h3>
               </div>
               <p>
-                El componente <code>AdvLayout.vue</code> actúa como la piedra angular de la aplicación. Su función principal es comportarse como el contenedor (Layout) que enruta y mantiene vivos los estados de las vistas internas.
+                <code>AdvLayout.vue</code> actua como contenedor principal de la aplicacion. Su
+                responsabilidad es enrutar las vistas internas, distribuir contexto global y
+                conservar estados de navegacion entre las secciones del visualizador.
               </p>
               <ul>
-                <li><strong>Provisión de Contexto:</strong> Utiliza el sistema de <code>provide/inject</code> de Vue 3 para distribuir variables globales (como el <code>codigoMedicion</code> "m194" y <code>surveyInfo</code>) a cualquier componente anidado de la jerarquía sin hacer <em>prop-drilling</em>.</li>
-                <li><strong>Navegación por Estado (Query Params):</strong> Maneja el enrutamiento a través de la URL (<code>?tab=resultados</code>). En lugar de desmontar y crear vistas, emplea <code>v-show</code> para alternar la visibilidad entre <code>AdvPortada</code>, <code>AdvResultados</code> y <code>AdvFicha</code>. Esto preserva memóricamente los resultados cacheados, garantizando transiciones ultrarrápidas entre pestañas.</li>
+                <li>
+                  <strong>Provision de contexto:</strong> usa <code>provide/inject</code> para
+                  distribuir <code>codigoMedicion</code>, <code>surveyInfo</code> y constantes de
+                  encuesta sin prop-drilling.
+                </li>
+                <li>
+                  <strong>Navegacion por estado:</strong> alterna vistas mediante parametros de URL
+                  y estado reactivo. Esto permite preservar datos ya cargados y reducir trabajo
+                  innecesario al cambiar entre portada, resultados, indice y ficha tecnica.
+                </li>
               </ul>
             </div>
           </div>
         </section>
 
-        <!-- CARD 2: FLUJO DE DATOS -->
         <section class="docs-section mb-5">
           <div class="card shadow-sm border-0 docs-card">
             <div class="card-body p-4 p-lg-5">
@@ -45,31 +52,75 @@
                 <div class="icon-wrapper feature-icon-2 me-3">
                   <i class="bi bi-database-down"></i>
                 </div>
-                <h3 class="section-title mb-0">2. Jerarquía y Carga de Datos (JSON)</h3>
+                <h3 class="section-title mb-0">2. Jerarquia y Carga de Datos (JSON)</h3>
               </div>
               <p>
-                El motor de resultados (<code>AdvResultados.vue</code>) prescinde de APIs dinámicas e implementa una ingesta rápida de archivos <strong>JSON pre-procesados y estáticos</strong> alojados en el servidor, maximizando concurrencia y velocidad.
+                El motor de resultados (<code>AdvResultados.vue</code>) evita APIs dinamicas y
+                consume archivos JSON preprocesados alojados en el servidor. La carga se divide
+                entre archivos base, necesarios para iniciar la vista, y archivos derivados que se
+                descargan solo cuando el usuario solicita un cruce especifico.
               </p>
-              
-              <h5 class="mt-4 mb-3 fw-bold code-color">El Árbol de Datos</h5>
+
+              <h5 class="mt-4 mb-3 fw-bold code-color">Arbol de datos base</h5>
               <div class="data-hierarchy mb-4 p-4 rounded bg-light">
-                <div class="tree-node"><i class="bi bi-folder-fill text-warning me-2"></i><strong>Medición (m194)</strong></div>
-                <div class="tree-node ms-3 border-start ps-3 py-2"><i class="bi bi-filetype-json text-primary me-2"></i><code>secciones.json</code> (Agrupadores temáticos)</div>
-                <div class="tree-node ms-3 border-start ps-3 py-2"><i class="bi bi-filetype-json text-primary me-2"></i><code>preguntas.json</code> (Definiciones e UI dataviz)</div>
-                <div class="tree-node ms-3 border-start ps-3 py-2"><i class="bi bi-filetype-json text-primary me-2"></i><code>variables.json</code> (Sub-elementos métricos)</div>
-                <div class="tree-node ms-3 border-start ps-3 py-2"><i class="bi bi-filetype-json text-danger me-2"></i><code>respuestas.json</code> (Matriz de datos estadísticos consolidados)</div>
+                <div class="tree-node">
+                  <i class="bi bi-folder-fill text-warning me-2"></i
+                  ><strong>Medicion</strong>
+                </div>
+                <div class="tree-node ms-3 border-start ps-3 py-2">
+                  <i class="bi bi-filetype-json text-primary me-2"></i
+                  ><code>secciones.json</code> (agrupadores tematicos)
+                </div>
+                <div class="tree-node ms-3 border-start ps-3 py-2">
+                  <i class="bi bi-filetype-json text-primary me-2"></i
+                  ><code>preguntas.json</code> (definiciones, textos y configuracion dataviz)
+                </div>
+                <div class="tree-node ms-3 border-start ps-3 py-2">
+                  <i class="bi bi-filetype-json text-primary me-2"></i
+                  ><code>variables.json</code> (sub-elementos metricos de cada pregunta)
+                </div>
+                <div class="tree-node ms-3 border-start ps-3 py-2">
+                  <i class="bi bi-filetype-json text-danger me-2"></i
+                  ><code>respuestas.json</code> (matriz consolidada de resultados)
+                </div>
               </div>
 
-              <h5 class="mt-4 mb-3 fw-bold text-dark">Estrategia de Carga Diferida (Lazy Loading)</h5>
+              <h5 class="mt-4 mb-3 fw-bold code-color">Dimensiones derivadas</h5>
+              <div class="data-hierarchy mb-4 p-4 rounded bg-light">
+                <div class="tree-node ms-3 border-start ps-3 py-2">
+                  <i class="bi bi-filetype-json text-success me-2"></i
+                  ><code>respuestas_localidad.json</code> (desglose territorial)
+                </div>
+                <div class="tree-node ms-3 border-start ps-3 py-2">
+                  <i class="bi bi-filetype-json text-success me-2"></i
+                  ><code>respuestas_edad.json</code> (desglose por grupos de edad)
+                </div>
+                <div class="tree-node ms-3 border-start ps-3 py-2">
+                  <i class="bi bi-filetype-json text-success me-2"></i
+                  ><code>respuestas_sexo.json</code> (desglose por sexo)
+                </div>
+                <div class="tree-node ms-3 border-start ps-3 py-2">
+                  <i class="bi bi-filetype-json text-success me-2"></i
+                  ><code>respuestas_clase.json</code> (desglose por clase de vivienda)
+                </div>
+              </div>
+
+              <h5 class="mt-4 mb-3 fw-bold text-dark">Carga diferida y cache en memoria</h5>
               <p>
-                Para mantener el peso de la página virtualmente instantáneo, los cruces demográficos no se cargan al inicio. Si el usuario filtra por una dimensión (ej. <em>Localidad</em>), el sistema desencadena un <code>fetch</code> dinámico hacia <code>respuestas_localidad.json</code>.
-                Una vez resuelto, el resultado se incrusta en una <strong>Caché en Memoria Viva</strong> (fuera del ciclo de vida del componente), garantizando que navegaciones futuras a la misma dimensión tengan latencia de 0 ms.
+                Las dimensiones derivadas se cargan bajo demanda. Si el usuario filtra por
+                localidad, edad, sexo o clase de vivienda, el sistema ejecuta un
+                <code>fetch</code> al archivo correspondiente y guarda el resultado en memoria para
+                reutilizarlo durante la sesion.
+              </p>
+              <p>
+                Los filtros son mutuamente excluyentes: al activar una dimension, las otras se
+                limpian. Esto evita combinaciones ambiguas y mantiene un unico denominador
+                estadistico para calcular porcentajes.
               </p>
             </div>
           </div>
         </section>
 
-        <!-- CARD 3: LÓGICA Y CÁLCULOS -->
         <section class="docs-section mb-5">
           <div class="card shadow-sm border-0 docs-card">
             <div class="card-body p-4 p-lg-5">
@@ -77,35 +128,43 @@
                 <div class="icon-wrapper feature-icon-3 me-3">
                   <i class="bi bi-calculator"></i>
                 </div>
-                <h3 class="section-title mb-0">3. Motor Reactivo de Cálculos</h3>
+                <h3 class="section-title mb-0">3. Motor Reactivo de Calculos</h3>
               </div>
               <p>
-                Cada vez que el usuario selecciona una pregunta en la barra lateral interactiva o cambia un filtro cruzado, se activa la cadena computacional en el frontend:
+                Cada cambio de pregunta, variable, respuesta o filtro activa una cadena de calculo
+                reactiva. El flujo usa la fuente activa, filtra por pregunta y recalcula los
+                porcentajes a partir de los factores de expansion.
               </p>
-              
+
               <ul class="process-list mt-4">
                 <li>
                   <div class="process-number">1</div>
                   <div class="process-content">
-                    <strong>Filtrado Lineal:</strong> El arreglo gigante de <code>respuestas</code> desciende buscando solo aquellas filas cuyo <code>indice_pregunta</code> coincide con la selección activa de la interfaz.
+                    <strong>Seleccion de fuente:</strong>
+                    <code>respuestas.json</code> se usa sin filtro. Si hay una dimension activa, se
+                    usan los datos de localidad, edad, sexo o clase ya cargados.
                   </div>
                 </li>
                 <li>
                   <div class="process-number">2</div>
                   <div class="process-content">
-                    <strong>Expansión Poblacional:</strong> Se toma cada fila, extrayendo el concepto <code>suma_factor</code>. Este metadato asume no la cantidad nominal de encuestados, sino el <em>peso poblacional expansivo</em> que esa misma muestra representa sobre los millones de habitantes objetivo.
+                    <strong>Filtrado por pregunta:</strong> las filas se reducen al
+                    <code>indice_pregunta</code> seleccionado.
                   </div>
                 </li>
                 <li>
                   <div class="process-number">3</div>
                   <div class="process-content">
-                    <strong>Cálculo de Proporcionalidades (Porcentaje):</strong> La aplicación itera calculando la ecuación general matemática: <code>(suma_factor / total_variable_factor) * 100</code>. El resultado garantiza un margen de visualización escalado a 100 puntos.
+                    <strong>Denominador por variable:</strong> se suma <code>suma_factor</code> por
+                    <code>indice_variable</code> para preservar el peso poblacional de cada
+                    pregunta.
                   </div>
                 </li>
                 <li>
                   <div class="process-number">4</div>
                   <div class="process-content">
-                    <strong>Promedio Ponderado (KPI):</strong> En preguntas con calificación (ej: 0 a 10), el algoritmo <code>calcularPromedioPonderado()</code> sumeriza el producto iterativo de la respuesta original numéricamente ponderada sobre el total válido.
+                    <strong>Porcentaje:</strong> cada respuesta se calcula como
+                    <code>(suma_factor / total_variable_factor) * 100</code>.
                   </div>
                 </li>
               </ul>
@@ -113,7 +172,6 @@
           </div>
         </section>
 
-        <!-- CARD 4: VISUALIZACIÓN Y DEPURACIÓN -->
         <section class="docs-section mb-5">
           <div class="card shadow-sm border-0 docs-card">
             <div class="card-body p-4 p-lg-5">
@@ -121,32 +179,23 @@
                 <div class="icon-wrapper feature-icon-4 me-3">
                   <i class="bi bi-pie-chart"></i>
                 </div>
-                <h3 class="section-title mb-0">4. Visualización Gráfica y Debugging</h3>
+                <h3 class="section-title mb-0">4. Visualizacion Grafica y Debugging</h3>
               </div>
-
-              <h5 class="mt-4 mb-3 fw-bold code-color">Aislamiento Lógico en Visualización (Highcharts)</h5>
               <p>
-                La herramienta delega el control estético a librerías especializadas (Highcharts), enviando los datos limpios a través de Props (<code>pregunta</code> y <code>respuestas</code>).
-                <br><br>
-                <strong>Agrupamiento Tardío:</strong> Para impedir la desvirtuación del <em>Promedio Ponderado</em>, la herramienta mantiene divididas por defecto las respuestas nominales (ej. Edad 13, 14, 15 separados). 
-                Es en el <em>último</em> eslabón de la gráfica (<code>barChart.vue</code> o <code>donutChart.vue</code>) donde se realiza una compresión analítica mediante <code>.reduce()</code>.
-                Allí, el código fusiona y acumula múltiples respuestas bajo la etiqueta sombrilla (<code>respuesta_v2</code>, p. ej. <em>"Gen Z"</em>), garantizando gráficas limpias, estéticas y matemáticamente correctas.
+                La capa grafica delega el renderizado a Highcharts y a componentes especializados.
+                Los componentes reciben datos ya limpios mediante props y se concentran en
+                representar barras, columnas, donuts, tablas o mapas sin recalcular la fuente
+                estadistica principal.
               </p>
-
-              <h5 class="mt-4 mb-3 fw-bold text-dark mt-5">Panel de Inspección (AdvDebug.vue)</h5>
               <p>
-                Se ha diseñado una subvista vital de tipo caja de cristal (<em>Glassbox</em>) escondida tras la pestaña <strong>Inspección (Data)</strong>. Esto le permite al analista:
+                El panel de inspeccion mantiene una vista tipo glassbox para auditar respuestas,
+                factores de expansion, llaves foraneas y calculos intermedios sin alterar la
+                experiencia de usuario del dashboard.
               </p>
-              <ul>
-                <li>Auditar cada métrica individual que inyecta información al sistema Highcharts.</li>
-                <li>Hacer control de calidad al empalme de <em>factores de expansión</em> a nivel granular.</li>
-                <li>Tener a la vista las llaves foráneas crudas (<code>indice_variable</code>, <code>codigo_variable</code>) sin manipulación cosmética para diagnóstico de base de datos.</li>
-              </ul>
             </div>
           </div>
         </section>
 
-        <!-- CARD 5: ANÁLISIS TERRITORIAL AVANZADO -->
         <section class="docs-section mb-5">
           <div class="card shadow-sm border-0 docs-card">
             <div class="card-body p-4 p-lg-5">
@@ -154,16 +203,21 @@
                 <div class="icon-wrapper feature-icon-5 me-3">
                   <i class="bi bi-geo-alt"></i>
                 </div>
-                <h3 class="section-title mb-0">5. Análisis Territorial (Localidades)</h3>
+                <h3 class="section-title mb-0">5. Analisis Territorial (Localidades)</h3>
               </div>
               <p>
-                El módulo <code>LocalidadesView.vue</code> centraliza el desglose geográfico profundo. A diferencia del dashboard general, este orquestador permite una comparación síncrona entre las 20 localidades de Bogotá mediante un Ranking (Gráfico) y una Cartografía Coroplética (Mapa).
+                <code>LocalidadesView.vue</code> centraliza el desglose geografico. Consume
+                <code>respuestas_localidad.json</code> y permite comparar las localidades mediante
+                ranking, tabla y mapa coropletico.
+              </p>
+              <p>
+                La vista mantiene selectores de variable y respuesta para recalcular, por
+                localidad, la participacion de una opcion especifica sobre el total de la variable.
               </p>
             </div>
           </div>
         </section>
 
-        <!-- CARD 6: ANÁLISIS DEMOGRÁFICO POR EDAD -->
         <section class="docs-section mb-5">
           <div class="card shadow-sm border-0 docs-card">
             <div class="card-body p-4 p-lg-5">
@@ -171,30 +225,89 @@
                 <div class="icon-wrapper feature-icon-3 me-3">
                   <i class="bi bi-people"></i>
                 </div>
-                <h3 class="section-title mb-0">6. Análisis Demográfico (Grupos de Edad)</h3>
+                <h3 class="section-title mb-0">6. Analisis Demografico (Grupos de Edad)</h3>
               </div>
               <p>
-                El módulo <code>GruposEdadView.vue</code> permite el desglose de resultados por rangos etarios. A diferencia del análisis geográfico, este se centra en la comparación de comportamientos y percepciones según el ciclo de vida del ciudadano.
+                <code>GruposEdadView.vue</code> permite comparar resultados por rangos etarios.
+                Consume <code>respuestas_edad.json</code> y agrupa la muestra en tres bloques:
+                jovenes, adultos y personas mayores.
               </p>
-              
-              <h5 class="mt-4 mb-3 fw-bold text-dark">Estructura de Datos</h5>
               <p>
-                Consume el archivo <code>respuestas_edad.json</code>, el cual categoriza la muestra en tres grandes bloques:
-              </p>
-              <ul>
-                <li><strong>Jóvenes (13-28 años):</strong> Código 2.</li>
-                <li><strong>Adultos (29-59 años):</strong> Código 3.</li>
-                <li><strong>Personas Mayores (60+ años):</strong> Código 4.</li>
-              </ul>
-
-              <h5 class="mt-4 mb-3 fw-bold code-color">Visualización Diferenciada</h5>
-              <p>
-                Al ser una dimensión con pocas categorías (3), el sistema utiliza un <strong>Gráfico de Columnas</strong> (<code>GrupoEdadChart.vue</code>) para una comparación directa y legible, manteniendo la coherencia estética del sistema de diseño premium.
+                Al tener pocas categorias, usa un grafico de columnas y una tabla para mostrar la
+                distribucion de la respuesta seleccionada por grupo de edad.
               </p>
             </div>
           </div>
         </section>
 
+        <section class="docs-section mb-5">
+          <div class="card shadow-sm border-0 docs-card">
+            <div class="card-body p-4 p-lg-5">
+              <div class="d-flex align-items-center mb-4">
+                <div class="icon-wrapper feature-icon-6 me-3">
+                  <i class="bi bi-gender-ambiguous"></i>
+                </div>
+                <h3 class="section-title mb-0">7. Analisis por Sexo</h3>
+              </div>
+              <p>
+                La carpeta <code>sexos/</code> incorpora el desglose de resultados por sexo. El
+                orquestador <code>SexoView.vue</code> recibe la pregunta activa, sus variables, las
+                posibles respuestas y el arreglo <code>respuestasSexo</code>, cargado desde
+                <code>respuestas_sexo.json</code>.
+              </p>
+              <ul>
+                <li>
+                  <strong>Filtro global:</strong> <code>sexoSeleccionado</code> en
+                  <code>AdvResultados.vue</code> permite recalcular los resultados generales para
+                  Hombre o Mujer.
+                </li>
+                <li>
+                  <strong>Vista de desglose:</strong> <code>SexoView.vue</code> compara ambos sexos
+                  para una variable y respuesta especificas.
+                </li>
+                <li>
+                  <strong>Salida visual:</strong> <code>SexoChart.vue</code> muestra la comparacion
+                  grafica y <code>SexoTable.vue</code> expone los datos tabulares, incluyendo
+                  <code>suma_factor</code>, total y porcentaje.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="docs-section mb-5">
+          <div class="card shadow-sm border-0 docs-card">
+            <div class="card-body p-4 p-lg-5">
+              <div class="d-flex align-items-center mb-4">
+                <div class="icon-wrapper feature-icon-7 me-3">
+                  <i class="bi bi-house-door"></i>
+                </div>
+                <h3 class="section-title mb-0">8. Analisis por Clase de Vivienda</h3>
+              </div>
+              <p>
+                La carpeta <code>clases/</code> agrega el desglose por clase de vivienda. El
+                sistema usa las constantes <code>CLASES</code> para nombrar las categorias
+                <strong>Urbano</strong> y <strong>Rural</strong>, y consume
+                <code>respuestas_clase.json</code> bajo demanda.
+              </p>
+              <ul>
+                <li>
+                  <strong>Filtro global:</strong> <code>claseSeleccionada</code> recalcula la vista
+                  principal sobre una sola clase de vivienda.
+                </li>
+                <li>
+                  <strong>Vista de desglose:</strong> <code>ClaseView.vue</code> compara urbano y
+                  rural para la variable y respuesta seleccionadas.
+                </li>
+                <li>
+                  <strong>Salida visual:</strong> <code>ClaseChart.vue</code> presenta la
+                  comparacion grafica y <code>ClaseTable.vue</code> muestra la matriz de resultados
+                  con factores expandidos y porcentajes.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   </div>
@@ -234,7 +347,9 @@
 
 .docs-card {
   border-radius: 16px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   background: linear-gradient(135deg, #ffffff 0%, #fcfbfd 100%);
 }
 
@@ -259,13 +374,36 @@
   border-radius: 12px;
   font-size: 1.5rem;
   color: white;
+  flex: 0 0 48px;
 }
 
-.feature-icon-1 { background: linear-gradient(135deg, #FF6B6B 0%, #EE5253 100%); }
-.feature-icon-2 { background: linear-gradient(135deg, #48DBFB 0%, #0ABDE3 100%); }
-.feature-icon-3 { background: linear-gradient(135deg, #1DD1A1 0%, #10AC84 100%); }
-.feature-icon-4 { background: linear-gradient(135deg, #FECA57 0%, #FF9F43 100%); }
-.feature-icon-5 { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+.feature-icon-1 {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5253 100%);
+}
+
+.feature-icon-2 {
+  background: linear-gradient(135deg, #48dbfb 0%, #0abde3 100%);
+}
+
+.feature-icon-3 {
+  background: linear-gradient(135deg, #1dd1a1 0%, #10ac84 100%);
+}
+
+.feature-icon-4 {
+  background: linear-gradient(135deg, #feca57 0%, #ff9f43 100%);
+}
+
+.feature-icon-5 {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.feature-icon-6 {
+  background: linear-gradient(135deg, #ab47bc 0%, #7b1fa2 100%);
+}
+
+.feature-icon-7 {
+  background: linear-gradient(135deg, #78909c 0%, #455a64 100%);
+}
 
 .code-color {
   color: #5f4481;
@@ -325,6 +463,13 @@ code {
   border-radius: 4px;
   color: #d6336c;
   font-size: 0.85em;
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family:
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Liberation Mono',
+    'Courier New',
+    monospace;
 }
 </style>

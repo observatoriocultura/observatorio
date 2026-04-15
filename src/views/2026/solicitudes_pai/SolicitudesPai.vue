@@ -78,8 +78,8 @@ const opcionesSeleccionada = ref([
   { value: 'Por revisar', icon: 'bi bi-clock text-warning', background: '#fff3cd', valueSum: 0 },
   {
     value: 'Sí (Agrupada)',
-    icon: 'bi bi-collection text-success',
-    background: '#dcebd0',
+    icon: 'bi bi-collection text-info',
+    background: '#cfe2ff',
     valueSum: 0,
   },
   { value: 'Por convenio', icon: 'bi bi-handshake text-info', background: '#cff4fc', valueSum: 1 },
@@ -106,6 +106,11 @@ const opcionesEntidades = ref([
     nombreCorto: 'IDRD',
     nombreCompleto: 'Instituto Distrital de Recreación y Deporte',
     background: '#C9DAF8',
+  },
+  {
+    nombreCorto: 'IDPYBA',
+    nombreCompleto: 'Instituto Distrital de Protección y Bienestar Animal',
+    background: '#D5E3B3',
   },
 ])
 
@@ -170,7 +175,8 @@ onMounted(async () => {
         if (encontrada) {
           solicitudActual.value = encontrada
         } else if (solicitudes.value.length > 0) {
-          solicitudActual.value = solicitudes.value.find((s) => String(s.num) === '1') || solicitudes.value[0]
+          solicitudActual.value =
+            solicitudes.value.find((s) => String(s.num) === '1') || solicitudes.value[0]
         }
       },
       error: (err) => {

@@ -1,0 +1,57 @@
+[
+    {
+        "Num":1,
+        "Variable":"Nombre de la encuesta",
+        "Valor":"Encuesta de Prácticas artísticas, culturales, creativas y patrimoniales de 2025"
+    },
+    {
+        "Num":2,
+        "Variable":"Periodo de recolección",
+        "Valor":"Fue aplicada entre el"
+    },
+    {
+        "Num":3,
+        "Variable":"Periodo de referencia",
+        "Valor":"Toda la información recolectada hace referencia a comportamientos y percepciones del año 2025."
+    },
+    {
+        "Num":4,
+        "Variable":"Población objetivo",
+        "Valor":"La encuesta fue aplicada a personas de 13 años en adelante, que sean residentes habituales de Bogotá por lo menos durante los últimos 6 años. Se cubrió área urbana y rural."
+    },
+    {
+        "Num":5,
+        "Variable":"Diseño muestral",
+        "Valor":"Muestreo probabilístico, multietápico, estratificado."
+    },
+    {
+        "Num":6,
+        "Variable":"Tamaño de muestra",
+        "Valor":"Se aplicaron en total 5.736 encuestas"
+    },
+    {
+        "Num":7,
+        "Variable":"Confiabilidad",
+        "Valor":"La encuesta cuenta con una confiabilidad del 95%"
+    },
+    {
+        "Num":8,
+        "Variable":"Error",
+        "Valor":"El margen de error calculado para Bogotá es de 4%. El margen de error a nivel de localidad varía entre 3,5% y 4,9% dependiendo la localidad."
+    },
+    {
+        "Num":9,
+        "Variable":"Diseñada e implementada por",
+        "Valor":"Dirección Observatorio y Gestión del Conocimiento Cultural - Secretaría de Cultura, Recreación y Deporte."
+    },
+    {
+        "Num":10,
+        "Variable":"Análisis y visualización",
+        "Valor":"Equipo Secretaría de Cultura, Recreación y Deporte. Andrea García, Viviana Rodríguez, Gisela Castrillón, Mauricio Ojeda, Johana Mejía."
+    },
+    {
+        "Num":11,
+        "Variable":"Aplicada por",
+        "Valor":"Gloria Gallego Sigma Dos Internacional S.A.S."
+    }
+]

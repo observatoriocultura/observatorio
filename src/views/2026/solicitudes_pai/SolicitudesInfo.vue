@@ -143,7 +143,7 @@
 </template>
 
 <script setup>
-import { inject, computed } from 'vue'
+import { inject, computed, onMounted, onUnmounted } from 'vue'
 import SolicitudesFiltros from './SolicitudesFiltros.vue'
 
 const {
@@ -200,6 +200,40 @@ const nextSolicitud = () => {
 const seleccionarSolicitud = (item) => {
   solicitud.value = item
 }
+
+const shouldIgnoreKeyboardNavigation = (event) => {
+  const target = event.target
+  const tagName = target?.tagName?.toLowerCase()
+
+  return (
+    tagName === 'input' ||
+    tagName === 'select' ||
+    tagName === 'textarea' ||
+    target?.isContentEditable
+  )
+}
+
+const handleKeyboardNavigation = (event) => {
+  if (shouldIgnoreKeyboardNavigation(event)) return
+
+  if (event.key === 'ArrowLeft') {
+    event.preventDefault()
+    prevSolicitud()
+  }
+
+  if (event.key === 'ArrowRight') {
+    event.preventDefault()
+    nextSolicitud()
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('keydown', handleKeyboardNavigation)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('keydown', handleKeyboardNavigation)
+})
 </script>
 
 <style scoped>

@@ -1,0 +1,92 @@
+[
+    {
+        "num_seccion":1,
+        "cod_seccion":1,
+        "nombre_seccion":"Caracterización del hogar",
+        "descripcion":"Recoge información básica sobre la composición y estructura del hogar, incluyendo el número de hogares dentro de la vivienda, la cantidad de personas que lo integran y las características de sus miembros, como edad, sexo y parentesco. Estos datos permiten comprender el contexto familiar y social en el que se ubica la persona encuestada.",
+        "cantidad_preguntas":46,
+        "notas":null,
+        "dataviz_display":1
+    },
+    {
+        "num_seccion":2,
+        "cod_seccion":2,
+        "nombre_seccion":"Caracterización de la vivienda",
+        "descripcion":"Indaga sobre las condiciones habitacionales y territoriales de la vivienda, como la localidad de residencia, el estrato, el tipo de vivienda y la forma de tenencia. Esta información permite contextualizar las prácticas culturales en relación con las condiciones materiales y espaciales del lugar donde viven las personas.",
+        "cantidad_preguntas":4,
+        "notas":null,
+        "dataviz_display":1
+    },
+    {
+        "num_seccion":3,
+        "cod_seccion":3,
+        "nombre_seccion":"Prácticas artísticas, culturales y creativas",
+        "descripcion":"Explora la participación activa de las personas en actividades artísticas, culturales y creativas, así como su frecuencia, motivaciones, trayectorias de inicio, espacios de realización, formas de participación y barreras para su desarrollo. Esta sección permite analizar cómo se expresan, sostienen o interrumpen estas prácticas en la vida cotidiana.",
+        "cantidad_preguntas":38,
+        "notas":null,
+        "dataviz_display":1
+    },
+    {
+        "num_seccion":4,
+        "cod_seccion":4,
+        "nombre_seccion":"Formación",
+        "descripcion":"Indaga sobre las trayectorias de formación artística, cultural y patrimonial de las personas, incluyendo niveles, modalidades, espacios, áreas de formación, frecuencia de participación y percepciones sobre sus aportes personales y sociales. Esta sección permite analizar cómo la formación incide en el desarrollo de capacidades, la participación cultural y la construcción de experiencias significativas.",
+        "cantidad_preguntas":18,
+        "notas":null,
+        "dataviz_display":1
+    },
+    {
+        "num_seccion":5,
+        "cod_seccion":5,
+        "nombre_seccion":"Equipamientos culturales",
+        "descripcion":"Examina el conocimiento, uso, acceso y valoración de los equipamientos culturales de la localidad y de la ciudad, así como los canales mediante los cuales las personas consultan su programación. Permite comprender el papel de la infraestructura cultural en la participación ciudadana y en el acceso a la oferta artística y cultural.",
+        "cantidad_preguntas":9,
+        "notas":null,
+        "dataviz_display":1
+    },
+    {
+        "num_seccion":6,
+        "cod_seccion":6,
+        "nombre_seccion":"Prácticas culturales",
+        "descripcion":"Recoge información sobre la asistencia, acceso y participación en actividades culturales, artísticas y patrimoniales, tanto presenciales como virtuales, así como sus motivaciones, barreras de acceso, hábitos de consumo y niveles de identificación con expresiones y comunidades culturales. Estos datos permiten comprender la relación de la ciudadanía con la oferta cultural de la ciudad.",
+        "cantidad_preguntas":15,
+        "notas":null,
+        "dataviz_display":1
+    },
+    {
+        "num_seccion":7,
+        "cod_seccion":7,
+        "nombre_seccion":"Prácticas patrimoniales",
+        "descripcion":"Indaga sobre la asistencia y participación en espacios, recorridos, eventos y manifestaciones relacionados con el patrimonio cultural, histórico, artístico y territorial de la ciudad. Esta información permite analizar el vínculo de las personas con los bienes, memorias y expresiones patrimoniales de Bogotá.",
+        "cantidad_preguntas":25,
+        "notas":null,
+        "dataviz_display":1
+    },
+    {
+        "num_seccion":8,
+        "cod_seccion":8,
+        "nombre_seccion":"Canales de Televisión",
+        "descripcion":"Recoge información sobre medios, canales y formas de acceso a contenidos culturales, artísticos o informativos, incluyendo canales tradicionales y digitales de consulta. Permite comprender cómo circula la información cultural y cuáles son los principales medios utilizados por la ciudadanía para conectarse con la oferta cultural.",
+        "cantidad_preguntas":18,
+        "notas":null,
+        "dataviz_display":1
+    },
+    {
+        "num_seccion":9,
+        "cod_seccion":9,
+        "nombre_seccion":"Emociones y salud mental",
+        "descripcion":"Indaga sobre percepciones, experiencias y aportes asociados al bienestar emocional, la expresión de sentimientos, la reflexión personal y las relaciones con otras personas, especialmente en el marco de la formación y la participación cultural. Esta sección permite explorar la relación entre cultura, bienestar subjetivo y desarrollo personal.",
+        "cantidad_preguntas":4,
+        "notas":null,
+        "dataviz_display":1
+    },
+    {
+        "num_seccion":10,
+        "cod_seccion":10,
+        "nombre_seccion":"Caracterización sociodemográfica",
+        "descripcion":"Recoge información básica sobre la identidad y características personales de la persona encuestada, como edad, sexo y otras variables sociodemográficas relevantes. Estos datos permiten segmentar y contextualizar los análisis, identificando diferencias y patrones entre distintos grupos de población.",
+        "cantidad_preguntas":13,
+        "notas":null,
+        "dataviz_display":1
+    }
+]
