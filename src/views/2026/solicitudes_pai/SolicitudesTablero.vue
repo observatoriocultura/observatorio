@@ -4,7 +4,7 @@
       <div class="col-12 text-center">
         <!-- Contenedor centrado y ajustado al viewport -->
         <div
-          class="card border-0 shadow-sm mx-auto overflow-hidden bg-light"
+          class="mx-auto overflow-hidden"
           style="max-width: 1150px; margin-top: 0.5rem; margin-bottom: 0.5rem"
         >
           <div class="card-body p-0 d-flex justify-content-center">
@@ -20,11 +20,11 @@
           </div>
         </div>
         <div class="mt-3 mb-4">
-          <a 
+          <a
             href="https://lookerstudio.google.com/reporting/53b7b567-34fa-4994-b74e-e07be86d8317/page/p_y431hdpzrd/edit"
             target="_blank"
             class="btn btn-primary border-0 px-4 py-2"
-            style="background-color: #0b2240; color: white;"
+            style="background-color: #0b2240; color: white"
           >
             Abrir tablero en otra pestaña
           </a>

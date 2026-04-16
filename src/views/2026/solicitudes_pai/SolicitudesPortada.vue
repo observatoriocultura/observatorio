@@ -66,7 +66,7 @@
               {{ porConvenio }}
             </div>
             <p class="metric-description">
-              Solicitudes que se realizan mediante acuerdos con otras entidades
+              Solicitudes que se realizan mediante convenios especiales con las entidades
             </p>
           </div>
         </div>
@@ -77,22 +77,30 @@
             <div class="metric-value metric-value-highlight">
               {{ totalMediciones }}
             </div>
-            <p class="metric-description">Mediciones que se realizarán</p>
+            <p class="metric-description">Mediciones o Investigaciones que se realizarán</p>
           </div>
         </div>
       </div>
 
       <div class="text-start mx-auto mt-5 p-3 bg-light rounded" style="max-width: 820px">
-        <p class="fw-semibold text-dark mb-2">Sobre el balance</p>
-        <p class="small text-secondary mb-2">
-          No todas las solicitudes se convierten en una investigación independiente. Algunas se
-          priorizan como investigaciones principales, otras se integran a otras más amplias y
-          algunas se gestionan mediante convenios con otras entidades.
-        </p>
-        <p class="small text-secondary mb-0">
-          Además, una sola solicitud puede dar lugar a más de una medición. Por eso el número de
-          mediciones previstas puede ser distinto al número de solicitudes seleccionadas.
-        </p>
+        <p class="fw-semibold text-dark mb-2">Para tener en cuenta</p>
+        <ul class="small text-secondary mb-0 ps-3 balance-notes">
+          <li>
+            No todas las solicitudes se convierten en una investigación independiente. Algunas se
+            priorizan como investigaciones principales, otras se integran a otras más amplias y
+            algunas se gestionan mediante convenios con otras entidades.
+          </li>
+          <li>
+            Además, una sola solicitud puede dar lugar a más de una medición. Por eso el número de
+            mediciones previstas puede ser distinto al número de solicitudes seleccionadas.
+          </li>
+          <li>
+            El total de investigaciones a realizar incluye investigaciones, mediciones, asesorías,
+            acompañamientos metodológicos, implementaciones técnicas y otros apoyos similares. Por
+            eso, no todos los procesos corresponden a una investigación en el sentido tradicional o
+            académico de la palabra.
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -177,6 +185,14 @@ const porConvenio = computed(() => getCountBySelection('Por convenio'))
   color: #6c757d;
   font-size: 0.875rem;
   line-height: 1.35;
+}
+
+.balance-notes {
+  line-height: 1.5;
+}
+
+.balance-notes li + li {
+  margin-top: 0.5rem;
 }
 
 @media (max-width: 575.98px) {

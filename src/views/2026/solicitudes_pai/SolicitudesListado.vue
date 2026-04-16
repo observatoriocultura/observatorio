@@ -3,15 +3,6 @@
     <!-- Componente de Filtros -->
     <SolicitudesFiltros />
 
-    <!-- Contador de Solicitudes -->
-    <div class="row mb-3">
-      <div class="col-12">
-        <p class="mb-0 fw-semibold text-secondary">
-          {{ solicitudesFiltradas.length }} filtradas de {{ totalDisponibles }}
-        </p>
-      </div>
-    </div>
-
     <!-- Listado Card -->
     <div class="row mb-4">
       <div class="col-12">
@@ -81,10 +72,7 @@
                     minWidth: '140px',
                   }"
                 >
-                  <i
-                    :class="getOpcionSeleccionada(item.seleccionada).icon"
-                    class="fs-6"
-                  ></i>
+                  <i :class="getOpcionSeleccionada(item.seleccionada).icon" class="fs-6"></i>
                   <span class="fw-bold fs-6 m-0">{{
                     getOpcionSeleccionada(item.seleccionada).value
                   }}</span>
@@ -109,7 +97,7 @@ import SolicitudesFiltros from './SolicitudesFiltros.vue'
 
 const router = useRouter()
 
-const { loading, error, opcionesSeleccionada, solicitudesFiltradas, totalDisponibles, solicitudActual } =
+const { loading, error, opcionesSeleccionada, solicitudesFiltradas, solicitudActual } =
   inject('solicitudesData')
 
 const abrirDetalles = (solicitud) => {

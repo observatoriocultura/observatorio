@@ -135,6 +135,32 @@
               {{ solicitud.respuesta_a_solicitante }}
             </div>
             <div v-else class="text-muted small">La respuesta aun no está disponible</div>
+
+            <div
+              v-if="solicitud.cantidad_mediciones || solicitud.mediciones"
+              class="border-top mt-4 pt-4"
+            >
+              <h6 class="text-muted small text-uppercase fw-bold mb-3">
+                Mediciones/Investigaciones a realizar
+              </h6>
+              <div
+                v-if="solicitud.cantidad_mediciones"
+                class="d-inline-flex align-items-center gap-2 py-2 px-3 rounded mb-3 mediciones-count"
+              >
+                <i class="bi bi-clipboard-data"></i>
+                <span class="fw-bold">{{ solicitud.cantidad_mediciones }}</span>
+              </div>
+              <ul v-if="medicionesListado.length > 0" class="list-unstyled mediciones-list mb-0">
+                <li
+                  v-for="(medicion, index) in medicionesListado"
+                  :key="`${index}-${medicion}`"
+                  class="medicion-item"
+                >
+                  <i class="bi bi-dot medicion-icon"></i>
+                  <span>{{ medicion }}</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -184,6 +210,14 @@ const currentIndex = computed(() => {
 })
 
 const total = computed(() => (solicitudesFiltradas.value ? solicitudesFiltradas.value.length : 0))
+
+const medicionesListado = computed(() => {
+  if (!solicitud.value?.mediciones) return []
+  return solicitud.value.mediciones
+    .split(/\r?\n/)
+    .map((medicion) => medicion.trim())
+    .filter(Boolean)
+})
 
 const prevSolicitud = () => {
   if (currentIndex.value > 0) {
@@ -265,5 +299,31 @@ onUnmounted(() => {
   color: #d1d5db; /* Gris más claro para los totalmente desactivados */
   border-color: #ffffff;
   background-color: #fff;
+}
+.mediciones-count {
+  background-color: #f6f0fd;
+  color: #654096;
+}
+
+.mediciones-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.medicion-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.35rem;
+  color: #6c757d;
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+.medicion-icon {
+  color: #654096;
+  font-size: 1.15rem;
+  line-height: 1.1;
+  margin-top: 0.05rem;
 }
 </style>

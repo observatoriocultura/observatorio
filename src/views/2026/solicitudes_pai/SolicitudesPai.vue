@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid pb-4 pt-1">
+  <div class="solicitudes-pai-page container-fluid pb-4 pt-1">
     <!-- Navegación por Tabs -->
     <div class="row mb-4">
       <div class="col-12">
@@ -7,7 +7,7 @@
           <li class="nav-item">
             <router-link
               class="nav-link text-secondary"
-              exact-active-class="active fw-bold text-dark"
+              exact-active-class="active text-light"
               to="/2026/solicitudes-pai"
               exact
             >
@@ -17,7 +17,7 @@
           <li class="nav-item">
             <router-link
               class="nav-link text-secondary"
-              active-class="active fw-bold text-dark"
+              active-class="active text-light"
               to="/2026/solicitudes-pai/listado"
             >
               Listado
@@ -26,7 +26,7 @@
           <li class="nav-item">
             <router-link
               class="nav-link text-secondary"
-              active-class="active fw-bold text-dark"
+              active-class="active text-light"
               to="/2026/solicitudes-pai/detalle"
             >
               Detalles
@@ -35,7 +35,7 @@
           <li class="nav-item">
             <router-link
               class="nav-link text-secondary"
-              active-class="active fw-bold text-dark"
+              active-class="active text-light"
               to="/2026/solicitudes-pai/tablero"
             >
               <i class="bi bi-bar-chart-fill me-1"></i> Tablero
@@ -116,8 +116,12 @@ const opcionesEntidades = ref([
 
 const dependenciasUnicas = computed(() => {
   return solicitudes.value
-    .filter((item) => item.mostrar && item.mostrar.trim() === 'Sí')
-    .map((item) => item.dependencia_corto)
+    .filter((item) => {
+      const mostrarM = item.mostrar && item.mostrar.trim() === 'Sí'
+      const entidadM = entidadFiltro.value === '' || item.entidad_corto === entidadFiltro.value
+      return mostrarM && entidadM
+    })
+    .map((item) => item.dependencia_corto?.trim())
     .filter((v, i, a) => v && v.trim() !== '' && a.indexOf(v) === i)
     .sort()
 })
@@ -127,7 +131,7 @@ const solicitudesFiltradas = computed(() => {
     const mostrarM = item.mostrar && item.mostrar.trim() === 'Sí'
     const entidadM = entidadFiltro.value === '' || item.entidad_corto === entidadFiltro.value
     const dependenciaM =
-      dependenciaFiltro.value === '' || item.dependencia_corto === dependenciaFiltro.value
+      dependenciaFiltro.value === '' || item.dependencia_corto?.trim() === dependenciaFiltro.value
     const lineaM = lineaFiltro.value === '' || item.linea_investigacion === lineaFiltro.value
     const seleccionadaM =
       seleccionadaFiltro.value === '' || item.seleccionada === seleccionadaFiltro.value
@@ -199,9 +203,36 @@ watch(solicitudActual, (newVal) => {
     }
   }
 })
+
+watch(entidadFiltro, () => {
+  if (dependenciaFiltro.value && !dependenciasUnicas.value.includes(dependenciaFiltro.value)) {
+    dependenciaFiltro.value = ''
+  }
+})
 </script>
 
 <style>
+.solicitudes-pai-page {
+  --solicitudes-pai-bg: #fcfcfc;
+  min-height: 100vh;
+  background-color: var(--solicitudes-pai-bg);
+}
+
+.solicitudes-pai-page .nav-tabs {
+  background-color: var(--solicitudes-pai-bg);
+}
+
+.solicitudes-pai-page .nav-tabs .nav-link {
+  background-color: transparent;
+}
+
+.solicitudes-pai-page .nav-tabs .nav-link.active {
+  background-color: transparent;
+  border-color: transparent transparent #654096;
+  border-bottom-width: 2px;
+  color: #654096 !important;
+}
+
 .table th {
   font-weight: 600;
   text-transform: uppercase;

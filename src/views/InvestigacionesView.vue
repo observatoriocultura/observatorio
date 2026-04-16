@@ -38,12 +38,12 @@
             >
               <div class="card h-100 border-0 bg-transparent">
                 <img
-                  :src="`public/content/investigaciones/thumbnails/${inv.id}.jpg`"
+                  :src="`${baseUrl}content/investigaciones/thumbnails/${inv.id}.jpg`"
                   class="card-img-top rounded-4 mb-2 object-fit-cover"
                   style="aspect-ratio: 16/9"
                   :alt="inv.titulo"
                   @error="
-                    (e) => (e.target.src = 'public/content/investigaciones/thumbnails/nd.jpg')
+                    (e) => (e.target.src = `${baseUrl}content/investigaciones/thumbnails/nd.jpg`)
                   "
                 />
                 <div class="card-body p-0">
@@ -141,11 +141,11 @@
           <!-- Columna Derecha: Thumbnail y Detalles técnicos -->
           <div class="col-lg-4 mb-4">
             <img
-              :src="`public/content/investigaciones/thumbnails/${currentInvestigacion.id}.jpg`"
+              :src="`${baseUrl}content/investigaciones/thumbnails/${currentInvestigacion.id}.jpg`"
               class="w-100 rounded-4 mb-4 object-fit-cover shadow-sm"
               style="aspect-ratio: 16/9"
               :alt="currentInvestigacion.titulo"
-              @error="(e) => (e.target.src = 'public/content/investigaciones/thumbnails/nd.jpg')"
+              @error="(e) => (e.target.src = `${baseUrl}content/investigaciones/thumbnails/nd.jpg`)"
             />
 
             <div class="bg-light p-4 rounded-4 border">
@@ -179,6 +179,29 @@
             </div>
           </div>
         </div>
+
+        <section v-if="hallazgosFiltrados.length > 0" class="findings-section mt-4 mb-5">
+          <h4 class="findings-title text-center fw-bold mb-4">Principales hallazgos</h4>
+          <div class="findings-list mx-auto">
+            <article
+              v-for="(hallazgo, idx) in hallazgosFiltrados"
+              :key="`${hallazgo.investigacion_id}-${hallazgo.orden}-${idx}`"
+              class="finding-item"
+            >
+              <div class="finding-number">{{ hallazgo.orden || idx + 1 }}</div>
+              <div class="finding-content">
+                <h5 class="finding-heading fw-bold mb-1">{{ hallazgo.titulo }}</h5>
+                <p class="finding-text mb-0">{{ hallazgo.texto }}</p>
+                <div
+                  v-if="hallazgo.valor || hallazgo.unidad_medida"
+                  class="finding-value fw-semibold mt-2"
+                >
+                  {{ [hallazgo.valor, hallazgo.unidad_medida].filter(Boolean).join(' ') }}
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
       </div>
     </div>
   </div>
@@ -193,10 +216,12 @@ const route = useRoute()
 
 const investigaciones = ref([])
 const productos = ref([])
+const hallazgos = ref([])
 const loading = ref(true)
 const section = ref('results')
 const currentInvestigacion = ref(null)
 const searchInput = ref('')
+const baseUrl = import.meta.env.BASE_URL
 
 const removeDiacritics = (text) => {
   return text ? text.toString().normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase() : '';
@@ -235,6 +260,13 @@ const productosFiltrados = computed(() => {
       p.url &&
       p.url.trim() !== '',
   )
+})
+
+const hallazgosFiltrados = computed(() => {
+  if (!currentInvestigacion.value) return []
+  return hallazgos.value
+    .filter((h) => String(h.investigacion_id) === String(currentInvestigacion.value.id))
+    .sort((a, b) => Number(a.orden || 0) - Number(b.orden || 0))
 })
 
 const showDetail = (inv) => {
@@ -283,18 +315,27 @@ const getProductoIconObj = (tipo) => {
 
 onMounted(async () => {
   try {
-    const res = await fetch('public/content/investigaciones/investigaciones.json')
+    const res = await fetch(`${baseUrl}content/investigaciones/investigaciones.json`)
     if (!res.ok) throw new Error('No se pudo cargar el archivo de investigaciones')
     const data = await res.json()
     investigaciones.value = data
 
     try {
-      const prodRes = await fetch('public/content/investigaciones/productos.json')
+      const prodRes = await fetch(`${baseUrl}content/investigaciones/productos.json`)
       if (prodRes.ok) {
         productos.value = await prodRes.json()
       }
     } catch (e) {
       console.error('Error cargando productos', e)
+    }
+
+    try {
+      const hallazgosRes = await fetch(`${baseUrl}content/investigaciones/hallazgos.json`)
+      if (hallazgosRes.ok) {
+        hallazgos.value = await hallazgosRes.json()
+      }
+    } catch (e) {
+      console.error('Error cargando hallazgos', e)
     }
 
     // Si la URL trae un ID por vue-router, cargamos esa investigación
@@ -344,6 +385,49 @@ onMounted(async () => {
   font-size: 2.25rem;
 }
 
+.findings-section {
+  color: #111827;
+}
+
+.findings-title {
+  color: #f8be4b;
+  letter-spacing: 0;
+}
+
+.findings-list {
+  max-width: 860px;
+}
+
+.finding-item {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.finding-number {
+  color: #f0a400;
+  font-size: 2rem;
+  line-height: 1;
+  text-align: right;
+}
+
+.finding-heading {
+  color: #50328c;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.finding-text {
+  font-size: 1rem;
+  line-height: 1.55;
+  white-space: pre-wrap;
+}
+
+.finding-value {
+  color: #50328c;
+}
+
 .product-link {
   transition: all 0.2s ease;
   background-color: rgba(255, 255, 255, 0.05);
@@ -386,5 +470,16 @@ onMounted(async () => {
 }
 .producto-dataviz {
   color: #c99e05;
+}
+
+@media (max-width: 575.98px) {
+  .finding-item {
+    grid-template-columns: 40px 1fr;
+    gap: 14px;
+  }
+
+  .finding-number {
+    font-size: 1.6rem;
+  }
 }
 </style>
