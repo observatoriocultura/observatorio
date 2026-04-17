@@ -136,10 +136,7 @@
             </div>
             <div v-else class="text-muted small">La respuesta aun no está disponible</div>
 
-            <div
-              v-if="solicitud.cantidad_mediciones || solicitud.mediciones"
-              class="border-top mt-4 pt-4"
-            >
+            <div v-if="solicitud.cantidad_mediciones > 0" class="border-top mt-4 pt-4">
               <h6 class="text-muted small text-uppercase fw-bold mb-3">
                 Mediciones/Investigaciones a realizar
               </h6>
@@ -160,6 +157,13 @@
                   <span>{{ medicion }}</span>
                 </li>
               </ul>
+            </div>
+
+            <div v-if="agrupadaCon" class="border-top mt-4 pt-4">
+              <h6 class="text-muted small text-uppercase fw-bold mb-2">Agrupada con</h6>
+              <p class="text-secondary small mb-0" style="line-height: 1.5">
+                {{ agrupadaCon }}
+              </p>
             </div>
           </div>
         </div>
@@ -217,6 +221,12 @@ const medicionesListado = computed(() => {
     .split(/\r?\n/)
     .map((medicion) => medicion.trim())
     .filter(Boolean)
+})
+
+const agrupadaCon = computed(() => {
+  const valor = solicitud.value?.agrupada_con
+  if (valor === null || valor === undefined) return ''
+  return String(valor).trim()
 })
 
 const prevSolicitud = () => {

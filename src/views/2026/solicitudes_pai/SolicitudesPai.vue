@@ -108,6 +108,11 @@ const opcionesEntidades = ref([
     background: '#C9DAF8',
   },
   {
+    nombreCorto: 'FUGA',
+    nombreCompleto: 'Fundación Gilberto Alzate Avendaño',
+    background: '#B6D7A8',
+  },
+  {
     nombreCorto: 'IDPYBA',
     nombreCompleto: 'Instituto Distrital de Protección y Bienestar Animal',
     background: '#D5E3B3',
@@ -268,5 +273,11 @@ watch(entidadFiltro, () => {
 }
 .entidad-idrd {
   background-color: #c9daf8;
+}
+.entidad-fuga {
+  background-color: #cccccc;
+}
+.entidad-idpyba {
+  background-color: #c5e77c;
 }
 </style>
