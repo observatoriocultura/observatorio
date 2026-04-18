@@ -14,6 +14,7 @@ import SolicitudesPortada from '../views/2026/solicitudes_pai/SolicitudesPortada
 import SolicitudesListado from '../views/2026/solicitudes_pai/SolicitudesListado.vue'
 import SolicitudesInfo from '../views/2026/solicitudes_pai/SolicitudesInfo.vue'
 import SolicitudesTablero from '../views/2026/solicitudes_pai/SolicitudesTablero.vue'
+import ItdcLayout from '../views/2026/transformacion_digital/ItdcLayout.vue'
 
 const routes = [
   { path: '/', name: 'Inicio', component: HomeView, meta: { title: 'Inicio | Observatorio' } },
@@ -54,34 +55,40 @@ const routes = [
     meta: { title: 'Investigaciones' },
   },
   {
+    path: '/2026/impactos-transformacion-digital-en-la-cultura',
+    name: 'Impactos Transformación Digital en la Cultura',
+    component: ItdcLayout,
+    meta: { title: 'Impactos Transformación Digital en la Cultura | Observatorio' },
+  },
+  {
     path: '/2026/solicitudes-pai',
     component: SolicitudesPai,
     children: [
       {
         path: '',
-        name: 'Solicitudes PAÍ 2026 Inicio',
+        name: 'Solicitudes PAI 2026 Inicio',
         component: SolicitudesPortada,
         meta: { title: 'Solicitudes PAI | Observatorio' },
       },
       {
         path: 'listado',
-        name: 'Solicitudes PAÍ 2026 Listado',
+        name: 'Solicitudes PAI 2026 Listado',
         component: SolicitudesListado,
         meta: { title: 'Listado Solicitudes PAI | Observatorio' },
       },
       {
         path: 'detalle',
-        name: 'Solicitudes PAÍ 2026 Detalle',
+        name: 'Solicitudes PAI 2026 Detalle',
         component: SolicitudesInfo,
         meta: { title: 'Detalle Solicitudes PAI | Observatorio' },
       },
       {
         path: 'tablero',
-        name: 'Solicitudes PAÍ 2026 Tablero',
+        name: 'Solicitudes PAI 2026 Tablero',
         component: SolicitudesTablero,
         meta: { title: 'Tablero Solicitudes PAI | Observatorio' },
-      }
-    ]
+      },
+    ],
   },
   {
     path: '/:year/:slug',

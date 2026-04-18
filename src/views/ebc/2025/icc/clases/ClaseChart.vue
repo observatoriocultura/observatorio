@@ -1,10 +1,29 @@
 <script setup>
 import { ref, watch, onMounted, onUnmounted, inject } from 'vue'
 import Highcharts from 'highcharts'
-import { getPaletaColor as defaultGetPaletaColor } from '../constants.js'
+import {
+  CLASES as DEFAULT_CLASES,
+  getPaletaColor as defaultGetPaletaColor,
+} from '../constants.js'
 
 const surveyConstants = inject('surveyConstants', {})
+const clases = surveyConstants.CLASES || DEFAULT_CLASES
 const getPaletaColor = surveyConstants.getPaletaColor || defaultGetPaletaColor
+
+const normalizeText = (value) =>
+  String(value || '')
+    .trim()
+    .toLocaleLowerCase('es-CO')
+
+const getClaseColor = (item, index, fallbackColors) => {
+  const clase = clases.find(
+    (claseItem) =>
+      Number(claseItem.id) === Number(item.codigo) ||
+      normalizeText(claseItem.nombre) === normalizeText(item.nombre),
+  )
+
+  return clase?.color || fallbackColors[index % fallbackColors.length]
+}
 
 const props = defineProps({
   preguntaSeleccionada: {
@@ -41,7 +60,11 @@ const initChart = () => {
   if (!dataForChart || dataForChart.length === 0 || !chartContainer.value) return
 
   const categories = dataForChart.map((d) => d.nombre)
-  const data = dataForChart.map((d) => parseFloat(d.porcentaje.toFixed(1)))
+  const fallbackColors = getPaletaColor(props.preguntaSeleccionada?.dataviz_palette)
+  const data = dataForChart.map((d, index) => ({
+    y: parseFloat(d.porcentaje.toFixed(1)),
+    color: getClaseColor(d, index, fallbackColors),
+  }))
 
   const variableStr = props.variableSeleccionada
     ? props.variableSeleccionada.enunciado_2 || props.variableSeleccionada.codigo_variable
@@ -94,7 +117,7 @@ const initChart = () => {
     },
     tooltip: {
       pointFormat:
-        '<span style="color:{series.color}">{series.name}</span>: <b>{point.y:.1f}%</b><br/>',
+        '<span style="color:{point.color}">{series.name}</span>: <b>{point.y:.1f}%</b><br/>',
       shared: true,
       backgroundColor: 'rgba(255, 255, 255, 0.95)',
       borderRadius: 10,
@@ -117,7 +140,6 @@ const initChart = () => {
         },
       },
     },
-    colors: getPaletaColor(props.preguntaSeleccionada?.dataviz_palette),
     legend: {
       enabled: false,
     },

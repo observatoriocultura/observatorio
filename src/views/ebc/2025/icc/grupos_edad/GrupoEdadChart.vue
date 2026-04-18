@@ -1,10 +1,29 @@
 <script setup>
 import { ref, watch, onMounted, onUnmounted, inject } from 'vue'
 import Highcharts from 'highcharts'
-import { getPaletaColor as defaultGetPaletaColor } from '../constants.js'
+import {
+  GRUPOS_EDAD as DEFAULT_GRUPOS_EDAD,
+  getPaletaColor as defaultGetPaletaColor,
+} from '../constants.js'
 
 const surveyConstants = inject('surveyConstants', {})
+const gruposEdad = surveyConstants.GRUPOS_EDAD || DEFAULT_GRUPOS_EDAD
 const getPaletaColor = surveyConstants.getPaletaColor || defaultGetPaletaColor
+
+const normalizeText = (value) =>
+  String(value || '')
+    .trim()
+    .toLocaleLowerCase('es-CO')
+
+const getGrupoEdadColor = (item, index, fallbackColors) => {
+  const grupoEdad = gruposEdad.find(
+    (grupo) =>
+      Number(grupo.id) === Number(item.codigo) ||
+      normalizeText(grupo.nombre) === normalizeText(item.nombre),
+  )
+
+  return grupoEdad?.color || fallbackColors[index % fallbackColors.length]
+}
 
 const props = defineProps({
   preguntaSeleccionada: {
@@ -41,7 +60,11 @@ const initChart = () => {
   if (!dataForChart || dataForChart.length === 0 || !chartContainer.value) return
 
   const categories = dataForChart.map((d) => d.nombre)
-  const data = dataForChart.map((d) => parseFloat(d.porcentaje.toFixed(1)))
+  const fallbackColors = getPaletaColor(props.preguntaSeleccionada?.dataviz_palette)
+  const data = dataForChart.map((d, index) => ({
+    y: parseFloat(d.porcentaje.toFixed(1)),
+    color: getGrupoEdadColor(d, index, fallbackColors),
+  }))
 
   const variableStr = props.variableSeleccionada
     ? props.variableSeleccionada.enunciado_2 || props.variableSeleccionada.codigo_variable
@@ -94,7 +117,7 @@ const initChart = () => {
     },
     tooltip: {
       pointFormat:
-        '<span style="color:{series.color}">{series.name}</span>: <b>{point.y:.1f}%</b><br/>',
+        '<span style="color:{point.color}">{series.name}</span>: <b>{point.y:.1f}%</b><br/>',
       shared: true,
       backgroundColor: 'rgba(255, 255, 255, 0.95)',
       borderRadius: 10,
@@ -117,7 +140,6 @@ const initChart = () => {
         },
       },
     },
-    colors: getPaletaColor(props.preguntaSeleccionada?.dataviz_palette),
     legend: {
       enabled: false,
     },

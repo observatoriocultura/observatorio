@@ -3,9 +3,9 @@
  */
 
 export const GRUPOS_EDAD = [
-  { id: 2, nombre: '13-28 años' },
-  { id: 3, nombre: '29-59 años' },
-  { id: 4, nombre: '60 años o más' },
+  { id: 2, nombre: '13-28 años', color: '#6698e4' },
+  { id: 3, nombre: '29-59 años', color: '#427fda' },
+  { id: 4, nombre: '60 años o más', color: '#0F52BA' },
 ]
 
 /** Helper para obtener el nombre de un grupo de edad por su ID */
@@ -18,8 +18,8 @@ export const getNombreGrupoEdad = (id) => {
  * Sexos
  */
 export const SEXOS = [
-  { id: 1, nombre: 'Hombre' },
-  { id: 2, nombre: 'Mujer' },
+  { id: 1, nombre: 'Hombre', color: '#0F52BA' },
+  { id: 2, nombre: 'Mujer', color: '#d5c3f0' },
 ]
 
 /** Helper para obtener el nombre de un sexo por su CÓDIGO */
@@ -32,8 +32,8 @@ export const getNombreSexo = (id) => {
  * Clases de vivienda
  */
 export const CLASES = [
-  { id: 1, nombre: 'Urbano' },
-  { id: 2, nombre: 'Rural' },
+  { id: 1, nombre: 'Urbano', color: '#51698f' },
+  { id: 2, nombre: 'Rural', color: '#2dad58' },
 ]
 
 /** Helper para obtener el nombre de una clase por su CÓDIGO */

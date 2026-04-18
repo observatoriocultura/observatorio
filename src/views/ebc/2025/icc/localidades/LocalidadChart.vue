@@ -104,7 +104,7 @@ const initChart = () => {
         borderRadius: 4,
         dataLabels: {
           enabled: true,
-          format: '{point.y:.1f}',
+          format: '{point.y:.1f}%',
           style: {
             textOutline: 'none',
             color: '#5c6972',

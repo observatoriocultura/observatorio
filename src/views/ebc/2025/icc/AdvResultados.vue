@@ -2,7 +2,7 @@
 import { ref, onMounted, inject, provide, computed, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import BarMultipleChart from './charts/BarMultipleChart.vue'
-import BarYesNoChart from './charts/BarYesNoChart.vue'
+import BarYesSelectionChart from './charts/BarYesSelectionChart.vue'
 import DonutChart from './charts/DonutChart.vue'
 import BarChart from './charts/BarChart.vue'
 import WordCloudChart from './charts/WordCloudChart.vue'
@@ -781,8 +781,8 @@ watch(contentSection, async (nuevaSeccion) => {
                 />
 
                 <!-- TIPO DE GRÁFICO BAR BOOLEAN (Barras apiladas con solo dos categorías: Sí/No, Presente/Ausente, etc) -->
-                <BarYesNoChart
-                  v-else-if="preguntaSeleccionada.dataviz_chart_type === 'bar-boolean'"
+                <BarYesSelectionChart
+                  v-else-if="preguntaSeleccionada.dataviz_chart_type === 'bar-yes-selection'"
                   :title="tituloConFiltro"
                   :subtitle="preguntaSeleccionada.enunciado_1"
                   :pregunta="preguntaSeleccionada"
