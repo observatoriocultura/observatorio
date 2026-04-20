@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, inject, computed } from 'vue'
+import { ref, watch, onMounted, inject, computed } from 'vue'
 import IndiceResumen from './indice/IndiceResumen.vue'
 import IndiceTabla from './indice/IndiceTabla.vue'
 import IndiceSubindices from './indice/IndiceSubindices.vue'
@@ -15,6 +15,10 @@ const indicesRef = ref([]) // especificación canónica de índices desde indice
 
 /** Vista activa: resumen o tabla */
 const vistaActiva = ref('resumen')
+
+/** Índice seleccionado globalmente y compartido entre vistas */
+const indiceGlobal = ref(null)
+
 
 /**
  * Normaliza un string para comparación: minúsculas, sin acentos, sin espacios extra.
@@ -45,8 +49,8 @@ const indices = computed(() => {
 
   // Cruzar con la referencia de indices.json por nombre normalizado
   return indicesRef.value
-    .map((ref) => {
-      const nombreRef = normalizar(ref.nombre)
+    .map((indRef) => {
+      const nombreRef = normalizar(indRef.nombre)
       let matchedCod = null
 
       for (const [cod, nombre] of iccIndicesMap) {
@@ -60,19 +64,30 @@ const indices = computed(() => {
 
       return {
         cod: matchedCod, // indice_cod de icc.json
-        num: ref.num, // orden canónico
-        nombre: ref.nombre,
-        nombre_largo: ref.nombre_largo,
-        nombre_corto: ref.nombre_corto,
-        abreviatura: ref.abreviatura,
-        key: ref.key,
-        nivel: ref.nivel,
-        descripcion: ref.descripcion,
+        num: indRef.num, // orden canónico
+        nombre: indRef.nombre,
+        nombre_largo: indRef.nombre_largo,
+        nombre_corto: indRef.nombre_corto,
+        abreviatura: indRef.abreviatura,
+        key: indRef.key,
+        nivel: indRef.nivel,
+        descripcion: indRef.descripcion,
       }
     })
     .filter(Boolean)
     .sort((a, b) => a.num - b.num)
 })
+
+watch(
+  indices,
+  (nuevos) => {
+    if (nuevos.length && indiceGlobal.value === null) {
+      const general = nuevos.find((i) => i.cod === 0 || i.key === 'indice')
+      indiceGlobal.value = general ? general.cod : nuevos[0].cod
+    }
+  },
+  { immediate: true }
+)
 
 /** Localidades únicas extraídas del JSON */
 const localidades = computed(() => {
@@ -220,6 +235,7 @@ onMounted(async () => {
       />
       <IndiceTabla
         v-show="vistaActiva === 'tabla'"
+        v-model="indiceGlobal"
         :datos-por-localidad="datosPorLocalidad"
         :indices="indices"
         :localidades="localidades"
@@ -244,6 +260,7 @@ onMounted(async () => {
       />
       <IndiceDumbbell
         v-show="vistaActiva === 'comparativo'"
+        v-model="indiceGlobal"
         :datos-por-localidad="datosPorLocalidad"
         :indices="indices"
         :localidades="localidades"
@@ -251,6 +268,7 @@ onMounted(async () => {
       />
       <IndiceMapa
         v-if="vistaActiva === 'mapa'"
+        v-model="indiceGlobal"
         :indices="indices"
         :localidades="localidades"
         :icc-data="iccData"

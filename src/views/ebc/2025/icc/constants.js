@@ -71,6 +71,17 @@ export const PALETAS_COLOR = {
 }
 
 /**
+ * Colores por año de medición del ICC.
+ * Usar para lookup directo: ICC_YEAR_COLORS[2025]
+ * El orden del array icc_years en PALETAS_COLOR corresponde a [2021, 2023, 2025].
+ */
+export const ICC_YEAR_COLORS = {
+  2021: '#D9CBEA',
+  2023: '#8D6ABB',
+  2025: '#FFCA28',
+}
+
+/**
  * Helper para obtener la paleta de colores según el tipo de respuesta
  * @param {string} tipo - Tipo de respuesta
  * @returns {string[]} - Paleta de colores

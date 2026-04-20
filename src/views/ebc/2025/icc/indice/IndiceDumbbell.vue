@@ -3,6 +3,8 @@ import { onMounted, onUnmounted, ref, watch, computed } from 'vue'
 import Highcharts from 'highcharts'
 import HighchartsMore from 'highcharts/highcharts-more'
 import Dumbbell from 'highcharts/modules/dumbbell'
+import IndiceSelector from './IndiceSelector.vue'
+import { ICC_YEAR_COLORS } from '../constants.js'
 
 // Inicializar módulos de Highcharts
 if (typeof HighchartsMore === 'function') {
@@ -17,13 +19,19 @@ const props = defineProps({
   indices: { type: Array, default: () => [] },
   localidades: { type: Array, default: () => [] },
   iccData: { type: Array, default: () => [] },
+  modelValue: { type: [Number, String], default: null },
 })
+
+const emit = defineEmits(['update:modelValue'])
 
 const chartContainer = ref(null)
 let chartInstance = null
 
 // Estado de selección
-const selectedIndex = ref(null)
+const selectedIndex = computed({
+  get: () => props.modelValue,
+  set: (val) => emit('update:modelValue', val)
+})
 
 // Si el eje X debe estar fijo en 0.25 - 0.75
 const fixedAxisX = ref(true)
@@ -32,27 +40,7 @@ const fixedAxisX = ref(true)
 const year1 = ref(2023)
 const year2 = ref(2025)
 
-const yearColors = {
-  2021: '#D9CBEA',
-  2023: '#8D6ABB',
-  2025: '#FFCA28',
-}
-
-// Inicializar selección por defecto: el índice general (cod === 0)
-watch(
-  () => props.indices,
-  (newIndices) => {
-    if (newIndices.length > 0 && selectedIndex.value === null) {
-      const generalIndex = newIndices.find((i) => i.cod === 0)
-      selectedIndex.value = generalIndex ? generalIndex.cod : newIndices[0].cod
-    }
-  },
-  { immediate: true },
-)
-
-const selectIndex = (cod) => {
-  selectedIndex.value = cod
-}
+const yearColors = ICC_YEAR_COLORS
 
 // Obtener nombre del índice seleccionado
 const getIndexName = computed(() => {
@@ -268,25 +256,11 @@ watch(
           </div>
         </div>
 
-        <div class="indices-sidebar shadow-sm rounded bg-white p-2">
-          <label class="sidebar-label mb-2 px-2">Índice y subíndices</label>
-          <div class="list-group list-group-flush">
-            <button
-              v-for="idx in indices"
-              :key="idx.cod"
-              type="button"
-              class="list-group-item list-group-item-action sidebar-item"
-              :class="{ active: selectedIndex === idx.cod }"
-              @click="selectIndex(idx.cod)"
-            >
-              <div class="d-flex w-100 justify-content-between align-items-center">
-                <span class="indice-nombre" :class="{ 'fw-bold': idx.cod === 0 }">{{
-                  idx.nombre || idx.nombre_corto
-                }}</span>
-                <i v-if="selectedIndex === idx.cod" class="bi bi-chevron-right small"></i>
-              </div>
-            </button>
-          </div>
+        <div class="indices-sidebar shadow-sm rounded bg-white p-2" style="max-height: 50vh;">
+          <IndiceSelector
+            v-model="selectedIndex"
+            :indices="indices"
+          />
         </div>
       </div>
 
@@ -319,34 +293,7 @@ watch(
   top: 1rem;
 }
 
-.sidebar-label {
-  font-size: 0.7rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: #adb5bd;
-  letter-spacing: 0.1em;
-}
 
-.sidebar-item {
-  border: none !important;
-  border-radius: 8px !important;
-  margin-bottom: 2px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #495057;
-  transition: all 0.2s ease;
-}
-
-.sidebar-item:hover {
-  background-color: #f8f9fa;
-  color: var(--color-primary);
-}
-
-.sidebar-item.active {
-  background-color: var(--color-primary-light) !important;
-  color: var(--color-primary) !important;
-  font-weight: 800;
-}
 
 .axis-control {
   border-top: 1px solid #f1f3f5;

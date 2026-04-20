@@ -2,6 +2,8 @@
 import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
 import Highcharts from 'highcharts'
 import HighchartsMap from 'highcharts/modules/map'
+import IndiceSelector from './IndiceSelector.vue'
+import { ICC_YEAR_COLORS } from '../constants.js'
 
 if (typeof HighchartsMap === 'function' && !Highcharts.MapChart) {
   HighchartsMap(Highcharts)
@@ -11,25 +13,31 @@ const props = defineProps({
   indices: { type: Array, default: () => [] },
   localidades: { type: Array, default: () => [] },
   iccData: { type: Array, default: () => [] },
+  modelValue: { type: [Number, String], default: null },
 })
+
+const emit = defineEmits(['update:modelValue'])
 
 const chartContainer = ref(null)
 const geojson = ref(null)
 const loadingMap = ref(true)
 const selectedYear = ref(2025)
-const selectedIndex = ref(null)
+const selectedIndex = computed({
+  get: () => props.modelValue,
+  set: (val) => emit('update:modelValue', val)
+})
 let chartInstance = null
 
-const TOP_COLOR = '#DBF0E0'
+const TOP_COLOR = '#83e69b'
 const BOTTOM_COLOR = '#F3BEC4'
-const DEFAULT_COLOR = '#FFF0C1'
+const DEFAULT_COLOR = '#E5E2EC'
 
 const availableYears = computed(() => {
   const years = new Set()
   props.iccData.forEach((d) => {
     if (d['año'] !== null && d['año'] !== undefined) years.add(Number(d['año']))
   })
-  return Array.from(years).sort((a, b) => b - a)
+  return Array.from(years).sort((a, b) => a - b)
 })
 
 const sortedIndices = computed(() => {
@@ -210,15 +218,7 @@ const initChart = async () => {
   })
 }
 
-watch(
-  () => props.indices,
-  (indices) => {
-    if (!indices.length || selectedIndex.value !== null) return
-    const generalIndex = indices.find((idx) => idx.key === 'indice' || idx.cod === 0)
-    selectedIndex.value = generalIndex ? generalIndex.cod : indices[0].cod
-  },
-  { immediate: true },
-)
+
 
 watch(
   availableYears,
@@ -265,46 +265,48 @@ onUnmounted(() => {
   <div class="indice-mapa">
     <section class="map-shell">
       <aside class="map-controls card-premium">
-        <div class="controls-header">
-          <p class="eyebrow mb-1">Mapa ICC</p>
-          <h3 class="controls-title mb-0">Resultado por localidad</h3>
-          <p class="controls-copy mb-0">Valores en escala 0 - 1.</p>
-        </div>
-
-        <div class="control-group">
-          <label class="form-label" for="indice-map-year">Año</label>
-          <select id="indice-map-year" v-model="selectedYear" class="form-select">
-            <option v-for="year in availableYears" :key="year" :value="year">
-              {{ year }}
-            </option>
-          </select>
-        </div>
-
-        <div class="control-group">
-          <label class="form-label" for="indice-map-index">Índice o subíndice</label>
-          <select id="indice-map-index" v-model="selectedIndex" class="form-select">
-            <option v-for="idx in sortedIndices" :key="idx.cod" :value="idx.cod">
-              {{ idx.nombre_corto || idx.nombre }}
-            </option>
-          </select>
-        </div>
-
-        <div class="summary-box">
+        <div class="summary-box mb-1">
           <span class="summary-label">Bogotá D.C. total</span>
           <strong>{{ formatValue(bogotaValue) }}</strong>
         </div>
 
-        <div class="legend-note">
-          <span class="legend-swatch high"></span>
-          <span>3 mayores</span>
-          <span class="legend-swatch mid"></span>
-          <span>Intermedias</span>
-          <span class="legend-swatch low"></span>
-          <span>3 menores</span>
+        <div class="control-group">
+          <div class="year-toggle-group">
+            <button
+              v-for="year in availableYears"
+              :key="year"
+              type="button"
+              class="year-toggle-btn"
+              :class="{ active: selectedYear === year }"
+              :style="selectedYear === year ? { background: ICC_YEAR_COLORS[year] || 'var(--color-primary)', color: '#212529' } : {}"
+              @click="selectedYear = year"
+            >
+              {{ year }}
+            </button>
+          </div>
+        </div>
+
+        <div class="control-group index-selector-container">
+          <IndiceSelector
+            v-model="selectedIndex"
+            :indices="sortedIndices"
+            label="Índice o subíndice"
+          />
         </div>
       </aside>
 
       <div class="map-panel card-premium">
+        <div v-show="!loadingMap && dataMap.length > 0" class="map-legend-container">
+          <div class="legend-note m-0 pt-0">
+            <span class="legend-swatch high"></span>
+            <span>3 mayores</span>
+            <span class="legend-swatch mid"></span>
+            <span>Intermedias</span>
+            <span class="legend-swatch low"></span>
+            <span>3 menores</span>
+          </div>
+        </div>
+
         <div v-if="loadingMap" class="map-state">
           <div class="spinner-grow text-primary mb-3"></div>
           <p class="text-muted mb-0">Cargando mapa...</p>
@@ -325,9 +327,8 @@ onUnmounted(() => {
 
       <aside class="results-panel card-premium">
         <div class="results-header">
-          <p class="eyebrow mb-1">Resultados</p>
-          <h3 class="results-title mb-0">{{ selectedIndexName }}</h3>
-          <p class="results-copy mb-0">{{ selectedYear }}</p>
+          <h3 class="results-title mb-0" :title="selectedIndexName">{{ selectedIndexName }}</h3>
+          <span class="results-copy mb-0">{{ selectedYear }}</span>
         </div>
 
         <div class="results-table-wrap">
@@ -365,7 +366,7 @@ onUnmounted(() => {
 
 .map-shell {
   display: grid;
-  grid-template-columns: 280px minmax(0, 1fr) 320px;
+  grid-template-columns: 330px minmax(0, 1fr) 300px;
   gap: 1rem;
   align-items: stretch;
 }
@@ -382,6 +383,19 @@ onUnmounted(() => {
 .map-panel {
   min-height: 680px;
   padding: 1rem;
+  position: relative;
+}
+
+.map-legend-container {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #edf0f2;
+  box-shadow: 0 4px 12px rgba(33, 37, 41, 0.08);
 }
 
 .map-chart {
@@ -411,8 +425,12 @@ onUnmounted(() => {
 }
 
 .results-header {
-  padding: 1rem 1rem 0.8rem;
+  padding: 0.75rem 1rem;
   border-bottom: 1px solid #edf0f2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
 }
 
 .eyebrow {
@@ -432,11 +450,25 @@ onUnmounted(() => {
   line-height: 1.25;
 }
 
+.results-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .controls-copy,
 .results-copy {
   color: #6c757d;
   font-size: 0.84rem;
+}
+
+.controls-copy {
   margin-top: 0.25rem;
+}
+
+.results-copy {
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .control-group {
@@ -463,6 +495,52 @@ onUnmounted(() => {
   box-shadow: 0 0 0 0.18rem rgba(101, 64, 150, 0.12);
 }
 
+.year-toggle-group {
+  display: flex;
+  background: #f8f9fa;
+  border: 1px solid #dfe3e6;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.year-toggle-btn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  border-right: 1px solid #dfe3e6;
+  padding: 0.45rem 0;
+  color: #6c757d;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.year-toggle-btn:last-child {
+  border-right: none;
+}
+
+.year-toggle-btn:hover:not(.active) {
+  background: #edf0f2;
+  color: #495057;
+}
+
+.year-toggle-btn.active {
+  color: #212529;
+  font-weight: 800;
+}
+
+.index-selector-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex: 1;
+  min-height: 200px;
+  overflow: hidden;
+}
+
+
+
 .summary-box {
   display: flex;
   align-items: center;
@@ -488,30 +566,31 @@ onUnmounted(() => {
 
 .legend-note {
   display: grid;
-  grid-template-columns: auto 1fr auto 1fr auto 1fr;
+  grid-template-columns: auto 1fr;
   align-items: center;
-  gap: 0.35rem;
+  row-gap: 0.6rem;
+  column-gap: 0.5rem;
   color: #5c6972;
-  font-size: 0.76rem;
+  font-size: 0.8rem;
   font-weight: 700;
 }
 
 .legend-swatch {
-  width: 16px;
-  height: 10px;
+  width: 14px;
+  height: 14px;
   border-radius: 4px;
 }
 
 .legend-swatch.low {
-  background: #dc3545;
+  background: #F3BEC4;
 }
 
 .legend-swatch.mid {
-  background: #d9cbea;
+  background: #E5E2EC;
 }
 
 .legend-swatch.high {
-  background: #28a745;
+  background: #83e69b;
 }
 
 .results-table-wrap {
@@ -526,7 +605,7 @@ onUnmounted(() => {
 
 .results-table th,
 .results-table td {
-  padding: 0.65rem 0.75rem;
+  padding: 0.35rem 0.75rem;
   border-bottom: 1px solid #edf0f2;
 }
 
@@ -560,27 +639,27 @@ onUnmounted(() => {
 }
 
 .results-table tbody tr.row-top {
-  background: rgba(40, 167, 69, 0.16);
+  background: #83e69b;
 }
 
 .results-table tbody tr.row-middle {
-  background: #d9cbea;
+  background: #E5E2EC;
 }
 
 .results-table tbody tr.row-bottom {
-  background: rgba(220, 53, 69, 0.16);
+  background: #F3BEC4;
 }
 
 .results-table tbody tr.row-top:hover {
-  background: rgba(40, 167, 69, 0.18);
+  background: #5fd47d;
 }
 
 .results-table tbody tr.row-middle:hover {
-  background: #cbb8e2;
+  background: #D7D3E0;
 }
 
 .results-table tbody tr.row-bottom:hover {
-  background: rgba(220, 53, 69, 0.18);
+  background: #e9b3ba;
 }
 
 .results-table tbody tr.row-top td:last-child {

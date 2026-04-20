@@ -1,5 +1,6 @@
 <script setup>
 import { computed, ref, watch } from 'vue'
+import IndiceSelector from './IndiceSelector.vue'
 
 const props = defineProps({
   datosPorLocalidad: { type: Array, required: true },
@@ -7,20 +8,16 @@ const props = defineProps({
   localidades: { type: Array, required: true },
   numPeriodos: { type: Number, required: true },
   iccData: { type: Array, default: () => [] },
+  modelValue: { type: [Number, String], default: null },
 })
 
-/** Índice seleccionado para la tabla (se inicializa al primer índice disponible) */
-const indiceSeleccionado = ref(null)
+const emit = defineEmits(['update:modelValue'])
 
-watch(
-  () => props.indices,
-  (nuevos) => {
-    if (nuevos.length && indiceSeleccionado.value === null) {
-      indiceSeleccionado.value = nuevos[0].cod
-    }
-  },
-  { immediate: true },
-)
+/** Índice seleccionado para la tabla */
+const indiceSeleccionado = computed({
+  get: () => props.modelValue,
+  set: (val) => emit('update:modelValue', val)
+})
 
 /** Orden de la tabla */
 const ordenAsc = ref(false)
@@ -119,23 +116,11 @@ const colorCelda = (valor) => {
     <div class="row g-4">
       <!-- Sidebar de Índices (Izquierda) -->
       <div class="col-md-3">
-        <div class="indices-sidebar shadow-sm rounded bg-white p-2">
-          <label class="sidebar-label mb-2 px-2">Índice y subíndices</label>
-          <div class="list-group list-group-flush">
-            <button
-              v-for="idx in indices"
-              :key="idx.cod"
-              type="button"
-              class="list-group-item list-group-item-action sidebar-item"
-              :class="{ active: indiceSeleccionado === idx.cod }"
-              @click="indiceSeleccionado = idx.cod"
-            >
-              <div class="d-flex w-100 justify-content-between align-items-center">
-                <span class="indice-nombre">{{ idx.nombre }}</span>
-                <i v-if="indiceSeleccionado === idx.cod" class="bi bi-chevron-right small"></i>
-              </div>
-            </button>
-          </div>
+        <div class="indices-sidebar shadow-sm rounded bg-white p-2" style="max-height: 80vh;">
+          <IndiceSelector
+            v-model="indiceSeleccionado"
+            :indices="indices"
+          />
         </div>
       </div>
 
@@ -250,35 +235,8 @@ const colorCelda = (valor) => {
 .indices-sidebar {
   position: sticky;
   top: 1rem;
-}
-
-.sidebar-label {
-  font-size: 0.7rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: #adb5bd;
-  letter-spacing: 0.1em;
-}
-
-.sidebar-item {
-  border: none !important;
-  border-radius: 8px !important;
-  margin-bottom: 2px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #495057;
-  transition: all 0.2s ease;
-}
-
-.sidebar-item:hover {
-  background-color: #f8f9fa;
-  color: var(--color-primary);
-}
-
-.sidebar-item.active {
-  background-color: var(--color-primary-light) !important;
-  color: var(--color-primary) !important;
-  font-weight: 800;
+  display: flex;
+  flex-direction: column;
 }
 
 .ls-wide {
