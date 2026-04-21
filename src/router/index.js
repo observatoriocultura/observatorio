@@ -8,6 +8,7 @@ import ContenidosView from '../views/ContenidosView.vue'
 import ArticleView from '../views/ArticleView.vue'
 import AdvLayout2025 from '../views/ebc/2025/icc/AdvLayout.vue'
 import LeoLayout2025 from '../views/ebc/2025/leo/AdvLayout.vue'
+import PacLayout2025 from '../views/ebc/2025/pac/AdvLayout.vue'
 import InvestigacionesView from '../views/InvestigacionesView.vue'
 import SolicitudesPai from '../views/2026/solicitudes_pai/SolicitudesPai.vue'
 import SolicitudesPortada from '../views/2026/solicitudes_pai/SolicitudesPortada.vue'
@@ -15,6 +16,7 @@ import SolicitudesListado from '../views/2026/solicitudes_pai/SolicitudesListado
 import SolicitudesInfo from '../views/2026/solicitudes_pai/SolicitudesInfo.vue'
 import SolicitudesTablero from '../views/2026/solicitudes_pai/SolicitudesTablero.vue'
 import ItdcLayout from '../views/2026/transformacion_digital/ItdcLayout.vue'
+import ContenidosMovilidad from '../views/2026/contenidos_movilidad/ContenidosMovilidad.vue'
 
 const routes = [
   { path: '/', name: 'Inicio', component: HomeView, meta: { title: 'Inicio | Observatorio' } },
@@ -49,6 +51,12 @@ const routes = [
     meta: { title: 'Lectura Escritura y Oralidad 2025' },
   },
   {
+    path: '/ebc/practicas-artisticas-culturales-creativas-patrimoniales-2025',
+    name: 'Encuesta de Prácticas Artísticas, Culturales, Creativas y Patrimoniales 2025',
+    component: PacLayout2025,
+    meta: { title: 'Encuesta de Prácticas Artísticas, Culturales, Creativas y Patrimoniales 2025' },
+  },
+  {
     path: '/investigaciones',
     name: 'Investigaciones',
     component: InvestigacionesView,
@@ -59,6 +67,12 @@ const routes = [
     name: 'Impactos Transformación Digital en la Cultura',
     component: ItdcLayout,
     meta: { title: 'Impactos Transformación Digital en la Cultura | Observatorio' },
+  },
+  {
+    path: '/2026/contenidos-movilidad',
+    name: 'Contenidos Movilidad',
+    component: ContenidosMovilidad,
+    meta: { title: 'Contenidos Movilidad | Observatorio' },
   },
   {
     path: '/2026/solicitudes-pai',
