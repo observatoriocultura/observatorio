@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watch, computed, inject, onMounted } from 'vue'
+import { ref, computed, inject, onMounted } from 'vue'
 import * as bootstrap from 'bootstrap'
 import LocalidadChart from './LocalidadChart.vue'
 import LocalidadMap from './LocalidadMap.vue'
@@ -14,26 +14,9 @@ const props = defineProps({
 })
 
 const localidades = inject('localidades', ref([]))
-const variableSeleccionada = ref(null)
-const respuestaSeleccionada = ref(null)
+const variableSeleccionada = defineModel('variableSeleccionada', { type: Object, default: null })
+const respuestaSeleccionada = defineModel('respuestaSeleccionada', { default: null })
 const currentSubView = ref('combined') // 'combined' (Gráfico + Mapa) o 'table' (Datos)
-
-// Seleccionar primera variable/respuesta automáticamente
-watch(
-  () => props.variables,
-  (newVars) => {
-    if (newVars?.length > 0) variableSeleccionada.value = newVars[0]
-  },
-  { immediate: true },
-)
-
-watch(
-  () => props.posiblesRespuestas,
-  (newResps) => {
-    if (newResps?.length > 0) respuestaSeleccionada.value = newResps[0]
-  },
-  { immediate: true },
-)
 
 // Lógica de agrupación de datos (centralizada)
 const tablaAgrupada = computed(() => {
@@ -107,8 +90,11 @@ onMounted(() => {
 
         <!-- SELECTORES (A LA DERECHA) -->
         <div class="col-md">
-          <div class="row g-2 justify-content-end">
-            <div class="col-md-7">
+          <div
+            class="row g-2"
+            :class="variables.length > 1 ? 'justify-content-end' : 'justify-content-start'"
+          >
+            <div v-if="variables.length > 1" class="col-md-7">
               <select 
                 id="vSelect" 
                 class="form-select select-premium" 
@@ -122,7 +108,7 @@ onMounted(() => {
                 </option>
               </select>
             </div>
-            <div class="col-md-5">
+            <div :class="variables.length > 1 ? 'col-md-5' : 'col-md-6 col-lg-4'">
               <select 
                 id="rSelect" 
                 class="form-select select-premium" 

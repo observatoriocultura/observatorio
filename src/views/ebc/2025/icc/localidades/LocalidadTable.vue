@@ -18,11 +18,16 @@ defineProps({
 <template>
   <div class="localidad-table">
     <div class="card-premium overflow-hidden">
-      <div class="card-header bg-white border-0 py-3 px-4 d-flex justify-content-between align-items-center">
+      <div
+        class="card-header bg-white border-0 py-3 px-4 d-flex justify-content-between align-items-center"
+      >
         <h6 class="text-uppercase text-muted fw-bold small mb-0">
           <i class="bi bi-table text-premium me-2"></i>Resultados por Localidad
         </h6>
-        <span v-if="respuestaSeleccionada" class="badge rounded-pill bg-light text-dark border fw-normal">
+        <span
+          v-if="respuestaSeleccionada"
+          class="badge rounded-pill bg-light text-dark border fw-normal"
+        >
           Filtrado por: {{ respuestaSeleccionada }}
         </span>
       </div>
@@ -34,12 +39,9 @@ defineProps({
         <div class="text-muted mt-2 small">Cargando datos territoriales...</div>
       </div>
 
-      <div
-        v-else-if="tablaAgrupada.length === 0"
-        class="alert alert-warning m-4"
-      >
-        <i class="bi bi-exclamation-triangle me-2"></i> No se encontraron datos para la
-        combinación seleccionada.
+      <div v-else-if="tablaAgrupada.length === 0" class="alert alert-warning m-4">
+        <i class="bi bi-exclamation-triangle me-2"></i> No se encontraron datos para la combinación
+        seleccionada.
       </div>
 
       <div v-else class="table-responsive">
@@ -49,10 +51,14 @@ defineProps({
               <th scope="col" class="text-center border-0 py-2" style="width: 100px">Código</th>
               <th scope="col" class="border-0 py-2">Localidad</th>
               <th scope="col" class="text-end text-nowrap border-0 py-2">
-                Población (Opc. Seleccionada)
+                Total estimado (opción seleccionada)
               </th>
-              <th scope="col" class="text-end text-nowrap border-0 py-2">Total Variable</th>
-              <th scope="col" class="text-end text-nowrap border-0 py-2">% Respuesta</th>
+              <th scope="col" class="text-end text-nowrap border-0 py-2">
+                Total estimado poblacional
+              </th>
+              <th scope="col" class="text-end text-nowrap border-0 py-2">
+                % estimado (opción seleccionada)
+              </th>
             </tr>
           </thead>
           <tbody>

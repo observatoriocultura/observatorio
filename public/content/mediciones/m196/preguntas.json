@@ -1422,7 +1422,7 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"scale_desc_4"
+        "dataviz_palette":"custom_37"
     },
     {
         "num_seccion":5,

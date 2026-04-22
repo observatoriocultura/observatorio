@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, inject, provide, computed, watch } from 'vue'
+import { ref, onMounted, onUnmounted, inject, provide, computed, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import BarMultipleChart from './charts/BarMultipleChart.vue'
 import BarYesSelectionChart from './charts/BarYesSelectionChart.vue'
@@ -48,6 +48,8 @@ const localidadSeleccionada = ref(null)
 const grupoEdadSeleccionado = ref(null)
 const sexoSeleccionado = ref(null)
 const claseSeleccionada = ref(null)
+const detalleVariableSeleccionada = ref(null)
+const detalleRespuestaSeleccionada = ref(null)
 const route = useRoute()
 const router = useRouter()
 
@@ -197,6 +199,44 @@ const posiblesRespuestas = computed(() => {
     return String(a).localeCompare(String(b))
   })
 })
+
+/** Mantiene los selectores de detalle vigentes al cambiar pregunta o resultados */
+watch(
+  variablesFiltradas,
+  (newVars) => {
+    if (!newVars.length) {
+      detalleVariableSeleccionada.value = null
+      return
+    }
+
+    const seleccionActual = detalleVariableSeleccionada.value
+    const variableVigente = seleccionActual
+      ? newVars.find((v) => v.indice_variable === seleccionActual.indice_variable)
+      : null
+
+    detalleVariableSeleccionada.value = variableVigente || newVars[0]
+  },
+  { immediate: true },
+)
+
+watch(
+  posiblesRespuestas,
+  (newResps) => {
+    if (!newResps.length) {
+      detalleRespuestaSeleccionada.value = null
+      return
+    }
+
+    const seleccionActual = detalleRespuestaSeleccionada.value
+    const respuestaVigente =
+      seleccionActual !== null && seleccionActual !== undefined
+        ? newResps.find((r) => String(r) === String(seleccionActual))
+        : null
+
+    detalleRespuestaSeleccionada.value = respuestaVigente ?? newResps[0]
+  },
+  { immediate: true },
+)
 
 /** Etiqueta de filtros activos para añadir al título de los gráficos */
 const labelFiltroActivo = computed(() => {
@@ -360,6 +400,64 @@ const seleccionarPregunta = (pregunta) => {
   actualizarRespuestas()
   actualizarSeries()
 }
+
+const debeIgnorarNavegacionPorTeclado = (event) => {
+  if (
+    event.defaultPrevented ||
+    event.altKey ||
+    event.ctrlKey ||
+    event.metaKey ||
+    event.shiftKey ||
+    event.isComposing ||
+    document.querySelector('.modal.show')
+  ) {
+    return true
+  }
+
+  const target = event.target
+  if (!(target instanceof HTMLElement)) return false
+
+  return Boolean(
+    target.closest(
+      'input, textarea, select, button, a, [contenteditable="true"], [role="textbox"], [role="listbox"], [role="combobox"], [role="menu"], [role="tablist"]',
+    ),
+  )
+}
+
+const navegarPreguntaRelativa = (direccion) => {
+  if (loading.value || !preguntaSeleccionada.value) return false
+
+  const indiceActual = preguntasFiltradas.value.findIndex(
+    (pregunta) =>
+      String(pregunta.indice_pregunta) === String(preguntaSeleccionada.value.indice_pregunta),
+  )
+  if (indiceActual < 0) return false
+
+  const siguienteIndice = indiceActual + direccion
+  const siguientePregunta = preguntasFiltradas.value[siguienteIndice]
+  if (!siguientePregunta) return false
+
+  seleccionarPregunta(siguientePregunta)
+  return true
+}
+
+const manejarNavegacionPreguntasTeclado = (event) => {
+  if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return
+  if (debeIgnorarNavegacionPorTeclado(event)) return
+
+  const direccion = event.key === 'ArrowRight' ? 1 : -1
+  if (navegarPreguntaRelativa(direccion)) {
+    event.preventDefault()
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('keydown', manejarNavegacionPreguntasTeclado)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('keydown', manejarNavegacionPreguntasTeclado)
+})
 
 /**
  * Construye el array `series` para el gráfico bar-multiple.
@@ -639,7 +737,7 @@ watch(contentSection, async (nuevaSeccion) => {
                 <i class="bi bi-house-door me-1"></i>Clase Vivienda
               </button>
             </li>
-            <li class="nav-item">
+            <li class="nav-item d-none">
               <button
                 class="nav-link"
                 :class="{ active: contentSection === 'table' }"
@@ -714,7 +812,7 @@ watch(contentSection, async (nuevaSeccion) => {
                   </option>
                 </select>
               </div>
-              <div class="col-md-2 text-nowrap">
+              <div class="col-md">
                 <select
                   v-model="sexoSeleccionado"
                   class="form-select select-premium"
@@ -730,7 +828,7 @@ watch(contentSection, async (nuevaSeccion) => {
                   </option>
                 </select>
               </div>
-              <div class="col-md-2">
+              <div class="col-md">
                 <select
                   v-model="claseSeleccionada"
                   class="form-select select-premium"
@@ -745,18 +843,6 @@ watch(contentSection, async (nuevaSeccion) => {
                     {{ clase.nombre }}
                   </option>
                 </select>
-              </div>
-              <div class="col-auto">
-                <div
-                  v-if="loadingDimension"
-                  class="text-muted small d-flex align-items-center gap-1 text-nowrap"
-                >
-                  <span
-                    class="spinner-border spinner-border-sm"
-                    role="status"
-                    aria-hidden="true"
-                  ></span>
-                </div>
               </div>
             </div>
           </section>
@@ -864,6 +950,8 @@ watch(contentSection, async (nuevaSeccion) => {
               :posiblesRespuestas="posiblesRespuestas"
               :respuestasLocalidad="respuestasLocalidad"
               :loading="loadingDimension"
+              v-model:variableSeleccionada="detalleVariableSeleccionada"
+              v-model:respuestaSeleccionada="detalleRespuestaSeleccionada"
             />
           </div>
 
@@ -874,6 +962,8 @@ watch(contentSection, async (nuevaSeccion) => {
               :posiblesRespuestas="posiblesRespuestas"
               :respuestasEdad="respuestasEdad"
               :loading="loadingDimension"
+              v-model:variableSeleccionada="detalleVariableSeleccionada"
+              v-model:respuestaSeleccionada="detalleRespuestaSeleccionada"
             />
           </div>
 
@@ -884,6 +974,8 @@ watch(contentSection, async (nuevaSeccion) => {
               :posiblesRespuestas="posiblesRespuestas"
               :respuestasSexo="respuestasSexo"
               :loading="loadingDimension"
+              v-model:variableSeleccionada="detalleVariableSeleccionada"
+              v-model:respuestaSeleccionada="detalleRespuestaSeleccionada"
             />
           </div>
 
@@ -894,6 +986,8 @@ watch(contentSection, async (nuevaSeccion) => {
               :posiblesRespuestas="posiblesRespuestas"
               :respuestasClase="respuestasClase"
               :loading="loadingDimension"
+              v-model:variableSeleccionada="detalleVariableSeleccionada"
+              v-model:respuestaSeleccionada="detalleRespuestaSeleccionada"
             />
           </div>
 

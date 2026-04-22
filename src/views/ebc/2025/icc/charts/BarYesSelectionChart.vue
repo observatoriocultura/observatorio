@@ -204,15 +204,7 @@ const initChart = () => {
       },
     },
     legend: {
-      align: 'center',
-      verticalAlign: 'top',
-      layout: 'horizontal',
-      reversed: false,
-      itemStyle: {
-        color: '#5c6972',
-        fontWeight: '600',
-      },
-      symbolRadius: 4,
+      enabled: false,
     },
     series: sortedChartData.series,
   })

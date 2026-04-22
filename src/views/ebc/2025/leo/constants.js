@@ -69,6 +69,7 @@ export const PALETAS_COLOR = {
   yes_no_asc: ['#003366', '#00AEEF'],
   yes_no_desc: ['#654096', '#D9CBEA'],
   yes_selection: ['#0F52BA', '#FAFAFA'],
+  custom_37: ['#50c878', '#316fccff', '#6796dbff', 'rgb(221, 221, 221)'],
 }
 
 /**
@@ -88,6 +89,8 @@ export const MENU_PRINCIPAL = [
     number: 1,
     key: 'percepciones-generales',
     title: 'Percepciones generales',
+    description:
+      'Percepciones generales sobre lectura, escritura y oralidad como prácticas culturales y derechos ciudadanos. Asistencia y organización de actividades culturales en Bogotá. Conocimiento y participación en programas distritales de fomento lector.',
     icon: 'leo-percepciones.svg',
     numSection: '3',
     color: '#2196F3',
@@ -95,7 +98,9 @@ export const MENU_PRINCIPAL = [
   {
     number: 2,
     key: 'lectura',
-    title: 'Hábitos de Lectura',
+    title: 'Lectura',
+    description:
+      'Prácticas, hábitos y percepciones en torno a la lectura: definición personal, gusto lector, frecuencia, razones de lectura o no lectura, tipos de material y formatos utilizados, cantidad de libros leídos, acceso a materiales e influencias en el proceso lector.',
     icon: 'leo-lectura.svg',
     numSection: '4',
     color: '#FF9800',
@@ -103,7 +108,9 @@ export const MENU_PRINCIPAL = [
   {
     number: 3,
     key: 'escritura',
-    title: 'Hábitos de Escritura',
+    title: 'Escritura',
+    description:
+      'Prácticas, hábitos y percepciones sobre la escritura: definición personal, gusto por escribir, frecuencia, razones de escritura o no escritura, propósitos, prácticas preferidas, soporte utilizado, espacios que acercaron a la escritura e influencias en el proceso.',
     icon: 'leo-escritura.svg',
     numSection: '5',
     color: '#AB47BC',
@@ -111,7 +118,9 @@ export const MENU_PRINCIPAL = [
   {
     number: 4,
     key: 'oralidad',
-    title: 'Hábitos de Oralidad',
+    title: 'Oralidad',
+    description:
+      'Prácticas, hábitos y percepciones sobre la oralidad: definición personal, gusto por participar en espacios orales, formas de participación (cuentería, podcasts, debates, etc.), contextos, proceso creativo, frecuencia de participación en bibliotecas y acuerdo con afirmaciones sobre el rol social de la oralidad.',
     icon: 'leo-oralidad.svg',
     numSection: '6',
     color: '#FF4081',
@@ -120,6 +129,8 @@ export const MENU_PRINCIPAL = [
     number: 5,
     key: 'espacios-leo',
     title: 'Espacios de Lectura, Escritura y Oralidad',
+    description:
+      'Acceso, uso, conocimiento y percepción de espacios de lectura tradicionales y alternativos en la localidad: bibliotecas públicas, casas de cultura, bibloestaciones, PPP, librerías, entre otros. Incluye preferencias de oferta, afiliación, criterios de elección y disponibilidad del fondo bibliográfico.',
     icon: 'leo-espacios.svg',
     numSection: '7',
     color: '#00BCD4',

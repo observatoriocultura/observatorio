@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watch, computed, onMounted, inject } from 'vue'
+import { computed, onMounted, inject } from 'vue'
 import * as bootstrap from 'bootstrap'
 import ClaseChart from './ClaseChart.vue'
 import ClaseTable from './ClaseTable.vue'
@@ -16,24 +16,8 @@ const props = defineProps({
   loading: { type: Boolean, default: false },
 })
 
-const variableSeleccionada = ref(null)
-const respuestaSeleccionada = ref(null)
-
-watch(
-  () => props.variables,
-  (newVars) => {
-    if (newVars?.length > 0) variableSeleccionada.value = newVars[0]
-  },
-  { immediate: true },
-)
-
-watch(
-  () => props.posiblesRespuestas,
-  (newResps) => {
-    if (newResps?.length > 0) respuestaSeleccionada.value = newResps[0]
-  },
-  { immediate: true },
-)
+const variableSeleccionada = defineModel('variableSeleccionada', { type: Object, default: null })
+const respuestaSeleccionada = defineModel('respuestaSeleccionada', { default: null })
 
 const tablaAgrupada = computed(() => {
   if (!props.respuestasClase || !variableSeleccionada.value || !respuestaSeleccionada.value)
@@ -85,8 +69,11 @@ onMounted(() => {
     <section class="section-filters mb-4 px-1">
       <div class="row g-3 align-items-center">
         <div class="col-12">
-          <div class="row g-2 justify-content-end">
-            <div class="col-md-7">
+          <div
+            class="row g-2"
+            :class="variables.length > 1 ? 'justify-content-end' : 'justify-content-start'"
+          >
+            <div v-if="variables.length > 1" class="col-md-7">
               <select
                 id="vSelect"
                 class="form-select select-premium"
@@ -100,7 +87,7 @@ onMounted(() => {
                 </option>
               </select>
             </div>
-            <div class="col-md-5">
+            <div :class="variables.length > 1 ? 'col-md-5' : 'col-md-6 col-lg-4'">
               <select
                 id="rSelect"
                 class="form-select select-premium"

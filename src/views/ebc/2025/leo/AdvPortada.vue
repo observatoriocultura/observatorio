@@ -143,6 +143,7 @@ const logoBogotaPath = computed(() => {
           class="menu-btn"
           @click="goToSection(item.numSection)"
         >
+          <span class="menu-tooltip" role="tooltip">{{ item.description || '-' }}</span>
           <div
             class="menu-icon-mask me-3"
             :style="{
@@ -317,6 +318,7 @@ const logoBogotaPath = computed(() => {
 
 /* BOTONES DEL MENÚ */
 .menu-btn {
+  position: relative;
   background: rgba(255, 255, 255, 0.1);
   color: #ffffff;
   border: 1px solid #f0ebf7;
@@ -334,6 +336,50 @@ const logoBogotaPath = computed(() => {
   height: 100%;
   width: 100%;
   min-height: 85px;
+}
+
+.menu-tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 0.75rem);
+  z-index: 20;
+  width: max-content;
+  max-width: min(430px, calc(100vw - 2rem));
+  padding: 1rem 1.15rem;
+  color: #ffffff;
+  background: #32204a;
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  border-radius: 12px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.65;
+  text-align: left;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 6px) scale(0.98);
+  transition:
+    opacity 0.22s ease,
+    transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.menu-tooltip::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -7px;
+  width: 12px;
+  height: 12px;
+  background: #32204a;
+  border-right: 1px solid rgba(255, 255, 255, 0.82);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.82);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.menu-btn:hover .menu-tooltip,
+.menu-btn:focus-visible .menu-tooltip {
+  opacity: 1;
+  transform: translate(-50%, 0) scale(1);
 }
 
 .menu-btn:hover {

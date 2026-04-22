@@ -199,6 +199,7 @@ watch(
     <!-- KPI Overlay -->
     <div v-if="kpiValue !== null && kpiLabel" class="kpi-overlay shadow-sm">
       <div class="kpi-content text-center">
+        <span class="kpi-eyebrow">VALOR PROMEDIO</span>
         <div class="kpi-value-wrapper">
           <span class="kpi-value">{{ Number(kpiValue).toFixed(1) }}</span>
         </div>
@@ -235,6 +236,14 @@ watch(
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.kpi-eyebrow {
+  color: #8c96a0;
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.25rem;
 }
 
 .kpi-label {
