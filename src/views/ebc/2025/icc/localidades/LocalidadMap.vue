@@ -185,7 +185,7 @@ onMounted(async () => {
   try {
     loadingMap.value = true
     const baseUrl = import.meta.env.BASE_URL || '/'
-    const response = await fetch(`${baseUrl}resources/maps/localidades_bogota_urbano.json`)
+    const response = await fetch(`${baseUrl}resources/maps/localidades_bogota_corte.json`)
     if (!response.ok) throw new Error('No se pudo cargar el mapa')
     geojson.value = await response.json()
 
@@ -233,19 +233,39 @@ onUnmounted(() => {
       class="map-wrapper card-premium"
     >
       <div ref="chartContainer" class="highcharts-map-container"></div>
+      <p class="map-note mb-0">
+        La localidad de Sumapaz aparece incompleta, su geometría fue modificada únicamente con
+        fines de visualización
+      </p>
     </div>
   </div>
 </template>
 
 <style scoped>
+.localidad-map {
+  height: 100%;
+}
+
 .map-wrapper {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  min-height: 600px;
+  height: 100%;
+  min-height: 680px;
   padding: 1rem;
 }
 
 .highcharts-map-container {
+  flex: 1;
   width: 100%;
-  height: 600px;
+  min-height: 600px;
+}
+
+.map-note {
+  margin-top: 0.75rem;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  font-weight: 400;
+  color: #94a3b8;
 }
 </style>

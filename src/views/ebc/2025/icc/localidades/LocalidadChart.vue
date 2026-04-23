@@ -165,14 +165,23 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
+.localidad-chart,
+.section-chart {
+  height: 100%;
+}
+
 .chart-wrapper {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  min-height: 600px;
+  height: 100%;
+  min-height: 680px;
   padding: 1rem;
 }
 
 .highcharts-container {
+  flex: 1;
   width: 100%;
-  height: 600px;
+  min-height: 600px;
 }
 </style>

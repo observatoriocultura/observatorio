@@ -75,13 +75,13 @@
         "num":200,
         "variable":"Confiabilidad",
         "nivel":1,
-        "valor":0.95
+        "valor":"95%"
     },
     {
         "num":210,
         "variable":"Margen de error",
         "nivel":1,
-        "valor":0.018
+        "valor":"1,8%"
     },
     {
         "num":230,

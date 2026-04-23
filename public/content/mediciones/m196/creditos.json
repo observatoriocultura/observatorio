@@ -1,0 +1,152 @@
+[
+    {
+        "username":"diego.maldonado",
+        "nombre_mostrar":"Diego Maldonado",
+        "rol_en_encuesta":"Director del Observatorio",
+        "dato_mas_llamativo_encuesta":null,
+        "perfil":null,
+        "entidad":"Secretaría de Cultura, Recreación y Deporte",
+        "dependencia":"Dirección Observatorio y Gestión del Conocimiento Cultural",
+        "grupo":1
+    },
+    {
+        "username":"andrea.garcia",
+        "nombre_mostrar":"Andrea García Albarracín",
+        "rol_en_encuesta":"Líder de Investigación",
+        "dato_mas_llamativo_encuesta":null,
+        "perfil":"Equipo de Investigación del Sector Cultura, Recreación y Deporte",
+        "entidad":"Secretaría de Cultura, Recreación y Deporte",
+        "dependencia":"Dirección Observatorio y Gestión del Conocimiento Cultural",
+        "grupo":1
+    },
+    {
+        "username":"viviana.rodriguez",
+        "nombre_mostrar":"Viviana Rodríguez Amaya",
+        "rol_en_encuesta":"Investigadora",
+        "dato_mas_llamativo_encuesta":null,
+        "perfil":"Liderazgo en diseño de formulario - Análisis de resultados",
+        "entidad":"Secretaría de Cultura, Recreación y Deporte",
+        "dependencia":"Dirección Observatorio y Gestión del Conocimiento Cultural",
+        "grupo":1
+    },
+    {
+        "username":"laura.lozano",
+        "nombre_mostrar":"Laura Lozano Rodríguez",
+        "rol_en_encuesta":"Investigadora",
+        "dato_mas_llamativo_encuesta":"Detrás de cómo escribimos, muchas veces hay alguien cercano, para el 26,2% de las personas, la persona más influyente es la mamá.",
+        "perfil":"Acompañamiento contrucción del formulario - Análisis de resultados",
+        "entidad":"Secretaría de Cultura, Recreación y Deporte",
+        "dependencia":"Dirección Observatorio y Gestión del Conocimiento Cultural",
+        "grupo":1
+    },
+    {
+        "username":"santiago.rojas",
+        "nombre_mostrar":"Santiago Rojas Gómez",
+        "rol_en_encuesta":"Investigador",
+        "dato_mas_llamativo_encuesta":null,
+        "perfil":"Acompañamiento en análisis de resultados",
+        "entidad":"Secretaría de Cultura, Recreación y Deporte",
+        "dependencia":"Dirección Observatorio y Gestión del Conocimiento Cultural",
+        "grupo":1
+    },
+    {
+        "username":"gisela.castrillon",
+        "nombre_mostrar":"Gisela Castrillón Moreno",
+        "rol_en_encuesta":"Estadística",
+        "dato_mas_llamativo_encuesta":null,
+        "perfil":"Líder del equipo de analítica y mediciones",
+        "entidad":"Secretaría de Cultura, Recreación y Deporte",
+        "dependencia":"Dirección Observatorio y Gestión del Conocimiento Cultural",
+        "grupo":1
+    },
+    {
+        "username":"diego.lemus",
+        "nombre_mostrar":"Diego Fernando Lemus Polanía",
+        "rol_en_encuesta":"Investigador",
+        "dato_mas_llamativo_encuesta":null,
+        "perfil":"Validación, apoyo en procesamiento y análisis estadístico de resultados.",
+        "entidad":"Secretaría de Cultura, Recreación y Deporte",
+        "dependencia":"Dirección Observatorio y Gestión del Conocimiento Cultural",
+        "grupo":1
+    },
+    {
+        "username":"mabel.ayala",
+        "nombre_mostrar":"Mábel Ayala Meneses",
+        "rol_en_encuesta":"Visualización de Datos",
+        "dato_mas_llamativo_encuesta":null,
+        "perfil":"Profesional Geoespacial - Procesamiento de datos",
+        "entidad":"Secretaría de Cultura, Recreación y Deporte",
+        "dependencia":"Dirección Observatorio y Gestión del Conocimiento Cultural",
+        "grupo":1
+    },
+    {
+        "username":"javier.ojeda",
+        "nombre_mostrar":"Mauricio Ojeda Pepinosa",
+        "rol_en_encuesta":"Visualización de Datos",
+        "dato_mas_llamativo_encuesta":null,
+        "perfil":"Líder del equipo de sistemas de información y narrativas",
+        "entidad":"Secretaría de Cultura, Recreación y Deporte",
+        "dependencia":"Dirección Observatorio y Gestión del Conocimiento Cultural",
+        "grupo":1
+    },
+    {
+        "username":"andrea.victorino",
+        "nombre_mostrar":"Andrea Victorino Ramírez",
+        "rol_en_encuesta":"Directora de Lectura y Bibliotecas",
+        "dato_mas_llamativo_encuesta":null,
+        "perfil":null,
+        "entidad":"Secretaría de Cultura, Recreación y Deporte",
+        "dependencia":"Dirección de Lectura y Bibliotecas",
+        "grupo":2
+    },
+    {
+        "username":"angela.portela",
+        "nombre_mostrar":"Ángela Portela Dussán",
+        "rol_en_encuesta":null,
+        "dato_mas_llamativo_encuesta":null,
+        "perfil":"Acompañamiento contrucción del formulario - Articulación PPLEO",
+        "entidad":"Secretaría de Cultura, Recreación y Deporte",
+        "dependencia":"Dirección de Lectura y Bibliotecas",
+        "grupo":2
+    },
+    {
+        "username":"laura.castro",
+        "nombre_mostrar":"Laura Andrea Castro López",
+        "rol_en_encuesta":null,
+        "dato_mas_llamativo_encuesta":null,
+        "perfil":"Acompañamiento contrucción del formulario - Articulación PPLEO",
+        "entidad":"Secretaría de Cultura, Recreación y Deporte",
+        "dependencia":"Dirección de Lectura y Bibliotecas",
+        "grupo":2
+    },
+    {
+        "username":"luis.garcia",
+        "nombre_mostrar":"Luis García Bendezu",
+        "rol_en_encuesta":null,
+        "dato_mas_llamativo_encuesta":null,
+        "perfil":"Acompañamiento contrucción del formulario - Articulación PPLEO - Análisis preliminar de resultados",
+        "entidad":"Secretaría de Cultura, Recreación y Deporte",
+        "dependencia":"Dirección de Lectura y Bibliotecas",
+        "grupo":2
+    },
+    {
+        "username":"alexander.zambrano",
+        "nombre_mostrar":"Alexánder Zambrano Salaza",
+        "rol_en_encuesta":null,
+        "dato_mas_llamativo_encuesta":"En la niñez las madres son la principal puerta de entrada a la lectura (31,8%). Con el tiempo, en la juventud (13 a 28 años), los profesores toman el liderazgo (27,0%), pero la influencia de la madre se mantiene cercana (23,2%).",
+        "perfil":"Acompañamiento contrucción del formulario - Articulación PPLEO",
+        "entidad":"Secretaría de Cultura, Recreación y Deporte",
+        "dependencia":"Dirección de Lectura y Bibliotecas",
+        "grupo":2
+    },
+    {
+        "username":"victor.rodriguez",
+        "nombre_mostrar":"Víctor Manuel Rodríguez Sarmiento",
+        "rol_en_encuesta":null,
+        "dato_mas_llamativo_encuesta":null,
+        "perfil":"Acompañamiento contrucción del formulario - Articulación Plan Cultura 2038",
+        "entidad":"IDARTES",
+        "dependencia":"Gerencia de Literatura. Línea de gestión del conocimiento y memoria social",
+        "grupo":2
+    }
+]

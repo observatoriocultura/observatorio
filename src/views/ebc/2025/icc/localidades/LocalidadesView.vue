@@ -131,8 +131,9 @@ onMounted(() => {
     <div class="sub-view-container">
       <!-- VISTA COMBINADA -->
       <div v-if="currentSubView === 'combined'" class="row g-4">
-        <div class="col-lg-7">
+        <div class="col-lg-7 d-flex">
           <LocalidadChart 
+            class="flex-fill"
             :preguntaSeleccionada="preguntaSeleccionada"
             :variableSeleccionada="variableSeleccionada"
             :respuestaSeleccionada="respuestaSeleccionada"
@@ -140,8 +141,9 @@ onMounted(() => {
             :loading="loading"
           />
         </div>
-        <div class="col-lg-5">
+        <div class="col-lg-5 d-flex">
           <LocalidadMap 
+            class="flex-fill"
             :preguntaSeleccionada="preguntaSeleccionada"
             :variableSeleccionada="variableSeleccionada"
             :respuestaSeleccionada="respuestaSeleccionada"

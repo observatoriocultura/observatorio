@@ -42,6 +42,7 @@ const props = defineProps({
 
 const chartContainer = ref(null)
 let chartInstance = null
+const SMALL_YES_LABEL_THRESHOLD = 3
 
 const normalizeAnswer = (value) => {
   return String(value ?? '')
@@ -73,6 +74,30 @@ const getOrderedSeries = (series) => {
     .map(({ serie }) => serie)
 }
 
+const buildYesPoint = (value, percentage) => ({
+  y: value,
+  dataLabels:
+    percentage < SMALL_YES_LABEL_THRESHOLD
+      ? {
+          inside: false,
+          align: 'left',
+          x: 8,
+          style: {
+            color: undefined,
+            textOutline: 'none',
+          },
+        }
+      : {
+          inside: true,
+          align: 'center',
+          x: 0,
+          style: {
+            color: '#ffffff',
+            textOutline: 'none',
+          },
+        },
+})
+
 const getSortedChartData = () => {
   const yesSeries = props.series.find((serie) => normalizeAnswer(serie.name) === 'si')
 
@@ -89,18 +114,26 @@ const getSortedChartData = () => {
       const yesValue = getPointValue(yesSeries.data?.[index])
       return {
         index,
+        yesValue,
         percentage: total > 0 ? (yesValue / total) * 100 : 0,
       }
     })
     .sort((a, b) => b.percentage - a.percentage)
-    .map((item) => item.index)
 
   return {
-    categorias: sortedIndexes.map((index) => props.categorias[index]),
+    categorias: sortedIndexes.map((item) => props.categorias[item.index]),
     series: getOrderedSeries(
       props.series.map((serie) => ({
         ...serie,
-        data: sortedIndexes.map((index) => serie.data?.[index] ?? 0),
+        data: sortedIndexes.map((item) => {
+          const value = serie.data?.[item.index] ?? 0
+
+          if (normalizeAnswer(serie.name) !== 'si') {
+            return value
+          }
+
+          return buildYesPoint(value, item.percentage)
+        }),
       })),
     ),
   }
@@ -162,13 +195,26 @@ const initChart = () => {
       gridLineColor: '#f1f3f5',
     },
     tooltip: {
-      headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-      pointFormat:
-        '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-        '<td style="padding:0"><b>{point.y:,.0f}</b></td></tr>',
-      footerFormat: '</table>',
       shared: true,
       useHTML: true,
+      formatter() {
+        const yesPoint = this.points?.find((point) => normalizeAnswer(point.series.name) === 'si')
+
+        if (!yesPoint) {
+          return false
+        }
+
+        return `
+          <div>
+            <div style="color:${yesPoint.color}">
+              ${yesPoint.series.name}: <b>${Highcharts.numberFormat(yesPoint.percentage, 1)}%</b>
+            </div>
+            <div>
+              Estimado población: <b>${Highcharts.numberFormat(yesPoint.y, 0)}</b>
+            </div>
+          </div>
+        `
+      },
       backgroundColor: 'rgba(255, 255, 255, 0.9)',
       borderRadius: 10,
       borderWidth: 1,
@@ -182,11 +228,17 @@ const initChart = () => {
         borderWidth: 0,
         dataLabels: {
           enabled: true,
+          allowOverlap: true,
+          crop: false,
+          overflow: 'allow',
           formatter() {
             if (this.series.index !== 0) return null
             return `${Highcharts.numberFormat(this.point.percentage, 1)}%`
           },
-          style: { textOutline: 'none' },
+          style: {
+            color: '#ffffff',
+            textOutline: 'none',
+          },
         },
       },
       column: {
