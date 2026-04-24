@@ -2889,7 +2889,7 @@
         "titulo":null,
         "tipo":null,
         "etiqueta_orden":null,
-        "enunciado_2":"(Marque la opción que más se acerque a su caso)",
+        "enunciado_2":null,
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "en_cubo":1,
