@@ -228,14 +228,11 @@ onUnmounted(() => {
       No hay datos geográficos para la selección actual.
     </div>
 
-    <div
-      v-show="!loading && !loadingMap && dataMap.length > 0"
-      class="map-wrapper card-premium"
-    >
+    <div v-show="!loading && !loadingMap && dataMap.length > 0" class="map-wrapper card-premium">
       <div ref="chartContainer" class="highcharts-map-container"></div>
       <p class="map-note mb-0">
-        La localidad de Sumapaz aparece incompleta, su geometría fue modificada únicamente con
-        fines de visualización
+        La localidad de Sumapaz aparece incompleta, su geometría fue modificada con fines de
+        visualización.
       </p>
     </div>
   </div>
