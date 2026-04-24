@@ -10,7 +10,7 @@ import LocalidadesView from './localidades/LocalidadesView.vue'
 import GruposEdadView from './grupos_edad/GruposEdadView.vue'
 import SexoView from './sexos/SexoView.vue'
 import ClaseView from './clases/ClaseView.vue'
-import AdvCreditos from './AdvCreditos.vue'
+// import AdvCreditos from './AdvCreditos.vue'
 import AdvDebug from './charts/AdvDebug.vue'
 import AdvTable from './charts/AdvTable.vue'
 import * as bootstrap from 'bootstrap'
@@ -739,13 +739,7 @@ watch(contentSection, async (nuevaSeccion) => {
               </button>
             </li>
             <li class="nav-item">
-              <button
-                class="nav-link"
-                :class="{ active: contentSection === 'creditos' }"
-                @click="contentSection = 'creditos'"
-              >
-                <i class="bi bi-award me-1"></i>Creditos
-              </button>
+              <!-- Link a créditos eliminado, ahora en AdvLayout.vue -->
             </li>
             <li class="nav-item d-none">
               <button
@@ -1002,7 +996,7 @@ watch(contentSection, async (nuevaSeccion) => {
           </div>
 
           <div v-if="contentSection === 'creditos'">
-            <AdvCreditos />
+            <!-- AdvCreditos eliminado, ahora en AdvLayout.vue -->
           </div>
 
           <div v-if="contentSection !== 'creditos'" class="d-flex justify-content-between py-3">
