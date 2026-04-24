@@ -81,6 +81,13 @@ onMounted(async () => {
         >
           <i class="bi bi-journal-code me-2"></i>Docs Técnica
         </RouterLink>
+        <RouterLink
+          :to="{ query: { tab: 'creditos' } }"
+          class="nav-tab"
+          :class="{ active: currentTab === 'creditos' }"
+        >
+          <i class="bi bi-people me-2"></i>Equipo
+        </RouterLink>
       </nav>
 
       <main class="adv-view-content">

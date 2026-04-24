@@ -10,6 +10,7 @@ import LocalidadesView from './localidades/LocalidadesView.vue'
 import GruposEdadView from './grupos_edad/GruposEdadView.vue'
 import SexoView from './sexos/SexoView.vue'
 import ClaseView from './clases/ClaseView.vue'
+// import AdvCreditos from './AdvCreditos.vue'
 import AdvDebug from './charts/AdvDebug.vue'
 import AdvTable from './charts/AdvTable.vue'
 import * as bootstrap from 'bootstrap'
@@ -737,6 +738,9 @@ watch(contentSection, async (nuevaSeccion) => {
                 <i class="bi bi-house-door me-1"></i>Clase Vivienda
               </button>
             </li>
+            <li class="nav-item">
+              <!-- Link a créditos eliminado, ahora en AdvLayout.vue -->
+            </li>
             <li class="nav-item d-none">
               <button
                 class="nav-link"
@@ -991,7 +995,11 @@ watch(contentSection, async (nuevaSeccion) => {
             />
           </div>
 
-          <div class="d-flex justify-content-between py-3">
+          <div v-if="contentSection === 'creditos'">
+            <!-- AdvCreditos eliminado, ahora en AdvLayout.vue -->
+          </div>
+
+          <div v-if="contentSection !== 'creditos'" class="d-flex justify-content-between py-3">
             <div>
               <p v-if="preguntaSeleccionada.instruccion" class="text-muted italic small mt-3">
                 <i class="bi bi-info-circle me-1"></i>{{ preguntaSeleccionada.instruccion }}
