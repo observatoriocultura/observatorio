@@ -92,7 +92,7 @@ export const MENU_PRINCIPAL = [
     description:
       'Percepciones generales sobre lectura, escritura y oralidad como prácticas culturales y derechos ciudadanos. Asistencia y organización de actividades culturales en Bogotá. Conocimiento y participación en programas distritales de fomento lector.',
     icon: 'leo-percepciones.svg',
-    numSection: '3',
+    numSection: '2',
     color: '#2196F3',
   },
   {
@@ -102,7 +102,7 @@ export const MENU_PRINCIPAL = [
     description:
       'Prácticas, hábitos y percepciones en torno a la lectura: definición personal, gusto lector, frecuencia, razones de lectura o no lectura, tipos de material y formatos utilizados, cantidad de libros leídos, acceso a materiales e influencias en el proceso lector.',
     icon: 'leo-lectura.svg',
-    numSection: '4',
+    numSection: '3',
     color: '#FF9800',
   },
   {
@@ -112,7 +112,7 @@ export const MENU_PRINCIPAL = [
     description:
       'Prácticas, hábitos y percepciones sobre la escritura: definición personal, gusto por escribir, frecuencia, razones de escritura o no escritura, propósitos, prácticas preferidas, soporte utilizado, espacios que acercaron a la escritura e influencias en el proceso.',
     icon: 'leo-escritura.svg',
-    numSection: '5',
+    numSection: '4',
     color: '#AB47BC',
   },
   {
@@ -122,7 +122,7 @@ export const MENU_PRINCIPAL = [
     description:
       'Prácticas, hábitos y percepciones sobre la oralidad: definición personal, gusto por participar en espacios orales, formas de participación (cuentería, podcasts, debates, etc.), contextos, proceso creativo, frecuencia de participación en bibliotecas y acuerdo con afirmaciones sobre el rol social de la oralidad.',
     icon: 'leo-oralidad.svg',
-    numSection: '6',
+    numSection: '5',
     color: '#FF4081',
   },
   {
@@ -132,7 +132,7 @@ export const MENU_PRINCIPAL = [
     description:
       'Acceso, uso, conocimiento y percepción de espacios de lectura tradicionales y alternativos en la localidad: bibliotecas públicas, casas de cultura, bibloestaciones, PPP, librerías, entre otros. Incluye preferencias de oferta, afiliación, criterios de elección y disponibilidad del fondo bibliográfico.',
     icon: 'leo-espacios.svg',
-    numSection: '7',
+    numSection: '6',
     color: '#00BCD4',
   },
 ]

@@ -29,7 +29,7 @@ const isCollapsed = ref(true)
 
 .main-content {
   flex: 1;
-  transition: margin-left 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: margin-left 320ms cubic-bezier(0.22, 1, 0.36, 1);
   min-height: 100vh;
   position: relative;
 }

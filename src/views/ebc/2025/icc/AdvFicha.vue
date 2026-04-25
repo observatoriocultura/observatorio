@@ -1,9 +1,12 @@
 <script setup>
-import { ref, onMounted, inject } from 'vue'
+import { computed, ref, onMounted, inject } from 'vue'
 
 const codigoMedicion = inject('codigoMedicion')
+const surveyInfo = inject('surveyInfo', ref(null))
 const fichaTecnica = ref([])
 const loading = ref(true)
+
+const archivoBaseDeDatos = computed(() => surveyInfo.value?.archivo_base_de_datos || '')
 
 onMounted(async () => {
   try {
@@ -32,15 +35,29 @@ const formatValor = (valor) => {
     <div class="ficha-content">
       <div v-if="loading" class="loading-state">Cargando ficha técnica...</div>
 
-      <div v-else-if="fichaTecnica.length > 0" class="ficha-table">
-        <div
-          v-for="item in fichaTecnica"
-          :key="item.num"
-          class="ficha-row"
-          :class="{ 'nivel-2': item.nivel === 2 }"
-        >
-          <div class="ficha-label">{{ item.variable }}</div>
-          <div class="ficha-value">{{ formatValor(item.valor) }}</div>
+      <div v-else-if="fichaTecnica.length > 0">
+        <div v-if="archivoBaseDeDatos" class="ficha-actions">
+          <a
+            class="datos-detallados-btn"
+            :href="archivoBaseDeDatos"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="bi bi-download" aria-hidden="true"></i>
+            <span>Datos detallados</span>
+          </a>
+        </div>
+
+        <div class="ficha-table">
+          <div
+            v-for="item in fichaTecnica"
+            :key="item.num"
+            class="ficha-row"
+            :class="{ 'nivel-2': item.nivel === 2 }"
+          >
+            <div class="ficha-label">{{ item.variable }}</div>
+            <div class="ficha-value">{{ formatValor(item.valor) }}</div>
+          </div>
         </div>
       </div>
 
@@ -63,6 +80,43 @@ const formatValor = (valor) => {
   border: 1px solid #eef0f2;
   border-radius: 12px;
   overflow: hidden;
+}
+
+.ficha-actions {
+  max-width: 750px;
+  margin: 0 auto 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.datos-detallados-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+  background: #198754;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.datos-detallados-btn:hover {
+  background: #157347;
+  color: #fff;
+  box-shadow: 0 6px 14px rgba(25, 135, 84, 0.18);
+  transform: translateY(-1px);
+}
+
+.datos-detallados-btn:focus-visible {
+  outline: 3px solid rgba(25, 135, 84, 0.25);
+  outline-offset: 2px;
 }
 
 .ficha-row {

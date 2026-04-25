@@ -17,17 +17,18 @@
             class="sidebar-logo"
           />
         </div>
-        <transition name="fade">
-          <h1 v-if="!isCollapsed" class="sidebar-title">OBSERVATORIO</h1>
-        </transition>
+        <h1 class="sidebar-title sidebar-text" :aria-hidden="isCollapsed">OBSERVATORIO</h1>
       </div>
 
       <!-- Botón para colapsar (Tipo Split) -->
-      <button 
-        v-if="!isCollapsed"
-        class="collapse-btn" 
-        @click.stop="toggleSidebar" 
-        title="Colapsar menú"
+      <button
+        class="collapse-btn"
+        :class="{ 'is-hidden': isCollapsed }"
+        @click.stop="toggleSidebar"
+        title="Colapsar menu"
+        :aria-hidden="isCollapsed"
+        :tabindex="isCollapsed ? -1 : 0"
+        aria-label="Colapsar menu"
       >
         <i class="bi bi-layout-sidebar"></i>
       </button>
@@ -37,13 +38,11 @@
     <div class="sidebar-content">
       <!-- Navigation Links -->
       <nav class="nav-links">
-        <div class="nav-group-label" v-if="!isCollapsed">Explorar</div>
+        <div class="nav-group-label sidebar-text" :aria-hidden="isCollapsed">Explorar</div>
 
         <RouterLink to="/" class="nav-item" active-class="is-active">
           <i class="bi bi-house"></i>
-          <transition name="fade">
-            <span v-if="!isCollapsed">Panel Principal</span>
-          </transition>
+          <span class="sidebar-text" :aria-hidden="isCollapsed">Panel Principal</span>
         </RouterLink>
       </nav>
     </div>
@@ -51,7 +50,6 @@
 </template>
 
 <script setup>
-import {} from 'vue'
 import { RouterLink } from 'vue-router'
 
 /**
@@ -68,25 +66,31 @@ const toggleSidebar = () => {
 <style scoped>
 /* Contenedor Principal */
 .sidebar-container {
+  --sidebar-expanded-width: 240px;
+  --sidebar-collapsed-width: 50px;
+  --sidebar-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --sidebar-duration: 320ms;
+
   position: fixed;
   left: 0;
   top: 0;
   bottom: 0;
-  width: 240px;
+  width: var(--sidebar-expanded-width);
   background-color: #fcfcfc;
   color: #1a202c;
   display: flex;
   flex-direction: column;
-  transition: width 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: width var(--sidebar-duration) var(--sidebar-ease);
   z-index: 1050;
   border-right: 1px solid #fcdea0;
   box-shadow: 4px 0 15px rgba(0, 0, 0, 0.03);
   overflow: hidden;
+  will-change: width;
 }
 
 /* Estado Colapsado */
 .sidebar-container.is-collapsed {
-  width: 50px;
+  width: var(--sidebar-collapsed-width);
 }
 
 /* Encabezado con Logo */
@@ -96,12 +100,13 @@ const toggleSidebar = () => {
   display: flex;
   align-items: center;
   justify-content: space-between; /* Permite el efecto split */
-  transition: background 0.2s;
+  transition: background-color 180ms ease;
   border-bottom: 1px solid rgba(252, 222, 160, 0.3);
 }
 
 .sidebar-header.is-collapsed {
   justify-content: center;
+  padding: 0;
 }
 
 .header-main-area {
@@ -111,6 +116,14 @@ const toggleSidebar = () => {
   cursor: pointer;
   flex: 1;
   height: 100%;
+  min-width: 0;
+  transition: gap var(--sidebar-duration) var(--sidebar-ease);
+}
+
+.sidebar-container.is-collapsed .header-main-area {
+  flex: 0 0 100%;
+  justify-content: center;
+  gap: 0;
 }
 
 .sidebar-header:hover {
@@ -118,7 +131,7 @@ const toggleSidebar = () => {
 }
 
 .logo-wrapper {
-  min-width: 32px;
+  flex: 0 0 32px;
   display: flex;
   justify-content: center;
 }
@@ -126,7 +139,7 @@ const toggleSidebar = () => {
 .sidebar-logo {
   height: 22px;
   width: auto;
-  transition: transform 0.3s ease;
+  transition: transform 220ms ease;
 }
 
 .sidebar-header:hover .sidebar-logo {
@@ -139,12 +152,13 @@ const toggleSidebar = () => {
   letter-spacing: 1px;
   color: #1a202c;
   margin: 0;
-  white-space: nowrap;
 }
 
 .collapse-btn {
   background: transparent;
   border: none;
+  padding: 0;
+  flex: 0 0 28px;
   width: 28px;
   height: 28px;
   display: flex;
@@ -153,12 +167,27 @@ const toggleSidebar = () => {
   border-radius: 6px;
   color: #a0aec0;
   cursor: pointer;
-  transition: all 0.2s;
+  opacity: 1;
+  overflow: hidden;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    flex-basis var(--sidebar-duration) var(--sidebar-ease),
+    opacity 160ms ease,
+    transform var(--sidebar-duration) var(--sidebar-ease);
 }
 
 .collapse-btn:hover {
   background: rgba(252, 222, 160, 0.2);
   color: #1a202c;
+}
+
+.collapse-btn.is-hidden {
+  flex-basis: 0;
+  width: 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(6px);
 }
 
 .collapse-btn i {
@@ -192,22 +221,53 @@ const toggleSidebar = () => {
   letter-spacing: 0.8px;
 }
 
+.nav-group-label.sidebar-text {
+  display: block;
+  max-height: 28px;
+  transition:
+    max-width var(--sidebar-duration) var(--sidebar-ease),
+    max-height var(--sidebar-duration) var(--sidebar-ease),
+    padding var(--sidebar-duration) var(--sidebar-ease),
+    opacity 180ms ease 80ms,
+    transform var(--sidebar-duration) var(--sidebar-ease);
+}
+
+.sidebar-container.is-collapsed .nav-group-label.sidebar-text {
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .nav-item {
   display: flex;
   align-items: center;
   justify-content: center; /* Centrado por defecto (para colapsado) */
-  gap: 8px;
+  gap: 0;
   padding: 8px 0; /* Padding lateral en 0 para centrado puro */
+  width: 100%;
   border-radius: 8px;
   color: #4a5568;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    padding var(--sidebar-duration) var(--sidebar-ease),
+    gap var(--sidebar-duration) var(--sidebar-ease);
   font-weight: 500;
+  min-height: 40px;
+}
+
+.sidebar-container.is-collapsed .nav-item {
+  width: 34px;
+  height: 34px;
+  min-height: 34px;
+  padding: 0;
 }
 
 /* Alineación a la izquierda cuando está expandido */
 .sidebar-container:not(.is-collapsed) .nav-item {
   justify-content: flex-start;
+  gap: 8px;
   padding: 8px 8px;
 }
 
@@ -230,15 +290,28 @@ const toggleSidebar = () => {
   justify-content: center;
 }
 
-/* Animaciones de Desvanecimiento */
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.3s ease;
+.sidebar-text {
+  display: inline-block;
+  max-width: 160px;
+  opacity: 1;
+  overflow: hidden;
+  transform: translateX(0);
+  transition:
+    max-width var(--sidebar-duration) var(--sidebar-ease),
+    opacity 180ms ease 80ms,
+    transform var(--sidebar-duration) var(--sidebar-ease);
+  white-space: nowrap;
+  will-change: max-width, opacity, transform;
 }
 
-.fade-enter-from,
-.fade-leave-to {
+.sidebar-container.is-collapsed .sidebar-text {
+  max-width: 0;
   opacity: 0;
+  transform: translateX(-6px);
+  transition:
+    max-width 240ms var(--sidebar-ease),
+    opacity 120ms ease,
+    transform 240ms var(--sidebar-ease);
 }
 
 /* Estilo del Scrollbar */
@@ -257,5 +330,16 @@ const toggleSidebar = () => {
 
 .sidebar-content::-webkit-scrollbar-thumb:hover {
   background: #fcdea0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sidebar-container,
+  .header-main-area,
+  .sidebar-logo,
+  .collapse-btn,
+  .nav-item,
+  .sidebar-text {
+    transition-duration: 1ms;
+  }
 }
 </style>
