@@ -42,7 +42,8 @@ const props = defineProps({
 
 const chartContainer = ref(null)
 let chartInstance = null
-const SMALL_YES_LABEL_THRESHOLD = 3
+const SELECTION_ANSWER_CANDIDATES = ['Sí', 'De acuerdo', 'Seleccionado']
+const SMALL_SELECTION_LABEL_THRESHOLD = 3
 
 const normalizeAnswer = (value) => {
   return String(value ?? '')
@@ -50,6 +51,25 @@ const normalizeAnswer = (value) => {
     .replace(/[\u0300-\u036f]/g, '')
     .trim()
     .toLowerCase()
+}
+
+const NORMALIZED_SELECTION_ANSWER_CANDIDATES = SELECTION_ANSWER_CANDIDATES.map((answer) =>
+  normalizeAnswer(answer),
+)
+
+const getSelectionAnswerPriority = (value) => {
+  return NORMALIZED_SELECTION_ANSWER_CANDIDATES.indexOf(normalizeAnswer(value))
+}
+
+const findSelectionSeries = () => {
+  return props.series
+    .map((serie) => ({
+      serie,
+      priority: getSelectionAnswerPriority(serie.name),
+    }))
+    .filter(({ priority }) => priority !== -1)
+    .sort((a, b) => a.priority - b.priority)
+    .map(({ serie }) => serie)[0]
 }
 
 const getPointValue = (point) => {
@@ -60,9 +80,10 @@ const getPointValue = (point) => {
 
 const getAnswerOrder = (value) => {
   const normalizedValue = normalizeAnswer(value)
-  if (normalizedValue === 'si') return 0
-  if (normalizedValue === 'no') return 1
-  return 2
+  const selectionPriority = getSelectionAnswerPriority(normalizedValue)
+  if (selectionPriority !== -1) return selectionPriority
+  if (normalizedValue === 'no') return SELECTION_ANSWER_CANDIDATES.length
+  return SELECTION_ANSWER_CANDIDATES.length + 1
 }
 
 const getOrderedSeries = (series) => {
@@ -74,10 +95,10 @@ const getOrderedSeries = (series) => {
     .map(({ serie }) => serie)
 }
 
-const buildYesPoint = (value, percentage) => ({
+const buildSelectionPoint = (value, percentage) => ({
   y: value,
   dataLabels:
-    percentage < SMALL_YES_LABEL_THRESHOLD
+    percentage < SMALL_SELECTION_LABEL_THRESHOLD
       ? {
           inside: false,
           align: 'left',
@@ -99,23 +120,25 @@ const buildYesPoint = (value, percentage) => ({
 })
 
 const getSortedChartData = () => {
-  const yesSeries = props.series.find((serie) => normalizeAnswer(serie.name) === 'si')
+  const selectionSeries = findSelectionSeries()
 
-  if (!yesSeries) {
+  if (!selectionSeries) {
     return {
       categorias: props.categorias,
       series: getOrderedSeries(props.series),
+      selectionAnswer: null,
     }
   }
 
+  const normalizedSelectionAnswer = normalizeAnswer(selectionSeries.name)
   const sortedIndexes = props.categorias
     .map((_, index) => {
       const total = props.series.reduce((sum, serie) => sum + getPointValue(serie.data?.[index]), 0)
-      const yesValue = getPointValue(yesSeries.data?.[index])
+      const selectionValue = getPointValue(selectionSeries.data?.[index])
       return {
         index,
-        yesValue,
-        percentage: total > 0 ? (yesValue / total) * 100 : 0,
+        selectionValue,
+        percentage: total > 0 ? (selectionValue / total) * 100 : 0,
       }
     })
     .sort((a, b) => b.percentage - a.percentage)
@@ -128,14 +151,15 @@ const getSortedChartData = () => {
         data: sortedIndexes.map((item) => {
           const value = serie.data?.[item.index] ?? 0
 
-          if (normalizeAnswer(serie.name) !== 'si') {
+          if (normalizeAnswer(serie.name) !== normalizedSelectionAnswer) {
             return value
           }
 
-          return buildYesPoint(value, item.percentage)
+          return buildSelectionPoint(value, item.percentage)
         }),
       })),
     ),
+    selectionAnswer: selectionSeries.name,
   }
 }
 
@@ -147,6 +171,7 @@ const initChart = () => {
   // Obtener la paleta de colores según la configuración de la pregunta
   const currentPalette = getPaletaColor(props.pregunta?.dataviz_palette)
   const sortedChartData = getSortedChartData()
+  const normalizedSelectionAnswer = normalizeAnswer(sortedChartData.selectionAnswer)
 
   chartInstance = Highcharts.chart(chartContainer.value, {
     chart: {
@@ -198,19 +223,21 @@ const initChart = () => {
       shared: true,
       useHTML: true,
       formatter() {
-        const yesPoint = this.points?.find((point) => normalizeAnswer(point.series.name) === 'si')
+        const selectionPoint = this.points?.find(
+          (point) => normalizeAnswer(point.series.name) === normalizedSelectionAnswer,
+        )
 
-        if (!yesPoint) {
+        if (!selectionPoint) {
           return false
         }
 
         return `
           <div>
-            <div style="color:${yesPoint.color}">
-              ${yesPoint.series.name}: <b>${Highcharts.numberFormat(yesPoint.percentage, 1)}%</b>
+            <div style="color:${selectionPoint.color}">
+              ${selectionPoint.series.name}: <b>${Highcharts.numberFormat(selectionPoint.percentage, 1)}%</b>
             </div>
             <div>
-              Estimado población: <b>${Highcharts.numberFormat(yesPoint.y, 0)}</b>
+              Estimado población: <b>${Highcharts.numberFormat(selectionPoint.y, 0)}</b>
             </div>
           </div>
         `
@@ -232,7 +259,7 @@ const initChart = () => {
           crop: false,
           overflow: 'allow',
           formatter() {
-            if (this.series.index !== 0) return null
+            if (normalizeAnswer(this.series.name) !== normalizedSelectionAnswer) return null
             return `${Highcharts.numberFormat(this.point.percentage, 1)}%`
           },
           style: {

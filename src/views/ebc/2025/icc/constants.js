@@ -47,10 +47,10 @@ export const getNombreClase = (id) => {
  * 2026-03-29
  */
 export const PALETAS_COLOR = {
-  main: ['#D9CBEA'],
+  main: ['#BFA7DC'],
   category: [
-    '#D9CBEA',
-    '#9BBAE9',
+    '#BFA7DC',
+    '#b7cbe9',
     '#E8D6B8',
     '#A8D4C8',
     '#C3B2E0',
@@ -60,12 +60,15 @@ export const PALETAS_COLOR = {
   ],
   scale_asc_4: ['#D9CBEA', '#c1a0e9ff', '#8962bdff', '#654096'],
   scale_desc_4: ['#388E3C', '#00AEEF', '#F9A825', '#D32F2F'],
-  boolean_asc_4: ['#D32F2F', '#cf8b8bff', '#9cc9ab', '#50c878'],
+  boolean_asc_4: ['#cf8b8bff', '#f5dbb1', '#c3e5f1', '#50c878'],
   boolean_desc_4: ['#50c878', '#9cc9ab', '#cf8b8bff', '#D32F2F'],
   boolean_asc_2: ['#dfdbe4ff', '#50c878'],
   boolean_desc_2: ['#dfdbe4ff', '#e0115f'],
+  boolean_asc_3: ['#cf8b8bff', '#f5dbb1', '#50c878'],
   yes_no_asc: ['#003366', '#00AEEF'],
-  yes_no_desc: ['#654096', '#D9CBEA'],
+  yes_no_desc: ['#BFA7DC', '#e2eaf7'],
+  yes_selection: ['#BFA7DC', '#FAFAFA'],
+  custom_52: ['#CCCCCC', '#cf8b8bff', '#c3e5f1', '#50c878'],
   custom_84: ['#CCCCCC', '#000000', '#D9CBEA', '#50c878'],
   icc_years: ['#D9CBEA', '#8d6abbff', '#ffca28'],
 }

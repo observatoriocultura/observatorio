@@ -39,9 +39,7 @@ const initChart = () => {
   const categories = dataForChart.map((d) => d.nombre)
   const data = dataForChart.map((d) => parseFloat(d.porcentaje.toFixed(1)))
 
-  const variableStr = props.variableSeleccionada
-    ? props.variableSeleccionada.enunciado_2 || props.variableSeleccionada.codigo_variable
-    : ''
+  const variableStr = props.variableSeleccionada ? props.variableSeleccionada.enunciado_2 || '' : ''
   const respuestaStr = props.respuestaSeleccionada || ''
 
   chartInstance = Highcharts.chart(chartContainer.value, {

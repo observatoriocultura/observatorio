@@ -2,6 +2,7 @@
 import { ref, onMounted, onUnmounted, inject, provide, computed, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import BarMultipleChart from './charts/BarMultipleChart.vue'
+import BarSelectionChart from './charts/BarSelectionChart.vue'
 import BarYesSelectionChart from './charts/BarYesSelectionChart.vue'
 import DonutChart from './charts/DonutChart.vue'
 import BarChart from './charts/BarChart.vue'
@@ -862,6 +863,17 @@ watch(contentSection, async (nuevaSeccion) => {
                 <!-- TIPO DE GRÁFICO BAR MULTIPLE -->
                 <BarMultipleChart
                   v-if="preguntaSeleccionada.dataviz_chart_type === 'bar-multiple'"
+                  :title="tituloConFiltro"
+                  :subtitle="preguntaSeleccionada.enunciado_1"
+                  :pregunta="preguntaSeleccionada"
+                  :type="'bar'"
+                  :series="series"
+                  :categorias="categorias"
+                />
+
+                <!-- TIPO DE GRÁFICO BAR BOOLEAN (Barras apiladas con solo dos categorías: Sí/No, Presente/Ausente, etc) -->
+                <BarSelectionChart
+                  v-else-if="preguntaSeleccionada.dataviz_chart_type === 'bar-selection'"
                   :title="tituloConFiltro"
                   :subtitle="preguntaSeleccionada.enunciado_1"
                   :pregunta="preguntaSeleccionada"

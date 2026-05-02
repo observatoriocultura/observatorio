@@ -75,13 +75,6 @@ onMounted(async () => {
           <i class="bi bi-file-earmark-text me-2"></i>Ficha Técnica
         </RouterLink>
         <RouterLink
-          :to="{ query: { tab: 'docs' } }"
-          class="nav-tab"
-          :class="{ active: currentTab === 'docs' }"
-        >
-          <i class="bi bi-journal-code me-2"></i>Docs Técnica
-        </RouterLink>
-        <RouterLink
           :to="{ query: { tab: 'creditos' } }"
           class="nav-tab"
           :class="{ active: currentTab === 'creditos' }"
