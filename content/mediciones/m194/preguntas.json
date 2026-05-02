@@ -584,9 +584,9 @@
         "indice_pregunta_bis":30,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
+        "dataviz_chart_type":"bar-selection",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"category"
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":3,
@@ -603,9 +603,9 @@
         "indice_pregunta_bis":31,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_chart_type":"bar-yes-selection",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":3,
@@ -698,9 +698,9 @@
         "indice_pregunta_bis":36,
         "num_seccion_bis":4,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
+        "dataviz_chart_type":"bar-selection",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"boolean_desc_2"
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":4,
@@ -717,9 +717,9 @@
         "indice_pregunta_bis":37,
         "num_seccion_bis":4,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
+        "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"boolean_desc_2"
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":4,
@@ -736,9 +736,9 @@
         "indice_pregunta_bis":38,
         "num_seccion_bis":4,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
+        "dataviz_chart_type":"bar-selection",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"boolean_desc_2"
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":5,
@@ -755,9 +755,9 @@
         "indice_pregunta_bis":39,
         "num_seccion_bis":5,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_chart_type":"bar-selection",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":6,
@@ -774,9 +774,9 @@
         "indice_pregunta_bis":40,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":"frecuency",
-        "dataviz_palette":"boolean_asc_2"
+        "dataviz_chart_type":"bar-yes-selection",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":6,
@@ -793,9 +793,9 @@
         "indice_pregunta_bis":41,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_chart_type":"bar-yes-selection",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":6,
@@ -831,9 +831,9 @@
         "indice_pregunta_bis":43,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":"frecuency",
-        "dataviz_palette":"boolean_asc_2"
+        "dataviz_chart_type":"bar-yes-selection",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":6,
@@ -843,16 +843,16 @@
         "rol":null,
         "codigo":null,
         "etiqueta_1":18,
-        "enunciado_1":"¿Usted ha participado en alguno de los siguientes tipos de procesos asociativos\/ organizaciones sociales",
+        "enunciado_1":"¿Usted ha participado en alguno de los siguientes tipos de procesos asociativos\/organizaciones sociales?",
         "instruccion":null,
         "palabras_clave":null,
         "cantidad_variables":6,
         "indice_pregunta_bis":44,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":"frecuency",
-        "dataviz_palette":"boolean_asc_2"
+        "dataviz_chart_type":"bar-yes-selection",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":6,
@@ -862,16 +862,16 @@
         "rol":null,
         "codigo":null,
         "etiqueta_1":19,
-        "enunciado_1":"¿Usted ha participado en alguno de los siguientes espacios promovidos por el Distrito",
+        "enunciado_1":"¿Usted ha participado en alguno de los siguientes espacios promovidos por el Distrito?",
         "instruccion":null,
         "palabras_clave":null,
         "cantidad_variables":15,
         "indice_pregunta_bis":45,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":"frecuency",
-        "dataviz_palette":"boolean_asc_2"
+        "dataviz_chart_type":"bar-yes-selection",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":6,
@@ -927,7 +927,7 @@
         "num_seccion_bis":6,
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
-        "dataviz_order_type":"frecuency",
+        "dataviz_order_type":"answer",
         "dataviz_palette":"main"
     },
     {
@@ -947,7 +947,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"category"
+        "dataviz_palette":"custom_52"
     },
     {
         "num_seccion":6,
@@ -965,7 +965,7 @@
         "num_seccion_bis":6,
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
-        "dataviz_order_type":"frecuency",
+        "dataviz_order_type":"answer",
         "dataviz_palette":"main"
     },
     {
@@ -983,9 +983,9 @@
         "indice_pregunta_bis":51,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_chart_type":"bar-selection",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":6,
@@ -1116,9 +1116,9 @@
         "indice_pregunta_bis":58,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
+        "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"boolean_desc_2"
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":6,
@@ -1155,7 +1155,7 @@
         "num_seccion_bis":6,
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
-        "dataviz_order_type":"frecuency",
+        "dataviz_order_type":"answer",
         "dataviz_palette":"main"
     },
     {
@@ -1175,7 +1175,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1194,7 +1194,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1213,7 +1213,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1232,7 +1232,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1251,7 +1251,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -1268,9 +1268,9 @@
         "indice_pregunta_bis":66,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_chart_type":"bar-yes-selection",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":6,
@@ -1287,9 +1287,9 @@
         "indice_pregunta_bis":67,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_chart_type":"bar-yes-selection",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":6,
@@ -1325,9 +1325,9 @@
         "indice_pregunta_bis":69,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_chart_type":"bar-yes-selection",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":6,
@@ -1420,9 +1420,9 @@
         "indice_pregunta_bis":74,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_chart_type":"bar-yes-selection",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":6,
@@ -1439,9 +1439,9 @@
         "indice_pregunta_bis":75,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_chart_type":"bar-yes-selection",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":6,
@@ -1477,9 +1477,9 @@
         "indice_pregunta_bis":77,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_chart_type":"bar-yes-selection",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":6,
@@ -1516,7 +1516,7 @@
         "num_seccion_bis":7,
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
-        "dataviz_order_type":"frecuency",
+        "dataviz_order_type":"answer",
         "dataviz_palette":"main"
     },
     {
@@ -1534,9 +1534,9 @@
         "indice_pregunta_bis":80,
         "num_seccion_bis":7,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
+        "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":7,
@@ -1555,7 +1555,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"category"
+        "dataviz_palette":"custom_52"
     },
     {
         "num_seccion":7,
@@ -1572,9 +1572,9 @@
         "indice_pregunta_bis":82,
         "num_seccion_bis":7,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
+        "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":7,
@@ -1650,7 +1650,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"category"
+        "dataviz_palette":"boolean_asc_4"
     },
     {
         "num_seccion":8,
@@ -1669,7 +1669,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_palette":"yes_no_desc"
     },
     {
         "num_seccion":8,
@@ -1687,7 +1687,7 @@
         "num_seccion_bis":8,
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
-        "dataviz_order_type":"frecuency",
+        "dataviz_order_type":"answer",
         "dataviz_palette":"main"
     },
     {
@@ -1726,7 +1726,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"category"
+        "dataviz_palette":"boolean_asc_4"
     },
     {
         "num_seccion":8,
@@ -1743,9 +1743,9 @@
         "indice_pregunta_bis":91,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
+        "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":8,
@@ -1800,9 +1800,9 @@
         "indice_pregunta_bis":94,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
+        "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":8,
@@ -1821,7 +1821,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"category"
+        "dataviz_palette":"boolean_asc_4"
     },
     {
         "num_seccion":8,
@@ -1933,9 +1933,9 @@
         "indice_pregunta_bis":101,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
+        "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":8,
@@ -1952,9 +1952,9 @@
         "indice_pregunta_bis":102,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
+        "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":8,
@@ -2086,7 +2086,7 @@
         "num_seccion_bis":8,
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
-        "dataviz_order_type":"frecuency",
+        "dataviz_order_type":"answer",
         "dataviz_palette":"main"
     },
     {
@@ -2124,7 +2124,7 @@
         "num_seccion_bis":9,
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
-        "dataviz_order_type":"frecuency",
+        "dataviz_order_type":"answer",
         "dataviz_palette":"main"
     },
     {
@@ -2332,9 +2332,9 @@
         "indice_pregunta_bis":122,
         "num_seccion_bis":9,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
+        "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":9,
@@ -2371,8 +2371,8 @@
         "num_seccion_bis":9,
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
-        "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
@@ -2390,8 +2390,8 @@
         "num_seccion_bis":9,
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
-        "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
@@ -2409,8 +2409,8 @@
         "num_seccion_bis":9,
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
-        "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
@@ -2447,7 +2447,7 @@
         "num_seccion_bis":9,
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
-        "dataviz_order_type":"frecuency",
+        "dataviz_order_type":"answer",
         "dataviz_palette":"main"
     },
     {
@@ -2465,9 +2465,9 @@
         "indice_pregunta_bis":129,
         "num_seccion_bis":9,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
+        "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":9,
@@ -2484,9 +2484,9 @@
         "indice_pregunta_bis":130,
         "num_seccion_bis":9,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
+        "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":9,
@@ -2505,7 +2505,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"category"
+        "dataviz_palette":"boolean_asc_3"
     },
     {
         "num_seccion":10,
@@ -2542,7 +2542,7 @@
         "num_seccion_bis":10,
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
-        "dataviz_order_type":"frecuency",
+        "dataviz_order_type":"answer",
         "dataviz_palette":"main"
     },
     {
@@ -2561,7 +2561,7 @@
         "num_seccion_bis":10,
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
-        "dataviz_order_type":"frecuency",
+        "dataviz_order_type":"answer",
         "dataviz_palette":"main"
     },
     {
@@ -2579,9 +2579,9 @@
         "indice_pregunta_bis":135,
         "num_seccion_bis":10,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
+        "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":10,
@@ -2600,7 +2600,7 @@
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"category"
+        "dataviz_palette":"boolean_desc_4"
     },
     {
         "num_seccion":10,
@@ -2610,16 +2610,16 @@
         "rol":null,
         "codigo":null,
         "etiqueta_1":105,
-        "enunciado_1":"Dígame si está de acuerdo o en desacuerdo con las siguientes afirmaciones",
+        "enunciado_1":"Dígame si está de acuerdo o en desacuerdo con las siguiente afirmación: \"Bogotá es una ciudad que promueve el uso y disfrute de la bicicleta\".",
         "instruccion":null,
         "palabras_clave":null,
         "cantidad_variables":1,
         "indice_pregunta_bis":137,
         "num_seccion_bis":10,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar",
+        "dataviz_chart_type":"donut",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":10,
@@ -2637,8 +2637,8 @@
         "num_seccion_bis":10,
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
-        "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":10,
@@ -2656,8 +2656,8 @@
         "num_seccion_bis":10,
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
-        "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":10,
@@ -2712,9 +2712,9 @@
         "indice_pregunta_bis":142,
         "num_seccion_bis":11,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
+        "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":1,
@@ -2757,12 +2757,12 @@
     {
         "num_seccion":1,
         "indice_pregunta":145,
-        "nombre":"Edad (Años cumplidos)",
+        "nombre":"Edad",
         "descripcion":null,
         "rol":null,
         "codigo":null,
         "etiqueta_1":"D3",
-        "enunciado_1":"Edad (Años cumplidos)",
+        "enunciado_1":"Edad",
         "instruccion":null,
         "palabras_clave":null,
         "cantidad_variables":1,
@@ -2770,7 +2770,7 @@
         "num_seccion_bis":1,
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
-        "dataviz_order_type":"frecuency",
+        "dataviz_order_type":"answer",
         "dataviz_palette":"main"
     },
     {
@@ -2787,7 +2787,7 @@
         "cantidad_variables":1,
         "indice_pregunta_bis":146,
         "num_seccion_bis":1,
-        "dataviz_display":1,
+        "dataviz_display":0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
         "dataviz_palette":"main"
@@ -2827,7 +2827,7 @@
         "num_seccion_bis":1,
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
-        "dataviz_order_type":"frecuency",
+        "dataviz_order_type":"answer",
         "dataviz_palette":"main"
     },
     {
@@ -2922,8 +2922,8 @@
         "num_seccion_bis":1,
         "dataviz_display":1,
         "dataviz_chart_type":"bar",
-        "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":1,
@@ -2959,9 +2959,9 @@
         "indice_pregunta_bis":155,
         "num_seccion_bis":1,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
+        "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":1,

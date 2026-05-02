@@ -4410,24 +4410,6 @@
         "unidad_medida":null
     },
     {
-        "indice_pregunta":77,
-        "indice_variable":293,
-        "columna":"KH",
-        "codigo_variable":"P49.7",
-        "num_seccion":null,
-        "pregunta":49,
-        "titulo":null,
-        "tipo":"category",
-        "etiqueta_orden":null,
-        "enunciado_2":"Otro",
-        "etiqueta_enunciado":"Otro",
-        "etiqueta_corta":null,
-        "en_cubo":1,
-        "tags":null,
-        "variable_nombre":null,
-        "unidad_medida":null
-    },
-    {
         "indice_pregunta":79,
         "indice_variable":295,
         "columna":"KJ",
@@ -6271,15 +6253,15 @@
         "num_seccion":null,
         "pregunta":74,
         "titulo":null,
-        "tipo":"category",
+        "tipo":"number",
         "etiqueta_orden":null,
         "enunciado_2":null,
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "en_cubo":1,
         "tags":null,
-        "variable_nombre":null,
-        "unidad_medida":null
+        "variable_nombre":"Puntaje seguridad",
+        "unidad_medida":"de 1 a 5"
     },
     {
         "indice_pregunta":105,
