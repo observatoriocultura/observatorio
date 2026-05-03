@@ -243,7 +243,7 @@ onMounted(async () => {
   try {
     loadingMap.value = true
     const baseUrl = import.meta.env.BASE_URL || '/'
-    const response = await fetch(`${baseUrl}resources/maps/localidades_bogota_urbano.json`)
+    const response = await fetch(`${baseUrl}resources/maps/localidades_bogota_corte.json`)
     if (!response.ok) throw new Error('No se pudo cargar el mapa')
     geojson.value = await response.json()
   } catch (error) {

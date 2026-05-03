@@ -28,28 +28,17 @@
         </div>
 
         <div class="panel-grid">
-          <article class="info-card">
+          <a href="#/proyectos" class="info-card" rel="noopener noreferrer">
             <span class="card-label">Análisis</span>
             <h2>Lectura de tendencias y hallazgos</h2>
             <p>Resultados sintéticos para entender fenómenos, conversaciones y transformaciones.</p>
-          </article>
+          </a>
 
-          <a
-            href="https://observatoriocultura.github.io/contenidos/investigaciones.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="info-card"
-          >
+          <a href="#/investigaciones" rel="noopener noreferrer" class="info-card">
             <span class="card-label">Investigación</span>
             <h2>Estudios e Investigaciones</h2>
             <p>Listado de investigaciones y contenidos técnicos generados por el Observatorio.</p>
           </a>
-
-          <article class="info-card">
-            <span class="card-label">Proyectos</span>
-            <h2>Procesos que dejan trazabilidad</h2>
-            <p>Ejercicios desarrollados por el observatorio con enfoque público y territorial.</p>
-          </article>
         </div>
       </aside>
     </div>

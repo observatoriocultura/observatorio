@@ -5,11 +5,13 @@ const props = defineProps({
   indices: { type: Array, default: () => [] },
 })
 
-/** Índice General (nivel 1) */
+/** Indice General (nivel 1) */
 const indiceGeneral = computed(() => props.indices.find((i) => i.nivel === 1))
 
-/** Subíndices (nivel 2) */
+/** Subindices (nivel 2) */
 const subindices = computed(() => props.indices.filter((i) => i.nivel === 2))
+
+const totalSubindices = computed(() => subindices.value.length)
 
 /** Mapeo de colores por llave (basado en constants.js MENU_PRINCIPAL) */
 const getColor = (key) => {
@@ -26,7 +28,7 @@ const getColor = (key) => {
   return colors[key] || '#6c757d'
 }
 
-/** Iconos sugeridos por dimensión */
+/** Iconos sugeridos por dimension */
 const getIcon = (key) => {
   const icons = {
     indice: 'bi-speedometer2',
@@ -44,112 +46,295 @@ const getIcon = (key) => {
 
 <template>
   <div class="indice-info container">
-    <div class="row g-4 justify-content-center">
-      <!-- Sección Principal: Índice General -->
-      <div v-if="indiceGeneral" class="col-12">
-        <div class="info-card main-card shadow-sm border-0 rounded-4 overflow-hidden mb-4">
-          <div class="row g-0">
-            <div
-              class="col-md-1 d-flex align-items-center justify-content-center text-white"
-              :style="{ backgroundColor: getColor('indice') }"
-            >
-              <i :class="getIcon('indice')" class="fs-1 py-4"></i>
-            </div>
-            <div class="col-md-11">
-              <div class="card-body p-4">
-                <h3
-                  class="card-title fw-bold text-uppercase mb-2"
-                  :style="{ color: getColor('indice') }"
-                >
-                  {{ indiceGeneral.nombre }}
-                </h3>
-                <p class="card-text lead text-muted lh-base">
-                  {{ indiceGeneral.descripcion }}
-                </p>
+    <section
+      v-if="indiceGeneral"
+      class="indice-hero card-premium"
+      :style="{ '--indice-color': getColor('indice') }"
+    >
+      <div class="hero-mark" aria-hidden="true">
+        <i :class="getIcon('indice')"></i>
+      </div>
+
+      <div class="hero-content">
+        <p class="eyebrow mb-1">Marco conceptual</p>
+        <div class="hero-title-row">
+          <h3 class="hero-title mb-0">
+            {{ indiceGeneral.nombre }}
+          </h3>
+          <span class="dimension-count"> {{ totalSubindices }} dimensiones </span>
+        </div>
+        <p class="hero-description mb-0">
+          {{ indiceGeneral.descripcion }}
+        </p>
+      </div>
+    </section>
+
+    <section class="dimensions-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow mb-1">Dimensiones del indice</p>
+          <h4 class="section-title mb-0">Componentes que estructuran la medicion</h4>
+        </div>
+      </div>
+
+      <div class="dimensions-grid">
+        <article
+          v-for="sub in subindices"
+          :key="sub.num"
+          class="dimension-card card-premium"
+          :style="{ '--indice-color': getColor(sub.key) }"
+        >
+          <div class="dimension-accent" aria-hidden="true"></div>
+          <div class="dimension-content">
+            <div class="dimension-header">
+              <span class="dimension-icon" aria-hidden="true">
+                <i :class="getIcon(sub.key)"></i>
+              </span>
+              <div class="dimension-title-group">
+                <span v-if="sub.abreviatura" class="dimension-code">{{ sub.abreviatura }}</span>
+                <h5 class="dimension-title mb-0">
+                  {{ sub.nombre }}
+                </h5>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- Título de dimensiones -->
-      <div class="col-12 mt-2">
-        <h4 class="fw-bold text-secondary text-uppercase small ls-wide mb-3">
-          <i class="bi bi-grid-fill me-2"></i>Dimensiones del Índice
-        </h4>
-      </div>
-
-      <!-- Grid de Subíndices (Dos columnas) -->
-      <div v-for="sub in subindices" :key="sub.num" class="col-md-6">
-        <div class="info-card sub-card h-100 shadow-sm border-0 rounded-4 p-4 transition-hover">
-          <div class="d-flex align-items-center mb-3">
-            <div
-              class="icon-box rounded-3 d-flex align-items-center justify-content-center me-3"
-              :style="{ backgroundColor: getColor(sub.key), color: 'white' }"
-            >
-              <i :class="getIcon(sub.key)" class="fs-4"></i>
-            </div>
-            <h5 class="m-0 fw-bold" :style="{ color: getColor(sub.key) }">
-              {{ sub.nombre }}
-            </h5>
+            <p class="dimension-description mb-0">
+              {{ sub.descripcion }}
+            </p>
           </div>
-          <p class="card-text text-muted small lh-lg mb-0">
-            {{ sub.descripcion }}
-          </p>
-        </div>
+        </article>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 
 <style scoped>
 .indice-info {
-  padding: 1rem 0;
-  animation: fadeIn 0.5s ease-out;
-  max-width: 960px; /* Limitamos un poco más el ancho para lectura óptima */
+  max-width: 1040px;
+  padding: 0.25rem 0 1rem;
+  animation: fadeSlideIn 0.4s ease-out;
 }
 
-.info-card {
-  background: white;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+.indice-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+  overflow: hidden;
+  padding: 1.25rem;
+  border: 1px solid #edf0f2;
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--indice-color) 7%, transparent), transparent),
+    #fff;
+  box-shadow: 0 8px 24px rgba(33, 37, 41, 0.06);
 }
 
-.main-card {
-  border-left: 5px solid #654096;
+.indice-hero::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  content: '';
+  background: var(--indice-color);
 }
 
-.sub-card {
-  border-bottom: 3px solid transparent;
+.hero-mark {
+  display: grid;
+  width: 56px;
+  height: 56px;
+  place-items: center;
+  color: #fff;
+  font-size: 1.65rem;
+  background: var(--indice-color);
+  border-radius: 8px;
+  box-shadow: 0 8px 18px color-mix(in srgb, var(--indice-color) 24%, transparent);
 }
 
-.sub-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+.hero-content {
+  min-width: 0;
 }
 
-.icon-box {
-  width: 48px;
-  height: 48px;
-  min-width: 48px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.eyebrow {
+  color: #6c757d;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.ls-wide {
-  letter-spacing: 0.15em;
+.hero-title-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.transition-hover:hover {
-  border-bottom-color: currentColor;
+.hero-title {
+  color: #212529;
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  font-weight: 850;
+  letter-spacing: 0;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+.dimension-count {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0.25rem 0.75rem;
+  color: var(--indice-color);
+  font-size: 0.78rem;
+  font-weight: 800;
+  white-space: nowrap;
+  background: #fff;
+  border: 1px solid color-mix(in srgb, var(--indice-color) 22%, #e7eaf0);
+  border-radius: 999px;
+}
+
+.hero-description {
+  max-width: 820px;
+  margin-top: 0.75rem;
+  color: #495057;
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.dimensions-section {
+  margin-top: 1.25rem;
+}
+
+.section-heading {
+  display: flex;
+  gap: 1rem;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+
+.section-title {
+  color: #212529;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.dimensions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.dimension-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 5px minmax(0, 1fr);
+  min-height: 188px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #edf0f2;
+  border-radius: 8px;
+  box-shadow: 0 5px 18px rgba(33, 37, 41, 0.05);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.dimension-card:hover {
+  border-color: color-mix(in srgb, var(--indice-color) 22%, #edf0f2);
+  box-shadow: 0 10px 24px rgba(33, 37, 41, 0.08);
+  transform: translateY(-2px);
+}
+
+.dimension-accent {
+  background: var(--indice-color);
+}
+
+.dimension-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  min-width: 0;
+  padding: 1rem;
+}
+
+.dimension-header {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+}
+
+.dimension-icon {
+  display: grid;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  color: var(--indice-color);
+  font-size: 1.25rem;
+  background: color-mix(in srgb, var(--indice-color) 11%, #fff);
+  border-radius: 8px;
+}
+
+.dimension-title-group {
+  min-width: 0;
+}
+
+.dimension-code {
+  display: block;
+  margin-bottom: 0.15rem;
+  color: var(--indice-color);
+  font-size: 0.7rem;
+  font-weight: 850;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.dimension-title {
+  color: #212529;
+  font-size: 0.98rem;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.dimension-description {
+  color: #5c6972;
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 768px) {
-  .col-md-1 {
-    display: none !important;
+  .indice-hero {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .hero-mark {
+    width: 48px;
+    height: 48px;
+    font-size: 1.4rem;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+  }
+
+  .dimensions-grid {
+    grid-template-columns: 1fr;
   }
 }
 </style>

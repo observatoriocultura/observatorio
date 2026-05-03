@@ -5,12 +5,14 @@ import IndiceTabla from './indice/IndiceTabla.vue'
 import IndiceSubindices from './indice/IndiceSubindices.vue'
 import IndiceLocalidades from './indice/IndiceLocalidades.vue'
 import IndiceDumbbell from './indice/IndiceDumbbell.vue'
+import IndiceBubbles from './indice/IndiceBubbles.vue'
 import IndiceMapa from './indice/IndiceMapa.vue'
 
 const codigoMedicion = inject('codigoMedicion')
 const loading = ref(true)
 const error = ref(null)
 const iccData = ref([])
+const localidadesRef = ref([])
 const indicesRef = ref([]) // especificación canónica de índices desde indices.json
 
 /** Vista activa: resumen o tabla */
@@ -18,7 +20,6 @@ const vistaActiva = ref('resumen')
 
 /** Índice seleccionado globalmente y compartido entre vistas */
 const indiceGlobal = ref(null)
-
 
 /**
  * Normaliza un string para comparación: minúsculas, sin acentos, sin espacios extra.
@@ -86,15 +87,27 @@ watch(
       indiceGlobal.value = general ? general.cod : nuevos[0].cod
     }
   },
-  { immediate: true }
+  { immediate: true },
 )
 
 /** Localidades únicas extraídas del JSON */
 const localidades = computed(() => {
   const mapa = new Map()
+  const localidadesMeta = new Map(
+    localidadesRef.value.map((loc) => [Number(loc.localidad_cod), loc]),
+  )
+
   iccData.value.forEach((d) => {
     if (!mapa.has(d.localidad_cod)) {
-      mapa.set(d.localidad_cod, { cod: d.localidad_cod, nombre: d.localidad })
+      const meta = localidadesMeta.get(Number(d.localidad_cod))
+      mapa.set(d.localidad_cod, {
+        cod: d.localidad_cod,
+        nombre: d.localidad,
+        poblacion: meta?.poblacion ?? null,
+        latitud: meta?.latitud ?? null,
+        longitud: meta?.longitud ?? null,
+        es_localidad: meta?.es_localidad ?? null,
+      })
     }
   })
   return Array.from(mapa.values()).sort((a, b) => a.cod - b.cod)
@@ -142,16 +155,20 @@ onMounted(async () => {
   try {
     const baseUrl = import.meta.env.BASE_URL
 
-    const [resIcc, resIndices] = await Promise.all([
+    const [resIcc, resIndices, resLocalidades] = await Promise.all([
       fetch(`${baseUrl}content/mediciones/${codigoMedicion}/icc.json`),
       fetch(`${baseUrl}content/mediciones/${codigoMedicion}/indices.json`),
+      fetch(`${baseUrl}content/mediciones/${codigoMedicion}/localidades.json`),
     ])
 
     if (!resIcc.ok) throw new Error('No se pudo cargar los datos del índice (icc.json)')
     if (!resIndices.ok) throw new Error('No se pudo cargar la referencia de índices (indices.json)')
+    if (!resLocalidades.ok)
+      throw new Error('No se pudo cargar la referencia de localidades (localidades.json)')
 
     iccData.value = await resIcc.json()
     indicesRef.value = await resIndices.json()
+    localidadesRef.value = await resLocalidades.json()
   } catch (e) {
     console.error(e)
     error.value = e.message
@@ -176,18 +193,26 @@ onMounted(async () => {
         </button>
         <button
           class="vista-btn"
-          :class="{ active: vistaActiva === 'tabla' }"
-          @click="vistaActiva = 'tabla'"
+          :class="{ active: vistaActiva === 'comparacion' }"
+          @click="vistaActiva = 'comparacion'"
         >
-          <i class="bi bi-table me-1"></i>Tabla
+          <i class="bi bi-circle-square me-1"></i>2025 / 2023
         </button>
         <button
           class="vista-btn"
           :class="{ active: vistaActiva === 'comparativo' }"
           @click="vistaActiva = 'comparativo'"
         >
-          <i class="bi bi-bar-chart-steps me-1"></i>Resultados
+          <i class="bi bi-bar-chart-steps me-1"></i>Variación
         </button>
+        <button
+          class="vista-btn"
+          :class="{ active: vistaActiva === 'tabla' }"
+          @click="vistaActiva = 'tabla'"
+        >
+          <i class="bi bi-table me-1"></i>Tabla
+        </button>
+
         <button
           class="vista-btn"
           :class="{ active: vistaActiva === 'mapa' }"
@@ -195,6 +220,7 @@ onMounted(async () => {
         >
           <i class="bi bi-map me-1"></i>Mapa
         </button>
+
         <button
           class="vista-btn"
           :class="{ active: vistaActiva === 'subindices' }"
@@ -268,6 +294,13 @@ onMounted(async () => {
       />
       <IndiceMapa
         v-if="vistaActiva === 'mapa'"
+        v-model="indiceGlobal"
+        :indices="indices"
+        :localidades="localidades"
+        :icc-data="iccData"
+      />
+      <IndiceBubbles
+        v-if="vistaActiva === 'comparacion'"
         v-model="indiceGlobal"
         :indices="indices"
         :localidades="localidades"
