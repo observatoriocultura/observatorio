@@ -106,6 +106,7 @@ const buildSelectionPoint = (value, percentage) => ({
           style: {
             color: undefined,
             textOutline: 'none',
+            fontWeight: '500',
           },
         }
       : {
@@ -115,6 +116,7 @@ const buildSelectionPoint = (value, percentage) => ({
           style: {
             color: '#ffffff',
             textOutline: 'none',
+            fontWeight: '500',
           },
         },
 })
@@ -265,6 +267,7 @@ const initChart = () => {
           style: {
             color: '#ffffff',
             textOutline: 'none',
+            fontWeight: '500',
           },
         },
       },

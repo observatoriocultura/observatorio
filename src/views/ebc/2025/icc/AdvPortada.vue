@@ -49,18 +49,6 @@ const goToSection = (numSection) => {
   })
 }
 
-const goToResumenGeneral = () => {
-  router.push({
-    path: route.path,
-    query: {
-      ...route.query,
-      tab: 'resultados',
-      num_seccion: 1,
-      num_pregunta: 22,
-    },
-  })
-}
-
 onMounted(() => {
   timer = setInterval(nextImage, 5000)
 })
@@ -92,7 +80,7 @@ const logoBogotaPath = computed(() => {
     <div class="hero-logo-right">
       <img :src="logoBogotaPath" alt="Logo Bogotá" />
     </div>
-    <div class="hero-logo-bottom-left">
+    <div class="hero-logo-bottom-left d-none">
       <img :src="getGeneralImagePath('dogcc-logotipo-blanco.png')" alt="Logo DOGCC" />
     </div>
     <div class="hero-logo-bottom-right">
@@ -121,10 +109,8 @@ const logoBogotaPath = computed(() => {
       <div class="hero-container">
         <p class="hero-eyebrow">Encuesta Bienal de Culturas</p>
         <h1 class="hero-title">
-          <span>Encuesta de</span>
-          <span>Indicadores de Cultura Ciudadana</span>
-          <span>y Garantía de Derechos</span>
-          <span class="hero-year">{{ displayYear }}</span>
+          <span>Indicadores de Cultura</span>
+          <span>Ciudadana y Garantía de Derechos <span class="hero-year">{{ displayYear }}</span></span>
         </h1>
       </div>
     </div>
@@ -132,9 +118,6 @@ const logoBogotaPath = computed(() => {
     <!-- Menú Inferior -->
     <div class="hero-menu">
       <div class="menu-grid">
-        <button class="btn-arrow" @click="goToResumenGeneral">
-          <img :src="getGeneralImagePath('flecha-flecha.svg')" alt="Flecha" />
-        </button>
         <button
           v-for="item in MENU_PRINCIPAL"
           :key="item.key"
@@ -283,7 +266,7 @@ const logoBogotaPath = computed(() => {
 
 .hero-year {
   color: #ffca28;
-  font-size: 1.4em;
+  font-size: 1.15em;
   font-weight: 900;
   margin-top: 0.2rem;
 }
@@ -352,31 +335,6 @@ const logoBogotaPath = computed(() => {
   -webkit-mask-position: center;
 }
 
-/* BOTÓN ESPECIAL: FLECHA */
-.btn-arrow {
-  background: #ffca28;
-  border: 1px solid #ffca28;
-  padding: 0.8rem 1.5rem;
-  border-radius: 0 50px 50px 0;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  height: 100%;
-  width: 100%;
-}
-
-.btn-arrow img {
-  height: 22px;
-  width: auto;
-}
-
-.btn-arrow:hover {
-  background: #ffb300;
-  transform: scale(1.05);
-}
-
 /* ANIMACIONES */
 .fade-enter-active,
 .fade-leave-active {
@@ -395,13 +353,13 @@ const logoBogotaPath = computed(() => {
 @media (max-width: 1400px) {
   .hero-content {
     padding: 0 3rem;
-    margin-top: -8%;
+    margin-top: -3%;
   }
   .hero-title {
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-size: clamp(1.6rem, 3.35vw, 2.35rem);
   }
   .hero-eyebrow {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     margin-bottom: 0.35rem;
   }
   .menu-btn {
@@ -486,9 +444,6 @@ const logoBogotaPath = computed(() => {
   .menu-btn {
     font-size: 0.85rem;
     padding: 0.75rem 1.25rem;
-  }
-  .btn-arrow {
-    padding: 0.75rem;
   }
 }
 </style>
