@@ -2499,7 +2499,7 @@
         "en_cubo":1,
         "tags":null,
         "variable_nombre":"Efectividad",
-        "unidad_medida":"de 1 a 10"
+        "unidad_medida":"de 1 a 4"
     },
     {
         "indice_pregunta":49,
@@ -2642,8 +2642,8 @@
         "etiqueta_corta":null,
         "en_cubo":1,
         "tags":null,
-        "variable_nombre":null,
-        "unidad_medida":null
+        "variable_nombre":"Efectividad",
+        "unidad_medida":"de 1 a 4"
     },
     {
         "indice_pregunta":51,
@@ -6268,24 +6268,6 @@
         "indice_variable":398,
         "columna":"OI",
         "codigo_variable":"P75",
-        "num_seccion":null,
-        "pregunta":75,
-        "titulo":null,
-        "tipo":"category",
-        "etiqueta_orden":null,
-        "enunciado_2":null,
-        "etiqueta_enunciado":null,
-        "etiqueta_corta":null,
-        "en_cubo":1,
-        "tags":null,
-        "variable_nombre":null,
-        "unidad_medida":null
-    },
-    {
-        "indice_pregunta":105,
-        "indice_variable":399,
-        "columna":"OJ",
-        "codigo_variable":"P75.1",
         "num_seccion":null,
         "pregunta":75,
         "titulo":null,
