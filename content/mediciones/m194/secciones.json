@@ -28,20 +28,20 @@
         "cod_seccion":2.0,
         "nombre_seccion":"Equidad de género y eliminación del machismo",
         "descripcion":null,
-        "notas":"P10",
+        "notas":"P10 a P13",
         "dataviz_display":1
     },
     {
         "num_seccion":5,
-        "cod_seccion":3.0,
+        "cod_seccion":null,
         "nombre_seccion":"Sexualidad, maternidad y paternidad temprana",
         "descripcion":null,
-        "notas":"P13",
-        "dataviz_display":1
+        "notas":null,
+        "dataviz_display":0
     },
     {
         "num_seccion":6,
-        "cod_seccion":4.0,
+        "cod_seccion":3.0,
         "nombre_seccion":"Cultura Política y Ciudadana",
         "descripcion":null,
         "notas":"P14 a P49",
@@ -49,7 +49,7 @@
     },
     {
         "num_seccion":7,
-        "cod_seccion":5.0,
+        "cod_seccion":4.0,
         "nombre_seccion":"Convivencia y Cultura de Paz",
         "descripcion":null,
         "notas":"P50",
@@ -57,7 +57,7 @@
     },
     {
         "num_seccion":8,
-        "cod_seccion":6.0,
+        "cod_seccion":5.0,
         "nombre_seccion":"Espacio Público",
         "descripcion":null,
         "notas":"P55",
@@ -65,7 +65,7 @@
     },
     {
         "num_seccion":9,
-        "cod_seccion":7.0,
+        "cod_seccion":6.0,
         "nombre_seccion":"Cultura Ambiental",
         "descripcion":null,
         "notas":"P78",
@@ -73,7 +73,7 @@
     },
     {
         "num_seccion":10,
-        "cod_seccion":8.0,
+        "cod_seccion":7.0,
         "nombre_seccion":"Movilidad",
         "descripcion":null,
         "notas":"P100",
@@ -81,7 +81,7 @@
     },
     {
         "num_seccion":11,
-        "cod_seccion":9.0,
+        "cod_seccion":8.0,
         "nombre_seccion":"Bogota Cultura+Consciente | Plan de Cultura",
         "descripcion":null,
         "notas":"P110",
