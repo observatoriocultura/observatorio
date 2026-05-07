@@ -101,7 +101,8 @@ export const MENU_PRINCIPAL = [
     number: 1,
     key: 'inclusion-e-identidades-sociales-diversas',
     title: 'Inclusión e identidades sociales diversas',
-    description: '-',
+    description:
+      'Preguntas sobre aceptación y apertura hacia diversidad étnica, social, religiosa, de género, discapacidad, origen y grupos vulnerables, evaluando prejuicios y rechazo como vecinos.',
     icon: 'inclusion-e-identidades-sociales-diversas.svg',
     numSection: '3',
     color: '#FF9800',
@@ -110,7 +111,8 @@ export const MENU_PRINCIPAL = [
     number: 2,
     key: 'equidad-de-genero',
     title: 'Equidad de género',
-    description: '-',
+    description:
+      'Preguntas sobre estereotipos de roles de género, machismo, violencia doméstica, celos y responsabilidades desiguales en hogar, trabajo y relaciones.',
     icon: 'equidad-de-genero.svg',
     numSection: '4',
     color: '#AB47BC',
@@ -119,7 +121,8 @@ export const MENU_PRINCIPAL = [
     number: 3,
     key: 'cultura-politica-y-ciudadana',
     title: 'Cultura política y ciudadana',
-    description: '-',
+    description:
+      'Preguntas sobre participación cívica, conocimiento de mecanismos democráticos, confianza en instituciones, motivación electoral y valoración de la democracia.',
     icon: 'iconos-cultura-politica-y-ciudadana.svg',
     numSection: '6',
     color: '#2196F3',
@@ -128,7 +131,8 @@ export const MENU_PRINCIPAL = [
     number: 4,
     key: 'convivencia-y-cultura-de-paz',
     title: 'Convivencia y cultura de paz',
-    description: '-',
+    description:
+      'Preguntas sobre confianza interpersonal, justificación de desobediencia a la ley, importancia de ayudar al otro, percepción de impuestos y libertad de expresión. ',
     icon: 'convivencia-y-cultura-de-paz.svg',
     numSection: '6',
     color: '#FF4081',
@@ -137,7 +141,8 @@ export const MENU_PRINCIPAL = [
     number: 5,
     key: 'espacio-publico',
     title: 'Espacio Público',
-    description: '-',
+    description:
+      'Preguntas sobre percepción de limpieza, seguridad, equipamiento y usos de parques, calles y barrios cercanos.',
     icon: 'espacio-publico.svg',
     numSection: '3',
     color: '#00BCD4',
@@ -146,7 +151,8 @@ export const MENU_PRINCIPAL = [
     number: 6,
     key: 'cultura-ambiental',
     title: 'Cultura ambiental',
-    description: '-',
+    description:
+      'Preguntas sobre conductas de reciclaje, percepción de zonas verdes, arborización, descuidos ambientales y presencia de fauna en el barrio.',
     icon: 'cultura-ambiental.svg',
     numSection: '9',
     color: '#4CAF50',
@@ -155,7 +161,8 @@ export const MENU_PRINCIPAL = [
     number: 7,
     key: 'movilidad',
     title: 'Movilidad',
-    description: '-',
+    description:
+      'Preguntas sobre percepción de seguridad vial, cumplimiento de normas por peatones, ciclistas, vehículos y conexión vial en el entorno.',
     icon: 'movilidad.svg',
     numSection: '10',
     color: '#78909C',
