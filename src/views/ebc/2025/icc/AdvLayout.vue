@@ -6,6 +6,7 @@ import AdvResultados from './AdvResultados.vue'
 import AdvIndice from './AdvIndice.vue'
 import AdvFicha from './AdvFicha.vue'
 import AdvDocs from './AdvDocs.vue'
+import AdvCreditos from './AdvCreditos.vue'
 import * as surveyConstants from './constants'
 
 const route = useRoute()
@@ -99,6 +100,7 @@ onMounted(async () => {
           <AdvIndice v-show="currentTab === 'indice'" />
           <AdvFicha v-show="currentTab === 'ficha'" />
           <AdvDocs v-show="currentTab === 'docs'" />
+          <AdvCreditos v-show="currentTab === 'creditos'" />
         </div>
       </main>
     </div>

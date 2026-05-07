@@ -166,10 +166,10 @@ export const MENU_PRINCIPAL = [
  * Imágenes para el carrusel de la portada del tablero
  */
 export const IMAGES_CAROUSEL = [
-  'ambiente.jpg',
+  'movilidad.jpg',
   'cultura-ciudadana.jpg',
   'equidad-de-genero.jpg',
   'espacio-publico.jpg',
   'inclusion-de-identidades.jpg',
-  'movilidad.jpg',
+  'ambiente.jpg',
 ]

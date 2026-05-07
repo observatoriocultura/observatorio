@@ -34,6 +34,8 @@ const grupos = computed(() => ({
   2: creditos.value.filter((persona) => Number(persona.grupo) === 2),
 }))
 
+const tieneGrupoSecundario = computed(() => grupos.value[2].length > 0)
+
 onMounted(() => {
   cargarCreditos()
 })
@@ -61,7 +63,11 @@ onMounted(() => {
           <div class="creditos-divider" aria-hidden="true"></div>
         </header>
 
-        <section class="creditos-grid" aria-label="Equipos participantes">
+        <section
+          class="creditos-grid"
+          :class="{ 'creditos-grid--single': !tieneGrupoSecundario }"
+          aria-label="Equipos participantes"
+        >
           <div class="creditos-column">
             <header class="creditos-column__header">
               <h4 class="creditos-column__title mb-0">
@@ -87,7 +93,10 @@ onMounted(() => {
             </div>
           </div>
 
-          <div class="creditos-column creditos-column--secondary">
+          <div
+            v-if="tieneGrupoSecundario"
+            class="creditos-column creditos-column--secondary"
+          >
             <header class="creditos-column__header">
               <h4 class="creditos-column__title mb-0">
                 Acompañamiento y apoyo - Dirección de Lectura y Bibliotecas
@@ -164,6 +173,11 @@ onMounted(() => {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 4rem;
   align-items: start;
+}
+
+.creditos-grid--single {
+  grid-template-columns: minmax(0, 760px);
+  justify-content: center;
 }
 
 .creditos-column {
