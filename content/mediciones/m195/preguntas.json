@@ -7,7 +7,7 @@
         "descripcion":null,
         "rol":"Registro",
         "codigo":"ID",
-        "etiqueta.1":"ID",
+        "etiqueta_1":"ID",
         "enunciado_1":"ID",
         "instruccion":null,
         "url_imagen":null,
@@ -28,7 +28,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"Sector",
-        "etiqueta.1":"Sector",
+        "etiqueta_1":"Sector",
         "enunciado_1":"Sector",
         "instruccion":null,
         "url_imagen":null,
@@ -49,7 +49,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"Seccion",
-        "etiqueta.1":"Seccion",
+        "etiqueta_1":"Seccion",
         "enunciado_1":"Sección",
         "instruccion":null,
         "url_imagen":null,
@@ -70,7 +70,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"Manzana",
-        "etiqueta.1":"Manzana",
+        "etiqueta_1":"Manzana",
         "enunciado_1":"Manzana",
         "instruccion":null,
         "url_imagen":null,
@@ -91,7 +91,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"Clase",
-        "etiqueta.1":"Clase",
+        "etiqueta_1":"Clase",
         "enunciado_1":"Clase",
         "instruccion":null,
         "url_imagen":null,
@@ -112,7 +112,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"Direccion",
-        "etiqueta.1":"Direccion",
+        "etiqueta_1":"Direccion",
         "enunciado_1":"Dirección de la vivienda",
         "instruccion":null,
         "url_imagen":null,
@@ -133,7 +133,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"Cx",
-        "etiqueta.1":"Cx",
+        "etiqueta_1":"Cx",
         "enunciado_1":"latitude (x.y °)",
         "instruccion":null,
         "url_imagen":null,
@@ -154,7 +154,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"Cy",
-        "etiqueta.1":"Cy",
+        "etiqueta_1":"Cy",
         "enunciado_1":"longitude (x.y °)",
         "instruccion":null,
         "url_imagen":null,
@@ -175,7 +175,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H1",
-        "etiqueta.1":"H1",
+        "etiqueta_1":"H1",
         "enunciado_1":"Número de hogares dentro de la vivienda",
         "instruccion":null,
         "url_imagen":null,
@@ -184,9 +184,9 @@
         "indice_pregunta_bis":8,
         "num_seccion_bis":1,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":1,
@@ -196,7 +196,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H2",
-        "etiqueta.1":"H2",
+        "etiqueta_1":"H2",
         "enunciado_1":"Número de personas del hogar",
         "instruccion":null,
         "url_imagen":null,
@@ -205,9 +205,9 @@
         "indice_pregunta_bis":9,
         "num_seccion_bis":1,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":1,
@@ -217,7 +217,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H3_1",
-        "etiqueta.1":"H3.1",
+        "etiqueta_1":"H3.1",
         "enunciado_1":"Nombre de la persona 1 JEFE DE HOGAR",
         "instruccion":null,
         "url_imagen":null,
@@ -238,7 +238,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H4_1",
-        "etiqueta.1":"H4.1",
+        "etiqueta_1":"H4.1",
         "enunciado_1":"Edad persona 1",
         "instruccion":null,
         "url_imagen":null,
@@ -259,7 +259,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H5_1",
-        "etiqueta.1":"H5.1",
+        "etiqueta_1":"H5.1",
         "enunciado_1":"Sexo persona 1",
         "instruccion":null,
         "url_imagen":null,
@@ -280,7 +280,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H3_2",
-        "etiqueta.1":"H3.2",
+        "etiqueta_1":"H3.2",
         "enunciado_1":"Nombre de la persona 2",
         "instruccion":null,
         "url_imagen":null,
@@ -301,7 +301,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H4_2",
-        "etiqueta.1":"H4.2",
+        "etiqueta_1":"H4.2",
         "enunciado_1":"Edad persona 2",
         "instruccion":null,
         "url_imagen":null,
@@ -322,7 +322,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H5_2",
-        "etiqueta.1":"H5.2",
+        "etiqueta_1":"H5.2",
         "enunciado_1":"Sexo persona 2",
         "instruccion":null,
         "url_imagen":null,
@@ -343,7 +343,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H6_2",
-        "etiqueta.1":"H6.2",
+        "etiqueta_1":"H6.2",
         "enunciado_1":"Parentesco con la persona que se reconoce como jefe o jefa del hogar, o la persona mayor (persona 1)",
         "instruccion":null,
         "url_imagen":null,
@@ -364,7 +364,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H3_3",
-        "etiqueta.1":"H3.3",
+        "etiqueta_1":"H3.3",
         "enunciado_1":"Nombre de la persona 3",
         "instruccion":null,
         "url_imagen":null,
@@ -385,7 +385,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H4_3",
-        "etiqueta.1":"H4.3",
+        "etiqueta_1":"H4.3",
         "enunciado_1":"Edad persona 3",
         "instruccion":null,
         "url_imagen":null,
@@ -406,7 +406,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H5_3",
-        "etiqueta.1":"H5.3",
+        "etiqueta_1":"H5.3",
         "enunciado_1":"Sexo persona 3",
         "instruccion":null,
         "url_imagen":null,
@@ -427,7 +427,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H6_3",
-        "etiqueta.1":"H6.3",
+        "etiqueta_1":"H6.3",
         "enunciado_1":"Parentesco con la persona que se reconoce como jefe o jefa del hogar, o la persona mayor (persona 1)",
         "instruccion":null,
         "url_imagen":null,
@@ -448,7 +448,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H3_4",
-        "etiqueta.1":"H3.4",
+        "etiqueta_1":"H3.4",
         "enunciado_1":"Nombre de la persona 4",
         "instruccion":null,
         "url_imagen":null,
@@ -469,7 +469,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H4_3",
-        "etiqueta.1":"H4.3",
+        "etiqueta_1":"H4.3",
         "enunciado_1":"Edad persona 4",
         "instruccion":null,
         "url_imagen":null,
@@ -490,7 +490,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H5_4",
-        "etiqueta.1":"H5.4",
+        "etiqueta_1":"H5.4",
         "enunciado_1":"Sexo persona 4",
         "instruccion":null,
         "url_imagen":null,
@@ -511,7 +511,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H6_4",
-        "etiqueta.1":"H6.4",
+        "etiqueta_1":"H6.4",
         "enunciado_1":"Parentesco con la persona que se reconoce como jefe o jefa del hogar, o la persona mayor (persona 1)",
         "instruccion":null,
         "url_imagen":null,
@@ -532,7 +532,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H3_5",
-        "etiqueta.1":"H3.5",
+        "etiqueta_1":"H3.5",
         "enunciado_1":"Nombre de la persona 5",
         "instruccion":null,
         "url_imagen":null,
@@ -553,7 +553,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H4_3",
-        "etiqueta.1":"H4.3",
+        "etiqueta_1":"H4.3",
         "enunciado_1":"Edad persona 5",
         "instruccion":null,
         "url_imagen":null,
@@ -574,7 +574,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H5_5",
-        "etiqueta.1":"H5.5",
+        "etiqueta_1":"H5.5",
         "enunciado_1":"Sexo persona 5",
         "instruccion":null,
         "url_imagen":null,
@@ -595,7 +595,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H6_5",
-        "etiqueta.1":"H6.5",
+        "etiqueta_1":"H6.5",
         "enunciado_1":"Parentesco con la persona que se reconoce como jefe o jefa del hogar, o la persona mayor (persona 1)",
         "instruccion":null,
         "url_imagen":null,
@@ -616,7 +616,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H3_6",
-        "etiqueta.1":"H3.6",
+        "etiqueta_1":"H3.6",
         "enunciado_1":"Nombre de la persona 6",
         "instruccion":null,
         "url_imagen":null,
@@ -637,7 +637,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H4_3",
-        "etiqueta.1":"H4.3",
+        "etiqueta_1":"H4.3",
         "enunciado_1":"Edad persona 6",
         "instruccion":null,
         "url_imagen":null,
@@ -658,7 +658,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H5_6",
-        "etiqueta.1":"H5.6",
+        "etiqueta_1":"H5.6",
         "enunciado_1":"Sexo persona 6",
         "instruccion":null,
         "url_imagen":null,
@@ -679,7 +679,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H6_6",
-        "etiqueta.1":"H6.6",
+        "etiqueta_1":"H6.6",
         "enunciado_1":"Parentesco con la persona que se reconoce como jefe o jefa del hogar, o la persona mayor (persona 1)",
         "instruccion":null,
         "url_imagen":null,
@@ -700,7 +700,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H3_7",
-        "etiqueta.1":"H3.7",
+        "etiqueta_1":"H3.7",
         "enunciado_1":"Nombre de la persona 7",
         "instruccion":null,
         "url_imagen":null,
@@ -721,7 +721,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H4_3",
-        "etiqueta.1":"H4.3",
+        "etiqueta_1":"H4.3",
         "enunciado_1":"Edad persona 7",
         "instruccion":null,
         "url_imagen":null,
@@ -742,7 +742,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H5_7",
-        "etiqueta.1":"H5.7",
+        "etiqueta_1":"H5.7",
         "enunciado_1":"Sexo persona 7",
         "instruccion":null,
         "url_imagen":null,
@@ -763,7 +763,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H6_7",
-        "etiqueta.1":"H6.7",
+        "etiqueta_1":"H6.7",
         "enunciado_1":"Parentesco con la persona que se reconoce como jefe o jefa del hogar, o la persona mayor (persona 1)",
         "instruccion":null,
         "url_imagen":null,
@@ -784,7 +784,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H3_8",
-        "etiqueta.1":"H3.8",
+        "etiqueta_1":"H3.8",
         "enunciado_1":"Nombre de la persona 8",
         "instruccion":null,
         "url_imagen":null,
@@ -805,7 +805,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H4_3",
-        "etiqueta.1":"H4.3",
+        "etiqueta_1":"H4.3",
         "enunciado_1":"Edad persona 8",
         "instruccion":null,
         "url_imagen":null,
@@ -826,7 +826,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H5_8",
-        "etiqueta.1":"H5.8",
+        "etiqueta_1":"H5.8",
         "enunciado_1":"Sexo persona 8",
         "instruccion":null,
         "url_imagen":null,
@@ -847,7 +847,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H6_8",
-        "etiqueta.1":"H6.8",
+        "etiqueta_1":"H6.8",
         "enunciado_1":"Parentesco con la persona que se reconoce como jefe o jefa del hogar, o la persona mayor (persona 1)",
         "instruccion":null,
         "url_imagen":null,
@@ -868,7 +868,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H3_9",
-        "etiqueta.1":"H3.9",
+        "etiqueta_1":"H3.9",
         "enunciado_1":"Nombre de la persona 9",
         "instruccion":null,
         "url_imagen":null,
@@ -889,7 +889,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H4_3",
-        "etiqueta.1":"H4.3",
+        "etiqueta_1":"H4.3",
         "enunciado_1":"Edad persona 9",
         "instruccion":null,
         "url_imagen":null,
@@ -910,7 +910,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H5_9",
-        "etiqueta.1":"H5.9",
+        "etiqueta_1":"H5.9",
         "enunciado_1":"Sexo persona 9",
         "instruccion":null,
         "url_imagen":null,
@@ -931,7 +931,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H6_9",
-        "etiqueta.1":"H6.9",
+        "etiqueta_1":"H6.9",
         "enunciado_1":"Parentesco con la persona que se reconoce como jefe o jefa del hogar, o la persona mayor (persona 1)",
         "instruccion":null,
         "url_imagen":null,
@@ -952,7 +952,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"H7",
-        "etiqueta.1":"H7",
+        "etiqueta_1":"H7",
         "enunciado_1":"Selección de la persona a encuestar",
         "instruccion":null,
         "url_imagen":null,
@@ -973,7 +973,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"V1",
-        "etiqueta.1":"V1",
+        "etiqueta_1":"V1",
         "enunciado_1":"Localidad de residencia",
         "instruccion":null,
         "url_imagen":null,
@@ -982,9 +982,9 @@
         "indice_pregunta_bis":46,
         "num_seccion_bis":2,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":2,
@@ -994,7 +994,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"V2",
-        "etiqueta.1":"V2",
+        "etiqueta_1":"V2",
         "enunciado_1":"Estrato",
         "instruccion":null,
         "url_imagen":null,
@@ -1003,9 +1003,9 @@
         "indice_pregunta_bis":47,
         "num_seccion_bis":2,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
+        "dataviz_chart_type":"bar",
         "dataviz_order_type":"answer",
-        "dataviz_palette":null
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":2,
@@ -1015,7 +1015,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"V3",
-        "etiqueta.1":"V3",
+        "etiqueta_1":"V3",
         "enunciado_1":"Tipo de vivienda",
         "instruccion":null,
         "url_imagen":null,
@@ -1024,9 +1024,9 @@
         "indice_pregunta_bis":48,
         "num_seccion_bis":2,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":2,
@@ -1036,7 +1036,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"V4",
-        "etiqueta.1":"V4",
+        "etiqueta_1":"V4",
         "enunciado_1":"El lugar donde habita es:",
         "instruccion":null,
         "url_imagen":null,
@@ -1045,9 +1045,9 @@
         "indice_pregunta_bis":49,
         "num_seccion_bis":2,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":3,
@@ -1057,7 +1057,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P1",
-        "etiqueta.1":"P1",
+        "etiqueta_1":"P1",
         "enunciado_1":"En una escala de 1 a 4, donde 1 es Nada satisfecho(a) y 4 es Muy satisfecho(a). ¿Cuál es su nivel de satisfacción con…?",
         "instruccion":null,
         "url_imagen":null,
@@ -1067,8 +1067,8 @@
         "num_seccion_bis":3,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":3,
@@ -1078,7 +1078,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P2",
-        "etiqueta.1":"P2",
+        "etiqueta_1":"P2",
         "enunciado_1":"¿Practica actualmente alguna actividad cultural, artística o creativa? (RU)",
         "instruccion":null,
         "url_imagen":null,
@@ -1087,9 +1087,9 @@
         "indice_pregunta_bis":51,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"donut",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":3,
@@ -1099,7 +1099,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P3",
-        "etiqueta.1":"P3",
+        "etiqueta_1":"P3",
         "enunciado_1":"En los últimos 12 meses, ¿cuál de las siguientes actividades usted practicó y con qué frecuencia?",
         "instruccion":null,
         "url_imagen":null,
@@ -1109,8 +1109,8 @@
         "num_seccion_bis":3,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":3,
@@ -1120,7 +1120,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P4",
-        "etiqueta.1":"P4",
+        "etiqueta_1":"P4",
         "enunciado_1":"¿Cuál instrumento musical interpreta?",
         "instruccion":"Solo para quienes responden que interpretan instrumentos.",
         "url_imagen":null,
@@ -1129,9 +1129,9 @@
         "indice_pregunta_bis":53,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":3,
@@ -1141,7 +1141,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P5",
-        "etiqueta.1":"P5",
+        "etiqueta_1":"P5",
         "enunciado_1":"¿Usted cobró por esa actividad que realizó en los últimos 12 meses? ",
         "instruccion":"Aplica solamente para quienes realizan alguna",
         "url_imagen":null,
@@ -1150,9 +1150,9 @@
         "indice_pregunta_bis":54,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":"frecuency",
-        "dataviz_palette":null
+        "dataviz_chart_type":"donut",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":3,
@@ -1162,7 +1162,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P6",
-        "etiqueta.1":"P6",
+        "etiqueta_1":"P6",
         "enunciado_1":"En los últimos 12 meses, ¿usted ha destinado recursos para poder realizar esa actividad artística o creativa, como compra de implementos, compra o alquiler de vestuarios, alquiler de espacios, contratación de personas, pago de talleres, cursos, entre otros?",
         "instruccion":"Aplica solamente para quienes realizan alguna actividad artística o creativa. (RU)",
         "url_imagen":null,
@@ -1171,9 +1171,9 @@
         "indice_pregunta_bis":55,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"donut",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":3,
@@ -1183,7 +1183,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P7",
-        "etiqueta.1":"P7",
+        "etiqueta_1":"P7",
         "enunciado_1":"¿En qué momento empezó a realizar actividades culturales, artísticas o creativas?",
         "instruccion":"(Solo para quienes responden sí en\nalguna subpregunta de la pregunta 3)",
         "url_imagen":null,
@@ -1192,9 +1192,9 @@
         "indice_pregunta_bis":56,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":3,
@@ -1204,7 +1204,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P8",
-        "etiqueta.1":"P8",
+        "etiqueta_1":"P8",
         "enunciado_1":"¿Quién facilitó el primer contacto con las actividades culturales, artísticas o creativas que usted realiza?",
         "instruccion":"(Solo para quienes responden sí en alguna subpregunta de la pregunta 3)",
         "url_imagen":null,
@@ -1213,9 +1213,9 @@
         "indice_pregunta_bis":57,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
+        "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":null
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":3,
@@ -1225,7 +1225,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P8.1",
-        "etiqueta.1":"P8.1",
+        "etiqueta_1":"P8.1",
         "enunciado_1":"Cual?",
         "instruccion":null,
         "url_imagen":null,
@@ -1233,8 +1233,8 @@
         "cantidad_variables":1.0,
         "indice_pregunta_bis":58,
         "num_seccion_bis":3,
-        "dataviz_display":1,
-        "dataviz_chart_type":"column",
+        "dataviz_display":0,
+        "dataviz_chart_type":null,
         "dataviz_order_type":null,
         "dataviz_palette":null
     },
@@ -1246,7 +1246,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P9",
-        "etiqueta.1":"P9",
+        "etiqueta_1":"P9",
         "enunciado_1":"Esa(s) actividad(es) artística(s) o creativas(as), ¿usted la(s) realizó principalmente porque...? ",
         "instruccion":"Selección Múltiple (Solo para quienes responden sí en la pregunta 3)",
         "url_imagen":null,
@@ -1255,9 +1255,9 @@
         "indice_pregunta_bis":59,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar-yes-selection",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":3,
@@ -1267,7 +1267,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P10",
-        "etiqueta.1":"P10",
+        "etiqueta_1":"P10",
         "enunciado_1":"¿Qué es lo que más le motiva o inspira a realizar prácticas artísticas o creativas?",
         "instruccion":"Respuesta única (Solo para quienes responden sí en la pregunta 3)",
         "url_imagen":null,
@@ -1276,9 +1276,9 @@
         "indice_pregunta_bis":60,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":3,
@@ -1288,7 +1288,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P11",
-        "etiqueta.1":"P11",
+        "etiqueta_1":"P11",
         "enunciado_1":"¿Ha tenido interrupciones en el ejercicio de esta práctica artística, cultural o creativa? ",
         "instruccion":"(Solo para quienes responden sí en la pregunta 3)\nsí en la pregunta 3)",
         "url_imagen":null,
@@ -1297,9 +1297,9 @@
         "indice_pregunta_bis":61,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":3,
@@ -1309,7 +1309,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P12",
-        "etiqueta.1":"P12",
+        "etiqueta_1":"P12",
         "enunciado_1":"Esa(s) actividad(es) artística(s) o creativa(s), ¿Dónde la(s) realiza principalmente?",
         "instruccion":"Respuesta espontánea.",
         "url_imagen":null,
@@ -1318,9 +1318,9 @@
         "indice_pregunta_bis":62,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar-yes-selection",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":3,
@@ -1330,7 +1330,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P12.1",
-        "etiqueta.1":"P12.1",
+        "etiqueta_1":"P12.1",
         "enunciado_1":"Otro ¿Cuál?",
         "instruccion":null,
         "url_imagen":null,
@@ -1338,10 +1338,10 @@
         "cantidad_variables":1.0,
         "indice_pregunta_bis":63,
         "num_seccion_bis":3,
-        "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_display":0,
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":3,
@@ -1351,7 +1351,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P13",
-        "etiqueta.1":"P13",
+        "etiqueta_1":"P13",
         "enunciado_1":"Esa(s) actividad(es) artística(s) o creativa(s), ¿Con quién las realiza principalmente?",
         "instruccion":"(Desplegar esta pregunta,\npara quienes respondieron realizar alguna actividad artística en la pregunta 3) Respuesta espontánea. Dejar que el\nencuestado responda y marcar la opción del listado",
         "url_imagen":null,
@@ -1360,9 +1360,9 @@
         "indice_pregunta_bis":64,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":3,
@@ -1372,7 +1372,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P14",
-        "etiqueta.1":"P14",
+        "etiqueta_1":"P14",
         "enunciado_1":"¿Cuál es la principal razón por la cual usted no practica ninguna actividad artística o creativa?",
         "instruccion":"(RU) Solo para\nquienes no realizan ninguna actividad artística o creativa",
         "url_imagen":null,
@@ -1381,9 +1381,9 @@
         "indice_pregunta_bis":65,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":3,
@@ -1393,7 +1393,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P14.1",
-        "etiqueta.1":"P14.1",
+        "etiqueta_1":"P14.1",
         "enunciado_1":"Otra ¿Cuál?",
         "instruccion":null,
         "url_imagen":null,
@@ -1414,7 +1414,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P14.2",
-        "etiqueta.1":"P14.2",
+        "etiqueta_1":"P14.2",
         "enunciado_1":"¿Por qué no le interesa o considera que es una pérdida de tiempo practicar actividades artísticas o creativas?",
         "instruccion":null,
         "url_imagen":null,
@@ -1423,9 +1423,9 @@
         "indice_pregunta_bis":67,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":3,
@@ -1435,7 +1435,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P14.2.2",
-        "etiqueta.1":"P14.2.2",
+        "etiqueta_1":"P14.2.2",
         "enunciado_1":"Otra ¿Cuál?",
         "instruccion":null,
         "url_imagen":null,
@@ -1456,7 +1456,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P15",
-        "etiqueta.1":"P15",
+        "etiqueta_1":"P15",
         "enunciado_1":"¿En los últimos 12 meses, usted ha asistido o accedido en Bogotá, al menos una vez a…?",
         "instruccion":null,
         "url_imagen":null,
@@ -1466,8 +1466,8 @@
         "num_seccion_bis":3,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":3,
@@ -1477,7 +1477,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P16",
-        "etiqueta.1":"P16",
+        "etiqueta_1":"P16",
         "enunciado_1":"¿Cuál es el principal motivo para no haber asistido o accedido a actividades artísticas o culturales en los últimos 12 meses?",
         "instruccion":null,
         "url_imagen":null,
@@ -1486,9 +1486,9 @@
         "indice_pregunta_bis":70,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":3,
@@ -1498,7 +1498,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P16.1",
-        "etiqueta.1":"P16.1",
+        "etiqueta_1":"P16.1",
         "enunciado_1":"Otra ¿Cuál?",
         "instruccion":null,
         "url_imagen":null,
@@ -1519,7 +1519,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P16.2",
-        "etiqueta.1":"P16.2",
+        "etiqueta_1":"P16.2",
         "enunciado_1":"¿Por qué no le interesa o considera que es una pérdida de tiempo asistir a actividades artísticas o creativas?",
         "instruccion":"(Solo para quienes responden \"b\" y \"c\" en la pregunta 16)",
         "url_imagen":null,
@@ -1528,9 +1528,9 @@
         "indice_pregunta_bis":72,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":3,
@@ -1540,7 +1540,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P16.2.1",
-        "etiqueta.1":"P16.2.1",
+        "etiqueta_1":"P16.2.1",
         "enunciado_1":"Otra ¿Cuál?",
         "instruccion":null,
         "url_imagen":null,
@@ -1548,8 +1548,8 @@
         "cantidad_variables":1.0,
         "indice_pregunta_bis":73,
         "num_seccion_bis":3,
-        "dataviz_display":1,
-        "dataviz_chart_type":"column",
+        "dataviz_display":0,
+        "dataviz_chart_type":null,
         "dataviz_order_type":null,
         "dataviz_palette":null
     },
@@ -1561,7 +1561,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P17",
-        "etiqueta.1":"P17",
+        "etiqueta_1":"P17",
         "enunciado_1":"¿Cuál es la principal razón por la que asiste a actividades artísticas o culturales?",
         "instruccion":"Solo para quienes respondieron que asisten a alguna de las actividades",
         "url_imagen":null,
@@ -1570,9 +1570,9 @@
         "indice_pregunta_bis":74,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":3,
@@ -1582,7 +1582,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P17.1",
-        "etiqueta.1":"P17.1",
+        "etiqueta_1":"P17.1",
         "enunciado_1":"Otra ¿Cuál?",
         "instruccion":null,
         "url_imagen":null,
@@ -1590,8 +1590,8 @@
         "cantidad_variables":1.0,
         "indice_pregunta_bis":75,
         "num_seccion_bis":3,
-        "dataviz_display":1,
-        "dataviz_chart_type":"column",
+        "dataviz_display":0,
+        "dataviz_chart_type":null,
         "dataviz_order_type":null,
         "dataviz_palette":null
     },
@@ -1603,7 +1603,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P18",
-        "etiqueta.1":"P18",
+        "etiqueta_1":"P18",
         "enunciado_1":"Durante el último mes, ¿con qué frecuencia realizó las siguientes actividades?",
         "instruccion":null,
         "url_imagen":null,
@@ -1613,8 +1613,8 @@
         "num_seccion_bis":3,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":3,
@@ -1624,7 +1624,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P19",
-        "etiqueta.1":"P19",
+        "etiqueta_1":"P19",
         "enunciado_1":"En los últimos 12 meses, ¿usted asistió por lo menos una vez a…?",
         "instruccion":null,
         "url_imagen":null,
@@ -1633,9 +1633,9 @@
         "indice_pregunta_bis":77,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar-yes-selection",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":3,
@@ -1645,7 +1645,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P20",
-        "etiqueta.1":"P20",
+        "etiqueta_1":"P20",
         "enunciado_1":"¿Ha asistido o ha accedido en los últimos 12 meses a algún concierto de la Orquesta Filarmónica de Bogotá, presencial o virtual? (coro filarmónico juvenil, infantil, banda filarmónica juvenil, orquesta filarmónica de Bogotá, orquesta filarmónica prejuvenil, orquesta filarmónica juvenil, coro prejuvenil, coro hijas e hijos de la paz)",
         "instruccion":null,
         "url_imagen":null,
@@ -1654,9 +1654,9 @@
         "indice_pregunta_bis":78,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"donut",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":3,
@@ -1666,7 +1666,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P20.1",
-        "etiqueta.1":"P20.1",
+        "etiqueta_1":"P20.1",
         "enunciado_1":"¿Dónde? Especifique si fue virtual o presencial",
         "instruccion":null,
         "url_imagen":null,
@@ -1675,9 +1675,9 @@
         "indice_pregunta_bis":79,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":3,
@@ -1687,7 +1687,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P20.2",
-        "etiqueta.1":"P20.2",
+        "etiqueta_1":"P20.2",
         "enunciado_1":"¿Cuál es la principal razón por la cual usted no ha asistido a algún concierto de la Orquesta Filarmónica de Bogotá?",
         "instruccion":"Solo para quienes responden No en la pregunta 20",
         "url_imagen":null,
@@ -1696,9 +1696,9 @@
         "indice_pregunta_bis":80,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":3,
@@ -1708,7 +1708,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P20.2.1",
-        "etiqueta.1":"P20.2.1",
+        "etiqueta_1":"P20.2.1",
         "enunciado_1":"Otra ¿Cuál?",
         "instruccion":null,
         "url_imagen":null,
@@ -1716,8 +1716,8 @@
         "cantidad_variables":1.0,
         "indice_pregunta_bis":81,
         "num_seccion_bis":3,
-        "dataviz_display":1,
-        "dataviz_chart_type":"column",
+        "dataviz_display":0,
+        "dataviz_chart_type":null,
         "dataviz_order_type":null,
         "dataviz_palette":null
     },
@@ -1729,7 +1729,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P21",
-        "etiqueta.1":"P21",
+        "etiqueta_1":"P21",
         "enunciado_1":"En los últimos 12 meses, ¿usted ha destinado dinero para…?",
         "instruccion":null,
         "url_imagen":null,
@@ -1738,9 +1738,9 @@
         "indice_pregunta_bis":82,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar-yes-selection",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":3,
@@ -1750,7 +1750,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P22",
-        "etiqueta.1":"P22",
+        "etiqueta_1":"P22",
         "enunciado_1":"Diga si está de acuerdo con las siguientes afirmaciones",
         "instruccion":null,
         "url_imagen":null,
@@ -1759,9 +1759,9 @@
         "indice_pregunta_bis":83,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar-yes-selection",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":3,
@@ -1771,7 +1771,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P23",
-        "etiqueta.1":"P23",
+        "etiqueta_1":"P23",
         "enunciado_1":"¿Qué canales utiliza principalmente, para comprar o acceder a productos o servicios artísticos y culturales? (RU)",
         "instruccion":null,
         "url_imagen":null,
@@ -1780,9 +1780,9 @@
         "indice_pregunta_bis":84,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":3,
@@ -1792,7 +1792,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P24",
-        "etiqueta.1":"P24",
+        "etiqueta_1":"P24",
         "enunciado_1":"¿Conoce o a hecho parte de algún proyecto ganador del programa Más Cultura Local?",
         "instruccion":null,
         "url_imagen":null,
@@ -1801,9 +1801,9 @@
         "indice_pregunta_bis":85,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"donut",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":3,
@@ -1813,7 +1813,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P24.1",
-        "etiqueta.1":"P24.1",
+        "etiqueta_1":"P24.1",
         "enunciado_1":"¿Siente que la Presencia artística ha mejorado gracias al programa Más Cultura Local ?",
         "instruccion":null,
         "url_imagen":null,
@@ -1822,9 +1822,9 @@
         "indice_pregunta_bis":86,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"donut",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":3,
@@ -1834,7 +1834,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P25",
-        "etiqueta.1":"P25",
+        "etiqueta_1":"P25",
         "enunciado_1":"Durante el último año, ¿ha recibido apoyo por alguno de los siguientes mecanismos de financiación para las",
         "instruccion":null,
         "url_imagen":null,
@@ -1843,9 +1843,9 @@
         "indice_pregunta_bis":87,
         "num_seccion_bis":3,
         "dataviz_display":1,
-        "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar-yes-selection",
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":4,
@@ -1855,7 +1855,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P26",
-        "etiqueta.1":"P26",
+        "etiqueta_1":"P26",
         "enunciado_1":"Respecto a la formación en arte, cultura y\/o patrimonio, indique con cuál de las siguientes afirmaciones se siente",
         "instruccion":null,
         "url_imagen":null,
@@ -1864,9 +1864,9 @@
         "indice_pregunta_bis":88,
         "num_seccion_bis":4,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":4,
@@ -1876,7 +1876,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P27",
-        "etiqueta.1":"P27",
+        "etiqueta_1":"P27",
         "enunciado_1":"¿Ha recibido usted formación artística, cultural y\/o patrimonial en algún momento de su vida?",
         "instruccion":null,
         "url_imagen":null,
@@ -1886,8 +1886,8 @@
         "num_seccion_bis":4,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":4,
@@ -1897,7 +1897,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P27.1",
-        "etiqueta.1":"P27.1",
+        "etiqueta_1":"P27.1",
         "enunciado_1":"Para cada una de las siguientes actividades artísticas, creativas, culturales o patrimoniales, indique cuál fue el último nivel o modalidad educativa en la que recibió formación",
         "instruccion":null,
         "url_imagen":null,
@@ -1906,9 +1906,9 @@
         "indice_pregunta_bis":90,
         "num_seccion_bis":4,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":4,
@@ -1918,7 +1918,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P27.1.1",
-        "etiqueta.1":"P27.1.1",
+        "etiqueta_1":"P27.1.1",
         "enunciado_1":"Para quienes seleccionaron que recibieron formación en Otra actividad artística, creativa, cultural o patrimonial que considere propia ¿Cuál actividad artística, creativa, cultural o patrimonial?",
         "instruccion":null,
         "url_imagen":null,
@@ -1927,9 +1927,9 @@
         "indice_pregunta_bis":91,
         "num_seccion_bis":4,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":4,
@@ -1939,7 +1939,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P27.2",
-        "etiqueta.1":"P27.2",
+        "etiqueta_1":"P27.2",
         "enunciado_1":"De acuerdo con la pregunta anterior, díganos en qué etapas de la vida ha tenido contacto con estos tipos de formación.",
         "instruccion":null,
         "url_imagen":null,
@@ -1949,8 +1949,8 @@
         "num_seccion_bis":4,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":4,
@@ -1960,7 +1960,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P27_3",
-        "etiqueta.1":"P27.3",
+        "etiqueta_1":"P27.3",
         "enunciado_1":"Si usted ha recibido algún tipo de formación artística, cultural y\/o patrimonial en su vida, ¿en qué modalidad la recibió?",
         "instruccion":null,
         "url_imagen":null,
@@ -1969,9 +1969,9 @@
         "indice_pregunta_bis":93,
         "num_seccion_bis":4,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":4,
@@ -1981,7 +1981,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P27_4",
-        "etiqueta.1":"P27.4",
+        "etiqueta_1":"P27.4",
         "enunciado_1":"¿Ha participado en programas de formación en arte, cultura y\/o patrimonio en los últimos 12 meses?",
         "instruccion":null,
         "url_imagen":null,
@@ -1990,9 +1990,9 @@
         "indice_pregunta_bis":94,
         "num_seccion_bis":4,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":4,
@@ -2002,7 +2002,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P27_5",
-        "etiqueta.1":"P27.5",
+        "etiqueta_1":"P27.5",
         "enunciado_1":"En los últimos 12 meses, ¿con qué frecuencia ha asistido a programas de formación artística, cultural y\/o patrimonial?",
         "instruccion":null,
         "url_imagen":null,
@@ -2011,9 +2011,9 @@
         "indice_pregunta_bis":95,
         "num_seccion_bis":4,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":4,
@@ -2023,7 +2023,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P27.6",
-        "etiqueta.1":"P27.6",
+        "etiqueta_1":"P27.6",
         "enunciado_1":"¿Dónde ha recibido formación en prácticas artísticas, culturales y\/o patrimoniales?",
         "instruccion":null,
         "url_imagen":null,
@@ -2033,8 +2033,8 @@
         "num_seccion_bis":4,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":4,
@@ -2044,9 +2044,9 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P27.6.1",
-        "etiqueta.1":"P27.6.1",
+        "etiqueta_1":"P27.6.1",
         "enunciado_1":"¿En cuáles espacios o centros de formación del Distrito o de sus entidades adscritas ha recibido formación artística, cultural y\/o patrimonial?",
-        "instruccion":"(Para quienes respondieron sí en la opción \"\"a\"\" de la pregunta anterior)",
+        "instruccion":"Para quienes respondieron Sí en la opción \"a\" de la pregunta anterior",
         "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":4.0,
@@ -2054,8 +2054,8 @@
         "num_seccion_bis":4,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":4,
@@ -2065,7 +2065,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P27.7",
-        "etiqueta.1":"P27.7",
+        "etiqueta_1":"P27.7",
         "enunciado_1":"En cuáles áreas de formación artística, cultural y\/o patrimonial ha participado en los últimos doce meses?",
         "instruccion":null,
         "url_imagen":null,
@@ -2075,8 +2075,8 @@
         "num_seccion_bis":4,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":4,
@@ -2086,7 +2086,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P27.8",
-        "etiqueta.1":"P27.8",
+        "etiqueta_1":"P27.8",
         "enunciado_1":"¿Qué tanto le ha ayudado haber recibido formación artística, cultural y\/o patrimonial a…?",
         "instruccion":null,
         "url_imagen":null,
@@ -2096,8 +2096,8 @@
         "num_seccion_bis":4,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":4,
@@ -2107,7 +2107,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P27.9",
-        "etiqueta.1":"P27.9",
+        "etiqueta_1":"P27.9",
         "enunciado_1":"Pensando en su propia experiencia, ¿ qué tanto la formación artística, cultural y\/o patrimonial le ha permitido…?",
         "instruccion":null,
         "url_imagen":null,
@@ -2117,8 +2117,8 @@
         "num_seccion_bis":4,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":4,
@@ -2128,7 +2128,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P28",
-        "etiqueta.1":"P28",
+        "etiqueta_1":"P28",
         "enunciado_1":"¿Cuál es la principal razón por la cual usted no ha participado en programas de formación, artística, cultural y\/o\npatrimonial?",
         "instruccion":null,
         "url_imagen":"Solo para quienes no han recibido formación artística, cultural y\/o patrimonial",
@@ -2137,9 +2137,9 @@
         "indice_pregunta_bis":101,
         "num_seccion_bis":4,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":4,
@@ -2149,7 +2149,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P28.1",
-        "etiqueta.1":"P28.1",
+        "etiqueta_1":"P28.1",
         "enunciado_1":"Otra ¿Cuál?",
         "instruccion":null,
         "url_imagen":null,
@@ -2157,10 +2157,10 @@
         "cantidad_variables":1.0,
         "indice_pregunta_bis":102,
         "num_seccion_bis":4,
-        "dataviz_display":1,
+        "dataviz_display":0,
         "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":4,
@@ -2170,7 +2170,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P29",
-        "etiqueta.1":"P29",
+        "etiqueta_1":"P29",
         "enunciado_1":"¿Usted ha aprendido o vivido experiencias de formación artística, cultural o patrimonial en..?",
         "instruccion":null,
         "url_imagen":null,
@@ -2180,8 +2180,8 @@
         "num_seccion_bis":4,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":4,
@@ -2191,7 +2191,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P29.1",
-        "etiqueta.1":"P29.1",
+        "etiqueta_1":"P29.1",
         "enunciado_1":"¿Cuál?",
         "instruccion":null,
         "url_imagen":null,
@@ -2199,8 +2199,8 @@
         "cantidad_variables":1.0,
         "indice_pregunta_bis":104,
         "num_seccion_bis":4,
-        "dataviz_display":1,
-        "dataviz_chart_type":"column",
+        "dataviz_display":0,
+        "dataviz_chart_type":null,
         "dataviz_order_type":null,
         "dataviz_palette":null
     },
@@ -2212,7 +2212,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P30",
-        "etiqueta.1":"P30",
+        "etiqueta_1":"P30",
         "enunciado_1":"¿Qué tan de acuerdo está con las siguientes afirmaciones acerca de la la formación artística, cultural y\/o patrimonial que se ofrece en Bogotá…?",
         "instruccion":null,
         "url_imagen":null,
@@ -2222,8 +2222,8 @@
         "num_seccion_bis":4,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":5,
@@ -2233,7 +2233,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P31",
-        "etiqueta.1":"P31",
+        "etiqueta_1":"P31",
         "enunciado_1":"¿Cuáles de los siguientes equipamientos culturales en su localidad, conoce?",
         "instruccion":null,
         "url_imagen":null,
@@ -2243,8 +2243,8 @@
         "num_seccion_bis":5,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":5,
@@ -2254,7 +2254,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P32",
-        "etiqueta.1":"P32",
+        "etiqueta_1":"P32",
         "enunciado_1":"¿Cuáles de los siguientes equipamientos culturales en su localidad, ha visitado o utilizado usted, en los últimos 12 meses?",
         "instruccion":"Solo para las que mencionaron que los conoce. Si no lo conocen o no hay, esta pregunta en ese equipamiento no se\nmuestra.",
         "url_imagen":null,
@@ -2264,8 +2264,8 @@
         "num_seccion_bis":5,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":5,
@@ -2275,7 +2275,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P33",
-        "etiqueta.1":"P33",
+        "etiqueta_1":"P33",
         "enunciado_1":"¿Cuáles de los siguientes lugares alternativos y\/o independientes para actividades culturales en su localidad, ha visitado o utilizado, en los últimos 12 meses?",
         "instruccion":null,
         "url_imagen":null,
@@ -2285,8 +2285,8 @@
         "num_seccion_bis":5,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":5,
@@ -2296,7 +2296,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P34",
-        "etiqueta.1":"P34",
+        "etiqueta_1":"P34",
         "enunciado_1":"¿Cuáles de los siguientes lugares alternativos y\/o independientes para actividades culturales en su localidad, ha visitado o utilizado, en los últimos 12 meses?",
         "instruccion":null,
         "url_imagen":null,
@@ -2306,8 +2306,8 @@
         "num_seccion_bis":5,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":5,
@@ -2317,7 +2317,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P35",
-        "etiqueta.1":"P35",
+        "etiqueta_1":"P35",
         "enunciado_1":"¿Cuáles de los siguientes equipamientos culturales del Distrito ha visitado o utilizado usted, en los últimos 12 meses?",
         "instruccion":null,
         "url_imagen":null,
@@ -2327,8 +2327,8 @@
         "num_seccion_bis":5,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":5,
@@ -2338,7 +2338,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P36",
-        "etiqueta.1":"P36",
+        "etiqueta_1":"P36",
         "enunciado_1":"En una escala de 1 a 4, donde 1 es Nada satisfecho(a. y 4 es Muy satisfecho(a.. ¿Dígame, cuál es su nivel de satisfacción\ncon los siguientes equipamientos de la ciudad?",
         "instruccion":null,
         "url_imagen":null,
@@ -2348,8 +2348,8 @@
         "num_seccion_bis":5,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":5,
@@ -2359,7 +2359,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P37",
-        "etiqueta.1":"P37",
+        "etiqueta_1":"P37",
         "enunciado_1":"¿Consulta usted la programación de...?",
         "instruccion":null,
         "url_imagen":null,
@@ -2369,8 +2369,8 @@
         "num_seccion_bis":5,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":5,
@@ -2380,7 +2380,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P38",
-        "etiqueta.1":"P38",
+        "etiqueta_1":"P38",
         "enunciado_1":"¿En qué medio consulta la programación de los eventos culturales y artísticos en la ciudad?",
         "instruccion":"RU",
         "url_imagen":null,
@@ -2389,9 +2389,9 @@
         "indice_pregunta_bis":113,
         "num_seccion_bis":5,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":5,
@@ -2401,7 +2401,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P38.1",
-        "etiqueta.1":"P38.1",
+        "etiqueta_1":"P38.1",
         "enunciado_1":"Otro ¿cuál?",
         "instruccion":null,
         "url_imagen":null,
@@ -2409,10 +2409,10 @@
         "cantidad_variables":1.0,
         "indice_pregunta_bis":114,
         "num_seccion_bis":5,
-        "dataviz_display":1,
+        "dataviz_display":0,
         "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":6,
@@ -2422,7 +2422,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P39",
-        "etiqueta.1":"P39",
+        "etiqueta_1":"P39",
         "enunciado_1":"Mencione la actividad cultural más importante que se realiza en su barrio o vereda",
         "instruccion":null,
         "url_imagen":null,
@@ -2431,9 +2431,9 @@
         "indice_pregunta_bis":115,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":6,
@@ -2443,7 +2443,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P40",
-        "etiqueta.1":"P40",
+        "etiqueta_1":"P40",
         "enunciado_1":"¿Ha participado usted en esta actividad?",
         "instruccion":null,
         "url_imagen":null,
@@ -2452,9 +2452,9 @@
         "indice_pregunta_bis":116,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":6,
@@ -2464,7 +2464,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P41",
-        "etiqueta.1":"P41",
+        "etiqueta_1":"P41",
         "enunciado_1":"Mencione la actividad cultural más importante que se realice fuera de su barrio o vereda (en otro barrio de su\nlocalidad, en otra localidad o en la ciudad)",
         "instruccion":null,
         "url_imagen":null,
@@ -2473,9 +2473,9 @@
         "indice_pregunta_bis":117,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":6,
@@ -2485,7 +2485,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P42",
-        "etiqueta.1":"P42",
+        "etiqueta_1":"P42",
         "enunciado_1":"¿Ha participado usted en esta actividad?",
         "instruccion":null,
         "url_imagen":null,
@@ -2494,9 +2494,9 @@
         "indice_pregunta_bis":118,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":6,
@@ -2506,7 +2506,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P43",
-        "etiqueta.1":"P43",
+        "etiqueta_1":"P43",
         "enunciado_1":"Pensando en todas las actividades culturales en las que ha participado en los últimos 12 meses, ¿cuál es la más importante para usted?",
         "instruccion":null,
         "url_imagen":null,
@@ -2515,9 +2515,9 @@
         "indice_pregunta_bis":119,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":6,
@@ -2527,7 +2527,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P44",
-        "etiqueta.1":"P44",
+        "etiqueta_1":"P44",
         "enunciado_1":"Para cada uno de los siguientes grupos o comunidades, dígame si hay alguno con cuyas actividades, causas o manifestaciones culturales usted se siente identificado(a) y si hace parte de este grupo o comunidad",
         "instruccion":null,
         "url_imagen":null,
@@ -2537,8 +2537,8 @@
         "num_seccion_bis":6,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -2548,7 +2548,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P44.0",
-        "etiqueta.1":"P44.0",
+        "etiqueta_1":"P44.0",
         "enunciado_1":"Otra",
         "instruccion":null,
         "url_imagen":null,
@@ -2557,9 +2557,9 @@
         "indice_pregunta_bis":121,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":6,
@@ -2569,7 +2569,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P44.01",
-        "etiqueta.1":"P44.01",
+        "etiqueta_1":"P44.01",
         "enunciado_1":"Sí f. Otro, ¿Cuál?",
         "instruccion":null,
         "url_imagen":null,
@@ -2577,10 +2577,10 @@
         "cantidad_variables":1.0,
         "indice_pregunta_bis":122,
         "num_seccion_bis":6,
-        "dataviz_display":1,
+        "dataviz_display":0,
         "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":6,
@@ -2590,7 +2590,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P44",
-        "etiqueta.1":"P44",
+        "etiqueta_1":"P44",
         "enunciado_1":"Cual ?",
         "instruccion":null,
         "url_imagen":null,
@@ -2598,10 +2598,10 @@
         "cantidad_variables":null,
         "indice_pregunta_bis":123,
         "num_seccion_bis":6,
-        "dataviz_display":1,
+        "dataviz_display":0,
         "dataviz_chart_type":null,
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":6,
@@ -2611,7 +2611,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P44_1",
-        "etiqueta.1":"P44.1",
+        "etiqueta_1":"P44.1",
         "enunciado_1":"Mencione la actividad más importante que realiza el grupo o comunidad del que hace parte",
         "instruccion":null,
         "url_imagen":null,
@@ -2620,9 +2620,9 @@
         "indice_pregunta_bis":124,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":6,
@@ -2632,7 +2632,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P44_2",
-        "etiqueta.1":"P44.2",
+        "etiqueta_1":"P44.2",
         "enunciado_1":"¿En el grupo o comunidad del que hace parte, cuál es la principal actividad que usted realiza?",
         "instruccion":null,
         "url_imagen":null,
@@ -2641,9 +2641,9 @@
         "indice_pregunta_bis":125,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":6,
@@ -2653,7 +2653,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P44_3",
-        "etiqueta.1":"P44.3",
+        "etiqueta_1":"P44.3",
         "enunciado_1":"En los últimos 12 meses, ¿usted ha participado en actividades, eventos o manifestaciones realizadas por alguno de los grupos o comunidades con los que se siente identificado\/a.?",
         "instruccion":null,
         "url_imagen":null,
@@ -2662,9 +2662,9 @@
         "indice_pregunta_bis":126,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":6,
@@ -2674,7 +2674,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P44_4",
-        "etiqueta.1":"P44.4",
+        "etiqueta_1":"P44.4",
         "enunciado_1":"Pensando en todas las actividades, eventos o manifestaciones en los que ha participado en los últimos 12 meses, ¿cuál es el más importante para usted?\n¿cuál es el más importante para usted?",
         "instruccion":null,
         "url_imagen":null,
@@ -2683,9 +2683,9 @@
         "indice_pregunta_bis":127,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":6,
@@ -2695,7 +2695,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P45",
-        "etiqueta.1":"P45",
+        "etiqueta_1":"P45",
         "enunciado_1":"En los últimos 12 meses, ¿en cuáles actividades ha participado donde personas de distintas culturas o comunidades compartieron sus conocimientos, tradiciones o expresiones culturales?",
         "instruccion":null,
         "url_imagen":null,
@@ -2704,9 +2704,9 @@
         "indice_pregunta_bis":128,
         "num_seccion_bis":6,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":6,
@@ -2716,7 +2716,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P46",
-        "etiqueta.1":"P46",
+        "etiqueta_1":"P46",
         "enunciado_1":"Respecto a la diversidad de expresiones artísticas, culturales o patrimoniales que ocurren en la ciudad, usted…:",
         "instruccion":null,
         "url_imagen":null,
@@ -2726,8 +2726,8 @@
         "num_seccion_bis":6,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":7,
@@ -2737,7 +2737,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P47",
-        "etiqueta.1":"P47",
+        "etiqueta_1":"P47",
         "enunciado_1":"¿Usted cree que el patrimonio cultural es importante en la vida de los bogotanos y las bogotanas?",
         "instruccion":null,
         "url_imagen":null,
@@ -2746,9 +2746,9 @@
         "indice_pregunta_bis":130,
         "num_seccion_bis":7,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":7,
@@ -2758,7 +2758,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P47.1",
-        "etiqueta.1":"P47.1",
+        "etiqueta_1":"P47.1",
         "enunciado_1":"¿Por qué cree que el patrimonio cultural es importante en la vida de los bogotanos y bogotanas?",
         "instruccion":"Si la respuesta anterior es Sí",
         "url_imagen":null,
@@ -2767,9 +2767,9 @@
         "indice_pregunta_bis":131,
         "num_seccion_bis":7,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":7,
@@ -2779,7 +2779,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P47.2",
-        "etiqueta.1":"P47.2",
+        "etiqueta_1":"P47.2",
         "enunciado_1":"¿Por qué NO le parece importante el patrimonio cultural en la vida de los bogotanos y las bogotanas?",
         "instruccion":"Si la repuesta anterior es NO",
         "url_imagen":null,
@@ -2789,8 +2789,8 @@
         "num_seccion_bis":7,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":7,
@@ -2800,7 +2800,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P48",
-        "etiqueta.1":"P48",
+        "etiqueta_1":"P48",
         "enunciado_1":"Para usted el patrimonio cultural es útil porque:",
         "instruccion":null,
         "url_imagen":null,
@@ -2810,8 +2810,8 @@
         "num_seccion_bis":7,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":7,
@@ -2821,7 +2821,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P49",
-        "etiqueta.1":"P49",
+        "etiqueta_1":"P49",
         "enunciado_1":"De las siguientes opciones, ¿Cuáles cree usted que deben protegerse como parte de la vida bogotana?",
         "instruccion":null,
         "url_imagen":null,
@@ -2831,8 +2831,8 @@
         "num_seccion_bis":7,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":7,
@@ -2842,7 +2842,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P49.1",
-        "etiqueta.1":"P49.1",
+        "etiqueta_1":"P49.1",
         "enunciado_1":"Cual ?",
         "instruccion":null,
         "url_imagen":null,
@@ -2851,9 +2851,9 @@
         "indice_pregunta_bis":135,
         "num_seccion_bis":7,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":7,
@@ -2863,7 +2863,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P50",
-        "etiqueta.1":"P50",
+        "etiqueta_1":"P50",
         "enunciado_1":"De las siguientes prácticas, ¿Cuáles creería usted que pueden ser patrimonio?",
         "instruccion":null,
         "url_imagen":null,
@@ -2873,8 +2873,8 @@
         "num_seccion_bis":7,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":7,
@@ -2884,7 +2884,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P50.1",
-        "etiqueta.1":"P50.1",
+        "etiqueta_1":"P50.1",
         "enunciado_1":"Cuál ?",
         "instruccion":null,
         "url_imagen":null,
@@ -2892,10 +2892,10 @@
         "cantidad_variables":1.0,
         "indice_pregunta_bis":137,
         "num_seccion_bis":7,
-        "dataviz_display":1,
+        "dataviz_display":0,
         "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":7,
@@ -2905,7 +2905,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P51",
-        "etiqueta.1":"P51",
+        "etiqueta_1":"P51",
         "enunciado_1":"De las siguientes prácticas, ¿Cuáles realiza?",
         "instruccion":null,
         "url_imagen":null,
@@ -2915,8 +2915,8 @@
         "num_seccion_bis":7,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":7,
@@ -2926,7 +2926,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P51.1.1",
-        "etiqueta.1":"P51.1.1",
+        "etiqueta_1":"P51.1.1",
         "enunciado_1":"Cuál ?",
         "instruccion":null,
         "url_imagen":null,
@@ -2934,10 +2934,10 @@
         "cantidad_variables":1.0,
         "indice_pregunta_bis":139,
         "num_seccion_bis":7,
-        "dataviz_display":1,
+        "dataviz_display":0,
         "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":7,
@@ -2947,7 +2947,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P52",
-        "etiqueta.1":"P52",
+        "etiqueta_1":"P52",
         "enunciado_1":"Para usted, este barrio es principalmente…",
         "instruccion":null,
         "url_imagen":null,
@@ -2956,9 +2956,9 @@
         "indice_pregunta_bis":140,
         "num_seccion_bis":7,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":7,
@@ -2968,7 +2968,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P52.1",
-        "etiqueta.1":"P52.1",
+        "etiqueta_1":"P52.1",
         "enunciado_1":"Cuál ?",
         "instruccion":null,
         "url_imagen":null,
@@ -2976,10 +2976,10 @@
         "cantidad_variables":1.0,
         "indice_pregunta_bis":141,
         "num_seccion_bis":7,
-        "dataviz_display":1,
+        "dataviz_display":0,
         "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":7,
@@ -2989,7 +2989,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P53",
-        "etiqueta.1":"P53",
+        "etiqueta_1":"P53",
         "enunciado_1":"¿Cuáles de los siguientes elementos de su barrio, pueden ser considerados como patrimonio?",
         "instruccion":null,
         "url_imagen":null,
@@ -2999,8 +2999,8 @@
         "num_seccion_bis":7,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":7,
@@ -3010,7 +3010,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P54",
-        "etiqueta.1":"P54",
+        "etiqueta_1":"P54",
         "enunciado_1":"Para usted el patrimonio cultural debería ser definido principalmente por...",
         "instruccion":null,
         "url_imagen":null,
@@ -3020,8 +3020,8 @@
         "num_seccion_bis":7,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":7,
@@ -3031,7 +3031,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P55",
-        "etiqueta.1":"P55",
+        "etiqueta_1":"P55",
         "enunciado_1":"Diga por favor su nivel de desacuerdo o de acuerdo con las siguientes afirmaciones:",
         "instruccion":null,
         "url_imagen":null,
@@ -3041,8 +3041,8 @@
         "num_seccion_bis":7,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":7,
@@ -3052,7 +3052,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P56",
-        "etiqueta.1":"P56",
+        "etiqueta_1":"P56",
         "enunciado_1":"¿Sobre cuál de los siguientes temas del patrimonio cultural y natural de Bogotá le interesaría conocer más?",
         "instruccion":null,
         "url_imagen":null,
@@ -3062,8 +3062,8 @@
         "num_seccion_bis":7,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":7,
@@ -3073,7 +3073,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P56_1",
-        "etiqueta.1":"P56.1",
+        "etiqueta_1":"P56.1",
         "enunciado_1":"¿Cuál?",
         "instruccion":null,
         "url_imagen":null,
@@ -3081,8 +3081,8 @@
         "cantidad_variables":1.0,
         "indice_pregunta_bis":146,
         "num_seccion_bis":7,
-        "dataviz_display":1,
-        "dataviz_chart_type":"column",
+        "dataviz_display":0,
+        "dataviz_chart_type":null,
         "dataviz_order_type":null,
         "dataviz_palette":null
     },
@@ -3094,7 +3094,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P57",
-        "etiqueta.1":"P57",
+        "etiqueta_1":"P57",
         "enunciado_1":"De las siguientes opciones ¿Cuál considera que es la principal amenaza al patrimonio cultural de Bogotá?",
         "instruccion":null,
         "url_imagen":null,
@@ -3103,9 +3103,9 @@
         "indice_pregunta_bis":147,
         "num_seccion_bis":7,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":7,
@@ -3115,7 +3115,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P57.1",
-        "etiqueta.1":"P57.1",
+        "etiqueta_1":"P57.1",
         "enunciado_1":"¿Cuál?",
         "instruccion":null,
         "url_imagen":null,
@@ -3123,8 +3123,8 @@
         "cantidad_variables":1.0,
         "indice_pregunta_bis":148,
         "num_seccion_bis":7,
-        "dataviz_display":1,
-        "dataviz_chart_type":"column",
+        "dataviz_display":0,
+        "dataviz_chart_type":null,
         "dataviz_order_type":null,
         "dataviz_palette":null
     },
@@ -3136,7 +3136,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P58",
-        "etiqueta.1":"P58",
+        "etiqueta_1":"P58",
         "enunciado_1":"¿Para usted que es más importante en un edificio patrimonial?",
         "instruccion":null,
         "url_imagen":null,
@@ -3145,9 +3145,9 @@
         "indice_pregunta_bis":149,
         "num_seccion_bis":7,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":7,
@@ -3157,7 +3157,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P59",
-        "etiqueta.1":"P59",
+        "etiqueta_1":"P59",
         "enunciado_1":"¿Se siente identificado con algún monumento de la ciudad?",
         "instruccion":null,
         "url_imagen":null,
@@ -3166,9 +3166,9 @@
         "indice_pregunta_bis":150,
         "num_seccion_bis":7,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":7,
@@ -3178,7 +3178,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P59.1",
-        "etiqueta.1":"P59.1",
+        "etiqueta_1":"P59.1",
         "enunciado_1":"¿Con cuál se siente identificado?",
         "instruccion":null,
         "url_imagen":null,
@@ -3187,9 +3187,9 @@
         "indice_pregunta_bis":151,
         "num_seccion_bis":7,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":7,
@@ -3199,7 +3199,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P60",
-        "etiqueta.1":"P60",
+        "etiqueta_1":"P60",
         "enunciado_1":"¿Para usted que es más importante en un monumento?",
         "instruccion":null,
         "url_imagen":null,
@@ -3208,9 +3208,9 @@
         "indice_pregunta_bis":152,
         "num_seccion_bis":7,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":7,
@@ -3220,7 +3220,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P61",
-        "etiqueta.1":"P61",
+        "etiqueta_1":"P61",
         "enunciado_1":"Para conmemorar eventos, hechos y personajes la mejor forma sería:",
         "instruccion":null,
         "url_imagen":null,
@@ -3229,9 +3229,9 @@
         "indice_pregunta_bis":153,
         "num_seccion_bis":7,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":7,
@@ -3241,7 +3241,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P62",
-        "etiqueta.1":"P62",
+        "etiqueta_1":"P62",
         "enunciado_1":"¿Usted pondría un monumento en su barrio?",
         "instruccion":null,
         "url_imagen":null,
@@ -3250,9 +3250,9 @@
         "indice_pregunta_bis":154,
         "num_seccion_bis":7,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":7,
@@ -3262,7 +3262,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P62.1",
-        "etiqueta.1":"P62.1",
+        "etiqueta_1":"P62.1",
         "enunciado_1":"¿Cuál de los siguientes monumentos le gustaría?",
         "instruccion":"Si la repuesta anterior es SÍ",
         "url_imagen":null,
@@ -3271,9 +3271,9 @@
         "indice_pregunta_bis":155,
         "num_seccion_bis":7,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":7,
@@ -3283,7 +3283,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P62.1.1",
-        "etiqueta.1":"P62.1.1",
+        "etiqueta_1":"P62.1.1",
         "enunciado_1":"¿Cuál?",
         "instruccion":null,
         "url_imagen":null,
@@ -3291,8 +3291,8 @@
         "cantidad_variables":1.0,
         "indice_pregunta_bis":156,
         "num_seccion_bis":7,
-        "dataviz_display":1,
-        "dataviz_chart_type":"column",
+        "dataviz_display":0,
+        "dataviz_chart_type":null,
         "dataviz_order_type":null,
         "dataviz_palette":null
     },
@@ -3304,7 +3304,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P62.2",
-        "etiqueta.1":"P62.2",
+        "etiqueta_1":"P62.2",
         "enunciado_1":"Si la repuesta anterior es NO: ¿Por qué?",
         "instruccion":"Si la repuesta anterior es NO",
         "url_imagen":null,
@@ -3313,9 +3313,9 @@
         "indice_pregunta_bis":157,
         "num_seccion_bis":7,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":7,
@@ -3325,7 +3325,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P63",
-        "etiqueta.1":"P63",
+        "etiqueta_1":"P63",
         "enunciado_1":"¿Cuál de las siguientes acciones considera que es la más importante para proteger el patrimonio material de Bogotá (Bienes inmuebles, monumentos en espacio público, espacios públicos)?",
         "instruccion":null,
         "url_imagen":null,
@@ -3334,9 +3334,9 @@
         "indice_pregunta_bis":158,
         "num_seccion_bis":7,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":7,
@@ -3346,7 +3346,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P63.1",
-        "etiqueta.1":"P63.1",
+        "etiqueta_1":"P63.1",
         "enunciado_1":"¿Cuál?",
         "instruccion":null,
         "url_imagen":null,
@@ -3354,10 +3354,10 @@
         "cantidad_variables":null,
         "indice_pregunta_bis":159,
         "num_seccion_bis":7,
-        "dataviz_display":1,
+        "dataviz_display":0,
         "dataviz_chart_type":null,
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":7,
@@ -3367,7 +3367,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P64",
-        "etiqueta.1":"P64",
+        "etiqueta_1":"P64",
         "enunciado_1":"¿Cuál de las siguientes acciones considera que es la más importante para cuidar el patrimonio vivo de Bogotá (Artesanías, cocina y fiestas y carnavales)?",
         "instruccion":null,
         "url_imagen":null,
@@ -3376,9 +3376,9 @@
         "indice_pregunta_bis":160,
         "num_seccion_bis":7,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":7,
@@ -3388,7 +3388,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P65",
-        "etiqueta.1":"P65",
+        "etiqueta_1":"P65",
         "enunciado_1":"¿Cuál de las siguientes acciones considera que es la más importante para conservar el patrimonio natural de Bogotá?",
         "instruccion":null,
         "url_imagen":null,
@@ -3397,9 +3397,9 @@
         "indice_pregunta_bis":161,
         "num_seccion_bis":7,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":7,
@@ -3409,7 +3409,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P65.1",
-        "etiqueta.1":"P65.1",
+        "etiqueta_1":"P65.1",
         "enunciado_1":"¿Cuál ?",
         "instruccion":null,
         "url_imagen":null,
@@ -3417,10 +3417,10 @@
         "cantidad_variables":null,
         "indice_pregunta_bis":162,
         "num_seccion_bis":7,
-        "dataviz_display":1,
+        "dataviz_display":0,
         "dataviz_chart_type":null,
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":7,
@@ -3430,7 +3430,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P66",
-        "etiqueta.1":"P66",
+        "etiqueta_1":"P66",
         "enunciado_1":"¿Cuáles de los siguientes actores o instituciones adelantan iniciativas de fomento y cuidado del patrimonio cultural\nen su localidad?",
         "instruccion":null,
         "url_imagen":null,
@@ -3440,8 +3440,8 @@
         "num_seccion_bis":7,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":7,
@@ -3451,7 +3451,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P66.1",
-        "etiqueta.1":"P66.1",
+        "etiqueta_1":"P66.1",
         "enunciado_1":"Cuál?",
         "instruccion":null,
         "url_imagen":null,
@@ -3459,10 +3459,10 @@
         "cantidad_variables":null,
         "indice_pregunta_bis":164,
         "num_seccion_bis":7,
-        "dataviz_display":1,
+        "dataviz_display":0,
         "dataviz_chart_type":null,
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":7,
@@ -3472,7 +3472,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P67",
-        "etiqueta.1":"P67",
+        "etiqueta_1":"P67",
         "enunciado_1":"Para usted los esfuerzos que se hacen desde el gobierno para proteger y cuidar el patrimonio, son:",
         "instruccion":null,
         "url_imagen":null,
@@ -3481,9 +3481,9 @@
         "indice_pregunta_bis":165,
         "num_seccion_bis":7,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":7,
@@ -3493,7 +3493,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P68",
-        "etiqueta.1":"P68",
+        "etiqueta_1":"P68",
         "enunciado_1":"De los siguientes restos arqueológicos, cuáles considera usted que tienen más valor patrimonial",
         "instruccion":null,
         "url_imagen":null,
@@ -3503,8 +3503,8 @@
         "num_seccion_bis":7,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":7,
@@ -3514,7 +3514,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P69",
-        "etiqueta.1":"P69",
+        "etiqueta_1":"P69",
         "enunciado_1":"Si usted encuentra algún objeto que puede ser material arqueológico (cerámicas, restos óseos, utensilios, herramientas), usted…",
         "instruccion":null,
         "url_imagen":null,
@@ -3523,9 +3523,9 @@
         "indice_pregunta_bis":167,
         "num_seccion_bis":7,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":7,
@@ -3535,7 +3535,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P70",
-        "etiqueta.1":"P70",
+        "etiqueta_1":"P70",
         "enunciado_1":"¿A dónde se debe comunicar cuando se encuentra un objeto que puede ser material arqueológico?",
         "instruccion":null,
         "url_imagen":null,
@@ -3545,8 +3545,8 @@
         "num_seccion_bis":7,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":7,
@@ -3556,7 +3556,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P71",
-        "etiqueta.1":"P71",
+        "etiqueta_1":"P71",
         "enunciado_1":"¿Qué tan de acuerdo está con que en una obra de construcción de vivienda, acueducto, puente, calle, etc. se asignen recursos públicos para la protección del patrimonio arqueológico",
         "instruccion":null,
         "url_imagen":null,
@@ -3565,9 +3565,9 @@
         "indice_pregunta_bis":169,
         "num_seccion_bis":7,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":7,
@@ -3577,7 +3577,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P72",
-        "etiqueta.1":"P72",
+        "etiqueta_1":"P72",
         "enunciado_1":"Sabe de sitios arqueológicos en Bogotá",
         "instruccion":null,
         "url_imagen":null,
@@ -3586,9 +3586,9 @@
         "indice_pregunta_bis":170,
         "num_seccion_bis":7,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":7,
@@ -3598,7 +3598,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P72.1",
-        "etiqueta.1":"P72.1",
+        "etiqueta_1":"P72.1",
         "enunciado_1":"¿Cuál?",
         "instruccion":null,
         "url_imagen":null,
@@ -3606,8 +3606,8 @@
         "cantidad_variables":1.0,
         "indice_pregunta_bis":171,
         "num_seccion_bis":7,
-        "dataviz_display":1,
-        "dataviz_chart_type":"column",
+        "dataviz_display":0,
+        "dataviz_chart_type":null,
         "dataviz_order_type":null,
         "dataviz_palette":null
     },
@@ -3619,7 +3619,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P73",
-        "etiqueta.1":"P73",
+        "etiqueta_1":"P73",
         "enunciado_1":"¿Por cuáles medios suele ver canales de televisión?",
         "instruccion":null,
         "url_imagen":null,
@@ -3629,8 +3629,8 @@
         "num_seccion_bis":8,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
@@ -3640,7 +3640,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P74",
-        "etiqueta.1":"P74",
+        "etiqueta_1":"P74",
         "enunciado_1":"¿Dígame cuánto tiempo en promedio dedica a ver canales televisión...?",
         "instruccion":null,
         "url_imagen":null,
@@ -3649,9 +3649,9 @@
         "indice_pregunta_bis":173,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":8,
@@ -3661,7 +3661,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P75",
-        "etiqueta.1":"P75",
+        "etiqueta_1":"P75",
         "enunciado_1":"¿Qué día dedica más tiempo a ver canales de televisión?",
         "instruccion":null,
         "url_imagen":null,
@@ -3670,9 +3670,9 @@
         "indice_pregunta_bis":174,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":8,
@@ -3682,7 +3682,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P76",
-        "etiqueta.1":"P76",
+        "etiqueta_1":"P76",
         "enunciado_1":"¿En qué jornada prefiere ver canales de televisión durante el día?",
         "instruccion":null,
         "url_imagen":null,
@@ -3691,9 +3691,9 @@
         "indice_pregunta_bis":175,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":8,
@@ -3703,7 +3703,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P77",
-        "etiqueta.1":"P77",
+        "etiqueta_1":"P77",
         "enunciado_1":"Si ve canales de televisión por internet o redes sociales, ¿a través de qué dispositivos lo hace?",
         "instruccion":null,
         "url_imagen":null,
@@ -3713,8 +3713,8 @@
         "num_seccion_bis":8,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
@@ -3724,7 +3724,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P77.1",
-        "etiqueta.1":"P77.1",
+        "etiqueta_1":"P77.1",
         "enunciado_1":"¿Cuál?",
         "instruccion":null,
         "url_imagen":null,
@@ -3732,8 +3732,8 @@
         "cantidad_variables":1.0,
         "indice_pregunta_bis":177,
         "num_seccion_bis":8,
-        "dataviz_display":1,
-        "dataviz_chart_type":"column",
+        "dataviz_display":0,
+        "dataviz_chart_type":null,
         "dataviz_order_type":null,
         "dataviz_palette":null
     },
@@ -3745,7 +3745,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P78",
-        "etiqueta.1":"P78",
+        "etiqueta_1":"P78",
         "enunciado_1":"Le interesa ver canales de televisión que se ocupen de Bogotá como tema central?",
         "instruccion":null,
         "url_imagen":null,
@@ -3754,9 +3754,9 @@
         "indice_pregunta_bis":178,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":8,
@@ -3766,7 +3766,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P79",
-        "etiqueta.1":"P79",
+        "etiqueta_1":"P79",
         "enunciado_1":"¿Qué canal de televisión considera usted que le da la mejor información sobre Bogotá?",
         "instruccion":null,
         "url_imagen":null,
@@ -3775,9 +3775,9 @@
         "indice_pregunta_bis":179,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":8,
@@ -3787,7 +3787,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P79.1",
-        "etiqueta.1":"P79.1",
+        "etiqueta_1":"P79.1",
         "enunciado_1":"Cual ?",
         "instruccion":null,
         "url_imagen":null,
@@ -3796,9 +3796,9 @@
         "indice_pregunta_bis":180,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":8,
@@ -3808,7 +3808,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P80",
-        "etiqueta.1":"P80",
+        "etiqueta_1":"P80",
         "enunciado_1":"¿Cuál es su principal motivación para ver canales de televisión que se ocupan de Bogotá como tema central?",
         "instruccion":null,
         "url_imagen":null,
@@ -3817,9 +3817,9 @@
         "indice_pregunta_bis":181,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":8,
@@ -3829,7 +3829,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P80.1",
-        "etiqueta.1":"P80.1",
+        "etiqueta_1":"P80.1",
         "enunciado_1":"¿Cuál?",
         "instruccion":null,
         "url_imagen":null,
@@ -3837,8 +3837,8 @@
         "cantidad_variables":1.0,
         "indice_pregunta_bis":182,
         "num_seccion_bis":8,
-        "dataviz_display":1,
-        "dataviz_chart_type":"column",
+        "dataviz_display":0,
+        "dataviz_chart_type":null,
         "dataviz_order_type":null,
         "dataviz_palette":null
     },
@@ -3850,7 +3850,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P81",
-        "etiqueta.1":"P81",
+        "etiqueta_1":"P81",
         "enunciado_1":"¿Por cuáles medios suele ver Canal Capital?",
         "instruccion":null,
         "url_imagen":null,
@@ -3860,8 +3860,8 @@
         "num_seccion_bis":8,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
@@ -3871,7 +3871,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P82",
-        "etiqueta.1":"P82",
+        "etiqueta_1":"P82",
         "enunciado_1":"¿Cuál es el contenido que más le gustaría ver en la señal de televisión de Canal Capital?",
         "instruccion":null,
         "url_imagen":null,
@@ -3881,8 +3881,8 @@
         "num_seccion_bis":8,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
@@ -3892,7 +3892,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P82.1",
-        "etiqueta.1":"P82.1",
+        "etiqueta_1":"P82.1",
         "enunciado_1":"¿Cuál?",
         "instruccion":null,
         "url_imagen":null,
@@ -3900,8 +3900,8 @@
         "cantidad_variables":1.0,
         "indice_pregunta_bis":185,
         "num_seccion_bis":8,
-        "dataviz_display":1,
-        "dataviz_chart_type":"column",
+        "dataviz_display":0,
+        "dataviz_chart_type":null,
         "dataviz_order_type":null,
         "dataviz_palette":null
     },
@@ -3913,7 +3913,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P83",
-        "etiqueta.1":"P83",
+        "etiqueta_1":"P83",
         "enunciado_1":"En los últimos 12 meses ¿Con que frecuencia sintonizó Canal Capital?",
         "instruccion":null,
         "url_imagen":null,
@@ -3922,9 +3922,9 @@
         "indice_pregunta_bis":186,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":8,
@@ -3934,7 +3934,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P84",
-        "etiqueta.1":"P84",
+        "etiqueta_1":"P84",
         "enunciado_1":"¿Sabe de la existencia de Canal Eureka?",
         "instruccion":null,
         "url_imagen":null,
@@ -3943,9 +3943,9 @@
         "indice_pregunta_bis":187,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":8,
@@ -3955,7 +3955,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P85",
-        "etiqueta.1":"P85",
+        "etiqueta_1":"P85",
         "enunciado_1":"¿Usted sigue alguna de las redes sociales de Canal Capital? Respuesta múltiple.",
         "instruccion":null,
         "url_imagen":null,
@@ -3965,8 +3965,8 @@
         "num_seccion_bis":8,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
@@ -3976,7 +3976,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P86",
-        "etiqueta.1":"P86",
+        "etiqueta_1":"P86",
         "enunciado_1":"¿Cuál es el contenido que más le gustaría ver en las redes sociales de Canal Capital?",
         "instruccion":null,
         "url_imagen":null,
@@ -3986,8 +3986,8 @@
         "num_seccion_bis":8,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":8,
@@ -3997,7 +3997,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P86.1",
-        "etiqueta.1":"P86.1",
+        "etiqueta_1":"P86.1",
         "enunciado_1":"¿Cuál?",
         "instruccion":null,
         "url_imagen":null,
@@ -4005,8 +4005,8 @@
         "cantidad_variables":1.0,
         "indice_pregunta_bis":190,
         "num_seccion_bis":8,
-        "dataviz_display":1,
-        "dataviz_chart_type":"column",
+        "dataviz_display":0,
+        "dataviz_chart_type":null,
         "dataviz_order_type":null,
         "dataviz_palette":null
     },
@@ -4018,7 +4018,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P87",
-        "etiqueta.1":"P87",
+        "etiqueta_1":"P87",
         "enunciado_1":"¿En los últimos doce meses usted vió alguna transmisión de Canal Capital a través de sus redes sociales? Por\nejemplo: Festivales al Parque, Festival Estereo Picnic, Informativo Ahora, Series o Programas",
         "instruccion":null,
         "url_imagen":null,
@@ -4027,9 +4027,9 @@
         "indice_pregunta_bis":191,
         "num_seccion_bis":8,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":9,
@@ -4039,7 +4039,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P88",
-        "etiqueta.1":"P88",
+        "etiqueta_1":"P88",
         "enunciado_1":"Dígame si está de acuerdo con las siguientes afirmaciones",
         "instruccion":null,
         "url_imagen":null,
@@ -4049,8 +4049,8 @@
         "num_seccion_bis":9,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
@@ -4060,7 +4060,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P88_1",
-        "etiqueta.1":"P88.1",
+        "etiqueta_1":"P88.1",
         "enunciado_1":"¿Qué emoción le genera realizar alguna práctica artística?",
         "instruccion":null,
         "url_imagen":null,
@@ -4070,8 +4070,8 @@
         "num_seccion_bis":9,
         "dataviz_display":1,
         "dataviz_chart_type":null,
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":9,
@@ -4081,7 +4081,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P89",
-        "etiqueta.1":"P89",
+        "etiqueta_1":"P89",
         "enunciado_1":"¿Qué tan feliz se siente usted cuando realiza o asiste a alguna actividad artística, cultural o creativa? ",
         "instruccion":null,
         "url_imagen":null,
@@ -4090,9 +4090,9 @@
         "indice_pregunta_bis":194,
         "num_seccion_bis":9,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":9,
@@ -4102,7 +4102,7 @@
         "descripcion":null,
         "rol":"Objetivo",
         "codigo":"P90",
-        "etiqueta.1":"P90",
+        "etiqueta_1":"P90",
         "enunciado_1":"¿Qué tan bien se siente con su vida en este momento?",
         "instruccion":null,
         "url_imagen":null,
@@ -4111,9 +4111,9 @@
         "indice_pregunta_bis":195,
         "num_seccion_bis":9,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":10,
@@ -4123,7 +4123,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"D1",
-        "etiqueta.1":"D1",
+        "etiqueta_1":"D1",
         "enunciado_1":"Sexo",
         "instruccion":null,
         "url_imagen":null,
@@ -4132,9 +4132,9 @@
         "indice_pregunta_bis":196,
         "num_seccion_bis":10,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":10,
@@ -4144,7 +4144,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"D2",
-        "etiqueta.1":"D2",
+        "etiqueta_1":"D2",
         "enunciado_1":"Género",
         "instruccion":null,
         "url_imagen":null,
@@ -4153,9 +4153,9 @@
         "indice_pregunta_bis":197,
         "num_seccion_bis":10,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":10,
@@ -4165,7 +4165,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"D3",
-        "etiqueta.1":"D3",
+        "etiqueta_1":"D3",
         "enunciado_1":"Edad (AÑOS CUMPLIDOS)",
         "instruccion":null,
         "url_imagen":null,
@@ -4174,9 +4174,9 @@
         "indice_pregunta_bis":198,
         "num_seccion_bis":10,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":10,
@@ -4186,7 +4186,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"D3_1",
-        "etiqueta.1":"D3.1",
+        "etiqueta_1":"D3.1",
         "enunciado_1":"Rango de edad",
         "instruccion":null,
         "url_imagen":null,
@@ -4195,9 +4195,9 @@
         "indice_pregunta_bis":199,
         "num_seccion_bis":10,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":10,
@@ -4207,7 +4207,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"D4",
-        "etiqueta.1":"D4",
+        "etiqueta_1":"D4",
         "enunciado_1":"Por favor dígame su lugar de nacimiento",
         "instruccion":null,
         "url_imagen":null,
@@ -4216,9 +4216,9 @@
         "indice_pregunta_bis":200,
         "num_seccion_bis":10,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":10,
@@ -4228,7 +4228,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"D5",
-        "etiqueta.1":"D5",
+        "etiqueta_1":"D5",
         "enunciado_1":"¿Desde hace cuántos años usted habita en esta ciudad?",
         "instruccion":"AÑOS",
         "url_imagen":null,
@@ -4237,9 +4237,9 @@
         "indice_pregunta_bis":201,
         "num_seccion_bis":10,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":10,
@@ -4249,7 +4249,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"D6",
-        "etiqueta.1":"D6",
+        "etiqueta_1":"D6",
         "enunciado_1":"¿Cuál fue el principal motivo para venir a Bogotá?",
         "instruccion":null,
         "url_imagen":null,
@@ -4258,9 +4258,9 @@
         "indice_pregunta_bis":202,
         "num_seccion_bis":10,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":10,
@@ -4270,7 +4270,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"D7",
-        "etiqueta.1":"D7",
+        "etiqueta_1":"D7",
         "enunciado_1":"¿Cuál es su estado civil?",
         "instruccion":null,
         "url_imagen":null,
@@ -4279,9 +4279,9 @@
         "indice_pregunta_bis":203,
         "num_seccion_bis":10,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":10,
@@ -4291,7 +4291,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"D8",
-        "etiqueta.1":"D8",
+        "etiqueta_1":"D8",
         "enunciado_1":"Usted actualmente se dedica a:",
         "instruccion":null,
         "url_imagen":null,
@@ -4300,9 +4300,9 @@
         "indice_pregunta_bis":204,
         "num_seccion_bis":10,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":10,
@@ -4312,7 +4312,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"D8.1",
-        "etiqueta.1":"D8.1",
+        "etiqueta_1":"D8.1",
         "enunciado_1":"¿Cuál?",
         "instruccion":null,
         "url_imagen":null,
@@ -4320,8 +4320,8 @@
         "cantidad_variables":1.0,
         "indice_pregunta_bis":205,
         "num_seccion_bis":10,
-        "dataviz_display":1,
-        "dataviz_chart_type":"column",
+        "dataviz_display":0,
+        "dataviz_chart_type":null,
         "dataviz_order_type":null,
         "dataviz_palette":null
     },
@@ -4333,7 +4333,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"D9",
-        "etiqueta.1":"D9",
+        "etiqueta_1":"D9",
         "enunciado_1":"¿Cuál fue el nivel educativo más alto alcanzado por usted?",
         "instruccion":null,
         "url_imagen":null,
@@ -4342,9 +4342,9 @@
         "indice_pregunta_bis":206,
         "num_seccion_bis":10,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":10,
@@ -4354,7 +4354,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"D10",
-        "etiqueta.1":"D10",
+        "etiqueta_1":"D10",
         "enunciado_1":"¿Con cuál de los siguientes grupos étnicos, raciales y\/o culturales se identifica usted?",
         "instruccion":null,
         "url_imagen":null,
@@ -4363,9 +4363,9 @@
         "indice_pregunta_bis":207,
         "num_seccion_bis":10,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":10,
@@ -4375,7 +4375,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"D11",
-        "etiqueta.1":"D11",
+        "etiqueta_1":"D11",
         "enunciado_1":"¿Usted tiene alguna limitación permanente para...?",
         "instruccion":null,
         "url_imagen":null,
@@ -4385,8 +4385,8 @@
         "num_seccion_bis":10,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":10,
@@ -4396,7 +4396,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"D11_1",
-        "etiqueta.1":"D11.1",
+        "etiqueta_1":"D11.1",
         "enunciado_1":"¿Cuál?",
         "instruccion":null,
         "url_imagen":null,
@@ -4404,8 +4404,8 @@
         "cantidad_variables":1.0,
         "indice_pregunta_bis":209,
         "num_seccion_bis":10,
-        "dataviz_display":1,
-        "dataviz_chart_type":"column",
+        "dataviz_display":0,
+        "dataviz_chart_type":null,
         "dataviz_order_type":null,
         "dataviz_palette":null
     },
@@ -4417,7 +4417,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"D12",
-        "etiqueta.1":"D12",
+        "etiqueta_1":"D12",
         "enunciado_1":"Por último, ¿estaría dispuesto(a) a responder una pregunta sobre su sexualidad? Si NO está dispuesto(a), termine\nla encuesta. Si dice estar dispuesto(a) a responder, por favor pásele el formulario al\/la encuestado(a) y que sea él\/ella\nquien marque las opciones libremente.",
         "instruccion":null,
         "url_imagen":null,
@@ -4426,9 +4426,9 @@
         "indice_pregunta_bis":210,
         "num_seccion_bis":10,
         "dataviz_display":1,
-        "dataviz_chart_type":"column",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_chart_type":"bar",
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"main"
     },
     {
         "num_seccion":10,
@@ -4438,7 +4438,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"D13",
-        "etiqueta.1":"D13",
+        "etiqueta_1":"D13",
         "enunciado_1":"¿Usted tiene hijos?",
         "instruccion":null,
         "url_imagen":null,
@@ -4448,8 +4448,8 @@
         "num_seccion_bis":10,
         "dataviz_display":1,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_order_type":"frecuency",
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":10,
@@ -4459,7 +4459,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"Factor",
-        "etiqueta.1":"Factor",
+        "etiqueta_1":"Factor",
         "enunciado_1":"Factor de expansión",
         "instruccion":null,
         "url_imagen":null,
@@ -4480,7 +4480,7 @@
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"Tel",
-        "etiqueta.1":"Tel",
+        "etiqueta_1":"Tel",
         "enunciado_1":"Teléfono del encuestado",
         "instruccion":null,
         "url_imagen":null,
