@@ -49,18 +49,6 @@ const goToSection = (numSection) => {
   })
 }
 
-const goToResumenGeneral = () => {
-  router.push({
-    path: route.path,
-    query: {
-      ...route.query,
-      tab: 'resultados',
-      num_seccion: 1,
-      num_pregunta: 22,
-    },
-  })
-}
-
 onMounted(() => {
   timer = setInterval(nextImage, 5000)
 })
@@ -124,8 +112,8 @@ const logoBogotaPath = computed(() => {
         <p class="hero-eyebrow">Encuesta Bienal de Culturas</p>
         <h1 class="hero-title">
           <span>Encuesta de</span>
-          <span>Lectura, Escritura y Oralidad</span>
-          <span>LEO</span>
+          <span>Prácticas Artísticas, Culturales,</span>
+          <span>Creativas y Patrimoniales</span>
           <span class="hero-year">{{ displayYear }}</span>
         </h1>
       </div>
@@ -134,9 +122,6 @@ const logoBogotaPath = computed(() => {
     <!-- Menú Inferior -->
     <div class="hero-menu">
       <div class="menu-grid">
-        <button class="btn-arrow" @click="goToResumenGeneral">
-          <img :src="getGeneralImagePath('flecha-flecha.svg')" alt="Flecha" />
-        </button>
         <button
           v-for="item in MENU_PRINCIPAL"
           :key="item.key"

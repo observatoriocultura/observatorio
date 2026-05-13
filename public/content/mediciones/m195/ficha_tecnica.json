@@ -1,57 +1,68 @@
 [
     {
-        "Num":1,
-        "Variable":"Nombre de la encuesta",
-        "Valor":"Encuesta de Prácticas artísticas, culturales, creativas y patrimoniales de 2025"
+        "num":1,
+        "variable":"Nombre de la encuesta",
+        "nivel":1,
+        "valor":"Encuesta de Prácticas artísticas, culturales, creativas y patrimoniales de 2025"
     },
     {
-        "Num":2,
-        "Variable":"Periodo de recolección",
-        "Valor":"Fue aplicada entre el"
+        "num":2,
+        "variable":"Periodo de recolección",
+        "nivel":1,
+        "valor":"Fue aplicada entre el"
     },
     {
-        "Num":3,
-        "Variable":"Periodo de referencia",
-        "Valor":"Toda la información recolectada hace referencia a comportamientos y percepciones del año 2025."
+        "num":3,
+        "variable":"Periodo de referencia",
+        "nivel":1,
+        "valor":"Toda la información recolectada hace referencia a comportamientos y percepciones del año 2025."
     },
     {
-        "Num":4,
-        "Variable":"Población objetivo",
-        "Valor":"La encuesta fue aplicada a personas de 13 años en adelante, que sean residentes habituales de Bogotá por lo menos durante los últimos 6 años. Se cubrió área urbana y rural."
+        "num":4,
+        "variable":"Población objetivo",
+        "nivel":1,
+        "valor":"La encuesta fue aplicada a personas de 13 años en adelante, que sean residentes habituales de Bogotá por lo menos durante los últimos 6 años. Se cubrió área urbana y rural."
     },
     {
-        "Num":5,
-        "Variable":"Diseño muestral",
-        "Valor":"Muestreo probabilístico, multietápico, estratificado."
+        "num":5,
+        "variable":"Diseño muestral",
+        "nivel":1,
+        "valor":"Muestreo probabilístico, multietápico, estratificado."
     },
     {
-        "Num":6,
-        "Variable":"Tamaño de muestra",
-        "Valor":"Se aplicaron en total 5.736 encuestas"
+        "num":6,
+        "variable":"Tamaño de muestra",
+        "nivel":1,
+        "valor":"Se aplicaron en total 5.736 encuestas"
     },
     {
-        "Num":7,
-        "Variable":"Confiabilidad",
-        "Valor":"La encuesta cuenta con una confiabilidad del 95%"
+        "num":7,
+        "variable":"Confiabilidad",
+        "nivel":1,
+        "valor":"La encuesta cuenta con una confiabilidad del 95%"
     },
     {
-        "Num":8,
-        "Variable":"Error",
-        "Valor":"El margen de error calculado para Bogotá es de 4%. El margen de error a nivel de localidad varía entre 3,5% y 4,9% dependiendo la localidad."
+        "num":8,
+        "variable":"Error",
+        "nivel":1,
+        "valor":"El margen de error calculado para Bogotá es de 4%. El margen de error a nivel de localidad varía entre 3,5% y 4,9% dependiendo la localidad."
     },
     {
-        "Num":9,
-        "Variable":"Diseñada e implementada por",
-        "Valor":"Dirección Observatorio y Gestión del Conocimiento Cultural - Secretaría de Cultura, Recreación y Deporte."
+        "num":9,
+        "variable":"Diseñada e implementada por",
+        "nivel":1,
+        "valor":"Dirección Observatorio y Gestión del Conocimiento Cultural - Secretaría de Cultura, Recreación y Deporte."
     },
     {
-        "Num":10,
-        "Variable":"Análisis y visualización",
-        "Valor":"Equipo Secretaría de Cultura, Recreación y Deporte. Andrea García, Viviana Rodríguez, Gisela Castrillón, Mauricio Ojeda, Johana Mejía."
+        "num":10,
+        "variable":"Análisis y visualización",
+        "nivel":1,
+        "valor":"Equipo Secretaría de Cultura, Recreación y Deporte. Andrea García, Viviana Rodríguez, Gisela Castrillón, Mauricio Ojeda, Johana Mejía."
     },
     {
-        "Num":11,
-        "Variable":"Aplicada por",
-        "Valor":"Gloria Gallego Sigma Dos Internacional S.A.S."
+        "num":11,
+        "variable":"Aplicada por",
+        "nivel":1,
+        "valor":"Gloria Gallego Sigma Dos Internacional S.A.S."
     }
 ]

@@ -86,8 +86,8 @@ export const getPaletaColor = (tipo) => {
 export const MENU_PRINCIPAL = [
   {
     number: 1,
-    key: 'percepciones-generales',
-    title: 'Percepciones generales',
+    key: 'practicas-artisticas',
+    title: 'Prácticas artísticas, culturales y creativas',
     icon: 'leo-percepciones.svg',
     numSection: '3',
     color: '#2196F3',
@@ -99,30 +99,6 @@ export const MENU_PRINCIPAL = [
     icon: 'leo-lectura.svg',
     numSection: '4',
     color: '#FF9800',
-  },
-  {
-    number: 3,
-    key: 'escritura',
-    title: 'Hábitos de Escritura',
-    icon: 'leo-escritura.svg',
-    numSection: '5',
-    color: '#AB47BC',
-  },
-  {
-    number: 4,
-    key: 'oralidad',
-    title: 'Hábitos de Oralidad',
-    icon: 'leo-oralidad.svg',
-    numSection: '6',
-    color: '#FF4081',
-  },
-  {
-    number: 5,
-    key: 'espacios-leo',
-    title: 'Espacios de Lectura, Escritura y Oralidad',
-    icon: 'leo-espacios.svg',
-    numSection: '7',
-    color: '#00BCD4',
   },
 ]
 

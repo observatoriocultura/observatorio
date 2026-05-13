@@ -9,7 +9,7 @@ import AdvDocs from '../icc/AdvDocs.vue'
 import * as surveyConstants from './constants'
 
 const route = useRoute()
-const codigoMedicion = 'm196'
+const codigoMedicion = 'm195'
 const surveyInfo = ref(null)
 const loading = ref(true)
 const error = ref(null)

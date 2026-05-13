@@ -893,7 +893,7 @@ watch(contentSection, async (nuevaSeccion) => {
                   :categorias="categorias"
                 />
 
-                <!-- TIPO DE GRÁFICO column -->
+                <!-- TIPO DE GRÁFICO bar -->
                 <BarChart
                   v-else-if="preguntaSeleccionada.dataviz_chart_type === 'bar'"
                   :title="tituloConFiltro"
