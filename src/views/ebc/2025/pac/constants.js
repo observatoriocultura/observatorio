@@ -47,28 +47,30 @@ export const getNombreClase = (id) => {
  * 2026-03-29
  */
 export const PALETAS_COLOR = {
-  main: ['#0F52BA'],
+  main: ['#003F97'],
   category: [
-    '#0F52BA',
-    '#50C878',
-    '#E0115F',
+    '#003F97',
+    '#CAE3F9',
+    '#B61678',
+    '#438BE3',
     '#5D4294',
     '#FF9800',
     '#00BCD4',
     '#AB47BC',
     '#FF4081',
   ],
-  scale_asc_4: ['#94b5e7ff', '#6796dbff', '#316fccff', '#0F52BA'],
+  scale_asc_3: ['#bdd3f1', '#6093db', '#003F97'],
+  scale_asc_4: ['#bdd3f1', '#6796dbff', '#316fccff', '#003F97'],
   scale_desc_4: ['#0F52BA', '#316fccff', '#6796dbff', '#94b5e7ff'],
   scale_asc_5: ['#94b5e7ff', '#739cdcff', '#5283d1ff', '#316bc5ff', '#0f52baff'],
   scale_desc_5: ['#0f52baff', '#316bc5ff', '#5283d1ff', '#739cdcff', '#94b5e7ff'],
   boolean_asc_4: ['#E0115F', '#eb5790ff', '#9cc9ab', '#50c878'],
   boolean_desc_4: ['#50C878', '#9cc9ab', '#cf8b8bff', '#D32F2F'],
-  boolean_asc_2: ['#dfdbe4ff', '#50c878'],
+  boolean_asc_2: ['#dfdfdf', '#1CDEA2'],
   boolean_desc_2: ['#dfdbe4ff', '#e0115f'],
-  yes_no_asc: ['#003366', '#00AEEF'],
-  yes_no_desc: ['#654096', '#D9CBEA'],
-  yes_selection: ['#0F52BA', '#FAFAFA'],
+  yes_no_asc: ['#003366', '#CAE3F9'],
+  yes_no_desc: ['#CAE3F9', '#003366'],
+  yes_selection: ['#003F97', '#FAFAFA'],
 }
 
 /**
@@ -105,14 +107,4 @@ export const MENU_PRINCIPAL = [
 /**
  * Imágenes para el carrusel de la portada del tablero
  */
-export const IMAGES_CAROUSEL = [
-  'espacios-1.jpg',
-  'lectura-1.jpg',
-  'lectura-2.jpg',
-  'escritura-1.jpg',
-  'escritura-2.jpg',
-  'espacios-2.jpg',
-  'oralidad-1.jpg',
-  'oralidad-3.jpg',
-  'oralidad-2.jpg',
-]
+export const IMAGES_CAROUSEL = ['ensayo-2.jpg', 'cine-2.jpg', 'familia-1.jpg', 'planetario-1.jpg']
