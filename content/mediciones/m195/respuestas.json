@@ -344,7 +344,7 @@
         "indice_pregunta":50,
         "indice_variable":51,
         "respuesta":3,
-        "respuesta_v2":"Satisfecho\/a",
+        "respuesta_v2":"3. Satisfecho\/a",
         "respuesta_number":3.0,
         "suma_factor":3669854.8708063746,
         "cantidad_respuestas":2880
@@ -354,7 +354,7 @@
         "indice_pregunta":50,
         "indice_variable":51,
         "respuesta":2,
-        "respuesta_v2":"Poco satisfecho\/a",
+        "respuesta_v2":"2. Poco satisfecho\/a",
         "respuesta_number":2.0,
         "suma_factor":2095786.9912204389,
         "cantidad_respuestas":1803
@@ -364,7 +364,7 @@
         "indice_pregunta":50,
         "indice_variable":51,
         "respuesta":1,
-        "respuesta_v2":"Nada satisfecho\/a",
+        "respuesta_v2":"1. Nada satisfecho\/a",
         "respuesta_number":1.0,
         "suma_factor":830892.828646919,
         "cantidad_respuestas":608
@@ -374,7 +374,7 @@
         "indice_pregunta":50,
         "indice_variable":51,
         "respuesta":4,
-        "respuesta_v2":"Muy satisfecho\/a",
+        "respuesta_v2":"4. Muy satisfecho\/a",
         "respuesta_number":4.0,
         "suma_factor":559058.8105175684,
         "cantidad_respuestas":443
@@ -384,7 +384,7 @@
         "indice_pregunta":50,
         "indice_variable":52,
         "respuesta":3,
-        "respuesta_v2":"Satisfecho\/a",
+        "respuesta_v2":"3. Satisfecho\/a",
         "respuesta_number":3.0,
         "suma_factor":3473175.9810221838,
         "cantidad_respuestas":2802
@@ -394,7 +394,7 @@
         "indice_pregunta":50,
         "indice_variable":52,
         "respuesta":2,
-        "respuesta_v2":"Poco satisfecho\/a",
+        "respuesta_v2":"2. Poco satisfecho\/a",
         "respuesta_number":2.0,
         "suma_factor":2070931.8200891057,
         "cantidad_respuestas":1741
@@ -404,7 +404,7 @@
         "indice_pregunta":50,
         "indice_variable":52,
         "respuesta":1,
-        "respuesta_v2":"Nada satisfecho\/a",
+        "respuesta_v2":"1. Nada satisfecho\/a",
         "respuesta_number":1.0,
         "suma_factor":888308.0437703782,
         "cantidad_respuestas":626
@@ -414,7 +414,7 @@
         "indice_pregunta":50,
         "indice_variable":52,
         "respuesta":4,
-        "respuesta_v2":"Muy satisfecho\/a",
+        "respuesta_v2":"4. Muy satisfecho\/a",
         "respuesta_number":4.0,
         "suma_factor":723177.6563096329,
         "cantidad_respuestas":565
@@ -424,7 +424,7 @@
         "indice_pregunta":50,
         "indice_variable":53,
         "respuesta":3,
-        "respuesta_v2":"Satisfecho\/a",
+        "respuesta_v2":"3. Satisfecho\/a",
         "respuesta_number":3.0,
         "suma_factor":3323433.2999281003,
         "cantidad_respuestas":2683
@@ -434,7 +434,7 @@
         "indice_pregunta":50,
         "indice_variable":53,
         "respuesta":2,
-        "respuesta_v2":"Poco satisfecho\/a",
+        "respuesta_v2":"2. Poco satisfecho\/a",
         "respuesta_number":2.0,
         "suma_factor":2220372.4138348782,
         "cantidad_respuestas":1816
@@ -444,7 +444,7 @@
         "indice_pregunta":50,
         "indice_variable":53,
         "respuesta":4,
-        "respuesta_v2":"Muy satisfecho\/a",
+        "respuesta_v2":"4. Muy satisfecho\/a",
         "respuesta_number":4.0,
         "suma_factor":873719.8819299352,
         "cantidad_respuestas":695
@@ -454,7 +454,7 @@
         "indice_pregunta":50,
         "indice_variable":53,
         "respuesta":1,
-        "respuesta_v2":"Nada satisfecho\/a",
+        "respuesta_v2":"1. Nada satisfecho\/a",
         "respuesta_number":1.0,
         "suma_factor":738067.9054983869,
         "cantidad_respuestas":540
@@ -464,7 +464,7 @@
         "indice_pregunta":50,
         "indice_variable":54,
         "respuesta":3,
-        "respuesta_v2":"Satisfecho\/a",
+        "respuesta_v2":"3. Satisfecho\/a",
         "respuesta_number":3.0,
         "suma_factor":3273872.0923429951,
         "cantidad_respuestas":2650
@@ -474,7 +474,7 @@
         "indice_pregunta":50,
         "indice_variable":54,
         "respuesta":2,
-        "respuesta_v2":"Poco satisfecho\/a",
+        "respuesta_v2":"2. Poco satisfecho\/a",
         "respuesta_number":2.0,
         "suma_factor":2380608.618438473,
         "cantidad_respuestas":1922
@@ -484,7 +484,7 @@
         "indice_pregunta":50,
         "indice_variable":54,
         "respuesta":1,
-        "respuesta_v2":"Nada satisfecho\/a",
+        "respuesta_v2":"1. Nada satisfecho\/a",
         "respuesta_number":1.0,
         "suma_factor":761329.2629629162,
         "cantidad_respuestas":591
@@ -494,7 +494,7 @@
         "indice_pregunta":50,
         "indice_variable":54,
         "respuesta":4,
-        "respuesta_v2":"Muy satisfecho\/a",
+        "respuesta_v2":"4. Muy satisfecho\/a",
         "respuesta_number":4.0,
         "suma_factor":739783.5274469164,
         "cantidad_respuestas":571
@@ -504,7 +504,7 @@
         "indice_pregunta":50,
         "indice_variable":55,
         "respuesta":3,
-        "respuesta_v2":"Satisfecho\/a",
+        "respuesta_v2":"3. Satisfecho\/a",
         "respuesta_number":3.0,
         "suma_factor":3505449.6887087342,
         "cantidad_respuestas":2760
@@ -514,7 +514,7 @@
         "indice_pregunta":50,
         "indice_variable":55,
         "respuesta":2,
-        "respuesta_v2":"Poco satisfecho\/a",
+        "respuesta_v2":"2. Poco satisfecho\/a",
         "respuesta_number":2.0,
         "suma_factor":2299187.2080558091,
         "cantidad_respuestas":1925
@@ -524,7 +524,7 @@
         "indice_pregunta":50,
         "indice_variable":55,
         "respuesta":4,
-        "respuesta_v2":"Muy satisfecho\/a",
+        "respuesta_v2":"4. Muy satisfecho\/a",
         "respuesta_number":4.0,
         "suma_factor":679431.8005898924,
         "cantidad_respuestas":536
@@ -534,7 +534,7 @@
         "indice_pregunta":50,
         "indice_variable":55,
         "respuesta":1,
-        "respuesta_v2":"Nada satisfecho\/a",
+        "respuesta_v2":"1. Nada satisfecho\/a",
         "respuesta_number":1.0,
         "suma_factor":671524.8038368652,
         "cantidad_respuestas":513
@@ -544,7 +544,7 @@
         "indice_pregunta":50,
         "indice_variable":56,
         "respuesta":3,
-        "respuesta_v2":"Satisfecho\/a",
+        "respuesta_v2":"3. Satisfecho\/a",
         "respuesta_number":3.0,
         "suma_factor":3784213.0385452243,
         "cantidad_respuestas":2959
@@ -554,7 +554,7 @@
         "indice_pregunta":50,
         "indice_variable":56,
         "respuesta":2,
-        "respuesta_v2":"Poco satisfecho\/a",
+        "respuesta_v2":"2. Poco satisfecho\/a",
         "respuesta_number":2.0,
         "suma_factor":2157860.0598119833,
         "cantidad_respuestas":1801
@@ -564,7 +564,7 @@
         "indice_pregunta":50,
         "indice_variable":56,
         "respuesta":4,
-        "respuesta_v2":"Muy satisfecho\/a",
+        "respuesta_v2":"4. Muy satisfecho\/a",
         "respuesta_number":4.0,
         "suma_factor":722573.6592166692,
         "cantidad_respuestas":580
@@ -574,7 +574,7 @@
         "indice_pregunta":50,
         "indice_variable":56,
         "respuesta":1,
-        "respuesta_v2":"Nada satisfecho\/a",
+        "respuesta_v2":"1. Nada satisfecho\/a",
         "respuesta_number":1.0,
         "suma_factor":490946.7436174241,
         "cantidad_respuestas":394
@@ -3964,7 +3964,7 @@
         "indice_pregunta":76,
         "indice_variable":133,
         "respuesta":2,
-        "respuesta_v2":"Algunos días",
+        "respuesta_v2":"2. Algunos días",
         "respuesta_number":2.0,
         "suma_factor":3613657.9831118011,
         "cantidad_respuestas":2832
@@ -3974,7 +3974,7 @@
         "indice_pregunta":76,
         "indice_variable":133,
         "respuesta":1,
-        "respuesta_v2":"Todos los días",
+        "respuesta_v2":"3. Todos los días",
         "respuesta_number":1.0,
         "suma_factor":3096928.7623426165,
         "cantidad_respuestas":2499
@@ -3984,7 +3984,7 @@
         "indice_pregunta":76,
         "indice_variable":133,
         "respuesta":3,
-        "respuesta_v2":"Ningún día",
+        "respuesta_v2":"1. Ningún día",
         "respuesta_number":3.0,
         "suma_factor":445006.7557368832,
         "cantidad_respuestas":403
@@ -3994,7 +3994,7 @@
         "indice_pregunta":76,
         "indice_variable":134,
         "respuesta":2,
-        "respuesta_v2":"Algunos días",
+        "respuesta_v2":"2. Algunos días",
         "respuesta_number":2.0,
         "suma_factor":4546130.7479598522,
         "cantidad_respuestas":3528
@@ -4004,7 +4004,7 @@
         "indice_pregunta":76,
         "indice_variable":134,
         "respuesta":3,
-        "respuesta_v2":"Ningún día",
+        "respuesta_v2":"1. Ningún día",
         "respuesta_number":3.0,
         "suma_factor":2352484.7267870721,
         "cantidad_respuestas":1975
@@ -4014,7 +4014,7 @@
         "indice_pregunta":76,
         "indice_variable":134,
         "respuesta":1,
-        "respuesta_v2":"Todos los días",
+        "respuesta_v2":"3. Todos los días",
         "respuesta_number":1.0,
         "suma_factor":256978.0264443764,
         "cantidad_respuestas":231
@@ -4024,7 +4024,7 @@
         "indice_pregunta":76,
         "indice_variable":135,
         "respuesta":2,
-        "respuesta_v2":"Algunos días",
+        "respuesta_v2":"2. Algunos días",
         "respuesta_number":2.0,
         "suma_factor":4925516.1363228112,
         "cantidad_respuestas":3792
@@ -4034,7 +4034,7 @@
         "indice_pregunta":76,
         "indice_variable":135,
         "respuesta":3,
-        "respuesta_v2":"Ningún día",
+        "respuesta_v2":"1. Ningún día",
         "respuesta_number":3.0,
         "suma_factor":1233557.9437279454,
         "cantidad_respuestas":1123
@@ -4044,7 +4044,7 @@
         "indice_pregunta":76,
         "indice_variable":135,
         "respuesta":1,
-        "respuesta_v2":"Todos los días",
+        "respuesta_v2":"3. Todos los días",
         "respuesta_number":1.0,
         "suma_factor":996519.4211405443,
         "cantidad_respuestas":819
@@ -4054,7 +4054,7 @@
         "indice_pregunta":76,
         "indice_variable":136,
         "respuesta":2,
-        "respuesta_v2":"Algunos días",
+        "respuesta_v2":"2. Algunos días",
         "respuesta_number":2.0,
         "suma_factor":4258406.9102528924,
         "cantidad_respuestas":3336
@@ -4064,7 +4064,7 @@
         "indice_pregunta":76,
         "indice_variable":136,
         "respuesta":3,
-        "respuesta_v2":"Ningún día",
+        "respuesta_v2":"1. Ningún día",
         "respuesta_number":3.0,
         "suma_factor":1611046.4665604231,
         "cantidad_respuestas":1319
@@ -4074,7 +4074,7 @@
         "indice_pregunta":76,
         "indice_variable":136,
         "respuesta":1,
-        "respuesta_v2":"Todos los días",
+        "respuesta_v2":"3. Todos los días",
         "respuesta_number":1.0,
         "suma_factor":1286140.1243779853,
         "cantidad_respuestas":1079
@@ -4084,7 +4084,7 @@
         "indice_pregunta":76,
         "indice_variable":137,
         "respuesta":2,
-        "respuesta_v2":"Algunos días",
+        "respuesta_v2":"2. Algunos días",
         "respuesta_number":2.0,
         "suma_factor":3827231.6679996517,
         "cantidad_respuestas":2971
@@ -4094,7 +4094,7 @@
         "indice_pregunta":76,
         "indice_variable":137,
         "respuesta":3,
-        "respuesta_v2":"Ningún día",
+        "respuesta_v2":"1. Ningún día",
         "respuesta_number":3.0,
         "suma_factor":2139581.1864027958,
         "cantidad_respuestas":1766
@@ -4104,7 +4104,7 @@
         "indice_pregunta":76,
         "indice_variable":137,
         "respuesta":1,
-        "respuesta_v2":"Todos los días",
+        "respuesta_v2":"3. Todos los días",
         "respuesta_number":1.0,
         "suma_factor":1188780.6467888532,
         "cantidad_respuestas":997
@@ -4114,7 +4114,7 @@
         "indice_pregunta":76,
         "indice_variable":138,
         "respuesta":2,
-        "respuesta_v2":"Algunos días",
+        "respuesta_v2":"2. Algunos días",
         "respuesta_number":2.0,
         "suma_factor":3963311.9348708061,
         "cantidad_respuestas":3019
@@ -4124,7 +4124,7 @@
         "indice_pregunta":76,
         "indice_variable":138,
         "respuesta":1,
-        "respuesta_v2":"Todos los días",
+        "respuesta_v2":"3. Todos los días",
         "respuesta_number":1.0,
         "suma_factor":1787967.4180045673,
         "cantidad_respuestas":1628
@@ -4134,7 +4134,7 @@
         "indice_pregunta":76,
         "indice_variable":138,
         "respuesta":3,
-        "respuesta_v2":"Ningún día",
+        "respuesta_v2":"1. Ningún día",
         "respuesta_number":3.0,
         "suma_factor":1404314.1483159275,
         "cantidad_respuestas":1087
@@ -4144,7 +4144,7 @@
         "indice_pregunta":76,
         "indice_variable":139,
         "respuesta":3,
-        "respuesta_v2":"Ningún día",
+        "respuesta_v2":"1. Ningún día",
         "respuesta_number":3.0,
         "suma_factor":4072808.879558397,
         "cantidad_respuestas":3374
@@ -4154,7 +4154,7 @@
         "indice_pregunta":76,
         "indice_variable":139,
         "respuesta":2,
-        "respuesta_v2":"Algunos días",
+        "respuesta_v2":"2. Algunos días",
         "respuesta_number":2.0,
         "suma_factor":2562459.3812816315,
         "cantidad_respuestas":1993
@@ -4164,7 +4164,7 @@
         "indice_pregunta":76,
         "indice_variable":139,
         "respuesta":1,
-        "respuesta_v2":"Todos los días",
+        "respuesta_v2":"3. Todos los días",
         "respuesta_number":1.0,
         "suma_factor":520325.2403512724,
         "cantidad_respuestas":367
@@ -7954,7 +7954,7 @@
         "indice_pregunta":99,
         "indice_variable":230,
         "respuesta":3,
-        "respuesta_v2":"c. Mucho",
+        "respuesta_v2":"3. Mucho",
         "respuesta_number":3.0,
         "suma_factor":157161.2725908676,
         "cantidad_respuestas":124
@@ -7964,7 +7964,7 @@
         "indice_pregunta":99,
         "indice_variable":230,
         "respuesta":2,
-        "respuesta_v2":"b. Poco",
+        "respuesta_v2":"2. Poco",
         "respuesta_number":2.0,
         "suma_factor":58628.4710151581,
         "cantidad_respuestas":48
@@ -7974,7 +7974,7 @@
         "indice_pregunta":99,
         "indice_variable":230,
         "respuesta":1,
-        "respuesta_v2":"a. Nada",
+        "respuesta_v2":"1. Nada",
         "respuesta_number":1.0,
         "suma_factor":3894.2630961253,
         "cantidad_respuestas":5
@@ -7984,7 +7984,7 @@
         "indice_pregunta":99,
         "indice_variable":231,
         "respuesta":3,
-        "respuesta_v2":"c. Mucho",
+        "respuesta_v2":"3. Mucho",
         "respuesta_number":3.0,
         "suma_factor":155237.1729182715,
         "cantidad_respuestas":125
@@ -7994,7 +7994,7 @@
         "indice_pregunta":99,
         "indice_variable":231,
         "respuesta":2,
-        "respuesta_v2":"b. Poco",
+        "respuesta_v2":"2. Poco",
         "respuesta_number":2.0,
         "suma_factor":58847.2228477983,
         "cantidad_respuestas":45
@@ -8004,7 +8004,7 @@
         "indice_pregunta":99,
         "indice_variable":231,
         "respuesta":1,
-        "respuesta_v2":"a. Nada",
+        "respuesta_v2":"1. Nada",
         "respuesta_number":1.0,
         "suma_factor":5599.6109360812,
         "cantidad_respuestas":7
@@ -8014,7 +8014,7 @@
         "indice_pregunta":99,
         "indice_variable":232,
         "respuesta":3,
-        "respuesta_v2":"c. Mucho",
+        "respuesta_v2":"3. Mucho",
         "respuesta_number":3.0,
         "suma_factor":168550.1473300595,
         "cantidad_respuestas":133
@@ -8024,7 +8024,7 @@
         "indice_pregunta":99,
         "indice_variable":232,
         "respuesta":2,
-        "respuesta_v2":"b. Poco",
+        "respuesta_v2":"2. Poco",
         "respuesta_number":2.0,
         "suma_factor":49500.6300761412,
         "cantidad_respuestas":41
@@ -8034,7 +8034,7 @@
         "indice_pregunta":99,
         "indice_variable":232,
         "respuesta":1,
-        "respuesta_v2":"a. Nada",
+        "respuesta_v2":"1. Nada",
         "respuesta_number":1.0,
         "suma_factor":1633.2292959503,
         "cantidad_respuestas":3
@@ -8044,7 +8044,7 @@
         "indice_pregunta":99,
         "indice_variable":233,
         "respuesta":3,
-        "respuesta_v2":"c. Mucho",
+        "respuesta_v2":"3. Mucho",
         "respuesta_number":3.0,
         "suma_factor":161879.7850114259,
         "cantidad_respuestas":129
@@ -8054,7 +8054,7 @@
         "indice_pregunta":99,
         "indice_variable":233,
         "respuesta":2,
-        "respuesta_v2":"b. Poco",
+        "respuesta_v2":"2. Poco",
         "respuesta_number":2.0,
         "suma_factor":42827.6258931454,
         "cantidad_respuestas":33
@@ -8064,7 +8064,7 @@
         "indice_pregunta":99,
         "indice_variable":233,
         "respuesta":1,
-        "respuesta_v2":"a. Nada",
+        "respuesta_v2":"1. Nada",
         "respuesta_number":1.0,
         "suma_factor":14976.5957975797,
         "cantidad_respuestas":15
@@ -8074,7 +8074,7 @@
         "indice_pregunta":99,
         "indice_variable":234,
         "respuesta":3,
-        "respuesta_v2":"c. Mucho",
+        "respuesta_v2":"3. Mucho",
         "respuesta_number":3.0,
         "suma_factor":144303.6147037559,
         "cantidad_respuestas":118
@@ -8084,7 +8084,7 @@
         "indice_pregunta":99,
         "indice_variable":234,
         "respuesta":2,
-        "respuesta_v2":"b. Poco",
+        "respuesta_v2":"2. Poco",
         "respuesta_number":2.0,
         "suma_factor":74082.3483032864,
         "cantidad_respuestas":57
@@ -8094,7 +8094,7 @@
         "indice_pregunta":99,
         "indice_variable":234,
         "respuesta":1,
-        "respuesta_v2":"a. Nada",
+        "respuesta_v2":"1. Nada",
         "respuesta_number":1.0,
         "suma_factor":1298.0436951087,
         "cantidad_respuestas":2
@@ -8104,7 +8104,7 @@
         "indice_pregunta":99,
         "indice_variable":235,
         "respuesta":3,
-        "respuesta_v2":"c. Mucho",
+        "respuesta_v2":"3. Mucho",
         "respuesta_number":3.0,
         "suma_factor":153063.6154958227,
         "cantidad_respuestas":117
@@ -8114,7 +8114,7 @@
         "indice_pregunta":99,
         "indice_variable":235,
         "respuesta":2,
-        "respuesta_v2":"b. Poco",
+        "respuesta_v2":"2. Poco",
         "respuesta_number":2.0,
         "suma_factor":62800.1882597945,
         "cantidad_respuestas":54
@@ -8124,7 +8124,7 @@
         "indice_pregunta":99,
         "indice_variable":235,
         "respuesta":1,
-        "respuesta_v2":"a. Nada",
+        "respuesta_v2":"1. Nada",
         "respuesta_number":1.0,
         "suma_factor":3820.2029465337,
         "cantidad_respuestas":6
@@ -8134,7 +8134,7 @@
         "indice_pregunta":99,
         "indice_variable":236,
         "respuesta":3,
-        "respuesta_v2":"c. Mucho",
+        "respuesta_v2":"3. Mucho",
         "respuesta_number":3.0,
         "suma_factor":166598.2565195834,
         "cantidad_respuestas":130
@@ -8144,7 +8144,7 @@
         "indice_pregunta":99,
         "indice_variable":236,
         "respuesta":2,
-        "respuesta_v2":"b. Poco",
+        "respuesta_v2":"2. Poco",
         "respuesta_number":2.0,
         "suma_factor":44929.8557153408,
         "cantidad_respuestas":38
@@ -8154,7 +8154,7 @@
         "indice_pregunta":99,
         "indice_variable":236,
         "respuesta":1,
-        "respuesta_v2":"a. Nada",
+        "respuesta_v2":"1. Nada",
         "respuesta_number":1.0,
         "suma_factor":8155.8944672268,
         "cantidad_respuestas":9
@@ -8164,7 +8164,7 @@
         "indice_pregunta":99,
         "indice_variable":237,
         "respuesta":3,
-        "respuesta_v2":"c. Mucho",
+        "respuesta_v2":"3. Mucho",
         "respuesta_number":3.0,
         "suma_factor":145481.7005625474,
         "cantidad_respuestas":120
@@ -8174,7 +8174,7 @@
         "indice_pregunta":99,
         "indice_variable":237,
         "respuesta":2,
-        "respuesta_v2":"b. Poco",
+        "respuesta_v2":"2. Poco",
         "respuesta_number":2.0,
         "suma_factor":57346.159465212,
         "cantidad_respuestas":40
@@ -8184,7 +8184,7 @@
         "indice_pregunta":99,
         "indice_variable":237,
         "respuesta":1,
-        "respuesta_v2":"a. Nada",
+        "respuesta_v2":"1. Nada",
         "respuesta_number":1.0,
         "suma_factor":16856.1466743916,
         "cantidad_respuestas":17
@@ -8194,7 +8194,7 @@
         "indice_pregunta":99,
         "indice_variable":238,
         "respuesta":3,
-        "respuesta_v2":"c. Mucho",
+        "respuesta_v2":"3. Mucho",
         "respuesta_number":3.0,
         "suma_factor":160237.7968932719,
         "cantidad_respuestas":129
@@ -8204,7 +8204,7 @@
         "indice_pregunta":99,
         "indice_variable":238,
         "respuesta":2,
-        "respuesta_v2":"b. Poco",
+        "respuesta_v2":"2. Poco",
         "respuesta_number":2.0,
         "suma_factor":52904.5962864136,
         "cantidad_respuestas":41
@@ -8214,7 +8214,7 @@
         "indice_pregunta":99,
         "indice_variable":238,
         "respuesta":1,
-        "respuesta_v2":"a. Nada",
+        "respuesta_v2":"1. Nada",
         "respuesta_number":1.0,
         "suma_factor":6541.6135224655,
         "cantidad_respuestas":7
@@ -8224,7 +8224,7 @@
         "indice_pregunta":99,
         "indice_variable":239,
         "respuesta":3,
-        "respuesta_v2":"c. Mucho",
+        "respuesta_v2":"3. Mucho",
         "respuesta_number":3.0,
         "suma_factor":143257.1210054156,
         "cantidad_respuestas":119
@@ -8234,7 +8234,7 @@
         "indice_pregunta":99,
         "indice_variable":239,
         "respuesta":2,
-        "respuesta_v2":"b. Poco",
+        "respuesta_v2":"2. Poco",
         "respuesta_number":2.0,
         "suma_factor":61190.1789727542,
         "cantidad_respuestas":42
@@ -8244,7 +8244,7 @@
         "indice_pregunta":99,
         "indice_variable":239,
         "respuesta":1,
-        "respuesta_v2":"a. Nada",
+        "respuesta_v2":"1. Nada",
         "respuesta_number":1.0,
         "suma_factor":15236.7067239812,
         "cantidad_respuestas":16
@@ -8254,7 +8254,7 @@
         "indice_pregunta":99,
         "indice_variable":240,
         "respuesta":3,
-        "respuesta_v2":"c. Mucho",
+        "respuesta_v2":"3. Mucho",
         "respuesta_number":3.0,
         "suma_factor":151780.5059375243,
         "cantidad_respuestas":120
@@ -8264,7 +8264,7 @@
         "indice_pregunta":99,
         "indice_variable":240,
         "respuesta":2,
-        "respuesta_v2":"b. Poco",
+        "respuesta_v2":"2. Poco",
         "respuesta_number":2.0,
         "suma_factor":58786.8427897661,
         "cantidad_respuestas":45
@@ -8274,7 +8274,7 @@
         "indice_pregunta":99,
         "indice_variable":240,
         "respuesta":1,
-        "respuesta_v2":"a. Nada",
+        "respuesta_v2":"1. Nada",
         "respuesta_number":1.0,
         "suma_factor":9116.6579748605,
         "cantidad_respuestas":12
@@ -8284,7 +8284,7 @@
         "indice_pregunta":99,
         "indice_variable":241,
         "respuesta":3,
-        "respuesta_v2":"c. Mucho",
+        "respuesta_v2":"3. Mucho",
         "respuesta_number":3.0,
         "suma_factor":155757.2975777088,
         "cantidad_respuestas":118
@@ -8294,7 +8294,7 @@
         "indice_pregunta":99,
         "indice_variable":241,
         "respuesta":2,
-        "respuesta_v2":"b. Poco",
+        "respuesta_v2":"2. Poco",
         "respuesta_number":2.0,
         "suma_factor":55271.5521326788,
         "cantidad_respuestas":49
@@ -8304,7 +8304,7 @@
         "indice_pregunta":99,
         "indice_variable":241,
         "respuesta":1,
-        "respuesta_v2":"a. Nada",
+        "respuesta_v2":"1. Nada",
         "respuesta_number":1.0,
         "suma_factor":8655.1569917634,
         "cantidad_respuestas":10
@@ -8314,7 +8314,7 @@
         "indice_pregunta":99,
         "indice_variable":242,
         "respuesta":3,
-        "respuesta_v2":"c. Mucho",
+        "respuesta_v2":"3. Mucho",
         "respuesta_number":3.0,
         "suma_factor":158826.2052530182,
         "cantidad_respuestas":124
@@ -8324,7 +8324,7 @@
         "indice_pregunta":99,
         "indice_variable":242,
         "respuesta":2,
-        "respuesta_v2":"b. Poco",
+        "respuesta_v2":"2. Poco",
         "respuesta_number":2.0,
         "suma_factor":55042.529564081,
         "cantidad_respuestas":49
@@ -8334,7 +8334,7 @@
         "indice_pregunta":99,
         "indice_variable":242,
         "respuesta":1,
-        "respuesta_v2":"a. Nada",
+        "respuesta_v2":"1. Nada",
         "respuesta_number":1.0,
         "suma_factor":5815.2718850517,
         "cantidad_respuestas":4
@@ -8344,7 +8344,7 @@
         "indice_pregunta":99,
         "indice_variable":243,
         "respuesta":3,
-        "respuesta_v2":"c. Mucho",
+        "respuesta_v2":"3. Mucho",
         "respuesta_number":3.0,
         "suma_factor":160908.4035037333,
         "cantidad_respuestas":128
@@ -8354,7 +8354,7 @@
         "indice_pregunta":99,
         "indice_variable":243,
         "respuesta":2,
-        "respuesta_v2":"b. Poco",
+        "respuesta_v2":"2. Poco",
         "respuesta_number":2.0,
         "suma_factor":52548.962680782,
         "cantidad_respuestas":42
@@ -8364,7 +8364,7 @@
         "indice_pregunta":99,
         "indice_variable":243,
         "respuesta":1,
-        "respuesta_v2":"a. Nada",
+        "respuesta_v2":"1. Nada",
         "respuesta_number":1.0,
         "suma_factor":6226.6405176356,
         "cantidad_respuestas":7
@@ -8374,7 +8374,7 @@
         "indice_pregunta":100,
         "indice_variable":244,
         "respuesta":3,
-        "respuesta_v2":"c. Mucho",
+        "respuesta_v2":"3. Mucho",
         "respuesta_number":3.0,
         "suma_factor":122726.5191749617,
         "cantidad_respuestas":102
@@ -8384,7 +8384,7 @@
         "indice_pregunta":100,
         "indice_variable":244,
         "respuesta":4,
-        "respuesta_v2":"d. Totalmente",
+        "respuesta_v2":"4. Totalmente",
         "respuesta_number":4.0,
         "suma_factor":50150.9619734334,
         "cantidad_respuestas":32
@@ -8394,7 +8394,7 @@
         "indice_pregunta":100,
         "indice_variable":244,
         "respuesta":2,
-        "respuesta_v2":"b. Poco",
+        "respuesta_v2":"2. Poco",
         "respuesta_number":2.0,
         "suma_factor":37011.9684647518,
         "cantidad_respuestas":32
@@ -8404,7 +8404,7 @@
         "indice_pregunta":100,
         "indice_variable":244,
         "respuesta":1,
-        "respuesta_v2":"a. Nada",
+        "respuesta_v2":"1. Nada",
         "respuesta_number":1.0,
         "suma_factor":9794.557089004,
         "cantidad_respuestas":11
@@ -8414,7 +8414,7 @@
         "indice_pregunta":100,
         "indice_variable":245,
         "respuesta":3,
-        "respuesta_v2":"c. Mucho",
+        "respuesta_v2":"3. Mucho",
         "respuesta_number":3.0,
         "suma_factor":127452.3861000096,
         "cantidad_respuestas":99
@@ -8424,7 +8424,7 @@
         "indice_pregunta":100,
         "indice_variable":245,
         "respuesta":2,
-        "respuesta_v2":"b. Poco",
+        "respuesta_v2":"2. Poco",
         "respuesta_number":2.0,
         "suma_factor":58483.397440644,
         "cantidad_respuestas":48
@@ -8434,7 +8434,7 @@
         "indice_pregunta":100,
         "indice_variable":245,
         "respuesta":4,
-        "respuesta_v2":"d. Totalmente",
+        "respuesta_v2":"4. Totalmente",
         "respuesta_number":4.0,
         "suma_factor":32275.5352476175,
         "cantidad_respuestas":25
@@ -8444,7 +8444,7 @@
         "indice_pregunta":100,
         "indice_variable":245,
         "respuesta":1,
-        "respuesta_v2":"a. Nada",
+        "respuesta_v2":"1. Nada",
         "respuesta_number":1.0,
         "suma_factor":1472.6879138799,
         "cantidad_respuestas":5
@@ -8454,7 +8454,7 @@
         "indice_pregunta":100,
         "indice_variable":246,
         "respuesta":3,
-        "respuesta_v2":"c. Mucho",
+        "respuesta_v2":"3. Mucho",
         "respuesta_number":3.0,
         "suma_factor":123183.2690523852,
         "cantidad_respuestas":98
@@ -8464,7 +8464,7 @@
         "indice_pregunta":100,
         "indice_variable":246,
         "respuesta":2,
-        "respuesta_v2":"b. Poco",
+        "respuesta_v2":"2. Poco",
         "respuesta_number":2.0,
         "suma_factor":55583.5296328001,
         "cantidad_respuestas":41
@@ -8474,7 +8474,7 @@
         "indice_pregunta":100,
         "indice_variable":246,
         "respuesta":4,
-        "respuesta_v2":"d. Totalmente",
+        "respuesta_v2":"4. Totalmente",
         "respuesta_number":4.0,
         "suma_factor":39261.929658114,
         "cantidad_respuestas":33
@@ -8484,7 +8484,7 @@
         "indice_pregunta":100,
         "indice_variable":246,
         "respuesta":1,
-        "respuesta_v2":"a. Nada",
+        "respuesta_v2":"1. Nada",
         "respuesta_number":1.0,
         "suma_factor":1655.2783588517,
         "cantidad_respuestas":5
@@ -8494,7 +8494,7 @@
         "indice_pregunta":100,
         "indice_variable":247,
         "respuesta":3,
-        "respuesta_v2":"c. Mucho",
+        "respuesta_v2":"3. Mucho",
         "respuesta_number":3.0,
         "suma_factor":123125.2869291088,
         "cantidad_respuestas":103
@@ -8504,7 +8504,7 @@
         "indice_pregunta":100,
         "indice_variable":247,
         "respuesta":2,
-        "respuesta_v2":"b. Poco",
+        "respuesta_v2":"2. Poco",
         "respuesta_number":2.0,
         "suma_factor":52645.0425562684,
         "cantidad_respuestas":37
@@ -8514,7 +8514,7 @@
         "indice_pregunta":100,
         "indice_variable":247,
         "respuesta":4,
-        "respuesta_v2":"d. Totalmente",
+        "respuesta_v2":"4. Totalmente",
         "respuesta_number":4.0,
         "suma_factor":40066.0222604021,
         "cantidad_respuestas":31
@@ -8524,7 +8524,7 @@
         "indice_pregunta":100,
         "indice_variable":247,
         "respuesta":1,
-        "respuesta_v2":"a. Nada",
+        "respuesta_v2":"1. Nada",
         "respuesta_number":1.0,
         "suma_factor":3847.6549563716,
         "cantidad_respuestas":6
@@ -8554,7 +8554,7 @@
         "indice_pregunta":101,
         "indice_variable":248,
         "respuesta":1,
-        "respuesta_v2":"Es muy costoso no cuento con el dinero",
+        "respuesta_v2":"Es muy costoso, no cuento con el dinero",
         "respuesta_number":1.0,
         "suma_factor":600173.0864365017,
         "cantidad_respuestas":521
@@ -8974,7 +8974,7 @@
         "indice_pregunta":105,
         "indice_variable":257,
         "respuesta":2,
-        "respuesta_v2":"b. Poco",
+        "respuesta_v2":"2. Poco",
         "respuesta_number":2.0,
         "suma_factor":3354647.3975878358,
         "cantidad_respuestas":2668
@@ -8984,7 +8984,7 @@
         "indice_pregunta":105,
         "indice_variable":257,
         "respuesta":3,
-        "respuesta_v2":"c. Mucho",
+        "respuesta_v2":"3. Mucho",
         "respuesta_number":3.0,
         "suma_factor":2635298.8094104459,
         "cantidad_respuestas":2150
@@ -8994,7 +8994,7 @@
         "indice_pregunta":105,
         "indice_variable":257,
         "respuesta":1,
-        "respuesta_v2":"a. Nada",
+        "respuesta_v2":"1. Nada",
         "respuesta_number":1.0,
         "suma_factor":689643.9482740022,
         "cantidad_respuestas":536
@@ -9004,7 +9004,7 @@
         "indice_pregunta":105,
         "indice_variable":257,
         "respuesta":4,
-        "respuesta_v2":"d. Totalmente",
+        "respuesta_v2":"4. Totalmente",
         "respuesta_number":4.0,
         "suma_factor":476003.345919017,
         "cantidad_respuestas":380
@@ -9014,7 +9014,7 @@
         "indice_pregunta":105,
         "indice_variable":258,
         "respuesta":2,
-        "respuesta_v2":"b. Poco",
+        "respuesta_v2":"2. Poco",
         "respuesta_number":2.0,
         "suma_factor":3213023.7942746445,
         "cantidad_respuestas":2530
@@ -9024,7 +9024,7 @@
         "indice_pregunta":105,
         "indice_variable":258,
         "respuesta":3,
-        "respuesta_v2":"c. Mucho",
+        "respuesta_v2":"3. Mucho",
         "respuesta_number":3.0,
         "suma_factor":2668031.4570342172,
         "cantidad_respuestas":2186
@@ -9034,7 +9034,7 @@
         "indice_pregunta":105,
         "indice_variable":258,
         "respuesta":1,
-        "respuesta_v2":"a. Nada",
+        "respuesta_v2":"1. Nada",
         "respuesta_number":1.0,
         "suma_factor":659212.8020498938,
         "cantidad_respuestas":506
@@ -9044,7 +9044,7 @@
         "indice_pregunta":105,
         "indice_variable":258,
         "respuesta":4,
-        "respuesta_v2":"d. Totalmente",
+        "respuesta_v2":"4. Totalmente",
         "respuesta_number":4.0,
         "suma_factor":615325.4478325454,
         "cantidad_respuestas":512
@@ -9054,7 +9054,7 @@
         "indice_pregunta":105,
         "indice_variable":259,
         "respuesta":2,
-        "respuesta_v2":"b. Poco",
+        "respuesta_v2":"2. Poco",
         "respuesta_number":2.0,
         "suma_factor":3068775.1376611614,
         "cantidad_respuestas":2392
@@ -9064,7 +9064,7 @@
         "indice_pregunta":105,
         "indice_variable":259,
         "respuesta":3,
-        "respuesta_v2":"c. Mucho",
+        "respuesta_v2":"3. Mucho",
         "respuesta_number":3.0,
         "suma_factor":2830664.312377186,
         "cantidad_respuestas":2325
@@ -9074,7 +9074,7 @@
         "indice_pregunta":105,
         "indice_variable":259,
         "respuesta":1,
-        "respuesta_v2":"a. Nada",
+        "respuesta_v2":"1. Nada",
         "respuesta_number":1.0,
         "suma_factor":656066.3159750198,
         "cantidad_respuestas":532
@@ -9084,7 +9084,7 @@
         "indice_pregunta":105,
         "indice_variable":259,
         "respuesta":4,
-        "respuesta_v2":"d. Totalmente",
+        "respuesta_v2":"4. Totalmente",
         "respuesta_number":4.0,
         "suma_factor":600087.7351779335,
         "cantidad_respuestas":485
@@ -9094,7 +9094,7 @@
         "indice_pregunta":105,
         "indice_variable":260,
         "respuesta":2,
-        "respuesta_v2":"b. Poco",
+        "respuesta_v2":"2. Poco",
         "respuesta_number":2.0,
         "suma_factor":3045669.8067566324,
         "cantidad_respuestas":2404
@@ -9104,7 +9104,7 @@
         "indice_pregunta":105,
         "indice_variable":260,
         "respuesta":3,
-        "respuesta_v2":"c. Mucho",
+        "respuesta_v2":"3. Mucho",
         "respuesta_number":3.0,
         "suma_factor":2844731.126315516,
         "cantidad_respuestas":2336
@@ -9114,7 +9114,7 @@
         "indice_pregunta":105,
         "indice_variable":260,
         "respuesta":4,
-        "respuesta_v2":"d. Totalmente",
+        "respuesta_v2":"4. Totalmente",
         "respuesta_number":4.0,
         "suma_factor":668811.5760812167,
         "cantidad_respuestas":506
@@ -9124,7 +9124,7 @@
         "indice_pregunta":105,
         "indice_variable":260,
         "respuesta":1,
-        "respuesta_v2":"a. Nada",
+        "respuesta_v2":"1. Nada",
         "respuesta_number":1.0,
         "suma_factor":596380.9920379358,
         "cantidad_respuestas":488
@@ -9134,7 +9134,7 @@
         "indice_pregunta":105,
         "indice_variable":261,
         "respuesta":2,
-        "respuesta_v2":"b. Poco",
+        "respuesta_v2":"2. Poco",
         "respuesta_number":2.0,
         "suma_factor":3128682.9624851677,
         "cantidad_respuestas":2441
@@ -9144,7 +9144,7 @@
         "indice_pregunta":105,
         "indice_variable":261,
         "respuesta":3,
-        "respuesta_v2":"c. Mucho",
+        "respuesta_v2":"3. Mucho",
         "respuesta_number":3.0,
         "suma_factor":2822283.8015982597,
         "cantidad_respuestas":2345
@@ -9154,7 +9154,7 @@
         "indice_pregunta":105,
         "indice_variable":261,
         "respuesta":4,
-        "respuesta_v2":"d. Totalmente",
+        "respuesta_v2":"4. Totalmente",
         "respuesta_number":4.0,
         "suma_factor":673295.8580092911,
         "cantidad_respuestas":519
@@ -9164,7 +9164,7 @@
         "indice_pregunta":105,
         "indice_variable":261,
         "respuesta":1,
-        "respuesta_v2":"a. Nada",
+        "respuesta_v2":"1. Nada",
         "respuesta_number":1.0,
         "suma_factor":531330.8790985824,
         "cantidad_respuestas":429
@@ -9174,7 +9174,7 @@
         "indice_pregunta":105,
         "indice_variable":262,
         "respuesta":2,
-        "respuesta_v2":"b. Poco",
+        "respuesta_v2":"2. Poco",
         "respuesta_number":2.0,
         "suma_factor":2994284.0689625386,
         "cantidad_respuestas":2349
@@ -9184,7 +9184,7 @@
         "indice_pregunta":105,
         "indice_variable":262,
         "respuesta":3,
-        "respuesta_v2":"c. Mucho",
+        "respuesta_v2":"3. Mucho",
         "respuesta_number":3.0,
         "suma_factor":2868506.9294821224,
         "cantidad_respuestas":2367
@@ -9194,7 +9194,7 @@
         "indice_pregunta":105,
         "indice_variable":262,
         "respuesta":4,
-        "respuesta_v2":"d. Totalmente",
+        "respuesta_v2":"4. Totalmente",
         "respuesta_number":4.0,
         "suma_factor":685027.3120629149,
         "cantidad_respuestas":531
@@ -9204,7 +9204,7 @@
         "indice_pregunta":105,
         "indice_variable":262,
         "respuesta":1,
-        "respuesta_v2":"a. Nada",
+        "respuesta_v2":"1. Nada",
         "respuesta_number":1.0,
         "suma_factor":607775.1906837253,
         "cantidad_respuestas":487
@@ -9214,7 +9214,7 @@
         "indice_pregunta":105,
         "indice_variable":263,
         "respuesta":3,
-        "respuesta_v2":"c. Mucho",
+        "respuesta_v2":"3. Mucho",
         "respuesta_number":3.0,
         "suma_factor":3176499.009193928,
         "cantidad_respuestas":2600
@@ -9224,7 +9224,7 @@
         "indice_pregunta":105,
         "indice_variable":263,
         "respuesta":2,
-        "respuesta_v2":"b. Poco",
+        "respuesta_v2":"2. Poco",
         "respuesta_number":2.0,
         "suma_factor":2735866.1304744328,
         "cantidad_respuestas":2166
@@ -9234,7 +9234,7 @@
         "indice_pregunta":105,
         "indice_variable":263,
         "respuesta":4,
-        "respuesta_v2":"d. Totalmente",
+        "respuesta_v2":"4. Totalmente",
         "respuesta_number":4.0,
         "suma_factor":668022.6649510257,
         "cantidad_respuestas":518
@@ -9244,7 +9244,7 @@
         "indice_pregunta":105,
         "indice_variable":263,
         "respuesta":1,
-        "respuesta_v2":"a. Nada",
+        "respuesta_v2":"1. Nada",
         "respuesta_number":1.0,
         "suma_factor":575205.6965719144,
         "cantidad_respuestas":450
@@ -9254,7 +9254,7 @@
         "indice_pregunta":105,
         "indice_variable":264,
         "respuesta":3,
-        "respuesta_v2":"c. Mucho",
+        "respuesta_v2":"3. Mucho",
         "respuesta_number":3.0,
         "suma_factor":3170105.5554999947,
         "cantidad_respuestas":2650
@@ -9264,7 +9264,7 @@
         "indice_pregunta":105,
         "indice_variable":264,
         "respuesta":2,
-        "respuesta_v2":"b. Poco",
+        "respuesta_v2":"2. Poco",
         "respuesta_number":2.0,
         "suma_factor":2747987.5321554258,
         "cantidad_respuestas":2142
@@ -9274,7 +9274,7 @@
         "indice_pregunta":105,
         "indice_variable":264,
         "respuesta":4,
-        "respuesta_v2":"d. Totalmente",
+        "respuesta_v2":"4. Totalmente",
         "respuesta_number":4.0,
         "suma_factor":725554.5986649194,
         "cantidad_respuestas":530
@@ -9284,7 +9284,7 @@
         "indice_pregunta":105,
         "indice_variable":264,
         "respuesta":1,
-        "respuesta_v2":"a. Nada",
+        "respuesta_v2":"1. Nada",
         "respuesta_number":1.0,
         "suma_factor":511945.8148709611,
         "cantidad_respuestas":412
@@ -9294,7 +9294,7 @@
         "indice_pregunta":105,
         "indice_variable":265,
         "respuesta":2,
-        "respuesta_v2":"b. Poco",
+        "respuesta_v2":"2. Poco",
         "respuesta_number":2.0,
         "suma_factor":3083743.7185961078,
         "cantidad_respuestas":2377
@@ -9304,7 +9304,7 @@
         "indice_pregunta":105,
         "indice_variable":265,
         "respuesta":3,
-        "respuesta_v2":"c. Mucho",
+        "respuesta_v2":"3. Mucho",
         "respuesta_number":3.0,
         "suma_factor":2706050.3264520434,
         "cantidad_respuestas":2320
@@ -9314,7 +9314,7 @@
         "indice_pregunta":105,
         "indice_variable":265,
         "respuesta":4,
-        "respuesta_v2":"d. Totalmente",
+        "respuesta_v2":"4. Totalmente",
         "respuesta_number":4.0,
         "suma_factor":718454.7616283055,
         "cantidad_respuestas":525
@@ -9324,7 +9324,7 @@
         "indice_pregunta":105,
         "indice_variable":265,
         "respuesta":1,
-        "respuesta_v2":"a. Nada",
+        "respuesta_v2":"1. Nada",
         "respuesta_number":1.0,
         "suma_factor":647344.6945148441,
         "cantidad_respuestas":512
@@ -9334,7 +9334,7 @@
         "indice_pregunta":105,
         "indice_variable":266,
         "respuesta":2,
-        "respuesta_v2":"b. Poco",
+        "respuesta_v2":"2. Poco",
         "respuesta_number":2.0,
         "suma_factor":3122187.665080124,
         "cantidad_respuestas":2461
@@ -9344,7 +9344,7 @@
         "indice_pregunta":105,
         "indice_variable":266,
         "respuesta":3,
-        "respuesta_v2":"c. Mucho",
+        "respuesta_v2":"3. Mucho",
         "respuesta_number":3.0,
         "suma_factor":2708621.072410645,
         "cantidad_respuestas":2249
@@ -9354,7 +9354,7 @@
         "indice_pregunta":105,
         "indice_variable":266,
         "respuesta":1,
-        "respuesta_v2":"a. Nada",
+        "respuesta_v2":"1. Nada",
         "respuesta_number":1.0,
         "suma_factor":662982.7815050983,
         "cantidad_respuestas":514
@@ -9364,7 +9364,7 @@
         "indice_pregunta":105,
         "indice_variable":266,
         "respuesta":4,
-        "respuesta_v2":"d. Totalmente",
+        "respuesta_v2":"4. Totalmente",
         "respuesta_number":4.0,
         "suma_factor":661801.9821954335,
         "cantidad_respuestas":510
@@ -9374,7 +9374,7 @@
         "indice_pregunta":106,
         "indice_variable":267,
         "respuesta":1,
-        "respuesta_v2":"Si los conoce",
+        "respuesta_v2":"a. Sí los conoce",
         "respuesta_number":1.0,
         "suma_factor":3599692.7379964353,
         "cantidad_respuestas":2788
@@ -9384,7 +9384,7 @@
         "indice_pregunta":106,
         "indice_variable":267,
         "respuesta":2,
-        "respuesta_v2":"No los conoce",
+        "respuesta_v2":"b. No los conoce",
         "respuesta_number":2.0,
         "suma_factor":3041365.2900694534,
         "cantidad_respuestas":2514
@@ -9394,7 +9394,7 @@
         "indice_pregunta":106,
         "indice_variable":267,
         "respuesta":3,
-        "respuesta_v2":"No hay",
+        "respuesta_v2":"c. No hay",
         "respuesta_number":3.0,
         "suma_factor":514535.4731254121,
         "cantidad_respuestas":432
@@ -9404,7 +9404,7 @@
         "indice_pregunta":106,
         "indice_variable":268,
         "respuesta":2,
-        "respuesta_v2":"No los conoce",
+        "respuesta_v2":"b. No los conoce",
         "respuesta_number":2.0,
         "suma_factor":4368746.760729026,
         "cantidad_respuestas":3436
@@ -9414,7 +9414,7 @@
         "indice_pregunta":106,
         "indice_variable":268,
         "respuesta":1,
-        "respuesta_v2":"Si los conoce",
+        "respuesta_v2":"a. Sí los conoce",
         "respuesta_number":1.0,
         "suma_factor":2171307.2847350538,
         "cantidad_respuestas":1786
@@ -9424,7 +9424,7 @@
         "indice_pregunta":106,
         "indice_variable":268,
         "respuesta":3,
-        "respuesta_v2":"No hay",
+        "respuesta_v2":"c. No hay",
         "respuesta_number":3.0,
         "suma_factor":615539.455727221,
         "cantidad_respuestas":512
@@ -9434,7 +9434,7 @@
         "indice_pregunta":106,
         "indice_variable":269,
         "respuesta":2,
-        "respuesta_v2":"No los conoce",
+        "respuesta_v2":"b. No los conoce",
         "respuesta_number":2.0,
         "suma_factor":4972734.9673618674,
         "cantidad_respuestas":4030
@@ -9444,7 +9444,7 @@
         "indice_pregunta":106,
         "indice_variable":269,
         "respuesta":1,
-        "respuesta_v2":"Si los conoce",
+        "respuesta_v2":"a. Sí los conoce",
         "respuesta_number":1.0,
         "suma_factor":1562215.7664474538,
         "cantidad_respuestas":1214
@@ -9454,7 +9454,7 @@
         "indice_pregunta":106,
         "indice_variable":269,
         "respuesta":3,
-        "respuesta_v2":"No hay",
+        "respuesta_v2":"c. No hay",
         "respuesta_number":3.0,
         "suma_factor":620642.7673819795,
         "cantidad_respuestas":490
@@ -9464,7 +9464,7 @@
         "indice_pregunta":106,
         "indice_variable":270,
         "respuesta":2,
-        "respuesta_v2":"No los conoce",
+        "respuesta_v2":"b. No los conoce",
         "respuesta_number":2.0,
         "suma_factor":5084991.9478539433,
         "cantidad_respuestas":4080
@@ -9474,7 +9474,7 @@
         "indice_pregunta":106,
         "indice_variable":270,
         "respuesta":1,
-        "respuesta_v2":"Si los conoce",
+        "respuesta_v2":"a. Sí los conoce",
         "respuesta_number":1.0,
         "suma_factor":1408761.9565145713,
         "cantidad_respuestas":1153
@@ -9484,7 +9484,7 @@
         "indice_pregunta":106,
         "indice_variable":270,
         "respuesta":3,
-        "respuesta_v2":"No hay",
+        "respuesta_v2":"c. No hay",
         "respuesta_number":3.0,
         "suma_factor":661839.5968227865,
         "cantidad_respuestas":501
@@ -9494,7 +9494,7 @@
         "indice_pregunta":106,
         "indice_variable":271,
         "respuesta":2,
-        "respuesta_v2":"No los conoce",
+        "respuesta_v2":"b. No los conoce",
         "respuesta_number":2.0,
         "suma_factor":3796859.4460955989,
         "cantidad_respuestas":3078
@@ -9504,7 +9504,7 @@
         "indice_pregunta":106,
         "indice_variable":271,
         "respuesta":1,
-        "respuesta_v2":"Si los conoce",
+        "respuesta_v2":"a. Sí los conoce",
         "respuesta_number":1.0,
         "suma_factor":2234946.9376045163,
         "cantidad_respuestas":1805
@@ -9514,7 +9514,7 @@
         "indice_pregunta":106,
         "indice_variable":271,
         "respuesta":3,
-        "respuesta_v2":"No hay",
+        "respuesta_v2":"c. No hay",
         "respuesta_number":3.0,
         "suma_factor":1123787.1174911859,
         "cantidad_respuestas":851
@@ -9524,7 +9524,7 @@
         "indice_pregunta":106,
         "indice_variable":272,
         "respuesta":2,
-        "respuesta_v2":"No los conoce",
+        "respuesta_v2":"b. No los conoce",
         "respuesta_number":2.0,
         "suma_factor":3909833.3471007808,
         "cantidad_respuestas":3167
@@ -9534,7 +9534,7 @@
         "indice_pregunta":106,
         "indice_variable":272,
         "respuesta":1,
-        "respuesta_v2":"Si los conoce",
+        "respuesta_v2":"a. Sí los conoce",
         "respuesta_number":1.0,
         "suma_factor":2274311.2342929905,
         "cantidad_respuestas":1838
@@ -9544,7 +9544,7 @@
         "indice_pregunta":106,
         "indice_variable":272,
         "respuesta":3,
-        "respuesta_v2":"No hay",
+        "respuesta_v2":"c. No hay",
         "respuesta_number":3.0,
         "suma_factor":971448.9197975296,
         "cantidad_respuestas":729
@@ -9554,7 +9554,7 @@
         "indice_pregunta":106,
         "indice_variable":273,
         "respuesta":2,
-        "respuesta_v2":"No los conoce",
+        "respuesta_v2":"b. No los conoce",
         "respuesta_number":2.0,
         "suma_factor":4858774.391017613,
         "cantidad_respuestas":3870
@@ -9564,7 +9564,7 @@
         "indice_pregunta":106,
         "indice_variable":273,
         "respuesta":1,
-        "respuesta_v2":"Si los conoce",
+        "respuesta_v2":"a. Sí los conoce",
         "respuesta_number":1.0,
         "suma_factor":1225322.1070901421,
         "cantidad_respuestas":1052
@@ -9574,7 +9574,7 @@
         "indice_pregunta":106,
         "indice_variable":273,
         "respuesta":3,
-        "respuesta_v2":"No hay",
+        "respuesta_v2":"c. No hay",
         "respuesta_number":3.0,
         "suma_factor":1071497.0030835459,
         "cantidad_respuestas":812
@@ -9584,7 +9584,7 @@
         "indice_pregunta":106,
         "indice_variable":274,
         "respuesta":2,
-        "respuesta_v2":"No los conoce",
+        "respuesta_v2":"b. No los conoce",
         "respuesta_number":2.0,
         "suma_factor":4763285.3476389507,
         "cantidad_respuestas":3768
@@ -9594,7 +9594,7 @@
         "indice_pregunta":106,
         "indice_variable":274,
         "respuesta":1,
-        "respuesta_v2":"Si los conoce",
+        "respuesta_v2":"a. Sí los conoce",
         "respuesta_number":1.0,
         "suma_factor":1515299.4519909327,
         "cantidad_respuestas":1301
@@ -9604,7 +9604,7 @@
         "indice_pregunta":106,
         "indice_variable":274,
         "respuesta":3,
-        "respuesta_v2":"No hay",
+        "respuesta_v2":"c. No hay",
         "respuesta_number":3.0,
         "suma_factor":877008.7015614174,
         "cantidad_respuestas":665
@@ -9614,7 +9614,7 @@
         "indice_pregunta":106,
         "indice_variable":275,
         "respuesta":1,
-        "respuesta_v2":"Si los conoce",
+        "respuesta_v2":"a. Sí los conoce",
         "respuesta_number":1.0,
         "suma_factor":3587481.8420828637,
         "cantidad_respuestas":2675
@@ -9624,7 +9624,7 @@
         "indice_pregunta":106,
         "indice_variable":275,
         "respuesta":2,
-        "respuesta_v2":"No los conoce",
+        "respuesta_v2":"b. No los conoce",
         "respuesta_number":2.0,
         "suma_factor":3046350.6709099635,
         "cantidad_respuestas":2615
@@ -9634,7 +9634,7 @@
         "indice_pregunta":106,
         "indice_variable":275,
         "respuesta":3,
-        "respuesta_v2":"No hay",
+        "respuesta_v2":"c. No hay",
         "respuesta_number":3.0,
         "suma_factor":521760.9881984734,
         "cantidad_respuestas":444
@@ -9644,7 +9644,7 @@
         "indice_pregunta":106,
         "indice_variable":276,
         "respuesta":2,
-        "respuesta_v2":"No los conoce",
+        "respuesta_v2":"b. No los conoce",
         "respuesta_number":2.0,
         "suma_factor":5088521.3272390822,
         "cantidad_respuestas":4051
@@ -9654,7 +9654,7 @@
         "indice_pregunta":106,
         "indice_variable":276,
         "respuesta":1,
-        "respuesta_v2":"Si los conoce",
+        "respuesta_v2":"a. Sí los conoce",
         "respuesta_number":1.0,
         "suma_factor":1126097.6506762649,
         "cantidad_respuestas":945
@@ -9664,7 +9664,7 @@
         "indice_pregunta":106,
         "indice_variable":276,
         "respuesta":3,
-        "respuesta_v2":"No hay",
+        "respuesta_v2":"c. No hay",
         "respuesta_number":3.0,
         "suma_factor":940974.5232759543,
         "cantidad_respuestas":738
@@ -9674,7 +9674,7 @@
         "indice_pregunta":106,
         "indice_variable":277,
         "respuesta":2,
-        "respuesta_v2":"No los conoce",
+        "respuesta_v2":"b. No los conoce",
         "respuesta_number":2.0,
         "suma_factor":4626532.5700418586,
         "cantidad_respuestas":3588
@@ -9684,7 +9684,7 @@
         "indice_pregunta":106,
         "indice_variable":277,
         "respuesta":1,
-        "respuesta_v2":"Si los conoce",
+        "respuesta_v2":"a. Sí los conoce",
         "respuesta_number":1.0,
         "suma_factor":1882973.7063545538,
         "cantidad_respuestas":1649
@@ -9694,7 +9694,7 @@
         "indice_pregunta":106,
         "indice_variable":277,
         "respuesta":3,
-        "respuesta_v2":"No hay",
+        "respuesta_v2":"c. No hay",
         "respuesta_number":3.0,
         "suma_factor":646087.2247948882,
         "cantidad_respuestas":497
@@ -9704,7 +9704,7 @@
         "indice_pregunta":106,
         "indice_variable":278,
         "respuesta":2,
-        "respuesta_v2":"No los conoce",
+        "respuesta_v2":"b. No los conoce",
         "respuesta_number":2.0,
         "suma_factor":3954212.2858130382,
         "cantidad_respuestas":3219
@@ -9714,7 +9714,7 @@
         "indice_pregunta":106,
         "indice_variable":278,
         "respuesta":1,
-        "respuesta_v2":"Si los conoce",
+        "respuesta_v2":"a. Sí los conoce",
         "respuesta_number":1.0,
         "suma_factor":2508036.2799579822,
         "cantidad_respuestas":1991
@@ -9724,7 +9724,7 @@
         "indice_pregunta":106,
         "indice_variable":278,
         "respuesta":3,
-        "respuesta_v2":"No hay",
+        "respuesta_v2":"c. No hay",
         "respuesta_number":3.0,
         "suma_factor":693344.9354202806,
         "cantidad_respuestas":524
@@ -9734,7 +9734,7 @@
         "indice_pregunta":106,
         "indice_variable":279,
         "respuesta":2,
-        "respuesta_v2":"No los conoce",
+        "respuesta_v2":"b. No los conoce",
         "respuesta_number":2.0,
         "suma_factor":5333942.5039978093,
         "cantidad_respuestas":4239
@@ -9744,7 +9744,7 @@
         "indice_pregunta":106,
         "indice_variable":279,
         "respuesta":1,
-        "respuesta_v2":"Si los conoce",
+        "respuesta_v2":"a. Sí los conoce",
         "respuesta_number":1.0,
         "suma_factor":1030403.4403655657,
         "cantidad_respuestas":891
@@ -9754,7 +9754,7 @@
         "indice_pregunta":106,
         "indice_variable":279,
         "respuesta":3,
-        "respuesta_v2":"No hay",
+        "respuesta_v2":"c. No hay",
         "respuesta_number":3.0,
         "suma_factor":791247.5568279262,
         "cantidad_respuestas":604
@@ -9764,7 +9764,7 @@
         "indice_pregunta":106,
         "indice_variable":280,
         "respuesta":2,
-        "respuesta_v2":"No los conoce",
+        "respuesta_v2":"b. No los conoce",
         "respuesta_number":2.0,
         "suma_factor":5437358.7550863232,
         "cantidad_respuestas":4293
@@ -9774,7 +9774,7 @@
         "indice_pregunta":106,
         "indice_variable":280,
         "respuesta":1,
-        "respuesta_v2":"Si los conoce",
+        "respuesta_v2":"a. Sí los conoce",
         "respuesta_number":1.0,
         "suma_factor":988176.7599506659,
         "cantidad_respuestas":897
@@ -9784,7 +9784,7 @@
         "indice_pregunta":106,
         "indice_variable":280,
         "respuesta":3,
-        "respuesta_v2":"No hay",
+        "respuesta_v2":"c. No hay",
         "respuesta_number":3.0,
         "suma_factor":730057.9861543115,
         "cantidad_respuestas":544
@@ -9794,7 +9794,7 @@
         "indice_pregunta":106,
         "indice_variable":281,
         "respuesta":2,
-        "respuesta_v2":"No los conoce",
+        "respuesta_v2":"b. No los conoce",
         "respuesta_number":2.0,
         "suma_factor":5630972.2558072358,
         "cantidad_respuestas":4476
@@ -9804,7 +9804,7 @@
         "indice_pregunta":106,
         "indice_variable":281,
         "respuesta":1,
-        "respuesta_v2":"Si los conoce",
+        "respuesta_v2":"a. Sí los conoce",
         "respuesta_number":1.0,
         "suma_factor":777465.4971022676,
         "cantidad_respuestas":704
@@ -9814,7 +9814,7 @@
         "indice_pregunta":106,
         "indice_variable":281,
         "respuesta":3,
-        "respuesta_v2":"No hay",
+        "respuesta_v2":"c. No hay",
         "respuesta_number":3.0,
         "suma_factor":747155.748281797,
         "cantidad_respuestas":554
@@ -9824,7 +9824,7 @@
         "indice_pregunta":106,
         "indice_variable":282,
         "respuesta":2,
-        "respuesta_v2":"No los conoce",
+        "respuesta_v2":"b. No los conoce",
         "respuesta_number":2.0,
         "suma_factor":5189015.3435906488,
         "cantidad_respuestas":4075
@@ -9834,7 +9834,7 @@
         "indice_pregunta":106,
         "indice_variable":282,
         "respuesta":1,
-        "respuesta_v2":"Si los conoce",
+        "respuesta_v2":"a. Sí los conoce",
         "respuesta_number":1.0,
         "suma_factor":1242859.7851309874,
         "cantidad_respuestas":1101
@@ -9844,7 +9844,7 @@
         "indice_pregunta":106,
         "indice_variable":282,
         "respuesta":3,
-        "respuesta_v2":"No hay",
+        "respuesta_v2":"c. No hay",
         "respuesta_number":3.0,
         "suma_factor":723718.3724696644,
         "cantidad_respuestas":558
@@ -9854,7 +9854,7 @@
         "indice_pregunta":106,
         "indice_variable":283,
         "respuesta":2,
-        "respuesta_v2":"No los conoce",
+        "respuesta_v2":"b. No los conoce",
         "respuesta_number":2.0,
         "suma_factor":5125998.8985225866,
         "cantidad_respuestas":4067
@@ -9864,7 +9864,7 @@
         "indice_pregunta":106,
         "indice_variable":283,
         "respuesta":1,
-        "respuesta_v2":"Si los conoce",
+        "respuesta_v2":"a. Sí los conoce",
         "respuesta_number":1.0,
         "suma_factor":1362507.4764691496,
         "cantidad_respuestas":1172
@@ -9874,7 +9874,7 @@
         "indice_pregunta":106,
         "indice_variable":283,
         "respuesta":3,
-        "respuesta_v2":"No hay",
+        "respuesta_v2":"c. No hay",
         "respuesta_number":3.0,
         "suma_factor":667087.126199565,
         "cantidad_respuestas":495
@@ -10564,7 +10564,7 @@
         "indice_pregunta":109,
         "indice_variable":318,
         "respuesta":2,
-        "respuesta_v2":"No",
+        "respuesta_v2":"b. No",
         "respuesta_number":2.0,
         "suma_factor":3666810.3976773131,
         "cantidad_respuestas":2969
@@ -10574,7 +10574,7 @@
         "indice_pregunta":109,
         "indice_variable":318,
         "respuesta":1,
-        "respuesta_v2":"Sí",
+        "respuesta_v2":"a. Sí",
         "respuesta_number":1.0,
         "suma_factor":3082835.4408527687,
         "cantidad_respuestas":2467
@@ -10584,7 +10584,7 @@
         "indice_pregunta":109,
         "indice_variable":318,
         "respuesta":3,
-        "respuesta_v2":"No hay",
+        "respuesta_v2":"c. No hay",
         "respuesta_number":3.0,
         "suma_factor":405947.6626612189,
         "cantidad_respuestas":298
@@ -10594,7 +10594,7 @@
         "indice_pregunta":109,
         "indice_variable":319,
         "respuesta":2,
-        "respuesta_v2":"No",
+        "respuesta_v2":"b. No",
         "respuesta_number":2.0,
         "suma_factor":5286002.3786671218,
         "cantidad_respuestas":4195
@@ -10604,7 +10604,7 @@
         "indice_pregunta":109,
         "indice_variable":319,
         "respuesta":1,
-        "respuesta_v2":"Sí",
+        "respuesta_v2":"a. Sí",
         "respuesta_number":1.0,
         "suma_factor":1648463.5605221451,
         "cantidad_respuestas":1364
@@ -10614,7 +10614,7 @@
         "indice_pregunta":109,
         "indice_variable":319,
         "respuesta":3,
-        "respuesta_v2":"No hay",
+        "respuesta_v2":"c. No hay",
         "respuesta_number":3.0,
         "suma_factor":221127.5620020336,
         "cantidad_respuestas":175
@@ -10624,7 +10624,7 @@
         "indice_pregunta":109,
         "indice_variable":320,
         "respuesta":2,
-        "respuesta_v2":"No",
+        "respuesta_v2":"b. No",
         "respuesta_number":2.0,
         "suma_factor":5791853.2823114349,
         "cantidad_respuestas":4691
@@ -10634,7 +10634,7 @@
         "indice_pregunta":109,
         "indice_variable":320,
         "respuesta":1,
-        "respuesta_v2":"Sí",
+        "respuesta_v2":"a. Sí",
         "respuesta_number":1.0,
         "suma_factor":719846.1578646434,
         "cantidad_respuestas":589
@@ -10644,7 +10644,7 @@
         "indice_pregunta":109,
         "indice_variable":320,
         "respuesta":3,
-        "respuesta_v2":"No hay",
+        "respuesta_v2":"c. No hay",
         "respuesta_number":3.0,
         "suma_factor":643894.061015223,
         "cantidad_respuestas":454
@@ -10654,7 +10654,7 @@
         "indice_pregunta":109,
         "indice_variable":321,
         "respuesta":2,
-        "respuesta_v2":"No",
+        "respuesta_v2":"b. No",
         "respuesta_number":2.0,
         "suma_factor":5690641.8256114163,
         "cantidad_respuestas":4633
@@ -10664,7 +10664,7 @@
         "indice_pregunta":109,
         "indice_variable":321,
         "respuesta":3,
-        "respuesta_v2":"No hay",
+        "respuesta_v2":"c. No hay",
         "respuesta_number":3.0,
         "suma_factor":777487.0313107243,
         "cantidad_respuestas":540
@@ -10674,7 +10674,7 @@
         "indice_pregunta":109,
         "indice_variable":321,
         "respuesta":1,
-        "respuesta_v2":"Sí",
+        "respuesta_v2":"a. Sí",
         "respuesta_number":1.0,
         "suma_factor":687464.6442691606,
         "cantidad_respuestas":561
@@ -10684,7 +10684,7 @@
         "indice_pregunta":109,
         "indice_variable":322,
         "respuesta":2,
-        "respuesta_v2":"No",
+        "respuesta_v2":"b. No",
         "respuesta_number":2.0,
         "suma_factor":5602662.2159397909,
         "cantidad_respuestas":4545
@@ -10694,7 +10694,7 @@
         "indice_pregunta":109,
         "indice_variable":322,
         "respuesta":3,
-        "respuesta_v2":"No hay",
+        "respuesta_v2":"c. No hay",
         "respuesta_number":3.0,
         "suma_factor":835244.8470899691,
         "cantidad_respuestas":557
@@ -10704,7 +10704,7 @@
         "indice_pregunta":109,
         "indice_variable":322,
         "respuesta":1,
-        "respuesta_v2":"Sí",
+        "respuesta_v2":"a. Sí",
         "respuesta_number":1.0,
         "suma_factor":717686.4381615409,
         "cantidad_respuestas":632
@@ -10714,7 +10714,7 @@
         "indice_pregunta":109,
         "indice_variable":323,
         "respuesta":2,
-        "respuesta_v2":"No",
+        "respuesta_v2":"b. No",
         "respuesta_number":2.0,
         "suma_factor":5501987.3957408201,
         "cantidad_respuestas":4423
@@ -10724,7 +10724,7 @@
         "indice_pregunta":109,
         "indice_variable":323,
         "respuesta":1,
-        "respuesta_v2":"Sí",
+        "respuesta_v2":"a. Sí",
         "respuesta_number":1.0,
         "suma_factor":838731.7764269431,
         "cantidad_respuestas":736
@@ -10734,7 +10734,7 @@
         "indice_pregunta":109,
         "indice_variable":323,
         "respuesta":3,
-        "respuesta_v2":"No hay",
+        "respuesta_v2":"c. No hay",
         "respuesta_number":3.0,
         "suma_factor":814874.3290235373,
         "cantidad_respuestas":575
@@ -10744,7 +10744,7 @@
         "indice_pregunta":109,
         "indice_variable":324,
         "respuesta":2,
-        "respuesta_v2":"No",
+        "respuesta_v2":"b. No",
         "respuesta_number":2.0,
         "suma_factor":5543377.3238165975,
         "cantidad_respuestas":4474
@@ -10754,7 +10754,7 @@
         "indice_pregunta":109,
         "indice_variable":324,
         "respuesta":3,
-        "respuesta_v2":"No hay",
+        "respuesta_v2":"c. No hay",
         "respuesta_number":3.0,
         "suma_factor":855326.9305865093,
         "cantidad_respuestas":610
@@ -10764,7 +10764,7 @@
         "indice_pregunta":109,
         "indice_variable":324,
         "respuesta":1,
-        "respuesta_v2":"Sí",
+        "respuesta_v2":"a. Sí",
         "respuesta_number":1.0,
         "suma_factor":756889.2467881944,
         "cantidad_respuestas":650
@@ -10774,7 +10774,7 @@
         "indice_pregunta":109,
         "indice_variable":325,
         "respuesta":1,
-        "respuesta_v2":"Sí",
+        "respuesta_v2":"a. Sí",
         "respuesta_number":1.0,
         "suma_factor":3494971.8591382904,
         "cantidad_respuestas":2761
@@ -10784,7 +10784,7 @@
         "indice_pregunta":109,
         "indice_variable":325,
         "respuesta":2,
-        "respuesta_v2":"No",
+        "respuesta_v2":"b. No",
         "respuesta_number":2.0,
         "suma_factor":3344940.8128593033,
         "cantidad_respuestas":2745
@@ -10794,7 +10794,7 @@
         "indice_pregunta":109,
         "indice_variable":325,
         "respuesta":3,
-        "respuesta_v2":"No hay",
+        "respuesta_v2":"c. No hay",
         "respuesta_number":3.0,
         "suma_factor":315680.8291937074,
         "cantidad_respuestas":228
@@ -10804,7 +10804,7 @@
         "indice_pregunta":109,
         "indice_variable":326,
         "respuesta":2,
-        "respuesta_v2":"No",
+        "respuesta_v2":"b. No",
         "respuesta_number":2.0,
         "suma_factor":5223005.2295053331,
         "cantidad_respuestas":4216
@@ -10814,7 +10814,7 @@
         "indice_pregunta":109,
         "indice_variable":326,
         "respuesta":1,
-        "respuesta_v2":"Sí",
+        "respuesta_v2":"a. Sí",
         "respuesta_number":1.0,
         "suma_factor":1307352.9479348289,
         "cantidad_respuestas":1071
@@ -10824,7 +10824,7 @@
         "indice_pregunta":109,
         "indice_variable":326,
         "respuesta":3,
-        "respuesta_v2":"No hay",
+        "respuesta_v2":"c. No hay",
         "respuesta_number":3.0,
         "suma_factor":625235.3237511386,
         "cantidad_respuestas":447
@@ -11114,7 +11114,7 @@
         "indice_pregunta":111,
         "indice_variable":341,
         "respuesta":3,
-        "respuesta_v2":"c. Satisfecho a",
+        "respuesta_v2":"3. Satisfecha\/o",
         "respuesta_number":3.0,
         "suma_factor":574610.2784414032,
         "cantidad_respuestas":514
@@ -11124,7 +11124,7 @@
         "indice_pregunta":111,
         "indice_variable":341,
         "respuesta":4,
-        "respuesta_v2":"d. Muy Satisfecho a",
+        "respuesta_v2":"4. Muy satisfecha\/o",
         "respuesta_number":4.0,
         "suma_factor":246014.1117028936,
         "cantidad_respuestas":158
@@ -11134,7 +11134,7 @@
         "indice_pregunta":111,
         "indice_variable":341,
         "respuesta":2,
-        "respuesta_v2":"b. Poco satisfecho a",
+        "respuesta_v2":"2. Poco satisfecha\/o",
         "respuesta_number":2.0,
         "suma_factor":151192.6429242388,
         "cantidad_respuestas":149
@@ -11144,7 +11144,7 @@
         "indice_pregunta":111,
         "indice_variable":341,
         "respuesta":1,
-        "respuesta_v2":"a. Nada satisfecho a",
+        "respuesta_v2":"1. Nada satisfecha\/o",
         "respuesta_number":1.0,
         "suma_factor":30151.5862246757,
         "cantidad_respuestas":32
@@ -11154,7 +11154,7 @@
         "indice_pregunta":111,
         "indice_variable":342,
         "respuesta":3,
-        "respuesta_v2":"c. Satisfecho a",
+        "respuesta_v2":"3. Satisfecha\/o",
         "respuesta_number":3.0,
         "suma_factor":570616.3047495419,
         "cantidad_respuestas":449
@@ -11164,7 +11164,7 @@
         "indice_pregunta":111,
         "indice_variable":342,
         "respuesta":4,
-        "respuesta_v2":"d. Muy Satisfecho a",
+        "respuesta_v2":"4. Muy satisfecha\/o",
         "respuesta_number":4.0,
         "suma_factor":174934.571450151,
         "cantidad_respuestas":153
@@ -11174,7 +11174,7 @@
         "indice_pregunta":111,
         "indice_variable":342,
         "respuesta":2,
-        "respuesta_v2":"b. Poco satisfecho a",
+        "respuesta_v2":"2. Poco satisfecha\/o",
         "respuesta_number":2.0,
         "suma_factor":129064.6602283979,
         "cantidad_respuestas":129
@@ -11184,7 +11184,7 @@
         "indice_pregunta":111,
         "indice_variable":342,
         "respuesta":1,
-        "respuesta_v2":"a. Nada satisfecho a",
+        "respuesta_v2":"1. Nada satisfecha\/o",
         "respuesta_number":1.0,
         "suma_factor":44801.5663773811,
         "cantidad_respuestas":34
@@ -11194,7 +11194,7 @@
         "indice_pregunta":111,
         "indice_variable":343,
         "respuesta":3,
-        "respuesta_v2":"c. Satisfecho a",
+        "respuesta_v2":"3. Satisfecha\/o",
         "respuesta_number":3.0,
         "suma_factor":356860.8023851112,
         "cantidad_respuestas":303
@@ -11204,7 +11204,7 @@
         "indice_pregunta":111,
         "indice_variable":343,
         "respuesta":4,
-        "respuesta_v2":"d. Muy Satisfecho a",
+        "respuesta_v2":"4. Muy satisfecha\/o",
         "respuesta_number":4.0,
         "suma_factor":147081.9001391218,
         "cantidad_respuestas":117
@@ -11214,7 +11214,7 @@
         "indice_pregunta":111,
         "indice_variable":343,
         "respuesta":2,
-        "respuesta_v2":"b. Poco satisfecho a",
+        "respuesta_v2":"2. Poco satisfecha\/o",
         "respuesta_number":2.0,
         "suma_factor":131557.2237789923,
         "cantidad_respuestas":128
@@ -11224,7 +11224,7 @@
         "indice_pregunta":111,
         "indice_variable":343,
         "respuesta":1,
-        "respuesta_v2":"a. Nada satisfecho a",
+        "respuesta_v2":"1. Nada satisfecha\/o",
         "respuesta_number":1.0,
         "suma_factor":27752.8372091016,
         "cantidad_respuestas":21
@@ -11234,7 +11234,7 @@
         "indice_pregunta":111,
         "indice_variable":344,
         "respuesta":3,
-        "respuesta_v2":"c. Satisfecho a",
+        "respuesta_v2":"3. Satisfecha\/o",
         "respuesta_number":3.0,
         "suma_factor":975873.109298502,
         "cantidad_respuestas":705
@@ -11244,7 +11244,7 @@
         "indice_pregunta":111,
         "indice_variable":344,
         "respuesta":4,
-        "respuesta_v2":"d. Muy Satisfecho a",
+        "respuesta_v2":"4. Muy satisfecha\/o",
         "respuesta_number":4.0,
         "suma_factor":350579.3248325626,
         "cantidad_respuestas":258
@@ -11254,7 +11254,7 @@
         "indice_pregunta":111,
         "indice_variable":344,
         "respuesta":2,
-        "respuesta_v2":"b. Poco satisfecho a",
+        "respuesta_v2":"2. Poco satisfecha\/o",
         "respuesta_number":2.0,
         "suma_factor":111032.9025623658,
         "cantidad_respuestas":96
@@ -11264,7 +11264,7 @@
         "indice_pregunta":111,
         "indice_variable":344,
         "respuesta":1,
-        "respuesta_v2":"a. Nada satisfecho a",
+        "respuesta_v2":"1. Nada satisfecha\/o",
         "respuesta_number":1.0,
         "suma_factor":18458.9583751872,
         "cantidad_respuestas":16
@@ -11274,7 +11274,7 @@
         "indice_pregunta":111,
         "indice_variable":345,
         "respuesta":3,
-        "respuesta_v2":"c. Satisfecho a",
+        "respuesta_v2":"3. Satisfecha\/o",
         "respuesta_number":3.0,
         "suma_factor":238781.8276263947,
         "cantidad_respuestas":183
@@ -11284,7 +11284,7 @@
         "indice_pregunta":111,
         "indice_variable":345,
         "respuesta":2,
-        "respuesta_v2":"b. Poco satisfecho a",
+        "respuesta_v2":"2. Poco satisfecha\/o",
         "respuesta_number":2.0,
         "suma_factor":115164.014873132,
         "cantidad_respuestas":79
@@ -11294,7 +11294,7 @@
         "indice_pregunta":111,
         "indice_variable":345,
         "respuesta":4,
-        "respuesta_v2":"d. Muy Satisfecho a",
+        "respuesta_v2":"4. Muy satisfecha\/o",
         "respuesta_number":4.0,
         "suma_factor":45289.6316592845,
         "cantidad_respuestas":38
@@ -11304,7 +11304,7 @@
         "indice_pregunta":111,
         "indice_variable":345,
         "respuesta":1,
-        "respuesta_v2":"a. Nada satisfecho a",
+        "respuesta_v2":"1. Nada satisfecha\/o",
         "respuesta_number":1.0,
         "suma_factor":7753.0759813075,
         "cantidad_respuestas":5
@@ -11314,7 +11314,7 @@
         "indice_pregunta":111,
         "indice_variable":346,
         "respuesta":3,
-        "respuesta_v2":"c. Satisfecho a",
+        "respuesta_v2":"3. Satisfecha\/o",
         "respuesta_number":3.0,
         "suma_factor":401265.2912465742,
         "cantidad_respuestas":305
@@ -11324,7 +11324,7 @@
         "indice_pregunta":111,
         "indice_variable":346,
         "respuesta":4,
-        "respuesta_v2":"d. Muy Satisfecho a",
+        "respuesta_v2":"4. Muy satisfecha\/o",
         "respuesta_number":4.0,
         "suma_factor":130844.1951488089,
         "cantidad_respuestas":112
@@ -11334,7 +11334,7 @@
         "indice_pregunta":111,
         "indice_variable":346,
         "respuesta":2,
-        "respuesta_v2":"b. Poco satisfecho a",
+        "respuesta_v2":"2. Poco satisfecha\/o",
         "respuesta_number":2.0,
         "suma_factor":87274.265252402,
         "cantidad_respuestas":59
@@ -11344,7 +11344,7 @@
         "indice_pregunta":111,
         "indice_variable":346,
         "respuesta":1,
-        "respuesta_v2":"a. Nada satisfecho a",
+        "respuesta_v2":"1. Nada satisfecha\/o",
         "respuesta_number":1.0,
         "suma_factor":16368.8877486521,
         "cantidad_respuestas":8
@@ -11354,7 +11354,7 @@
         "indice_pregunta":111,
         "indice_variable":347,
         "respuesta":3,
-        "respuesta_v2":"c. Satisfecho a",
+        "respuesta_v2":"3. Satisfecha\/o",
         "respuesta_number":3.0,
         "suma_factor":105600.9503768887,
         "cantidad_respuestas":79
@@ -11364,7 +11364,7 @@
         "indice_pregunta":111,
         "indice_variable":347,
         "respuesta":4,
-        "respuesta_v2":"d. Muy Satisfecho a",
+        "respuesta_v2":"4. Muy satisfecha\/o",
         "respuesta_number":4.0,
         "suma_factor":53641.5605407016,
         "cantidad_respuestas":46
@@ -11374,7 +11374,7 @@
         "indice_pregunta":111,
         "indice_variable":347,
         "respuesta":2,
-        "respuesta_v2":"b. Poco satisfecho a",
+        "respuesta_v2":"2. Poco satisfecha\/o",
         "respuesta_number":2.0,
         "suma_factor":28919.7235223361,
         "cantidad_respuestas":18
@@ -11384,7 +11384,7 @@
         "indice_pregunta":111,
         "indice_variable":347,
         "respuesta":1,
-        "respuesta_v2":"a. Nada satisfecho a",
+        "respuesta_v2":"1. Nada satisfecha\/o",
         "respuesta_number":1.0,
         "suma_factor":5953.9569754935,
         "cantidad_respuestas":6
@@ -11394,7 +11394,7 @@
         "indice_pregunta":111,
         "indice_variable":348,
         "respuesta":3,
-        "respuesta_v2":"c. Satisfecho a",
+        "respuesta_v2":"3. Satisfecha\/o",
         "respuesta_number":3.0,
         "suma_factor":324719.2722317485,
         "cantidad_respuestas":249
@@ -11404,7 +11404,7 @@
         "indice_pregunta":111,
         "indice_variable":348,
         "respuesta":4,
-        "respuesta_v2":"d. Muy Satisfecho a",
+        "respuesta_v2":"4. Muy satisfecha\/o",
         "respuesta_number":4.0,
         "suma_factor":100509.8298558194,
         "cantidad_respuestas":65
@@ -11414,7 +11414,7 @@
         "indice_pregunta":111,
         "indice_variable":348,
         "respuesta":2,
-        "respuesta_v2":"b. Poco satisfecho a",
+        "respuesta_v2":"2. Poco satisfecha\/o",
         "respuesta_number":2.0,
         "suma_factor":31058.2908771333,
         "cantidad_respuestas":20
@@ -11424,7 +11424,7 @@
         "indice_pregunta":111,
         "indice_variable":348,
         "respuesta":1,
-        "respuesta_v2":"a. Nada satisfecho a",
+        "respuesta_v2":"1. Nada satisfecha\/o",
         "respuesta_number":1.0,
         "suma_factor":4252.8724133515,
         "cantidad_respuestas":3
@@ -11434,7 +11434,7 @@
         "indice_pregunta":111,
         "indice_variable":349,
         "respuesta":3,
-        "respuesta_v2":"c. Satisfecho a",
+        "respuesta_v2":"3. Satisfecha\/o",
         "respuesta_number":3.0,
         "suma_factor":96229.9930316827,
         "cantidad_respuestas":76
@@ -11444,7 +11444,7 @@
         "indice_pregunta":111,
         "indice_variable":349,
         "respuesta":2,
-        "respuesta_v2":"b. Poco satisfecho a",
+        "respuesta_v2":"2. Poco satisfecha\/o",
         "respuesta_number":2.0,
         "suma_factor":37182.921052009,
         "cantidad_respuestas":30
@@ -11454,7 +11454,7 @@
         "indice_pregunta":111,
         "indice_variable":349,
         "respuesta":4,
-        "respuesta_v2":"d. Muy Satisfecho a",
+        "respuesta_v2":"4. Muy satisfecha\/o",
         "respuesta_number":4.0,
         "suma_factor":14054.8306002618,
         "cantidad_respuestas":21
@@ -11464,7 +11464,7 @@
         "indice_pregunta":111,
         "indice_variable":349,
         "respuesta":1,
-        "respuesta_v2":"a. Nada satisfecho a",
+        "respuesta_v2":"1. Nada satisfecha\/o",
         "respuesta_number":1.0,
         "suma_factor":1815.9435338413,
         "cantidad_respuestas":3
@@ -11474,7 +11474,7 @@
         "indice_pregunta":111,
         "indice_variable":350,
         "respuesta":3,
-        "respuesta_v2":"c. Satisfecho a",
+        "respuesta_v2":"3. Satisfecha\/o",
         "respuesta_number":3.0,
         "suma_factor":88892.0349066334,
         "cantidad_respuestas":67
@@ -11484,7 +11484,7 @@
         "indice_pregunta":111,
         "indice_variable":350,
         "respuesta":4,
-        "respuesta_v2":"d. Muy Satisfecho a",
+        "respuesta_v2":"4. Muy satisfecha\/o",
         "respuesta_number":4.0,
         "suma_factor":40085.2136943638,
         "cantidad_respuestas":31
@@ -11494,7 +11494,7 @@
         "indice_pregunta":111,
         "indice_variable":350,
         "respuesta":2,
-        "respuesta_v2":"b. Poco satisfecho a",
+        "respuesta_v2":"2. Poco satisfecha\/o",
         "respuesta_number":2.0,
         "suma_factor":21718.4735623102,
         "cantidad_respuestas":17
@@ -11504,7 +11504,7 @@
         "indice_pregunta":111,
         "indice_variable":350,
         "respuesta":1,
-        "respuesta_v2":"a. Nada satisfecho a",
+        "respuesta_v2":"1. Nada satisfecha\/o",
         "respuesta_number":1.0,
         "suma_factor":8531.6882869257,
         "cantidad_respuestas":5
@@ -11514,7 +11514,7 @@
         "indice_pregunta":111,
         "indice_variable":351,
         "respuesta":3,
-        "respuesta_v2":"c. Satisfecho a",
+        "respuesta_v2":"3. Satisfecha\/o",
         "respuesta_number":3.0,
         "suma_factor":296599.5507714183,
         "cantidad_respuestas":179
@@ -11524,7 +11524,7 @@
         "indice_pregunta":111,
         "indice_variable":351,
         "respuesta":4,
-        "respuesta_v2":"d. Muy Satisfecho a",
+        "respuesta_v2":"4. Muy satisfecha\/o",
         "respuesta_number":4.0,
         "suma_factor":139603.1005525481,
         "cantidad_respuestas":100
@@ -11534,7 +11534,7 @@
         "indice_pregunta":111,
         "indice_variable":351,
         "respuesta":2,
-        "respuesta_v2":"b. Poco satisfecho a",
+        "respuesta_v2":"2. Poco satisfecha\/o",
         "respuesta_number":2.0,
         "suma_factor":31189.1087201625,
         "cantidad_respuestas":29
@@ -11544,7 +11544,7 @@
         "indice_pregunta":111,
         "indice_variable":351,
         "respuesta":1,
-        "respuesta_v2":"a. Nada satisfecho a",
+        "respuesta_v2":"1. Nada satisfecha\/o",
         "respuesta_number":1.0,
         "suma_factor":1489.2337945486,
         "cantidad_respuestas":2
@@ -11554,7 +11554,7 @@
         "indice_pregunta":111,
         "indice_variable":352,
         "respuesta":3,
-        "respuesta_v2":"c. Satisfecho a",
+        "respuesta_v2":"3. Satisfecha\/o",
         "respuesta_number":3.0,
         "suma_factor":92850.9832425387,
         "cantidad_respuestas":68
@@ -11564,7 +11564,7 @@
         "indice_pregunta":111,
         "indice_variable":352,
         "respuesta":2,
-        "respuesta_v2":"b. Poco satisfecho a",
+        "respuesta_v2":"2. Poco satisfecha\/o",
         "respuesta_number":2.0,
         "suma_factor":35942.3035336308,
         "cantidad_respuestas":24
@@ -11574,7 +11574,7 @@
         "indice_pregunta":111,
         "indice_variable":352,
         "respuesta":4,
-        "respuesta_v2":"d. Muy Satisfecho a",
+        "respuesta_v2":"4. Muy satisfecha\/o",
         "respuesta_number":4.0,
         "suma_factor":33685.7495337284,
         "cantidad_respuestas":30
@@ -11584,7 +11584,7 @@
         "indice_pregunta":111,
         "indice_variable":352,
         "respuesta":1,
-        "respuesta_v2":"a. Nada satisfecho a",
+        "respuesta_v2":"1. Nada satisfecha\/o",
         "respuesta_number":1.0,
         "suma_factor":2640.1984795663,
         "cantidad_respuestas":5
@@ -11594,7 +11594,7 @@
         "indice_pregunta":111,
         "indice_variable":353,
         "respuesta":3,
-        "respuesta_v2":"c. Satisfecho a",
+        "respuesta_v2":"3. Satisfecha\/o",
         "respuesta_number":3.0,
         "suma_factor":102197.2889717301,
         "cantidad_respuestas":85
@@ -11604,7 +11604,7 @@
         "indice_pregunta":111,
         "indice_variable":353,
         "respuesta":4,
-        "respuesta_v2":"d. Muy Satisfecho a",
+        "respuesta_v2":"4. Muy satisfecha\/o",
         "respuesta_number":4.0,
         "suma_factor":72822.2846638759,
         "cantidad_respuestas":54
@@ -11614,7 +11614,7 @@
         "indice_pregunta":111,
         "indice_variable":353,
         "respuesta":2,
-        "respuesta_v2":"b. Poco satisfecho a",
+        "respuesta_v2":"2. Poco satisfecha\/o",
         "respuesta_number":2.0,
         "suma_factor":47069.5582493287,
         "cantidad_respuestas":36
@@ -11624,7 +11624,7 @@
         "indice_pregunta":111,
         "indice_variable":353,
         "respuesta":1,
-        "respuesta_v2":"a. Nada satisfecho a",
+        "respuesta_v2":"1. Nada satisfecha\/o",
         "respuesta_number":1.0,
         "suma_factor":12309.1295677211,
         "cantidad_respuestas":6
@@ -11634,7 +11634,7 @@
         "indice_pregunta":111,
         "indice_variable":354,
         "respuesta":3,
-        "respuesta_v2":"c. Satisfecho a",
+        "respuesta_v2":"3. Satisfecha\/o",
         "respuesta_number":3.0,
         "suma_factor":99640.1562613438,
         "cantidad_respuestas":80
@@ -11644,7 +11644,7 @@
         "indice_pregunta":111,
         "indice_variable":354,
         "respuesta":4,
-        "respuesta_v2":"d. Muy Satisfecho a",
+        "respuesta_v2":"4. Muy satisfecha\/o",
         "respuesta_number":4.0,
         "suma_factor":48508.7204059976,
         "cantidad_respuestas":27
@@ -11654,7 +11654,7 @@
         "indice_pregunta":111,
         "indice_variable":354,
         "respuesta":2,
-        "respuesta_v2":"b. Poco satisfecho a",
+        "respuesta_v2":"2. Poco satisfecha\/o",
         "respuesta_number":2.0,
         "suma_factor":46245.2515811546,
         "cantidad_respuestas":32
@@ -11664,7 +11664,7 @@
         "indice_pregunta":111,
         "indice_variable":354,
         "respuesta":1,
-        "respuesta_v2":"a. Nada satisfecho a",
+        "respuesta_v2":"1. Nada satisfecha\/o",
         "respuesta_number":1.0,
         "suma_factor":12879.4216964964,
         "cantidad_respuestas":8
@@ -11934,7 +11934,7 @@
         "indice_pregunta":113,
         "indice_variable":368,
         "respuesta":1,
-        "respuesta_v2":"Redes sociales oficiales de las entidades del Distrito facebook Instagram tik tok twitter",
+        "respuesta_v2":"Redes sociales oficiales de las entidades del Distrito facebook, Instagram, tik tok, X (antes twitter)",
         "respuesta_number":1.0,
         "suma_factor":1135021.0772597219,
         "cantidad_respuestas":847
@@ -11954,7 +11954,7 @@
         "indice_pregunta":113,
         "indice_variable":368,
         "respuesta":2,
-        "respuesta_v2":"Redes sociales de los artistas facebook Instagram tik tok twitter",
+        "respuesta_v2":"Redes sociales de los artistas: facebook, Instagram, tik tok, X (antes twitter)",
         "respuesta_number":2.0,
         "suma_factor":411622.949766049,
         "cantidad_respuestas":341
