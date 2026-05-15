@@ -1,8 +1,8 @@
 [
     {
-        "num_seccion":null,
+        "num_seccion":99,
         "indice_pregunta":0,
-        "num_seccion.1":1,
+        "num_seccion.1":99,
         "nombre":"Identificador de la persona encuestada",
         "descripcion":null,
         "rol":"Registro",
@@ -21,9 +21,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":1,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Sector",
         "descripcion":null,
         "rol":"Caracterización",
@@ -42,9 +42,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":2,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Seccion",
         "descripcion":null,
         "rol":"Caracterización",
@@ -63,9 +63,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":3,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Manzana",
         "descripcion":null,
         "rol":"Caracterización",
@@ -84,9 +84,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":4,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Clase",
         "descripcion":null,
         "rol":"Caracterización",
@@ -105,9 +105,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":5,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Direccion",
         "descripcion":null,
         "rol":"Caracterización",
@@ -126,9 +126,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":6,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Cx",
         "descripcion":null,
         "rol":"Caracterización",
@@ -147,9 +147,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":7,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Cy",
         "descripcion":null,
         "rol":"Caracterización",
@@ -168,9 +168,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":8,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Número de hogares en la vivienda",
         "descripcion":null,
         "rol":"Caracterización",
@@ -189,9 +189,9 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":9,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Tamaño del hogar",
         "descripcion":null,
         "rol":"Caracterización",
@@ -210,9 +210,9 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":10,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Nombre del jefe del hogar",
         "descripcion":null,
         "rol":"Caracterización",
@@ -231,9 +231,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":11,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Edad del jefe del hogar",
         "descripcion":null,
         "rol":"Caracterización",
@@ -252,9 +252,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":12,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Sexo del jefe del hogar",
         "descripcion":null,
         "rol":"Caracterización",
@@ -273,9 +273,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":13,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Nombre de la persona 2",
         "descripcion":null,
         "rol":"Caracterización",
@@ -294,9 +294,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":14,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Edad de la persona 2",
         "descripcion":null,
         "rol":"Caracterización",
@@ -315,9 +315,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":15,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Sexo de la persona 2",
         "descripcion":null,
         "rol":"Caracterización",
@@ -336,9 +336,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":16,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Parentesco con el jefe del hogar",
         "descripcion":null,
         "rol":"Caracterización",
@@ -357,9 +357,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":17,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Nombre de la persona 3",
         "descripcion":null,
         "rol":"Caracterización",
@@ -378,9 +378,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":18,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Edad de la persona 3",
         "descripcion":null,
         "rol":"Caracterización",
@@ -399,9 +399,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":19,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Sexo de la persona 3",
         "descripcion":null,
         "rol":"Caracterización",
@@ -420,9 +420,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":20,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Parentesco con el jefe del hogar",
         "descripcion":null,
         "rol":"Caracterización",
@@ -441,9 +441,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":21,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Nombre de la persona 4",
         "descripcion":null,
         "rol":"Caracterización",
@@ -462,9 +462,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":22,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Edad de la persona 4",
         "descripcion":null,
         "rol":"Caracterización",
@@ -483,9 +483,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":23,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Sexo de la persona 4",
         "descripcion":null,
         "rol":"Caracterización",
@@ -504,9 +504,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":24,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Parentesco con el jefe del hogar",
         "descripcion":null,
         "rol":"Caracterización",
@@ -525,9 +525,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":25,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Nombre de la persona 5",
         "descripcion":null,
         "rol":"Caracterización",
@@ -546,9 +546,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":26,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Edad de la persona 5",
         "descripcion":null,
         "rol":"Caracterización",
@@ -567,9 +567,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":27,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Sexo de la persona 5",
         "descripcion":null,
         "rol":"Caracterización",
@@ -588,9 +588,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":28,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Parentesco con el jefe del hogar",
         "descripcion":null,
         "rol":"Caracterización",
@@ -609,9 +609,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":29,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Nombre de la persona 6",
         "descripcion":null,
         "rol":"Caracterización",
@@ -630,9 +630,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":30,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Edad de la persona 6",
         "descripcion":null,
         "rol":"Caracterización",
@@ -651,9 +651,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":31,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Sexo de la persona 6",
         "descripcion":null,
         "rol":"Caracterización",
@@ -672,9 +672,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":32,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Parentesco con el jefe del hogar",
         "descripcion":null,
         "rol":"Caracterización",
@@ -693,9 +693,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":33,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Nombre de la persona 7",
         "descripcion":null,
         "rol":"Caracterización",
@@ -714,9 +714,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":34,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Edad de la persona 7",
         "descripcion":null,
         "rol":"Caracterización",
@@ -735,9 +735,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":35,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Sexo de la persona 7",
         "descripcion":null,
         "rol":"Caracterización",
@@ -756,9 +756,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":36,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Parentesco con el jefe del hogar",
         "descripcion":null,
         "rol":"Caracterización",
@@ -777,9 +777,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":37,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Nombre de la persona 8",
         "descripcion":null,
         "rol":"Caracterización",
@@ -798,9 +798,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":38,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Edad de la persona 8",
         "descripcion":null,
         "rol":"Caracterización",
@@ -819,9 +819,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":39,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Sexo de la persona 8",
         "descripcion":null,
         "rol":"Caracterización",
@@ -840,9 +840,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":40,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Parentesco con el jefe del hogar",
         "descripcion":null,
         "rol":"Caracterización",
@@ -861,9 +861,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":41,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Nombre de la persona 9",
         "descripcion":null,
         "rol":"Caracterización",
@@ -882,9 +882,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":42,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Edad de la persona 9",
         "descripcion":null,
         "rol":"Caracterización",
@@ -903,9 +903,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":43,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Sexo de la persona 9",
         "descripcion":null,
         "rol":"Caracterización",
@@ -924,9 +924,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":44,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Parentesco con el jefe del hogar",
         "descripcion":null,
         "rol":"Caracterización",
@@ -945,9 +945,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":1.0,
+        "num_seccion":1,
         "indice_pregunta":45,
-        "num_seccion.1":1,
+        "num_seccion.1":2,
         "nombre":"Identificador de la persona encuestada",
         "descripcion":null,
         "rol":"Caracterización",
@@ -966,9 +966,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":2.0,
+        "num_seccion":2,
         "indice_pregunta":46,
-        "num_seccion.1":2,
+        "num_seccion.1":8,
         "nombre":"Localidad",
         "descripcion":null,
         "rol":"Caracterización",
@@ -987,9 +987,9 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":2.0,
+        "num_seccion":2,
         "indice_pregunta":47,
-        "num_seccion.1":2,
+        "num_seccion.1":8,
         "nombre":"Estrato",
         "descripcion":null,
         "rol":"Caracterización",
@@ -1008,9 +1008,9 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":2.0,
+        "num_seccion":2,
         "indice_pregunta":48,
-        "num_seccion.1":2,
+        "num_seccion.1":8,
         "nombre":"Tipo de vivienda",
         "descripcion":null,
         "rol":"Caracterización",
@@ -1029,7 +1029,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":2.0,
+        "num_seccion":2,
         "indice_pregunta":49,
         "num_seccion.1":2,
         "nombre":"El lugar donde habita es:",
@@ -1050,7 +1050,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":50,
         "num_seccion.1":3,
         "nombre":"Satisfacción con la oferta cultural",
@@ -1071,7 +1071,7 @@
         "dataviz_palette":"scale_asc_4"
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":51,
         "num_seccion.1":3,
         "nombre":"Práctica cultural actual",
@@ -1092,7 +1092,7 @@
         "dataviz_palette":"boolean_asc_2"
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":52,
         "num_seccion.1":3,
         "nombre":"Prácticas culturales recientes",
@@ -1113,7 +1113,7 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":53,
         "num_seccion.1":3,
         "nombre":"Instrumento musical",
@@ -1134,7 +1134,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":54,
         "num_seccion.1":3,
         "nombre":"Remuneración por actividad",
@@ -1155,7 +1155,7 @@
         "dataviz_palette":"boolean_asc_2"
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":55,
         "num_seccion.1":3,
         "nombre":"Inversión en actividad",
@@ -1176,7 +1176,7 @@
         "dataviz_palette":"boolean_asc_2"
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":56,
         "num_seccion.1":3,
         "nombre":"Inicio de práctica cultural",
@@ -1197,7 +1197,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":57,
         "num_seccion.1":3,
         "nombre":"Acceso a la práctica cultural",
@@ -1218,7 +1218,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":58,
         "num_seccion.1":3,
         "nombre":"Otro acceso a la práctica cultural",
@@ -1239,7 +1239,7 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":59,
         "num_seccion.1":3,
         "nombre":"Motivación para practicar",
@@ -1260,7 +1260,7 @@
         "dataviz_palette":"yes_selection"
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":60,
         "num_seccion.1":3,
         "nombre":"Inspiración para crear",
@@ -1281,7 +1281,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":61,
         "num_seccion.1":3,
         "nombre":"Interrupciones en la práctica",
@@ -1302,7 +1302,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":62,
         "num_seccion.1":3,
         "nombre":"Lugar de práctica",
@@ -1323,7 +1323,7 @@
         "dataviz_palette":"yes_selection"
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":63,
         "num_seccion.1":3,
         "nombre":"Otro lugar de práctica",
@@ -1344,7 +1344,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":64,
         "num_seccion.1":3,
         "nombre":"Compañía en la práctica",
@@ -1365,7 +1365,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":65,
         "num_seccion.1":3,
         "nombre":"Barreras para practicar",
@@ -1386,7 +1386,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":66,
         "num_seccion.1":3,
         "nombre":"Otros barreras para practicar",
@@ -1407,7 +1407,7 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":67,
         "num_seccion.1":3,
         "nombre":"Desinterés",
@@ -1428,7 +1428,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":68,
         "num_seccion.1":3,
         "nombre":"Otro desinterés",
@@ -1449,7 +1449,7 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":69,
         "num_seccion.1":3,
         "nombre":"Asistencia a actividades culturales",
@@ -1470,7 +1470,7 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":70,
         "num_seccion.1":3,
         "nombre":"Barreras de asistencia",
@@ -1491,7 +1491,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":71,
         "num_seccion.1":3,
         "nombre":"Otra barrera",
@@ -1512,7 +1512,7 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":72,
         "num_seccion.1":3,
         "nombre":"Desinterés asistencia",
@@ -1533,7 +1533,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":73,
         "num_seccion.1":3,
         "nombre":"Otro desinterés",
@@ -1554,7 +1554,7 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":74,
         "num_seccion.1":3,
         "nombre":"Motivación de asistencia",
@@ -1575,7 +1575,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":75,
         "num_seccion.1":3,
         "nombre":"Otra motivación",
@@ -1596,7 +1596,7 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":76,
         "num_seccion.1":3,
         "nombre":"Consumo cultural",
@@ -1617,7 +1617,7 @@
         "dataviz_palette":"scale_asc_3"
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":77,
         "num_seccion.1":3,
         "nombre":"Participación en espacios culturales",
@@ -1638,7 +1638,7 @@
         "dataviz_palette":"yes_selection"
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":78,
         "num_seccion.1":3,
         "nombre":"Asistencia a la Filarmónica",
@@ -1659,7 +1659,7 @@
         "dataviz_palette":"boolean_asc_2"
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":79,
         "num_seccion.1":3,
         "nombre":"Modalidad de asistencia",
@@ -1680,7 +1680,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":80,
         "num_seccion.1":3,
         "nombre":"Barreras Filarmónica",
@@ -1701,7 +1701,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":81,
         "num_seccion.1":3,
         "nombre":"Otra barrera",
@@ -1722,7 +1722,7 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":82,
         "num_seccion.1":3,
         "nombre":"Gasto en actividades culturales",
@@ -1743,7 +1743,7 @@
         "dataviz_palette":"yes_selection"
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":83,
         "num_seccion.1":3,
         "nombre":"Percepción sobre pago artístico",
@@ -1764,7 +1764,7 @@
         "dataviz_palette":"yes_selection"
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":84,
         "num_seccion.1":3,
         "nombre":"Canales de acceso cultural",
@@ -1785,7 +1785,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":85,
         "num_seccion.1":3,
         "nombre":"Conocimiento Más Cultura Local",
@@ -1806,7 +1806,7 @@
         "dataviz_palette":"boolean_asc_2"
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":86,
         "num_seccion.1":3,
         "nombre":"Impacto Más Cultura Local",
@@ -1827,7 +1827,7 @@
         "dataviz_palette":"boolean_asc_2"
     },
     {
-        "num_seccion":3.0,
+        "num_seccion":3,
         "indice_pregunta":87,
         "num_seccion.1":3,
         "nombre":"Acceso a financiación cultural",
@@ -1848,7 +1848,7 @@
         "dataviz_palette":"yes_selection"
     },
     {
-        "num_seccion":4.0,
+        "num_seccion":4,
         "indice_pregunta":88,
         "num_seccion.1":4,
         "nombre":"Percepción sobre formación",
@@ -1869,7 +1869,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":4.0,
+        "num_seccion":4,
         "indice_pregunta":89,
         "num_seccion.1":4,
         "nombre":"Formación cultural recibida",
@@ -1890,7 +1890,7 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":4.0,
+        "num_seccion":4,
         "indice_pregunta":90,
         "num_seccion.1":4,
         "nombre":"Nivel de formación cultural recibida",
@@ -1911,7 +1911,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":4.0,
+        "num_seccion":4,
         "indice_pregunta":91,
         "num_seccion.1":4,
         "nombre":"Especificación actividad",
@@ -1932,7 +1932,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":4.0,
+        "num_seccion":4,
         "indice_pregunta":92,
         "num_seccion.1":4,
         "nombre":"Etapas de formación",
@@ -1953,7 +1953,7 @@
         "dataviz_palette":"yes_selection"
     },
     {
-        "num_seccion":4.0,
+        "num_seccion":4,
         "indice_pregunta":93,
         "num_seccion.1":4,
         "nombre":"Modalidad de formación",
@@ -1974,7 +1974,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":4.0,
+        "num_seccion":4,
         "indice_pregunta":94,
         "num_seccion.1":4,
         "nombre":"Participación reciente en formación",
@@ -1995,7 +1995,7 @@
         "dataviz_palette":"boolean_asc_2"
     },
     {
-        "num_seccion":4.0,
+        "num_seccion":4,
         "indice_pregunta":95,
         "num_seccion.1":4,
         "nombre":"Frecuencia de formación",
@@ -2016,7 +2016,7 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":4.0,
+        "num_seccion":4,
         "indice_pregunta":96,
         "num_seccion.1":4,
         "nombre":"Lugar de formación",
@@ -2037,7 +2037,7 @@
         "dataviz_palette":"yes_selection"
     },
     {
-        "num_seccion":4.0,
+        "num_seccion":4,
         "indice_pregunta":97,
         "num_seccion.1":4,
         "nombre":"Espacios de formación Distrito",
@@ -2058,7 +2058,7 @@
         "dataviz_palette":"yes_selection"
     },
     {
-        "num_seccion":4.0,
+        "num_seccion":4,
         "indice_pregunta":98,
         "num_seccion.1":4,
         "nombre":"Áreas de formación",
@@ -2079,7 +2079,7 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":4.0,
+        "num_seccion":4,
         "indice_pregunta":99,
         "num_seccion.1":4,
         "nombre":"Impacto de la formación",
@@ -2100,7 +2100,7 @@
         "dataviz_palette":"scale_asc_3"
     },
     {
-        "num_seccion":4.0,
+        "num_seccion":4,
         "indice_pregunta":100,
         "num_seccion.1":4,
         "nombre":"Aportes de la formación",
@@ -2121,7 +2121,7 @@
         "dataviz_palette":"scale_asc_4"
     },
     {
-        "num_seccion":4.0,
+        "num_seccion":4,
         "indice_pregunta":101,
         "num_seccion.1":4,
         "nombre":"Barreras para formación",
@@ -2142,7 +2142,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":4.0,
+        "num_seccion":4,
         "indice_pregunta":102,
         "num_seccion.1":4,
         "nombre":"Otra barrera",
@@ -2163,7 +2163,7 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":4.0,
+        "num_seccion":4,
         "indice_pregunta":103,
         "num_seccion.1":4,
         "nombre":"Aprendizaje en espacios cotidianos",
@@ -2184,7 +2184,7 @@
         "dataviz_palette":"yes_selection"
     },
     {
-        "num_seccion":4.0,
+        "num_seccion":4,
         "indice_pregunta":104,
         "num_seccion.1":4,
         "nombre":"Otro espacio",
@@ -2205,7 +2205,7 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":4.0,
+        "num_seccion":4,
         "indice_pregunta":105,
         "num_seccion.1":4,
         "nombre":"Percepción sobre formación en ciudad",
@@ -2226,7 +2226,7 @@
         "dataviz_palette":"scale_asc_4"
     },
     {
-        "num_seccion":5.0,
+        "num_seccion":5,
         "indice_pregunta":106,
         "num_seccion.1":5,
         "nombre":"Conocimiento de equipamientos",
@@ -2247,7 +2247,7 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":5.0,
+        "num_seccion":5,
         "indice_pregunta":107,
         "num_seccion.1":5,
         "nombre":"Uso de equipamientos",
@@ -2268,7 +2268,7 @@
         "dataviz_palette":"yes_selection"
     },
     {
-        "num_seccion":5.0,
+        "num_seccion":5,
         "indice_pregunta":108,
         "num_seccion.1":5,
         "nombre":"Uso de espacios alternativos",
@@ -2289,7 +2289,7 @@
         "dataviz_palette":"yes_selection"
     },
     {
-        "num_seccion":5.0,
+        "num_seccion":5,
         "indice_pregunta":109,
         "num_seccion.1":5,
         "nombre":"Uso de lugares culturales en la localidad en que vive",
@@ -2310,7 +2310,7 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":5.0,
+        "num_seccion":5,
         "indice_pregunta":110,
         "num_seccion.1":5,
         "nombre":"Uso de equipamientos distritales",
@@ -2331,7 +2331,7 @@
         "dataviz_palette":"yes_selection"
     },
     {
-        "num_seccion":5.0,
+        "num_seccion":5,
         "indice_pregunta":111,
         "num_seccion.1":5,
         "nombre":"Satisfacción con equipamientos",
@@ -2352,7 +2352,7 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":5.0,
+        "num_seccion":5,
         "indice_pregunta":112,
         "num_seccion.1":5,
         "nombre":"Consulta de programación cultural",
@@ -2373,7 +2373,7 @@
         "dataviz_palette":"yes_selection"
     },
     {
-        "num_seccion":5.0,
+        "num_seccion":5,
         "indice_pregunta":113,
         "num_seccion.1":5,
         "nombre":"Medios de consulta cultural",
@@ -2394,7 +2394,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":5.0,
+        "num_seccion":5,
         "indice_pregunta":114,
         "num_seccion.1":5,
         "nombre":"Otro medio",
@@ -2415,7 +2415,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":6.0,
+        "num_seccion":6,
         "indice_pregunta":115,
         "num_seccion.1":6,
         "nombre":"Actividad cultural del barrio",
@@ -2436,7 +2436,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":6.0,
+        "num_seccion":6,
         "indice_pregunta":116,
         "num_seccion.1":6,
         "nombre":"Participación en actividad local",
@@ -2457,7 +2457,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":6.0,
+        "num_seccion":6,
         "indice_pregunta":117,
         "num_seccion.1":6,
         "nombre":"Actividad cultural fuera del barrio",
@@ -2478,7 +2478,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":6.0,
+        "num_seccion":6,
         "indice_pregunta":118,
         "num_seccion.1":6,
         "nombre":"Participación en actividad externa",
@@ -2499,7 +2499,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":6.0,
+        "num_seccion":6,
         "indice_pregunta":119,
         "num_seccion.1":6,
         "nombre":"Actividad cultural más importante",
@@ -2520,7 +2520,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":6.0,
+        "num_seccion":6,
         "indice_pregunta":120,
         "num_seccion.1":6,
         "nombre":"Identificación con grupos culturales",
@@ -2541,7 +2541,7 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":6.0,
+        "num_seccion":6,
         "indice_pregunta":121,
         "num_seccion.1":6,
         "nombre":"¿Cuál grupo cultural?",
@@ -2562,7 +2562,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":6.0,
+        "num_seccion":6,
         "indice_pregunta":122,
         "num_seccion.1":6,
         "nombre":"Especificación grupo",
@@ -2583,7 +2583,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":6.0,
+        "num_seccion":6,
         "indice_pregunta":123,
         "num_seccion.1":6,
         "nombre":"Otra especificación de grupo",
@@ -2604,7 +2604,7 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":6.0,
+        "num_seccion":6,
         "indice_pregunta":124,
         "num_seccion.1":6,
         "nombre":"Actividad del grupo",
@@ -2625,7 +2625,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":6.0,
+        "num_seccion":6,
         "indice_pregunta":125,
         "num_seccion.1":6,
         "nombre":"Rol en el grupo",
@@ -2646,7 +2646,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":6.0,
+        "num_seccion":6,
         "indice_pregunta":126,
         "num_seccion.1":6,
         "nombre":"Participación en grupo",
@@ -2667,7 +2667,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":6.0,
+        "num_seccion":6,
         "indice_pregunta":127,
         "num_seccion.1":6,
         "nombre":"Actividad más importante del grupo",
@@ -2688,7 +2688,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":6.0,
+        "num_seccion":6,
         "indice_pregunta":128,
         "num_seccion.1":6,
         "nombre":"Intercambio cultural",
@@ -2709,7 +2709,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":6.0,
+        "num_seccion":6,
         "indice_pregunta":129,
         "num_seccion.1":6,
         "nombre":"Relación con la diversidad cultural",
@@ -2730,7 +2730,7 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":130,
         "num_seccion.1":7,
         "nombre":"Importancia del patrimonio",
@@ -2751,7 +2751,7 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":131,
         "num_seccion.1":7,
         "nombre":"Razón de importancia del patrimonio",
@@ -2772,7 +2772,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":132,
         "num_seccion.1":7,
         "nombre":"Razón de no importancia del patrimonio",
@@ -2793,7 +2793,7 @@
         "dataviz_palette":"yes_selection"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":133,
         "num_seccion.1":7,
         "nombre":"Utilidad del patrimonio",
@@ -2814,7 +2814,7 @@
         "dataviz_palette":"yes_selection"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":134,
         "num_seccion.1":7,
         "nombre":"Elementos a proteger",
@@ -2835,7 +2835,7 @@
         "dataviz_palette":"yes_selection"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":135,
         "num_seccion.1":7,
         "nombre":"Otro elemento",
@@ -2856,7 +2856,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":136,
         "num_seccion.1":7,
         "nombre":"Prácticas como patrimonio",
@@ -2877,7 +2877,7 @@
         "dataviz_palette":"yes_selection"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":137,
         "num_seccion.1":7,
         "nombre":"Otra práctica",
@@ -2898,7 +2898,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":138,
         "num_seccion.1":7,
         "nombre":"Prácticas realizadas",
@@ -2919,7 +2919,7 @@
         "dataviz_palette":"yes_selection"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":139,
         "num_seccion.1":7,
         "nombre":"Otra práctica",
@@ -2940,7 +2940,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":140,
         "num_seccion.1":7,
         "nombre":"Percepción del barrio",
@@ -2961,7 +2961,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":141,
         "num_seccion.1":7,
         "nombre":"Descripción del barrio",
@@ -2982,7 +2982,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":142,
         "num_seccion.1":7,
         "nombre":"Patrimonio del barrio",
@@ -3003,7 +3003,7 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":143,
         "num_seccion.1":7,
         "nombre":"Definición de patrimonio",
@@ -3024,7 +3024,7 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":144,
         "num_seccion.1":7,
         "nombre":"Percepciones sobre cultura y patrimonio",
@@ -3045,7 +3045,7 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":145,
         "num_seccion.1":7,
         "nombre":"Intereses sobre patrimonio",
@@ -3066,7 +3066,7 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":146,
         "num_seccion.1":7,
         "nombre":"Otro interés",
@@ -3087,7 +3087,7 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":147,
         "num_seccion.1":7,
         "nombre":"Amenazas al patrimonio",
@@ -3108,7 +3108,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":148,
         "num_seccion.1":7,
         "nombre":"Otra amenaza",
@@ -3129,7 +3129,7 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":149,
         "num_seccion.1":7,
         "nombre":"Valor en edificaciones patrimoniales",
@@ -3150,7 +3150,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":150,
         "num_seccion.1":7,
         "nombre":"Identificación con monumentos",
@@ -3171,7 +3171,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":151,
         "num_seccion.1":7,
         "nombre":"Monumento identificado",
@@ -3192,7 +3192,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":152,
         "num_seccion.1":7,
         "nombre":"Valor en monumentos",
@@ -3213,7 +3213,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":153,
         "num_seccion.1":7,
         "nombre":"Formas de conmemoración",
@@ -3234,7 +3234,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":154,
         "num_seccion.1":7,
         "nombre":"Disposición a instalar monumentos",
@@ -3255,7 +3255,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":155,
         "num_seccion.1":7,
         "nombre":"Tipo de monumento",
@@ -3276,7 +3276,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":156,
         "num_seccion.1":7,
         "nombre":"Especificación monumento",
@@ -3297,7 +3297,7 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":157,
         "num_seccion.1":7,
         "nombre":"Razón de rechazo a disposición de monumentos",
@@ -3318,7 +3318,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":158,
         "num_seccion.1":7,
         "nombre":"Protección patrimonio material",
@@ -3339,7 +3339,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":159,
         "num_seccion.1":7,
         "nombre":"Otra acción",
@@ -3360,7 +3360,7 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":160,
         "num_seccion.1":7,
         "nombre":"Protección patrimonio vivo",
@@ -3381,7 +3381,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":161,
         "num_seccion.1":7,
         "nombre":"Protección patrimonio natural",
@@ -3402,7 +3402,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":162,
         "num_seccion.1":7,
         "nombre":"Otra acción",
@@ -3423,7 +3423,7 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":163,
         "num_seccion.1":7,
         "nombre":"Actores del patrimonio",
@@ -3444,7 +3444,7 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":164,
         "num_seccion.1":7,
         "nombre":"Otro actor",
@@ -3465,7 +3465,7 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":165,
         "num_seccion.1":7,
         "nombre":"Percepción de gestión pública",
@@ -3486,7 +3486,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":166,
         "num_seccion.1":7,
         "nombre":"Valor del patrimonio arqueológico",
@@ -3507,7 +3507,7 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":167,
         "num_seccion.1":7,
         "nombre":"Acción frente a hallazgo arqueológico",
@@ -3528,7 +3528,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":168,
         "num_seccion.1":7,
         "nombre":"Reporte de hallazgo arqueológico",
@@ -3549,7 +3549,7 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":169,
         "num_seccion.1":7,
         "nombre":"Protección del patrimonio arqueológico",
@@ -3570,7 +3570,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":170,
         "num_seccion.1":7,
         "nombre":"Conocimiento de sitios arqueológicos",
@@ -3591,7 +3591,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":7.0,
+        "num_seccion":7,
         "indice_pregunta":171,
         "num_seccion.1":7,
         "nombre":"Sitio arqueológico",
@@ -3612,7 +3612,7 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":8.0,
+        "num_seccion":8,
         "indice_pregunta":172,
         "num_seccion.1":8,
         "nombre":"Medios de consumo de TV",
@@ -3633,7 +3633,7 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":8.0,
+        "num_seccion":8,
         "indice_pregunta":173,
         "num_seccion.1":8,
         "nombre":"Tiempo de consumo de TV",
@@ -3654,7 +3654,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":8.0,
+        "num_seccion":8,
         "indice_pregunta":174,
         "num_seccion.1":8,
         "nombre":"Día de mayor consumo TV",
@@ -3675,7 +3675,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":8.0,
+        "num_seccion":8,
         "indice_pregunta":175,
         "num_seccion.1":8,
         "nombre":"Jornada de consumo TV",
@@ -3696,7 +3696,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":8.0,
+        "num_seccion":8,
         "indice_pregunta":176,
         "num_seccion.1":8,
         "nombre":"Dispositivos para ver TV",
@@ -3717,7 +3717,7 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":8.0,
+        "num_seccion":8,
         "indice_pregunta":177,
         "num_seccion.1":8,
         "nombre":"Otro dispositivo",
@@ -3738,7 +3738,7 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":8.0,
+        "num_seccion":8,
         "indice_pregunta":178,
         "num_seccion.1":8,
         "nombre":"Interés en TV sobre Bogotá",
@@ -3759,7 +3759,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":8.0,
+        "num_seccion":8,
         "indice_pregunta":179,
         "num_seccion.1":8,
         "nombre":"Canal informativo principal",
@@ -3780,7 +3780,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":8.0,
+        "num_seccion":8,
         "indice_pregunta":180,
         "num_seccion.1":8,
         "nombre":"Otro canal informativo",
@@ -3801,7 +3801,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":8.0,
+        "num_seccion":8,
         "indice_pregunta":181,
         "num_seccion.1":8,
         "nombre":"Motivación para ver TV",
@@ -3822,7 +3822,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":8.0,
+        "num_seccion":8,
         "indice_pregunta":182,
         "num_seccion.1":8,
         "nombre":"Otra motivación para ver TV",
@@ -3843,7 +3843,7 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":8.0,
+        "num_seccion":8,
         "indice_pregunta":183,
         "num_seccion.1":8,
         "nombre":"Medios para ver Canal Capital",
@@ -3864,7 +3864,7 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":8.0,
+        "num_seccion":8,
         "indice_pregunta":184,
         "num_seccion.1":8,
         "nombre":"Contenidos deseados Canal Capital",
@@ -3885,7 +3885,7 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":8.0,
+        "num_seccion":8,
         "indice_pregunta":185,
         "num_seccion.1":8,
         "nombre":"Otro contenido deseado de Canal Capital",
@@ -3906,7 +3906,7 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":8.0,
+        "num_seccion":8,
         "indice_pregunta":186,
         "num_seccion.1":8,
         "nombre":"Frecuencia Canal Capital",
@@ -3927,7 +3927,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":8.0,
+        "num_seccion":8,
         "indice_pregunta":187,
         "num_seccion.1":8,
         "nombre":"Conocimiento Canal Eureka",
@@ -3948,7 +3948,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":8.0,
+        "num_seccion":8,
         "indice_pregunta":188,
         "num_seccion.1":8,
         "nombre":"Seguimiento en redes a Canal Capital",
@@ -3969,7 +3969,7 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":8.0,
+        "num_seccion":8,
         "indice_pregunta":189,
         "num_seccion.1":8,
         "nombre":"Contenidos deseados redes",
@@ -3990,7 +3990,7 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":8.0,
+        "num_seccion":8,
         "indice_pregunta":190,
         "num_seccion.1":8,
         "nombre":"Otro contenido",
@@ -4011,7 +4011,7 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":8.0,
+        "num_seccion":8,
         "indice_pregunta":191,
         "num_seccion.1":8,
         "nombre":"Consumo de Canal Capital en redes",
@@ -4032,7 +4032,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":9.0,
+        "num_seccion":9,
         "indice_pregunta":192,
         "num_seccion.1":9,
         "nombre":"Bienestar y prácticas artísticas",
@@ -4053,7 +4053,7 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":9.0,
+        "num_seccion":9,
         "indice_pregunta":193,
         "num_seccion.1":9,
         "nombre":"Emoción resultado de prácticas artísticas",
@@ -4074,7 +4074,7 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":9.0,
+        "num_seccion":9,
         "indice_pregunta":194,
         "num_seccion.1":9,
         "nombre":"Felicidad en actividades culturales",
@@ -4095,7 +4095,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":9.0,
+        "num_seccion":9,
         "indice_pregunta":195,
         "num_seccion.1":9,
         "nombre":"Satisfacción con la vida",
@@ -4116,7 +4116,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":10.0,
+        "num_seccion":10,
         "indice_pregunta":196,
         "num_seccion.1":10,
         "nombre":"Sexo",
@@ -4137,7 +4137,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":10.0,
+        "num_seccion":10,
         "indice_pregunta":197,
         "num_seccion.1":10,
         "nombre":"Género",
@@ -4158,7 +4158,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":10.0,
+        "num_seccion":10,
         "indice_pregunta":198,
         "num_seccion.1":10,
         "nombre":"Edad",
@@ -4179,7 +4179,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":10.0,
+        "num_seccion":10,
         "indice_pregunta":199,
         "num_seccion.1":10,
         "nombre":"Rango de edad",
@@ -4200,7 +4200,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":10.0,
+        "num_seccion":10,
         "indice_pregunta":200,
         "num_seccion.1":10,
         "nombre":"Lugar de nacimiento",
@@ -4221,7 +4221,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":10.0,
+        "num_seccion":10,
         "indice_pregunta":201,
         "num_seccion.1":10,
         "nombre":"Tiempo en la ciudad",
@@ -4242,7 +4242,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":10.0,
+        "num_seccion":10,
         "indice_pregunta":202,
         "num_seccion.1":10,
         "nombre":"Motivo de llegada",
@@ -4263,7 +4263,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":10.0,
+        "num_seccion":10,
         "indice_pregunta":203,
         "num_seccion.1":10,
         "nombre":"Estado civil",
@@ -4284,7 +4284,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":10.0,
+        "num_seccion":10,
         "indice_pregunta":204,
         "num_seccion.1":10,
         "nombre":"Ocupación",
@@ -4305,7 +4305,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":10.0,
+        "num_seccion":10,
         "indice_pregunta":205,
         "num_seccion.1":10,
         "nombre":"Otra ocupación",
@@ -4326,7 +4326,7 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":10.0,
+        "num_seccion":10,
         "indice_pregunta":206,
         "num_seccion.1":10,
         "nombre":"Nivel educativo",
@@ -4347,7 +4347,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":10.0,
+        "num_seccion":10,
         "indice_pregunta":207,
         "num_seccion.1":10,
         "nombre":"Identidad étnica",
@@ -4368,7 +4368,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":10.0,
+        "num_seccion":10,
         "indice_pregunta":208,
         "num_seccion.1":10,
         "nombre":"Limitaciones funcionales",
@@ -4389,7 +4389,7 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":10.0,
+        "num_seccion":10,
         "indice_pregunta":209,
         "num_seccion.1":10,
         "nombre":"Otra limitación",
@@ -4410,7 +4410,7 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":10.0,
+        "num_seccion":10,
         "indice_pregunta":210,
         "num_seccion.1":10,
         "nombre":"Disposición a responder sexualidad",
@@ -4431,7 +4431,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":10.0,
+        "num_seccion":10,
         "indice_pregunta":211,
         "num_seccion.1":10,
         "nombre":"Hijos",
@@ -4452,9 +4452,9 @@
         "dataviz_palette":"category"
     },
     {
-        "num_seccion":10.0,
+        "num_seccion":10,
         "indice_pregunta":212,
-        "num_seccion.1":10,
+        "num_seccion.1":99,
         "nombre":"Factor",
         "descripcion":null,
         "rol":"Caracterización",
@@ -4473,9 +4473,9 @@
         "dataviz_palette":null
     },
     {
-        "num_seccion":10.0,
+        "num_seccion":10,
         "indice_pregunta":213,
-        "num_seccion.1":10,
+        "num_seccion.1":99,
         "nombre":"Teléfono del encuestado",
         "descripcion":null,
         "rol":"Caracterización",
