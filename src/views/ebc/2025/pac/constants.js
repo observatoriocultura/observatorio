@@ -90,21 +90,81 @@ export const MENU_PRINCIPAL = [
     number: 1,
     key: 'practicas-artisticas',
     title: 'Prácticas artísticas, culturales y creativas',
-    icon: 'leo-percepciones.svg',
+    description:
+      'Explora la participación activa de las personas en actividades artísticas, culturales y creativas, así como su frecuencia, motivaciones, trayectorias de inicio, espacios de realización, formas de participación y barreras para su desarrollo. Esta sección permite analizar cómo se expresan, sostienen o interrumpen estas prácticas en la vida cotidiana.',
+    icon: 'bi bi-palette-fill',
     numSection: '3',
-    color: '#2196F3',
+    color: '#00A3E0',
   },
   {
     number: 2,
-    key: 'lectura',
-    title: 'Hábitos de Lectura',
-    icon: 'leo-lectura.svg',
+    key: 'formacion',
+    title: 'Formación',
+    description:
+      'Indaga sobre las trayectorias de formación artística, cultural y patrimonial de las personas, incluyendo niveles, modalidades, espacios, áreas de formación, frecuencia de participación y percepciones sobre sus aportes personales y sociales. Esta sección permite analizar cómo la formación incide en el desarrollo de capacidades, la participación cultural y la construcción de experiencias significativas.',
+    icon: 'bi bi-mortarboard-fill',
     numSection: '4',
-    color: '#FF9800',
+    color: '#F6B700',
+  },
+  {
+    number: 3,
+    key: 'equipamientos-culturales',
+    title: 'Equipamientos culturales',
+    description:
+      'Examina el conocimiento, uso, acceso y valoración de los equipamientos culturales de la localidad y de la ciudad, así como los canales mediante los cuales las personas consultan su programación. Permite comprender el papel de la infraestructura cultural en la participación ciudadana y en el acceso a la oferta artística y cultural.',
+    icon: 'bi bi-building-fill',
+    numSection: '5',
+    color: '#8E44AD',
+  },
+  {
+    number: 4,
+    key: 'practicas-culturales',
+    title: 'Prácticas culturales',
+    description:
+      'Recoge información sobre la asistencia, acceso y participación en actividades culturales, artísticas y patrimoniales, tanto presenciales como virtuales, así como sus motivaciones, barreras de acceso, hábitos de consumo y niveles de identificación con expresiones y comunidades culturales. Estos datos permiten comprender la relación de la ciudadanía con la oferta cultural de la ciudad.',
+    icon: 'bi bi-people-fill',
+    numSection: '6',
+    color: '#E85D75',
+  },
+  {
+    number: 5,
+    key: 'practicas-patrimoniales',
+    title: 'Prácticas patrimoniales',
+    description:
+      'Indaga sobre la asistencia y participación en espacios, recorridos, eventos y manifestaciones relacionados con el patrimonio cultural, histórico, artístico y territorial de la ciudad. Esta información permite analizar el vínculo de las personas con los bienes, memorias y expresiones patrimoniales de Bogotá.',
+    icon: 'bi bi-bank2',
+    numSection: '7',
+    color: '#2BB673',
+  },
+  {
+    number: 7,
+    key: 'canales-de-television',
+    title: 'Canales de televisión',
+    description:
+      'Recoge información sobre medios, canales y formas de acceso a contenidos culturales, artísticos o informativos, incluyendo canales tradicionales y digitales de consulta. Permite comprender cómo circula la información cultural y cuáles son los principales medios utilizados por la ciudadanía para conectarse con la oferta cultural.',
+    icon: 'bi bi-tv-fill',
+    numSection: '8',
+    color: '#FF7A1A',
+  },
+  {
+    number: 8,
+    key: 'emociones-salud-mental',
+    title: 'Emociones y salud mental',
+    description:
+      'Indaga sobre percepciones, experiencias y aportes asociados al bienestar emocional, la expresión de sentimientos, la reflexión personal y las relaciones con otras personas, especialmente en el marco de la formación y la participación cultural. Esta sección permite explorar la relación entre cultura, bienestar subjetivo y desarrollo personal.',
+    icon: 'bi bi-heart-pulse-fill',
+    numSection: '9',
+    color: '#00B8A9',
   },
 ]
 
 /**
  * Imágenes para el carrusel de la portada del tablero
  */
-export const IMAGES_CAROUSEL = ['ensayo-2.jpg', 'cine-2.jpg', 'familia-1.jpg', 'planetario-1.jpg']
+export const IMAGES_CAROUSEL = [
+  'ensayo-2.jpg',
+  'cine-2.jpg',
+  'planetario-1.jpg',
+  'familia-2.jpg',
+  'patrimonio-1.jpg',
+]
