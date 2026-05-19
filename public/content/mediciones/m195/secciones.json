@@ -6,7 +6,7 @@
         "descripcion":null,
         "cantidad_preguntas":0,
         "notas":null,
-        "dataviz_display":0.0
+        "dataviz_display":0
     },
     {
         "num_seccion":2,
@@ -15,7 +15,7 @@
         "descripcion":null,
         "cantidad_preguntas":46,
         "notas":null,
-        "dataviz_display":0.0
+        "dataviz_display":0
     },
     {
         "num_seccion":3,
@@ -24,7 +24,7 @@
         "descripcion":"Explora la participación activa de las personas en actividades artísticas, culturales y creativas, así como su frecuencia, motivaciones, trayectorias de inicio, espacios de realización, formas de participación y barreras para su desarrollo. Esta sección permite analizar cómo se expresan, sostienen o interrumpen estas prácticas en la vida cotidiana.",
         "cantidad_preguntas":38,
         "notas":null,
-        "dataviz_display":1.0
+        "dataviz_display":1
     },
     {
         "num_seccion":4,
@@ -33,7 +33,7 @@
         "descripcion":"Indaga sobre las trayectorias de formación artística, cultural y patrimonial de las personas, incluyendo niveles, modalidades, espacios, áreas de formación, frecuencia de participación y percepciones sobre sus aportes personales y sociales. Esta sección permite analizar cómo la formación incide en el desarrollo de capacidades, la participación cultural y la construcción de experiencias significativas.",
         "cantidad_preguntas":18,
         "notas":null,
-        "dataviz_display":1.0
+        "dataviz_display":1
     },
     {
         "num_seccion":5,
@@ -42,7 +42,7 @@
         "descripcion":"Examina el conocimiento, uso, acceso y valoración de los equipamientos culturales de la localidad y de la ciudad, así como los canales mediante los cuales las personas consultan su programación. Permite comprender el papel de la infraestructura cultural en la participación ciudadana y en el acceso a la oferta artística y cultural.",
         "cantidad_preguntas":9,
         "notas":null,
-        "dataviz_display":1.0
+        "dataviz_display":1
     },
     {
         "num_seccion":6,
@@ -51,7 +51,7 @@
         "descripcion":"Recoge información sobre la asistencia, acceso y participación en actividades culturales, artísticas y patrimoniales, tanto presenciales como virtuales, así como sus motivaciones, barreras de acceso, hábitos de consumo y niveles de identificación con expresiones y comunidades culturales. Estos datos permiten comprender la relación de la ciudadanía con la oferta cultural de la ciudad.",
         "cantidad_preguntas":15,
         "notas":null,
-        "dataviz_display":1.0
+        "dataviz_display":1
     },
     {
         "num_seccion":7,
@@ -60,7 +60,7 @@
         "descripcion":"Indaga sobre la asistencia y participación en espacios, recorridos, eventos y manifestaciones relacionados con el patrimonio cultural, histórico, artístico y territorial de la ciudad. Esta información permite analizar el vínculo de las personas con los bienes, memorias y expresiones patrimoniales de Bogotá.",
         "cantidad_preguntas":42,
         "notas":null,
-        "dataviz_display":1.0
+        "dataviz_display":1
     },
     {
         "num_seccion":8,
@@ -69,7 +69,7 @@
         "descripcion":"Recoge información sobre medios, canales y formas de acceso a contenidos culturales, artísticos o informativos, incluyendo canales tradicionales y digitales de consulta. Permite comprender cómo circula la información cultural y cuáles son los principales medios utilizados por la ciudadanía para conectarse con la oferta cultural.",
         "cantidad_preguntas":23,
         "notas":null,
-        "dataviz_display":1.0
+        "dataviz_display":1
     },
     {
         "num_seccion":9,
@@ -78,7 +78,7 @@
         "descripcion":"Indaga sobre percepciones, experiencias y aportes asociados al bienestar emocional, la expresión de sentimientos, la reflexión personal y las relaciones con otras personas, especialmente en el marco de la formación y la participación cultural. Esta sección permite explorar la relación entre cultura, bienestar subjetivo y desarrollo personal.",
         "cantidad_preguntas":4,
         "notas":null,
-        "dataviz_display":1.0
+        "dataviz_display":1
     },
     {
         "num_seccion":10,
@@ -87,7 +87,7 @@
         "descripcion":"Recoge información básica sobre la identidad y características personales de la persona encuestada, como edad, sexo y otras variables sociodemográficas relevantes. Estos datos permiten segmentar y contextualizar los análisis, identificando diferencias y patrones entre distintos grupos de población.",
         "cantidad_preguntas":16,
         "notas":null,
-        "dataviz_display":1.0
+        "dataviz_display":1
     },
     {
         "num_seccion":99,
@@ -96,6 +96,6 @@
         "descripcion":null,
         "cantidad_preguntas":3,
         "notas":null,
-        "dataviz_display":null
+        "dataviz_display":0
     }
 ]

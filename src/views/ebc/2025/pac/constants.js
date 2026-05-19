@@ -61,7 +61,7 @@ export const PALETAS_COLOR = {
   ],
   scale_asc_3: ['#bdd3f1', '#6093db', '#003F97'],
   scale_asc_4: ['#bdd3f1', '#6796dbff', '#316fccff', '#003F97'],
-  scale_desc_4: ['#0F52BA', '#316fccff', '#6796dbff', '#94b5e7ff'],
+  scale_desc_4: ['#003F97', '#316fccff', '#6796dbff', '#bdd3f1'],
   scale_asc_5: ['#94b5e7ff', '#739cdcff', '#5283d1ff', '#316bc5ff', '#0f52baff'],
   scale_desc_5: ['#0f52baff', '#316bc5ff', '#5283d1ff', '#739cdcff', '#94b5e7ff'],
   boolean_asc_4: ['#E0115F', '#eb5790ff', '#9cc9ab', '#50c878'],
@@ -71,6 +71,7 @@ export const PALETAS_COLOR = {
   yes_no_asc: ['#003366', '#CAE3F9'],
   yes_no_desc: ['#CAE3F9', '#003366'],
   yes_selection: ['#003F97', '#FAFAFA'],
+  custom_44: ['#003F97', '#1CDEA2', '#6796dbff', '#D32F2F'],
 }
 
 /**
