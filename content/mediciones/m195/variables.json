@@ -13,7 +13,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -32,7 +32,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -51,7 +51,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -70,7 +70,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -89,7 +89,7 @@
         "etiqueta_enunciado":"a. Las actividades culturales y artísticas que organizan las entidades del Distrito en su localidad (novenas navideñas,\nmercados populares, conciertos, etc)",
         "etiqueta_corta":"a. Las actividades culturales y artísticas que organizan las entidades del Distrito en su localidad (novenas navideñas,\nmercados populares, conciertos, etc)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -108,7 +108,7 @@
         "etiqueta_enunciado":"b. Las actividades culturales y artísticas que organizan entidades privadas o personas habitantes de su localidad (día\nde velitas, halloween, ferias, etc)",
         "etiqueta_corta":"b. Las actividades culturales y artísticas que organizan entidades privadas o personas habitantes de su localidad (día\nde velitas, halloween, ferias, etc)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -127,7 +127,7 @@
         "etiqueta_enunciado":"c. Las actividades deportivas y recreativas que organizan las entidades del Distrito en su localidad",
         "etiqueta_corta":"c. Las actividades deportivas y recreativas que organizan las entidades del Distrito en su localidad",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -146,7 +146,7 @@
         "etiqueta_enunciado":"d. Las actividades deportivas y recreativas que organizan entidades privadas o personas habitantes de su localidad",
         "etiqueta_corta":"d. Las actividades deportivas y recreativas que organizan entidades privadas o personas habitantes de su localidad",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -165,7 +165,7 @@
         "etiqueta_enunciado":"e. Las condiciones y los espacios que tiene en su barrio o localidad para realizar sus propias actividades artísticas,\nculturales y patrimoniales",
         "etiqueta_corta":"e. Las condiciones y los espacios que tiene en su barrio o localidad para realizar sus propias actividades artísticas,\nculturales y patrimoniales",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -184,7 +184,7 @@
         "etiqueta_enunciado":"f. Espacios públicos al aire libre para realizar actividades artísticas, culturales y patrimoniales",
         "etiqueta_corta":"f. Espacios públicos al aire libre para realizar actividades artísticas, culturales y patrimoniales",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -203,7 +203,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -222,7 +222,7 @@
         "etiqueta_enunciado":"a. Cantar, crear o componer música, realizar o editar producciones fonográficas",
         "etiqueta_corta":"a. Cantar, crear o componer música, realizar o editar producciones fonográficas",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -241,7 +241,7 @@
         "etiqueta_enunciado":"b. Interpretar instrumentos",
         "etiqueta_corta":"b. Interpretar instrumentos",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -260,7 +260,7 @@
         "etiqueta_enunciado":"c. Escribir novela, poesía, cuento, ensayo, crónica, historieta o cómic, dramaturgia, guion, cartas, diarios, blogs, chats. u\notros",
         "etiqueta_corta":"c. Escribir novela, poesía, cuento, ensayo, crónica, historieta o cómic, dramaturgia, guion, cartas, diarios, blogs, chats. u\notros",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -279,7 +279,7 @@
         "etiqueta_enunciado":"d. Expresarse verbalmente (narración oral, lectura en voz alta, podcats, cuentería o stad up, debates)",
         "etiqueta_corta":"d. Expresarse verbalmente (narración oral, lectura en voz alta, podcats, cuentería o stad up, debates)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -298,7 +298,7 @@
         "etiqueta_enunciado":"e. Esculpir, tejer, bordar, tallar, moldear, confeccionar y\/o reparar.",
         "etiqueta_corta":"e. Esculpir, tejer, bordar, tallar, moldear, confeccionar y\/o reparar.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -317,7 +317,7 @@
         "etiqueta_enunciado":"f. Pintar, dibujar, fotografiar",
         "etiqueta_corta":"f. Pintar, dibujar, fotografiar",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -336,7 +336,7 @@
         "etiqueta_enunciado":"g. Diseñar instalaciones y escenografías",
         "etiqueta_corta":"g. Diseñar instalaciones y escenografías",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -355,7 +355,7 @@
         "etiqueta_enunciado":"h. Bailar",
         "etiqueta_corta":"h. Bailar",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -374,7 +374,7 @@
         "etiqueta_enunciado":"i. Dirigir, realizar o actuar en espectáculos escénicos (teatrales, dancísticos, musicales, circenses, coreografías,\nperformances, cuentería, stand up comedy)",
         "etiqueta_corta":"i. Dirigir, realizar o actuar en espectáculos escénicos (teatrales, dancísticos, musicales, circenses, coreografías,\nperformances, cuentería, stand up comedy)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -393,7 +393,7 @@
         "etiqueta_enunciado":"j. Realizar, filmar, animar o editar películas, videos, contenidos audiovisuales o digitales",
         "etiqueta_corta":"j. Realizar, filmar, animar o editar películas, videos, contenidos audiovisuales o digitales",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -412,7 +412,7 @@
         "etiqueta_enunciado":"k. Diseñar, crear contenidos publicitarios",
         "etiqueta_corta":"k. Diseñar, crear contenidos publicitarios",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -431,7 +431,7 @@
         "etiqueta_enunciado":"l. Diseñar, crear, fabricar juguetes",
         "etiqueta_corta":"l. Diseñar, crear, fabricar juguetes",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -450,7 +450,7 @@
         "etiqueta_enunciado":"m. Diseñar, crear, fabricar instrumentos musicales",
         "etiqueta_corta":"m. Diseñar, crear, fabricar instrumentos musicales",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -469,7 +469,7 @@
         "etiqueta_enunciado":"n. Diseñar, crear, fabricar joyería.",
         "etiqueta_corta":"n. Diseñar, crear, fabricar joyería.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -488,7 +488,7 @@
         "etiqueta_enunciado":"o. Crear videojuegos, dispositivos tecnológicos, aplicaciones u otro tipo de software",
         "etiqueta_corta":"o. Crear videojuegos, dispositivos tecnológicos, aplicaciones u otro tipo de software",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -507,7 +507,7 @@
         "etiqueta_enunciado":"p. Cocinar o hacer bebidas como forma de mantener o fusionar tradiciones o saberes",
         "etiqueta_corta":"p. Cocinar o hacer bebidas como forma de mantener o fusionar tradiciones o saberes",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -526,7 +526,7 @@
         "etiqueta_enunciado":"q. Otra actividad artística o creativa que considere propia, de su vida cultural o tradiciones (de su vida cotidiana,\ncostumbres, su entorno)",
         "etiqueta_corta":"q. Otra actividad artística o creativa que considere propia, de su vida cultural o tradiciones (de su vida cotidiana,\ncostumbres, su entorno)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -545,7 +545,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -564,7 +564,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -583,7 +583,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -602,7 +602,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -621,7 +621,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -640,7 +640,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -659,7 +659,7 @@
         "etiqueta_enunciado":"b. Estudió para realizar esa actividad artística y ahora se dedica a ejercerla como profesión",
         "etiqueta_corta":"b. Estudió para realizar esa actividad artística y ahora se dedica a ejercerla como profesión",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -678,7 +678,7 @@
         "etiqueta_enunciado":"c. Trabaja realizando esta actividad artística, de forma empírica",
         "etiqueta_corta":"c. Trabaja realizando esta actividad artística, de forma empírica",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -697,7 +697,7 @@
         "etiqueta_enunciado":"d. Es una afición y la practica por gusto únicamente en su tiempo libre",
         "etiqueta_corta":"d. Es una afición y la practica por gusto únicamente en su tiempo libre",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -716,7 +716,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -735,7 +735,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -754,7 +754,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -773,7 +773,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -792,7 +792,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -811,7 +811,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -830,7 +830,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -849,7 +849,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -868,7 +868,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -887,7 +887,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -906,7 +906,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -925,7 +925,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -944,7 +944,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -963,7 +963,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -982,7 +982,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1001,7 +1001,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1020,7 +1020,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1039,7 +1039,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1058,7 +1058,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1077,7 +1077,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1096,7 +1096,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1115,7 +1115,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1134,7 +1134,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1153,7 +1153,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1172,7 +1172,7 @@
         "etiqueta_enunciado":"a. Obras de teatro (virtual o presencial)",
         "etiqueta_corta":"a. Obras de teatro (virtual o presencial)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1191,7 +1191,7 @@
         "etiqueta_enunciado":"b. Actividades y exposiciones de pintura, escultura otras artes plásticas o visuales (virtual o presencial)",
         "etiqueta_corta":"b. Actividades y exposiciones de pintura, escultura otras artes plásticas o visuales (virtual o presencial)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1210,7 +1210,7 @@
         "etiqueta_enunciado":"c. Presentaciones de danza (virtual o presencial)",
         "etiqueta_corta":"c. Presentaciones de danza (virtual o presencial)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1229,7 +1229,7 @@
         "etiqueta_enunciado":"d. Funciones de cine o espacios de exhibición para ver una película (virtual o presencial)",
         "etiqueta_corta":"d. Funciones de cine o espacios de exhibición para ver una película (virtual o presencial)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1248,7 +1248,7 @@
         "etiqueta_enunciado":"e. Presentaciones de música en vivo (virtual o presencial)",
         "etiqueta_corta":"e. Presentaciones de música en vivo (virtual o presencial)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1267,7 +1267,7 @@
         "etiqueta_enunciado":"f. Eventos literarios en librerías o bibliotecas (virtual o presencial)",
         "etiqueta_corta":"f. Eventos literarios en librerías o bibliotecas (virtual o presencial)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1286,7 +1286,7 @@
         "etiqueta_enunciado":"g. Talleres de lectura o escritura (virtual o presencial)",
         "etiqueta_corta":"g. Talleres de lectura o escritura (virtual o presencial)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1305,7 +1305,7 @@
         "etiqueta_enunciado":"h. Presentaciones artísticas en bibliotecas (virtual o presencial)",
         "etiqueta_corta":"h. Presentaciones artísticas en bibliotecas (virtual o presencial)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1324,7 +1324,7 @@
         "etiqueta_enunciado":"i. Actividades como performance, circo o clown (virtual o presencial)",
         "etiqueta_corta":"i. Actividades como performance, circo o clown (virtual o presencial)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1343,7 +1343,7 @@
         "etiqueta_enunciado":"j. Cuentería o Stand up comedy (virtual o presencial)",
         "etiqueta_corta":"j. Cuentería o Stand up comedy (virtual o presencial)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1362,7 +1362,7 @@
         "etiqueta_enunciado":"k. Obras artísticas para la primera infancia",
         "etiqueta_corta":"k. Obras artísticas para la primera infancia",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1381,7 +1381,7 @@
         "etiqueta_enunciado":"l. Exposiciones audiovisuales",
         "etiqueta_corta":"l. Exposiciones audiovisuales",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1400,7 +1400,7 @@
         "etiqueta_enunciado":"m. Presentaciones de procesos de formación artística en Crea (Centros de formación artística).",
         "etiqueta_corta":"m. Presentaciones de procesos de formación artística en Crea (Centros de formación artística).",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1419,7 +1419,7 @@
         "etiqueta_enunciado":"n. Eventos relacionados con videojuegos, aplicaciones u otro tipo de software",
         "etiqueta_corta":"n. Eventos relacionados con videojuegos, aplicaciones u otro tipo de software",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1438,7 +1438,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1457,7 +1457,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1476,7 +1476,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1495,7 +1495,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1514,7 +1514,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1533,7 +1533,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1552,7 +1552,7 @@
         "etiqueta_enunciado":"a. Escuchar música",
         "etiqueta_corta":"a. Escuchar música",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1571,7 +1571,7 @@
         "etiqueta_enunciado":"b. Ir a cine",
         "etiqueta_corta":"b. Ir a cine",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1590,7 +1590,7 @@
         "etiqueta_enunciado":"c. Ver películas o series en plataformas de streaming (Netflix, Prime video, Star+, HBO Max, etc)",
         "etiqueta_corta":"c. Ver películas o series en plataformas de streaming (Netflix, Prime video, Star+, HBO Max, etc)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1609,7 +1609,7 @@
         "etiqueta_enunciado":"d. Leer",
         "etiqueta_corta":"d. Leer",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1628,7 +1628,7 @@
         "etiqueta_enunciado":"e. Escribir",
         "etiqueta_corta":"e. Escribir",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1647,7 +1647,7 @@
         "etiqueta_enunciado":"F. Ver Televisión",
         "etiqueta_corta":"F. Ver Televisión",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1666,7 +1666,7 @@
         "etiqueta_enunciado":"g. Jugar videojuegos",
         "etiqueta_corta":"g. Jugar videojuegos",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1685,7 +1685,7 @@
         "etiqueta_enunciado":"a. Recorridos por el centro histórico",
         "etiqueta_corta":"a. Recorridos por el centro histórico",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1704,7 +1704,7 @@
         "etiqueta_enunciado":"b. Visitas a monumentos",
         "etiqueta_corta":"b. Visitas a monumentos",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1723,7 +1723,7 @@
         "etiqueta_enunciado":"c. Museos, virtual o presencial",
         "etiqueta_corta":"c. Museos, virtual o presencial",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1742,7 +1742,7 @@
         "etiqueta_enunciado":"d. Festivales y eventos culturales",
         "etiqueta_corta":"d. Festivales y eventos culturales",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1761,7 +1761,7 @@
         "etiqueta_enunciado":"e. Espacios reconocidos como patrimonio",
         "etiqueta_corta":"e. Espacios reconocidos como patrimonio",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1780,7 +1780,7 @@
         "etiqueta_enunciado":"f. Plazas fundacionales",
         "etiqueta_corta":"f. Plazas fundacionales",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1799,7 +1799,7 @@
         "etiqueta_enunciado":"g. Plazas de mercado",
         "etiqueta_corta":"g. Plazas de mercado",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1818,7 +1818,7 @@
         "etiqueta_enunciado":"h. Visitas a obras de arte en el espacio público",
         "etiqueta_corta":"h. Visitas a obras de arte en el espacio público",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1837,7 +1837,7 @@
         "etiqueta_enunciado":"i. Recorridos a corredores de murales y arte urbano",
         "etiqueta_corta":"i. Recorridos a corredores de murales y arte urbano",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1856,7 +1856,7 @@
         "etiqueta_enunciado":"j. Iglesias o centros religiosos",
         "etiqueta_corta":"j. Iglesias o centros religiosos",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1875,7 +1875,7 @@
         "etiqueta_enunciado":"k. Actividades artísticas y culturales para la primera infancia (0 a 6 años)",
         "etiqueta_corta":"k. Actividades artísticas y culturales para la primera infancia (0 a 6 años)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1894,7 +1894,7 @@
         "etiqueta_enunciado":"l. Manifestaciones y expresiones de pueblos y comunidades étnicas",
         "etiqueta_corta":"l. Manifestaciones y expresiones de pueblos y comunidades étnicas",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1913,7 +1913,7 @@
         "etiqueta_enunciado":"m. Eventos en salas de exposiciones o galerías de arte",
         "etiqueta_corta":"m. Eventos en salas de exposiciones o galerías de arte",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1932,7 +1932,7 @@
         "etiqueta_enunciado":"n. Actividades en alguno de los 15 Distritos Creativos de Bogotá",
         "etiqueta_corta":"n. Actividades en alguno de los 15 Distritos Creativos de Bogotá",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1951,7 +1951,7 @@
         "etiqueta_enunciado":"o. Recorridos por lugares naturales o rurales",
         "etiqueta_corta":"o. Recorridos por lugares naturales o rurales",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1970,7 +1970,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -1989,7 +1989,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2008,7 +2008,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2027,7 +2027,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2046,7 +2046,7 @@
         "etiqueta_enunciado":"a. Comprar libros o publicaciones",
         "etiqueta_corta":"a. Comprar libros o publicaciones",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2065,7 +2065,7 @@
         "etiqueta_enunciado":"b. Adquirir obras de artes plásticas",
         "etiqueta_corta":"b. Adquirir obras de artes plásticas",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2084,7 +2084,7 @@
         "etiqueta_enunciado":"c. Cine y audiovisuales",
         "etiqueta_corta":"c. Cine y audiovisuales",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2103,7 +2103,7 @@
         "etiqueta_enunciado":"d. Plataformas digitales para escuchar música y podcast",
         "etiqueta_corta":"d. Plataformas digitales para escuchar música y podcast",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2122,7 +2122,7 @@
         "etiqueta_enunciado":"e. Asistir a presentaciones de música en vivo, virtual o presencial",
         "etiqueta_corta":"e. Asistir a presentaciones de música en vivo, virtual o presencial",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2141,7 +2141,7 @@
         "etiqueta_enunciado":"f. Plataformas digitales o TV por suscripción",
         "etiqueta_corta":"f. Plataformas digitales o TV por suscripción",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2160,7 +2160,7 @@
         "etiqueta_enunciado":"g. Comprar CD, DVD y\/o acetatos",
         "etiqueta_corta":"g. Comprar CD, DVD y\/o acetatos",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2179,7 +2179,7 @@
         "etiqueta_enunciado":"h. Asistir a espacios de memoria y patrimonio (Museos)",
         "etiqueta_corta":"h. Asistir a espacios de memoria y patrimonio (Museos)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2198,7 +2198,7 @@
         "etiqueta_enunciado":"i. Asistir a presentaciones de artes vivas (teatro, danza, circo, performance, clown), de forma virtual o presencial",
         "etiqueta_corta":"i. Asistir a presentaciones de artes vivas (teatro, danza, circo, performance, clown), de forma virtual o presencial",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2217,7 +2217,7 @@
         "etiqueta_enunciado":"j. Manifestaciones étnicas y\/o culturales",
         "etiqueta_corta":"j. Manifestaciones étnicas y\/o culturales",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2236,7 +2236,7 @@
         "etiqueta_enunciado":"k. Formación en actividades artísticas o creativas",
         "etiqueta_corta":"k. Formación en actividades artísticas o creativas",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2255,7 +2255,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2274,7 +2274,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2293,7 +2293,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2312,7 +2312,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2331,7 +2331,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2350,7 +2350,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2369,7 +2369,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2388,7 +2388,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2407,7 +2407,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2426,7 +2426,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2445,7 +2445,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2464,7 +2464,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2483,7 +2483,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2502,7 +2502,7 @@
         "etiqueta_enunciado":"a. Cantar, crear o componer música, realizar o editar producciones fonográficas",
         "etiqueta_corta":"a. Cantar, crear o componer música, realizar o editar producciones fonográficas",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2521,7 +2521,7 @@
         "etiqueta_enunciado":"b. Interpretar instrumentos",
         "etiqueta_corta":"b. Interpretar instrumentos",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2540,7 +2540,7 @@
         "etiqueta_enunciado":"c. Escribir novela, poesía, cuento, ensayo, crónica, historieta o cómic, dramaturgia, guion, cartas, diarios, blogs, chats. u\notros",
         "etiqueta_corta":"c. Escribir novela, poesía, cuento, ensayo, crónica, historieta o cómic, dramaturgia, guion, cartas, diarios, blogs, chats. u\notros",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2559,7 +2559,7 @@
         "etiqueta_enunciado":"d. Expresarse verbalmente (narración oral, lectura en voz alta, podcats, cuentería o stad up, debates)",
         "etiqueta_corta":"d. Expresarse verbalmente (narración oral, lectura en voz alta, podcats, cuentería o stad up, debates)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2578,7 +2578,7 @@
         "etiqueta_enunciado":"e. Esculpir, tejer, bordar, tallar, moldear, confeccionar y\/o reparar.",
         "etiqueta_corta":"e. Esculpir, tejer, bordar, tallar, moldear, confeccionar y\/o reparar.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2597,7 +2597,7 @@
         "etiqueta_enunciado":"f. Pintar, dibujar, fotografiar",
         "etiqueta_corta":"f. Pintar, dibujar, fotografiar",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2616,7 +2616,7 @@
         "etiqueta_enunciado":"g. Diseñar instalaciones y escenografías",
         "etiqueta_corta":"g. Diseñar instalaciones y escenografías",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2635,7 +2635,7 @@
         "etiqueta_enunciado":"h. Bailar",
         "etiqueta_corta":"h. Bailar",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2654,7 +2654,7 @@
         "etiqueta_enunciado":"i. Dirigir, realizar o actuar en espectáculos escénicos (teatrales, dancísticos, musicales, circenses, coreografías, performances, cuentería, stand up comedy)",
         "etiqueta_corta":"i. Dirigir, realizar o actuar en espectáculos escénicos (teatrales, dancísticos, musicales, circenses, coreografías, performances, cuentería, stand up comedy)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2673,7 +2673,7 @@
         "etiqueta_enunciado":"j. Realizar, filmar, animar o editar películas, videos, contenidos audiovisuales o digitales",
         "etiqueta_corta":"j. Realizar, filmar, animar o editar películas, videos, contenidos audiovisuales o digitales",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2692,7 +2692,7 @@
         "etiqueta_enunciado":"k. Diseñar, crear contenidos publicitarios",
         "etiqueta_corta":"k. Diseñar, crear contenidos publicitarios",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2711,7 +2711,7 @@
         "etiqueta_enunciado":"l. Diseñar, crear, fabricar juguetes",
         "etiqueta_corta":"l. Diseñar, crear, fabricar juguetes",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2730,7 +2730,7 @@
         "etiqueta_enunciado":"m. Diseñar, crear, fabricar instrumentos musicales",
         "etiqueta_corta":"m. Diseñar, crear, fabricar instrumentos musicales",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2749,7 +2749,7 @@
         "etiqueta_enunciado":"n. Diseñar, crear, fabricar joyería.",
         "etiqueta_corta":"n. Diseñar, crear, fabricar joyería.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2768,7 +2768,7 @@
         "etiqueta_enunciado":"o. Crear videojuegos, dispositivos tecnológicos, aplicaciones u otro tipo de software",
         "etiqueta_corta":"o. Crear videojuegos, dispositivos tecnológicos, aplicaciones u otro tipo de software",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2787,7 +2787,7 @@
         "etiqueta_enunciado":"p. Cocinar o hacer bebidas como forma de mantener o fusionar tradiciones o saberes",
         "etiqueta_corta":"p. Cocinar o hacer bebidas como forma de mantener o fusionar tradiciones o saberes",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2806,7 +2806,7 @@
         "etiqueta_enunciado":"q. Conservación, salvaguarda o activación de los patrimonios en la ciudad (bienes materiales o inmateriales, culturales, naturales y\/o prácticas)",
         "etiqueta_corta":"q. Conservación, salvaguarda o activación de los patrimonios en la ciudad (bienes materiales o inmateriales, culturales, naturales y\/o prácticas)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2825,7 +2825,7 @@
         "etiqueta_enunciado":"r. Otra actividad artística, creativa, cultural o patrimonial que considere propia, de su vida cultural o tradiciones (de su vida cotidiana, costumbres, su entorno) ¿Cuál?",
         "etiqueta_corta":"r. Otra actividad artística, creativa, cultural o patrimonial que considere propia, de su vida cultural o tradiciones (de su vida cotidiana, costumbres, su entorno) ¿Cuál?",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2844,7 +2844,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2863,7 +2863,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2882,7 +2882,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2901,7 +2901,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2920,7 +2920,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2939,7 +2939,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2958,7 +2958,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2977,7 +2977,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -2996,7 +2996,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3015,7 +3015,7 @@
         "etiqueta_enunciado":"a. Espacios y centros de formación del Distrito o de sus entidades adscritas",
         "etiqueta_corta":"a. Espacios y centros de formación del Distrito o de sus entidades adscritas",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3034,7 +3034,7 @@
         "etiqueta_enunciado":"b. Centros Educativos (Escuelas, Colegios, Universidades)",
         "etiqueta_corta":"b. Centros Educativos (Escuelas, Colegios, Universidades)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3053,7 +3053,7 @@
         "etiqueta_enunciado":"c. Clubes o cajas de compensación",
         "etiqueta_corta":"c. Clubes o cajas de compensación",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3072,7 +3072,7 @@
         "etiqueta_enunciado":"d. Espacios culturales (teatros, bibliotecas, librerías, museos)",
         "etiqueta_corta":"d. Espacios culturales (teatros, bibliotecas, librerías, museos)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3091,7 +3091,7 @@
         "etiqueta_enunciado":"e. Espacios comunitarios como Casas de la Cultura, Salones Comunales",
         "etiqueta_corta":"e. Espacios comunitarios como Casas de la Cultura, Salones Comunales",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3110,7 +3110,7 @@
         "etiqueta_enunciado":"f. Centros de Desarrollo Comunitario, Manzanas del Cuidado",
         "etiqueta_corta":"f. Centros de Desarrollo Comunitario, Manzanas del Cuidado",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3129,7 +3129,7 @@
         "etiqueta_enunciado":"g. Plataformas virtuales",
         "etiqueta_corta":"g. Plataformas virtuales",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3148,7 +3148,7 @@
         "etiqueta_enunciado":"h. Propia casa",
         "etiqueta_corta":"h. Propia casa",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3167,7 +3167,7 @@
         "etiqueta_enunciado":"a. Centros de formación artística Crea - Idartes",
         "etiqueta_corta":"a. Centros de formación artística Crea - Idartes",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3186,7 +3186,7 @@
         "etiqueta_enunciado":"b. Espacios físicos Nidos - Idartes",
         "etiqueta_corta":"b. Espacios físicos Nidos - Idartes",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3205,7 +3205,7 @@
         "etiqueta_enunciado":"c. Espacios físicos Planetario de Bogotá Idartes",
         "etiqueta_corta":"c. Espacios físicos Planetario de Bogotá Idartes",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3224,7 +3224,7 @@
         "etiqueta_enunciado":"d. Centros filarmónicos de la Orquesta Filarmónica de Bogotá - OFB",
         "etiqueta_corta":"d. Centros filarmónicos de la Orquesta Filarmónica de Bogotá - OFB",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3243,7 +3243,7 @@
         "etiqueta_enunciado":"a. Artes plásticas y visuales",
         "etiqueta_corta":"a. Artes plásticas y visuales",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3262,7 +3262,7 @@
         "etiqueta_enunciado":"b. Audiovisuales",
         "etiqueta_corta":"b. Audiovisuales",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3281,7 +3281,7 @@
         "etiqueta_enunciado":"c. Creación digital",
         "etiqueta_corta":"c. Creación digital",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3300,7 +3300,7 @@
         "etiqueta_enunciado":"d. Danza",
         "etiqueta_corta":"d. Danza",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3319,7 +3319,7 @@
         "etiqueta_enunciado":"e. Literatura (escritura, lectura y oralidad)",
         "etiqueta_corta":"e. Literatura (escritura, lectura y oralidad)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3338,7 +3338,7 @@
         "etiqueta_enunciado":"f. Música",
         "etiqueta_corta":"f. Música",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3357,7 +3357,7 @@
         "etiqueta_enunciado":"g. Música sinfónica",
         "etiqueta_corta":"g. Música sinfónica",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3376,7 +3376,7 @@
         "etiqueta_enunciado":"h. Teatro o circo",
         "etiqueta_corta":"h. Teatro o circo",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3395,7 +3395,7 @@
         "etiqueta_enunciado":"a. Reconocer y percibir el propio cuerpo y cuidar de él.",
         "etiqueta_corta":"a. Reconocer y percibir el propio cuerpo y cuidar de él.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3414,7 +3414,7 @@
         "etiqueta_enunciado":"b. Reconocer y cuidar el cuerpo de las demás personas.",
         "etiqueta_corta":"b. Reconocer y cuidar el cuerpo de las demás personas.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3433,7 +3433,7 @@
         "etiqueta_enunciado":"c. Reconocer sus propias emociones, sentimientos e ideas.",
         "etiqueta_corta":"c. Reconocer sus propias emociones, sentimientos e ideas.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3452,7 +3452,7 @@
         "etiqueta_enunciado":"d. Expresar libremente sus sentimientos, emociones, pensamientos e ideas con su entorno.",
         "etiqueta_corta":"d. Expresar libremente sus sentimientos, emociones, pensamientos e ideas con su entorno.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3471,7 +3471,7 @@
         "etiqueta_enunciado":"e. Imaginar otros mundos posibles desde el arte, la cultura y\/o el patrimonio.",
         "etiqueta_corta":"e. Imaginar otros mundos posibles desde el arte, la cultura y\/o el patrimonio.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3490,7 +3490,7 @@
         "etiqueta_enunciado":"f. Expresar, crear y proponer otras miradas desde el arte, la cultura y\/o el patrimonio.",
         "etiqueta_corta":"f. Expresar, crear y proponer otras miradas desde el arte, la cultura y\/o el patrimonio.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3509,7 +3509,7 @@
         "etiqueta_enunciado":"g. Disfrutar, percibir, vivenciar experiencias con el arte, la cultura y\/o el patrimonio.",
         "etiqueta_corta":"g. Disfrutar, percibir, vivenciar experiencias con el arte, la cultura y\/o el patrimonio.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3528,7 +3528,7 @@
         "etiqueta_enunciado":"h. Comprender y reflexionar sobre procesos, obras, experiencias de creaciones propias y\/o de otros.",
         "etiqueta_corta":"h. Comprender y reflexionar sobre procesos, obras, experiencias de creaciones propias y\/o de otros.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3547,7 +3547,7 @@
         "etiqueta_enunciado":"i. Elegir y expresar libremente sus prácticas artísticas y culturales.",
         "etiqueta_corta":"i. Elegir y expresar libremente sus prácticas artísticas y culturales.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3566,7 +3566,7 @@
         "etiqueta_enunciado":"j. Participar en grupos en los que las expresiones artísticas, culturales y\/o patrimoniales generan un cambio social en\nsu contexto (casa, barrio, ciudad, etc.).",
         "etiqueta_corta":"j. Participar en grupos en los que las expresiones artísticas, culturales y\/o patrimoniales generan un cambio social en\nsu contexto (casa, barrio, ciudad, etc.).",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3585,7 +3585,7 @@
         "etiqueta_enunciado":"k. Comprender, valorar o reflexionar sobre las experiencias propias para contribuir a la reflexión colectiva.",
         "etiqueta_corta":"k. Comprender, valorar o reflexionar sobre las experiencias propias para contribuir a la reflexión colectiva.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3604,7 +3604,7 @@
         "etiqueta_enunciado":"l. Resignificar y proyectar la memoria y las experiencias colectivas.",
         "etiqueta_corta":"l. Resignificar y proyectar la memoria y las experiencias colectivas.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3623,7 +3623,7 @@
         "etiqueta_enunciado":"m. Reconocer y valorar ideas, opiniones, costumbres diferentes a las propias.",
         "etiqueta_corta":"m. Reconocer y valorar ideas, opiniones, costumbres diferentes a las propias.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3642,7 +3642,7 @@
         "etiqueta_enunciado":"n. Reconocer, respetar y valorar su identidad y la diversidad de culturas como una riqueza de la ciudad.",
         "etiqueta_corta":"n. Reconocer, respetar y valorar su identidad y la diversidad de culturas como una riqueza de la ciudad.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3661,7 +3661,7 @@
         "etiqueta_enunciado":"a. Reflexionar sobre sus propias experiencias y aportar a la memoria colectiva.",
         "etiqueta_corta":"a. Reflexionar sobre sus propias experiencias y aportar a la memoria colectiva.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3680,7 +3680,7 @@
         "etiqueta_enunciado":"b. Participar en prácticas vinculadas al cuidado del entorno natural o la defensa del territorio.",
         "etiqueta_corta":"b. Participar en prácticas vinculadas al cuidado del entorno natural o la defensa del territorio.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3699,7 +3699,7 @@
         "etiqueta_enunciado":"c. Conocer, valorar o dialogar con culturas diferentes a la suya.",
         "etiqueta_corta":"c. Conocer, valorar o dialogar con culturas diferentes a la suya.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3718,7 +3718,7 @@
         "etiqueta_enunciado":"d. Compartir aprendizajes con personas de diferentes edades, géneros o comunidades.",
         "etiqueta_corta":"d. Compartir aprendizajes con personas de diferentes edades, géneros o comunidades.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3737,7 +3737,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3756,7 +3756,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3775,7 +3775,7 @@
         "etiqueta_enunciado":"a. Plazas",
         "etiqueta_corta":"a. Plazas",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3794,7 +3794,7 @@
         "etiqueta_enunciado":"b. Parques",
         "etiqueta_corta":"b. Parques",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3813,7 +3813,7 @@
         "etiqueta_enunciado":"c. Calles",
         "etiqueta_corta":"c. Calles",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3832,7 +3832,7 @@
         "etiqueta_enunciado":"d. Transporte",
         "etiqueta_corta":"d. Transporte",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3851,7 +3851,7 @@
         "etiqueta_enunciado":"e. Barrios",
         "etiqueta_corta":"e. Barrios",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3870,7 +3870,7 @@
         "etiqueta_enunciado":"f. Otra ",
         "etiqueta_corta":"f. Otra ",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3889,7 +3889,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3908,7 +3908,7 @@
         "etiqueta_enunciado":"a. Funciona en la ciudad (plazas, parques, calles, barrios, transporte, etc.) como escenario de aprendizaje.",
         "etiqueta_corta":"a. Funciona en la ciudad (plazas, parques, calles, barrios, transporte, etc.) como escenario de aprendizaje.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3927,7 +3927,7 @@
         "etiqueta_enunciado":"b. Ofrece oportunidades fuera de los equipamientos formales.",
         "etiqueta_corta":"b. Ofrece oportunidades fuera de los equipamientos formales.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3946,7 +3946,7 @@
         "etiqueta_enunciado":"c. Favorece la transformación social en la ciudad y en los entornos comunitarios.",
         "etiqueta_corta":"c. Favorece la transformación social en la ciudad y en los entornos comunitarios.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3965,7 +3965,7 @@
         "etiqueta_enunciado":"d. Resignifica la memoria colectiva y las experiencias compartidas.",
         "etiqueta_corta":"d. Resignifica la memoria colectiva y las experiencias compartidas.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -3984,7 +3984,7 @@
         "etiqueta_enunciado":"e. Favorece el cuidado del entorno natural y la defensa del territorio.",
         "etiqueta_corta":"e. Favorece el cuidado del entorno natural y la defensa del territorio.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4003,7 +4003,7 @@
         "etiqueta_enunciado":"f. Fortalece la confianza comunitaria, la voz colectiva y la resolución de conflictos.",
         "etiqueta_corta":"f. Fortalece la confianza comunitaria, la voz colectiva y la resolución de conflictos.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4022,7 +4022,7 @@
         "etiqueta_enunciado":"g. Permite valorar la diversidad cultural y dialogar con personas de culturas distintas.",
         "etiqueta_corta":"g. Permite valorar la diversidad cultural y dialogar con personas de culturas distintas.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4041,7 +4041,7 @@
         "etiqueta_enunciado":"h. Fomenta la libre elección y expresión de prácticas artísticas y culturales.",
         "etiqueta_corta":"h. Fomenta la libre elección y expresión de prácticas artísticas y culturales.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4060,7 +4060,7 @@
         "etiqueta_enunciado":"i. Integra el uso de tecnologías digitales (plataformas, IA, realidad virtual, etc.).",
         "etiqueta_corta":"i. Integra el uso de tecnologías digitales (plataformas, IA, realidad virtual, etc.).",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4079,7 +4079,7 @@
         "etiqueta_enunciado":"j. Aporta a la innovación científica, tecnológica y social de la ciudad.",
         "etiqueta_corta":"j. Aporta a la innovación científica, tecnológica y social de la ciudad.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4098,7 +4098,7 @@
         "etiqueta_enunciado":"a. Biblioteca pública",
         "etiqueta_corta":"a. Biblioteca pública",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4117,7 +4117,7 @@
         "etiqueta_enunciado":"b. Bibliotecas comunitarias",
         "etiqueta_corta":"b. Bibliotecas comunitarias",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4136,7 +4136,7 @@
         "etiqueta_enunciado":"c. Bibloestación",
         "etiqueta_corta":"c. Bibloestación",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4155,7 +4155,7 @@
         "etiqueta_enunciado":"d. Paradero para libros para parques - PPP",
         "etiqueta_corta":"d. Paradero para libros para parques - PPP",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4174,7 +4174,7 @@
         "etiqueta_enunciado":"e. Museo",
         "etiqueta_corta":"e. Museo",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4193,7 +4193,7 @@
         "etiqueta_enunciado":"f. Teatro",
         "etiqueta_corta":"f. Teatro",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4212,7 +4212,7 @@
         "etiqueta_enunciado":"g. Salas de exposición y galerías",
         "etiqueta_corta":"g. Salas de exposición y galerías",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4231,7 +4231,7 @@
         "etiqueta_enunciado":"h. Centros culturales",
         "etiqueta_corta":"h. Centros culturales",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4250,7 +4250,7 @@
         "etiqueta_enunciado":"i. Salas de cine",
         "etiqueta_corta":"i. Salas de cine",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4269,7 +4269,7 @@
         "etiqueta_enunciado":"j. Salas concertadas (teatro)",
         "etiqueta_corta":"j. Salas concertadas (teatro)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4288,7 +4288,7 @@
         "etiqueta_enunciado":"k. Casa de la cultura",
         "etiqueta_corta":"k. Casa de la cultura",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4307,7 +4307,7 @@
         "etiqueta_enunciado":"l. Librerías",
         "etiqueta_corta":"l. Librerías",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4326,7 +4326,7 @@
         "etiqueta_enunciado":"m. Escenarios Móviles",
         "etiqueta_corta":"m. Escenarios Móviles",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4345,7 +4345,7 @@
         "etiqueta_enunciado":"n. Centros Crea",
         "etiqueta_corta":"n. Centros Crea",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4364,7 +4364,7 @@
         "etiqueta_enunciado":"o. Laboratorios artísticos para primera infancia",
         "etiqueta_corta":"o. Laboratorios artísticos para primera infancia",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4383,7 +4383,7 @@
         "etiqueta_enunciado":"p. Manzanas del Cuidado",
         "etiqueta_corta":"p. Manzanas del Cuidado",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4402,7 +4402,7 @@
         "etiqueta_enunciado":"q. Centros de Desarrollo Comunitario - CDC",
         "etiqueta_corta":"q. Centros de Desarrollo Comunitario - CDC",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4421,7 +4421,7 @@
         "etiqueta_enunciado":"a. Biblioteca pública",
         "etiqueta_corta":"a. Biblioteca pública",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4440,7 +4440,7 @@
         "etiqueta_enunciado":"b. Bibliotecas comunitarias",
         "etiqueta_corta":"b. Bibliotecas comunitarias",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4459,7 +4459,7 @@
         "etiqueta_enunciado":"c. Bibloestaciones",
         "etiqueta_corta":"c. Bibloestaciones",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4478,7 +4478,7 @@
         "etiqueta_enunciado":"d. Paraderos para libros para parques - PPP",
         "etiqueta_corta":"d. Paraderos para libros para parques - PPP",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4497,7 +4497,7 @@
         "etiqueta_enunciado":"e. Museos",
         "etiqueta_corta":"e. Museos",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4516,7 +4516,7 @@
         "etiqueta_enunciado":"f. Teatros",
         "etiqueta_corta":"f. Teatros",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4535,7 +4535,7 @@
         "etiqueta_enunciado":"g. Salas de exposición y galerías",
         "etiqueta_corta":"g. Salas de exposición y galerías",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4554,7 +4554,7 @@
         "etiqueta_enunciado":"h. Centros culturales",
         "etiqueta_corta":"h. Centros culturales",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4573,7 +4573,7 @@
         "etiqueta_enunciado":"i. Salas de cine",
         "etiqueta_corta":"i. Salas de cine",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4592,7 +4592,7 @@
         "etiqueta_enunciado":"j. Salas concertadas (teatro)",
         "etiqueta_corta":"j. Salas concertadas (teatro)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4611,7 +4611,7 @@
         "etiqueta_enunciado":"k. Casas de la cultura",
         "etiqueta_corta":"k. Casas de la cultura",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4630,7 +4630,7 @@
         "etiqueta_enunciado":"l. Librerías",
         "etiqueta_corta":"l. Librerías",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4649,7 +4649,7 @@
         "etiqueta_enunciado":"m. Escenarios Móviles",
         "etiqueta_corta":"m. Escenarios Móviles",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4668,7 +4668,7 @@
         "etiqueta_enunciado":"n. Centros Crea",
         "etiqueta_corta":"n. Centros Crea",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4687,7 +4687,7 @@
         "etiqueta_enunciado":"o. Laboratorios artísticos para primera infancia",
         "etiqueta_corta":"o. Laboratorios artísticos para primera infancia",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4706,7 +4706,7 @@
         "etiqueta_enunciado":"p. Manzanas del Cuidado",
         "etiqueta_corta":"p. Manzanas del Cuidado",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4725,7 +4725,7 @@
         "etiqueta_enunciado":"q. Centros de Desarrollo Comunitario - CDC",
         "etiqueta_corta":"q. Centros de Desarrollo Comunitario - CDC",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4744,7 +4744,7 @@
         "etiqueta_enunciado":"a. Biblioteca pública",
         "etiqueta_corta":"a. Biblioteca pública",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4763,7 +4763,7 @@
         "etiqueta_enunciado":"b. Bibliotecas comunitarias",
         "etiqueta_corta":"b. Bibliotecas comunitarias",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4782,7 +4782,7 @@
         "etiqueta_enunciado":"c. Bibloestaciones",
         "etiqueta_corta":"c. Bibloestaciones",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4801,7 +4801,7 @@
         "etiqueta_enunciado":"d. Paraderos para libros para parques - PPP",
         "etiqueta_corta":"d. Paraderos para libros para parques - PPP",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4820,7 +4820,7 @@
         "etiqueta_enunciado":"e. Museos",
         "etiqueta_corta":"e. Museos",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4839,7 +4839,7 @@
         "etiqueta_enunciado":"f. Teatros",
         "etiqueta_corta":"f. Teatros",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4858,7 +4858,7 @@
         "etiqueta_enunciado":"g. Salas de exposición y galerías",
         "etiqueta_corta":"g. Salas de exposición y galerías",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4877,7 +4877,7 @@
         "etiqueta_enunciado":"h. Centros culturales",
         "etiqueta_corta":"h. Centros culturales",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4896,7 +4896,7 @@
         "etiqueta_enunciado":"i. Salas de cine",
         "etiqueta_corta":"i. Salas de cine",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4915,7 +4915,7 @@
         "etiqueta_enunciado":"j. Salas concertadas (teatro)",
         "etiqueta_corta":"j. Salas concertadas (teatro)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4934,7 +4934,7 @@
         "etiqueta_enunciado":"k. Casas de la cultura",
         "etiqueta_corta":"k. Casas de la cultura",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4953,7 +4953,7 @@
         "etiqueta_enunciado":"l. Librerías",
         "etiqueta_corta":"l. Librerías",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4972,7 +4972,7 @@
         "etiqueta_enunciado":"m. Escenarios Móviles",
         "etiqueta_corta":"m. Escenarios Móviles",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -4991,7 +4991,7 @@
         "etiqueta_enunciado":"n. Centros Crea",
         "etiqueta_corta":"n. Centros Crea",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5010,7 +5010,7 @@
         "etiqueta_enunciado":"o. Laboratorios artísticos para primera infancia",
         "etiqueta_corta":"o. Laboratorios artísticos para primera infancia",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5029,7 +5029,7 @@
         "etiqueta_enunciado":"p. Manzanas del Cuidado",
         "etiqueta_corta":"p. Manzanas del Cuidado",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5048,7 +5048,7 @@
         "etiqueta_enunciado":"q. Centros de Desarrollo Comunitario - CDC",
         "etiqueta_corta":"q. Centros de Desarrollo Comunitario - CDC",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5067,7 +5067,7 @@
         "etiqueta_enunciado":"a. Plazas de mercado",
         "etiqueta_corta":"a. Plazas de mercado",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5086,7 +5086,7 @@
         "etiqueta_enunciado":"b. Jardines infantiles",
         "etiqueta_corta":"b. Jardines infantiles",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5105,7 +5105,7 @@
         "etiqueta_enunciado":"c. Salas intergeneracionales",
         "etiqueta_corta":"c. Salas intergeneracionales",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5124,7 +5124,7 @@
         "etiqueta_enunciado":"d. Salas de pensamiento",
         "etiqueta_corta":"d. Salas de pensamiento",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5143,7 +5143,7 @@
         "etiqueta_enunciado":"e. Casas de pensamiento intercultural",
         "etiqueta_corta":"e. Casas de pensamiento intercultural",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5162,7 +5162,7 @@
         "etiqueta_enunciado":"f. Centro DIA",
         "etiqueta_corta":"f. Centro DIA",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5181,7 +5181,7 @@
         "etiqueta_enunciado":"g. Hogares de paso",
         "etiqueta_corta":"g. Hogares de paso",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5200,7 +5200,7 @@
         "etiqueta_enunciado":"h. Bares y restaurantes",
         "etiqueta_corta":"h. Bares y restaurantes",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5219,7 +5219,7 @@
         "etiqueta_enunciado":"i. Hostales y\/o hoteles",
         "etiqueta_corta":"i. Hostales y\/o hoteles",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5238,7 +5238,7 @@
         "etiqueta_enunciado":"a. Teatro Jorge Eliécer Gaitán",
         "etiqueta_corta":"a. Teatro Jorge Eliécer Gaitán",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5257,7 +5257,7 @@
         "etiqueta_enunciado":"b. Teatro La Media Torta",
         "etiqueta_corta":"b. Teatro La Media Torta",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5276,7 +5276,7 @@
         "etiqueta_enunciado":"c. Teatro El Ensueño",
         "etiqueta_corta":"c. Teatro El Ensueño",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5295,7 +5295,7 @@
         "etiqueta_enunciado":"d. Planetario de Bogotá",
         "etiqueta_corta":"d. Planetario de Bogotá",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5314,7 +5314,7 @@
         "etiqueta_enunciado":"e. Escenarios Móviles",
         "etiqueta_corta":"e. Escenarios Móviles",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5333,7 +5333,7 @@
         "etiqueta_enunciado":"f. Teatro el Parque",
         "etiqueta_corta":"f. Teatro el Parque",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5352,7 +5352,7 @@
         "etiqueta_enunciado":"g. Centro Cultural Compartir en Sumapaz",
         "etiqueta_corta":"g. Centro Cultural Compartir en Sumapaz",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5371,7 +5371,7 @@
         "etiqueta_enunciado":"h. Cinemateca de Bogotá (Sede Principal)",
         "etiqueta_corta":"h. Cinemateca de Bogotá (Sede Principal)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5390,7 +5390,7 @@
         "etiqueta_enunciado":"i. Espacios de la Fundación Gilberto Alzate Avendaño - FUGA (auditorio, salas de exposición y el Muelle.",
         "etiqueta_corta":"i. Espacios de la Fundación Gilberto Alzate Avendaño - FUGA (auditorio, salas de exposición y el Muelle.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5409,7 +5409,7 @@
         "etiqueta_enunciado":"j. El Castillo de las Artes",
         "etiqueta_corta":"j. El Castillo de las Artes",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5428,7 +5428,7 @@
         "etiqueta_enunciado":"k. Teatro Julio Mario Santo Domingo",
         "etiqueta_corta":"k. Teatro Julio Mario Santo Domingo",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5447,7 +5447,7 @@
         "etiqueta_enunciado":"l. Casona de la Danza",
         "etiqueta_corta":"l. Casona de la Danza",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5466,7 +5466,7 @@
         "etiqueta_enunciado":"m. Centro Felicidad de Chapinero",
         "etiqueta_corta":"m. Centro Felicidad de Chapinero",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5485,7 +5485,7 @@
         "etiqueta_enunciado":"n. Galería Santa Fe",
         "etiqueta_corta":"n. Galería Santa Fe",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5504,7 +5504,7 @@
         "etiqueta_enunciado":"a. Teatro Jorge Eliécer Gaitán",
         "etiqueta_corta":"a. Teatro Jorge Eliécer Gaitán",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5523,7 +5523,7 @@
         "etiqueta_enunciado":"b. Teatro La Media Torta",
         "etiqueta_corta":"b. Teatro La Media Torta",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5542,7 +5542,7 @@
         "etiqueta_enunciado":"c. Teatro El Ensueño",
         "etiqueta_corta":"c. Teatro El Ensueño",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5561,7 +5561,7 @@
         "etiqueta_enunciado":"d. Planetario de Bogotá",
         "etiqueta_corta":"d. Planetario de Bogotá",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5580,7 +5580,7 @@
         "etiqueta_enunciado":"e. Escenarios Móviles",
         "etiqueta_corta":"e. Escenarios Móviles",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5599,7 +5599,7 @@
         "etiqueta_enunciado":"f. Teatro el Parque",
         "etiqueta_corta":"f. Teatro el Parque",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5618,7 +5618,7 @@
         "etiqueta_enunciado":"g. Centro Cultural Compartir en Sumapaz",
         "etiqueta_corta":"g. Centro Cultural Compartir en Sumapaz",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5637,7 +5637,7 @@
         "etiqueta_enunciado":"h. Cinemateca de Bogotá (Sede Principal)",
         "etiqueta_corta":"h. Cinemateca de Bogotá (Sede Principal)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5656,7 +5656,7 @@
         "etiqueta_enunciado":"i. Espacios de la Fundación Gilberto Alzate Avendaño - FUGA (auditorio, salas de exposición y el Muelle.",
         "etiqueta_corta":"i. Espacios de la Fundación Gilberto Alzate Avendaño - FUGA (auditorio, salas de exposición y el Muelle.",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5675,7 +5675,7 @@
         "etiqueta_enunciado":"j. El Castillo de las Artes",
         "etiqueta_corta":"j. El Castillo de las Artes",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5694,7 +5694,7 @@
         "etiqueta_enunciado":"k. Teatro Julio Mario Santo Domingo",
         "etiqueta_corta":"k. Teatro Julio Mario Santo Domingo",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5713,7 +5713,7 @@
         "etiqueta_enunciado":"l. Casona de la Danza",
         "etiqueta_corta":"l. Casona de la Danza",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5732,7 +5732,7 @@
         "etiqueta_enunciado":"m. Centro Felicidad de Chapinero",
         "etiqueta_corta":"m. Centro Felicidad de Chapinero",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5751,7 +5751,7 @@
         "etiqueta_enunciado":"n. Galería Santa Fe",
         "etiqueta_corta":"n. Galería Santa Fe",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5770,7 +5770,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5789,7 +5789,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5808,7 +5808,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5827,7 +5827,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5846,7 +5846,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5865,7 +5865,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5884,7 +5884,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5903,7 +5903,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5922,7 +5922,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5941,7 +5941,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5960,7 +5960,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5979,7 +5979,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -5998,7 +5998,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6017,7 +6017,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":"calculada",
         "variable_nombre":null,
         "unidad_medida":null
@@ -6036,7 +6036,26 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
+        "tags":"calculada",
+        "variable_nombre":null,
+        "unidad_medida":null
+    },
+    {
+        "indice_pregunta":115,
+        "indice_variable":370,
+        "columna":"NG",
+        "codigo_variable":"P39",
+        "num_seccion":6,
+        "pregunta":39,
+        "titulo":null,
+        "tipo":"category",
+        "etiqueta_orden":null,
+        "enunciado_2":null,
+        "etiqueta_enunciado":null,
+        "etiqueta_corta":null,
+        "grupo":null,
+        "en_cubo":1,
         "tags":"calculada",
         "variable_nombre":null,
         "unidad_medida":null
@@ -6055,7 +6074,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6074,7 +6093,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6093,7 +6112,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6112,7 +6131,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6131,7 +6150,7 @@
         "etiqueta_enunciado":"a. Pueblos, grupos y comunidades étnicas (indígenas, afrocolombianos, negros, palenqueros, raizales, rom)",
         "etiqueta_corta":"a. Pueblos, grupos y comunidades étnicas (indígenas, afrocolombianos, negros, palenqueros, raizales, rom)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6150,7 +6169,7 @@
         "etiqueta_enunciado":"b. Etários (Niños, niñas y adolescentes, jóvenes, adultos, personas mayores)",
         "etiqueta_corta":"b. Etários (Niños, niñas y adolescentes, jóvenes, adultos, personas mayores)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6169,7 +6188,7 @@
         "etiqueta_enunciado":"c. Sectores sociales (mujeres, LGBTIQ+, migrante, personas con discapacidad, víctimas del conflicto, personas en\nproceso de reintegración o reincorporción, población rural o campesina, personas que ejercen actividades sexuales\npagas)",
         "etiqueta_corta":"c. Sectores sociales (mujeres, LGBTIQ+, migrante, personas con discapacidad, víctimas del conflicto, personas en\nproceso de reintegración o reincorporción, población rural o campesina, personas que ejercen actividades sexuales\npagas)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6188,7 +6207,7 @@
         "etiqueta_enunciado":"d. Nuevas expresiones (animalistas, ambientalistas, usuarios de movilidad sostenible, expresiones sociales de fútbol)",
         "etiqueta_corta":"d. Nuevas expresiones (animalistas, ambientalistas, usuarios de movilidad sostenible, expresiones sociales de fútbol)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6207,7 +6226,7 @@
         "etiqueta_enunciado":"e. Grupo o colectivo artístico, creativo o patrimonial",
         "etiqueta_corta":"e. Grupo o colectivo artístico, creativo o patrimonial",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6226,7 +6245,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6245,7 +6264,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6264,7 +6283,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6283,7 +6302,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6302,7 +6321,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6321,7 +6340,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6340,7 +6359,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6359,7 +6378,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6378,7 +6397,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6397,7 +6416,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6412,11 +6431,11 @@
         "titulo":null,
         "tipo":"category",
         "etiqueta_orden":null,
-        "enunciado_2":"Crea o produce expresiones culturales o patrimoniales (arte, memoria, saberes, contenidos).",
+        "enunciado_2":"Crea o produce expresiones culturales o patrimoniales (arte, memoria, saberes, contenidos)",
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6435,7 +6454,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6450,11 +6469,11 @@
         "titulo":null,
         "tipo":"category",
         "etiqueta_orden":null,
-        "enunciado_2":"Enseña, media o transmite conocimiento sobre expresiones culturales o patrimoniales.",
+        "enunciado_2":"Enseña, media o transmite conocimiento sobre expresiones culturales o patrimoniales",
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6473,7 +6492,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6488,11 +6507,11 @@
         "titulo":null,
         "tipo":"category",
         "etiqueta_orden":null,
-        "enunciado_2":"Participa activamente en espacios de incidencia cultural (mesas, consejos, iniciativas ciudadanas",
+        "enunciado_2":"Participa activamente en espacios de incidencia cultural (mesas, consejos, iniciativas ciudadanas)",
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6507,11 +6526,11 @@
         "titulo":null,
         "tipo":"category",
         "etiqueta_orden":null,
-        "enunciado_2":"Difunde o visibiliza expresiones culturales a través de redes, medios, o con otras personas.",
+        "enunciado_2":"Difunde o visibiliza expresiones culturales a través de redes, medios, o con otras personas",
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6526,11 +6545,11 @@
         "titulo":null,
         "tipo":"category",
         "etiqueta_orden":null,
-        "enunciado_2":"Asiste, observa o participa como público en actividades culturales o patrimoniales.",
+        "enunciado_2":"Asiste, observa o participa como público en actividades culturales o patrimoniales",
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6545,11 +6564,11 @@
         "titulo":null,
         "tipo":"category",
         "etiqueta_orden":null,
-        "enunciado_2":"Busca y aprende sobre expresiones culturales por interés propio (visitas, lecturas, cursos, exploración digital).",
+        "enunciado_2":"Busca y aprende sobre expresiones culturales por interés propio (visitas, lecturas, cursos, exploración digital)",
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6564,11 +6583,11 @@
         "titulo":null,
         "tipo":"category",
         "etiqueta_orden":null,
-        "enunciado_2":"Valora la diversidad cultural, aunque no participa directamente.",
+        "enunciado_2":"Valora la diversidad cultural, aunque no participa directamente",
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6583,11 +6602,11 @@
         "titulo":null,
         "tipo":"category",
         "etiqueta_orden":null,
-        "enunciado_2":"No participa ni se relaciona con estas expresiones.",
+        "enunciado_2":"No participa ni se relaciona con estas expresiones",
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6606,7 +6625,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6625,7 +6644,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6644,7 +6663,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6663,7 +6682,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6682,7 +6701,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6701,7 +6720,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6720,7 +6739,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6739,7 +6758,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6758,7 +6777,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6777,7 +6796,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6796,7 +6815,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6815,7 +6834,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6834,7 +6853,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6853,7 +6872,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6872,7 +6891,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6891,7 +6910,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6910,7 +6929,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6929,7 +6948,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6948,7 +6967,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6967,7 +6986,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -6986,7 +7005,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7005,7 +7024,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7024,7 +7043,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7043,7 +7062,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7062,7 +7081,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7081,7 +7100,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7100,7 +7119,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7119,7 +7138,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7138,7 +7157,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7157,7 +7176,7 @@
         "etiqueta_enunciado":"a. Oficios tradicionales, artesanales y manuales",
         "etiqueta_corta":"a. Oficios tradicionales, artesanales y manuales",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7176,7 +7195,7 @@
         "etiqueta_enunciado":"b. Encontrarse y reunirse con los vecinos",
         "etiqueta_corta":"b. Encontrarse y reunirse con los vecinos",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7195,7 +7214,7 @@
         "etiqueta_enunciado":"c. Pasear por la ciudad",
         "etiqueta_corta":"c. Pasear por la ciudad",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7214,7 +7233,7 @@
         "etiqueta_enunciado":"d. Vistar plazas de mercado",
         "etiqueta_corta":"d. Vistar plazas de mercado",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7233,7 +7252,7 @@
         "etiqueta_enunciado":"e. Cuidar las zonas verdes de su barrio (árboles, jardines)",
         "etiqueta_corta":"e. Cuidar las zonas verdes de su barrio (árboles, jardines)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7252,7 +7271,7 @@
         "etiqueta_enunciado":"f. Eventos culturales en el espacio público",
         "etiqueta_corta":"f. Eventos culturales en el espacio público",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7271,7 +7290,7 @@
         "etiqueta_enunciado":"g. Eventos culturales masivos",
         "etiqueta_corta":"g. Eventos culturales masivos",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7290,7 +7309,7 @@
         "etiqueta_enunciado":"h. Visitar cementerios",
         "etiqueta_corta":"h. Visitar cementerios",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7309,7 +7328,7 @@
         "etiqueta_enunciado":"i. Visitar monumentos",
         "etiqueta_corta":"i. Visitar monumentos",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7328,7 +7347,7 @@
         "etiqueta_enunciado":"j. Participar en organizaciones sociales",
         "etiqueta_corta":"j. Participar en organizaciones sociales",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7347,7 +7366,7 @@
         "etiqueta_enunciado":"k. Las actividades tradicionales",
         "etiqueta_corta":"k. Las actividades tradicionales",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7366,7 +7385,7 @@
         "etiqueta_enunciado":"l. Otra",
         "etiqueta_corta":"l. Otra",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7385,7 +7404,7 @@
         "etiqueta_enunciado":"a. Oficios tradicionales, artesanales y manuales",
         "etiqueta_corta":"a. Oficios tradicionales, artesanales y manuales",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7404,7 +7423,7 @@
         "etiqueta_enunciado":"b. Encontrarse y reunirse con los vecinos",
         "etiqueta_corta":"b. Encontrarse y reunirse con los vecinos",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7423,7 +7442,7 @@
         "etiqueta_enunciado":"c. Pasear por la ciudad",
         "etiqueta_corta":"c. Pasear por la ciudad",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7442,7 +7461,7 @@
         "etiqueta_enunciado":"d. Vistar plazas de mercado",
         "etiqueta_corta":"d. Vistar plazas de mercado",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7461,7 +7480,7 @@
         "etiqueta_enunciado":"e. Cuidar las zonas verdes de su barrio (árboles, jardines)",
         "etiqueta_corta":"e. Cuidar las zonas verdes de su barrio (árboles, jardines)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7480,7 +7499,7 @@
         "etiqueta_enunciado":"f. Eventos culturales en el espacio público",
         "etiqueta_corta":"f. Eventos culturales en el espacio público",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7499,7 +7518,7 @@
         "etiqueta_enunciado":"g. Eventos culturales masivos",
         "etiqueta_corta":"g. Eventos culturales masivos",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7518,7 +7537,7 @@
         "etiqueta_enunciado":"h. Visitar cementerios",
         "etiqueta_corta":"h. Visitar cementerios",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7537,7 +7556,7 @@
         "etiqueta_enunciado":"i. Visitar monumentos",
         "etiqueta_corta":"i. Visitar monumentos",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7556,7 +7575,7 @@
         "etiqueta_enunciado":"j. Participar en organizaciones sociales",
         "etiqueta_corta":"j. Participar en organizaciones sociales",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7575,7 +7594,7 @@
         "etiqueta_enunciado":"k. Las actividades tradicionales",
         "etiqueta_corta":"k. Las actividades tradicionales",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7594,7 +7613,7 @@
         "etiqueta_enunciado":"l. Otra",
         "etiqueta_corta":"l. Otra",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7613,7 +7632,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7632,7 +7651,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7651,7 +7670,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7670,7 +7689,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7689,7 +7708,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7708,7 +7727,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7727,7 +7746,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7746,7 +7765,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7765,7 +7784,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7784,7 +7803,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7803,7 +7822,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7822,7 +7841,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7841,7 +7860,7 @@
         "etiqueta_enunciado":"a. Expertos en temas de patrimonio",
         "etiqueta_corta":"a. Expertos en temas de patrimonio",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7860,7 +7879,7 @@
         "etiqueta_enunciado":"b. Las comunidades y habitantes de la ciudad",
         "etiqueta_corta":"b. Las comunidades y habitantes de la ciudad",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7879,7 +7898,7 @@
         "etiqueta_enunciado":"c. Las instituciones del gobierno",
         "etiqueta_corta":"c. Las instituciones del gobierno",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7898,7 +7917,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7917,7 +7936,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7936,7 +7955,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7955,7 +7974,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7974,7 +7993,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -7993,7 +8012,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8012,7 +8031,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8031,7 +8050,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8050,7 +8069,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8069,7 +8088,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8088,7 +8107,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8107,7 +8126,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8126,7 +8145,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8145,7 +8164,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8164,7 +8183,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8183,7 +8202,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8202,7 +8221,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8221,7 +8240,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8240,7 +8259,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8259,7 +8278,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8278,7 +8297,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8297,7 +8316,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8316,7 +8335,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8335,7 +8354,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8354,7 +8373,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8373,7 +8392,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8392,7 +8411,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8411,7 +8430,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8430,7 +8449,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8449,7 +8468,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8468,7 +8487,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8487,7 +8506,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8506,7 +8525,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8525,7 +8544,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8544,7 +8563,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8563,7 +8582,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8582,7 +8601,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8601,7 +8620,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8620,7 +8639,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8639,7 +8658,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8658,7 +8677,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8677,7 +8696,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8696,7 +8715,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8715,7 +8734,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8734,7 +8753,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8753,7 +8772,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8772,7 +8791,7 @@
         "etiqueta_enunciado":"a. Campos de cultivo",
         "etiqueta_corta":"a. Campos de cultivo",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8791,7 +8810,7 @@
         "etiqueta_enunciado":"b. Tumbas y enterramientos (Restos óseos)",
         "etiqueta_corta":"b. Tumbas y enterramientos (Restos óseos)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8810,7 +8829,7 @@
         "etiqueta_enunciado":"c. Orfebrería y metales",
         "etiqueta_corta":"c. Orfebrería y metales",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8829,7 +8848,7 @@
         "etiqueta_enunciado":"d. Ollas y vasijas (Cerámica)",
         "etiqueta_corta":"d. Ollas y vasijas (Cerámica)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8848,7 +8867,7 @@
         "etiqueta_enunciado":"e. Semillas",
         "etiqueta_corta":"e. Semillas",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8867,7 +8886,7 @@
         "etiqueta_enunciado":"f. Herramientas en piedra",
         "etiqueta_corta":"f. Herramientas en piedra",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8886,7 +8905,7 @@
         "etiqueta_enunciado":"g. Plásticos",
         "etiqueta_corta":"g. Plásticos",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8905,7 +8924,7 @@
         "etiqueta_enunciado":"h. Ladrillos y tubos de gres",
         "etiqueta_corta":"h. Ladrillos y tubos de gres",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8924,7 +8943,7 @@
         "etiqueta_enunciado":"i. Textiles y cueros",
         "etiqueta_corta":"i. Textiles y cueros",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8943,7 +8962,7 @@
         "etiqueta_enunciado":"j. Pisos antiguos",
         "etiqueta_corta":"j. Pisos antiguos",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8962,7 +8981,7 @@
         "etiqueta_enunciado":"k. Arte rupestre (Pictografías y Petroglifos)",
         "etiqueta_corta":"k. Arte rupestre (Pictografías y Petroglifos)",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -8981,7 +9000,7 @@
         "etiqueta_enunciado":"l. Vidrio",
         "etiqueta_corta":"l. Vidrio",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9000,7 +9019,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9019,7 +9038,7 @@
         "etiqueta_enunciado":"a. Alcaldía local",
         "etiqueta_corta":"a. Alcaldía local",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9038,7 +9057,7 @@
         "etiqueta_enunciado":"b. Secretaría de Cultura, Recreación y Deporte - SCRD",
         "etiqueta_corta":"b. Secretaría de Cultura, Recreación y Deporte - SCRD",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9057,7 +9076,7 @@
         "etiqueta_enunciado":"c. Instituto Distrital de Patrimonio Cultural - IDPC",
         "etiqueta_corta":"c. Instituto Distrital de Patrimonio Cultural - IDPC",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9076,7 +9095,7 @@
         "etiqueta_enunciado":"d. Instituto Colombiano de Antropología e Historia - ICANH",
         "etiqueta_corta":"d. Instituto Colombiano de Antropología e Historia - ICANH",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9095,7 +9114,7 @@
         "etiqueta_enunciado":"e. Junta de Acción Comunal",
         "etiqueta_corta":"e. Junta de Acción Comunal",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9114,7 +9133,7 @@
         "etiqueta_enunciado":"f. Algún museo",
         "etiqueta_corta":"f. Algún museo",
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9133,7 +9152,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9152,7 +9171,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9171,7 +9190,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9190,7 +9209,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9209,7 +9228,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9228,7 +9247,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9247,7 +9266,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9266,7 +9285,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9285,7 +9304,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9304,7 +9323,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9323,7 +9342,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9342,7 +9361,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9361,7 +9380,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9380,7 +9399,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9399,7 +9418,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9418,7 +9437,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9437,7 +9456,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9456,7 +9475,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9475,7 +9494,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9494,7 +9513,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9513,7 +9532,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9532,7 +9551,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9551,7 +9570,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9570,7 +9589,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9589,7 +9608,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9608,7 +9627,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9627,7 +9646,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9646,7 +9665,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9665,7 +9684,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9684,7 +9703,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9703,7 +9722,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9722,7 +9741,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9741,7 +9760,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9760,7 +9779,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9779,7 +9798,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9798,7 +9817,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9817,7 +9836,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9836,7 +9855,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9855,7 +9874,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9874,7 +9893,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9893,7 +9912,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9912,7 +9931,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9931,7 +9950,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9950,7 +9969,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9969,7 +9988,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -9988,7 +10007,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10007,7 +10026,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10026,7 +10045,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10045,7 +10064,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10064,7 +10083,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10083,7 +10102,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10102,7 +10121,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10121,7 +10140,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10140,7 +10159,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10159,7 +10178,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":"Edad",
         "unidad_medida":"Años"
@@ -10178,7 +10197,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10197,7 +10216,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10216,7 +10235,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10235,7 +10254,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10254,7 +10273,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10273,7 +10292,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10292,7 +10311,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10311,7 +10330,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10330,7 +10349,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10349,7 +10368,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10368,7 +10387,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10387,7 +10406,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10406,7 +10425,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10425,7 +10444,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10444,7 +10463,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10463,7 +10482,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10482,7 +10501,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10501,7 +10520,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10520,7 +10539,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10539,7 +10558,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10558,7 +10577,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10577,7 +10596,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10596,7 +10615,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10615,7 +10634,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10634,7 +10653,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10653,7 +10672,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10672,7 +10691,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10691,7 +10710,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10710,7 +10729,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10729,7 +10748,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10748,7 +10767,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
@@ -10767,7 +10786,7 @@
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
-        "en_cubo":1.0,
+        "en_cubo":1,
         "tags":null,
         "variable_nombre":null,
         "unidad_medida":null
