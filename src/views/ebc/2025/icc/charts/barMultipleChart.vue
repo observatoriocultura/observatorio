@@ -43,6 +43,10 @@ const props = defineProps({
 const chartContainer = ref(null)
 let chartInstance = null
 
+const MIN_CHART_HEIGHT = 520
+const CHART_VERTICAL_CHROME = 180
+const HEIGHT_PER_CATEGORY = 48
+
 const initChart = () => {
   if (chartInstance) {
     chartInstance.destroy()
@@ -50,10 +54,15 @@ const initChart = () => {
 
   // Obtener la paleta de colores según la configuración de la pregunta
   const currentPalette = getPaletaColor(props.pregunta?.dataviz_palette)
+  const chartHeight = Math.max(
+    MIN_CHART_HEIGHT,
+    props.categorias.length * HEIGHT_PER_CATEGORY + CHART_VERTICAL_CHROME,
+  )
 
   chartInstance = Highcharts.chart(chartContainer.value, {
     chart: {
       type: 'bar',
+      height: chartHeight,
       style: {
         fontFamily: '"Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
       },
@@ -179,6 +188,14 @@ watch(
 )
 watch(
   () => props.series,
+  () => {
+    initChart()
+  },
+  { deep: true },
+)
+
+watch(
+  () => props.categorias,
   () => {
     initChart()
   },

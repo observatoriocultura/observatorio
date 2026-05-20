@@ -71,7 +71,17 @@ export const PALETAS_COLOR = {
   yes_no_asc: ['#003366', '#CAE3F9'],
   yes_no_desc: ['#CAE3F9', '#003366'],
   yes_selection: ['#003F97', '#FAFAFA'],
-  custom_44: ['#003F97', '#1CDEA2', '#6796dbff', '#D32F2F'],
+  custom_44: ['#bdd3f1', '#003F97', '#6796dbff', '#D32F2F'],
+  custom_27_1: [
+    '#bdd3f1',
+    '#6093db',
+    '#003F97',
+    '#d4a3c2',
+    '#cf6ba9',
+    '#B51678',
+    '#50C878',
+    '#CAE3F9',
+  ],
 }
 
 /**

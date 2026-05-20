@@ -67,7 +67,7 @@
         "cod_seccion":6.0,
         "nombre_seccion":"Canales de Televisión",
         "descripcion":"Recoge información sobre medios, canales y formas de acceso a contenidos culturales, artísticos o informativos, incluyendo canales tradicionales y digitales de consulta. Permite comprender cómo circula la información cultural y cuáles son los principales medios utilizados por la ciudadanía para conectarse con la oferta cultural.",
-        "cantidad_preguntas":23,
+        "cantidad_preguntas":24,
         "notas":null,
         "dataviz_display":1
     },
@@ -94,7 +94,7 @@
         "cod_seccion":null,
         "nombre_seccion":"Registro",
         "descripcion":null,
-        "cantidad_preguntas":3,
+        "cantidad_preguntas":2,
         "notas":null,
         "dataviz_display":0
     }
