@@ -29,4 +29,11 @@ coverage
 
 *.tsbuildinfo
 
+# Env files
 .env
+.env.local
+.env.*.local
+
+# Local agent/tool config
+.codex/
+.vscode/mcp.json

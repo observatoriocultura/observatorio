@@ -9325,8 +9325,8 @@
         "grupo":null,
         "en_cubo":1,
         "tags":null,
-        "variable_nombre":null,
-        "unidad_medida":null
+        "variable_nombre":"ver canales tv",
+        "unidad_medida":"horas\/semana"
     },
     {
         "indice_pregunta":174,
@@ -9344,8 +9344,8 @@
         "grupo":null,
         "en_cubo":1,
         "tags":null,
-        "variable_nombre":null,
-        "unidad_medida":null
+        "variable_nombre":"ver canales tv",
+        "unidad_medida":"horas\/semana"
     },
     {
         "indice_pregunta":175,

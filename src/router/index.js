@@ -17,6 +17,7 @@ import SolicitudesInfo from '../views/2026/solicitudes_pai/SolicitudesInfo.vue'
 import SolicitudesTablero from '../views/2026/solicitudes_pai/SolicitudesTablero.vue'
 import ItdcLayout from '../views/2026/transformacion_digital/ItdcLayout.vue'
 import ContenidosMovilidad from '../views/2026/contenidos_movilidad/ContenidosMovilidad.vue'
+import PaiView from '../views/pai/PaiView.vue'
 
 const routes = [
   { path: '/', name: 'Inicio', component: HomeView, meta: { title: 'Inicio | Observatorio' } },
@@ -73,6 +74,16 @@ const routes = [
     name: 'Contenidos Movilidad',
     component: ContenidosMovilidad,
     meta: { title: 'Contenidos Movilidad | Observatorio' },
+  },
+  {
+    path: '/pai',
+    redirect: '/pai/2025',
+  },
+  {
+    path: '/pai/:year',
+    name: 'PAI',
+    component: PaiView,
+    meta: { title: 'PAI | Observatorio' },
   },
   {
     path: '/2026/solicitudes-pai',

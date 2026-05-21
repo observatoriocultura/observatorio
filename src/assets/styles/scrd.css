@@ -1,0 +1,20 @@
+/* Labels and badges */
+
+/*.badge-linea-investigacion {
+    background-color: #E8F0FE;
+    color: #1A73E8;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+}*/
+
+.bg-cultura-ciudadana {
+  background-color: #ffe5a0;
+  color: #4d3821;
+}
+.bg-sector-cultura {
+  background-color: #e6cff2;
+  color: #7132a2;
+}
