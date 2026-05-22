@@ -65,7 +65,7 @@ export const PALETAS_COLOR = {
   scale_asc_5: ['#94b5e7ff', '#739cdcff', '#5283d1ff', '#316bc5ff', '#0f52baff'],
   scale_desc_5: ['#0f52baff', '#316bc5ff', '#5283d1ff', '#739cdcff', '#94b5e7ff'],
   boolean_asc_4: ['#E0115F', '#eb5790ff', '#9cc9ab', '#50c878'],
-  boolean_desc_4: ['#50C878', '#9cc9ab', '#cf8b8bff', '#D32F2F'],
+  boolean_desc_4: ['#50C878', '#9cc9ab', 'rgb(29, 25, 25)', '#D32F2F'],
   boolean_asc_2: ['#dfdfdf', '#1CDEA2'],
   boolean_desc_2: ['#dfdbe4ff', '#e0115f'],
   yes_no_asc: ['#003366', '#CAE3F9'],
@@ -82,6 +82,7 @@ export const PALETAS_COLOR = {
     '#50C878',
     '#CAE3F9',
   ],
+  gender: ['#d5c3f0', '#0F52BA', '#9cc9ab'],
 }
 
 /**

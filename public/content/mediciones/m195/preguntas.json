@@ -3966,7 +3966,7 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_no_desc"
+        "dataviz_palette":"boolean_asc_2"
     },
     {
         "num_seccion":8,
@@ -4048,9 +4048,9 @@
         "indice_pregunta_bis":192,
         "num_seccion_bis":8,
         "dataviz_display":1.0,
-        "dataviz_chart_type":"bar",
+        "dataviz_chart_type":"donut",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"boolean_asc_2"
     },
     {
         "num_seccion":9,
@@ -4070,8 +4070,8 @@
         "num_seccion_bis":9,
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-multiple",
-        "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_order_type":"answer",
+        "dataviz_palette":"scale_asc_4"
     },
     {
         "num_seccion":9,
@@ -4090,7 +4090,7 @@
         "indice_pregunta_bis":194,
         "num_seccion_bis":9,
         "dataviz_display":1.0,
-        "dataviz_chart_type":null,
+        "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
         "dataviz_palette":"category"
     },
@@ -4116,7 +4116,7 @@
         "dataviz_palette":"main"
     },
     {
-        "num_seccion":10,
+        "num_seccion":9,
         "indice_pregunta":196,
         "num_seccion.1":9,
         "nombre":"Satisfacción con la vida",
@@ -4133,7 +4133,7 @@
         "num_seccion_bis":9,
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
-        "dataviz_order_type":"frecuency",
+        "dataviz_order_type":"answer",
         "dataviz_palette":"main"
     },
     {
@@ -4153,9 +4153,9 @@
         "indice_pregunta_bis":197,
         "num_seccion_bis":10,
         "dataviz_display":1.0,
-        "dataviz_chart_type":"bar",
+        "dataviz_chart_type":"donut",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"gender"
     },
     {
         "num_seccion":10,
@@ -4174,9 +4174,9 @@
         "indice_pregunta_bis":198,
         "num_seccion_bis":10,
         "dataviz_display":1.0,
-        "dataviz_chart_type":"bar",
+        "dataviz_chart_type":"donut",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"gender"
     },
     {
         "num_seccion":10,
@@ -4187,7 +4187,7 @@
         "rol":"Caracterización",
         "codigo":"D3",
         "etiqueta_1":"D3",
-        "enunciado_1":"Edad (AÑOS CUMPLIDOS)",
+        "enunciado_1":"Edad",
         "instruccion":null,
         "url_imagen":null,
         "palabras_clave":null,
@@ -4196,7 +4196,7 @@
         "num_seccion_bis":10,
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
-        "dataviz_order_type":"frecuency",
+        "dataviz_order_type":"answer",
         "dataviz_palette":"main"
     },
     {
@@ -4215,10 +4215,10 @@
         "cantidad_variables":1.0,
         "indice_pregunta_bis":200,
         "num_seccion_bis":10,
-        "dataviz_display":1.0,
-        "dataviz_chart_type":"bar",
-        "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_display":0.0,
+        "dataviz_chart_type":null,
+        "dataviz_order_type":null,
+        "dataviz_palette":null
     },
     {
         "num_seccion":10,
@@ -4237,15 +4237,15 @@
         "indice_pregunta_bis":201,
         "num_seccion_bis":10,
         "dataviz_display":1.0,
-        "dataviz_chart_type":"bar",
+        "dataviz_chart_type":"donut",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"category"
     },
     {
         "num_seccion":10,
         "indice_pregunta":202,
         "num_seccion.1":10,
-        "nombre":"Tiempo en la ciudad",
+        "nombre":"Tiempo habitando Bogotá",
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"D5",
@@ -4253,20 +4253,20 @@
         "enunciado_1":"¿Desde hace cuántos años usted habita en esta ciudad?",
         "instruccion":"AÑOS",
         "url_imagen":null,
-        "palabras_clave":null,
+        "palabras_clave":"migración, desplazamiento, regiones",
         "cantidad_variables":1.0,
         "indice_pregunta_bis":202,
         "num_seccion_bis":10,
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
-        "dataviz_order_type":"frecuency",
+        "dataviz_order_type":"answer",
         "dataviz_palette":"main"
     },
     {
         "num_seccion":10,
         "indice_pregunta":203,
         "num_seccion.1":10,
-        "nombre":"Motivo de llegada",
+        "nombre":"Motivo de llegada a Bogotá",
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"D6",
@@ -4274,7 +4274,7 @@
         "enunciado_1":"¿Cuál fue el principal motivo para venir a Bogotá?",
         "instruccion":null,
         "url_imagen":null,
-        "palabras_clave":null,
+        "palabras_clave":"migración, desplazamiento, regiones",
         "cantidad_variables":1.0,
         "indice_pregunta_bis":203,
         "num_seccion_bis":10,
@@ -4295,7 +4295,7 @@
         "enunciado_1":"¿Cuál es su estado civil?",
         "instruccion":null,
         "url_imagen":null,
-        "palabras_clave":null,
+        "palabras_clave":"pareja, estado civil, matrimonio",
         "cantidad_variables":1.0,
         "indice_pregunta_bis":204,
         "num_seccion_bis":10,
@@ -4316,7 +4316,7 @@
         "enunciado_1":"Usted actualmente se dedica a:",
         "instruccion":null,
         "url_imagen":null,
-        "palabras_clave":null,
+        "palabras_clave":"trabajo, estudio, labores, actividad, ocupación, empleo, desempleo",
         "cantidad_variables":1.0,
         "indice_pregunta_bis":205,
         "num_seccion_bis":10,
@@ -4358,13 +4358,13 @@
         "enunciado_1":"¿Cuál fue el nivel educativo más alto alcanzado por usted?",
         "instruccion":null,
         "url_imagen":null,
-        "palabras_clave":null,
+        "palabras_clave":"educación, formación, academia, estudio",
         "cantidad_variables":1.0,
         "indice_pregunta_bis":207,
         "num_seccion_bis":10,
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
-        "dataviz_order_type":"frecuency",
+        "dataviz_order_type":"answer",
         "dataviz_palette":"main"
     },
     {
@@ -4379,7 +4379,7 @@
         "enunciado_1":"¿Con cuál de los siguientes grupos étnicos, raciales y\/o culturales se identifica usted?",
         "instruccion":null,
         "url_imagen":null,
-        "palabras_clave":null,
+        "palabras_clave":"raza, racismo, identidad, indígenas",
         "cantidad_variables":1.0,
         "indice_pregunta_bis":208,
         "num_seccion_bis":10,
@@ -4400,14 +4400,14 @@
         "enunciado_1":"¿Usted tiene alguna limitación permanente para...?",
         "instruccion":null,
         "url_imagen":null,
-        "palabras_clave":null,
+        "palabras_clave":"discapacidades",
         "cantidad_variables":9.0,
         "indice_pregunta_bis":209,
         "num_seccion_bis":10,
         "dataviz_display":1.0,
-        "dataviz_chart_type":"bar-multiple",
+        "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":10,
@@ -4434,22 +4434,22 @@
         "num_seccion":10,
         "indice_pregunta":211,
         "num_seccion.1":10,
-        "nombre":"Disposición a responder sexualidad",
+        "nombre":"Identificación de sexo, género y orientación sexual",
         "descripcion":null,
         "rol":"Caracterización",
         "codigo":"D12",
         "etiqueta_1":"D12",
-        "enunciado_1":"Por último, ¿estaría dispuesto(a) a responder una pregunta sobre su sexualidad? Si NO está dispuesto(a), termine\nla encuesta. Si dice estar dispuesto(a) a responder, por favor pásele el formulario al\/la encuestado(a) y que sea él\/ella\nquien marque las opciones libremente.",
-        "instruccion":null,
+        "enunciado_1":"¿Usted se identifica como...? Por favor marque todas aquellas con las que más se identifica",
+        "instruccion":"Si NO está dispuesto(a), termina\nla encuesta. Si dice estar dispuesto(a) a responder, por favor pásele el formulario al\/la encuestado(a) y que sea él\/ella\nquien marque las opciones libremente",
         "url_imagen":null,
-        "palabras_clave":null,
+        "palabras_clave":"género, identidad, autoidentificación, sexo, lgbti",
         "cantidad_variables":1.0,
         "indice_pregunta_bis":211,
         "num_seccion_bis":10,
         "dataviz_display":1.0,
-        "dataviz_chart_type":"bar",
+        "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"yes_selection"
     },
     {
         "num_seccion":10,
@@ -4463,12 +4463,12 @@
         "enunciado_1":"¿Usted tiene hijos?",
         "instruccion":null,
         "url_imagen":null,
-        "palabras_clave":null,
+        "palabras_clave":"hijos, tener hijos, población, demografía, invierno demográfico, familia",
         "cantidad_variables":11.0,
         "indice_pregunta_bis":212,
         "num_seccion_bis":10,
         "dataviz_display":1.0,
-        "dataviz_chart_type":"bar-multiple",
+        "dataviz_chart_type":"donut",
         "dataviz_order_type":"frecuency",
         "dataviz_palette":"category"
     },
@@ -4488,7 +4488,7 @@
         "cantidad_variables":1.0,
         "indice_pregunta_bis":213,
         "num_seccion_bis":10,
-        "dataviz_display":null,
+        "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
         "dataviz_palette":null
@@ -4509,7 +4509,7 @@
         "cantidad_variables":null,
         "indice_pregunta_bis":214,
         "num_seccion_bis":10,
-        "dataviz_display":null,
+        "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
         "dataviz_palette":null

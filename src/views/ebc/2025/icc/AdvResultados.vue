@@ -627,7 +627,7 @@ watch(contentSection, async (nuevaSeccion) => {
           >
             <div class="d-flex align-items-center">
               <span class="section-number active-number">{{
-                seccionSeleccionada?.num_seccion
+                seccionSeleccionada?.cod_seccion
               }}</span>
               <span class="ms-2">{{ seccionSeleccionada?.nombre_seccion }}</span>
             </div>
@@ -645,7 +645,7 @@ watch(contentSection, async (nuevaSeccion) => {
                 @click="seleccionarSeccion(seccion)"
               >
                 <div class="d-flex w-100 justify-content-start align-items-center">
-                  <span class="section-number">{{ seccion.num_seccion }}</span>
+                  <span class="section-number">{{ seccion.cod_seccion }}</span>
                   <span class="section-name text-truncate ms-2">{{ seccion.nombre_seccion }}</span>
                 </div>
               </button>

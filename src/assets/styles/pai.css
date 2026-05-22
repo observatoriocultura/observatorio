@@ -1,0 +1,22 @@
+/* Estilos asociados a información del PAI - Plan Anual de Investigaciones */
+
+/* Etapas del PAI */
+.etapa-planeacion {
+  background-color: #d9d2e9;
+}
+
+.etapa-instrumento {
+  background-color: #f9cb9c;
+}
+
+.etapa-recoleccion {
+  background-color: #f4cccc;
+}
+
+.etapa-documentacion {
+  background-color: #cfe2f3;
+}
+
+.etapa-finalizacion {
+  background-color: #d9ead3;
+}

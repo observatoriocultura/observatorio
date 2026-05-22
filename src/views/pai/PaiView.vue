@@ -1,6 +1,18 @@
 <template>
-  <main class="container py-5">
-    <h1 class="mb-4">Plan Anual de Investigaciones {{ year }}</h1>
+  <main class="container-fluid py-2">
+    <ul class="nav nav-tabs mb-4">
+      <li v-for="item in menuItems" :key="item.key" class="nav-item">
+        <button
+          type="button"
+          class="nav-link"
+          :class="{ active: activeView === item.key }"
+          :aria-current="activeView === item.key ? 'page' : undefined"
+          @click="activeView = item.key"
+        >
+          {{ item.label }}
+        </button>
+      </li>
+    </ul>
 
     <p v-if="loading">Cargando investigaciones...</p>
     <p v-else-if="errorMessage" class="text-danger">{{ errorMessage }}</p>
@@ -8,23 +20,8 @@
       No hay investigaciones registradas para este año.
     </p>
 
-    <ul v-else class="list-group">
-      <li
-        v-for="investigacion in investigacionesFiltradas"
-        :key="investigacion.id"
-        class="list-group-item"
-      >
-        <h2 class="h5 mb-2">{{ investigacion.titulo }}</h2>
-        <p class="mb-1">
-          <strong>Línea de investigación:</strong>
-          {{ investigacion.linea_investigacion || 'Sin línea registrada' }}
-        </p>
-        <p class="mb-1">{{ investigacion.descripcion }}</p>
-        <small class="text-muted">
-          ID: {{ investigacion.id }} | Vigencia: {{ investigacion.year_vigencia }}
-        </small>
-      </li>
-    </ul>
+    <PaiPortada v-else-if="activeView === 'portada'" :investigaciones="investigacionesFiltradas" />
+    <PaiList v-else :investigaciones="investigacionesFiltradas" />
   </main>
 </template>
 
@@ -32,12 +29,21 @@
 import { computed, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { supabase } from '../../lib/supabase'
+import PaiPortada from './parts/PaiPortada.vue'
+import PaiList from './parts/PaiList.vue'
+import '../../assets/styles/scrd.css'
+import '../../assets/styles/pai.css'
 
 const route = useRoute()
 
 const investigaciones = ref([])
 const loading = ref(false)
 const errorMessage = ref('')
+const activeView = ref('portada')
+const menuItems = [
+  { key: 'portada', label: 'Portada' },
+  { key: 'listado', label: 'Investigaciones' },
+]
 
 const year = computed(() => Number(route.params.year) || 2025)
 const normalizarYear = (value) => Number(value)
@@ -59,7 +65,9 @@ const cargarInvestigaciones = async () => {
 
   const { data, error } = await supabase
     .from('gio_investigaciones')
-    .select('id, titulo, descripcion, linea_investigacion, year_vigencia')
+    .select(
+      'id, nombre_clave, titulo, descripcion, linea_investigacion, year_vigencia, avance, avance_planeacion, avance_instrumentos, avance_recoleccion, avance_documentacion, avance_finalizacion',
+    )
     .filter('year_vigencia', 'eq', String(year.value))
     .order('id', { ascending: true })
 
