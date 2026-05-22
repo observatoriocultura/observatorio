@@ -9326,7 +9326,7 @@
         "en_cubo":1,
         "tags":null,
         "variable_nombre":"ver canales tv",
-        "unidad_medida":"horas\/semana"
+        "unidad_medida":"horas\/5 días"
     },
     {
         "indice_pregunta":174,
@@ -9345,7 +9345,7 @@
         "en_cubo":1,
         "tags":null,
         "variable_nombre":"ver canales tv",
-        "unidad_medida":"horas\/semana"
+        "unidad_medida":"horas\/2 días"
     },
     {
         "indice_pregunta":175,
@@ -10248,7 +10248,7 @@
         "num_seccion":10,
         "pregunta":"D5",
         "titulo":null,
-        "tipo":"category",
+        "tipo":"number",
         "etiqueta_orden":null,
         "enunciado_2":"¿Desde hace cuántos años usted habita en esta ciudad?",
         "etiqueta_enunciado":null,
@@ -10256,8 +10256,8 @@
         "grupo":null,
         "en_cubo":1,
         "tags":null,
-        "variable_nombre":null,
-        "unidad_medida":null
+        "variable_nombre":"Habita Bogotá",
+        "unidad_medida":"Años"
     },
     {
         "indice_pregunta":203,
@@ -10536,25 +10536,6 @@
         "tipo":"category",
         "etiqueta_orden":null,
         "enunciado_2":"Ninguna de las anteriores",
-        "etiqueta_enunciado":null,
-        "etiqueta_corta":null,
-        "grupo":null,
-        "en_cubo":1,
-        "tags":null,
-        "variable_nombre":null,
-        "unidad_medida":null
-    },
-    {
-        "indice_pregunta":211,
-        "indice_variable":613,
-        "columna":"WP",
-        "codigo_variable":"D12",
-        "num_seccion":10,
-        "pregunta":"D12",
-        "titulo":null,
-        "tipo":"category",
-        "etiqueta_orden":null,
-        "enunciado_2":null,
         "etiqueta_enunciado":null,
         "etiqueta_corta":null,
         "grupo":null,
