@@ -178,5 +178,6 @@ export const IMAGES_CAROUSEL = [
   'cine-2.jpg',
   'planetario-1.jpg',
   'familia-2.jpg',
+  'plaza-mercado-1.jpg',
   'patrimonio-1.jpg',
 ]

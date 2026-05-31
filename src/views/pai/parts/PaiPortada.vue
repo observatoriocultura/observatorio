@@ -1,5 +1,7 @@
 <template>
   <section class="pai-portada">
+    <ColumnasAvance :investigaciones="investigaciones" />
+
     <div class="pai-kpis" aria-label="Resumen del Plan Anual de Investigaciones">
       <div class="pai-kpi-row">
         <span class="pai-kpi-row-label">Cantidad investigaciones</span>
@@ -32,6 +34,7 @@
 import { computed } from 'vue'
 import { toClassName } from '../../../utils/text'
 import { lineasInvestigacion } from '../constants'
+import ColumnasAvance from './ColumnasAvance.vue'
 
 const props = defineProps({
   investigaciones: {
@@ -41,7 +44,9 @@ const props = defineProps({
 })
 
 const getAvancePromedio = (investigaciones) => {
-  const avances = investigaciones.map((investigacion) => Number(investigacion.avance)).filter(Number.isFinite)
+  const avances = investigaciones
+    .map((investigacion) => Number(investigacion.avance))
+    .filter(Number.isFinite)
 
   if (avances.length === 0) return 0
 
@@ -68,8 +73,11 @@ const avancePromedio = computed(() => getAvancePromedio(props.investigaciones))
 <style scoped>
 .pai-portada {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   width: 100%;
+  gap: 1rem;
   padding: 2rem 0;
 }
 

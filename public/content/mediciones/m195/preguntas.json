@@ -18,7 +18,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -39,7 +40,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -60,7 +62,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -81,7 +84,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -102,7 +106,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -123,7 +128,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -144,7 +150,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -165,7 +172,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -186,7 +194,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -207,7 +216,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -228,7 +238,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -249,7 +260,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -270,7 +282,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -291,7 +304,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -312,7 +326,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -333,7 +348,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -354,7 +370,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -375,7 +392,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -396,7 +414,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -417,7 +436,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -438,7 +458,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -459,7 +480,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -480,7 +502,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -501,7 +524,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -522,7 +546,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -543,7 +568,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -564,7 +590,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -585,7 +612,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -606,7 +634,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -627,7 +656,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -648,7 +678,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -669,7 +700,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -690,7 +722,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -711,7 +744,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -732,7 +766,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -753,7 +788,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -774,7 +810,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -795,7 +832,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -816,7 +854,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -837,7 +876,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -858,7 +898,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -879,7 +920,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -900,7 +942,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -921,7 +964,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -942,7 +986,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":1,
@@ -963,7 +1008,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":2,
@@ -984,7 +1030,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":2,
@@ -1005,7 +1052,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":2,
@@ -1026,7 +1074,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":2,
@@ -1047,7 +1096,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1068,7 +1118,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"scale_asc_4"
+        "dataviz_palette":"scale_asc_4",
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1089,7 +1140,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"boolean_asc_2"
+        "dataviz_palette":"boolean_asc_2",
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1110,7 +1162,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_palette":"category",
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1131,7 +1184,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1152,7 +1206,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"boolean_asc_2"
+        "dataviz_palette":"boolean_asc_2",
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1173,7 +1228,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"boolean_asc_2"
+        "dataviz_palette":"boolean_asc_2",
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1194,7 +1250,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1215,7 +1272,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1236,7 +1294,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1257,7 +1316,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1278,7 +1338,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1299,7 +1360,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1320,7 +1382,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1341,7 +1404,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1362,7 +1426,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1383,7 +1448,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1404,7 +1470,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":"column",
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1425,7 +1492,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1446,7 +1514,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":"column",
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1467,7 +1536,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_palette":"category",
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1488,7 +1558,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1509,7 +1580,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":"column",
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1530,7 +1602,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1551,7 +1624,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1572,7 +1646,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1593,7 +1668,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1614,7 +1690,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"scale_asc_3"
+        "dataviz_palette":"scale_asc_3",
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1635,7 +1712,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1656,7 +1734,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"boolean_asc_2"
+        "dataviz_palette":"boolean_asc_2",
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1674,10 +1753,11 @@
         "cantidad_variables":1.0,
         "indice_pregunta_bis":79,
         "num_seccion_bis":3,
-        "dataviz_display":1.0,
+        "dataviz_display":0.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1698,7 +1778,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1719,7 +1800,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1740,7 +1822,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1761,7 +1844,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1782,7 +1866,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1803,7 +1888,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"boolean_asc_2"
+        "dataviz_palette":"boolean_asc_2",
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1814,7 +1900,7 @@
         "rol":"Objetivo",
         "codigo":"P24.1",
         "etiqueta_1":"24.1",
-        "enunciado_1":"¿Siente que la Presencia artística ha mejorado gracias al programa Más Cultura Local ?",
+        "enunciado_1":"¿Siente que la Presencia artística ha mejorado gracias al programa Más Cultura Local?",
         "instruccion":"Solo los que respondieron \"Sí\" en la pregunta 24",
         "url_imagen":null,
         "palabras_clave":null,
@@ -1824,7 +1910,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"boolean_asc_2"
+        "dataviz_palette":"boolean_asc_2",
+        "dataviz_max":null
     },
     {
         "num_seccion":3,
@@ -1845,7 +1932,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":4,
@@ -1866,7 +1954,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":4,
@@ -1887,7 +1976,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"boolean_asc_2"
+        "dataviz_palette":"boolean_asc_2",
+        "dataviz_max":null
     },
     {
         "num_seccion":4,
@@ -1908,7 +1998,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"custom_27_1"
+        "dataviz_palette":"custom_27_1",
+        "dataviz_max":null
     },
     {
         "num_seccion":4,
@@ -1929,7 +2020,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":4,
@@ -1950,7 +2042,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":4,
@@ -1971,7 +2064,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":4,
@@ -1992,7 +2086,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"boolean_asc_2"
+        "dataviz_palette":"boolean_asc_2",
+        "dataviz_max":null
     },
     {
         "num_seccion":4,
@@ -2013,7 +2108,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"category"
+        "dataviz_palette":"category",
+        "dataviz_max":null
     },
     {
         "num_seccion":4,
@@ -2034,7 +2130,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":4,
@@ -2055,7 +2152,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":4,
@@ -2076,7 +2174,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":4,
@@ -2088,16 +2187,17 @@
         "codigo":"P27.8",
         "etiqueta_1":"27.8",
         "enunciado_1":"¿Qué tanto le ha ayudado haber recibido formación artística, cultural y\/o patrimonial a…?",
-        "instruccion":null,
+        "instruccion":"Escala de 0 a 5",
         "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":14.0,
         "indice_pregunta_bis":99,
         "num_seccion_bis":4,
         "dataviz_display":1.0,
-        "dataviz_chart_type":"bar-multiple",
+        "dataviz_chart_type":"bar-number",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"scale_asc_3"
+        "dataviz_palette":"scale_asc_3",
+        "dataviz_max":5.0
     },
     {
         "num_seccion":4,
@@ -2108,17 +2208,18 @@
         "rol":"Objetivo",
         "codigo":"P27.9",
         "etiqueta_1":"27.9",
-        "enunciado_1":"Pensando en su propia experiencia, ¿ qué tanto la formación artística, cultural y\/o patrimonial le ha permitido…?",
-        "instruccion":null,
+        "enunciado_1":"Pensando en su propia experiencia, ¿Qué tanto la formación artística, cultural y\/o patrimonial le ha permitido…?",
+        "instruccion":"Escala de 0 a 5",
         "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":4.0,
         "indice_pregunta_bis":100,
         "num_seccion_bis":4,
         "dataviz_display":1.0,
-        "dataviz_chart_type":"bar-multiple",
+        "dataviz_chart_type":"bar-number",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"scale_asc_4"
+        "dataviz_palette":"scale_asc_4",
+        "dataviz_max":5.0
     },
     {
         "num_seccion":4,
@@ -2139,7 +2240,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":4,
@@ -2160,7 +2262,8 @@
         "dataviz_display":null,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":4,
@@ -2181,7 +2284,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":4,
@@ -2202,7 +2306,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":4,
@@ -2223,7 +2328,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"scale_asc_4"
+        "dataviz_palette":"scale_asc_4",
+        "dataviz_max":null
     },
     {
         "num_seccion":5,
@@ -2244,7 +2350,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"category"
+        "dataviz_palette":"category",
+        "dataviz_max":null
     },
     {
         "num_seccion":5,
@@ -2265,7 +2372,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":5,
@@ -2286,7 +2394,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":5,
@@ -2307,7 +2416,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"category"
+        "dataviz_palette":"category",
+        "dataviz_max":null
     },
     {
         "num_seccion":5,
@@ -2328,7 +2438,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":5,
@@ -2339,8 +2450,8 @@
         "rol":"Objetivo",
         "codigo":"P36",
         "etiqueta_1":36,
-        "enunciado_1":"En una escala de 1 a 4, donde 1 es Nada satisfecho(a. y 4 es Muy satisfecho(a.. ¿Dígame, cuál es su nivel de satisfacción\ncon los siguientes equipamientos de la ciudad?",
-        "instruccion":null,
+        "enunciado_1":"¿Dígame, cuál es su nivel de satisfacción\ncon los siguientes equipamientos de la ciudad?",
+        "instruccion":"En una escala de 1 a 4, donde 1 es Nada satisfecho\/a. y 4 es Muy satisfecho\/a.. ",
         "url_imagen":null,
         "palabras_clave":null,
         "cantidad_variables":14.0,
@@ -2349,7 +2460,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"category"
+        "dataviz_palette":"category",
+        "dataviz_max":null
     },
     {
         "num_seccion":5,
@@ -2370,7 +2482,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":5,
@@ -2391,7 +2504,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":5,
@@ -2412,7 +2526,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":"column",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":6,
@@ -2433,7 +2548,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"wordcloud",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"category"
+        "dataviz_palette":"category",
+        "dataviz_max":null
     },
     {
         "num_seccion":6,
@@ -2454,7 +2570,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"boolean_asc_2"
+        "dataviz_palette":"boolean_asc_2",
+        "dataviz_max":null
     },
     {
         "num_seccion":6,
@@ -2475,7 +2592,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"wordcloud",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"category"
+        "dataviz_palette":"category",
+        "dataviz_max":null
     },
     {
         "num_seccion":6,
@@ -2496,7 +2614,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"boolean_asc_2"
+        "dataviz_palette":"boolean_asc_2",
+        "dataviz_max":null
     },
     {
         "num_seccion":6,
@@ -2517,7 +2636,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"category"
+        "dataviz_palette":"category",
+        "dataviz_max":null
     },
     {
         "num_seccion":6,
@@ -2538,7 +2658,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"custom_44"
+        "dataviz_palette":"custom_44",
+        "dataviz_max":null
     },
     {
         "num_seccion":6,
@@ -2559,7 +2680,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":6,
@@ -2580,7 +2702,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":"column",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":6,
@@ -2601,7 +2724,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_palette":"category",
+        "dataviz_max":null
     },
     {
         "num_seccion":6,
@@ -2622,7 +2746,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":6,
@@ -2643,7 +2768,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":6,
@@ -2664,7 +2790,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"boolean_asc_2"
+        "dataviz_palette":"boolean_asc_2",
+        "dataviz_max":null
     },
     {
         "num_seccion":6,
@@ -2685,7 +2812,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":6,
@@ -2706,7 +2834,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":6,
@@ -2727,7 +2856,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -2748,7 +2878,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_no_desc"
+        "dataviz_palette":"yes_no_desc",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -2769,7 +2900,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -2790,7 +2922,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -2811,7 +2944,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -2832,7 +2966,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -2853,7 +2988,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -2874,7 +3010,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -2895,7 +3032,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":"column",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -2916,7 +3054,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -2937,7 +3076,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":"column",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -2958,7 +3098,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -2979,7 +3120,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":"column",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -3000,7 +3142,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -3021,7 +3164,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"scale_asc_4"
+        "dataviz_palette":"scale_asc_4",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -3042,7 +3186,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"scale_asc_4"
+        "dataviz_palette":"scale_asc_4",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -3063,7 +3208,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -3084,7 +3230,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -3105,7 +3252,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -3126,7 +3274,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -3147,7 +3296,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -3168,7 +3318,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"yes_no_desc"
+        "dataviz_palette":"yes_no_desc",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -3189,7 +3340,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -3210,7 +3362,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -3231,7 +3384,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -3252,7 +3406,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_no_desc"
+        "dataviz_palette":"yes_no_desc",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -3273,7 +3428,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -3294,7 +3450,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -3315,7 +3472,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -3336,7 +3494,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -3357,7 +3516,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_palette":"category",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -3378,7 +3538,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -3399,7 +3560,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -3420,7 +3582,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_palette":"category",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -3441,7 +3604,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -3462,7 +3626,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_palette":"category",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -3483,7 +3648,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -3504,7 +3670,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -3525,7 +3692,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -3546,7 +3714,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -3567,7 +3736,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -3588,7 +3758,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_no_desc"
+        "dataviz_palette":"yes_no_desc",
+        "dataviz_max":null
     },
     {
         "num_seccion":7,
@@ -3609,7 +3780,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":8,
@@ -3630,7 +3802,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":8,
@@ -3651,7 +3824,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":8,
@@ -3672,7 +3846,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":8,
@@ -3693,7 +3868,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":8,
@@ -3714,7 +3890,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":8,
@@ -3735,7 +3912,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":8,
@@ -3756,7 +3934,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":8,
@@ -3777,7 +3956,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_no_desc"
+        "dataviz_palette":"yes_no_desc",
+        "dataviz_max":null
     },
     {
         "num_seccion":8,
@@ -3798,7 +3978,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":8,
@@ -3819,7 +4000,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":8,
@@ -3840,7 +4022,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":8,
@@ -3861,7 +4044,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":8,
@@ -3882,7 +4066,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":8,
@@ -3903,7 +4088,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":8,
@@ -3924,7 +4110,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":8,
@@ -3945,7 +4132,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"category"
+        "dataviz_palette":"category",
+        "dataviz_max":null
     },
     {
         "num_seccion":8,
@@ -3966,7 +4154,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"boolean_asc_2"
+        "dataviz_palette":"boolean_asc_2",
+        "dataviz_max":null
     },
     {
         "num_seccion":8,
@@ -3987,7 +4176,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":8,
@@ -4008,7 +4198,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":8,
@@ -4029,7 +4220,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":9,
@@ -4050,7 +4242,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"boolean_asc_2"
+        "dataviz_palette":"boolean_asc_2",
+        "dataviz_max":null
     },
     {
         "num_seccion":9,
@@ -4071,7 +4264,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-multiple",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"scale_asc_4"
+        "dataviz_palette":"scale_asc_4",
+        "dataviz_max":null
     },
     {
         "num_seccion":9,
@@ -4092,7 +4286,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_palette":"category",
+        "dataviz_max":null
     },
     {
         "num_seccion":9,
@@ -4113,7 +4308,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":9,
@@ -4134,7 +4330,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":10,
@@ -4155,7 +4352,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"gender"
+        "dataviz_palette":"gender",
+        "dataviz_max":null
     },
     {
         "num_seccion":10,
@@ -4176,7 +4374,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"gender"
+        "dataviz_palette":"gender",
+        "dataviz_max":null
     },
     {
         "num_seccion":10,
@@ -4197,7 +4396,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":10,
@@ -4218,7 +4418,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":10,
@@ -4239,7 +4440,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_palette":"category",
+        "dataviz_max":null
     },
     {
         "num_seccion":10,
@@ -4260,7 +4462,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":10,
@@ -4281,7 +4484,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":10,
@@ -4302,7 +4506,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":10,
@@ -4323,7 +4528,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":10,
@@ -4344,7 +4550,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":10,
@@ -4365,7 +4572,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"answer",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":10,
@@ -4386,7 +4594,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"main"
+        "dataviz_palette":"main",
+        "dataviz_max":null
     },
     {
         "num_seccion":10,
@@ -4407,7 +4616,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":10,
@@ -4428,7 +4638,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":10,
@@ -4449,7 +4660,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"bar-yes-selection",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"yes_selection"
+        "dataviz_palette":"yes_selection",
+        "dataviz_max":null
     },
     {
         "num_seccion":10,
@@ -4470,7 +4682,8 @@
         "dataviz_display":1.0,
         "dataviz_chart_type":"donut",
         "dataviz_order_type":"frecuency",
-        "dataviz_palette":"category"
+        "dataviz_palette":"category",
+        "dataviz_max":null
     },
     {
         "num_seccion":10,
@@ -4491,7 +4704,8 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     },
     {
         "num_seccion":10,
@@ -4512,6 +4726,7 @@
         "dataviz_display":0.0,
         "dataviz_chart_type":null,
         "dataviz_order_type":null,
-        "dataviz_palette":null
+        "dataviz_palette":null,
+        "dataviz_max":null
     }
 ]

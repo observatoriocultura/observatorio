@@ -4,6 +4,7 @@ import { useRoute, useRouter } from 'vue-router'
 import BarMultipleChart from './charts/BarMultipleChart.vue'
 import BarSelectionChart from './charts/BarSelectionChart.vue'
 import BarYesSelectionChart from './charts/BarYesSelectionChart.vue'
+import BarNumberChart from './charts/BarNumberChart.vue'
 import DonutChart from './charts/DonutChart.vue'
 import BarChart from './charts/BarChart.vue'
 import WordCloudChart from './charts/WordCloudChart.vue'
@@ -890,6 +891,17 @@ watch(contentSection, async (nuevaSeccion) => {
                   :pregunta="preguntaSeleccionada"
                   :type="'bar'"
                   :series="series"
+                  :categorias="categorias"
+                />
+
+                <!-- TIPO DE GRAFICO BAR NUMBER (Promedio ponderado de respuesta_number por variable) -->
+                <BarNumberChart
+                  v-else-if="preguntaSeleccionada.dataviz_chart_type === 'bar-number'"
+                  :title="tituloConFiltro"
+                  :subtitle="preguntaSeleccionada.enunciado_1"
+                  :pregunta="preguntaSeleccionada"
+                  :variables="variablesFiltradas"
+                  :respuestas="respuestasPregunta"
                   :categorias="categorias"
                 />
 
