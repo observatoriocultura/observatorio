@@ -1,21 +1,25 @@
 <template>
   <div class="pai-list-layout">
-    <template v-if="activeSection === 'list'">
-      <div class="pai-list-search">
-        <ListSearchInput
-          v-model="searchTerm"
-          placeholder="Buscar investigaciones..."
-          aria-label="Buscar investigaciones"
-        />
-      </div>
+    <div class="pai-list-search">
+      <ListSearchInput
+        v-model="searchTerm"
+        placeholder="Buscar investigaciones..."
+        aria-label="Buscar investigaciones"
+      />
+    </div>
 
+    <ColumnasAvance
+      :investigaciones="props.investigaciones"
+      :selected-investigacion-id="activeInvestigacionId"
+    />
+    <template v-if="activeSection === 'list'">
       <div v-if="investigacionesFiltradas.length > 0" class="investigaciones-container">
         <RouterLink
           v-for="investigacion in investigacionesFiltradas"
           :key="investigacion.id"
           :to="getInvestigacionRoute(investigacion)"
           class="investigacion-card"
-          :class="{ 'investigacion-card-active': currentInvestigacion?.id === investigacion.id }"
+          :class="{ 'investigacion-card-active': isInvestigacionActive(investigacion.id) }"
           @click="selectInvestigacion(investigacion)"
         >
           <p class="mb-1">
@@ -30,31 +34,14 @@
           </p>
           <h3 class="h5 mb-2">{{ investigacion.nombre_clave }}</h3>
           <p>{{ investigacion.titulo }}</p>
-          <div class="avance-indicadores" aria-label="Indicadores de avance">
-            <div v-for="indicador in indicadoresAvance" :key="indicador.key" class="avance-item">
-              <span class="label avance-etapa" :class="indicador.className">
-                {{ indicador.label }}
-              </span>
-              <div
-                class="progress"
-                role="progressbar"
-                :aria-label="indicador.title"
-                :aria-valuenow="getAvanceValue(investigacion[indicador.key])"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                <div
-                  class="progress-bar"
-                  :style="{ width: `${getAvanceValue(investigacion[indicador.key])}%` }"
-                ></div>
-              </div>
-              <strong class="avance-valor">
-                {{ formatAvance(investigacion[indicador.key]) }}
-              </strong>
-              <span class="visually-hidden">
-                {{ indicador.title }}:
-                {{ formatAvance(investigacion[indicador.key]) }}
-              </span>
+          <div class="investigacion-metricas" aria-label="Indicadores numericos">
+            <div
+              v-for="indicador in indicadoresNumericos"
+              :key="indicador.key"
+              class="investigacion-metrica"
+            >
+              <span>{{ indicador.label }}</span>
+              <strong>{{ formatIndicador(investigacion[indicador.key], indicador.type) }}</strong>
             </div>
           </div>
         </RouterLink>
@@ -69,6 +56,7 @@
       v-else-if="currentInvestigacion"
       class="investigacion-current"
       :investigacion="currentInvestigacion"
+      :notas="props.notas"
       @back="setCurrentSection('list')"
     />
 
@@ -83,11 +71,15 @@ import { computed, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import ListSearchInput from '../../../components/ListSearchInput.vue'
 import { toClassName } from '../../../utils/text'
-import { etapasInvestigacion } from '../constants'
+import ColumnasAvance from './ColumnasAvance.vue'
 import InvestigacionView from './InvestigacionView.vue'
 
 const props = defineProps({
   investigaciones: {
+    type: Array,
+    default: () => [],
+  },
+  notas: {
     type: Array,
     default: () => [],
   },
@@ -113,6 +105,7 @@ const normalizeSection = (section) => (validSections.includes(section) ? section
 const requestedInvestigacionId = computed(
   () => props.selectedInvestigacionId ?? route.query.investigacion_id ?? null,
 )
+const activeInvestigacionId = computed(() => currentInvestigacionId.value ?? requestedInvestigacionId.value)
 const activeSection = computed(
   () => normalizeSection(route.query.seccion) ?? props.currentSection ?? localCurrentSection.value,
 )
@@ -156,6 +149,9 @@ const selectInvestigacion = (investigacion) => {
   currentInvestigacionId.value = investigacion.id
   setCurrentSection('details')
 }
+
+const isInvestigacionActive = (investigacionId) =>
+  String(investigacionId) === String(activeInvestigacionId.value)
 
 const getInvestigacionRoute = (investigacion) => ({
   query: {
@@ -203,7 +199,7 @@ watch(
 )
 
 watch(
-  () => props.selectedInvestigacionId,
+  requestedInvestigacionId,
   (investigacionId) => {
     if (investigacionId === null || investigacionId === undefined) return
 
@@ -221,33 +217,30 @@ watch(
   { immediate: true },
 )
 
+watch(searchTerm, () => {
+  setCurrentSection('list')
+})
+
 const getLineaClass = (linea) => `bg-${toClassName(linea)}`
-const campoAvancePorEtapa = {
-  P: 'avance_planeacion',
-  I: 'avance_instrumentos',
-  R: 'avance_recoleccion',
-  D: 'avance_documentacion',
-  F: 'avance_finalizacion',
-}
-const clasePorEtapa = {
-  P: 'etapa-planeacion',
-  I: 'etapa-instrumento',
-  R: 'etapa-recoleccion',
-  D: 'etapa-documentacion',
-  F: 'etapa-finalizacion',
-}
-const indicadoresAvance = etapasInvestigacion.map((etapa) => ({
-  key: campoAvancePorEtapa[etapa.codigo],
-  label: etapa.codigo,
-  title: `Avance de ${etapa.nombre}`,
-  className: clasePorEtapa[etapa.codigo],
-}))
 const getAvanceValue = (value) => {
   const avance = Number(value)
   if (!Number.isFinite(avance)) return 0
   return Math.min(Math.max(Math.round(avance), 0), 100)
 }
 const formatAvance = (value) => `${getAvanceValue(value)}%`
+const indicadoresNumericos = [
+  { key: 'avance', label: 'Avance', type: 'percent' },
+  { key: 'cantidad_productos', label: 'Productos' },
+  { key: 'cantidad_paginas', label: 'Páginas' },
+  { key: 'cantidad_hallazgos', label: 'Hallazgos' },
+  { key: 'cantidad_radicados', label: 'Radicados' },
+]
+const formatNumber = (value) => {
+  const number = Number(value)
+  if (!Number.isFinite(number)) return '0'
+  return new Intl.NumberFormat('es-CO').format(number)
+}
+const formatIndicador = (value, type) => (type === 'percent' ? formatAvance(value) : formatNumber(value))
 </script>
 
 <style scoped>
@@ -327,51 +320,36 @@ const formatAvance = (value) => `${getAvanceValue(value)}%`
   line-height: 1.35;
 }
 
-.avance-indicadores {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
+.investigacion-metricas {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.35rem;
   margin-top: auto;
   padding-top: 0.75rem;
 }
 
-.avance-item {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr) 2.25rem;
-  align-items: center;
-  gap: 0.4rem;
+.investigacion-metrica {
+  display: flex;
   min-width: 0;
+  flex-direction: column;
+  gap: 0.15rem;
+  border-top: 1px solid #eeeeee;
+  padding-top: 0.35rem;
 }
 
-.avance-etapa {
-  display: inline-flex;
-  width: 1.35rem;
-  height: 1.35rem;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-  color: #212529;
-  font-size: 0.72rem;
+.investigacion-metrica span {
+  color: #6c757d;
+  font-size: 0.62rem;
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
 }
 
-.avance-valor {
+.investigacion-metrica strong {
   color: #212529;
-  font-size: 0.7rem;
-  line-height: 1.2;
-  text-align: right;
-}
-
-.avance-item .progress {
-  height: 0.35rem;
-  border-radius: 999px;
-  background-color: #e9ecef;
-}
-
-.avance-item .progress-bar {
-  border-radius: inherit;
-  background-color: #654096;
+  font-size: 0.86rem;
+  line-height: 1.1;
 }
 
 @media (min-width: 576px) {
@@ -386,9 +364,9 @@ const formatAvance = (value) => `${getAvanceValue(value)}%`
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1600px) {
   .investigaciones-container {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 </style>

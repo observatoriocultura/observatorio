@@ -4,13 +4,14 @@
     class="pai-avance-columnas"
     aria-label="Columnas de avance por investigacion"
   >
-    <h2 class="pai-avance-columnas-title">Columnas de avance</h2>
+    <h2 class="pai-avance-columnas-title">Avance</h2>
     <div class="pai-avance-columnas-list">
       <RouterLink
         v-for="investigacion in investigacionesConAvance"
         :key="investigacion.id"
         :to="getInvestigacionRoute(investigacion)"
         class="pai-avance-columna-item"
+        :class="{ 'pai-avance-columna-item-active': isInvestigacionActive(investigacion.id) }"
         :aria-label="`Ver detalle de ${investigacion.nombreClave}`"
       >
         <div
@@ -22,7 +23,7 @@
           aria-valuemax="100"
           data-bs-toggle="tooltip"
           data-bs-placement="top"
-          :data-bs-title="investigacion.nombreClave"
+          :data-bs-title="getTooltipTitle(investigacion)"
         >
           <div
             class="pai-avance-columna-fill"
@@ -33,7 +34,7 @@
           class="pai-avance-columna-id"
           data-bs-toggle="tooltip"
           data-bs-placement="bottom"
-          :data-bs-title="investigacion.nombreClave"
+          :data-bs-title="getTooltipTitle(investigacion)"
         >
           {{ investigacion.id }}
         </span>
@@ -51,6 +52,10 @@ const props = defineProps({
   investigaciones: {
     type: Array,
     default: () => [],
+  },
+  selectedInvestigacionId: {
+    type: [Number, String],
+    default: null,
   },
 })
 
@@ -83,6 +88,11 @@ const getInvestigacionRoute = (investigacion) => ({
   },
 })
 
+const getTooltipTitle = (investigacion) => `${investigacion.nombreClave}: ${investigacion.avance}%`
+
+const isInvestigacionActive = (investigacionId) =>
+  String(investigacionId) === String(props.selectedInvestigacionId ?? route.query.investigacion_id)
+
 const getAvanceValue = (value) => {
   const avance = Number(value)
   if (!Number.isFinite(avance)) return 0
@@ -108,9 +118,6 @@ watch(investigacionesConAvance, initTooltips)
   width: 100%;
   flex-direction: column;
   gap: 0.75rem;
-  border: 1px solid #e7e7e7;
-  border-radius: 8px;
-  background-color: #fff;
   padding: 1rem;
 }
 
@@ -131,7 +138,7 @@ watch(investigacionesConAvance, initTooltips)
   justify-content: center;
   gap: 0.45rem;
   overflow-x: auto;
-  padding-bottom: 0.2rem;
+  padding: 0.35rem 0.35rem 0.45rem;
 }
 
 .pai-avance-columna-item {
@@ -144,12 +151,26 @@ watch(investigacionesConAvance, initTooltips)
   border-radius: 6px;
   color: inherit;
   cursor: pointer;
+  padding: 0.2rem;
   text-decoration: none;
 }
 
 .pai-avance-columna-item:focus {
   outline: 3px solid rgba(101, 64, 150, 0.18);
   outline-offset: 3px;
+}
+
+.pai-avance-columna-item-active {
+  box-shadow: 0 0 0 3px rgba(101, 64, 150, 0.24);
+}
+
+.pai-avance-columna-item-active .pai-avance-columna-fill {
+  background-color: #4b2e72;
+}
+
+.pai-avance-columna-item-active .pai-avance-columna-id {
+  color: #4b2e72;
+  font-weight: 800;
 }
 
 .pai-avance-columna {

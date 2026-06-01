@@ -2,8 +2,8 @@
 
 Esta carpeta implementa una interfaz de exploracion para el Plan Anual de Investigaciones
 (PAI). La experiencia actual permite consultar investigaciones por vigencia, ver una portada
-con indicadores agregados, navegar a un listado buscable y abrir el detalle de avance de cada
-investigacion por etapas.
+con indicadores agregados y columnas de avance, navegar a un listado buscable y abrir el
+detalle de avance de cada investigacion por etapas.
 
 El objetivo funcional es convertir la tabla `gio_investigaciones` de Supabase en una vista web
 simple para seguimiento: cuantas investigaciones hay por linea, cual es el avance promedio y en
@@ -14,10 +14,37 @@ que estado esta cada proyecto dentro del ciclo PAI.
 - Ruta principal: `/pai/:year`.
 - Redireccion: `/pai` redirige a `/pai/2025`.
 - Componente de entrada: `src/views/pai/PaiView.vue`.
-- Navegacion interna: pestanas locales `Portada` e `Investigaciones`, sin cambiar la URL.
+- Navegacion interna: pestanas locales `Portada` e `Investigaciones`, sincronizadas con
+  variables GET en la URL.
 
 `PaiView.vue` lee `route.params.year`; si no hay un valor numerico valido usa `2025` como
 vigencia por defecto. Cada cambio de vigencia dispara una nueva carga contra Supabase.
+
+## Variables GET de control
+
+La herramienta usa query params para que el estado de navegacion sea compartible y recuperable.
+
+| Variable | Valores esperados | Controla | Default |
+| --- | --- | --- | --- |
+| `tab` | `portada`, `listado` | Vista principal activa en `PaiView.vue` | `portada` |
+| `seccion` | `list`, `details` | Seccion interna de `PaiList.vue` | `details` si hay `investigacion_id`; si no, `list` |
+| `investigacion_id` | ID de `gio_investigaciones` | Investigacion seleccionada para el detalle | `null` |
+
+Ejemplos de URL:
+
+```text
+/pai/2025?tab=portada
+/pai/2025?tab=listado&seccion=list
+/pai/2025?tab=listado&seccion=details&investigacion_id=12
+```
+
+Reglas importantes:
+
+- Si `tab` falta o tiene un valor invalido, se normaliza a `portada`.
+- Si `seccion` falta y existe `investigacion_id`, se normaliza a `details`.
+- Si `seccion` falta y no existe `investigacion_id`, se normaliza a `list`.
+- Los enlaces de tarjetas y columnas de avance deben incluir siempre
+  `tab=listado&seccion=details&investigacion_id={id}`.
 
 ## Fuente de datos
 
@@ -139,7 +166,10 @@ Hace:
 - Carga investigaciones desde Supabase.
 - Gestiona estados de carga, error y vacio.
 - Filtra investigaciones por `year_vigencia`.
-- Controla la pestana activa: `portada` o `listado`.
+- Controla la pestana activa: `portada` o `listado`, sincronizada con `?tab=`.
+- Controla la seccion interna del listado mediante `currentListSection`, sincronizada con
+  `?seccion=`.
+- Lee `?investigacion_id=` para seleccionar una investigacion y abrir la vista de detalle.
 - Entrega `investigacionesFiltradas` a los componentes hijos.
 
 Estados principales:
@@ -148,6 +178,8 @@ Estados principales:
 - `loading`: indicador de carga.
 - `errorMessage`: mensaje visible si falla la consulta o si no hay Supabase configurado.
 - `activeView`: pestana activa.
+- `currentListSection`: seccion interna de `PaiList.vue`; puede ser `list` o `details`.
+- `selectedInvestigacionId`: ID de la investigacion seleccionada desde la URL.
 - `year`: vigencia derivada de `route.params.year`.
 
 ### `PaiPortada.vue`
@@ -167,11 +199,41 @@ Calcula:
 - Avance promedio general.
 - Avance promedio por linea.
 
+Ademas renderiza `ColumnasAvance.vue` encima de los KPIs para mostrar una lectura rapida del
+avance total de cada investigacion.
+
 El avance promedio se calcula con valores numericos finitos de `investigacion.avance`. Si no
 hay avances validos, el promedio mostrado es `0`.
 
 La portada no consulta datos directamente; depende por completo de las props entregadas por
 `PaiView.vue`.
+
+### `ColumnasAvance.vue`
+
+Responsable de la visualizacion reutilizable de columnas verticales de avance.
+
+Recibe:
+
+```text
+investigaciones: Array
+```
+
+Hace:
+
+- Renderiza una columna por investigacion.
+- Usa una altura base de `5em`, donde `100%` equivale a la columna completa.
+- Calcula la altura visible con `investigacion.avance`, normalizado al rango `0..100`.
+- Muestra el `id` de la investigacion debajo de cada columna.
+- Usa tooltips de Bootstrap con `investigacion.nombre_clave` sobre la columna y el ID.
+- Envuelve cada columna en un `RouterLink` que apunta al detalle:
+
+```text
+?tab=listado&seccion=details&investigacion_id={investigacion.id}
+```
+
+El componente inicializa y destruye instancias de `Tooltip` de Bootstrap en su ciclo de vida
+para que funcionen con contenido renderizado por Vue. No emite eventos de seleccion; la
+navegacion se controla por URL.
 
 ### `PaiList.vue`
 
@@ -182,6 +244,7 @@ Recibe:
 ```text
 investigaciones: Array
 currentSection?: "list" | "details" | null
+selectedInvestigacionId?: Number | String | null
 ```
 
 Emite:
@@ -196,6 +259,11 @@ Hace:
 - Filtra investigaciones por texto normalizado, sin distinguir mayusculas ni acentos.
 - Presenta tarjetas de investigacion en una grilla responsiva.
 - Muestra indicadores compactos de avance por etapa.
+- Presenta cada tarjeta como `RouterLink` hacia
+  `?tab=listado&seccion=details&investigacion_id={id}`.
+- Lee `route.query.seccion` para decidir si renderiza el listado o el detalle.
+- Usa `selectedInvestigacionId` o `route.query.investigacion_id` para encontrar la investigacion
+  seleccionada.
 - Permite seleccionar una investigacion y pasar a la vista de detalle.
 - Vuelve automaticamente a `list` si ya no existe la investigacion seleccionada.
 
@@ -207,8 +275,12 @@ Campos incluidos en la busqueda:
 - `linea_investigacion`
 - `palabras_clave`
 
-La seccion activa puede manejarse de forma interna o externa. Si `currentSection` llega como
-prop, el componente la respeta; si no, usa `localCurrentSection`.
+La seccion activa puede manejarse por URL, de forma externa o de forma interna. El orden de
+prioridad es:
+
+1. `route.query.seccion`, si es `list` o `details`.
+2. `currentSection`, si llega como prop.
+3. `localCurrentSection`, como estado local de respaldo.
 
 ### `InvestigacionView.vue`
 
@@ -237,14 +309,19 @@ Hace:
 
 1. El usuario entra a `/pai/:year`.
 2. `PaiView.vue` obtiene la vigencia desde la ruta.
-3. Se consulta `gio_investigaciones` en Supabase filtrando por `year_vigencia`.
-4. Mientras carga, se muestra `Cargando investigaciones...`.
-5. Si hay error, se muestra un mensaje de error.
-6. Si no hay registros, se muestra un mensaje de estado vacio.
-7. Si hay registros, la pestana `Portada` muestra KPIs agregados.
-8. En la pestana `Investigaciones`, el usuario puede buscar y seleccionar una tarjeta.
-9. Al seleccionar una investigacion, `PaiList.vue` cambia a `details`.
-10. `InvestigacionView.vue` muestra el detalle y permite volver al listado.
+3. `PaiView.vue` normaliza `tab`, `seccion` e `investigacion_id` desde la URL.
+4. Se consulta `gio_investigaciones` en Supabase filtrando por `year_vigencia`.
+5. Mientras carga, se muestra `Cargando investigaciones...`.
+6. Si hay error, se muestra un mensaje de error.
+7. Si no hay registros, se muestra un mensaje de estado vacio.
+8. Si hay registros y `tab=portada`, `PaiPortada.vue` muestra columnas de avance y KPIs.
+9. Al hacer clic en una columna de avance, `ColumnasAvance.vue` navega a
+   `?tab=listado&seccion=details&investigacion_id={id}`.
+10. Si `tab=listado&seccion=list`, `PaiList.vue` muestra el buscador y las tarjetas.
+11. Al hacer clic en una tarjeta, `PaiList.vue` navega a
+    `?tab=listado&seccion=details&investigacion_id={id}`.
+12. Si `seccion=details`, `PaiList.vue` muestra `InvestigacionView.vue` con la investigacion
+    seleccionada.
 
 ## Comportamiento visual y accesibilidad
 
@@ -253,13 +330,14 @@ La UI usa Bootstrap y clases locales.
 Patrones aplicados:
 
 - Pestanas con `nav nav-tabs`.
-- Tarjetas de investigacion como botones para permitir navegacion con teclado.
-- `aria-pressed` en la tarjeta seleccionada.
+- Tarjetas de investigacion como `RouterLink`, para permitir enlaces compartibles.
+- Columnas de avance como `RouterLink`, con foco visible y tooltip.
 - Barras de progreso con `role="progressbar"`, `aria-valuenow`, `aria-valuemin` y
   `aria-valuemax`.
 - Texto `visually-hidden` para que los porcentajes compactos de avance sean legibles por
   tecnologias asistivas.
 - Estados de foco visibles en tarjetas, boton de volver y campo de busqueda.
+- Tooltips de Bootstrap en columnas e IDs para exponer `nombre_clave`.
 
 La grilla del listado cambia por breakpoint:
 
@@ -276,6 +354,10 @@ La grilla del listado cambia por breakpoint:
 - `year_vigencia` se compara como numero en el filtro local, pero se envia como string al filtro
   de Supabase.
 - `id` se usa como clave de render y como identificador de seleccion.
+- Los enlaces al detalle deben conservar `tab=listado`, `seccion=details` e
+  `investigacion_id={id}` para que la URL reconstruya el estado.
+- `ColumnasAvance.vue` es reutilizable: cualquier vista que le pase `investigaciones` puede
+  obtener la misma navegacion hacia detalle.
 - `PaiPortada`, `PaiList` e `InvestigacionView` son componentes presentacionales respecto a
   datos remotos: no deben consultar Supabase directamente salvo que se decida cambiar la
   arquitectura.
@@ -294,16 +376,22 @@ Cuando extiendas esta funcionalidad:
    acentos o mayusculas directamente.
 7. Mantiene los componentes hijos sin dependencia directa de Supabase mientras la vista siga
    organizada con `PaiView.vue` como contenedor.
-8. Si cambias la navegacion de detalle para que use URL, revisa la relacion entre
-   `activeView`, `currentSection` y `currentInvestigacionId`.
+8. Si cambias la navegacion de detalle, revisa la relacion entre `tab`, `seccion`,
+   `investigacion_id`, `activeView`, `currentListSection` y `currentInvestigacionId`.
+9. Si reutilizas `ColumnasAvance.vue` en otra seccion, confirma que esa seccion pueda resolver
+   la ruta con `tab=listado&seccion=details&investigacion_id={id}` o ajusta el componente para
+   aceptar una funcion/prop de destino.
+10. Evita que watchers iniciales pisen `seccion=details`: si hay `investigacion_id`, el estado
+    de detalle debe tener prioridad sobre defaults locales como `list`.
 
 ## Posibles mejoras detectadas
 
 - Agregar `palabras_clave` al `select` si la busqueda debe cubrir ese campo.
 - Extraer `campoAvancePorEtapa`, `clasePorEtapa`, `getAvanceValue` y `formatAvance` a un helper
-  compartido para evitar duplicacion entre listado y detalle.
+  compartido para evitar duplicacion entre listado, detalle y columnas de avance.
 - Evaluar si `avance` debe calcularse desde los pesos de etapas o si debe seguir viniendo como
   campo persistido desde Supabase.
-- Considerar una ruta de detalle si se necesita compartir enlaces directos a una investigacion.
+- Considerar migrar de query params a rutas nombradas si se necesita una jerarquia de URLs mas
+  explicita para el detalle.
 - Agregar pruebas unitarias ligeras para normalizacion de busqueda, calculo de promedios y
   normalizacion de porcentajes.

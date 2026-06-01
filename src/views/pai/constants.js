@@ -53,3 +53,43 @@ export const lineasInvestigacion = [
     clase: 'bg-sector-cultura',
   },
 ]
+
+/**
+ * Datos de detalle de cada vigencia del PAI. Con rutas y claves para consulta de datos.
+ */
+export const vigencias = [
+  {
+    year: 2023,
+    nombre: '2023',
+    key: '2023',
+    file_id: '',
+    notas_gid: '',
+  },
+  {
+    year: 2024,
+    nombre: '2024',
+    key: '2024',
+    file_id: '',
+    notas_gid: '',
+  },
+  {
+    year: 2025,
+    nombre: '2025',
+    key: '2025',
+    file_id: '1E26lwaWDXqi6kvbjr_uOCvr6jVbs_85DHD571CvoBQ0',
+    notas_gid: '48170642',
+  },
+  {
+    year: 2026,
+    nombre: '2026',
+    key: '2026',
+    file_id: '1u0WZmcJRNEUEb5kDJtwS2loSNIG7lORmgJuiWdBhMz8',
+    notas_gid: '48170642',
+  },
+]
+
+const vigenciasPorYear = Object.fromEntries(
+  vigencias.map((vigencia) => [vigencia.year, vigencia]),
+)
+
+export const vigenciaPorYear = (year) => vigenciasPorYear[Number(year)] ?? null

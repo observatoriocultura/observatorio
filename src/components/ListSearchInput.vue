@@ -18,10 +18,12 @@
         @keydown.esc="clearSearch"
       />
       <button
-        v-if="modelValue"
         type="button"
         class="list-search-clear"
+        :class="{ 'list-search-clear-visible': modelValue }"
         :aria-label="clearLabel"
+        :tabindex="modelValue ? 0 : -1"
+        :aria-hidden="modelValue ? undefined : 'true'"
         @click="clearSearch"
       >
         <i class="bi bi-x-lg" aria-hidden="true"></i>
@@ -85,14 +87,15 @@ const clearSearch = () => {
 
 .list-search-control {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-columns: auto minmax(0, 1fr) 1.75rem;
   align-items: center;
   gap: 0.45rem;
   width: 100%;
+  min-height: 2.85rem;
   border: 1px solid #d8d8d8;
-  border-radius: 8px;
+  border-radius: 999px;
   background-color: #fff;
-  padding: 0.5rem 0.65rem;
+  padding: 0.5rem 0.55rem 0.5rem 0.8rem;
 }
 
 .list-search-control:focus-within {
@@ -120,6 +123,18 @@ const clearSearch = () => {
   color: #8a9198;
 }
 
+.list-search-field::-webkit-search-cancel-button,
+.list-search-field::-webkit-search-decoration {
+  appearance: none;
+}
+
+.list-search-field::-ms-clear,
+.list-search-field::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
 .list-search-clear {
   display: inline-flex;
   width: 1.75rem;
@@ -127,20 +142,29 @@ const clearSearch = () => {
   align-items: center;
   justify-content: center;
   border: 0;
-  border-radius: 6px;
+  border-radius: 999px;
   background-color: transparent;
   color: #6c757d;
   font-size: 0.8rem;
   line-height: 1;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
 
-.list-search-clear:hover,
-.list-search-clear:focus {
+.list-search-clear-visible {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.list-search-clear-visible:hover,
+.list-search-clear-visible:focus {
   background-color: #f1eef6;
   color: #654096;
 }
 
-.list-search-clear:focus {
+.list-search-clear-visible:focus {
   outline: 2px solid rgba(101, 64, 150, 0.24);
   outline-offset: 1px;
 }
