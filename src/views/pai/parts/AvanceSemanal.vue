@@ -1,11 +1,7 @@
 <template>
   <section class="avance-semanal" aria-label="Avance semanal del PAI">
     <div class="avance-semanal-grid">
-      <section class="avance-tabla" aria-labelledby="avance-linea-title">
-        <header class="avance-tabla-header">
-          <h2 id="avance-linea-title">Línea de tiempo</h2>
-        </header>
-
+      <section class="avance-tabla" aria-label="Linea de tiempo">
         <div v-if="timelineTotal > 0" ref="timelineChartContainer" class="avance-chart"></div>
         <p v-else class="avance-empty">No hay datos de avance para graficar.</p>
       </section>
@@ -45,6 +41,8 @@
 <script setup>
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import Highcharts from 'highcharts'
+import { lineasInvestigacion } from '../constants'
+import { toClassName } from '../../../utils/text'
 
 const props = defineProps({
   semanas: {
@@ -70,7 +68,27 @@ const resumenColumns = [
   { key: 'a', label: 'A' },
   { key: 'f', label: 'F' },
 ]
+const lineaSeriesColors = {
+  'cultura-ciudadana': '#b45309',
+  'sector-cultura': '#7132a2',
+}
+const fallbackSeriesColors = ['#0f766e', '#0B57D0', '#c2410c', '#0369a1']
 
+// Normaliza nombres de columnas para tolerar espacios, tildes y mayusculas.
+const normalizeColumnName = (value) => toClassName(value).replaceAll('-', '_')
+
+// Lee una celda usando varios nombres posibles de columna.
+const getFieldValue = (record, keys) => {
+  const normalizedRecord = Object.fromEntries(
+    Object.entries(record ?? {}).map(([key, value]) => [normalizeColumnName(key), value]),
+  )
+
+  return keys
+    .map((key) => normalizedRecord[normalizeColumnName(key)])
+    .find((value) => value !== undefined && value !== null && String(value).trim() !== '')
+}
+
+// Convierte fechas de Sheets a timestamp para Highcharts.
 const parseDateValue = (value) => {
   const text = String(value ?? '').trim()
   if (!text) return null
@@ -88,6 +106,7 @@ const parseDateValue = (value) => {
   return Number.isNaN(timestamp) ? null : timestamp
 }
 
+// Normaliza numeros que pueden venir con %, espacios o coma decimal.
 const parseNumberValue = (value) => {
   const text = String(value ?? '')
     .trim()
@@ -99,29 +118,33 @@ const parseNumberValue = (value) => {
   return Number.isFinite(number) ? number : null
 }
 
+// Arma la serie de avance esperado desde la hoja de semanas.
 const timelineData = computed(() =>
   props.semanas
     .map((semana) => {
-      const x = parseDateValue(semana?.fecha_fin)
-      const y = parseNumberValue(semana?.avance_esperado)
+      const fechaFin = getFieldValue(semana, ['fecha_fin', 'fecha fin', 'fecha final'])
+      const avanceEsperado = getFieldValue(semana, ['avance_esperado', 'avance esperado'])
+      const x = parseDateValue(fechaFin)
+      const y = parseNumberValue(avanceEsperado)
 
       if (x === null || y === null) return null
 
       return {
         x,
         y,
-        name: formatCell(semana?.semana ?? semana?.nombre ?? semana?.fecha_fin),
+        name: formatCell(getFieldValue(semana, ['semana', 'nombre']) ?? fechaFin),
       }
     })
     .filter(Boolean)
     .sort((a, b) => a.x - b.x),
 )
 
+// Resume los avances por fecha para la tabla inferior.
 const avancesResumen = computed(() => {
   const resumenPorFecha = new Map()
 
   props.avances.forEach((avance) => {
-    const fecha = String(avance?.fecha ?? '').trim()
+    const fecha = String(getFieldValue(avance, ['fecha']) ?? '').trim()
     if (!fecha) return
 
     if (!resumenPorFecha.has(fecha)) {
@@ -136,7 +159,7 @@ const avancesResumen = computed(() => {
     const resumen = resumenPorFecha.get(fecha)
 
     resumenKeys.forEach((key) => {
-      const value = parseNumberValue(avance?.[key])
+      const value = parseNumberValue(getFieldValue(avance, [key]))
       if (value === null) return
 
       resumen.sums[key] += value
@@ -165,22 +188,110 @@ const avancesResumen = computed(() => {
     })
 })
 
-const avanceRealData = computed(() =>
-  avancesResumen.value
-    .map((resumen) => {
-      if (resumen.timestamp === null || resumen.avance === null) return null
+// Calcula una serie de avance registrado por cada linea de investigacion.
+const avanceRealSeries = computed(() => {
+  const resumenPorLineaFecha = new Map()
 
-      return {
-        x: resumen.timestamp,
-        y: resumen.avance,
-        name: resumen.fecha,
-      }
+  props.avances.forEach((avance) => {
+    const fecha = String(getFieldValue(avance, ['fecha']) ?? '').trim()
+    const timestamp = parseDateValue(fecha)
+    const value = parseNumberValue(getFieldValue(avance, ['avance']))
+    const lineaKey = toClassName(
+      getFieldValue(avance, [
+        'linea_investigacion',
+        'linea investigacion',
+        'línea investigación',
+        'línea de investigación',
+      ]),
+    )
+
+    if (!fecha || timestamp === null || value === null || !lineaKey) return
+
+    const resumenKey = `${lineaKey}:${timestamp}`
+
+    if (!resumenPorLineaFecha.has(resumenKey)) {
+      resumenPorLineaFecha.set(resumenKey, {
+        fecha,
+        lineaKey,
+        timestamp,
+        sum: 0,
+        count: 0,
+      })
+    }
+
+    const resumen = resumenPorLineaFecha.get(resumenKey)
+    resumen.sum += value
+    resumen.count += 1
+  })
+
+  const pointsByLinea = [...resumenPorLineaFecha.values()].reduce((lineas, resumen) => {
+    if (!lineas.has(resumen.lineaKey)) {
+      lineas.set(resumen.lineaKey, [])
+    }
+
+    lineas.get(resumen.lineaKey).push({
+      x: resumen.timestamp,
+      y: resumen.sum / resumen.count,
+      name: resumen.fecha,
     })
-    .filter(Boolean),
-)
 
-const timelineTotal = computed(() => timelineData.value.length + avanceRealData.value.length)
+    return lineas
+  }, new Map())
 
+  const orderedLineaKeys = [
+    ...lineasInvestigacion.map((linea) => linea.key).filter((key) => pointsByLinea.has(key)),
+    ...[...pointsByLinea.keys()]
+      .filter((key) => !lineasInvestigacion.some((linea) => linea.key === key))
+      .sort(),
+  ]
+
+  return orderedLineaKeys.map((lineaKey, index) => {
+    const linea = lineasInvestigacion.find((item) => item.key === lineaKey)
+
+    return {
+      name: linea?.nombre ?? lineaKey,
+      color: lineaSeriesColors[lineaKey] ?? fallbackSeriesColors[index % fallbackSeriesColors.length],
+      data: pointsByLinea.get(lineaKey).sort((a, b) => a.x - b.x),
+    }
+  })
+})
+
+// Aplana los puntos registrados para calcular totales y rangos.
+const avanceRealPoints = computed(() => avanceRealSeries.value.flatMap((series) => series.data))
+
+// Cuenta los puntos disponibles para decidir si se renderiza la grafica.
+const timelineTotal = computed(() => timelineData.value.length + avanceRealPoints.value.length)
+
+// Crea bandas mensuales alternadas para segmentar visualmente el eje X.
+const timelineMonthBands = computed(() => {
+  const timestamps = [...timelineData.value, ...avanceRealPoints.value].map((point) => point.x)
+  if (timestamps.length === 0) return []
+
+  const minDate = new Date(Math.min(...timestamps))
+  const maxDate = new Date(Math.max(...timestamps))
+  const cursor = new Date(minDate.getFullYear(), minDate.getMonth(), 1)
+  const bands = []
+  let monthIndex = 0
+
+  while (cursor.getTime() <= maxDate.getTime()) {
+    const nextMonth = new Date(cursor.getFullYear(), cursor.getMonth() + 1, 1)
+
+    bands.push({
+      from: cursor.getTime(),
+      to: nextMonth.getTime(),
+      color: monthIndex % 2 === 0 ? 'rgba(11, 87, 208, 0.045)' : 'rgba(15, 118, 110, 0.035)',
+      borderColor: 'rgba(108, 117, 125, 0.28)',
+      borderWidth: 1,
+    })
+
+    cursor.setMonth(cursor.getMonth() + 1)
+    monthIndex += 1
+  }
+
+  return bands
+})
+
+// Crea o actualiza la grafica de Highcharts con las series calculadas.
 const renderTimelineChart = async () => {
   await nextTick()
 
@@ -216,11 +327,23 @@ const renderTimelineChart = async () => {
     },
     xAxis: {
       type: 'datetime',
+      plotBands: timelineMonthBands.value,
       title: {
         text: 'Fecha',
       },
       labels: {
-        format: '{value:%d/%m}',
+        formatter() {
+          // Formatea cada marca como DD/MMM, por ejemplo 16/ago.
+          const [day, month] = new Intl.DateTimeFormat('es-CO', {
+            day: '2-digit',
+            month: 'short',
+          })
+            .formatToParts(new Date(this.value))
+            .filter((part) => part.type === 'day' || part.type === 'month')
+            .map((part) => part.value.replace('.', ''))
+
+          return `${day}/${month}`
+        },
       },
     },
     yAxis: {
@@ -267,12 +390,11 @@ const renderTimelineChart = async () => {
         name: 'Avance esperado',
         color: '#0B57D0',
         data: timelineData.value,
+        dataLabels: {
+          enabled: false,
+        },
       },
-      {
-        name: 'Avance registrado',
-        color: '#0f766e',
-        data: avanceRealData.value,
-      },
+      ...avanceRealSeries.value,
     ],
   }
 
@@ -283,23 +405,29 @@ const renderTimelineChart = async () => {
   }
 }
 
+// Muestra texto limpio o un guion cuando la celda viene vacia.
 const formatCell = (value) => {
   const text = String(value ?? '').trim()
   return text || '-'
 }
 
+// Formatea el contador de registros con separador local.
 const formatTotal = (total) => `${new Intl.NumberFormat('es-CO').format(total)} registros`
 
+// Formatea celdas del resumen, usando porcentaje en los campos numericos.
 const formatResumenCell = (value, key) => {
   if (key === 'fecha') return formatCell(value)
   if (value === null || value === undefined) return '-'
   return `${new Intl.NumberFormat('es-CO', { maximumFractionDigits: 1 }).format(value)}%`
 }
 
+// Renderiza la grafica cuando el componente entra al DOM.
 onMounted(renderTimelineChart)
 
-watch([timelineData, avanceRealData], renderTimelineChart)
+// Repinta la grafica cuando cambian datos, series o bandas mensuales.
+watch([timelineData, avanceRealSeries, timelineMonthBands], renderTimelineChart)
 
+// Libera la instancia de Highcharts al desmontar el componente.
 onBeforeUnmount(() => {
   timelineChart?.destroy()
   timelineChart = null

@@ -14,8 +14,8 @@ productos se han generado y en que estado esta cada proyecto dentro del ciclo PA
 - Ruta principal: `/pai/:year`.
 - Redireccion: `/pai` redirige a `/pai/2025`.
 - Componente de entrada: `src/views/pai/PaiView.vue`.
-- Navegacion interna: pestanas locales `Inicio`, `Investigaciones` y `Notas`, sincronizadas con
-  variables GET en la URL.
+- Navegacion interna: pestanas locales `Inicio`, `Investigaciones`, `Notas` y `Avance`,
+  sincronizadas con variables GET en la URL.
 
 `PaiView.vue` lee `route.params.year`; si no hay un valor numerico valido usa `2025` como
 vigencia por defecto. Cada cambio de vigencia dispara una nueva carga contra Supabase.
@@ -26,7 +26,7 @@ La herramienta usa query params para que el estado de navegacion sea compartible
 
 | Variable | Valores esperados | Controla | Default |
 | --- | --- | --- | --- |
-| `tab` | `portada`, `listado` | Vista principal activa en `PaiView.vue` | `portada` |
+| `tab` | `portada`, `listado`, `notas`, `avance` | Vista principal activa en `PaiView.vue` | `portada` |
 | `seccion` | `list`, `details` | Seccion interna de `PaiList.vue` | `details` si hay `investigacion_id`; si no, `list` |
 | `investigacion_id` | ID de `gio_investigaciones` | Investigacion seleccionada para el detalle | `null` |
 
@@ -36,6 +36,7 @@ Ejemplos de URL:
 /pai/2025?tab=portada
 /pai/2025?tab=listado&seccion=list
 /pai/2025?tab=listado&seccion=details&investigacion_id=12
+/pai/2026?tab=avance
 ```
 
 Reglas importantes:
@@ -142,6 +143,56 @@ Acceso publico de productos:
 Nota para agentes IA: `PaiList.vue` incluye `palabras_clave` dentro del texto buscable, pero
 `PaiView.vue` no esta trayendo ese campo desde Supabase. Si se quiere que la busqueda cubra
 palabras clave reales, se debe agregar `palabras_clave` al `select`.
+
+Datos complementarios desde Google Sheets:
+
+`PaiView.vue` tambien carga datos auxiliares desde Google Sheets usando `fetchGoogleSheetCsv`.
+La configuracion de cada vigencia vive en `src/views/pai/constants.js`.
+
+Campos por vigencia:
+
+```text
+file_id
+notas_gid
+semanas_gid
+avances_gid
+```
+
+Uso actual:
+
+- `notas_gid`: alimenta `NotasView.vue`.
+- `semanas_gid`: alimenta la serie `Avance esperado` de `AvanceSemanal.vue`.
+- `avances_gid`: alimenta el resumen por fecha y las series de avance registrado de
+  `AvanceSemanal.vue`.
+
+Nota: actualmente la vigencia `2026` tiene `semanas_gid` y `avances_gid`. Si otra vigencia no
+tiene esos valores, la pestana `Avance` no tendra datos para graficar.
+
+Columnas esperadas en la hoja de semanas:
+
+```text
+fecha_fin
+avance_esperado
+semana
+nombre
+```
+
+Columnas esperadas en la hoja de avances:
+
+```text
+fecha
+linea_investigacion
+avance
+p
+i
+r
+a
+f
+```
+
+`AvanceSemanal.vue` normaliza los encabezados de Google Sheets con `toClassName`, por lo que
+tolera variantes con espacios, tildes o mayusculas como `Fecha fin`, `Avance esperado` o
+`Linea de investigacion`.
 
 ## Modelo conceptual
 
@@ -266,19 +317,23 @@ Hace:
 - Lee la vigencia desde la ruta.
 - Carga investigaciones desde Supabase.
 - Carga productos desde Supabase.
+- Carga notas, semanas y avances desde Google Sheets segun la vigencia.
 - Gestiona estados de carga, error y vacio.
 - Filtra investigaciones por `year_vigencia`.
 - Controla la pestana activa: `portada` o `listado`, sincronizada con `?tab=`.
 - Controla la seccion interna del listado mediante `currentListSection`, sincronizada con
   `?seccion=`.
 - Lee `?investigacion_id=` para seleccionar una investigacion y abrir la vista de detalle.
-- Entrega `investigacionesFiltradas`, `notas` y `productos` a los componentes hijos.
+- Entrega `investigacionesFiltradas`, `notas`, `productos`, `semanas` y `avances` a los
+  componentes hijos.
 
 Estados principales:
 
 - `investigaciones`: arreglo crudo cargado desde Supabase.
 - `productos`: arreglo crudo cargado desde Supabase desde `gio_productos`.
 - `notas`: arreglo cargado desde Google Sheets segun la vigencia.
+- `semanas`: arreglo cargado desde Google Sheets para el avance esperado.
+- `avances`: arreglo cargado desde Google Sheets para el avance registrado.
 - `loading`: indicador de carga.
 - `errorMessage`: mensaje visible si falla la consulta o si no hay Supabase configurado.
 - `activeView`: pestana activa.
@@ -433,6 +488,63 @@ Productos en el detalle:
 - El enlace `Abrir editable` usa `url_editable`.
 - `observaciones` se muestra como texto secundario (`small.text-muted`).
 
+### `AvanceSemanal.vue`
+
+Responsable de la vista de seguimiento semanal.
+
+Recibe:
+
+```text
+semanas: Array
+avances: Array
+```
+
+Hace:
+
+- Renderiza una grafica de Highcharts con linea temporal de avance.
+- Construye la serie `Avance esperado` desde `semanas`.
+- Construye una serie de avance registrado por cada `linea_investigacion` presente en `avances`.
+- Calcula cada punto registrado como promedio de `avance` por combinacion de fecha y linea de
+  investigacion.
+- Muestra en la leyenda solo el nombre de cada linea, por ejemplo `Cultura Ciudadana` y
+  `Sector Cultura`.
+- Desactiva las etiquetas de valor de la serie `Avance esperado`.
+- Mantiene visibles las etiquetas de valor de las series registradas.
+- Segmenta el eje X por meses usando `plotBands` con fondos alternados y bordes verticales.
+- Formatea las etiquetas del eje X como `DD/MMM`, por ejemplo `16/ago`.
+- Muestra una tabla `Resumen por fecha` con el promedio de `avance`, `p`, `i`, `r`, `a` y `f`.
+- Muestra `No hay datos de avance para graficar.` si no hay puntos validos para ninguna serie.
+
+Campos usados desde `semanas`:
+
+- `fecha_fin`: fecha del punto esperado.
+- `avance_esperado`: porcentaje esperado.
+- `semana` o `nombre`: etiqueta secundaria del punto.
+
+Campos usados desde `avances`:
+
+- `fecha`: fecha del registro.
+- `linea_investigacion`: linea que define la serie registrada.
+- `avance`: porcentaje usado para la grafica.
+- `p`, `i`, `r`, `a`, `f`: porcentajes usados en el resumen por fecha.
+
+Normalizacion de columnas:
+
+- `normalizeColumnName` convierte encabezados a formato comparable con `toClassName`.
+- `getFieldValue` permite leer columnas aunque lleguen con espacios, tildes o mayusculas.
+- Esto evita depender estrictamente de encabezados como `fecha_fin` o `linea_investigacion`.
+
+Series actuales:
+
+```text
+Avance esperado
+Cultura Ciudadana
+Sector Cultura
+```
+
+Los colores de las series registradas se resuelven con `lineaSeriesColors` usando las claves de
+`lineasInvestigacion`. Si aparece una linea no declarada, se usa un color de respaldo.
+
 ## Flujo de interaccion
 
 1. El usuario entra a `/pai/:year`.
@@ -453,6 +565,8 @@ Productos en el detalle:
     seleccionada.
 14. `InvestigacionView.vue` filtra los productos por `investigacion_id` y los muestra en la
     tercera columna del detalle.
+15. Si `tab=avance`, `PaiView.vue` muestra `AvanceSemanal.vue` con `semanas` y `avances`
+    cargados desde Google Sheets.
 
 ## Comportamiento visual y accesibilidad
 
@@ -486,6 +600,8 @@ La grilla del listado cambia por breakpoint:
 - `linea_investigacion` debe ser consistente con las lineas declaradas en `constants.js`, o
   al menos normalizable con `toClassName`.
 - Los campos de avance deben poder convertirse a numero.
+- Las hojas de `semanas` y `avances` pueden usar encabezados con espacios, tildes o mayusculas,
+  pero deben conservar el significado de los campos esperados.
 - `year_vigencia` se compara como numero en el filtro local, pero se envia como string al filtro
   de Supabase.
 - `id` se usa como clave de render y como identificador de seleccion.
@@ -500,6 +616,8 @@ La grilla del listado cambia por breakpoint:
   `investigacion_id={id}` para que la URL reconstruya el estado.
 - `ColumnasAvance.vue` es reutilizable: cualquier vista que le pase `investigaciones` puede
   obtener la misma navegacion hacia detalle.
+- `AvanceSemanal.vue` necesita `semanas_gid` y/o `avances_gid` configurados para la vigencia si
+  se quiere mostrar la pestana `Avance`.
 - `PaiPortada`, `PaiList` e `InvestigacionView` son componentes presentacionales respecto a
   datos remotos: no deben consultar Supabase directamente salvo que se decida cambiar la
   arquitectura.
@@ -512,6 +630,8 @@ Cuando extiendas esta funcionalidad:
 2. Revisa `constants.js` antes de duplicar nombres de etapas, lineas o tipos de producto.
 3. Si agregas campos visibles, agregalos tambien al `select` de Supabase en `PaiView.vue`.
 4. Si agregas nuevas lineas, actualiza `lineasInvestigacion` y los estilos `.bg-*`.
+   Si esa linea aparece en `AvanceSemanal.vue`, considera agregar un color en
+   `lineaSeriesColors`.
 5. Si agregas nuevos tipos de producto, actualiza `tiposProducto` y opcionalmente agrega una
    clase `.tipo-producto-{slug}` en `pai.css`.
 6. Si agregas nuevas etapas, actualiza el mapeo de campos en `PaiList.vue` e
@@ -529,6 +649,9 @@ Cuando extiendas esta funcionalidad:
     de detalle debe tener prioridad sobre defaults locales como `list`.
 12. Si `gio_productos` devuelve cero filas desde la app pero hay registros en Supabase, revisa
     primero las policies RLS de lectura para `anon`/`authenticated`.
+13. Si `AvanceSemanal.vue` muestra `No hay datos de avance para graficar.`, revisa que la
+    vigencia tenga `semanas_gid` o `avances_gid`, y que las fechas y porcentajes de la hoja sean
+    parseables.
 
 ## Posibles mejoras detectadas
 
