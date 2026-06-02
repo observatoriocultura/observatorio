@@ -23,11 +23,13 @@
 
     <PaiPortada v-else-if="activeView === 'portada'" :investigaciones="investigacionesFiltradas" />
     <NotasView v-else-if="activeView === 'notas'" :notas="notas" />
+    <AvanceSemanal v-else-if="activeView === 'avance'" :semanas="semanas" :avances="avances" />
     <PaiList
       v-else
       v-model:current-section="currentListSection"
       :investigaciones="investigacionesFiltradas"
       :notas="notas"
+      :productos="productos"
       :selected-investigacion-id="selectedInvestigacionId"
     />
   </main>
@@ -42,6 +44,7 @@ import { vigenciaPorYear } from './constants'
 import PaiPortada from './parts/PaiPortada.vue'
 import PaiList from './parts/PaiList.vue'
 import NotasView from './parts/NotasView.vue'
+import AvanceSemanal from './parts/AvanceSemanal.vue'
 import '../../assets/styles/scrd.css'
 import '../../assets/styles/pai.css'
 
@@ -49,7 +52,10 @@ const route = useRoute()
 const router = useRouter()
 
 const investigaciones = ref([])
+const productos = ref([])
 const notas = ref([])
+const semanas = ref([])
+const avances = ref([])
 const loading = ref(false)
 const errorMessage = ref('')
 const activeView = ref('portada')
@@ -59,6 +65,7 @@ const menuItems = [
   { key: 'portada', label: 'Inicio', icon: 'bi-house-door' },
   { key: 'listado', label: 'Investigaciones', icon: 'bi-grid-3x3-gap' },
   { key: 'notas', label: 'Notas', icon: 'bi-journal-text' },
+  { key: 'avance', label: 'Avance', icon: 'bi-graph-up' },
 ]
 const validTabs = menuItems.map((item) => item.key)
 const validSections = ['list', 'details']
@@ -116,7 +123,7 @@ const cargarInvestigaciones = async () => {
   const { data, error } = await supabase
     .from('gio_investigaciones')
     .select(
-      'id, nombre_clave, titulo, descripcion,linea_investigacion, year_vigencia, avance, avance_planeacion, avance_instrumentos, avance_recoleccion, avance_documentacion, avance_finalizacion, cantidad_productos, cantidad_hallazgos, cantidad_radicados, cantidad_paginas',
+      'id, nombre_clave, titulo, descripcion, linea_investigacion, year_vigencia, entidad, dependencia, avance, avance_planeacion, avance_instrumentos, avance_recoleccion, avance_documentacion, avance_finalizacion, cantidad_productos, cantidad_hallazgos, cantidad_radicados, cantidad_paginas',
     )
     .filter('year_vigencia', 'eq', String(year.value))
     .order('id', { ascending: true })
@@ -126,6 +133,37 @@ const cargarInvestigaciones = async () => {
     investigaciones.value = []
   } else {
     investigaciones.value = data ?? []
+  }
+
+  loading.value = false
+}
+
+/**
+ * Cargar productos desde supabase
+ */
+const cargarProductos = async () => {
+  if (!supabase) {
+    errorMessage.value = 'Supabase no está configurado.'
+    productos.value = []
+    return
+  }
+
+  loading.value = true
+  errorMessage.value = ''
+
+  const { data, error } = await supabase
+    .from('gio_productos')
+    .select(
+      'id, investigacion_id, tipo_producto, titulo, es_publico, url, url_publica, url_editable, created_at, orden, radicado_orfeo, paginas, descripcion, observaciones',
+    )
+    //.filter('year_vigencia', 'eq', String(year.value))
+    .order('orden', { ascending: true })
+
+  if (error) {
+    errorMessage.value = 'No fue posible cargar los productos.'
+    productos.value = []
+  } else {
+    productos.value = data ?? []
   }
 
   loading.value = false
@@ -147,8 +185,43 @@ const cargarNotas = async (vigencia) => {
   }
 }
 
+const cargarSemanas = async (vigencia) => {
+  semanas.value = []
+
+  if (!vigencia?.file_id || !vigencia?.semanas_gid) return
+
+  try {
+    semanas.value = await fetchGoogleSheetCsv({
+      fileId: vigencia.file_id,
+      gid: vigencia.semanas_gid,
+    })
+  } catch (error) {
+    console.error('No fue posible cargar las semanas del PAI.', error)
+    semanas.value = []
+  }
+}
+
+const cargarAvances = async (vigencia) => {
+  avances.value = []
+
+  if (!vigencia?.file_id || !vigencia?.avances_gid) return
+
+  try {
+    avances.value = await fetchGoogleSheetCsv({
+      fileId: vigencia.file_id,
+      gid: vigencia.avances_gid,
+    })
+  } catch (error) {
+    console.error('No fue posible cargar los avances semanales del PAI.', error)
+    avances.value = []
+  }
+}
+
 watch(year, cargarInvestigaciones, { immediate: true })
+watch(year, cargarProductos, { immediate: true })
 watch(vigenciaInfo, cargarNotas, { immediate: true })
+watch(vigenciaInfo, cargarSemanas, { immediate: true })
+watch(vigenciaInfo, cargarAvances, { immediate: true })
 watch(
   () => route.query.tab,
   (tab) => {

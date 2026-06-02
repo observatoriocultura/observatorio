@@ -83,7 +83,7 @@ const routes = [
     path: '/pai/:year',
     name: 'PAI',
     component: PaiView,
-    meta: { title: 'PAI | Observatorio' },
+    meta: { title: 'PAI Seguimiento' },
   },
   {
     path: '/2026/solicitudes-pai',
@@ -129,7 +129,7 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  const defaultTitle = 'Observatorio Cultural'
+  const defaultTitle = 'Observatorio de Culturas - Bogotá'
   document.title = to.meta.title || defaultTitle
   next()
 })

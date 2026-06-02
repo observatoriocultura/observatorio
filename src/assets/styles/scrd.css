@@ -20,3 +20,55 @@
   background-color: #e6cff2;
   color: #7132a2;
 }
+
+/* CLASES PARA ETIQUETAS DE LAS ENTIDADES DEL SECTOR Y EL DISTRITO CAPITAL */
+
+.bg-sector {
+  background-color: #fafafa;
+  color: #212529;
+}
+
+.bg-scrd {
+  background-color: #d9d2e9;
+  color: #212529;
+}
+
+.bg-ofb {
+  background-color: #fafafa;
+  color: #212529;
+}
+
+.bg-idpc {
+  background-color: #ffe599;
+  color: #212529;
+}
+
+.bg-idartes {
+  background-color: #ead1dc;
+  color: #212529;
+}
+
+.bg-idrd {
+  background-color: #c9daf8;
+  color: #212529;
+}
+
+.bg-fuga {
+  background-color: #cccccc;
+  color: #212529;
+}
+
+.bg-canal-capital {
+  background-color: #f4cccc;
+  color: #212529;
+}
+
+.bg-idpyba {
+  background-color: #c5e77c;
+  color: #212529;
+}
+
+.bg-metro {
+  background-color: #fafafa;
+  color: #212529;
+}

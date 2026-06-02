@@ -6,6 +6,28 @@
         placeholder="Buscar investigaciones..."
         aria-label="Buscar investigaciones"
       />
+      <div class="pai-list-filters">
+        <select
+          v-model="selectedLinea"
+          class="pai-list-filter"
+          aria-label="Filtrar investigaciones por linea"
+        >
+          <option value="">Todas las lineas</option>
+          <option v-for="item in lineasInvestigacion" :key="item.key" :value="item.nombre">
+            {{ item.nombre }}
+          </option>
+        </select>
+        <select
+          v-model="selectedEntidad"
+          class="pai-list-filter"
+          aria-label="Filtrar investigaciones por entidad"
+        >
+          <option value="">Todas las entidades</option>
+          <option v-for="item in ENTIDADES" :key="item.key" :value="item.sigla">
+            {{ item.nombre }}
+          </option>
+        </select>
+      </div>
     </div>
 
     <ColumnasAvance
@@ -22,7 +44,7 @@
           :class="{ 'investigacion-card-active': isInvestigacionActive(investigacion.id) }"
           @click="selectInvestigacion(investigacion)"
         >
-          <p class="mb-1">
+          <p class="investigacion-tags mb-1">
             <span
               v-if="investigacion.linea_investigacion"
               class="label"
@@ -31,6 +53,13 @@
               {{ investigacion.linea_investigacion }}
             </span>
             <span v-else>Sin linea registrada</span>
+            <span
+              v-if="getInvestigacionEntidad(investigacion)"
+              class="label"
+              :class="getEntidadClass(getInvestigacionEntidad(investigacion))"
+            >
+              {{ getInvestigacionEntidad(investigacion) }}
+            </span>
           </p>
           <h3 class="h5 mb-2">{{ investigacion.nombre_clave }}</h3>
           <p>{{ investigacion.titulo }}</p>
@@ -57,6 +86,7 @@
       class="investigacion-current"
       :investigacion="currentInvestigacion"
       :notas="props.notas"
+      :productos="props.productos"
       @back="setCurrentSection('list')"
     />
 
@@ -70,7 +100,9 @@
 import { computed, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import ListSearchInput from '../../../components/ListSearchInput.vue'
+import { ENTIDADES } from '../../../constants/catalogos'
 import { toClassName } from '../../../utils/text'
+import { lineasInvestigacion } from '../constants'
 import ColumnasAvance from './ColumnasAvance.vue'
 import InvestigacionView from './InvestigacionView.vue'
 
@@ -80,6 +112,10 @@ const props = defineProps({
     default: () => [],
   },
   notas: {
+    type: Array,
+    default: () => [],
+  },
+  productos: {
     type: Array,
     default: () => [],
   },
@@ -100,6 +136,8 @@ const route = useRoute()
 const localCurrentSection = ref('list')
 const currentInvestigacionId = ref(null)
 const searchTerm = ref('')
+const selectedLinea = ref('')
+const selectedEntidad = ref('')
 const validSections = ['list', 'details']
 const normalizeSection = (section) => (validSections.includes(section) ? section : null)
 const requestedInvestigacionId = computed(
@@ -121,16 +159,33 @@ const normalizeSearchText = (value) =>
     .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
 
+const getInvestigacionEntidad = (investigacion) =>
+  investigacion.entidad_corto ??
+  investigacion.entidad ??
+  investigacion.entidad_solicitante ??
+  investigacion.entidad_responsable ??
+  ''
+
 const investigacionesFiltradas = computed(() => {
   const search = normalizeSearchText(searchTerm.value)
-  if (!search) return props.investigaciones
+  const linea = normalizeSearchText(selectedLinea.value)
+  const entidad = normalizeSearchText(selectedEntidad.value)
+  if (!search && !linea && !entidad) return props.investigaciones
 
   return props.investigaciones.filter((investigacion) => {
+    const matchesLinea =
+      !linea || normalizeSearchText(investigacion.linea_investigacion) === linea
+    const matchesEntidad = !entidad || normalizeSearchText(getInvestigacionEntidad(investigacion)) === entidad
+
+    if (!matchesLinea || !matchesEntidad) return false
+    if (!search) return true
+
     const searchableText = [
       investigacion.nombre_clave,
       investigacion.titulo,
       investigacion.descripcion,
       investigacion.linea_investigacion,
+      getInvestigacionEntidad(investigacion),
       investigacion.palabras_clave,
     ]
       .map(normalizeSearchText)
@@ -221,7 +276,16 @@ watch(searchTerm, () => {
   setCurrentSection('list')
 })
 
+watch(selectedLinea, () => {
+  setCurrentSection('list')
+})
+
+watch(selectedEntidad, () => {
+  setCurrentSection('list')
+})
+
 const getLineaClass = (linea) => `bg-${toClassName(linea)}`
+const getEntidadClass = (entidad) => `bg-${toClassName(entidad)}`
 const getAvanceValue = (value) => {
   const avance = Number(value)
   if (!Number.isFinite(avance)) return 0
@@ -268,8 +332,33 @@ const formatIndicador = (value, type) => (type === 'percent' ? formatAvance(valu
 }
 
 .pai-list-search {
-  width: min(100%, 32rem);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.5rem;
+  width: min(100%, 40rem);
   justify-self: center;
+}
+
+.pai-list-filters {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.5rem;
+}
+
+.pai-list-filter {
+  width: 100%;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 0.58rem 0.75rem;
+  color: #212529;
+  font-size: 0.92rem;
+  line-height: 1.2;
+}
+
+.pai-list-filter:focus {
+  border-color: #654096;
+  outline: 3px solid rgba(101, 64, 150, 0.18);
 }
 
 .investigaciones-container {
@@ -320,6 +409,12 @@ const formatIndicador = (value, type) => (type === 'percent' ? formatAvance(valu
   line-height: 1.35;
 }
 
+.investigacion-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
 .investigacion-metricas {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -353,6 +448,10 @@ const formatIndicador = (value, type) => (type === 'percent' ? formatAvance(valu
 }
 
 @media (min-width: 576px) {
+  .pai-list-filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .investigaciones-container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

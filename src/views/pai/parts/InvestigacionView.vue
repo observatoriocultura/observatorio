@@ -63,7 +63,10 @@
           <div v-if="notasInvestigacion.length > 0" class="notas-list">
             <article v-for="(nota, index) in notasInvestigacion" :key="index" class="nota-card">
               <p class="nota-meta">
-                {{ getNotaFecha(nota) }} - {{ getTiempoHace(getNotaFecha(nota)) }}
+                {{ formatNotaFecha(getNotaFecha(nota)) }}
+                <span v-if="getTiempoHace(getNotaFecha(nota))">
+                  - {{ getTiempoHace(getNotaFecha(nota)) }}
+                </span>
               </p>
               <p class="nota-texto">{{ getNotaTexto(nota) }}</p>
             </article>
@@ -72,7 +75,68 @@
           <p v-else class="notas-empty">No hay notas registradas para esta investigacion.</p>
         </section>
 
-        <section class="investigacion-detalle-columna" aria-label="Espacio reservado"></section>
+        <section class="investigacion-detalle-columna" aria-label="Productos de la investigacion">
+          <h3 class="columna-titulo">Productos</h3>
+
+          <div v-if="productosInvestigacion.length > 0" class="productos-list">
+            <article
+              v-for="producto in productosInvestigacion"
+              :key="producto.id"
+              class="producto-card"
+            >
+              <a
+                v-if="getProductoUrlPublica(producto)"
+                :class="getProductoTipoClass(producto)"
+                :href="getProductoUrlPublica(producto)"
+                :aria-label="`Abrir ${getProductoTitulo(producto)}`"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="bi" :class="getProductoIconClass(producto)"></i>
+              </a>
+              <span v-else :class="getProductoTipoClass(producto)" aria-hidden="true">
+                <i class="bi" :class="getProductoIconClass(producto)"></i>
+              </span>
+              <div class="producto-content">
+                <h4 class="mb-2">{{ getProductoTitulo(producto) }}</h4>
+                <p v-if="producto.descripcion" class="producto-descripcion mb-2">
+                  {{ producto.descripcion }}
+                </p>
+                <p class="producto-meta mb-2">{{ getProductoMeta(producto) }}</p>
+                <div class="producto-links">
+                  <a
+                    v-if="getProductoUrlPublica(producto)"
+                    class="producto-link"
+                    :href="getProductoUrlPublica(producto)"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                    Abrir
+                  </a>
+                  <a
+                    v-if="getProductoUrlEditable(producto)"
+                    class="producto-link"
+                    :href="getProductoUrlEditable(producto)"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="bi bi-pencil-square" aria-hidden="true"></i>
+                    Abrir editable
+                  </a>
+                </div>
+                <small
+                  v-if="getProductoObservaciones(producto)"
+                  class="text-muted producto-observaciones"
+                >
+                  {{ getProductoObservaciones(producto) }}
+                </small>
+              </div>
+            </article>
+          </div>
+
+          <p v-else class="notas-empty">No hay productos registrados para esta investigacion.</p>
+        </section>
       </div>
     </div>
   </section>
@@ -80,8 +144,16 @@
 
 <script setup>
 import { computed } from 'vue'
+import dayjs from 'dayjs'
+import customParseFormat from 'dayjs/plugin/customParseFormat'
+import relativeTime from 'dayjs/plugin/relativeTime'
+import 'dayjs/locale/es'
 import { toClassName } from '../../../utils/text'
-import { etapasInvestigacion } from '../constants'
+import { etapasInvestigacion, tiposProducto } from '../constants'
+
+dayjs.extend(customParseFormat)
+dayjs.extend(relativeTime)
+dayjs.locale('es')
 
 const props = defineProps({
   investigacion: {
@@ -89,6 +161,10 @@ const props = defineProps({
     default: null,
   },
   notas: {
+    type: Array,
+    default: () => [],
+  },
+  productos: {
     type: Array,
     default: () => [],
   },
@@ -145,30 +221,32 @@ const getNotaInvestigacionId = (nota) =>
 const getNotaFecha = (nota) => getNotaValueByKey(nota, 'Fecha') ?? ''
 const getNotaTexto = (nota) => getNotaValueByKey(nota, 'Nota') ?? ''
 
-const parseLocalDate = (value) => {
-  const [year, month, day] = String(value ?? '')
-    .split('-')
-    .map(Number)
+const parseNotaFecha = (value) => {
+  const fecha = String(value ?? '').trim()
+  if (!fecha) return null
 
-  if (!year || !month || !day) return null
+  const formatos = ['YYYY-MM-DD', 'DD/MM/YYYY', 'D/M/YYYY', 'DD-MM-YYYY', 'D-M-YYYY']
+  const parsedFecha = dayjs(fecha, formatos, 'es', true)
 
-  return new Date(year, month - 1, day)
+  if (parsedFecha.isValid()) return parsedFecha.startOf('day')
+
+  const fallbackFecha = dayjs(fecha)
+  return fallbackFecha.isValid() ? fallbackFecha.startOf('day') : null
+}
+
+const formatNotaFecha = (fecha) => {
+  const parsedFecha = parseNotaFecha(fecha)
+  if (!parsedFecha) return 'Sin fecha'
+
+  return parsedFecha.format('D [de] MMMM [de] YYYY')
 }
 
 const getTiempoHace = (fecha) => {
-  const date = parseLocalDate(fecha)
-  if (!date) return ''
+  const parsedFecha = parseNotaFecha(fecha)
+  if (!parsedFecha) return ''
+  if (parsedFecha.isSame(dayjs(), 'day')) return 'Hoy'
 
-  const today = new Date()
-  const todayDate = new Date(today.getFullYear(), today.getMonth(), today.getDate())
-  const diffDays = Math.round((todayDate.getTime() - date.getTime()) / 86400000)
-  const absDays = Math.abs(diffDays)
-
-  if (diffDays === 0) return 'Hoy'
-  if (diffDays === 1) return 'Hace 1 día'
-  if (diffDays > 1) return `Hace ${diffDays} días`
-  if (absDays === 1) return 'En 1 día'
-  return `En ${absDays} días`
+  return parsedFecha.fromNow()
 }
 
 const notasInvestigacion = computed(() =>
@@ -178,6 +256,43 @@ const notasInvestigacion = computed(() =>
       String(getNotaTexto(nota)).trim() !== '',
   ),
 )
+
+const productosInvestigacion = computed(() =>
+  props.productos.filter(
+    (producto) => String(producto?.investigacion_id) === String(props.investigacion?.id),
+  ),
+)
+
+const getProductoTitulo = (producto) =>
+  String(producto?.titulo ?? producto?.tipo_producto ?? 'Producto sin titulo').trim()
+
+const getProductoUrlPublica = (producto) =>
+  String(producto?.url_publica ?? producto?.url ?? '').trim()
+
+const getProductoUrlEditable = (producto) => String(producto?.url_editable ?? '').trim()
+
+const getProductoObservaciones = (producto) => String(producto?.observaciones ?? '').trim()
+
+const getTipoProducto = (producto) =>
+  tiposProducto.find((tipo) => toClassName(tipo.nombre) === toClassName(producto?.tipo_producto))
+
+const getProductoIconClass = (producto) =>
+  `bi-${getTipoProducto(producto)?.bs_icon ?? 'file-earmark'}`
+
+const getProductoTipoClass = (producto) => [
+  'tipo-producto-general',
+  `tipo-producto-${toClassName(producto?.tipo_producto)}`,
+]
+
+const getProductoMeta = (producto) => {
+  const meta = [
+    producto?.paginas ? `${producto.paginas} paginas` : '',
+    producto?.tipo_producto,
+    producto?.radicado_orfeo ? `Radicado ${producto.radicado_orfeo}` : '',
+  ].filter(Boolean)
+
+  return meta.length > 0 ? meta.join(' - ') : 'Producto'
+}
 </script>
 
 <style scoped>
@@ -401,6 +516,76 @@ const notasInvestigacion = computed(() =>
   padding: 0.75rem;
   color: #6c757d;
   font-size: 0.85rem;
+}
+
+.productos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.producto-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.6rem;
+  border: 1px solid #eeeeee;
+  border-radius: 6px;
+  padding: 0.65rem;
+}
+
+.producto-content {
+  min-width: 0;
+}
+
+.producto-card h4 {
+  margin: 0.2rem 0 0;
+  color: #212529;
+  font-size: 0.92rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.producto-meta {
+  color: #6c757d;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.producto-descripcion {
+  margin-top: 0.35rem;
+  overflow-wrap: anywhere;
+}
+
+.producto-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.55rem;
+}
+
+.producto-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #32204a;
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.producto-link:hover,
+.producto-link:focus {
+  color: #654096;
+  text-decoration: underline;
+}
+
+.producto-observaciones {
+  display: block;
+  margin-top: 0.45rem;
+  overflow-wrap: anywhere;
 }
 
 @media (max-width: 991.98px) {

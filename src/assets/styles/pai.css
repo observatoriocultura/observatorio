@@ -20,3 +20,51 @@
 .etapa-finalizacion {
   background-color: #d9ead3;
 }
+
+/**
+* Estilos para la sección de productos del PAI
+* Iconos de tipos de productos, colores
+*/
+
+.tipo-producto-general {
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background-color: #f0ebf7;
+  color: #32204a;
+  font-size: 1rem;
+  line-height: 1;
+  text-decoration: none;
+}
+
+a.tipo-producto-general:hover,
+a.tipo-producto-general:focus {
+  color: #32204a;
+  text-decoration: none;
+}
+
+a.tipo-producto-general:focus {
+  outline: 3px solid rgba(101, 64, 150, 0.18);
+  outline-offset: 2px;
+}
+.tipo-producto-informe-final {
+  background-color: #ffcfc9;
+}
+.tipo-producto-presentacion {
+  background-color: #ffc8aa;
+}
+.tipo-producto-carpeta-archivos {
+  background-color: #ffd972;
+  color: #8d5926;
+}
+.tipo-producto-visualizacion {
+  background-color: #e9c310;
+  color: #000000;
+}
+.tipo-producto-base-de-datos {
+  background-color: #d4edbc;
+  color: #307372;
+}

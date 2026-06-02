@@ -85,11 +85,66 @@ export const vigencias = [
     key: '2026',
     file_id: '1u0WZmcJRNEUEb5kDJtwS2loSNIG7lORmgJuiWdBhMz8',
     notas_gid: '48170642',
+    semanas_gid: '2101475457',
+    avances_gid: '400281377',
   },
 ]
 
-const vigenciasPorYear = Object.fromEntries(
-  vigencias.map((vigencia) => [vigencia.year, vigencia]),
-)
+const vigenciasPorYear = Object.fromEntries(vigencias.map((vigencia) => [vigencia.year, vigencia]))
 
 export const vigenciaPorYear = (year) => vigenciasPorYear[Number(year)] ?? null
+
+export const tiposProducto = [
+  {
+    bs_icon: 'file-earmark-text',
+    nombre: 'Informe final',
+  },
+  {
+    bs_icon: 'easel',
+    nombre: 'Presentación',
+  },
+  {
+    bs_icon: 'bar-chart',
+    nombre: 'Visualización',
+  },
+  {
+    bs_icon: 'clipboard-data',
+    nombre: 'Informe cuantitativo',
+  },
+  {
+    bs_icon: 'database',
+    nombre: 'Base de datos',
+  },
+  {
+    bs_icon: 'paperclip',
+    nombre: 'Anexo',
+  },
+  {
+    bs_icon: 'folder2-open',
+    nombre: 'Carpeta archivos',
+  },
+  {
+    bs_icon: 'geo-alt',
+    nombre: 'Mapa/Geovisor',
+  },
+  {
+    bs_icon: 'file-earmark-image',
+    nombre: 'Infografía',
+  },
+  {
+    bs_icon: 'camera-video',
+    nombre: 'Audiovisual',
+  },
+  {
+    bs_icon: 'ui-checks',
+    nombre: 'Instrumento recolección',
+  },
+  {
+    bs_icon: 'calendar-check',
+    nombre: 'Plan de trabajo',
+  },
+  {
+    bs_icon: 'three-dots',
+    nombre: 'Otro',
+  },
+]

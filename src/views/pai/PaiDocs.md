@@ -3,18 +3,18 @@
 Esta carpeta implementa una interfaz de exploracion para el Plan Anual de Investigaciones
 (PAI). La experiencia actual permite consultar investigaciones por vigencia, ver una portada
 con indicadores agregados y columnas de avance, navegar a un listado buscable y abrir el
-detalle de avance de cada investigacion por etapas.
+detalle de avance de cada investigacion por etapas, notas y productos asociados.
 
 El objetivo funcional es convertir la tabla `gio_investigaciones` de Supabase en una vista web
-simple para seguimiento: cuantas investigaciones hay por linea, cual es el avance promedio y en
-que estado esta cada proyecto dentro del ciclo PAI.
+simple para seguimiento: cuantas investigaciones hay por linea, cual es el avance promedio, que
+productos se han generado y en que estado esta cada proyecto dentro del ciclo PAI.
 
 ## Entrada de la experiencia
 
 - Ruta principal: `/pai/:year`.
 - Redireccion: `/pai` redirige a `/pai/2025`.
 - Componente de entrada: `src/views/pai/PaiView.vue`.
-- Navegacion interna: pestanas locales `Portada` e `Investigaciones`, sincronizadas con
+- Navegacion interna: pestanas locales `Inicio`, `Investigaciones` y `Notas`, sincronizadas con
   variables GET en la URL.
 
 `PaiView.vue` lee `route.params.year`; si no hay un valor numerico valido usa `2025` como
@@ -54,13 +54,14 @@ Ese cliente depende de estas variables de entorno:
 - `VITE_SUPABASE_URL`
 - `VITE_SUPABASE_PUBLISHABLE_KEY`
 
-Tabla consultada:
+Tablas consultadas:
 
 ```text
 gio_investigaciones
+gio_productos
 ```
 
-Campos solicitados actualmente:
+Campos solicitados actualmente en `gio_investigaciones`:
 
 ```text
 id,
@@ -69,15 +70,21 @@ titulo,
 descripcion,
 linea_investigacion,
 year_vigencia,
+entidad,
+dependencia,
 avance,
 avance_planeacion,
 avance_instrumentos,
 avance_recoleccion,
 avance_documentacion,
-avance_finalizacion
+avance_finalizacion,
+cantidad_productos,
+cantidad_hallazgos,
+cantidad_radicados,
+cantidad_paginas
 ```
 
-Filtro aplicado:
+Filtro aplicado a investigaciones:
 
 ```text
 year_vigencia == String(year)
@@ -89,6 +96,49 @@ Orden:
 id asc
 ```
 
+Campos solicitados actualmente en `gio_productos`:
+
+```text
+id,
+investigacion_id,
+tipo_producto,
+titulo,
+es_publico,
+url,
+url_publica,
+url_editable,
+created_at,
+orden,
+radicado_orfeo,
+paginas,
+descripcion,
+observaciones
+```
+
+Filtro aplicado a productos:
+
+```text
+Sin filtro por vigencia directo.
+```
+
+`gio_productos` no usa `year_vigencia` en la consulta actual. La relacion con la vigencia se
+resuelve de forma indirecta porque cada producto tiene `investigacion_id`, y el detalle solo
+muestra los productos cuyo `investigacion_id` coincide con la investigacion seleccionada.
+
+Orden de productos:
+
+```text
+orden asc
+```
+
+Acceso publico de productos:
+
+- `gio_productos` debe permitir lectura `select` para los roles `anon` y/o `authenticated`
+  mediante RLS.
+- Existe una migracion local propuesta en
+  `supabase/migrations/20260602000000_gio_productos_public_read.sql` para habilitar RLS y crear
+  la policy `gio_productos_public_read`.
+
 Nota para agentes IA: `PaiList.vue` incluye `palabras_clave` dentro del texto buscable, pero
 `PaiView.vue` no esta trayendo ese campo desde Supabase. Si se quiere que la busqueda cubra
 palabras clave reales, se debe agregar `palabras_clave` al `select`.
@@ -98,14 +148,31 @@ palabras clave reales, se debe agregar `palabras_clave` al `select`.
 Cada investigacion representa una fila de `gio_investigaciones` y se espera que tenga:
 
 - Identificacion: `id`, `nombre_clave`, `titulo`, `descripcion`.
-- Clasificacion: `linea_investigacion`.
+- Clasificacion: `linea_investigacion`, `entidad`, `dependencia`.
 - Vigencia: `year_vigencia`.
 - Avance total: `avance`.
 - Avances por etapa: `avance_planeacion`, `avance_instrumentos`,
   `avance_recoleccion`, `avance_documentacion`, `avance_finalizacion`.
+- Conteos agregados: `cantidad_productos`, `cantidad_hallazgos`, `cantidad_radicados`,
+  `cantidad_paginas`.
 
 Los avances se tratan como porcentajes numericos entre 0 y 100. La UI normaliza valores no
 numericos a `0`, redondea al entero mas cercano y limita el resultado al rango `0..100`.
+
+Cada producto representa una fila de `gio_productos` y se espera que tenga:
+
+- Relacion: `investigacion_id`, que debe coincidir con `gio_investigaciones.id`.
+- Identificacion visible: `tipo_producto`, `titulo`, `descripcion`.
+- Enlaces: `url_publica` para el producto publicado y `url_editable` para el editable. El campo
+  historico `url` queda como respaldo para `url_publica`.
+- Metadatos: `paginas`, `radicado_orfeo`, `observaciones`, `orden`.
+
+El join entre investigaciones y productos no se hace en Supabase. Se hace en
+`InvestigacionView.vue` filtrando:
+
+```text
+producto.investigacion_id == investigacion.id
+```
 
 ## Etapas del PAI
 
@@ -154,6 +221,40 @@ La funcion `toClassName` en `src/utils/text.js` normaliza textos a slugs CSS:
 Esta normalizacion permite comparar el texto que llega desde Supabase con las claves de
 `lineasInvestigacion` y construir clases CSS con el patron `bg-${slug}`.
 
+## Tipos de producto
+
+Los tipos de producto estan centralizados en `constants.js` como `tiposProducto`.
+
+Cada tipo define:
+
+```text
+nombre
+bs_icon
+```
+
+`InvestigacionView.vue` compara `producto.tipo_producto` con `tipoProducto.nombre` usando
+`toClassName`, para tolerar diferencias de tildes, mayusculas y espacios. Si encuentra
+coincidencia, usa `bs_icon` para renderizar el icono Bootstrap correspondiente. Si no encuentra
+coincidencia, usa `file-earmark` como icono de respaldo.
+
+El contenedor del icono recibe estas clases:
+
+```text
+tipo-producto-general
+tipo-producto-{toClassName(producto.tipo_producto)}
+```
+
+Los estilos base y colores por tipo estan en `src/assets/styles/pai.css`. Por ejemplo:
+
+```text
+.tipo-producto-general
+.tipo-producto-informe-final
+.tipo-producto-presentacion
+.tipo-producto-carpeta-archivos
+```
+
+Si una clase especifica no existe, se mantiene el estilo base de `.tipo-producto-general`.
+
 ## Componentes y responsabilidades
 
 ### `PaiView.vue`
@@ -164,23 +265,31 @@ Hace:
 
 - Lee la vigencia desde la ruta.
 - Carga investigaciones desde Supabase.
+- Carga productos desde Supabase.
 - Gestiona estados de carga, error y vacio.
 - Filtra investigaciones por `year_vigencia`.
 - Controla la pestana activa: `portada` o `listado`, sincronizada con `?tab=`.
 - Controla la seccion interna del listado mediante `currentListSection`, sincronizada con
   `?seccion=`.
 - Lee `?investigacion_id=` para seleccionar una investigacion y abrir la vista de detalle.
-- Entrega `investigacionesFiltradas` a los componentes hijos.
+- Entrega `investigacionesFiltradas`, `notas` y `productos` a los componentes hijos.
 
 Estados principales:
 
 - `investigaciones`: arreglo crudo cargado desde Supabase.
+- `productos`: arreglo crudo cargado desde Supabase desde `gio_productos`.
+- `notas`: arreglo cargado desde Google Sheets segun la vigencia.
 - `loading`: indicador de carga.
 - `errorMessage`: mensaje visible si falla la consulta o si no hay Supabase configurado.
 - `activeView`: pestana activa.
 - `currentListSection`: seccion interna de `PaiList.vue`; puede ser `list` o `details`.
 - `selectedInvestigacionId`: ID de la investigacion seleccionada desde la URL.
 - `year`: vigencia derivada de `route.params.year`.
+
+Nota tecnica: `cargarInvestigaciones` y `cargarProductos` se disparan con watchers sobre `year`.
+Ambas funciones usan el mismo estado `loading` y `errorMessage`, por lo que un error de productos
+puede afectar el mensaje global de la vista. Si los productos se vuelven una consulta auxiliar
+no critica, conviene separar su estado de carga/error.
 
 ### `PaiPortada.vue`
 
@@ -243,6 +352,8 @@ Recibe:
 
 ```text
 investigaciones: Array
+notas: Array
+productos: Array
 currentSection?: "list" | "details" | null
 selectedInvestigacionId?: Number | String | null
 ```
@@ -264,6 +375,7 @@ Hace:
 - Lee `route.query.seccion` para decidir si renderiza el listado o el detalle.
 - Usa `selectedInvestigacionId` o `route.query.investigacion_id` para encontrar la investigacion
   seleccionada.
+- Reenvia `notas` y `productos` a `InvestigacionView.vue`.
 - Permite seleccionar una investigacion y pasar a la vista de detalle.
 - Vuelve automaticamente a `list` si ya no existe la investigacion seleccionada.
 
@@ -290,6 +402,8 @@ Recibe:
 
 ```text
 investigacion: Object | null
+notas: Array
+productos: Array
 ```
 
 Emite:
@@ -302,8 +416,22 @@ Hace:
 
 - Muestra linea, nombre clave, titulo, descripcion y avance total.
 - Renderiza cada etapa del PAI con descripcion, porcentaje, barra de progreso y peso.
+- Lista notas asociadas a la investigacion.
+- Lista productos asociados a la investigacion.
 - Usa `etapasInvestigacion` como fuente de verdad para el orden y la metadata de etapas.
+- Usa `tiposProducto` para resolver el icono de cada producto.
 - Expone un boton para volver al listado.
+
+Productos en el detalle:
+
+- Se filtran con `producto.investigacion_id === investigacion.id`.
+- Se muestran en la tercera columna del detalle.
+- La estructura visual es: icono a la izquierda, titulo, descripcion, metadatos
+  `paginas | tipo | radicado`, enlaces y observaciones.
+- El icono es un enlace a `url_publica` cuando existe y abre en una pestaña nueva.
+- El enlace `Abrir` usa `url_publica`, con fallback a `url`.
+- El enlace `Abrir editable` usa `url_editable`.
+- `observaciones` se muestra como texto secundario (`small.text-muted`).
 
 ## Flujo de interaccion
 
@@ -311,17 +439,20 @@ Hace:
 2. `PaiView.vue` obtiene la vigencia desde la ruta.
 3. `PaiView.vue` normaliza `tab`, `seccion` e `investigacion_id` desde la URL.
 4. Se consulta `gio_investigaciones` en Supabase filtrando por `year_vigencia`.
-5. Mientras carga, se muestra `Cargando investigaciones...`.
-6. Si hay error, se muestra un mensaje de error.
-7. Si no hay registros, se muestra un mensaje de estado vacio.
-8. Si hay registros y `tab=portada`, `PaiPortada.vue` muestra columnas de avance y KPIs.
-9. Al hacer clic en una columna de avance, `ColumnasAvance.vue` navega a
+5. Se consulta `gio_productos` en Supabase y se ordena por `orden`.
+6. Mientras carga, se muestra `Cargando investigaciones...`.
+7. Si hay error, se muestra un mensaje de error.
+8. Si no hay registros, se muestra un mensaje de estado vacio.
+9. Si hay registros y `tab=portada`, `PaiPortada.vue` muestra columnas de avance y KPIs.
+10. Al hacer clic en una columna de avance, `ColumnasAvance.vue` navega a
    `?tab=listado&seccion=details&investigacion_id={id}`.
-10. Si `tab=listado&seccion=list`, `PaiList.vue` muestra el buscador y las tarjetas.
-11. Al hacer clic en una tarjeta, `PaiList.vue` navega a
+11. Si `tab=listado&seccion=list`, `PaiList.vue` muestra el buscador y las tarjetas.
+12. Al hacer clic en una tarjeta, `PaiList.vue` navega a
     `?tab=listado&seccion=details&investigacion_id={id}`.
-12. Si `seccion=details`, `PaiList.vue` muestra `InvestigacionView.vue` con la investigacion
+13. Si `seccion=details`, `PaiList.vue` muestra `InvestigacionView.vue` con la investigacion
     seleccionada.
+14. `InvestigacionView.vue` filtra los productos por `investigacion_id` y los muestra en la
+    tercera columna del detalle.
 
 ## Comportamiento visual y accesibilidad
 
@@ -338,6 +469,10 @@ Patrones aplicados:
   tecnologias asistivas.
 - Estados de foco visibles en tarjetas, boton de volver y campo de busqueda.
 - Tooltips de Bootstrap en columnas e IDs para exponer `nombre_clave`.
+- Iconos de productos con foco visible cuando son enlace.
+- Enlaces de productos con `target="_blank"` y `rel="noopener noreferrer"`.
+- Los iconos de productos usan `aria-label` cuando son enlace; si no tienen URL publica, se
+  renderizan como `span` decorativo con `aria-hidden`.
 
 La grilla del listado cambia por breakpoint:
 
@@ -354,6 +489,13 @@ La grilla del listado cambia por breakpoint:
 - `year_vigencia` se compara como numero en el filtro local, pero se envia como string al filtro
   de Supabase.
 - `id` se usa como clave de render y como identificador de seleccion.
+- `gio_productos.investigacion_id` debe apuntar a `gio_investigaciones.id`.
+- `tipo_producto` debe ser consistente con `tiposProducto.nombre` si se quiere resolver icono y
+  color especifico. Si no coincide, se usa icono y color base.
+- `url_publica` y `url_editable` son los campos preferidos para enlaces de producto. `url` se
+  mantiene como respaldo para el enlace publico.
+- `gio_productos` debe tener policy de lectura publica si la app usa publishable key desde el
+  frontend.
 - Los enlaces al detalle deben conservar `tab=listado`, `seccion=details` e
   `investigacion_id={id}` para que la URL reconstruya el estado.
 - `ColumnasAvance.vue` es reutilizable: cualquier vista que le pase `investigaciones` puede
@@ -367,22 +509,26 @@ La grilla del listado cambia por breakpoint:
 Cuando extiendas esta funcionalidad:
 
 1. Lee primero `PaiView.vue`, porque ahi esta el contrato de datos remoto.
-2. Revisa `constants.js` antes de duplicar nombres de etapas o lineas.
+2. Revisa `constants.js` antes de duplicar nombres de etapas, lineas o tipos de producto.
 3. Si agregas campos visibles, agregalos tambien al `select` de Supabase en `PaiView.vue`.
 4. Si agregas nuevas lineas, actualiza `lineasInvestigacion` y los estilos `.bg-*`.
-5. Si agregas nuevas etapas, actualiza el mapeo de campos en `PaiList.vue` e
+5. Si agregas nuevos tipos de producto, actualiza `tiposProducto` y opcionalmente agrega una
+   clase `.tipo-producto-{slug}` en `pai.css`.
+6. Si agregas nuevas etapas, actualiza el mapeo de campos en `PaiList.vue` e
    `InvestigacionView.vue`.
-6. Conserva la normalizacion de texto para busqueda y clases CSS; evita comparar textos con
+7. Conserva la normalizacion de texto para busqueda, iconos y clases CSS; evita comparar textos con
    acentos o mayusculas directamente.
-7. Mantiene los componentes hijos sin dependencia directa de Supabase mientras la vista siga
+8. Mantiene los componentes hijos sin dependencia directa de Supabase mientras la vista siga
    organizada con `PaiView.vue` como contenedor.
-8. Si cambias la navegacion de detalle, revisa la relacion entre `tab`, `seccion`,
+9. Si cambias la navegacion de detalle, revisa la relacion entre `tab`, `seccion`,
    `investigacion_id`, `activeView`, `currentListSection` y `currentInvestigacionId`.
-9. Si reutilizas `ColumnasAvance.vue` en otra seccion, confirma que esa seccion pueda resolver
+10. Si reutilizas `ColumnasAvance.vue` en otra seccion, confirma que esa seccion pueda resolver
    la ruta con `tab=listado&seccion=details&investigacion_id={id}` o ajusta el componente para
    aceptar una funcion/prop de destino.
-10. Evita que watchers iniciales pisen `seccion=details`: si hay `investigacion_id`, el estado
+11. Evita que watchers iniciales pisen `seccion=details`: si hay `investigacion_id`, el estado
     de detalle debe tener prioridad sobre defaults locales como `list`.
+12. Si `gio_productos` devuelve cero filas desde la app pero hay registros en Supabase, revisa
+    primero las policies RLS de lectura para `anon`/`authenticated`.
 
 ## Posibles mejoras detectadas
 
@@ -395,3 +541,8 @@ Cuando extiendas esta funcionalidad:
   explicita para el detalle.
 - Agregar pruebas unitarias ligeras para normalizacion de busqueda, calculo de promedios y
   normalizacion de porcentajes.
+- Separar `loading` y `errorMessage` de investigaciones y productos para que un error auxiliar de
+  productos no oculte la vista principal de investigaciones.
+- Evaluar filtrar productos en Supabase con un join o RPC si el volumen de `gio_productos` crece.
+- Agregar pruebas ligeras para el join local `investigacion.id`/`producto.investigacion_id` y la
+  resolucion de iconos por `tiposProducto`.
