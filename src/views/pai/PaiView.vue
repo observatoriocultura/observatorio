@@ -2,7 +2,7 @@
   <main class="pai-layout container-fluid py-2">
     <nav class="pai-nav" aria-label="Navegacion PAI">
       <RouterLink
-        v-for="item in menuItems"
+        v-for="item in visibleMenuItems"
         :key="item.key"
         :to="getTabRoute(item.key)"
         class="pai-nav-tab"
@@ -58,18 +58,19 @@ const semanas = ref([])
 const avances = ref([])
 const loading = ref(false)
 const errorMessage = ref('')
-const activeView = ref('portada')
+const activeView = ref('avance')
 const currentListSection = ref('list')
 const selectedInvestigacionId = ref(null)
 const menuItems = [
-  { key: 'portada', label: 'Inicio', icon: 'bi-house-door' },
-  { key: 'listado', label: 'Investigaciones', icon: 'bi-grid-3x3-gap' },
-  { key: 'notas', label: 'Notas', icon: 'bi-journal-text' },
-  { key: 'avance', label: 'Avance', icon: 'bi-graph-up' },
+  { key: 'avance', label: 'Avance', icon: 'bi-graph-up', show: true },
+  { key: 'portada', label: 'Inicio', icon: 'bi-house-door', show: false },
+  { key: 'listado', label: 'Investigaciones', icon: 'bi-grid-3x3-gap', show: true },
+  { key: 'notas', label: 'Notas', icon: 'bi-journal-text', show: false },
 ]
 const validTabs = menuItems.map((item) => item.key)
 const validSections = ['list', 'details']
 
+const visibleMenuItems = computed(() => menuItems.filter((item) => item.show !== false))
 const year = computed(() => Number(route.params.year) || 2025)
 const vigenciaInfo = computed(() => vigenciaPorYear(year.value))
 const normalizarYear = (value) => Number(value)
