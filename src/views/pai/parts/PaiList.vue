@@ -1,34 +1,12 @@
 <template>
   <div class="pai-list-layout">
-    <div class="pai-list-search">
-      <ListSearchInput
-        v-model="searchTerm"
-        placeholder="Buscar investigaciones..."
-        aria-label="Buscar investigaciones"
-      />
-      <div class="pai-list-filters">
-        <select
-          v-model="selectedLinea"
-          class="pai-list-filter"
-          aria-label="Filtrar investigaciones por linea"
-        >
-          <option value="">Todas las lineas</option>
-          <option v-for="item in lineasInvestigacion" :key="item.key" :value="item.nombre">
-            {{ item.nombre }}
-          </option>
-        </select>
-        <select
-          v-model="selectedEntidad"
-          class="pai-list-filter"
-          aria-label="Filtrar investigaciones por entidad"
-        >
-          <option value="">Todas las entidades</option>
-          <option v-for="item in ENTIDADES" :key="item.key" :value="item.sigla">
-            {{ item.nombre }}
-          </option>
-        </select>
-      </div>
-    </div>
+    <SearchForm
+      v-model:search-term="searchTerm"
+      v-model:selected-linea="selectedLinea"
+      v-model:selected-entidad="selectedEntidad"
+      :result-count="investigacionesFiltradas.length"
+      :total-count="props.investigaciones.length"
+    />
 
     <ColumnasAvance
       :investigaciones="props.investigaciones"
@@ -99,12 +77,10 @@
 <script setup>
 import { computed, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import ListSearchInput from '../../../components/ListSearchInput.vue'
-import { ENTIDADES } from '../../../constants/catalogos'
 import { toClassName } from '../../../utils/text'
-import { lineasInvestigacion } from '../constants'
 import ColumnasAvance from './ColumnasAvance.vue'
 import InvestigacionView from './InvestigacionView.vue'
+import SearchForm from './SearchForm.vue'
 
 const props = defineProps({
   investigaciones: {
@@ -331,36 +307,6 @@ const formatIndicador = (value, type) => (type === 'percent' ? formatAvance(valu
   margin: 0;
 }
 
-.pai-list-search {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 0.5rem;
-  width: min(100%, 40rem);
-  justify-self: center;
-}
-
-.pai-list-filters {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 0.5rem;
-}
-
-.pai-list-filter {
-  width: 100%;
-  border: 1px solid #ced4da;
-  border-radius: 8px;
-  background-color: #fff;
-  padding: 0.58rem 0.75rem;
-  color: #212529;
-  font-size: 0.92rem;
-  line-height: 1.2;
-}
-
-.pai-list-filter:focus {
-  border-color: #654096;
-  outline: 3px solid rgba(101, 64, 150, 0.18);
-}
-
 .investigaciones-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -448,10 +394,6 @@ const formatIndicador = (value, type) => (type === 'percent' ? formatAvance(valu
 }
 
 @media (min-width: 576px) {
-  .pai-list-filters {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .investigaciones-container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

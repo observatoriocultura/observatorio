@@ -19,6 +19,7 @@ import ItdcLayout from '../views/2026/transformacion_digital/ItdcLayout.vue'
 import ContenidosMovilidad from '../views/2026/contenidos_movilidad/ContenidosMovilidad.vue'
 import PaiView from '../views/pai/PaiView.vue'
 import MapaLocalidades from '../views/tools/MapaLocalidades.vue'
+import MapaPruebas from '../views/tools/MapaPruebas.vue'
 
 const routes = [
   { path: '/', name: 'Inicio', component: HomeView, meta: { title: 'Inicio | Observatorio' } },
@@ -91,6 +92,12 @@ const routes = [
     name: 'Mapa Localidades',
     component: MapaLocalidades,
     meta: { title: 'Mapa de Localidades | Observatorio' },
+  },
+  {
+    path: '/herramientas/mapa_pruebas',
+    name: 'Mapa Pruebas',
+    component: MapaPruebas,
+    meta: { title: 'Mapa de Pruebas | Observatorio' },
   },
   {
     path: '/2026/solicitudes-pai',

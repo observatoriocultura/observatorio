@@ -22,6 +22,10 @@
     </p>
 
     <PaiPortada v-else-if="activeView === 'portada'" :investigaciones="investigacionesFiltradas" />
+    <PaiExplorer
+      v-else-if="activeView === 'explorar'"
+      :investigaciones="investigacionesFiltradas"
+    />
     <NotasView v-else-if="activeView === 'notas'" :notas="notas" />
     <AvanceSemanal v-else-if="activeView === 'avance'" :semanas="semanas" :avances="avances" />
     <PaiList
@@ -42,6 +46,7 @@ import { supabase } from '../../lib/supabase'
 import { fetchGoogleSheetCsv } from '../../utils/googleSheets'
 import { vigenciaPorYear } from './constants'
 import PaiPortada from './parts/PaiPortada.vue'
+import PaiExplorer from './parts/PaiExplorer.vue'
 import PaiList from './parts/PaiList.vue'
 import NotasView from './parts/NotasView.vue'
 import AvanceSemanal from './parts/AvanceSemanal.vue'
@@ -65,6 +70,7 @@ const menuItems = [
   { key: 'avance', label: 'Avance', icon: 'bi-graph-up', show: true },
   { key: 'portada', label: 'Inicio', icon: 'bi-house-door', show: false },
   { key: 'listado', label: 'Investigaciones', icon: 'bi-grid-3x3-gap', show: true },
+  { key: 'explorar', label: 'Descripción', icon: 'bi-card-text', show: true },
   { key: 'notas', label: 'Notas', icon: 'bi-journal-text', show: false },
 ]
 const validTabs = menuItems.map((item) => item.key)
@@ -124,7 +130,7 @@ const cargarInvestigaciones = async () => {
   const { data, error } = await supabase
     .from('gio_investigaciones')
     .select(
-      'id, nombre_clave, titulo, descripcion, linea_investigacion, year_vigencia, entidad, dependencia, avance, avance_planeacion, avance_instrumentos, avance_recoleccion, avance_documentacion, avance_finalizacion, cantidad_productos, cantidad_hallazgos, cantidad_radicados, cantidad_paginas',
+      'id, nombre_clave, titulo, tema, descripcion, linea_investigacion, year_vigencia, entidad, dependencia, palabras_clave, avance, avance_planeacion, avance_instrumentos, avance_recoleccion, avance_documentacion, avance_finalizacion, cantidad_productos, cantidad_hallazgos, cantidad_radicados, cantidad_paginas',
     )
     .filter('year_vigencia', 'eq', String(year.value))
     .order('id', { ascending: true })
