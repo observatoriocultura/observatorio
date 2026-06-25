@@ -7,6 +7,10 @@
     </div>
 
     <div v-else>
+      <div v-if="errorMessage" class="alert alert-danger">
+        {{ errorMessage }}
+      </div>
+
       <div v-if="investigaciones.length === 0" class="alert alert-info">
         No hay investigaciones disponibles.
       </div>
@@ -34,6 +38,7 @@
 <script setup>
 import { computed, onMounted, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import { supabase } from '../../lib/supabase'
 import FichaInvestigacion from './FichaInvestigacion.vue'
 import InvestigacionesLista from './InvestigacionesLista.vue'
 
@@ -44,6 +49,7 @@ const investigaciones = ref([])
 const productos = ref([])
 const hallazgos = ref([])
 const loading = ref(true)
+const errorMessage = ref('')
 const section = ref('results')
 const currentInvestigacion = ref(null)
 const searchInput = ref('')
@@ -72,6 +78,7 @@ const investigacionesFiltradas = computed(() => {
         investigacion.descripcion,
         investigacion.linea_investigacion,
         investigacion.palabras_clave,
+        investigacion.tema,
         investigacion.anio,
       ]
         .filter(Boolean)
@@ -87,9 +94,9 @@ const productosFiltrados = computed(() => {
 
   return productos.value.filter(
     (producto) =>
-      producto.investigacion_id === currentInvestigacion.value.id &&
+      String(producto.investigacion_id) === String(currentInvestigacion.value.id) &&
       producto.titulo &&
-      normalizeText(producto.incluir_en_ficha) === 'si' &&
+      shouldIncludeProducto(producto) &&
       producto.url &&
       producto.url.trim() !== '',
   )
@@ -122,41 +129,103 @@ const goBack = () => {
   router.push({ query })
 }
 
+const shouldIncludeProducto = (producto) => {
+  const incluirEnFicha = normalizeText(producto.incluir_en_ficha)
+  if (incluirEnFicha) return incluirEnFicha === 'si'
+
+  const esPublico = normalizeText(producto.es_publico)
+  if (esPublico) return esPublico === 'si'
+
+  return true
+}
+
+const normalizeInvestigacion = (investigacion) => ({
+  ...investigacion,
+  anio: investigacion.anio ?? investigacion.year_vigencia,
+  entidad_solicitante:
+    investigacion.entidad_solicitante ?? investigacion.entidad ?? investigacion.dependencia,
+  carpeta_productos: investigacion.carpeta_productos ?? investigacion.url_carpeta_productos,
+})
+
+const normalizeProducto = (producto) => ({
+  ...producto,
+  url: producto.url ?? producto.url_publica ?? producto.url_editable,
+  incluir_en_ficha:
+    producto.incluir_en_ficha ?? (normalizeText(producto.es_publico) === 'si' ? 'si' : 'no'),
+})
+
+const normalizeHallazgo = (hallazgo, index) => ({
+  ...hallazgo,
+  orden: hallazgo.orden ?? index + 1,
+  texto:
+    hallazgo.texto ??
+    hallazgo.descripcion ??
+    hallazgo.contenido ??
+    hallazgo.detalle ??
+    hallazgo.resumen ??
+    '',
+  unidad_medida: hallazgo.unidad_medida ?? hallazgo.unidad ?? hallazgo.medida,
+})
+
+const cargarInvestigaciones = async () => {
+  const { data, error } = await supabase
+    .from('gio_investigaciones')
+    .select(
+      'id, nombre_clave, titulo, tema, descripcion, linea_investigacion, year_vigencia, entidad, dependencia, palabras_clave, estado, url_carpeta_productos, investigadores, expediente_orfeo, objetivo, puntaje, cantidad_productos, cantidad_hallazgos, cantidad_radicados, cantidad_paginas',
+    )
+    .order('id', { ascending: true })
+
+  if (error) throw error
+
+  investigaciones.value = (data ?? []).map(normalizeInvestigacion)
+}
+
+const cargarProductos = async () => {
+  const { data, error } = await supabase
+    .from('gio_productos')
+    .select(
+      'id, investigacion_id, tipo_producto, titulo, es_publico, url, url_publica, url_editable, created_at, orden, radicado_orfeo, paginas, descripcion, observaciones',
+    )
+    .order('orden', { ascending: true, nullsFirst: false })
+
+  if (error) throw error
+
+  productos.value = (data ?? []).map(normalizeProducto)
+}
+
+const cargarHallazgos = async () => {
+  const { data, error } = await supabase.from('gio_hallazgos').select('*')
+
+  if (error) throw error
+
+  hallazgos.value = (data ?? []).map(normalizeHallazgo)
+}
+
 onMounted(async () => {
+  loading.value = true
+  errorMessage.value = ''
+
   try {
-    const res = await fetch(`${baseUrl}content/investigaciones/investigaciones.json`)
-    if (!res.ok) throw new Error('No se pudo cargar el archivo de investigaciones')
-    const data = await res.json()
-    investigaciones.value = data
-
-    try {
-      const prodRes = await fetch(`${baseUrl}content/investigaciones/productos.json`)
-      if (prodRes.ok) {
-        productos.value = await prodRes.json()
-      }
-    } catch (error) {
-      console.error('Error cargando productos', error)
+    if (!supabase) {
+      throw new Error('Supabase no está configurado.')
     }
 
-    try {
-      const hallazgosRes = await fetch(`${baseUrl}content/investigaciones/hallazgos.json`)
-      if (hallazgosRes.ok) {
-        hallazgos.value = await hallazgosRes.json()
-      }
-    } catch (error) {
-      console.error('Error cargando hallazgos', error)
-    }
+    await Promise.all([cargarInvestigaciones(), cargarProductos(), cargarHallazgos()])
 
     const invId = route.query.investigacion_id
     if (invId) {
-      const found = data.find((inv) => String(inv.id) === String(invId))
+      const found = investigaciones.value.find((inv) => String(inv.id) === String(invId))
       if (found) {
         currentInvestigacion.value = found
         section.value = 'detail'
       }
     }
-  } catch {
+  } catch (error) {
+    console.error('Error cargando investigaciones desde Supabase', error)
+    errorMessage.value = 'No fue posible cargar las investigaciones desde Supabase.'
     investigaciones.value = []
+    productos.value = []
+    hallazgos.value = []
   } finally {
     loading.value = false
   }

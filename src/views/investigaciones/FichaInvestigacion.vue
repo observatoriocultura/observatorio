@@ -8,13 +8,20 @@
         <div class="p-4 p-md-5 rounded-4 h-100 detail-purple-block">
           <div class="row h-100">
             <div class="col-md-7 mb-4 mb-md-0">
+              <div
+                v-if="investigacion.tema || investigacion.anio"
+                class="d-flex flex-wrap align-items-center gap-2 mb-3"
+              >
+                <span v-if="investigacion.tema" class="detail-eyebrow">
+                  {{ investigacion.tema }}
+                </span>
+                <span v-if="investigacion.anio" class="detail-year-label">
+                  {{ investigacion.anio }}
+                </span>
+              </div>
               <h3 class="fw-bold mb-3 detail-yellow-title">
                 {{ investigacion.titulo }}
               </h3>
-              <div class="d-flex align-items-center mb-4">
-                <span class="fw-bold me-2">{{ investigacion.entidad_solicitante }}</span>
-                <span class="small opacity-75">&bull; {{ investigacion.anio }}</span>
-              </div>
               <p class="mb-0 text-white mt-2 investigacion-descripcion">
                 {{ investigacion.descripcion || 'Sin descripcion disponible.' }}
               </p>
@@ -31,7 +38,7 @@
                     :href="prod.url"
                     target="_blank"
                     rel="noopener"
-                    class="d-flex align-items-center px-3 py-2 text-white text-decoration-none rounded border border-light border-opacity-25 product-link"
+                    class="d-flex align-items-center px-3 py-2 text-white text-decoration-none rounded product-link"
                   >
                     <div
                       class="product-icon-wrapper"
@@ -74,7 +81,12 @@
         />
 
         <div class="bg-light p-4 rounded-4 border">
-          <h5 class="fw-bold mb-3">Detalles tecnicos</h5>
+          <h5 class="fw-bold mb-3">Detalles técnicos</h5>
+
+          <div v-if="investigacion.entidad_solicitante" class="mb-3">
+            <h6 class="text-muted small mb-1 fw-bold">Entidad solicitante</h6>
+            <div>{{ investigacion.entidad_solicitante }}</div>
+          </div>
 
           <div v-if="investigacion.linea_investigacion" class="mb-3">
             <h6 class="text-muted small mb-1 fw-bold">Linea de investigacion</h6>
@@ -86,18 +98,14 @@
             <div>{{ investigacion.investigadores }}</div>
           </div>
 
-          <div v-if="investigacion.estado" class="mb-3">
-            <h6 class="text-muted small mb-1 fw-bold">Estado</h6>
-            <div>{{ investigacion.estado }}</div>
-          </div>
-
           <div v-if="investigacion.carpeta_productos" class="mt-4">
             <a
               :href="investigacion.carpeta_productos"
               target="_blank"
               rel="noopener"
-              class="btn btn-primary w-100 rounded-pill fw-bold"
+              class="btn btn-primary w-100 rounded-pill fw-bold d-inline-flex align-items-center justify-content-center gap-2"
             >
+              <i class="bi bi-folder-fill folder-products-icon" aria-hidden="true"></i>
               Ver carpeta de productos
             </a>
           </div>
@@ -205,6 +213,28 @@ const getProductoIconObj = (tipo) => {
   font-weight: 900 !important;
 }
 
+.detail-eyebrow,
+.detail-year-label {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.detail-eyebrow {
+  color: #f8be4b;
+  text-transform: uppercase;
+}
+
+.detail-year-label {
+  padding: 0.25rem 0.75rem;
+  background-color: rgba(255, 217, 111, 0.16);
+  color: #ffd96f;
+}
+
 .findings-section {
   color: #111827;
 }
@@ -250,11 +280,13 @@ const getProductoIconObj = (tipo) => {
 
 .product-link {
   background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid transparent;
   transition: all 0.2s ease;
 }
 
 .product-link:hover {
   background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.25);
   transform: translateX(4px);
 }
 
@@ -295,6 +327,10 @@ const getProductoIconObj = (tipo) => {
 
 .producto-dataviz {
   color: #c99e05;
+}
+
+.folder-products-icon {
+  color: #ffd96f;
 }
 
 @media (max-width: 575.98px) {
