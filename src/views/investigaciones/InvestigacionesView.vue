@@ -173,7 +173,9 @@ const cargarInvestigaciones = async () => {
     .select(
       'id, nombre_clave, titulo, tema, descripcion, linea_investigacion, year_vigencia, entidad, dependencia, palabras_clave, estado, url_carpeta_productos, investigadores, expediente_orfeo, objetivo, puntaje, cantidad_productos, cantidad_hallazgos, cantidad_radicados, cantidad_paginas',
     )
-    .order('id', { ascending: true })
+    .or('estado.like.4%,estado.like.5%')
+    .order('year_vigencia', { ascending: false })
+    .order('puntaje', { ascending: false, nullsFirst: false })
 
   if (error) throw error
 

@@ -8355,7 +8355,7 @@
         "indice_variable":242,
         "respuesta":3,
         "respuesta_v2":"3. Mucho",
-        "respuesta_number":3.3333333333,
+        "respuesta_number":4.0,
         "suma_factor":115992.4583812627,
         "cantidad_respuestas":99
     },
@@ -8375,7 +8375,7 @@
         "indice_variable":242,
         "respuesta":2,
         "respuesta_v2":"2. Poco",
-        "respuesta_number":1.6666666667,
+        "respuesta_number":2.0,
         "suma_factor":31290.5642013396,
         "cantidad_respuestas":30
     },
@@ -8395,7 +8395,7 @@
         "indice_variable":243,
         "respuesta":3,
         "respuesta_v2":"3. Mucho",
-        "respuesta_number":3.3333333333,
+        "respuesta_number":4.0,
         "suma_factor":114996.9210428983,
         "cantidad_respuestas":94
     },
@@ -8405,7 +8405,7 @@
         "indice_variable":243,
         "respuesta":2,
         "respuesta_v2":"2. Poco",
-        "respuesta_number":1.6666666667,
+        "respuesta_number":2.0,
         "suma_factor":53869.2234351147,
         "cantidad_respuestas":46
     },
@@ -8435,7 +8435,7 @@
         "indice_variable":244,
         "respuesta":3,
         "respuesta_v2":"3. Mucho",
-        "respuesta_number":3.3333333333,
+        "respuesta_number":4.0,
         "suma_factor":115018.013845673,
         "cantidad_respuestas":94
     },
@@ -8445,7 +8445,7 @@
         "indice_variable":244,
         "respuesta":2,
         "respuesta_v2":"2. Poco",
-        "respuesta_number":1.6666666667,
+        "respuesta_number":2.0,
         "suma_factor":47919.8122965227,
         "cantidad_respuestas":39
     },
@@ -8475,7 +8475,7 @@
         "indice_variable":245,
         "respuesta":3,
         "respuesta_v2":"3. Mucho",
-        "respuesta_number":3.3333333333,
+        "respuesta_number":4.0,
         "suma_factor":114960.0317223967,
         "cantidad_respuestas":99
     },
@@ -8485,7 +8485,7 @@
         "indice_variable":245,
         "respuesta":2,
         "respuesta_v2":"2. Poco",
-        "respuesta_number":1.6666666667,
+        "respuesta_number":2.0,
         "suma_factor":43740.65870034,
         "cantidad_respuestas":34
     },

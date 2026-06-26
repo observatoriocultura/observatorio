@@ -3,6 +3,13 @@ import { RouterLink } from 'vue-router'
 
 const projects = [
   {
+    title: 'Encuesta de Prácticas Artísticas, Culturales, Creativas y Patrimoniales 2025',
+    excerpt: 'Encuesta de Prácticas Artísticas, Culturales, Creativas y Patrimoniales 2025',
+    link: '/ebc/practicas-artisticas-culturales-creativas-patrimoniales-2025',
+    tag: 'Análisis 2026',
+    date: 'Junio 2026',
+  },
+  {
     title: 'Encuesta de Cultura Ciudadana y Garantía de Derechos 2025',
     excerpt:
       'Encuesta de Cultura Ciudadana y Garantía de Derechos 2025, resultados del índice y subíndices de cultura ciudadana: Convivencia, espacio público, movilidad, participación y más.',

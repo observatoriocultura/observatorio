@@ -6,6 +6,7 @@ import AdvResultados from '../icc/AdvResultados.vue'
 import AdvIndice from '../icc/AdvIndice.vue'
 import AdvFicha from '../icc/AdvFicha.vue'
 import AdvDocs from '../icc/AdvDocs.vue'
+import AdvCreditos from '../icc/AdvCreditos.vue'
 import * as surveyConstants from './constants'
 
 const route = useRoute()
@@ -66,6 +67,13 @@ onMounted(async () => {
         >
           <i class="bi bi-file-earmark-text me-2"></i>Ficha Técnica
         </RouterLink>
+        <RouterLink
+          :to="{ query: { tab: 'creditos' } }"
+          class="nav-tab"
+          :class="{ active: currentTab === 'creditos' }"
+        >
+          <i class="bi bi-people me-2"></i>Equipo
+        </RouterLink>
       </nav>
 
       <main class="adv-view-content">
@@ -84,6 +92,7 @@ onMounted(async () => {
           <AdvIndice v-show="currentTab === 'indice'" />
           <AdvFicha v-show="currentTab === 'ficha'" />
           <AdvDocs v-show="currentTab === 'docs'" />
+          <AdvCreditos v-show="currentTab === 'creditos'" />
         </div>
       </main>
     </div>
