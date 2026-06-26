@@ -1,92 +1,112 @@
 [
-    {
-        "username":"diego.maldonado",
-        "nombre_mostrar":"Diego Maldonado",
-        "rol_en_encuesta":"Director del Observatorio",
-        "dato_mas_llamativo_encuesta":null,
-        "perfil":null,
-        "entidad":"Secretaría de Cultura, Recreación y Deporte",
-        "dependencia":"Dirección Observatorio y Gestión del Conocimiento Cultural",
-        "grupo":1
-    },
-    {
-        "username":"angie.moncada",
-        "nombre_mostrar":"Melina Moncada Ortíz",
-        "rol_en_encuesta":"Líder de Investigación",
-        "dato_mas_llamativo_encuesta":null,
-        "perfil":"Equipo de Investigación de Cultura Ciudadana",
-        "entidad":"Secretaría de Cultura, Recreación y Deporte",
-        "dependencia":"Dirección Observatorio y Gestión del Conocimiento Cultural",
-        "grupo":1
-    },
-    {
-        "username":"daniel.galeano",
-        "nombre_mostrar":"Daniel Galeano Amaya",
-        "rol_en_encuesta":"Investigador",
-        "dato_mas_llamativo_encuesta":null,
-        "perfil":"Análisis de resultados",
-        "entidad":"Secretaría de Cultura, Recreación y Deporte",
-        "dependencia":"Dirección Observatorio y Gestión del Conocimiento Cultural",
-        "grupo":1
-    },
-    {
-        "username":"jhonatan.rosas",
-        "nombre_mostrar":"Jhonatan Rosas Pinzón",
-        "rol_en_encuesta":"Investigador",
-        "dato_mas_llamativo_encuesta":null,
-        "perfil":"Análisis de resultados",
-        "entidad":"Secretaría de Cultura, Recreación y Deporte",
-        "dependencia":"Dirección Observatorio y Gestión del Conocimiento Cultural",
-        "grupo":1
-    },
-    {
-        "username":"giovani.moreno",
-        "nombre_mostrar":"Giovani Moreno Rozo",
-        "rol_en_encuesta":"Investigador",
-        "dato_mas_llamativo_encuesta":null,
-        "perfil":"Análisis de resultados",
-        "entidad":"Secretaría de Cultura, Recreación y Deporte",
-        "dependencia":"Dirección Observatorio y Gestión del Conocimiento Cultural",
-        "grupo":1
-    },
-    {
-        "username":"gisela.castrillon",
-        "nombre_mostrar":"Gisela Castrillón Moreno",
-        "rol_en_encuesta":"Estadística",
-        "dato_mas_llamativo_encuesta":null,
-        "perfil":"Líder del equipo de analítica y mediciones",
-        "entidad":"Secretaría de Cultura, Recreación y Deporte",
-        "dependencia":"Dirección Observatorio y Gestión del Conocimiento Cultural",
-        "grupo":1
-    },
-    {
-        "username":"luz.bernal",
-        "nombre_mostrar":"Luz Karime Bernal Muñoz",
-        "rol_en_encuesta":"Investigadora",
-        "dato_mas_llamativo_encuesta":null,
-        "perfil":"Validación, apoyo en procesamiento y análisis estadístico de resultados.",
-        "entidad":"Secretaría de Cultura, Recreación y Deporte",
-        "dependencia":"Dirección Observatorio y Gestión del Conocimiento Cultural",
-        "grupo":1
-    },
-    {
-        "username":"mabel.ayala",
-        "nombre_mostrar":"Mábel Ayala Meneses",
-        "rol_en_encuesta":"Visualización de Datos",
-        "dato_mas_llamativo_encuesta":null,
-        "perfil":"Profesional Geoespacial - Procesamiento de datos",
-        "entidad":"Secretaría de Cultura, Recreación y Deporte",
-        "dependencia":"Dirección Observatorio y Gestión del Conocimiento Cultural",
-        "grupo":1
-    },
-    {
-        "username":"javier.ojeda",
-        "nombre_mostrar":"Mauricio Ojeda Pepinosa",
-        "rol_en_encuesta":"Visualización de Datos",
-        "dato_mas_llamativo_encuesta":null,
-        "perfil":"Líder del equipo de sistemas de información y narrativas",
-        "entidad":"Secretaría de Cultura, Recreación y Deporte",
-        "dependencia":"Dirección Observatorio y Gestión del Conocimiento Cultural",
-        "grupo":1
-    }
+  {
+    "username": "diego.maldonado",
+    "nombre_mostrar": "Diego Maldonado",
+    "rol_en_encuesta": "Director del Observatorio",
+    "dato_mas_llamativo_encuesta": null,
+    "perfil": null,
+    "entidad": "Secretaría de Cultura, Recreación y Deporte ",
+    "dependencia": "Dirección Observatorio y Gestión del Conocimiento Cultural ",
+    "grupo": 1.0
+  },
+  {
+    "username": "andrea.garcia",
+    "nombre_mostrar": "Andrea García Albarracín",
+    "rol_en_encuesta": "Líder de Investigación",
+    "dato_mas_llamativo_encuesta": null,
+    "perfil": "Equipo de Investigación de Cultura Ciudadana",
+    "entidad": "Secretaría de Cultura, Recreación y Deporte ",
+    "dependencia": "Dirección Observatorio y Gestión del Conocimiento Cultural ",
+    "grupo": 1.0
+  },
+  {
+    "username": "viviana.rodriguez",
+    "nombre_mostrar": "Viviana Rodríguez Amaya",
+    "rol_en_encuesta": "Investigadora",
+    "dato_mas_llamativo_encuesta": null,
+    "perfil": null,
+    "entidad": "Secretaría de Cultura, Recreación y Deporte ",
+    "dependencia": "Dirección Observatorio y Gestión del Conocimiento Cultural ",
+    "grupo": 1.0
+  },
+  {
+    "username": "santiago.rojas",
+    "nombre_mostrar": "Santiago Rojas Gómez",
+    "rol_en_encuesta": "Investigador",
+    "dato_mas_llamativo_encuesta": null,
+    "perfil": null,
+    "entidad": "Secretaría de Cultura, Recreación y Deporte ",
+    "dependencia": "Dirección Observatorio y Gestión del Conocimiento Cultural ",
+    "grupo": 1.0
+  },
+  {
+    "username": "laura.lozano",
+    "nombre_mostrar": "Laura Lozano Rodríguez ",
+    "rol_en_encuesta": "Investigadora",
+    "dato_mas_llamativo_encuesta": null,
+    "perfil": null,
+    "entidad": "Secretaría de Cultura, Recreación y Deporte ",
+    "dependencia": "Dirección Observatorio y Gestión del Conocimiento Cultural ",
+    "grupo": 1.0
+  },
+  {
+    "username": "carlos.suarez",
+    "nombre_mostrar": "Carlos Suárez Morales",
+    "rol_en_encuesta": "Investigador (2025)",
+    "dato_mas_llamativo_encuesta": null,
+    "perfil": null,
+    "entidad": "Secretaría de Cultura, Recreación y Deporte ",
+    "dependencia": "Dirección Observatorio y Gestión del Conocimiento Cultural ",
+    "grupo": 1.0
+  },
+  {
+    "username": "giovani.moreno",
+    "nombre_mostrar": "Giovani Moreno Rozo",
+    "rol_en_encuesta": "Investigador (2025)",
+    "dato_mas_llamativo_encuesta": null,
+    "perfil": null,
+    "entidad": "Secretaría de Cultura, Recreación y Deporte ",
+    "dependencia": "Dirección Observatorio y Gestión del Conocimiento Cultural ",
+    "grupo": 1.0
+  },
+  {
+    "username": "gisela.castrillon",
+    "nombre_mostrar": "Gisela Castrillón Moreno",
+    "rol_en_encuesta": "Líder Estadística y de mediciones",
+    "dato_mas_llamativo_encuesta": null,
+    "perfil": "Líder del equipo de analítica y mediciones",
+    "entidad": "Secretaría de Cultura, Recreación y Deporte ",
+    "dependencia": "Dirección Observatorio y Gestión del Conocimiento Cultural ",
+    "grupo": 1.0
+  },
+  {
+    "username": "diego.lemus",
+    "nombre_mostrar": "Diego Fernando Lemus Polanía",
+    "rol_en_encuesta": "Procesamiento Estadístico",
+    "dato_mas_llamativo_encuesta": null,
+    "perfil": "Profesional en estadística",
+    "entidad": "Secretaría de Cultura, Recreación y Deporte ",
+    "dependencia": "Dirección Observatorio y Gestión del Conocimiento Cultural ",
+    "grupo": 1.0
+  },
+  {
+    "username": "mabel.ayala",
+    "nombre_mostrar": "Mábel Ayala Meneses",
+    "rol_en_encuesta": "Visualización de Datos",
+    "dato_mas_llamativo_encuesta": null,
+    "perfil": "Profesional Geoespacial - Procesamiento de datos",
+    "entidad": "Secretaría de Cultura, Recreación y Deporte ",
+    "dependencia": "Dirección Observatorio y Gestión del Conocimiento Cultural ",
+    "grupo": 1.0
+  },
+  {
+    "username": "javier.ojeda",
+    "nombre_mostrar": "Mauricio Ojeda Pepinosa",
+    "rol_en_encuesta": "Visualización de Datos",
+    "dato_mas_llamativo_encuesta": null,
+    "perfil": "Líder del equipo de sistemas de información y narrativas",
+    "entidad": "Secretaría de Cultura, Recreación y Deporte ",
+    "dependencia": "Dirección Observatorio y Gestión del Conocimiento Cultural ",
+    "grupo": 1.0
+  }
 ]
