@@ -12,18 +12,18 @@
                 v-if="investigacion.tema || investigacion.anio"
                 class="d-flex flex-wrap align-items-center gap-2 mb-3"
               >
-                <span v-if="investigacion.tema" class="detail-eyebrow">
-                  {{ investigacion.tema }}
-                </span>
                 <span v-if="investigacion.anio" class="detail-year-label">
                   {{ investigacion.anio }}
+                </span>
+                <span v-if="investigacion.tema" class="detail-eyebrow">
+                  {{ investigacion.tema }}
                 </span>
               </div>
               <h3 class="fw-bold mb-3 detail-yellow-title">
                 {{ investigacion.titulo }}
               </h3>
               <p class="mb-0 text-white mt-2 investigacion-descripcion">
-                {{ investigacion.descripcion || 'Sin descripcion disponible.' }}
+                {{ investigacion.descripcion || 'Sin descripción disponible.' }}
               </p>
             </div>
 
@@ -81,15 +81,13 @@
         />
 
         <div class="bg-light p-4 rounded-4 border">
-          <h5 class="fw-bold mb-3">Detalles técnicos</h5>
-
           <div v-if="investigacion.entidad_solicitante" class="mb-3">
             <h6 class="text-muted small mb-1 fw-bold">Entidad solicitante</h6>
             <div>{{ investigacion.entidad_solicitante }}</div>
           </div>
 
           <div v-if="investigacion.linea_investigacion" class="mb-3">
-            <h6 class="text-muted small mb-1 fw-bold">Linea de investigacion</h6>
+            <h6 class="text-muted small mb-1 fw-bold">Línea de investigación</h6>
             <div>{{ investigacion.linea_investigacion }}</div>
           </div>
 
@@ -98,12 +96,17 @@
             <div>{{ investigacion.investigadores }}</div>
           </div>
 
+          <div v-if="investigacion.expediente_orfeo" class="mb-3">
+            <h6 class="text-muted small mb-1 fw-bold">Expediente</h6>
+            <div>{{ investigacion.expediente_orfeo }}</div>
+          </div>
+
           <div v-if="investigacion.carpeta_productos" class="mt-4">
             <a
               :href="investigacion.carpeta_productos"
               target="_blank"
               rel="noopener"
-              class="btn btn-primary w-100 rounded-pill fw-bold d-inline-flex align-items-center justify-content-center gap-2"
+              class="btn folder-products-btn w-100 rounded-pill fw-bold d-inline-flex align-items-center justify-content-center gap-2"
             >
               <i class="bi bi-folder-fill folder-products-icon" aria-hidden="true"></i>
               Ver carpeta de productos
@@ -331,6 +334,19 @@ const getProductoIconObj = (tipo) => {
 
 .folder-products-icon {
   color: #ffd96f;
+}
+
+.folder-products-btn {
+  border: 2px solid #f8be4b;
+  background-color: #ffffff;
+  color: #50328c;
+}
+
+.folder-products-btn:hover,
+.folder-products-btn:focus-visible {
+  border-color: #f0a400;
+  background-color: #fff8e5;
+  color: #50328c;
 }
 
 @media (max-width: 575.98px) {

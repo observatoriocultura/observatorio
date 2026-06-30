@@ -43,8 +43,8 @@
                 {{ investigacion.titulo }}
               </h6>
               <div class="text-muted small video-subtitle">
-                <div class="text-truncate" :title="investigacion.entidad_solicitante">
-                  {{ investigacion.entidad_solicitante }}
+                <div class="text-truncate" :title="investigacion.tema">
+                  {{ investigacion.tema }}
                 </div>
                 <div>{{ investigacion.anio }}</div>
               </div>

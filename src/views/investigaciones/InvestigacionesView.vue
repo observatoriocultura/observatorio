@@ -156,7 +156,13 @@ const normalizeProducto = (producto) => ({
 
 const normalizeHallazgo = (hallazgo, index) => ({
   ...hallazgo,
+  investigacion_id:
+    hallazgo.investigacion_id ??
+    hallazgo.id_investigacion ??
+    hallazgo.investigacionId ??
+    hallazgo.investigacion,
   orden: hallazgo.orden ?? index + 1,
+  titulo: hallazgo.titulo ?? hallazgo.nombre ?? hallazgo.hallazgo ?? '',
   texto:
     hallazgo.texto ??
     hallazgo.descripcion ??
