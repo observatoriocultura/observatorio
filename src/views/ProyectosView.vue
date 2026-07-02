@@ -1,69 +1,75 @@
 <script setup>
+import { onMounted, ref } from 'vue'
 import { RouterLink } from 'vue-router'
+import { fetchGoogleSheetCsv } from '../utils/googleSheets'
 
-const projects = [
-  {
-    title: 'Encuesta de Prácticas Artísticas, Culturales, Creativas y Patrimoniales 2025',
-    excerpt: 'Encuesta de Prácticas Artísticas, Culturales, Creativas y Patrimoniales 2025',
-    link: '/ebc/practicas-artisticas-culturales-creativas-patrimoniales-2025',
-    tag: 'Análisis 2026',
-    date: 'Junio 2026',
-  },
-  {
-    title: 'Encuesta de Cultura Ciudadana y Garantía de Derechos 2025',
-    excerpt:
-      'Encuesta de Cultura Ciudadana y Garantía de Derechos 2025, resultados del índice y subíndices de cultura ciudadana: Convivencia, espacio público, movilidad, participación y más.',
-    link: '/ebc/encuesta-cultura-ciudadana-2025',
-    tag: 'Análisis 2026',
-    date: 'Abril 2026',
-  },
-  {
-    title: 'Lectura, Escritura y Oralidad (LEO) 2025',
-    excerpt:
-      'Estudio de percepciones y expectativas ciudadanas sobre lectura, escritura y oralidad en Bogotá.',
-    link: '/ebc/lectura-escritura-y-oralidad-2025',
-    tag: 'Análisis 2026',
-    date: 'Abril 2026',
-  },
-  {
-    title: 'Análisis de reel sobre cultura ciudadana en el metro',
-    excerpt:
-      'Estudio de percepciones y expectativas ciudadanas sobre convivencia y normas en el futuro sistema de transporte masivo de la ciudad.',
-    link: '/2026/analisis-reel-cultura-ciudadana-metro',
-    tag: 'Análisis 2026',
-    date: 'Marzo 2026',
-  },
-  {
-    title: 'Problemática de residuos en el espacio público',
-    excerpt:
-      'Análisis de comentarios en X sobre la gestión de basuras y limpieza urbana, identificando puntos críticos y propuestas ciudadanas.',
-    link: '/2026/analisis-post-x-residuos',
-    tag: 'Análisis 2026',
-    date: 'Febrero 2026',
-  },
-  {
-    title: 'Plan de Cultura 2038 - Análisis de Participaciones',
-    excerpt:
-      'Informe interactivo del resultado del procesamiento de miles de participaciones ciudadanas para la construcción de la hoja de ruta cultural.',
-    link: '/analisis-participaciones-plan-cultura-2038',
-    tag: 'Plan de Cultura',
-    date: '2025',
-  },
-  {
-    title: 'Repositorio de Contenidos',
-    excerpt:
-      'Acceso a la biblioteca completa de recursos, metodologías y documentos de referencia del Observatorio.',
-    link: '/contenidos',
-    tag: 'Herramientas',
-    date: null,
-  },
-]
+const contenidos = ref([])
+const loading = ref(false)
+const errorMessage = ref('')
+const baseUrl = import.meta.env.BASE_URL
+const defaultThumbnailUrl = `${baseUrl}resources/images/app/portada_16_9.jpg`
+const sheetFileId =
+  import.meta.env.VITE_PROYECTOS_SHEET_ID ?? '159HVaL2GEIQZhUuqdwKfi_bmZW3dqp5WjKlJYyJ0Bvk'
+const sheetGid = import.meta.env.VITE_PROYECTOS_SHEET_GID ?? '518894995'
+
+const pickFirst = (row, keys) => keys.map((key) => row[key]).find((value) => value?.trim?.())
+
+const getThumbnailUrl = (contenido) =>
+  contenido.year && contenido.id
+    ? `${baseUrl}content/${contenido.year}/thumbnails/${contenido.id}.jpg`
+    : null
+
+const useDefaultThumbnail = (event) => {
+  if (event.currentTarget.src.endsWith(defaultThumbnailUrl)) return
+  event.currentTarget.src = defaultThumbnailUrl
+}
+
+const normalizeContenido = (row) => ({
+  id: pickFirst(row, ['id', 'codigo', 'código']) ?? '',
+  title: pickFirst(row, ['title', 'titulo', 'título', 'nombre']) ?? '',
+  excerpt: pickFirst(row, ['excerpt', 'resumen', 'descripcion', 'descripción']) ?? '',
+  link: pickFirst(row, ['link', 'url', 'ruta', 'enlace']) ?? '',
+  tag: pickFirst(row, ['tag', 'categoria', 'categoría', 'etiqueta']) ?? 'Contenido',
+  year: pickFirst(row, ['year', 'anio', 'año']) ?? null,
+  date: pickFirst(row, ['date', 'fecha', 'vigencia']) ?? null,
+})
+
+const loadContenidos = async () => {
+  if (!sheetFileId) return
+
+  loading.value = true
+  errorMessage.value = ''
+
+  try {
+    const rows = await fetchGoogleSheetCsv({
+      fileId: sheetFileId,
+      gid: sheetGid,
+    })
+    const sheetContenidos = rows
+      .map(normalizeContenido)
+      .filter((contenido) => contenido.title && contenido.link)
+
+    if (sheetContenidos.length === 0) {
+      throw new Error('Google Sheets no devolvió contenidos con título y enlace.')
+    }
+
+    contenidos.value = sheetContenidos
+  } catch (error) {
+    console.error('No fue posible cargar los contenidos desde Google Sheets.', error)
+    errorMessage.value = 'No fue posible actualizar los contenidos desde Google Sheets.'
+    contenidos.value = []
+  } finally {
+    loading.value = false
+  }
+}
+
+onMounted(loadContenidos)
 </script>
 
 <template>
-  <div class="proyectos-view">
-    <div class="proyectos-shell">
-      <header class="proyectos-header">
+  <div class="contenidos-view">
+    <div class="contenidos-shell">
+      <header class="contenidos-header">
         <span class="eyebrow">Explora nuestro conocimiento</span>
         <h1>Publicaciones y contenidos</h1>
         <p class="lead">
@@ -72,21 +78,58 @@ const projects = [
         </p>
       </header>
 
+      <p v-if="loading" class="status-message">Cargando contenidos...</p>
+      <p v-else-if="errorMessage" class="status-message status-error">{{ errorMessage }}</p>
+      <p v-else-if="contenidos.length === 0" class="status-message">
+        No hay contenidos disponibles.
+      </p>
+
       <div class="content-grid">
-        <article v-for="(project, index) in projects" :key="index" class="content-card">
+        <article v-for="(contenido, index) in contenidos" :key="index" class="content-card">
           <div class="card-meta">
-            <span class="tag">{{ project.tag }}</span>
-            <span v-if="project.date" class="date">{{ project.date }}</span>
+            <span class="tag">{{ contenido.tag }}</span>
+            <span v-if="contenido.date" class="date">{{ contenido.date }}</span>
           </div>
-          <RouterLink :to="project.link" class="card-title">
-            {{ project.title }}
+          <img
+            v-if="getThumbnailUrl(contenido)"
+            class="content-thumbnail"
+            :src="getThumbnailUrl(contenido)"
+            :alt="contenido.title"
+            loading="lazy"
+            @error="useDefaultThumbnail"
+          />
+          <RouterLink v-if="contenido.link.startsWith('/')" :to="contenido.link" class="card-title">
+            {{ contenido.title }}
           </RouterLink>
-          <p class="card-excerpt">
-            {{ project.excerpt }}
+          <a
+            v-else
+            :href="contenido.link"
+            class="card-title"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {{ contenido.title }}
+          </a>
+          <p v-if="contenido.year" class="card-year">
+            {{ contenido.year }}
           </p>
-          <RouterLink :to="project.link" class="card-link">
-            {{ project.tag === 'Herramientas' ? 'Ir al repositorio' : 'Leer completo' }} →
+          <p class="card-excerpt">
+            {{ contenido.excerpt }}
+          </p>
+          <RouterLink v-if="contenido.link.startsWith('/')" :to="contenido.link" class="card-link">
+            {{ contenido.tag === 'Herramientas' ? 'Ir al repositorio' : 'Leer completo' }}
+            <span aria-hidden="true">→</span>
           </RouterLink>
+          <a
+            v-else
+            :href="contenido.link"
+            class="card-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {{ contenido.tag === 'Herramientas' ? 'Ir al repositorio' : 'Leer completo' }}
+            <span aria-hidden="true">→</span>
+          </a>
         </article>
       </div>
     </div>
@@ -94,18 +137,18 @@ const projects = [
 </template>
 
 <style scoped>
-.proyectos-view {
+.contenidos-view {
   min-height: 100vh;
   padding: 4rem 1.5rem;
   background-color: #ffffff;
 }
 
-.proyectos-shell {
+.contenidos-shell {
   max-width: 1100px;
   margin: 0 auto;
 }
 
-.proyectos-header {
+.contenidos-header {
   margin-bottom: 4rem;
   max-width: 700px;
 }
@@ -140,6 +183,16 @@ h1 {
   gap: 2.5rem;
 }
 
+.status-message {
+  margin: -2rem 0 2.5rem;
+  color: #5c6972;
+  font-weight: 700;
+}
+
+.status-error {
+  color: #a33a3a;
+}
+
 .content-card {
   display: flex;
   flex-direction: column;
@@ -157,6 +210,15 @@ h1 {
   align-items: center;
   gap: 1rem;
   margin-bottom: 1.25rem;
+}
+
+.content-thumbnail {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin-bottom: 1.25rem;
+  background: #f0f2f4;
+  border-radius: 4px;
 }
 
 .tag {
@@ -181,12 +243,20 @@ h1 {
   line-height: 1.3;
   color: #1a1a1a;
   text-decoration: none;
-  margin-bottom: 1rem;
+  margin-bottom: 0.35rem;
   transition: color 0.2s ease;
 }
 
 .card-title:hover {
   color: #000;
+}
+
+.card-year {
+  margin-bottom: 1rem;
+  color: #8c96a0;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .card-excerpt {
@@ -212,7 +282,7 @@ h1 {
 }
 
 @media (max-width: 768px) {
-  .proyectos-header {
+  .contenidos-header {
     margin-bottom: 3rem;
   }
 }
