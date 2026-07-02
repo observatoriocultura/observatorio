@@ -173,6 +173,15 @@ const normalizeHallazgo = (hallazgo, index) => ({
   unidad_medida: hallazgo.unidad_medida ?? hallazgo.unidad ?? hallazgo.medida,
 })
 
+const cargarHallazgosLocales = async () => {
+  const response = await fetch(`${baseUrl}content/investigaciones/hallazgos.json`)
+  if (!response.ok) {
+    throw new Error('No fue posible cargar los hallazgos locales.')
+  }
+
+  return response.json()
+}
+
 const cargarInvestigaciones = async () => {
   const { data, error } = await supabase
     .from('gio_investigaciones')
@@ -206,7 +215,14 @@ const cargarHallazgos = async () => {
 
   if (error) throw error
 
-  hallazgos.value = (data ?? []).map(normalizeHallazgo)
+  const hallazgosSupabase = (data ?? []).map(normalizeHallazgo)
+  if (hallazgosSupabase.length > 0) {
+    hallazgos.value = hallazgosSupabase
+    return
+  }
+
+  const hallazgosLocales = await cargarHallazgosLocales()
+  hallazgos.value = (hallazgosLocales ?? []).map(normalizeHallazgo)
 }
 
 onMounted(async () => {

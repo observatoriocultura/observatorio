@@ -4,9 +4,63 @@
       &larr; Volver
     </button>
     <div class="row">
-      <div class="col-lg-8 mb-4">
-        <div class="p-4 p-md-5 rounded-4 h-100 detail-purple-block">
-          <div class="row h-100">
+      <div class="col-lg-4 mb-4 order-lg-2">
+        <img
+          :src="`${baseUrl}content/investigaciones/thumbnails/${investigacion.id}.jpg`"
+          class="w-100 rounded-4 mb-4 object-fit-cover shadow-sm"
+          style="aspect-ratio: 16/9"
+          :alt="investigacion.titulo"
+          @error="(event) => (event.target.src = `${baseUrl}content/investigaciones/thumbnails/nd.jpg`)"
+        />
+
+        <h4 v-if="hallazgos.length > 0" class="findings-title text-center fw-bold mb-3">
+          Principales hallazgos
+        </h4>
+
+        <section v-if="hallazgos.length > 0" class="findings-carousel">
+          <div
+            :key="carouselProgressKey"
+            class="findings-timer"
+            aria-hidden="true"
+          ></div>
+
+          <div class="findings-indicators" aria-label="Seleccionar hallazgo">
+            <button
+              v-for="(hallazgo, idx) in hallazgos"
+              :key="`${hallazgo.investigacion_id}-${hallazgo.orden}-${idx}-indicator`"
+              type="button"
+              class="finding-indicator"
+              :class="{ active: idx === activeHallazgoIndex }"
+              :aria-label="`Ver hallazgo ${idx + 1}`"
+              :aria-current="idx === activeHallazgoIndex ? 'true' : undefined"
+              @click="setActiveHallazgo(idx)"
+            >
+              {{ hallazgo.orden || idx + 1 }}
+            </button>
+          </div>
+
+          <article class="finding-slide">
+            <div class="finding-content">
+              <h5 class="finding-heading fw-bold mb-2">{{ activeHallazgo.titulo }}</h5>
+              <p class="finding-text mb-0">{{ activeHallazgo.texto }}</p>
+              <div
+                v-if="activeHallazgo.valor || activeHallazgo.unidad_medida"
+                class="finding-value fw-semibold mt-3"
+              >
+                {{ [activeHallazgo.valor, activeHallazgo.unidad_medida].filter(Boolean).join(' ') }}
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <div v-else class="findings-empty-light">
+          No hay hallazgos registrados.
+        </div>
+      </div>
+
+      <div class="col-lg-8 mb-4 order-lg-1">
+        <div class="p-4 rounded-4 detail-purple-block">
+          <div class="row">
             <div class="col-md-7 mb-4 mb-md-0">
               <div
                 v-if="investigacion.tema || investigacion.anio"
@@ -69,80 +123,54 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-lg-4 mb-4">
-        <img
-          :src="`${baseUrl}content/investigaciones/thumbnails/${investigacion.id}.jpg`"
-          class="w-100 rounded-4 mb-4 object-fit-cover shadow-sm"
-          style="aspect-ratio: 16/9"
-          :alt="investigacion.titulo"
-          @error="(event) => (event.target.src = `${baseUrl}content/investigaciones/thumbnails/nd.jpg`)"
-        />
+        <section class="detail-meta-panel mt-4" aria-label="Detalles adicionales">
+          <div class="detail-meta-list">
+            <div v-if="investigacion.entidad_solicitante" class="detail-meta-item">
+              <span class="text-muted">Entidad solicitante</span>
+              <strong>{{ investigacion.entidad_solicitante }}</strong>
+            </div>
 
-        <div class="bg-light p-4 rounded-4 border">
-          <div v-if="investigacion.entidad_solicitante" class="mb-3">
-            <h6 class="text-muted small mb-1 fw-bold">Entidad solicitante</h6>
-            <div>{{ investigacion.entidad_solicitante }}</div>
-          </div>
+            <div v-if="investigacion.linea_investigacion" class="detail-meta-item">
+              <span class="text-muted">Línea de investigación</span>
+              <strong>{{ investigacion.linea_investigacion }}</strong>
+            </div>
 
-          <div v-if="investigacion.linea_investigacion" class="mb-3">
-            <h6 class="text-muted small mb-1 fw-bold">Línea de investigación</h6>
-            <div>{{ investigacion.linea_investigacion }}</div>
-          </div>
+            <div v-if="investigacion.investigadores" class="detail-meta-item">
+              <span class="text-muted">Investigador(es)</span>
+              <strong>{{ investigacion.investigadores }}</strong>
+            </div>
 
-          <div v-if="investigacion.investigadores" class="mb-3">
-            <h6 class="text-muted small mb-1 fw-bold">Investigador(es)</h6>
-            <div>{{ investigacion.investigadores }}</div>
-          </div>
+            <div v-if="investigacion.expediente_orfeo" class="detail-meta-item">
+              <span class="text-muted">Expediente</span>
+              <strong>{{ investigacion.expediente_orfeo }}</strong>
+            </div>
 
-          <div v-if="investigacion.expediente_orfeo" class="mb-3">
-            <h6 class="text-muted small mb-1 fw-bold">Expediente</h6>
-            <div>{{ investigacion.expediente_orfeo }}</div>
-          </div>
-
-          <div v-if="investigacion.carpeta_productos" class="mt-4">
-            <a
-              :href="investigacion.carpeta_productos"
-              target="_blank"
-              rel="noopener"
-              class="btn folder-products-btn w-100 rounded-pill fw-bold d-inline-flex align-items-center justify-content-center gap-2"
-            >
-              <i class="bi bi-folder-fill folder-products-icon" aria-hidden="true"></i>
-              Ver carpeta de productos
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <section v-if="hallazgos.length > 0" class="findings-section mt-4 mb-5">
-      <h4 class="findings-title text-center fw-bold mb-4">Principales hallazgos</h4>
-      <div class="findings-list mx-auto">
-        <article
-          v-for="(hallazgo, idx) in hallazgos"
-          :key="`${hallazgo.investigacion_id}-${hallazgo.orden}-${idx}`"
-          class="finding-item"
-        >
-          <div class="finding-number">{{ hallazgo.orden || idx + 1 }}</div>
-          <div class="finding-content">
-            <h5 class="finding-heading fw-bold mb-1">{{ hallazgo.titulo }}</h5>
-            <p class="finding-text mb-0">{{ hallazgo.texto }}</p>
-            <div
-              v-if="hallazgo.valor || hallazgo.unidad_medida"
-              class="finding-value fw-semibold mt-2"
-            >
-              {{ [hallazgo.valor, hallazgo.unidad_medida].filter(Boolean).join(' ') }}
+            <div v-if="investigacion.carpeta_productos" class="detail-meta-item">
+              <span class="text-muted">Carpeta productos</span>
+              <strong>
+                <a
+                  :href="investigacion.carpeta_productos"
+                  target="_blank"
+                  rel="noopener"
+                  class="folder-products-icon-link"
+                  aria-label="Ver carpeta de productos"
+                >
+                  <i class="bi bi-folder-fill" aria-hidden="true"></i>
+                </a>
+              </strong>
             </div>
           </div>
-        </article>
+        </section>
       </div>
-    </section>
+    </div>
   </div>
 </template>
 
 <script setup>
-defineProps({
+import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+
+const props = defineProps({
   investigacion: {
     type: Object,
     default: null,
@@ -162,6 +190,46 @@ defineProps({
 })
 
 const emit = defineEmits(['back'])
+const activeHallazgoIndex = ref(0)
+const carouselProgressKey = ref(0)
+let hallazgosInterval = null
+
+const activeHallazgo = computed(() => props.hallazgos[activeHallazgoIndex.value] ?? {})
+
+const stopHallazgosCarousel = () => {
+  if (!hallazgosInterval) return
+  clearInterval(hallazgosInterval)
+  hallazgosInterval = null
+}
+
+const startHallazgosCarousel = () => {
+  stopHallazgosCarousel()
+  if (props.hallazgos.length <= 1) return
+
+  hallazgosInterval = setInterval(() => {
+    activeHallazgoIndex.value = (activeHallazgoIndex.value + 1) % props.hallazgos.length
+    carouselProgressKey.value += 1
+  }, 8000)
+}
+
+const setActiveHallazgo = (index) => {
+  activeHallazgoIndex.value = index
+  carouselProgressKey.value += 1
+  startHallazgosCarousel()
+}
+
+watch(
+  () => props.hallazgos,
+  () => {
+    activeHallazgoIndex.value = 0
+    carouselProgressKey.value += 1
+    startHallazgosCarousel()
+  },
+  { deep: true },
+)
+
+onMounted(startHallazgosCarousel)
+onBeforeUnmount(stopHallazgosCarousel)
 
 const normalizeTipoProducto = (tipo) =>
   String(tipo ?? '')
@@ -201,19 +269,22 @@ const getProductoIconObj = (tipo) => {
 
 <style scoped>
 .investigacion-descripcion {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
   white-space: pre-wrap;
 }
 
 .detail-purple-block {
   background: linear-gradient(135deg, #261446 0%, #4f2d84 100%);
   color: white;
+  min-height: 450px;
 }
 
 .detail-yellow-title {
   color: #f8be4b;
-  font-size: 2.25rem;
+  font-size: 2.15rem;
   font-weight: 900 !important;
+  line-height: 1.12;
 }
 
 .detail-eyebrow,
@@ -238,52 +309,136 @@ const getProductoIconObj = (tipo) => {
   color: #ffd96f;
 }
 
-.findings-section {
-  color: #111827;
+.findings-carousel,
+.findings-empty-light {
+  min-height: 230px;
+  border: 1px solid #ededf0;
+  border-radius: 12px;
+  background-color: #ffffff;
+  padding: 1rem;
+}
+
+.findings-timer {
+  width: 100%;
+  height: 0.2rem;
+  border-radius: 999px;
+  margin-bottom: 0.9rem;
+  background-color: #7c3a95;
+  transform-origin: left center;
+  animation: finding-timer-shrink 8s linear forwards;
+}
+
+.findings-indicators {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-bottom: 0.9rem;
+}
+
+.finding-indicator {
+  display: inline-flex;
+  min-width: 1.85rem;
+  min-height: 1.55rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d8d8de;
+  border-radius: 999px;
+  background-color: #ffffff;
+  padding: 0.1rem 0.55rem;
+  color: #6b7280;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.finding-indicator.active {
+  border-color: #7c3a95;
+  background-color: #7c3a95;
+  color: #ffffff;
+}
+
+.finding-slide {
+  min-width: 0;
 }
 
 .findings-title {
-  color: #f8be4b;
+  color: #7c3a95;
+  font-size: 0.8rem;
+  font-weight: 800;
   letter-spacing: 0;
-}
-
-.findings-list {
-  max-width: 860px;
-}
-
-.finding-item {
-  display: grid;
-  grid-template-columns: 56px 1fr;
-  gap: 20px;
-  margin-bottom: 1.5rem;
-}
-
-.finding-number {
-  color: #f0a400;
-  font-size: 2rem;
-  line-height: 1;
-  text-align: right;
+  text-transform: uppercase;
 }
 
 .finding-heading {
   color: #50328c;
-  font-size: 1rem;
+  font-size: 0.98rem;
   line-height: 1.35;
 }
 
 .finding-text {
-  font-size: 1rem;
-  line-height: 1.55;
+  color: #374151;
+  font-size: 0.9rem;
+  line-height: 1.5;
   white-space: pre-wrap;
 }
 
 .finding-value {
   color: #50328c;
+  font-size: 0.9rem;
+}
+
+.findings-empty-light {
+  color: #6b7280;
+}
+
+.detail-meta-panel {
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  padding: 1rem 1.15rem;
+}
+
+.detail-meta-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0;
+  align-items: center;
+}
+
+.detail-meta-item {
+  display: inline-flex;
+  gap: 0.4rem;
+  align-items: baseline;
+  color: #111827;
+  font-size: 0.85rem;
+  line-height: 1.25;
+}
+
+.detail-meta-item:not(:last-child)::after {
+  margin: 0 0.85rem;
+  color: #c9cdd3;
+  content: '·';
+  font-weight: 400;
+}
+
+.detail-meta-item span {
+  color: #8a9099 !important;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.detail-meta-item strong {
+  color: #171717;
+  font-weight: 750;
 }
 
 .product-link {
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid transparent;
+  font-size: 0.9rem;
   transition: all 0.2s ease;
 }
 
@@ -295,16 +450,16 @@ const getProductoIconObj = (tipo) => {
 
 .product-icon-wrapper {
   display: inline-flex;
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
   border: 2px solid currentColor;
   border-radius: 50%;
-  margin-right: 12px;
+  margin-right: 10px;
   background-color: white;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .producto-general {
@@ -332,31 +487,33 @@ const getProductoIconObj = (tipo) => {
   color: #c99e05;
 }
 
-.folder-products-icon {
-  color: #ffd96f;
+.folder-products-icon-link {
+  display: inline-flex;
+  align-items: center;
+  color: #171717;
+  font-size: 1.05rem;
+  line-height: 1;
+  text-decoration: none;
 }
 
-.folder-products-btn {
-  border: 2px solid #f8be4b;
-  background-color: #ffffff;
-  color: #50328c;
+.folder-products-icon-link:hover,
+.folder-products-icon-link:focus {
+  color: #4b5563;
 }
 
-.folder-products-btn:hover,
-.folder-products-btn:focus-visible {
-  border-color: #f0a400;
-  background-color: #fff8e5;
-  color: #50328c;
+@keyframes finding-timer-shrink {
+  from {
+    transform: scaleX(1);
+  }
+
+  to {
+    transform: scaleX(0);
+  }
 }
 
 @media (max-width: 575.98px) {
-  .finding-item {
-    grid-template-columns: 40px 1fr;
-    gap: 14px;
-  }
-
-  .finding-number {
-    font-size: 1.6rem;
+  .detail-purple-block {
+    min-height: 0;
   }
 }
 </style>
