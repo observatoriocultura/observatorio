@@ -19,6 +19,7 @@
         v-show="section === 'results'"
         v-model:search-term="searchInput"
         :investigaciones="investigacionesFiltradas"
+        :total-count="investigaciones.length"
         :base-url="baseUrl"
         @select="showDetail"
       />

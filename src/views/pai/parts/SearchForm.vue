@@ -6,6 +6,9 @@
       aria-label="Buscar investigaciones"
       @update:model-value="emit('update:searchTerm', $event)"
     />
+    <p class="pai-list-filter-counter" aria-live="polite">
+      <span>{{ resultCount }}</span> de {{ totalCount }} mediciones
+    </p>
     <div class="pai-list-filters">
       <select
         :value="selectedLinea"
@@ -42,9 +45,6 @@
         <i class="bi bi-eraser" aria-hidden="true"></i>
       </button>
     </div>
-    <p class="pai-list-filter-counter" aria-live="polite">
-      <span>{{ resultCount }}</span> resultados de {{ totalCount }}
-    </p>
   </div>
 </template>
 

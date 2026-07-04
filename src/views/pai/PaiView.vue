@@ -82,7 +82,9 @@ const vigenciaInfo = computed(() => vigenciaPorYear(year.value))
 const normalizarYear = (value) => Number(value)
 const investigacionesFiltradas = computed(() =>
   investigaciones.value.filter(
-    (investigacion) => normalizarYear(investigacion.year_vigencia) === year.value,
+    (investigacion) =>
+      normalizarYear(investigacion.year_vigencia) === year.value &&
+      Number(investigacion.cantidad_productos) > 0,
   ),
 )
 
@@ -133,6 +135,7 @@ const cargarInvestigaciones = async () => {
       'id, nombre_clave, titulo, tema, descripcion, linea_investigacion, year_vigencia, entidad, dependencia, palabras_clave, puntaje, avance, avance_planeacion, avance_instrumentos, avance_recoleccion, avance_documentacion, avance_finalizacion, cantidad_productos, cantidad_hallazgos, cantidad_radicados, cantidad_paginas',
     )
     .filter('year_vigencia', 'eq', String(year.value))
+    .filter('cantidad_productos', 'gt', 0)
     .order('year_vigencia', { ascending: false })
     .order('puntaje', { ascending: false, nullsFirst: false })
 

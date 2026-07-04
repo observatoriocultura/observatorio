@@ -1,304 +1,277 @@
 <template>
-  <section class="home-hero">
+  <section class="home-view">
     <div class="home-shell">
-      <div class="hero-copy">
+      <header class="home-intro">
         <p class="eyebrow">Secretaría de Cultura, Recreación y Deporte de Bogotá</p>
-        <h1 class="hero-title">
-          <span class="title-top">Dirección</span>
-          <span class="title-main">Observatorio</span>
-          <span class="title-bottom">y Gestión del Conocimiento Cultural</span>
+        <h1>
+          Observatorio y Gestión<br />
+          del Conocimiento Cultural
         </h1>
         <p class="lead">
-          Un punto de entrada para comprender la vida cultural de Bogotá a través de datos,
-          análisis, proyectos, investigaciones y herramientas de consulta.
+          Reunimos mediciones, investigaciones, publicaciones y herramientas para leer la vida
+          cultural de Bogotá con datos, análisis y evidencia útil para la toma de decisiones,
+          organizando resultados de estudios, documentos técnicos, lecturas aplicadas y recursos de
+          consulta sobre el ecosistema cultural de la ciudad.
         </p>
+      </header>
 
-        <div class="hero-actions">
-          <RouterLink class="action action-primary" to="/proyectos">Explorar contenidos</RouterLink>
+      <section class="access-section" aria-labelledby="access-title">
+        <h2 id="access-title" class="visually-hidden">Accesos principales</h2>
+
+        <div class="access-grid">
+          <article v-for="block in accessBlocks" :key="block.title" class="access-card">
+            <span class="access-icon" :class="block.tone" aria-hidden="true">
+              <i class="bi" :class="block.icon"></i>
+            </span>
+            <div class="access-copy">
+              <h3>{{ block.title }}</h3>
+              <p>{{ block.description }}</p>
+            </div>
+            <RouterLink class="access-link" :to="block.to">
+              {{ block.linkLabel }}
+              <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </RouterLink>
+          </article>
         </div>
-      </div>
-
-      <aside class="hero-panel">
-        <div class="panel-intro">
-          <span class="panel-kicker">Qué encuentras aquí</span>
-          <p>
-            Contenidos pensados para consulta ágil: artículos, proyectos, informes, glosarios y
-            lecturas aplicadas sobre el ecosistema cultural de la ciudad.
-          </p>
-        </div>
-
-        <div class="panel-grid">
-          <a href="#/proyectos" class="info-card" rel="noopener noreferrer">
-            <span class="card-label">Análisis</span>
-            <h2>Lectura de tendencias y hallazgos</h2>
-            <p>Resultados sintéticos para entender fenómenos, conversaciones y transformaciones.</p>
-          </a>
-
-          <a href="#/investigaciones" rel="noopener noreferrer" class="info-card">
-            <span class="card-label">Investigación</span>
-            <h2>Estudios e Investigaciones</h2>
-            <p>Listado de investigaciones y contenidos técnicos generados por el Observatorio.</p>
-          </a>
-        </div>
-      </aside>
+      </section>
     </div>
   </section>
 </template>
 
 <script setup>
 import { RouterLink } from 'vue-router'
+
+const accessBlocks = [
+  {
+    title: 'Mediciones',
+    description:
+      'Consulta investigaciones, estudios y resultados organizados para entender dinámicas culturales de Bogotá.',
+    linkLabel: 'Entrar a mediciones',
+    to: '/investigaciones',
+    icon: 'bi-clipboard-data',
+    tone: 'tone-measurements',
+  },
+  {
+    title: 'Publicaciones',
+    description:
+      'Lee artículos, informes, documentos técnicos y contenidos de análisis producidos por el Observatorio.',
+    linkLabel: 'Ver publicaciones',
+    to: '/proyectos',
+    icon: 'bi-journal-text',
+    tone: 'tone-publications',
+  },
+  {
+    title: 'Herramientas',
+    description:
+      'Espacio para mapas, visualizadores y recursos interactivos. Por ahora deja abierto el lugar para nuevos desarrollos.',
+    linkLabel: 'Explorar herramientas',
+    to: '/herramientas/mapa_localidades',
+    icon: 'bi-map',
+    tone: 'tone-tools',
+  },
+]
 </script>
 
 <style scoped>
-.home-hero {
-  --hero-surface: #ffffff;
-  --hero-border: #e6e8eb;
-  --hero-text: #18232b;
-  --hero-muted: #5c6972;
-  min-height: calc(100vh - 72px);
-  padding: clamp(1.25rem, 2.5vw, 2rem);
-  background: #ffffff;
-  color: var(--hero-text);
+.home-view {
+  --home-text: #18232b;
+  --home-muted: #5b6670;
+  --home-soft: #eef1f4;
+  --home-panel: #f7f8fa;
+  --home-purple: #32204a;
+  --home-blue: #16647a;
+  --home-green: #27705f;
+  --home-amber: #9a6218;
+  min-height: 100vh;
+  padding: clamp(0.9rem, 2.2vw, 1.75rem);
+  background:
+    linear-gradient(180deg, #ffffff 0%, #ffffff 58%, #f7f8fa 100%);
+  color: var(--home-text);
 }
 
 .home-shell {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
-  gap: clamp(1.25rem, 2vw, 2rem);
-  align-items: stretch;
-  max-width: 1240px;
-  min-height: calc(100vh - 112px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 2vw, 1.5rem);
+  max-width: 1180px;
   margin: 0 auto;
 }
 
-.hero-copy {
+.home-intro {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: clamp(1.75rem, 4vw, 3.5rem);
-  background: #ffffff;
+  min-height: auto;
+  padding: clamp(0.75rem, 1.5vw, 1.1rem) 0 0;
 }
 
 .eyebrow {
-  margin-bottom: 1rem;
-  color: #44515a;
-  font-size: 0.8rem;
+  margin: 0 0 0.9rem;
+  color: #6c7780;
+  font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
-.hero-title {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1.75rem;
-  color: #32204a;
-  line-height: 1.1;
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
 }
 
-.title-top {
-  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: #7a6a93; /* Un tono más suave para el prefijo */
-}
-
-.title-main {
-  font-size: clamp(3.5rem, 7vw, 6rem);
+h1 {
+  max-width: 100%;
+  margin-bottom: 0.85rem;
+  color: var(--home-purple);
+  font-size: 32px;
   font-weight: 900;
-  line-height: 0.9;
-  margin: 0.25rem 0 0.5rem;
-  letter-spacing: -0.02em;
-}
-
-.title-bottom {
-  font-size: clamp(1.1rem, 2.2vw, 1.75rem);
-  font-weight: 600;
-  max-width: 20ch;
-  line-height: 1.2;
-  color: #4a3b63;
+  line-height: 1.08;
 }
 
 .lead {
-  max-width: 56ch;
-  margin-bottom: 1.75rem;
-  color: var(--hero-muted);
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
-  line-height: 1.55;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.85rem;
-  margin-bottom: 1.75rem;
-}
-
-.action {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 48px;
-  padding: 0.8rem 1.25rem;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 800;
-}
-
-.action-primary {
-  background: var(--hero-text);
-  color: #ffffff;
-}
-
-.action-secondary {
-  border: 1px solid rgba(31, 42, 47, 0.14);
-  background: #ffffff;
-  color: var(--hero-text);
-}
-
-.hero-highlights {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.9rem;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.hero-highlights li {
-  min-height: 100%;
-  padding: 0.15rem 0.6rem 0.15rem 0;
-  color: #334148;
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
-
-.hero-panel {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1.5rem;
-  padding: clamp(1.1rem, 1.8vw, 1.5rem) 0 clamp(1.1rem, 1.8vw, 1.5rem) clamp(1.5rem, 3vw, 2.5rem);
-  border-left: 1px solid #eef0f2;
-  background: transparent;
-}
-
-.panel-intro {
-  padding: 0.5rem 0.25rem 0;
-}
-
-.panel-kicker {
-  display: inline-block;
-  margin-bottom: 0.4rem;
-  padding: 0;
-  color: #8c96a0;
-  font-size: 0.7rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.panel-intro p {
-  margin: 0;
-  color: var(--hero-muted);
-  font-size: 0.98rem;
-}
-
-.panel-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-.info-card {
-  display: flex;
-  flex-direction: column;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid #f0f2f4;
-  transition: transform 0.2s ease;
-  text-decoration: none; /* Asegura que si es un link no tenga subrayado */
-}
-
-.info-card:last-child {
-  border-bottom: none;
-}
-
-.info-card:hover {
-  transform: translateX(4px);
-}
-
-.card-label {
-  display: inline-flex;
-  width: fit-content;
-  margin-bottom: 0.35rem;
-  color: #8c96a0;
-  font-size: 0.65rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.info-card h2 {
-  margin-bottom: 0.3rem;
-  font-size: 1.1rem;
-  line-height: 1.2;
-  font-weight: 800;
-  color: #1a1a1a;
-}
-
-.info-card p {
-  margin: 0;
-  color: var(--hero-muted);
-  font-size: 0.93rem;
+  max-width: 820px;
+  margin-bottom: 0;
+  color: #24313a;
+  font-size: 20px;
+  font-weight: 650;
   line-height: 1.45;
 }
 
+.access-section {
+  padding-top: clamp(0.5rem, 1.5vw, 1rem);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.access-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.access-card {
+  display: flex;
+  min-height: 320px;
+  flex-direction: column;
+  padding: clamp(1.1rem, 2vw, 1.35rem);
+  border: 1px solid #e4e8ec;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 16px 40px rgba(24, 35, 43, 0.06);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.access-card:hover {
+  transform: translateY(-3px);
+  border-color: #ccd4db;
+  box-shadow: 0 20px 46px rgba(24, 35, 43, 0.1);
+}
+
+.access-icon {
+  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  border-radius: 8px;
+  font-size: 1.35rem;
+}
+
+.tone-measurements {
+  background: rgba(22, 100, 122, 0.1);
+  color: var(--home-blue);
+}
+
+.tone-publications {
+  background: rgba(154, 98, 24, 0.12);
+  color: var(--home-amber);
+}
+
+.tone-tools {
+  background: rgba(39, 112, 95, 0.1);
+  color: var(--home-green);
+}
+
+.access-copy {
+  flex: 1;
+}
+
+h3 {
+  margin-bottom: 0.7rem;
+  color: var(--home-text);
+  font-size: 1.25rem;
+  font-weight: 850;
+  line-height: 1.2;
+}
+
+.access-copy p {
+  margin-bottom: 1.25rem;
+  color: var(--home-muted);
+  font-size: 0.96rem;
+  line-height: 1.55;
+}
+
+.access-link {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--home-text);
+  font-size: 0.92rem;
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.access-link:hover,
+.access-link:focus {
+  color: var(--home-purple);
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
+
+.access-link:focus-visible {
+  outline: 3px solid rgba(50, 32, 74, 0.18);
+  outline-offset: 4px;
+}
+
 @media (max-width: 991px) {
-  .home-hero {
+  .home-intro {
     min-height: auto;
+    padding-top: 1.5rem;
   }
 
-  .home-shell {
-    grid-template-columns: 1fr;
-    min-height: auto;
-  }
-
-  .hero-copy {
-    justify-content: flex-start;
-  }
-
-  .hero-highlights {
+  .access-grid {
     grid-template-columns: 1fr;
   }
 
-  .panel-grid {
-    grid-template-rows: none;
-    grid-template-columns: 1fr;
-  }
-
-  .hero-panel {
-    padding: 1.25rem 0 0;
-    border-left: 0;
-    border-top: 1px solid #eef0f2;
+  .access-card {
+    min-height: 0;
   }
 }
 
 @media (max-width: 576px) {
-  .home-hero {
-    padding: 1rem 0.9rem 1.4rem;
-  }
-  h1 {
-    max-width: none;
-    font-size: 2.45rem;
+  .home-view {
+    padding: 1rem 0.9rem 1.5rem;
   }
 
   .lead {
-    font-size: 0.98rem;
-  }
-
-  .action {
-    width: 100%;
+    font-size: 1.04rem;
   }
 }
 </style>

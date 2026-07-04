@@ -9,6 +9,9 @@
         clear-label="Limpiar busqueda de investigaciones"
         @update:model-value="emit('update:searchTerm', $event)"
       />
+      <p class="investigaciones-search-counter" aria-live="polite">
+        <span>{{ investigaciones.length }}</span> de {{ totalCount }} mediciones
+      </p>
     </div>
 
     <div
@@ -72,6 +75,10 @@ defineProps({
     type: String,
     default: '',
   },
+  totalCount: {
+    type: Number,
+    default: 0,
+  },
 })
 
 const emit = defineEmits(['select', 'update:searchTerm'])
@@ -82,6 +89,19 @@ const emit = defineEmits(['select', 'update:searchTerm'])
   max-width: 920px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.investigaciones-search-counter {
+  margin: 0.35rem 0 0;
+  color: #6c757d;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.investigaciones-search-counter span {
+  color: #654096;
+  font-weight: 800;
 }
 
 .video-title {
