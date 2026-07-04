@@ -22,7 +22,12 @@ import MapaLocalidades from '../views/tools/MapaLocalidades.vue'
 import MapaPruebas from '../views/tools/MapaPruebas.vue'
 
 const routes = [
-  { path: '/', name: 'Inicio', component: HomeView, meta: { title: 'Inicio | Observatorio' } },
+  {
+    path: '/',
+    name: 'Inicio',
+    component: HomeView,
+    meta: { title: 'Observatorio de Cultura Bogotá' },
+  },
   {
     path: '/proyectos',
     name: 'Proyectos',

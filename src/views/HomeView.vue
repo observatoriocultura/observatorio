@@ -3,9 +3,12 @@
     <div class="home-shell">
       <header class="home-intro">
         <p class="eyebrow">Secretaría de Cultura, Recreación y Deporte de Bogotá</p>
-        <h1>
-          Observatorio y Gestión<br />
-          del Conocimiento Cultural
+        <h1 class="home-logo-title">
+          <img
+            class="home-logo"
+            :src="logoUrl"
+            alt="Observatorio y Gestión del Conocimiento Cultural"
+          />
         </h1>
         <p class="lead">
           Reunimos mediciones, investigaciones, publicaciones y herramientas para leer la vida
@@ -40,6 +43,9 @@
 
 <script setup>
 import { RouterLink } from 'vue-router'
+
+const baseUrl = import.meta.env.BASE_URL
+const logoUrl = `${baseUrl}resources/images/app/logotipo-navbar.png`
 
 const accessBlocks = [
   {
@@ -83,32 +89,31 @@ const accessBlocks = [
   --home-green: #27705f;
   --home-amber: #9a6218;
   min-height: 100vh;
-  padding: clamp(0.9rem, 2.2vw, 1.75rem);
-  background:
-    linear-gradient(180deg, #ffffff 0%, #ffffff 58%, #f7f8fa 100%);
+  padding: clamp(1rem, 2.2vw, 1.85rem);
+  background: #ffffff;
   color: var(--home-text);
 }
 
 .home-shell {
   display: flex;
   flex-direction: column;
-  gap: clamp(1rem, 2vw, 1.5rem);
-  max-width: 1180px;
+  gap: clamp(1.25rem, 2.6vw, 1.75rem);
+  max-width: 1120px;
   margin: 0 auto;
 }
 
 .home-intro {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  min-height: auto;
-  padding: clamp(0.75rem, 1.5vw, 1.1rem) 0 0;
+  justify-content: flex-start;
+  max-width: 760px;
+  padding-top: clamp(0.35rem, 1.2vw, 0.8rem);
 }
 
 .eyebrow {
-  margin: 0 0 0.9rem;
+  margin: 0 0 0.75rem;
   color: #6c7780;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -121,26 +126,28 @@ p {
   margin-top: 0;
 }
 
-h1 {
-  max-width: 100%;
-  margin-bottom: 0.85rem;
-  color: var(--home-purple);
-  font-size: 32px;
-  font-weight: 900;
-  line-height: 1.08;
+.home-logo-title {
+  max-width: 470px;
+  margin-bottom: 1rem;
+}
+
+.home-logo {
+  display: block;
+  width: min(430px, 100%);
+  height: auto;
 }
 
 .lead {
-  max-width: 820px;
+  max-width: 740px;
   margin-bottom: 0;
   color: #24313a;
-  font-size: 20px;
-  font-weight: 650;
-  line-height: 1.45;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.5;
 }
 
 .access-section {
-  padding-top: clamp(0.5rem, 1.5vw, 1rem);
+  padding-top: 0.4rem;
 }
 
 .visually-hidden {
@@ -158,18 +165,19 @@ h1 {
 .access-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+  gap: clamp(1rem, 2.4vw, 1.5rem);
 }
 
 .access-card {
   display: flex;
-  min-height: 320px;
+  min-height: clamp(205px, 23vw, 245px);
   flex-direction: column;
-  padding: clamp(1.1rem, 2vw, 1.35rem);
-  border: 1px solid #e4e8ec;
-  border-radius: 8px;
+  justify-content: center;
+  padding: clamp(1rem, 1.8vw, 1.25rem);
+  border: 1px solid #e5e8ec;
+  border-radius: 12px;
   background: #ffffff;
-  box-shadow: 0 16px 40px rgba(24, 35, 43, 0.06);
+  box-shadow: none;
   transition:
     border-color 0.2s ease,
     box-shadow 0.2s ease,
@@ -177,20 +185,20 @@ h1 {
 }
 
 .access-card:hover {
-  transform: translateY(-3px);
-  border-color: #ccd4db;
-  box-shadow: 0 20px 46px rgba(24, 35, 43, 0.1);
+  transform: translateY(-2px);
+  border-color: #d7dde3;
+  box-shadow: 0 14px 34px rgba(24, 35, 43, 0.06);
 }
 
 .access-icon {
   display: inline-flex;
-  width: 48px;
-  height: 48px;
+  width: 38px;
+  height: 38px;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.85rem;
   border-radius: 8px;
-  font-size: 1.35rem;
+  font-size: 1.05rem;
 }
 
 .tone-measurements {
@@ -209,22 +217,22 @@ h1 {
 }
 
 .access-copy {
-  flex: 1;
+  flex: 0;
 }
 
 h3 {
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.4rem;
   color: var(--home-text);
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 850;
   line-height: 1.2;
 }
 
 .access-copy p {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   color: var(--home-muted);
-  font-size: 0.96rem;
-  line-height: 1.55;
+  font-size: 0.84rem;
+  line-height: 1.5;
 }
 
 .access-link {
@@ -233,7 +241,7 @@ h3 {
   align-items: center;
   gap: 0.45rem;
   color: var(--home-text);
-  font-size: 0.92rem;
+  font-size: 0.84rem;
   font-weight: 850;
   text-decoration: none;
 }
@@ -252,7 +260,6 @@ h3 {
 
 @media (max-width: 991px) {
   .home-intro {
-    min-height: auto;
     padding-top: 1.5rem;
   }
 
@@ -261,7 +268,7 @@ h3 {
   }
 
   .access-card {
-    min-height: 0;
+    min-height: 220px;
   }
 }
 
