@@ -318,9 +318,7 @@ function showUpdateToast(message) {
 
       <div v-if="dataView === 'input'" class="mapa-localidades__data-input">
         <div class="mapa-localidades__data-input-header">
-          <label class="form-label" for="localidades-valores-text">
-            Pegar datos desde Excel
-          </label>
+          <label class="form-label" for="localidades-valores-text"> Pegar datos desde Excel </label>
           <button class="btn btn-primary" type="button" @click="updateLocalidadesValores">
             Actualizar
           </button>

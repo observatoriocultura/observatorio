@@ -71,7 +71,6 @@ titulo,
 descripcion,
 linea_investigacion,
 year_vigencia,
-puntaje,
 entidad,
 dependencia,
 avance,
@@ -95,8 +94,7 @@ year_vigencia == String(year)
 Orden:
 
 ```text
-year_vigencia desc
-puntaje desc
+id asc
 ```
 
 Campos solicitados actualmente en `gio_productos`:

@@ -82,16 +82,16 @@ const vigenciaInfo = computed(() => vigenciaPorYear(year.value))
 const normalizarYear = (value) => Number(value)
 const investigacionesFiltradas = computed(() =>
   investigaciones.value.filter(
-    (investigacion) =>
-      normalizarYear(investigacion.year_vigencia) === year.value &&
-      Number(investigacion.cantidad_productos) > 0,
+    (investigacion) => normalizarYear(investigacion.year_vigencia) === year.value,
   ),
 )
 
-const normalizeTab = (tab) => (validTabs.includes(tab) ? tab : 'portada')
 const getDefaultSection = () => (route.query.investigacion_id ? 'details' : 'list')
 const normalizeSection = (section) =>
   validSections.includes(section) ? section : getDefaultSection()
+const getDefaultTab = () =>
+  route.query.investigacion_id || validSections.includes(route.query.seccion) ? 'listado' : 'avance'
+const normalizeTab = (tab) => (validTabs.includes(tab) ? tab : getDefaultTab())
 
 const setActiveView = (tab) => {
   activeView.value = normalizeTab(tab)
@@ -132,12 +132,10 @@ const cargarInvestigaciones = async () => {
   const { data, error } = await supabase
     .from('gio_investigaciones')
     .select(
-      'id, nombre_clave, titulo, tema, descripcion, linea_investigacion, year_vigencia, entidad, dependencia, palabras_clave, puntaje, avance, avance_planeacion, avance_instrumentos, avance_recoleccion, avance_documentacion, avance_finalizacion, cantidad_productos, cantidad_hallazgos, cantidad_radicados, cantidad_paginas',
+      'id, nombre_clave, titulo, tema, descripcion, linea_investigacion, year_vigencia, entidad, dependencia, palabras_clave, avance, avance_planeacion, avance_instrumentos, avance_recoleccion, avance_documentacion, avance_finalizacion, cantidad_productos, cantidad_hallazgos, cantidad_radicados, cantidad_paginas',
     )
     .filter('year_vigencia', 'eq', String(year.value))
-    .filter('cantidad_productos', 'gt', 0)
-    .order('year_vigencia', { ascending: false })
-    .order('puntaje', { ascending: false, nullsFirst: false })
+    .order('id', { ascending: true })
 
   if (error) {
     errorMessage.value = 'No fue posible cargar las investigaciones.'
