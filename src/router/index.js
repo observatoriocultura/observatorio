@@ -18,6 +18,7 @@ import SolicitudesTablero from '../views/2026/solicitudes_pai/SolicitudesTablero
 import ItdcLayout from '../views/2026/transformacion_digital/ItdcLayout.vue'
 import ContenidosMovilidad from '../views/2026/contenidos_movilidad/ContenidosMovilidad.vue'
 import MetaPdd from '../views/2026/meta_pdd/MetaPdd.vue'
+import MetaPddControl from '../views/2026/meta_pdd/MetaPddControl.vue'
 import PaiView from '../views/pai/PaiView.vue'
 import MapaLocalidades from '../views/tools/MapaLocalidades.vue'
 import MapaPruebas from '../views/tools/MapaPruebas.vue'
@@ -88,6 +89,12 @@ const routes = [
     name: 'Meta PDD Mediciones Observatorio',
     component: MetaPdd,
     meta: { title: 'Meta PDD Mediciones | Observatorio' },
+  },
+  {
+    path: '/meta-pdd-mediciones-observatorio-control',
+    name: 'Meta PDD Mediciones Observatorio Control',
+    component: MetaPddControl,
+    meta: { title: 'Meta PDD Mediciones Control | Observatorio' },
   },
   {
     path: '/pai',
