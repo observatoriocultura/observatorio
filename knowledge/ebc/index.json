@@ -1,0 +1,32 @@
+{
+  "id": "ebc",
+  "title": "Encuesta Bienal de Culturas",
+  "description": "Colección OKF sobre catálogos de preguntas y registros de caracterización de la Encuesta Bienal de Culturas.",
+  "version": "1.0",
+  "okf_version": "0.2",
+  "okf_entrypoint": "./index.md",
+  "language": "es",
+  "updated_at": "2026-07-28",
+  "resources": [
+    {
+      "id": "2025-ebc-practicas-artisticas-preguntas",
+      "type": "Survey Question Catalog",
+      "title": "Preguntas de la Encuesta de Prácticas Artísticas, Culturales, Creativas y Patrimoniales 2025",
+      "description": "Listado estructurado de 215 preguntas y registros de caracterización de la Encuesta de Prácticas Artísticas, Culturales, Creativas y Patrimoniales 2025.",
+      "format": "application/json",
+      "language": "es",
+      "survey_year": 2025,
+      "record_count": 215,
+      "path": "./2025-ebc-practicas-artisticas-preguntas.json",
+      "okf_concept": "./2025-ebc-practicas-artisticas-preguntas.md"
+    },
+    {
+      "id": "readme",
+      "type": "Knowledge Collection",
+      "title": "Descripción de la colección",
+      "description": "Alcance actual, navegación, uso previsto y restricciones de la colección EBC.",
+      "format": "text/markdown",
+      "path": "./README.md"
+    }
+  ]
+}

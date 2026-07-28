@@ -1,0 +1,1722 @@
+[
+    {
+        "indice_pregunta":0,
+        "nombre":"Identificador de la persona encuestada",
+        "descripcion":null,
+        "rol":"Registro",
+        "enunciado_1":"ID",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":1,
+        "nombre":"Sector",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Sector",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":2,
+        "nombre":"Seccion",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Sección",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":3,
+        "nombre":"Manzana",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Manzana",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":4,
+        "nombre":"Clase",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Clase",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":5,
+        "nombre":"Direccion",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Dirección de la vivienda",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":6,
+        "nombre":"Cx",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"latitude (x.y °)",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":7,
+        "nombre":"Cy",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"longitude (x.y °)",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":8,
+        "nombre":"Número de hogares en la vivienda",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Número de hogares dentro de la vivienda",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":9,
+        "nombre":"Tamaño del hogar",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Número de personas del hogar",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":10,
+        "nombre":"Nombre del jefe del hogar",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Nombre de la persona 1 JEFE DE HOGAR",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":11,
+        "nombre":"Edad del jefe del hogar",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Edad persona 1",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":12,
+        "nombre":"Sexo del jefe del hogar",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Sexo persona 1",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":13,
+        "nombre":"Nombre de la persona 2",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Nombre de la persona 2",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":14,
+        "nombre":"Edad de la persona 2",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Edad persona 2",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":15,
+        "nombre":"Sexo de la persona 2",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Sexo persona 2",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":16,
+        "nombre":"Parentesco con el jefe del hogar",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Parentesco con la persona que se reconoce como jefe o jefa del hogar, o la persona mayor (persona 1)",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":17,
+        "nombre":"Nombre de la persona 3",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Nombre de la persona 3",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":18,
+        "nombre":"Edad de la persona 3",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Edad persona 3",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":19,
+        "nombre":"Sexo de la persona 3",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Sexo persona 3",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":20,
+        "nombre":"Parentesco con el jefe del hogar",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Parentesco con la persona que se reconoce como jefe o jefa del hogar, o la persona mayor (persona 1)",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":21,
+        "nombre":"Nombre de la persona 4",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Nombre de la persona 4",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":22,
+        "nombre":"Edad de la persona 4",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Edad persona 4",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":23,
+        "nombre":"Sexo de la persona 4",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Sexo persona 4",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":24,
+        "nombre":"Parentesco con el jefe del hogar",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Parentesco con la persona que se reconoce como jefe o jefa del hogar, o la persona mayor (persona 1)",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":25,
+        "nombre":"Nombre de la persona 5",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Nombre de la persona 5",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":26,
+        "nombre":"Edad de la persona 5",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Edad persona 5",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":27,
+        "nombre":"Sexo de la persona 5",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Sexo persona 5",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":28,
+        "nombre":"Parentesco con el jefe del hogar",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Parentesco con la persona que se reconoce como jefe o jefa del hogar, o la persona mayor (persona 1)",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":29,
+        "nombre":"Nombre de la persona 6",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Nombre de la persona 6",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":30,
+        "nombre":"Edad de la persona 6",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Edad persona 6",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":31,
+        "nombre":"Sexo de la persona 6",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Sexo persona 6",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":32,
+        "nombre":"Parentesco con el jefe del hogar",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Parentesco con la persona que se reconoce como jefe o jefa del hogar, o la persona mayor (persona 1)",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":33,
+        "nombre":"Nombre de la persona 7",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Nombre de la persona 7",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":34,
+        "nombre":"Edad de la persona 7",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Edad persona 7",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":35,
+        "nombre":"Sexo de la persona 7",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Sexo persona 7",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":36,
+        "nombre":"Parentesco con el jefe del hogar",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Parentesco con la persona que se reconoce como jefe o jefa del hogar, o la persona mayor (persona 1)",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":37,
+        "nombre":"Nombre de la persona 8",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Nombre de la persona 8",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":38,
+        "nombre":"Edad de la persona 8",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Edad persona 8",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":39,
+        "nombre":"Sexo de la persona 8",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Sexo persona 8",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":40,
+        "nombre":"Parentesco con el jefe del hogar",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Parentesco con la persona que se reconoce como jefe o jefa del hogar, o la persona mayor (persona 1)",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":41,
+        "nombre":"Nombre de la persona 9",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Nombre de la persona 9",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":42,
+        "nombre":"Edad de la persona 9",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Edad persona 9",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":43,
+        "nombre":"Sexo de la persona 9",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Sexo persona 9",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":44,
+        "nombre":"Parentesco con el jefe del hogar",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Parentesco con la persona que se reconoce como jefe o jefa del hogar, o la persona mayor (persona 1)",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":45,
+        "nombre":"Identificador de la persona encuestada",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Selección de la persona a encuestar",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":46,
+        "nombre":"Localidad",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Localidad de residencia",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":47,
+        "nombre":"Estrato",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Estrato",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":48,
+        "nombre":"Tipo de vivienda",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Tipo de vivienda",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":49,
+        "nombre":"El lugar donde habita es:",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"El lugar donde habita es:",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":50,
+        "nombre":"Satisfacción con la oferta cultural",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"En una escala de 1 a 4, donde 1 es Nada satisfecho\/a y 4 es Muy satisfecho\/a. ¿Cuál es su nivel de satisfacción con…?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":51,
+        "nombre":"Práctica cultural actual",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Practica actualmente alguna actividad cultural, artística o creativa? (RU)",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":52,
+        "nombre":"Prácticas culturales recientes",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"En los últimos 12 meses, ¿cuál de las siguientes actividades usted practicó y con qué frecuencia?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":53,
+        "nombre":"Instrumento musical",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Cuál instrumento musical interpreta?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":54,
+        "nombre":"Remuneración por actividad",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Usted cobró por esa actividad que realizó en los últimos 12 meses? ",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":55,
+        "nombre":"Inversión en actividad",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"En los últimos 12 meses, ¿usted ha destinado recursos para poder realizar esa actividad artística o creativa, como compra de implementos, compra o alquiler de vestuarios, alquiler de espacios, contratación de personas, pago de talleres, cursos, entre otros?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":56,
+        "nombre":"Inicio de práctica cultural",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿En qué momento empezó a realizar actividades culturales, artísticas o creativas?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":57,
+        "nombre":"Acceso a la práctica cultural",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Quién facilitó el primer contacto con las actividades culturales, artísticas o creativas que usted realiza?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":58,
+        "nombre":"Otro acceso a la práctica cultural",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Cual?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":59,
+        "nombre":"Motivación para practicar",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Esa(s) actividad(es) artística(s) o creativas(as), ¿usted la(s) realizó principalmente porque...? ",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":60,
+        "nombre":"Inspiración para crear",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Qué es lo que más le motiva o inspira a realizar prácticas artísticas o creativas?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":61,
+        "nombre":"Interrupciones en la práctica",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Ha tenido interrupciones en el ejercicio de esta práctica artística, cultural o creativa? ",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":62,
+        "nombre":"Lugar de práctica",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Esa(s) actividad(es) artística(s) o creativa(s), ¿Dónde la(s) realiza principalmente?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":63,
+        "nombre":"Otro lugar de práctica",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Otro ¿Cuál?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":64,
+        "nombre":"Compañía en la práctica",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Esa(s) actividad(es) artística(s) o creativa(s), ¿Con quién las realiza principalmente?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":65,
+        "nombre":"Barreras para practicar",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Cuál es la principal razón por la cual usted no practica ninguna actividad artística o creativa?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":66,
+        "nombre":"Otros barreras para practicar",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Otra ¿Cuál?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":67,
+        "nombre":"Desinterés",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Por qué no le interesa o considera que es una pérdida de tiempo practicar actividades artísticas o creativas?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":68,
+        "nombre":"Otro desinterés",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Otra ¿Cuál?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":69,
+        "nombre":"Asistencia a actividades culturales",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿En los últimos 12 meses, usted ha asistido o accedido en Bogotá, al menos una vez a…?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":70,
+        "nombre":"Barreras de asistencia",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Cuál es el principal motivo para no haber asistido o accedido a actividades artísticas o culturales en los últimos 12 meses?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":71,
+        "nombre":"Otra barrera",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Otra ¿Cuál?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":72,
+        "nombre":"Desinterés asistencia",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Por qué no le interesa o considera que es una pérdida de tiempo asistir a actividades artísticas o creativas?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":73,
+        "nombre":"Otro desinterés",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Otra ¿Cuál?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":74,
+        "nombre":"Motivación de asistencia",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Cuál es la principal razón por la que asiste a actividades artísticas o culturales?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":75,
+        "nombre":"Otra motivación",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Otra ¿Cuál?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":76,
+        "nombre":"Consumo cultural",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Durante el último mes, ¿con qué frecuencia realizó las siguientes actividades?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":77,
+        "nombre":"Participación en espacios culturales",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"En los últimos 12 meses, ¿usted asistió por lo menos una vez a…?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":78,
+        "nombre":"Asistencia a la Filarmónica",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Ha asistido o ha accedido en los últimos 12 meses a algún concierto de la Orquesta Filarmónica de Bogotá, presencial o virtual? (coro filarmónico juvenil, infantil, banda filarmónica juvenil, orquesta filarmónica de Bogotá, orquesta filarmónica prejuvenil, orquesta filarmónica juvenil, coro prejuvenil, coro hijas e hijos de la paz)",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":79,
+        "nombre":"Modalidad de asistencia",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Dónde? Especifique si fue virtual o presencial",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":80,
+        "nombre":"Barreras Filarmónica",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Cuál es la principal razón por la cual usted no ha asistido a algún concierto de la Orquesta Filarmónica de Bogotá?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":81,
+        "nombre":"Otra barrera",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Otra ¿Cuál?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":82,
+        "nombre":"Gasto en actividades culturales",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"En los últimos 12 meses, ¿usted ha destinado dinero para…?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":83,
+        "nombre":"Percepción sobre pago artístico",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Diga si está de acuerdo con las siguientes afirmaciones",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":84,
+        "nombre":"Canales de acceso cultural",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Qué canales utiliza principalmente, para comprar o acceder a productos o servicios artísticos y culturales? (RU)",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":85,
+        "nombre":"Conocimiento Más Cultura Local",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Conoce o a hecho parte de algún proyecto ganador del programa Más Cultura Local?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":86,
+        "nombre":"Impacto Más Cultura Local",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Siente que la Presencia artística ha mejorado gracias al programa Más Cultura Local?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":87,
+        "nombre":"Acceso a financiación cultural",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Durante el último año, ¿ha recibido apoyo por alguno de los siguientes mecanismos de financiación para las",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":88,
+        "nombre":"Percepción sobre formación",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Respecto a la formación en arte, cultura y\/o patrimonio, indique con cuál de las siguientes afirmaciones se siente",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":89,
+        "nombre":"Formación cultural recibida",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Ha recibido usted formación artística, cultural y\/o patrimonial en algún momento de su vida?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":90,
+        "nombre":"Nivel de formación cultural recibida",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Para cada una de las siguientes actividades artísticas, creativas, culturales o patrimoniales, indique cuál fue el último nivel o modalidad educativa en la que recibió formación",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":91,
+        "nombre":"Especificación actividad",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Para quienes seleccionaron que recibieron formación en Otra actividad artística, creativa, cultural o patrimonial que considere propia ¿Cuál actividad artística, creativa, cultural o patrimonial?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":92,
+        "nombre":"Etapas de formación",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"De acuerdo con la pregunta anterior, díganos en qué etapas de la vida ha tenido contacto con estos tipos de formación.",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":93,
+        "nombre":"Modalidad de formación",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Si usted ha recibido algún tipo de formación artística, cultural y\/o patrimonial en su vida, ¿en qué modalidad la recibió?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":94,
+        "nombre":"Participación reciente en formación",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Ha participado en programas de formación en arte, cultura y\/o patrimonio en los últimos 12 meses?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":95,
+        "nombre":"Frecuencia de formación",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"En los últimos 12 meses, ¿con qué frecuencia ha asistido a programas de formación artística, cultural y\/o patrimonial?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":96,
+        "nombre":"Lugar de formación",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Dónde ha recibido formación en prácticas artísticas, culturales y\/o patrimoniales?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":97,
+        "nombre":"Espacios de formación Distrito",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿En cuáles espacios o centros de formación del Distrito o de sus entidades adscritas ha recibido formación artística, cultural y\/o patrimonial?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":98,
+        "nombre":"Áreas de formación",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"En cuáles áreas de formación artística, cultural y\/o patrimonial ha participado en los últimos doce meses?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":99,
+        "nombre":"Impacto de la formación",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Qué tanto le ha ayudado haber recibido formación artística, cultural y\/o patrimonial a…?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":100,
+        "nombre":"Aportes de la formación",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Pensando en su propia experiencia, ¿Qué tanto la formación artística, cultural y\/o patrimonial le ha permitido…?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":101,
+        "nombre":"Barreras para formación",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Cuál es la principal razón por la cual usted no ha participado en programas de formación, artística, cultural y\/o\npatrimonial?",
+        "palabras_clave":"Solo para quienes no han recibido formación artística, cultural y\/o patrimonial"
+    },
+    {
+        "indice_pregunta":102,
+        "nombre":"Otra barrera",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Otra ¿Cuál?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":103,
+        "nombre":"Aprendizaje en espacios cotidianos",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Usted ha aprendido o vivido experiencias de formación artística, cultural o patrimonial en..?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":104,
+        "nombre":"Otro espacio",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Cuál?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":105,
+        "nombre":"Percepción sobre formación en ciudad",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Qué tan de acuerdo está con las siguientes afirmaciones acerca de la la formación artística, cultural y\/o patrimonial que se ofrece en Bogotá…?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":106,
+        "nombre":"Conocimiento de equipamientos",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Cuáles de los siguientes equipamientos culturales en su localidad, conoce?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":107,
+        "nombre":"Uso de equipamientos",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Cuáles de los siguientes equipamientos culturales en su localidad, ha visitado o utilizado usted, en los últimos 12 meses?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":108,
+        "nombre":"Uso de espacios alternativos",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Cuáles de los siguientes lugares alternativos y\/o independientes para actividades culturales en su localidad, ha visitado o utilizado, en los últimos 12 meses?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":109,
+        "nombre":"Uso de lugares culturales en la localidad en que vive",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Cuáles de los siguientes lugares alternativos y\/o independientes para actividades culturales en su localidad, ha visitado o utilizado, en los últimos 12 meses?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":110,
+        "nombre":"Uso de equipamientos distritales",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Cuáles de los siguientes equipamientos culturales del Distrito ha visitado o utilizado usted, en los últimos 12 meses?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":111,
+        "nombre":"Satisfacción con equipamientos",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Dígame, cuál es su nivel de satisfacción\ncon los siguientes equipamientos de la ciudad?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":112,
+        "nombre":"Consulta de programación cultural",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Consulta usted la programación de...?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":113,
+        "nombre":"Medios de consulta cultural",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿En qué medio consulta la programación de los eventos culturales y artísticos en la ciudad?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":114,
+        "nombre":"Otro medio",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Otro ¿cuál?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":115,
+        "nombre":"Actividad cultural del barrio",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Mencione la actividad cultural más importante que se realiza en su barrio o vereda",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":116,
+        "nombre":"Participación en actividad local",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Ha participado usted en esta actividad?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":117,
+        "nombre":"Actividad cultural fuera del barrio",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Mencione la actividad cultural más importante que se realice fuera de su barrio o vereda (en otro barrio de su\nlocalidad, en otra localidad o en la ciudad)",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":118,
+        "nombre":"Participación en actividad externa",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Ha participado usted en esta actividad?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":119,
+        "nombre":"Actividad cultural más importante",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Pensando en todas las actividades culturales en las que ha participado en los últimos 12 meses, ¿cuál es la más importante para usted?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":120,
+        "nombre":"Identificación con grupos culturales",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Para cada uno de los siguientes grupos o comunidades, dígame si hay alguno con cuyas actividades, causas o manifestaciones culturales usted se siente identificado(a) y si hace parte de este grupo o comunidad",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":121,
+        "nombre":"¿Cuál grupo cultural?",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Otra",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":122,
+        "nombre":"Especificación grupo",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Sí f. Otro, ¿Cuál?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":123,
+        "nombre":"Otra especificación de grupo",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Cual ?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":124,
+        "nombre":"Actividad del grupo",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Mencione la actividad más importante que realiza el grupo o comunidad del que hace parte",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":125,
+        "nombre":"Rol en el grupo",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿En el grupo o comunidad del que hace parte, cuál es la principal actividad que usted realiza?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":126,
+        "nombre":"Participación en grupo",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"En los últimos 12 meses, ¿usted ha participado en actividades, eventos o manifestaciones realizadas por alguno de los grupos o comunidades con los que se siente identificado\/a.?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":127,
+        "nombre":"Actividad más importante del grupo",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Pensando en todas las actividades, eventos o manifestaciones en los que ha participado en los últimos 12 meses, ¿cuál es el más importante para usted?\n¿cuál es el más importante para usted?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":128,
+        "nombre":"Intercambio cultural",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"En los últimos 12 meses, ¿en cuáles actividades ha participado donde personas de distintas culturas o comunidades compartieron sus conocimientos, tradiciones o expresiones culturales?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":129,
+        "nombre":"Relación con la diversidad cultural",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Respecto a la diversidad de expresiones artísticas, culturales o patrimoniales que ocurren en la ciudad, usted…:",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":130,
+        "nombre":"Importancia del patrimonio",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Usted cree que el patrimonio cultural es importante en la vida de los bogotanos y las bogotanas?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":131,
+        "nombre":"Razón de importancia del patrimonio",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Por qué cree que el patrimonio cultural es importante en la vida de los bogotanos y bogotanas?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":132,
+        "nombre":"Razón de no importancia del patrimonio",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Por qué NO le parece importante el patrimonio cultural en la vida de los bogotanos y las bogotanas?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":133,
+        "nombre":"Utilidad del patrimonio",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Para usted el patrimonio cultural es útil porque:",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":134,
+        "nombre":"Elementos a proteger",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"De las siguientes opciones, ¿Cuáles cree usted que deben protegerse como parte de la vida bogotana?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":135,
+        "nombre":"Otro elemento",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Cual ?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":136,
+        "nombre":"Prácticas como patrimonio",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"De las siguientes prácticas, ¿Cuáles creería usted que pueden ser patrimonio?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":137,
+        "nombre":"Otra práctica",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Cuál ?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":138,
+        "nombre":"Prácticas realizadas - Patrimonio",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"De las siguientes prácticas, ¿Cuáles realiza?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":139,
+        "nombre":"Otra práctica",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Cuál ?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":140,
+        "nombre":"Percepción del barrio",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Para usted, este barrio es principalmente…",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":141,
+        "nombre":"Descripción del barrio",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Cuál ?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":142,
+        "nombre":"Patrimonio del barrio",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Cuáles de los siguientes elementos de su barrio, pueden ser considerados como patrimonio?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":143,
+        "nombre":"Definición de patrimonio",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Para usted el patrimonio cultural debería ser definido principalmente por...",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":144,
+        "nombre":"Percepciones sobre cultura y patrimonio",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Diga por favor su nivel de desacuerdo o de acuerdo con las siguientes afirmaciones:",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":145,
+        "nombre":"Intereses sobre patrimonio",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Sobre cuál de los siguientes temas del patrimonio cultural y natural de Bogotá le interesaría conocer más?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":146,
+        "nombre":"Otro interés",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Cuál?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":147,
+        "nombre":"Amenazas al patrimonio",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"De las siguientes opciones ¿Cuál considera que es la principal amenaza al patrimonio cultural de Bogotá?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":148,
+        "nombre":"Otra amenaza",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Cuál?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":149,
+        "nombre":"Valor en edificaciones patrimoniales",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Para usted que es más importante en un edificio patrimonial?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":150,
+        "nombre":"Identificación con monumentos",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Se siente identificado con algún monumento de la ciudad?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":151,
+        "nombre":"Monumento identificado",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Con cuál se siente identificado?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":152,
+        "nombre":"Valor en monumentos",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Para usted que es más importante en un monumento?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":153,
+        "nombre":"Formas de conmemoración",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Para conmemorar eventos, hechos y personajes la mejor forma sería:",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":154,
+        "nombre":"Disposición a instalar monumentos",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Usted pondría un monumento en su barrio?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":155,
+        "nombre":"Tipo de monumento",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Cuál de los siguientes monumentos le gustaría?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":156,
+        "nombre":"Especificación monumento",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Cuál?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":157,
+        "nombre":"Razón de rechazo a disposición de monumentos",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Si la repuesta anterior es NO: ¿Por qué?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":158,
+        "nombre":"Protección patrimonio material",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Cuál de las siguientes acciones considera que es la más importante para proteger el patrimonio material de Bogotá (Bienes inmuebles, monumentos en espacio público, espacios públicos)?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":159,
+        "nombre":"Otra acción",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Cuál?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":160,
+        "nombre":"Acciones para protección patrimonio vivo",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Cuál de las siguientes acciones considera que es la más importante para cuidar el patrimonio vivo de Bogotá (Artesanías, cocina y fiestas y carnavales)?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":161,
+        "nombre":"Acciones para protección patrimonio natural",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Cuál de las siguientes acciones considera que es la más importante para conservar el patrimonio natural de Bogotá?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":162,
+        "nombre":"Otra acción",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Cuál ?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":163,
+        "nombre":"Actores del patrimonio",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Cuáles de los siguientes actores o instituciones adelantan iniciativas de fomento y cuidado del patrimonio cultural\nen su localidad?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":164,
+        "nombre":"Otro actor",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Cuál?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":165,
+        "nombre":"Percepción de gestión pública",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Para usted los esfuerzos que se hacen desde el gobierno para proteger y cuidar el patrimonio, son:",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":166,
+        "nombre":"Valor del patrimonio arqueológico",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"De los siguientes restos arqueológicos, cuáles considera usted que tienen más valor patrimonial",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":167,
+        "nombre":"Acción frente a hallazgo arqueológico",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Si usted encuentra algún objeto que puede ser material arqueológico (cerámicas, restos óseos, utensilios, herramientas), usted…",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":168,
+        "nombre":"Reporte de hallazgo arqueológico",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿A dónde se debe comunicar cuando se encuentra un objeto que puede ser material arqueológico?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":169,
+        "nombre":"Protección del patrimonio arqueológico",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Qué tan de acuerdo está con que en una obra de construcción de vivienda, acueducto, puente, calle, etc. se asignen recursos públicos para la protección del patrimonio arqueológico",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":170,
+        "nombre":"Conocimiento de sitios arqueológicos",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Sabe de sitios arqueológicos en Bogotá",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":171,
+        "nombre":"Sitio arqueológico",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Cuál?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":172,
+        "nombre":"Medios de consumo de TV",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Por cuáles medios suele ver canales de televisión?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":173,
+        "nombre":"Tiempo de consumo de TV - Lunes a Viernes",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Dígame cuánto tiempo en promedio dedica a ver canales televisión...?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":174,
+        "nombre":"Tiempo de consumo de TV - Fines de semana",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Dígame cuánto tiempo en promedio dedica a ver canales televisión...?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":175,
+        "nombre":"Día de mayor consumo TV",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Qué día dedica más tiempo a ver canales de televisión?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":176,
+        "nombre":"Jornada de consumo TV",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿En qué jornada prefiere ver canales de televisión durante el día?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":177,
+        "nombre":"Dispositivos para ver TV",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Si ve canales de televisión por internet o redes sociales, ¿a través de qué dispositivos lo hace?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":178,
+        "nombre":"Otro dispositivo",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Cuál?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":179,
+        "nombre":"Interés en TV sobre Bogotá",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Le interesa ver canales de televisión que se ocupen de Bogotá como tema central?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":180,
+        "nombre":"Canal informativo principal",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Qué canal de televisión considera usted que le da la mejor información sobre Bogotá?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":181,
+        "nombre":"Otro canal informativo",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Cual ?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":182,
+        "nombre":"Motivación para ver TV",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Cuál es su principal motivación para ver canales de televisión que se ocupan de Bogotá como tema central?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":183,
+        "nombre":"Otra motivación para ver TV",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Cuál?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":184,
+        "nombre":"Medios para ver Canal Capital",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Por cuáles medios suele ver Canal Capital?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":185,
+        "nombre":"Contenidos deseados Canal Capital",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Cuál es el contenido que más le gustaría ver en la señal de televisión de Canal Capital?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":186,
+        "nombre":"Otro contenido deseado de Canal Capital",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Cuál?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":187,
+        "nombre":"Frecuencia Canal Capital",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"En los últimos 12 meses ¿Con que frecuencia sintonizó Canal Capital?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":188,
+        "nombre":"Conocimiento Canal Eureka",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Sabe de la existencia de Canal Eureka?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":189,
+        "nombre":"Seguimiento en redes a Canal Capital",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Usted sigue alguna de las redes sociales de Canal Capital? Respuesta múltiple.",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":190,
+        "nombre":"Contenidos deseados redes",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Cuál es el contenido que más le gustaría ver en las redes sociales de Canal Capital?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":191,
+        "nombre":"Otro contenido",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Cuál?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":192,
+        "nombre":"Consumo de Canal Capital en redes",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿En los últimos doce meses usted vió alguna transmisión de Canal Capital a través de sus redes sociales? Por\nejemplo: Festivales al Parque, Festival Estereo Picnic, Informativo Ahora, Series o Programas",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":193,
+        "nombre":"Bienestar y prácticas artísticas",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"Dígame si está de acuerdo con las siguientes afirmaciones",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":194,
+        "nombre":"Emoción resultado de prácticas artísticas",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Qué emoción le genera realizar alguna práctica artística?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":195,
+        "nombre":"Felicidad en actividades culturales",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Qué tan feliz se siente usted cuando realiza o asiste a alguna actividad artística, cultural o creativa? ",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":196,
+        "nombre":"Satisfacción con la vida",
+        "descripcion":null,
+        "rol":"Objetivo",
+        "enunciado_1":"¿Qué tan bien se siente con su vida en este momento?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":197,
+        "nombre":"Sexo",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Sexo",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":198,
+        "nombre":"Género",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Género",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":199,
+        "nombre":"Edad",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Edad",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":200,
+        "nombre":"Rango de edad",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Rango de edad",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":201,
+        "nombre":"Lugar de nacimiento",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Por favor dígame su lugar de nacimiento",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":202,
+        "nombre":"Tiempo habitando Bogotá",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"¿Desde hace cuántos años usted habita en esta ciudad?",
+        "palabras_clave":"migración, desplazamiento, regiones"
+    },
+    {
+        "indice_pregunta":203,
+        "nombre":"Motivo de llegada a Bogotá",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"¿Cuál fue el principal motivo para venir a Bogotá?",
+        "palabras_clave":"migración, desplazamiento, regiones"
+    },
+    {
+        "indice_pregunta":204,
+        "nombre":"Estado civil",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"¿Cuál es su estado civil?",
+        "palabras_clave":"pareja, estado civil, matrimonio"
+    },
+    {
+        "indice_pregunta":205,
+        "nombre":"Ocupación",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Usted actualmente se dedica a:",
+        "palabras_clave":"trabajo, estudio, labores, actividad, ocupación, empleo, desempleo"
+    },
+    {
+        "indice_pregunta":206,
+        "nombre":"Otra ocupación",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"¿Cuál?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":207,
+        "nombre":"Nivel educativo",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"¿Cuál fue el nivel educativo más alto alcanzado por usted?",
+        "palabras_clave":"educación, formación, academia, estudio"
+    },
+    {
+        "indice_pregunta":208,
+        "nombre":"Identidad étnica",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"¿Con cuál de los siguientes grupos étnicos, raciales y\/o culturales se identifica usted?",
+        "palabras_clave":"raza, racismo, identidad, indígenas"
+    },
+    {
+        "indice_pregunta":209,
+        "nombre":"Limitaciones funcionales",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"¿Usted tiene alguna limitación permanente para...?",
+        "palabras_clave":"discapacidades"
+    },
+    {
+        "indice_pregunta":210,
+        "nombre":"Otra limitación",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"¿Cuál?",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":211,
+        "nombre":"Identificación de sexo, género y orientación sexual",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"¿Usted se identifica como...? Por favor marque todas aquellas con las que más se identifica",
+        "palabras_clave":"género, identidad, autoidentificación, sexo, lgbti"
+    },
+    {
+        "indice_pregunta":212,
+        "nombre":"Hijos",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"¿Usted tiene hijos?",
+        "palabras_clave":"hijos, tener hijos, población, demografía, invierno demográfico, familia"
+    },
+    {
+        "indice_pregunta":213,
+        "nombre":"Factor",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Factor de expansión",
+        "palabras_clave":null
+    },
+    {
+        "indice_pregunta":214,
+        "nombre":"Teléfono del encuestado",
+        "descripcion":null,
+        "rol":"Caracterización",
+        "enunciado_1":"Teléfono del encuestado",
+        "palabras_clave":null
+    }
+]

@@ -1,0 +1,19 @@
+{
+  "name": "Conocimiento del Observatorio",
+  "description": "Catálogo de colecciones de conocimiento para consulta por aplicaciones y asistentes de inteligencia artificial.",
+  "version": "1.0",
+  "okf_version": "0.2",
+  "okf_entrypoint": "./index.md",
+  "language": "es",
+  "updated_at": "2026-07-27",
+  "collections": [
+    {
+      "id": "ebc",
+      "title": "Encuesta Bienal de Culturas",
+      "description": "Formularios, preguntas, variables y documentación de la Encuesta Bienal de Culturas.",
+      "manifest": "./ebc/index.json",
+      "okf_index": "./ebc/index.md",
+      "status": "active"
+    }
+  ]
+}
