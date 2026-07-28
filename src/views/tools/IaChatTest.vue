@@ -9,15 +9,18 @@
 
       <form class="ia-chat-test__form" @submit.prevent="sendQuestion">
         <label for="ia-chat-question">Pregunta</label>
-        <input
+        <textarea
           id="ia-chat-question"
           v-model="question"
-          type="text"
-          name="question"
-          placeholder="Escribe aquí tu pregunta"
+          name="consulta"
+          rows="4"
+          maxlength="1200"
+          placeholder="Por ejemplo: ¿Qué preguntas están relacionadas con patrimonio?"
           :disabled="isLoading"
           required
-        />
+        ></textarea>
+
+        <p class="ia-chat-test__hint">La consulta se envía al catálogo de preguntas de la EBC.</p>
 
         <button type="submit" :disabled="isLoading || !question.trim()">
           {{ isLoading ? 'Consultando…' : 'Enviar pregunta' }}
@@ -34,7 +37,18 @@
 
       <section v-if="answer !== null" class="ia-chat-test__response" aria-live="polite">
         <h2>Respuesta</h2>
-        <pre>{{ answer }}</pre>
+        <div class="ia-chat-test__answer">{{ answer }}</div>
+
+        <dl v-if="responseMetadata" class="ia-chat-test__metadata">
+          <template v-if="responseMetadata.collection">
+            <dt>Colección</dt>
+            <dd>{{ responseMetadata.collection }}</dd>
+          </template>
+          <template v-if="responseMetadata.generatedAt">
+            <dt>Generada</dt>
+            <dd>{{ responseMetadata.generatedAt }}</dd>
+          </template>
+        </dl>
       </section>
     </section>
   </main>
@@ -44,11 +58,40 @@
 import { ref } from 'vue'
 
 const webhookUrl =
+  import.meta.env.VITE_N8N_WEBHOOK_URL?.trim() ||
   'https://n8n.srv1263481.hstgr.cloud/webhook-test/b02cb987-896a-4b87-acd9-212db0e192e7'
 const question = ref('')
 const answer = ref(null)
+const responseMetadata = ref(null)
 const errorMessage = ref('')
 const isLoading = ref(false)
+
+function formatGeneratedAt(value) {
+  if (!value) return ''
+
+  const date = new Date(value)
+  if (Number.isNaN(date.getTime())) return value
+
+  return new Intl.DateTimeFormat('es-CO', {
+    dateStyle: 'medium',
+    timeStyle: 'short',
+  }).format(date)
+}
+
+function getErrorDetails(responseBody, status) {
+  if (typeof responseBody === 'string' && responseBody.trim()) return responseBody
+
+  if (responseBody && typeof responseBody === 'object') {
+    return (
+      responseBody.error ||
+      responseBody.message ||
+      responseBody.respuesta ||
+      `El webhook respondió con estado ${status}.`
+    )
+  }
+
+  return `El webhook respondió con estado ${status}.`
+}
 
 async function sendQuestion() {
   const trimmedQuestion = question.value.trim()
@@ -56,6 +99,7 @@ async function sendQuestion() {
   if (!trimmedQuestion || isLoading.value) return
 
   answer.value = null
+  responseMetadata.value = null
   errorMessage.value = ''
 
   if (!webhookUrl) {
@@ -72,21 +116,37 @@ async function sendQuestion() {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ question: trimmedQuestion }),
+      body: JSON.stringify({ consulta: trimmedQuestion }),
     })
 
     const contentType = response.headers.get('content-type') || ''
     const responseBody = contentType.includes('application/json')
       ? await response.json()
       : await response.text()
+    const normalizedBody =
+      Array.isArray(responseBody) && responseBody.length === 1 ? responseBody[0] : responseBody
 
     if (!response.ok) {
-      const details = typeof responseBody === 'string' ? responseBody : JSON.stringify(responseBody)
-      throw new Error(details || `El webhook respondió con estado ${response.status}.`)
+      throw new Error(getErrorDetails(normalizedBody, response.status))
     }
 
-    answer.value =
-      typeof responseBody === 'string' ? responseBody : JSON.stringify(responseBody, null, 2)
+    if (!normalizedBody || typeof normalizedBody !== 'object' || Array.isArray(normalizedBody)) {
+      throw new Error('El webhook no devolvió una respuesta JSON válida.')
+    }
+
+    if (normalizedBody.ok === false) {
+      throw new Error(getErrorDetails(normalizedBody, response.status))
+    }
+
+    if (typeof normalizedBody.respuesta !== 'string' || !normalizedBody.respuesta.trim()) {
+      throw new Error('La respuesta del webhook no contiene el campo "respuesta" esperado.')
+    }
+
+    answer.value = normalizedBody.respuesta.trim()
+
+    const collection = normalizedBody.coleccion || ''
+    const generatedAt = formatGeneratedAt(normalizedBody.generado_en)
+    responseMetadata.value = collection || generatedAt ? { collection, generatedAt } : null
   } catch (error) {
     errorMessage.value =
       error instanceof Error ? error.message : 'No fue posible enviar la pregunta.'
@@ -153,19 +213,26 @@ label {
   font-weight: 800;
 }
 
-input {
+textarea {
   width: 100%;
   padding: 0.8rem 0.9rem;
   border: 1px solid #cbd3d9;
   border-radius: 0.4em;
+  resize: vertical;
   color: #18232b;
   font: inherit;
   line-height: 1.5;
 }
 
-input:focus {
+textarea:focus {
   border-color: var(--ia-chat-accent);
   outline: 3px solid rgba(101, 64, 150, 0.14);
+}
+
+.ia-chat-test__hint {
+  margin: 0;
+  color: #69747d;
+  font-size: 0.85rem;
 }
 
 button {
@@ -192,7 +259,7 @@ button:focus-visible {
 }
 
 button:disabled,
-input:disabled {
+textarea:disabled {
   cursor: not-allowed;
   opacity: 0.65;
 }
@@ -221,16 +288,30 @@ input:disabled {
   font-size: 1.1rem;
 }
 
-pre {
-  max-height: 420px;
+.ia-chat-test__answer {
   margin: 0;
   padding: 1rem;
-  overflow: auto;
   border-radius: 0.4em;
   background: #f4f6f8;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
-  font: inherit;
   line-height: 1.5;
+}
+
+.ia-chat-test__metadata {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.25rem 0.75rem;
+  margin: 0.85rem 0 0;
+  color: #69747d;
+  font-size: 0.8rem;
+}
+
+.ia-chat-test__metadata dt {
+  font-weight: 800;
+}
+
+.ia-chat-test__metadata dd {
+  margin: 0;
 }
 </style>
