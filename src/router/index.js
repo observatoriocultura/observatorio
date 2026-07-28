@@ -22,6 +22,7 @@ import MetaPddControl from '../views/2026/meta_pdd/MetaPddControl.vue'
 import PaiView from '../views/pai/PaiView.vue'
 import MapaLocalidades from '../views/tools/MapaLocalidades.vue'
 import MapaPruebas from '../views/tools/MapaPruebas.vue'
+import IaChatTest from '../views/tools/IaChatTest.vue'
 
 const routes = [
   {
@@ -117,6 +118,12 @@ const routes = [
     name: 'Mapa Pruebas',
     component: MapaPruebas,
     meta: { title: 'Mapa de Pruebas | Observatorio' },
+  },
+  {
+    path: '/tests/ia-chat',
+    name: 'Prueba chat IA',
+    component: IaChatTest,
+    meta: { title: 'Prueba chat IA | Observatorio' },
   },
   {
     path: '/2026/solicitudes-pai',
