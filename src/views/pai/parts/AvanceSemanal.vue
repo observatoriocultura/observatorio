@@ -12,6 +12,13 @@
               <strong>{{ formatDisplayDate(ultimoAvanceResumen.fechaAvanceMasReciente) }}</strong>
             </article>
             <h3 class="avance-kpis-title">AVANCE</h3>
+            <article class="avance-kpi avance-kpi-total">
+              <span>Total ejecutado</span>
+              <strong>{{ formatPercent(ultimoAvanceResumen.avanceTotalRegistrado) }}</strong>
+              <small :class="getDesviacionClass(ultimoAvanceResumen.desviacionAvanceTotal)">
+                {{ formatSignedPercent(ultimoAvanceResumen.desviacionAvanceTotal) }}
+              </small>
+            </article>
             <article class="avance-kpi avance-kpi-esperado">
               <span>Esperado</span>
               <strong>{{
@@ -34,13 +41,6 @@
               }}</strong>
               <small :class="getDesviacionClass(ultimoAvanceResumen.desviacionSectorCultura)">
                 {{ formatSignedPercent(ultimoAvanceResumen.desviacionSectorCultura) }}
-              </small>
-            </article>
-            <article class="avance-kpi avance-kpi-total">
-              <span>Total ejecutado</span>
-              <strong>{{ formatPercent(ultimoAvanceResumen.avanceTotalRegistrado) }}</strong>
-              <small :class="getDesviacionClass(ultimoAvanceResumen.desviacionAvanceTotal)">
-                {{ formatSignedPercent(ultimoAvanceResumen.desviacionAvanceTotal) }}
               </small>
             </article>
           </aside>
@@ -114,10 +114,10 @@ const tablaAvanceColumns = [
   { key: 'desviacion_sector_cultura', label: 'Desviacion Sector Cultura' },
 ]
 const lineaSeriesColors = {
-  'cultura-ciudadana': '#FFE5A0',
-  'sector-cultura': '#E6CFF2',
+  'cultura-ciudadana': '#D4A72C',
+  'sector-cultura': '#9A62B3',
 }
-const avanceEsperadoColor = '#0B57D0'
+const avanceEsperadoColor = '#8FB8E8'
 const avanceLineas = [
   {
     key: 'cultura-ciudadana',
@@ -691,13 +691,13 @@ onBeforeUnmount(() => {
 }
 
 .avance-kpi-esperado {
-  border-color: #0b57d0;
-  color: #0b57d0;
+  border-color: #8fb8e8;
+  color: #4f7fb8;
 }
 
 .avance-kpi-esperado span,
 .avance-kpi-esperado strong {
-  color: #0b57d0;
+  color: #4f7fb8;
 }
 
 .avance-kpi-sector-cultura {
