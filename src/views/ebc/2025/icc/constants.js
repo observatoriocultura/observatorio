@@ -134,7 +134,7 @@ export const MENU_PRINCIPAL = [
     description:
       'Preguntas sobre confianza interpersonal, justificación de desobediencia a la ley, importancia de ayudar al otro, percepción de impuestos y libertad de expresión. ',
     icon: 'convivencia-y-cultura-de-paz.svg',
-    numSection: '6',
+    numSection: '7',
     color: '#FF4081',
   },
   {
@@ -144,7 +144,7 @@ export const MENU_PRINCIPAL = [
     description:
       'Preguntas sobre percepción de limpieza, seguridad, equipamiento y usos de parques, calles y barrios cercanos.',
     icon: 'espacio-publico.svg',
-    numSection: '3',
+    numSection: '8',
     color: '#00BCD4',
   },
   {

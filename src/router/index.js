@@ -120,7 +120,7 @@ const routes = [
     meta: { title: 'Mapa de Pruebas | Observatorio' },
   },
   {
-    path: '/tests/ia-chat',
+    path: '/tests/ia-chat/v5Gj8bXO3Xaw',
     name: 'Prueba chat IA',
     component: IaChatTest,
     meta: { title: 'Prueba chat IA | Observatorio' },
