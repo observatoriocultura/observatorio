@@ -441,7 +441,7 @@ textarea:disabled {
   white-space: pre-wrap;
   overflow-wrap: anywhere;
   color: #39444d;
-  line-height: 1.65;
+  line-height: 1.5;
 }
 
 .ia-chat-test__loading {
@@ -486,11 +486,15 @@ textarea:disabled {
   margin-bottom: 0;
 }
 
+.ia-chat-test__answer :deep(p) {
+  margin: 0.45rem 0;
+}
+
 .ia-chat-test__answer :deep(h1),
 .ia-chat-test__answer :deep(h2),
 .ia-chat-test__answer :deep(h3),
 .ia-chat-test__answer :deep(h4) {
-  margin: 1.25rem 0 0.6rem;
+  margin: 0.9rem 0 0.35rem;
   color: var(--ia-chat-primary);
   font-size: 1.08rem;
   font-weight: 800;
@@ -499,7 +503,7 @@ textarea:disabled {
 
 .ia-chat-test__answer :deep(ul),
 .ia-chat-test__answer :deep(ol) {
-  margin: 0.75rem 0;
+  margin: 0.45rem 0;
   padding-left: 1.5rem;
 }
 
@@ -512,6 +516,7 @@ textarea:disabled {
 }
 
 .ia-chat-test__answer :deep(pre) {
+  margin: 0.7rem 0;
   padding: 0.8rem;
   border-radius: var(--ia-chat-radius);
   background: var(--ia-chat-primary);
@@ -534,7 +539,7 @@ textarea:disabled {
 
 .ia-chat-test__answer :deep(table) {
   width: 100%;
-  margin: 1rem 0;
+  margin: 0.7rem 0;
   border: 1px solid #eef0f2;
   border-spacing: 0;
   border-radius: var(--ia-chat-radius);
