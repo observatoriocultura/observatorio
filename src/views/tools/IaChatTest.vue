@@ -1,5 +1,10 @@
 <template>
   <main class="ia-chat-test">
+    <p v-if="test" class="ia-chat-test__test-endpoint">
+      <span>Modo de prueba</span>
+      <code>{{ webhookUrl }}</code>
+    </p>
+
     <section class="ia-chat-test__card">
       <section class="ia-chat-test__panel ia-chat-test__panel--form">
         <form class="ia-chat-test__form" @submit.prevent="sendQuestion">
@@ -287,6 +292,29 @@ async function sendQuestion() {
   grid-template-columns: minmax(17rem, 0.85fr) minmax(0, 1.75fr);
   gap: clamp(1rem, 2vw, 1.5rem);
   align-items: start;
+}
+
+.ia-chat-test__test-endpoint {
+  width: min(100%, 1180px);
+  margin: 0 auto 1rem;
+  color: var(--ia-chat-secondary);
+  font-size: 0.78rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.ia-chat-test__test-endpoint span {
+  display: block;
+  margin-bottom: 0.15rem;
+  color: var(--ia-chat-primary);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.ia-chat-test__test-endpoint code {
+  color: var(--ia-chat-secondary);
+  font: inherit;
 }
 
 .ia-chat-test__panel {

@@ -1,0 +1,1418 @@
+[
+  {
+    "id": "ENT-001",
+    "pais_ubicacion_principal": "ARG",
+    "nombre_entidad": "Observatorio Cultura",
+    "slug": "observatorio-cultura",
+    "sigla": "OC",
+    "sitio_web": "https://www.economicas.uba.ar/investigacion/institutos-y-centros/oc/",
+    "persona_diligencia": "Contacto institucional (demo) — Coordinación técnica",
+    "correo_contacto": "contacto.observatorio-cultura@example.org",
+    "naturaleza_institucional": "Universidad o centro académico",
+    "escala_territorial_trabajo": "Local / municipal",
+    "anio_inicio_actividades": 2009,
+    "proposito_principal": "Producir, analizar y divulgar conocimiento sobre profesionalización del ámbito cultural en Buenos Aires, Argentina, mediante indicadores, estudios aplicados y articulación con actores públicos, académicos y comunitarios.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de profesionalización del ámbito cultural",
+        "tema_principal": "Profesionalización del ámbito cultural",
+        "periodicidad": "Anual"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de Buenos Aires, Argentina",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      }
+    ],
+    "experiencia_presentable": "Tablero territorial de profesionalización del ámbito cultural en Buenos Aires, Argentina, diseñado para comparar tendencias y orientar decisiones.",
+    "desafio_principal_conocimiento": "Integrar fuentes administrativas dispersas y mantener criterios comunes de calidad.",
+    "tema_prioritario_accion_investigacion": "Profesionalización del ámbito cultural; Comparabilidad de indicadores",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "Observatorio de Ciudadanía Cultural",
+        "pais": "Argentina",
+        "sitio_web": "https://www.undav.edu.ar/index.php?idcateg=528"
+      },
+      {
+        "nombre": "Observatório de Políticas Públicas Culturais (OPCULT)",
+        "pais": "Brasil",
+        "sitio_web": "https://www.opcult.org"
+      }
+    ],
+    "autoriza_directorio_publico": "Sí",
+    "continuar_participacion_ruta": "Sí"
+  },
+  {
+    "id": "ENT-002",
+    "pais_ubicacion_principal": "ARG",
+    "nombre_entidad": "Observatorio de Ciudadanía Cultural",
+    "slug": "observatorio-de-ciudadania-cultural",
+    "sigla": "OCC",
+    "sitio_web": "https://www.undav.edu.ar/index.php?idcateg=528",
+    "persona_diligencia": "Contacto institucional (demo) — Gestión de conocimiento",
+    "correo_contacto": "contacto.observatorio-de-ciudadania-cultural@example.org",
+    "naturaleza_institucional": "Universidad o centro académico",
+    "escala_territorial_trabajo": "Regional / subnacional",
+    "anio_inicio_actividades": 2001,
+    "proposito_principal": "Fortalecer la toma de decisiones sobre vida cultural, comportamientos ciudadanos en Buenos Aires, Argentina, integrando evidencia cuantitativa, cualitativa y territorial.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de vida cultural",
+        "tema_principal": "Vida cultural",
+        "periodicidad": "Bienal"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de Buenos Aires, Argentina",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      },
+      {
+        "nombre": "Pulso de participación y comportamientos",
+        "tema_principal": "Comportamientos ciudadanos",
+        "periodicidad": "Semestral"
+      }
+    ],
+    "experiencia_presentable": "Metodología participativa para mapear actores y capacidades vinculadas con vida cultural, comportamientos ciudadanos en Buenos Aires, Argentina.",
+    "desafio_principal_conocimiento": "Sostener la periodicidad de las mediciones con capacidades técnicas y financieras limitadas.",
+    "tema_prioritario_accion_investigacion": "Vida cultural; Comportamientos ciudadanos",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "Observatorio del Patrimonio Cultural Arqueológico (OPCA)",
+        "pais": "Bolivia",
+        "sitio_web": "https://opca.umsa.bo"
+      },
+      {
+        "nombre": "Observatório da Diversidade Cultural",
+        "pais": "Brasil",
+        "sitio_web": "https://observatoriodadiversidade.org.br"
+      }
+    ],
+    "autoriza_directorio_publico": "Sí",
+    "continuar_participacion_ruta": "Sí"
+  },
+  {
+    "id": "ENT-003",
+    "pais_ubicacion_principal": "BOL",
+    "nombre_entidad": "Observatorio del Patrimonio Cultural Arqueológico (OPCA)",
+    "slug": "observatorio-del-patrimonio-cultural-arqueologico-opca",
+    "sigla": "OPCA",
+    "sitio_web": "https://opca.umsa.bo",
+    "persona_diligencia": "Contacto institucional (demo) — Investigación y análisis",
+    "correo_contacto": "contacto.observatorio-del-patrimonio-cultural-arqueolo@example.org",
+    "naturaleza_institucional": "Universidad o centro académico",
+    "escala_territorial_trabajo": "Nacional",
+    "anio_inicio_actividades": 2019,
+    "proposito_principal": "Observar tendencias de patrimonio arqueológico y convertirlas en recursos accesibles para instituciones culturales, organizaciones sociales y ciudadanía de La Paz, Bolivia.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de patrimonio arqueológico",
+        "tema_principal": "Patrimonio arqueológico",
+        "periodicidad": "Bienal"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de La Paz, Bolivia",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      }
+    ],
+    "experiencia_presentable": "Serie de estudios breves sobre patrimonio arqueológico en La Paz, Bolivia, con visualizaciones y recomendaciones para equipos técnicos.",
+    "desafio_principal_conocimiento": "Mejorar la comparabilidad de indicadores entre territorios e instituciones.",
+    "tema_prioritario_accion_investigacion": "Patrimonio arqueológico; Cultura digital y datos abiertos",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "Observatório de Políticas Públicas Culturais (OPCULT)",
+        "pais": "Brasil",
+        "sitio_web": "https://www.opcult.org"
+      },
+      {
+        "nombre": "Observatório da Economia Criativa da Bahia",
+        "pais": "Brasil",
+        "sitio_web": "https://obecbahia.com/"
+      }
+    ],
+    "autoriza_directorio_publico": "Sí",
+    "continuar_participacion_ruta": "Sí"
+  },
+  {
+    "id": "ENT-004",
+    "pais_ubicacion_principal": "BRA",
+    "nombre_entidad": "Observatório de Políticas Públicas Culturais (OPCULT)",
+    "slug": "observatorio-de-politicas-publicas-culturais-opcult",
+    "sigla": "OPCULT",
+    "sitio_web": "https://www.opcult.org",
+    "persona_diligencia": "Contacto institucional (demo) — Cooperación y redes",
+    "correo_contacto": "contacto.observatorio-de-politicas-publicas-culturais-@example.org",
+    "naturaleza_institucional": "Universidad o centro académico",
+    "escala_territorial_trabajo": "Multiescalar",
+    "anio_inicio_actividades": 2011,
+    "proposito_principal": "Conectar investigación y gestión pública para comprender políticas culturales, diversidad, gestión cultural en Brasília, Brasil, documentar brechas y promover respuestas colaborativas.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de políticas culturales",
+        "tema_principal": "Políticas culturales",
+        "periodicidad": "Anual"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de Brasília, Brasil",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      }
+    ],
+    "experiencia_presentable": "Sistema de seguimiento de políticas culturales, diversidad, gestión cultural en Brasília, Brasil, combinando registros, encuestas y evidencia cualitativa.",
+    "desafio_principal_conocimiento": "Incorporar enfoques territoriales y poblacionales sin perder continuidad histórica.",
+    "tema_prioritario_accion_investigacion": "Políticas culturales; Desigualdades territoriales",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "Observatório da Diversidade Cultural",
+        "pais": "Brasil",
+        "sitio_web": "https://observatoriodadiversidade.org.br"
+      },
+      {
+        "nombre": "Observatorio Itaú Cultural",
+        "pais": "Brasil",
+        "sitio_web": "https://www.itaucultural.org.br/busca?q=observatorio"
+      }
+    ],
+    "autoriza_directorio_publico": "Sí",
+    "continuar_participacion_ruta": "Sí"
+  },
+  {
+    "id": "ENT-005",
+    "pais_ubicacion_principal": "BRA",
+    "nombre_entidad": "Observatório da Diversidade Cultural",
+    "slug": "observatorio-da-diversidade-cultural",
+    "sigla": "ODC",
+    "sitio_web": "https://observatoriodadiversidade.org.br",
+    "persona_diligencia": "Contacto institucional (demo) — Coordinación técnica",
+    "correo_contacto": "contacto.observatorio-da-diversidade-cultural@example.org",
+    "naturaleza_institucional": "Organización independiente / sociedad civil",
+    "escala_territorial_trabajo": "Local / municipal",
+    "anio_inicio_actividades": 2003,
+    "proposito_principal": "Producir, analizar y divulgar conocimiento sobre diversidad cultural en Belo Horizonte, Brasil, mediante indicadores, estudios aplicados y articulación con actores públicos, académicos y comunitarios.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de diversidad cultural",
+        "tema_principal": "Diversidad cultural",
+        "periodicidad": "Bienal"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de Belo Horizonte, Brasil",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      }
+    ],
+    "experiencia_presentable": "Tablero territorial de diversidad cultural en Belo Horizonte, Brasil, diseñado para comparar tendencias y orientar decisiones.",
+    "desafio_principal_conocimiento": "Ampliar las capacidades de análisis, visualización y comunicación pública de resultados.",
+    "tema_prioritario_accion_investigacion": "Diversidad cultural; Sostenibilidad de los ecosistemas culturales",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "Observatório da Economia Criativa da Bahia",
+        "pais": "Brasil",
+        "sitio_web": "https://obecbahia.com/"
+      },
+      {
+        "nombre": "Observatorio de Políticas Culturales",
+        "pais": "Chile",
+        "sitio_web": "https://www.observatoriopoliticasculturales.cl/quienes-somos/#que-hacemos"
+      }
+    ],
+    "autoriza_directorio_publico": "Sí, previa validación final",
+    "continuar_participacion_ruta": "Sí"
+  },
+  {
+    "id": "ENT-006",
+    "pais_ubicacion_principal": "BRA",
+    "nombre_entidad": "Observatório da Economia Criativa da Bahia",
+    "slug": "observatorio-da-economia-criativa-da-bahia",
+    "sigla": "OECB",
+    "sitio_web": "https://obecbahia.com/",
+    "persona_diligencia": "Contacto institucional (demo) — Gestión de conocimiento",
+    "correo_contacto": "contacto.observatorio-da-economia-criativa-da-bahia@example.org",
+    "naturaleza_institucional": "Universidad o centro académico",
+    "escala_territorial_trabajo": "Regional / subnacional",
+    "anio_inicio_actividades": 2021,
+    "proposito_principal": "Fortalecer la toma de decisiones sobre economía creativa en Salvador de Bahía, Brasil, integrando evidencia cuantitativa, cualitativa y territorial.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de economía creativa",
+        "tema_principal": "Economía creativa",
+        "periodicidad": "Bienal"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de Salvador de Bahía, Brasil",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      }
+    ],
+    "experiencia_presentable": "Metodología participativa para mapear actores y capacidades vinculadas con economía creativa en Salvador de Bahía, Brasil.",
+    "desafio_principal_conocimiento": "Actualizar instrumentos frente a cambios tecnológicos y nuevas prácticas culturales.",
+    "tema_prioritario_accion_investigacion": "Economía creativa; Fortalecimiento de capacidades metodológicas",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "Observatorio Itaú Cultural",
+        "pais": "Brasil",
+        "sitio_web": "https://www.itaucultural.org.br/busca?q=observatorio"
+      },
+      {
+        "nombre": "Observatorio de Comportamientos Culturales",
+        "pais": "Colombia",
+        "sitio_web": "https://www.utadeo.edu.co/es/micrositio/observatorio-de-comportamientos-culturales"
+      }
+    ],
+    "autoriza_directorio_publico": "Sí",
+    "continuar_participacion_ruta": "Quisiera recibir más información antes de decidir"
+  },
+  {
+    "id": "ENT-007",
+    "pais_ubicacion_principal": "BRA",
+    "nombre_entidad": "Observatorio Itaú Cultural",
+    "slug": "observatorio-itau-cultural",
+    "sigla": "OIC",
+    "sitio_web": "https://www.itaucultural.org.br/busca?q=observatorio",
+    "persona_diligencia": "Contacto institucional (demo) — Investigación y análisis",
+    "correo_contacto": "contacto.observatorio-itau-cultural@example.org",
+    "naturaleza_institucional": "Organización privada",
+    "escala_territorial_trabajo": "Nacional",
+    "anio_inicio_actividades": 2013,
+    "proposito_principal": "Observar tendencias de consumo e indicadores culturales y convertirlas en recursos accesibles para instituciones culturales, organizaciones sociales y ciudadanía de São Paulo, Brasil.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de consumo e indicadores culturales",
+        "tema_principal": "Consumo e indicadores culturales",
+        "periodicidad": "Anual"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de São Paulo, Brasil",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      }
+    ],
+    "experiencia_presentable": "Serie de estudios breves sobre consumo e indicadores culturales en São Paulo, Brasil, con visualizaciones y recomendaciones para equipos técnicos.",
+    "desafio_principal_conocimiento": "Conectar la evidencia producida con decisiones de política, programación y financiación.",
+    "tema_prioritario_accion_investigacion": "Consumo e indicadores culturales; Comparabilidad de indicadores",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "Observatorio de Políticas Culturales",
+        "pais": "Chile",
+        "sitio_web": "https://www.observatoriopoliticasculturales.cl/quienes-somos/#que-hacemos"
+      },
+      {
+        "nombre": "Observatorio de Patrimonio Cultural",
+        "pais": "Colombia",
+        "sitio_web": "https://www.erigaie.org/categoria/lineas-de-investigacion/el-observatorio-de-patrimonio-cultural-mia/"
+      }
+    ],
+    "autoriza_directorio_publico": "Sí",
+    "continuar_participacion_ruta": "Sí"
+  },
+  {
+    "id": "ENT-008",
+    "pais_ubicacion_principal": "CHL",
+    "nombre_entidad": "Observatorio de Políticas Culturales",
+    "slug": "observatorio-de-politicas-culturales-chl",
+    "sigla": "OPC",
+    "sitio_web": "https://www.observatoriopoliticasculturales.cl/quienes-somos/#que-hacemos",
+    "persona_diligencia": "Contacto institucional (demo) — Cooperación y redes",
+    "correo_contacto": "contacto.observatorio-de-politicas-culturales-chl@example.org",
+    "naturaleza_institucional": "Universidad o centro académico",
+    "escala_territorial_trabajo": "Multiescalar",
+    "anio_inicio_actividades": 2005,
+    "proposito_principal": "Conectar investigación y gestión pública para comprender políticas culturales en Santiago, Chile, documentar brechas y promover respuestas colaborativas.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de políticas culturales",
+        "tema_principal": "Políticas culturales",
+        "periodicidad": "Bienal"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de Santiago, Chile",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      }
+    ],
+    "experiencia_presentable": "Sistema de seguimiento de políticas culturales en Santiago, Chile, combinando registros, encuestas y evidencia cualitativa.",
+    "desafio_principal_conocimiento": "Documentar metodologías y facilitar su transferencia a otros equipos de la región.",
+    "tema_prioritario_accion_investigacion": "Políticas culturales; Acceso y participación cultural",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "Observatorio de Comportamientos Culturales",
+        "pais": "Colombia",
+        "sitio_web": "https://www.utadeo.edu.co/es/micrositio/observatorio-de-comportamientos-culturales"
+      },
+      {
+        "nombre": "Observatorio de las economías en las culturas, artes y saberes",
+        "pais": "Colombia",
+        "sitio_web": "https://www.mincultura.gov.co/direcciones/estrategia-desarrollo-y-emprendimiento/Paginas/servicios-informacion/observatorio-de-las-economias-en-las-culturas-artes-y-saberes.aspx"
+      }
+    ],
+    "autoriza_directorio_publico": "Sí",
+    "continuar_participacion_ruta": "Sí"
+  },
+  {
+    "id": "ENT-009",
+    "pais_ubicacion_principal": "COL",
+    "nombre_entidad": "Observatorio de Comportamientos Culturales",
+    "slug": "observatorio-de-comportamientos-culturales",
+    "sigla": "OCC",
+    "sitio_web": "https://www.utadeo.edu.co/es/micrositio/observatorio-de-comportamientos-culturales",
+    "persona_diligencia": "Contacto institucional (demo) — Coordinación técnica",
+    "correo_contacto": "contacto.observatorio-de-comportamientos-culturales@example.org",
+    "naturaleza_institucional": "Universidad o centro académico",
+    "escala_territorial_trabajo": "Local / municipal",
+    "anio_inicio_actividades": 2023,
+    "proposito_principal": "Producir, analizar y divulgar conocimiento sobre consumo cultural, tendencias de mercado en Bogotá, Colombia, mediante indicadores, estudios aplicados y articulación con actores públicos, académicos y comunitarios.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de consumo cultural",
+        "tema_principal": "Consumo cultural",
+        "periodicidad": "Bienal"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de Bogotá, Colombia",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      },
+      {
+        "nombre": "Pulso de participación y comportamientos",
+        "tema_principal": "Comportamientos ciudadanos",
+        "periodicidad": "Semestral"
+      }
+    ],
+    "experiencia_presentable": "Tablero territorial de consumo cultural, tendencias de mercado en Bogotá, Colombia, diseñado para comparar tendencias y orientar decisiones.",
+    "desafio_principal_conocimiento": "Integrar fuentes administrativas dispersas y mantener criterios comunes de calidad.",
+    "tema_prioritario_accion_investigacion": "Consumo cultural; Comportamientos ciudadanos",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "Observatorio de Patrimonio Cultural",
+        "pais": "Colombia",
+        "sitio_web": "https://www.erigaie.org/categoria/lineas-de-investigacion/el-observatorio-de-patrimonio-cultural-mia/"
+      },
+      {
+        "nombre": "Observatorio del Caribe Colombiano",
+        "pais": "Colombia",
+        "sitio_web": "https://ocaribe.org/"
+      }
+    ],
+    "autoriza_directorio_publico": "Sí",
+    "continuar_participacion_ruta": "Sí"
+  },
+  {
+    "id": "ENT-010",
+    "pais_ubicacion_principal": "COL",
+    "nombre_entidad": "Observatorio de Patrimonio Cultural",
+    "slug": "observatorio-de-patrimonio-cultural",
+    "sigla": "OPC",
+    "sitio_web": "https://www.erigaie.org/categoria/lineas-de-investigacion/el-observatorio-de-patrimonio-cultural-mia/",
+    "persona_diligencia": "Contacto institucional (demo) — Gestión de conocimiento",
+    "correo_contacto": "contacto.observatorio-de-patrimonio-cultural@example.org",
+    "naturaleza_institucional": "Organización independiente / sociedad civil",
+    "escala_territorial_trabajo": "Regional / subnacional",
+    "anio_inicio_actividades": 2015,
+    "proposito_principal": "Fortalecer la toma de decisiones sobre patrimonio cultural en Bogotá, Colombia, integrando evidencia cuantitativa, cualitativa y territorial.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de patrimonio cultural",
+        "tema_principal": "Patrimonio cultural",
+        "periodicidad": "Anual"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de Bogotá, Colombia",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      }
+    ],
+    "experiencia_presentable": "Metodología participativa para mapear actores y capacidades vinculadas con patrimonio cultural en Bogotá, Colombia.",
+    "desafio_principal_conocimiento": "Sostener la periodicidad de las mediciones con capacidades técnicas y financieras limitadas.",
+    "tema_prioritario_accion_investigacion": "Patrimonio cultural; Desigualdades territoriales",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "Observatorio de las economías en las culturas, artes y saberes",
+        "pais": "Colombia",
+        "sitio_web": "https://www.mincultura.gov.co/direcciones/estrategia-desarrollo-y-emprendimiento/Paginas/servicios-informacion/observatorio-de-las-economias-en-las-culturas-artes-y-saberes.aspx"
+      },
+      {
+        "nombre": "Observatorio de Derechos Territoriales de los Pueblos Indígenas (ODTPI)",
+        "pais": "Colombia",
+        "sitio_web": "https://www.cntindigena.org/el-observatorio/que-es-el-observatorio/"
+      }
+    ],
+    "autoriza_directorio_publico": "Sí, previa validación final",
+    "continuar_participacion_ruta": "Sí"
+  },
+  {
+    "id": "ENT-011",
+    "pais_ubicacion_principal": "COL",
+    "nombre_entidad": "Observatorio de las economías en las culturas, artes y saberes",
+    "slug": "observatorio-de-las-economias-en-las-culturas-artes-y-saberes",
+    "sigla": "OECAS",
+    "sitio_web": "https://www.mincultura.gov.co/direcciones/estrategia-desarrollo-y-emprendimiento/Paginas/servicios-informacion/observatorio-de-las-economias-en-las-culturas-artes-y-saberes.aspx",
+    "persona_diligencia": "Contacto institucional (demo) — Investigación y análisis",
+    "correo_contacto": "contacto.observatorio-de-las-economias-en-las-culturas@example.org",
+    "naturaleza_institucional": "Gobierno Nacional",
+    "escala_territorial_trabajo": "Nacional",
+    "anio_inicio_actividades": 2007,
+    "proposito_principal": "Observar tendencias de políticas culturales y convertirlas en recursos accesibles para instituciones culturales, organizaciones sociales y ciudadanía de Bogotá, Colombia.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de políticas culturales",
+        "tema_principal": "Políticas culturales",
+        "periodicidad": "Bienal"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de Bogotá, Colombia",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      }
+    ],
+    "experiencia_presentable": "Serie de estudios breves sobre políticas culturales en Bogotá, Colombia, con visualizaciones y recomendaciones para equipos técnicos.",
+    "desafio_principal_conocimiento": "Mejorar la comparabilidad de indicadores entre territorios e instituciones.",
+    "tema_prioritario_accion_investigacion": "Políticas culturales; Sostenibilidad de los ecosistemas culturales",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "Observatorio del Caribe Colombiano",
+        "pais": "Colombia",
+        "sitio_web": "https://ocaribe.org/"
+      },
+      {
+        "nombre": "CIICLA",
+        "pais": "Costa Rica",
+        "sitio_web": "https://ciicla.ucr.ac.cr/"
+      }
+    ],
+    "autoriza_directorio_publico": "Sí",
+    "continuar_participacion_ruta": "Sí"
+  },
+  {
+    "id": "ENT-012",
+    "pais_ubicacion_principal": "COL",
+    "nombre_entidad": "Observatorio del Caribe Colombiano",
+    "slug": "observatorio-del-caribe-colombiano",
+    "sigla": "OCC",
+    "sitio_web": "https://ocaribe.org/",
+    "persona_diligencia": "Contacto institucional (demo) — Cooperación y redes",
+    "correo_contacto": "contacto.observatorio-del-caribe-colombiano@example.org",
+    "naturaleza_institucional": "Organización independiente / sociedad civil",
+    "escala_territorial_trabajo": "Multiescalar",
+    "anio_inicio_actividades": 1999,
+    "proposito_principal": "Conectar investigación y gestión pública para comprender estudios regionales, cultura Caribe en Cartagena, Colombia, documentar brechas y promover respuestas colaborativas.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de estudios regionales",
+        "tema_principal": "Estudios regionales",
+        "periodicidad": "Bienal"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de Cartagena, Colombia",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      }
+    ],
+    "experiencia_presentable": "Sistema de seguimiento de estudios regionales, cultura Caribe en Cartagena, Colombia, combinando registros, encuestas y evidencia cualitativa.",
+    "desafio_principal_conocimiento": "Incorporar enfoques territoriales y poblacionales sin perder continuidad histórica.",
+    "tema_prioritario_accion_investigacion": "Estudios regionales; Fortalecimiento de capacidades metodológicas",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "Observatorio de Derechos Territoriales de los Pueblos Indígenas (ODTPI)",
+        "pais": "Colombia",
+        "sitio_web": "https://www.cntindigena.org/el-observatorio/que-es-el-observatorio/"
+      },
+      {
+        "nombre": "Observatorio de Políticas y Economía de la Cultura - ILIA",
+        "pais": "Ecuador",
+        "sitio_web": "https://observatorio.uartes.edu.ec/"
+      }
+    ],
+    "autoriza_directorio_publico": "No",
+    "continuar_participacion_ruta": "Quisiera recibir más información antes de decidir"
+  },
+  {
+    "id": "ENT-013",
+    "pais_ubicacion_principal": "COL",
+    "nombre_entidad": "Observatorio de Derechos Territoriales de los Pueblos Indígenas (ODTPI)",
+    "slug": "observatorio-de-derechos-territoriales-de-los-pueblos-indigenas-odtpi",
+    "sigla": "ODTPI",
+    "sitio_web": "https://www.cntindigena.org/el-observatorio/que-es-el-observatorio/",
+    "persona_diligencia": "Contacto institucional (demo) — Coordinación técnica",
+    "correo_contacto": "contacto.observatorio-de-derechos-territoriales-de-los@example.org",
+    "naturaleza_institucional": "Organización independiente / sociedad civil",
+    "escala_territorial_trabajo": "Local / municipal",
+    "anio_inicio_actividades": 2017,
+    "proposito_principal": "Producir, analizar y divulgar conocimiento sobre ancestralidad en Bogotá, Colombia, mediante indicadores, estudios aplicados y articulación con actores públicos, académicos y comunitarios.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de ancestralidad",
+        "tema_principal": "Ancestralidad",
+        "periodicidad": "Anual"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de Bogotá, Colombia",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      }
+    ],
+    "experiencia_presentable": "Tablero territorial de ancestralidad en Bogotá, Colombia, diseñado para comparar tendencias y orientar decisiones.",
+    "desafio_principal_conocimiento": "Ampliar las capacidades de análisis, visualización y comunicación pública de resultados.",
+    "tema_prioritario_accion_investigacion": "Ancestralidad; Comparabilidad de indicadores",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "CIICLA",
+        "pais": "Costa Rica",
+        "sitio_web": "https://ciicla.ucr.ac.cr/"
+      },
+      {
+        "nombre": "Observatorio Iberoamericano de Cultura (OIBC)",
+        "pais": "España",
+        "sitio_web": "https://oibc.oei.es"
+      }
+    ],
+    "autoriza_directorio_publico": "Sí",
+    "continuar_participacion_ruta": "Sí"
+  },
+  {
+    "id": "ENT-014",
+    "pais_ubicacion_principal": "CRI",
+    "nombre_entidad": "CIICLA",
+    "slug": "ciicla",
+    "sigla": "CIICLA",
+    "sitio_web": "https://ciicla.ucr.ac.cr/",
+    "persona_diligencia": "Contacto institucional (demo) — Gestión de conocimiento",
+    "correo_contacto": "contacto.ciicla@example.org",
+    "naturaleza_institucional": "Universidad o centro académico",
+    "escala_territorial_trabajo": "Regional / subnacional",
+    "anio_inicio_actividades": 2009,
+    "proposito_principal": "Fortalecer la toma de decisiones sobre espacios de investigación y acción social en San José, Costa Rica, integrando evidencia cuantitativa, cualitativa y territorial.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de espacios de investigación y acción social",
+        "tema_principal": "Espacios de investigación y acción social",
+        "periodicidad": "Bienal"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de San José, Costa Rica",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      },
+      {
+        "nombre": "Pulso de participación y comportamientos",
+        "tema_principal": "Comportamientos ciudadanos",
+        "periodicidad": "Semestral"
+      }
+    ],
+    "experiencia_presentable": "Metodología participativa para mapear actores y capacidades vinculadas con espacios de investigación y acción social en San José, Costa Rica.",
+    "desafio_principal_conocimiento": "Actualizar instrumentos frente a cambios tecnológicos y nuevas prácticas culturales.",
+    "tema_prioritario_accion_investigacion": "Espacios de investigación y acción social; Comportamientos ciudadanos",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "Observatorio de Políticas y Economía de la Cultura - ILIA",
+        "pais": "Ecuador",
+        "sitio_web": "https://observatorio.uartes.edu.ec/"
+      },
+      {
+        "nombre": "Observatorio Iberoamericano de Cultura y Desarrollo Sostenible",
+        "pais": "España",
+        "sitio_web": "https://oei.int"
+      }
+    ],
+    "autoriza_directorio_publico": "Sí",
+    "continuar_participacion_ruta": "Sí"
+  },
+  {
+    "id": "ENT-015",
+    "pais_ubicacion_principal": "ECU",
+    "nombre_entidad": "Observatorio de Políticas y Economía de la Cultura - ILIA",
+    "slug": "observatorio-de-politicas-y-economia-de-la-cultura-ilia",
+    "sigla": "OPECI",
+    "sitio_web": "https://observatorio.uartes.edu.ec/",
+    "persona_diligencia": "Contacto institucional (demo) — Investigación y análisis",
+    "correo_contacto": "contacto.observatorio-de-politicas-y-economia-de-la-cu@example.org",
+    "naturaleza_institucional": "Universidad o centro académico",
+    "escala_territorial_trabajo": "Nacional",
+    "anio_inicio_actividades": 2001,
+    "proposito_principal": "Observar tendencias de políticas culturales y convertirlas en recursos accesibles para instituciones culturales, organizaciones sociales y ciudadanía de Guayaquil, Ecuador.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de políticas culturales",
+        "tema_principal": "Políticas culturales",
+        "periodicidad": "Bienal"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de Guayaquil, Ecuador",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      }
+    ],
+    "experiencia_presentable": "Serie de estudios breves sobre políticas culturales en Guayaquil, Ecuador, con visualizaciones y recomendaciones para equipos técnicos.",
+    "desafio_principal_conocimiento": "Conectar la evidencia producida con decisiones de política, programación y financiación.",
+    "tema_prioritario_accion_investigacion": "Políticas culturales; Cultura digital y datos abiertos",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "Observatorio Iberoamericano de Cultura (OIBC)",
+        "pais": "España",
+        "sitio_web": "https://oibc.oei.es"
+      },
+      {
+        "nombre": "Observatori Cultural",
+        "pais": "España",
+        "sitio_web": "https://www.uv.es/observatorio-cultural/es/fundacio-general-observatori-cultural.html"
+      }
+    ],
+    "autoriza_directorio_publico": "Sí, previa validación final",
+    "continuar_participacion_ruta": "No por ahora"
+  },
+  {
+    "id": "ENT-016",
+    "pais_ubicacion_principal": "ESP",
+    "nombre_entidad": "Observatorio Iberoamericano de Cultura (OIBC)",
+    "slug": "observatorio-iberoamericano-de-cultura-oibc",
+    "sigla": "OIBC",
+    "sitio_web": "https://oibc.oei.es",
+    "persona_diligencia": "Contacto institucional (demo) — Cooperación y redes",
+    "correo_contacto": "contacto.observatorio-iberoamericano-de-cultura-oibc@example.org",
+    "naturaleza_institucional": "Organismo internacional",
+    "escala_territorial_trabajo": "Internacional / iberoamericana",
+    "anio_inicio_actividades": 2019,
+    "proposito_principal": "Conectar investigación y gestión pública para comprender políticas culturales, indicadores en Madrid, España, documentar brechas y promover respuestas colaborativas.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de políticas culturales",
+        "tema_principal": "Políticas culturales",
+        "periodicidad": "Anual"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de Madrid, España",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      }
+    ],
+    "experiencia_presentable": "Sistema de seguimiento de políticas culturales, indicadores en Madrid, España, combinando registros, encuestas y evidencia cualitativa.",
+    "desafio_principal_conocimiento": "Documentar metodologías y facilitar su transferencia a otros equipos de la región.",
+    "tema_prioritario_accion_investigacion": "Políticas culturales; Desigualdades territoriales",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "Observatorio Iberoamericano de Cultura y Desarrollo Sostenible",
+        "pais": "España",
+        "sitio_web": "https://oei.int"
+      },
+      {
+        "nombre": "Observatorio Vasco de la Cultura (Kulturaren Euskal Behatokia)",
+        "pais": "España",
+        "sitio_web": "https://www.kultura.ejgv.euskadi.eus"
+      }
+    ],
+    "autoriza_directorio_publico": "Sí",
+    "continuar_participacion_ruta": "Sí"
+  },
+  {
+    "id": "ENT-017",
+    "pais_ubicacion_principal": "ESP",
+    "nombre_entidad": "Observatorio Iberoamericano de Cultura y Desarrollo Sostenible",
+    "slug": "observatorio-iberoamericano-de-cultura-y-desarrollo-sostenible",
+    "sigla": "OICDS",
+    "sitio_web": "https://oei.int",
+    "persona_diligencia": "Contacto institucional (demo) — Coordinación técnica",
+    "correo_contacto": "contacto.observatorio-iberoamericano-de-cultura-y-desa@example.org",
+    "naturaleza_institucional": "Organismo internacional",
+    "escala_territorial_trabajo": "Internacional / iberoamericana",
+    "anio_inicio_actividades": 2011,
+    "proposito_principal": "Producir, analizar y divulgar conocimiento sobre desarrollo sostenible en Madrid, España, mediante indicadores, estudios aplicados y articulación con actores públicos, académicos y comunitarios.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de desarrollo sostenible",
+        "tema_principal": "Desarrollo sostenible",
+        "periodicidad": "Bienal"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de Madrid, España",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      },
+      {
+        "nombre": "Pulso de participación y comportamientos",
+        "tema_principal": "Comportamientos ciudadanos",
+        "periodicidad": "Semestral"
+      }
+    ],
+    "experiencia_presentable": "Tablero territorial de desarrollo sostenible en Madrid, España, diseñado para comparar tendencias y orientar decisiones.",
+    "desafio_principal_conocimiento": "Integrar fuentes administrativas dispersas y mantener criterios comunes de calidad.",
+    "tema_prioritario_accion_investigacion": "Desarrollo sostenible; Comportamientos ciudadanos",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "Observatori Cultural",
+        "pais": "España",
+        "sitio_web": "https://www.uv.es/observatorio-cultural/es/fundacio-general-observatori-cultural.html"
+      },
+      {
+        "nombre": "Asociación Iberoamericana de Estudios de Ocio",
+        "pais": "España",
+        "sitio_web": "https://www.asociacionotium.deusto.es/es/"
+      }
+    ],
+    "autoriza_directorio_publico": "Sí",
+    "continuar_participacion_ruta": "Sí"
+  },
+  {
+    "id": "ENT-018",
+    "pais_ubicacion_principal": "ESP",
+    "nombre_entidad": "Observatori Cultural",
+    "slug": "observatori-cultural",
+    "sigla": "OC",
+    "sitio_web": "https://www.uv.es/observatorio-cultural/es/fundacio-general-observatori-cultural.html",
+    "persona_diligencia": "Contacto institucional (demo) — Gestión de conocimiento",
+    "correo_contacto": "contacto.observatori-cultural@example.org",
+    "naturaleza_institucional": "Universidad o centro académico",
+    "escala_territorial_trabajo": "Regional / subnacional",
+    "anio_inicio_actividades": 2003,
+    "proposito_principal": "Fortalecer la toma de decisiones sobre gestión cultural, públicos culturales en Valencia, España, integrando evidencia cuantitativa, cualitativa y territorial.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de gestión cultural",
+        "tema_principal": "Gestión cultural",
+        "periodicidad": "Bienal"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de Valencia, España",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      }
+    ],
+    "experiencia_presentable": "Metodología participativa para mapear actores y capacidades vinculadas con gestión cultural, públicos culturales en Valencia, España.",
+    "desafio_principal_conocimiento": "Sostener la periodicidad de las mediciones con capacidades técnicas y financieras limitadas.",
+    "tema_prioritario_accion_investigacion": "Gestión cultural; Fortalecimiento de capacidades metodológicas",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "Observatorio Vasco de la Cultura (Kulturaren Euskal Behatokia)",
+        "pais": "España",
+        "sitio_web": "https://www.kultura.ejgv.euskadi.eus"
+      },
+      {
+        "nombre": "Observatorio de las Culturas de Honduras",
+        "pais": "Honduras",
+        "sitio_web": "https://ochmaqueta.secapph.gob.hn"
+      }
+    ],
+    "autoriza_directorio_publico": "Sí",
+    "continuar_participacion_ruta": "Quisiera recibir más información antes de decidir"
+  },
+  {
+    "id": "ENT-019",
+    "pais_ubicacion_principal": "ESP",
+    "nombre_entidad": "Observatorio Vasco de la Cultura (Kulturaren Euskal Behatokia)",
+    "slug": "observatorio-vasco-de-la-cultura-kulturaren-euskal-behatokia",
+    "sigla": "OVCKEB",
+    "sitio_web": "https://www.kultura.ejgv.euskadi.eus",
+    "persona_diligencia": "Contacto institucional (demo) — Investigación y análisis",
+    "correo_contacto": "contacto.observatorio-vasco-de-la-cultura-kulturaren-e@example.org",
+    "naturaleza_institucional": "Gobierno local o municipal",
+    "escala_territorial_trabajo": "Regional / subnacional",
+    "anio_inicio_actividades": 2021,
+    "proposito_principal": "Observar tendencias de indicadores culturales y convertirlas en recursos accesibles para instituciones culturales, organizaciones sociales y ciudadanía de País Vasco, España.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de indicadores culturales",
+        "tema_principal": "Indicadores culturales",
+        "periodicidad": "Anual"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de País Vasco, España",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      }
+    ],
+    "experiencia_presentable": "Serie de estudios breves sobre indicadores culturales en País Vasco, España, con visualizaciones y recomendaciones para equipos técnicos.",
+    "desafio_principal_conocimiento": "Mejorar la comparabilidad de indicadores entre territorios e instituciones.",
+    "tema_prioritario_accion_investigacion": "Indicadores culturales; Comparabilidad de indicadores",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "Asociación Iberoamericana de Estudios de Ocio",
+        "pais": "España",
+        "sitio_web": "https://www.asociacionotium.deusto.es/es/"
+      },
+      {
+        "nombre": "Observatorio Latinoamericano de Gestión Cultural (OLGC)",
+        "pais": "México",
+        "sitio_web": "https://observatoriocultural.udgvirtual.udg.mx"
+      }
+    ],
+    "autoriza_directorio_publico": "Sí",
+    "continuar_participacion_ruta": "Sí"
+  },
+  {
+    "id": "ENT-020",
+    "pais_ubicacion_principal": "ESP",
+    "nombre_entidad": "Asociación Iberoamericana de Estudios de Ocio",
+    "slug": "asociacion-iberoamericana-de-estudios-de-ocio",
+    "sigla": "AIEO",
+    "sitio_web": "https://www.asociacionotium.deusto.es/es/",
+    "persona_diligencia": "Contacto institucional (demo) — Cooperación y redes",
+    "correo_contacto": "contacto.asociacion-iberoamericana-de-estudios-de-ocio@example.org",
+    "naturaleza_institucional": "Red o plataforma de organizaciones",
+    "escala_territorial_trabajo": "Multiescalar",
+    "anio_inicio_actividades": 2013,
+    "proposito_principal": "Conectar investigación y gestión pública para comprender vida cultural, recreación, deporte en España, documentar brechas y promover respuestas colaborativas.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de vida cultural",
+        "tema_principal": "Vida cultural",
+        "periodicidad": "Bienal"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de España",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      },
+      {
+        "nombre": "Pulso de participación y comportamientos",
+        "tema_principal": "Recreación, Deporte",
+        "periodicidad": "Semestral"
+      }
+    ],
+    "experiencia_presentable": "Sistema de seguimiento de vida cultural, recreación, deporte en España, combinando registros, encuestas y evidencia cualitativa.",
+    "desafio_principal_conocimiento": "Incorporar enfoques territoriales y poblacionales sin perder continuidad histórica.",
+    "tema_prioritario_accion_investigacion": "Vida cultural; Participación, recreación y deporte",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "Observatorio de las Culturas de Honduras",
+        "pais": "Honduras",
+        "sitio_web": "https://ochmaqueta.secapph.gob.hn"
+      },
+      {
+        "nombre": "Observatorio Cultural del Proyecto Atalaya",
+        "pais": "México",
+        "sitio_web": "https://observatorioatalaya.uca.es/que-es-el-observatorio-cultural-alt/"
+      }
+    ],
+    "autoriza_directorio_publico": "Sí, previa validación final",
+    "continuar_participacion_ruta": "Sí"
+  },
+  {
+    "id": "ENT-021",
+    "pais_ubicacion_principal": "HND",
+    "nombre_entidad": "Observatorio de las Culturas de Honduras",
+    "slug": "observatorio-de-las-culturas-de-honduras",
+    "sigla": "OCH",
+    "sitio_web": "https://ochmaqueta.secapph.gob.hn",
+    "persona_diligencia": "Contacto institucional (demo) — Coordinación técnica",
+    "correo_contacto": "contacto.observatorio-de-las-culturas-de-honduras@example.org",
+    "naturaleza_institucional": "Organización mixta o público-privada",
+    "escala_territorial_trabajo": "Nacional",
+    "anio_inicio_actividades": 2005,
+    "proposito_principal": "Producir, analizar y divulgar conocimiento sobre participación de niñez, adolescencia y juventud en la cultura en Tegucigalpa, Honduras, mediante indicadores, estudios aplicados y articulación con actores públicos, académicos y comunitarios.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de participación de niñez",
+        "tema_principal": "Participación de niñez",
+        "periodicidad": "Bienal"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de Tegucigalpa, Honduras",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      },
+      {
+        "nombre": "Pulso de participación y comportamientos",
+        "tema_principal": "Comportamientos ciudadanos",
+        "periodicidad": "Semestral"
+      }
+    ],
+    "experiencia_presentable": "Tablero territorial de participación de niñez, adolescencia y juventud en la cultura en Tegucigalpa, Honduras, diseñado para comparar tendencias y orientar decisiones.",
+    "desafio_principal_conocimiento": "Ampliar las capacidades de análisis, visualización y comunicación pública de resultados.",
+    "tema_prioritario_accion_investigacion": "Participación de niñez; Comportamientos ciudadanos",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "Observatorio Latinoamericano de Gestión Cultural (OLGC)",
+        "pais": "México",
+        "sitio_web": "https://observatoriocultural.udgvirtual.udg.mx"
+      },
+      {
+        "nombre": "Observatorio de Políticas Culturales",
+        "pais": "México",
+        "sitio_web": "https://www.uv.mx/opc/"
+      }
+    ],
+    "autoriza_directorio_publico": "Sí",
+    "continuar_participacion_ruta": "Sí"
+  },
+  {
+    "id": "ENT-022",
+    "pais_ubicacion_principal": "MEX",
+    "nombre_entidad": "Observatorio Latinoamericano de Gestión Cultural (OLGC)",
+    "slug": "observatorio-latinoamericano-de-gestion-cultural-olgc",
+    "sigla": "OLGC",
+    "sitio_web": "https://observatoriocultural.udgvirtual.udg.mx",
+    "persona_diligencia": "Contacto institucional (demo) — Gestión de conocimiento",
+    "correo_contacto": "contacto.observatorio-latinoamericano-de-gestion-cultu@example.org",
+    "naturaleza_institucional": "Universidad o centro académico",
+    "escala_territorial_trabajo": "Internacional / iberoamericana",
+    "anio_inicio_actividades": 2023,
+    "proposito_principal": "Fortalecer la toma de decisiones sobre gestión cultural, mapeo de observatorios en Guadalajara, México, integrando evidencia cuantitativa, cualitativa y territorial.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de gestión cultural",
+        "tema_principal": "Gestión cultural",
+        "periodicidad": "Anual"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de Guadalajara, México",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      }
+    ],
+    "experiencia_presentable": "Metodología participativa para mapear actores y capacidades vinculadas con gestión cultural, mapeo de observatorios en Guadalajara, México.",
+    "desafio_principal_conocimiento": "Actualizar instrumentos frente a cambios tecnológicos y nuevas prácticas culturales.",
+    "tema_prioritario_accion_investigacion": "Gestión cultural; Desigualdades territoriales",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "Observatorio Cultural del Proyecto Atalaya",
+        "pais": "México",
+        "sitio_web": "https://observatorioatalaya.uca.es/que-es-el-observatorio-cultural-alt/"
+      },
+      {
+        "nombre": "Observatorio Teatral",
+        "pais": "México",
+        "sitio_web": "https://teatrounam.com.mx/teatro/entradasteatro/observatorio-teatral-2/"
+      }
+    ],
+    "autoriza_directorio_publico": "Sí",
+    "continuar_participacion_ruta": "Sí"
+  },
+  {
+    "id": "ENT-023",
+    "pais_ubicacion_principal": "MEX",
+    "nombre_entidad": "Observatorio Cultural del Proyecto Atalaya",
+    "slug": "observatorio-cultural-del-proyecto-atalaya",
+    "sigla": "OCPA",
+    "sitio_web": "https://observatorioatalaya.uca.es/que-es-el-observatorio-cultural-alt/",
+    "persona_diligencia": "Contacto institucional (demo) — Investigación y análisis",
+    "correo_contacto": "contacto.observatorio-cultural-del-proyecto-atalaya@example.org",
+    "naturaleza_institucional": "Red o plataforma de organizaciones",
+    "escala_territorial_trabajo": "Multiescalar",
+    "anio_inicio_actividades": 2015,
+    "proposito_principal": "Observar tendencias de cooperación cultural y convertirlas en recursos accesibles para instituciones culturales, organizaciones sociales y ciudadanía de Guadalajara, México.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de cooperación cultural",
+        "tema_principal": "Cooperación cultural",
+        "periodicidad": "Bienal"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de Guadalajara, México",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      }
+    ],
+    "experiencia_presentable": "Serie de estudios breves sobre cooperación cultural en Guadalajara, México, con visualizaciones y recomendaciones para equipos técnicos.",
+    "desafio_principal_conocimiento": "Conectar la evidencia producida con decisiones de política, programación y financiación.",
+    "tema_prioritario_accion_investigacion": "Cooperación cultural; Sostenibilidad de los ecosistemas culturales",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "Observatorio de Políticas Culturales",
+        "pais": "México",
+        "sitio_web": "https://www.uv.mx/opc/"
+      },
+      {
+        "nombre": "Observatório das Actividades Culturais",
+        "pais": "Portugal",
+        "sitio_web": "https://www.gepac.gov.pt/estudos-e-estatisticas/oac"
+      }
+    ],
+    "autoriza_directorio_publico": "Sí",
+    "continuar_participacion_ruta": "Sí"
+  },
+  {
+    "id": "ENT-024",
+    "pais_ubicacion_principal": "MEX",
+    "nombre_entidad": "Observatorio de Políticas Culturales",
+    "slug": "observatorio-de-politicas-culturales-mex",
+    "sigla": "OPC",
+    "sitio_web": "https://www.uv.mx/opc/",
+    "persona_diligencia": "Contacto institucional (demo) — Cooperación y redes",
+    "correo_contacto": "contacto.observatorio-de-politicas-culturales-mex@example.org",
+    "naturaleza_institucional": "Universidad o centro académico",
+    "escala_territorial_trabajo": "Multiescalar",
+    "anio_inicio_actividades": 2007,
+    "proposito_principal": "Conectar investigación y gestión pública para comprender vida cultural en Veracruz, México, documentar brechas y promover respuestas colaborativas.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de vida cultural",
+        "tema_principal": "Vida cultural",
+        "periodicidad": "Bienal"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de Veracruz, México",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      }
+    ],
+    "experiencia_presentable": "Sistema de seguimiento de vida cultural en Veracruz, México, combinando registros, encuestas y evidencia cualitativa.",
+    "desafio_principal_conocimiento": "Documentar metodologías y facilitar su transferencia a otros equipos de la región.",
+    "tema_prioritario_accion_investigacion": "Vida cultural; Fortalecimiento de capacidades metodológicas",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "Observatorio Teatral",
+        "pais": "México",
+        "sitio_web": "https://teatrounam.com.mx/teatro/entradasteatro/observatorio-teatral-2/"
+      },
+      {
+        "nombre": "Observatorio de Sociedad, Gobernanza y Políticas Públicas",
+        "pais": "Puerto Rico",
+        "sitio_web": "https://observatorio.pucpr.edu"
+      }
+    ],
+    "autoriza_directorio_publico": "No",
+    "continuar_participacion_ruta": "Quisiera recibir más información antes de decidir"
+  },
+  {
+    "id": "ENT-025",
+    "pais_ubicacion_principal": "MEX",
+    "nombre_entidad": "Observatorio Teatral",
+    "slug": "observatorio-teatral",
+    "sigla": "OT",
+    "sitio_web": "https://teatrounam.com.mx/teatro/entradasteatro/observatorio-teatral-2/",
+    "persona_diligencia": "Contacto institucional (demo) — Coordinación técnica",
+    "correo_contacto": "contacto.observatorio-teatral@example.org",
+    "naturaleza_institucional": "Universidad o centro académico",
+    "escala_territorial_trabajo": "Local / municipal",
+    "anio_inicio_actividades": 1999,
+    "proposito_principal": "Producir, analizar y divulgar conocimiento sobre proyectos escénicos en CDMX, México, mediante indicadores, estudios aplicados y articulación con actores públicos, académicos y comunitarios.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de proyectos escénicos",
+        "tema_principal": "Proyectos escénicos",
+        "periodicidad": "Anual"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de CDMX, México",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      }
+    ],
+    "experiencia_presentable": "Tablero territorial de proyectos escénicos en CDMX, México, diseñado para comparar tendencias y orientar decisiones.",
+    "desafio_principal_conocimiento": "Integrar fuentes administrativas dispersas y mantener criterios comunes de calidad.",
+    "tema_prioritario_accion_investigacion": "Proyectos escénicos; Comparabilidad de indicadores",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "Observatório das Actividades Culturais",
+        "pais": "Portugal",
+        "sitio_web": "https://www.gepac.gov.pt/estudos-e-estatisticas/oac"
+      },
+      {
+        "nombre": "Observatorio Centro de Economía Creativa",
+        "pais": "Puerto Rico",
+        "sitio_web": "https://www.centrodeeconomiacreativa.com/observatorio"
+      }
+    ],
+    "autoriza_directorio_publico": "Sí, previa validación final",
+    "continuar_participacion_ruta": "Sí"
+  },
+  {
+    "id": "ENT-026",
+    "pais_ubicacion_principal": "PRT",
+    "nombre_entidad": "Observatório das Actividades Culturais",
+    "slug": "observatorio-das-actividades-culturais",
+    "sigla": "OAC",
+    "sitio_web": "https://www.gepac.gov.pt/estudos-e-estatisticas/oac",
+    "persona_diligencia": "Contacto institucional (demo) — Gestión de conocimiento",
+    "correo_contacto": "contacto.observatorio-das-actividades-culturais@example.org",
+    "naturaleza_institucional": "Organización independiente / sociedad civil",
+    "escala_territorial_trabajo": "Regional / subnacional",
+    "anio_inicio_actividades": 2017,
+    "proposito_principal": "Fortalecer la toma de decisiones sobre políticas culturales en Lisboa, Portugal, integrando evidencia cuantitativa, cualitativa y territorial.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de políticas culturales",
+        "tema_principal": "Políticas culturales",
+        "periodicidad": "Bienal"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de Lisboa, Portugal",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      }
+    ],
+    "experiencia_presentable": "Metodología participativa para mapear actores y capacidades vinculadas con políticas culturales en Lisboa, Portugal.",
+    "desafio_principal_conocimiento": "Sostener la periodicidad de las mediciones con capacidades técnicas y financieras limitadas.",
+    "tema_prioritario_accion_investigacion": "Políticas culturales; Acceso y participación cultural",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "Observatorio de Sociedad, Gobernanza y Políticas Públicas",
+        "pais": "Puerto Rico",
+        "sitio_web": "https://observatorio.pucpr.edu"
+      },
+      {
+        "nombre": "Observatorio Universitario de Políticas Culturales",
+        "pais": "Uruguay",
+        "sitio_web": "https://fhce.edu.uy/observatorio-universitario-de-politicas-culturales/"
+      }
+    ],
+    "autoriza_directorio_publico": "Sí",
+    "continuar_participacion_ruta": "Sí"
+  },
+  {
+    "id": "ENT-027",
+    "pais_ubicacion_principal": "PRI",
+    "nombre_entidad": "Observatorio de Sociedad, Gobernanza y Políticas Públicas",
+    "slug": "observatorio-de-sociedad-gobernanza-y-politicas-publicas",
+    "sigla": "OSGPP",
+    "sitio_web": "https://observatorio.pucpr.edu",
+    "persona_diligencia": "Contacto institucional (demo) — Investigación y análisis",
+    "correo_contacto": "contacto.observatorio-de-sociedad-gobernanza-y-politic@example.org",
+    "naturaleza_institucional": "Universidad o centro académico",
+    "escala_territorial_trabajo": "Nacional",
+    "anio_inicio_actividades": 2009,
+    "proposito_principal": "Observar tendencias de gobernanza y políticas públicas y convertirlas en recursos accesibles para instituciones culturales, organizaciones sociales y ciudadanía de Ponce, Puerto Rico.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de gobernanza y políticas públicas",
+        "tema_principal": "Gobernanza y políticas públicas",
+        "periodicidad": "Bienal"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de Ponce, Puerto Rico",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      },
+      {
+        "nombre": "Pulso de participación y comportamientos",
+        "tema_principal": "Comportamientos ciudadanos",
+        "periodicidad": "Semestral"
+      }
+    ],
+    "experiencia_presentable": "Serie de estudios breves sobre gobernanza y políticas públicas en Ponce, Puerto Rico, con visualizaciones y recomendaciones para equipos técnicos.",
+    "desafio_principal_conocimiento": "Mejorar la comparabilidad de indicadores entre territorios e instituciones.",
+    "tema_prioritario_accion_investigacion": "Gobernanza y políticas públicas; Comportamientos ciudadanos",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "Observatorio Centro de Economía Creativa",
+        "pais": "Puerto Rico",
+        "sitio_web": "https://www.centrodeeconomiacreativa.com/observatorio"
+      },
+      {
+        "nombre": "Observatorio de los Patrimonios Integrados",
+        "pais": "Colombia",
+        "sitio_web": "https://red-observatorios.example.org/observatorio-de-los-patrimonios-integrados"
+      }
+    ],
+    "autoriza_directorio_publico": "Sí",
+    "continuar_participacion_ruta": "Sí"
+  },
+  {
+    "id": "ENT-028",
+    "pais_ubicacion_principal": "PRI",
+    "nombre_entidad": "Observatorio Centro de Economía Creativa",
+    "slug": "observatorio-centro-de-economia-creativa",
+    "sigla": "OCEC",
+    "sitio_web": "https://www.centrodeeconomiacreativa.com/observatorio",
+    "persona_diligencia": "Contacto institucional (demo) — Cooperación y redes",
+    "correo_contacto": "contacto.observatorio-centro-de-economia-creativa@example.org",
+    "naturaleza_institucional": "Organización independiente / sociedad civil",
+    "escala_territorial_trabajo": "Multiescalar",
+    "anio_inicio_actividades": 2001,
+    "proposito_principal": "Conectar investigación y gestión pública para comprender economía creativa en San Juan, Puerto Rico, documentar brechas y promover respuestas colaborativas.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de economía creativa",
+        "tema_principal": "Economía creativa",
+        "periodicidad": "Anual"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de San Juan, Puerto Rico",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      }
+    ],
+    "experiencia_presentable": "Sistema de seguimiento de economía creativa en San Juan, Puerto Rico, combinando registros, encuestas y evidencia cualitativa.",
+    "desafio_principal_conocimiento": "Incorporar enfoques territoriales y poblacionales sin perder continuidad histórica.",
+    "tema_prioritario_accion_investigacion": "Economía creativa; Desigualdades territoriales",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "Observatorio Universitario de Políticas Culturales",
+        "pais": "Uruguay",
+        "sitio_web": "https://fhce.edu.uy/observatorio-universitario-de-politicas-culturales/"
+      },
+      {
+        "nombre": "Banco de Buenas Prácticas",
+        "pais": "Colombia",
+        "sitio_web": "https://red-observatorios.example.org/banco-de-buenas-practicas"
+      }
+    ],
+    "autoriza_directorio_publico": "Sí",
+    "continuar_participacion_ruta": "Sí"
+  },
+  {
+    "id": "ENT-029",
+    "pais_ubicacion_principal": "URY",
+    "nombre_entidad": "Observatorio Universitario de Políticas Culturales",
+    "slug": "observatorio-universitario-de-politicas-culturales",
+    "sigla": "OUPC",
+    "sitio_web": "https://fhce.edu.uy/observatorio-universitario-de-politicas-culturales/",
+    "persona_diligencia": "Contacto institucional (demo) — Coordinación técnica",
+    "correo_contacto": "contacto.observatorio-universitario-de-politicas-cultu@example.org",
+    "naturaleza_institucional": "Universidad o centro académico",
+    "escala_territorial_trabajo": "Local / municipal",
+    "anio_inicio_actividades": 2019,
+    "proposito_principal": "Producir, analizar y divulgar conocimiento sobre políticas culturales en Montevideo, Uruguay, mediante indicadores, estudios aplicados y articulación con actores públicos, académicos y comunitarios.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de políticas culturales",
+        "tema_principal": "Políticas culturales",
+        "periodicidad": "Bienal"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de Montevideo, Uruguay",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      }
+    ],
+    "experiencia_presentable": "Tablero territorial de políticas culturales en Montevideo, Uruguay, diseñado para comparar tendencias y orientar decisiones.",
+    "desafio_principal_conocimiento": "Ampliar las capacidades de análisis, visualización y comunicación pública de resultados.",
+    "tema_prioritario_accion_investigacion": "Políticas culturales; Sostenibilidad de los ecosistemas culturales",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "Observatorio de los Patrimonios Integrados",
+        "pais": "Colombia",
+        "sitio_web": "https://red-observatorios.example.org/observatorio-de-los-patrimonios-integrados"
+      },
+      {
+        "nombre": "Dirección Observatorio y Gestión del Conocimiento Cultural",
+        "pais": "Colombia",
+        "sitio_web": "https://red-observatorios.example.org/direccion-observatorio-y-gestion-del-conocimiento-cultural"
+      }
+    ],
+    "autoriza_directorio_publico": "Sí",
+    "continuar_participacion_ruta": "Sí"
+  },
+  {
+    "id": "ENT-030",
+    "pais_ubicacion_principal": "COL",
+    "nombre_entidad": "Observatorio de los Patrimonios Integrados",
+    "slug": "observatorio-de-los-patrimonios-integrados",
+    "sigla": "OPI",
+    "sitio_web": "https://red-observatorios.example.org/observatorio-de-los-patrimonios-integrados",
+    "persona_diligencia": "Contacto institucional (demo) — Gestión de conocimiento",
+    "correo_contacto": "contacto.observatorio-de-los-patrimonios-integrados@example.org",
+    "naturaleza_institucional": "Gobierno local o municipal",
+    "escala_territorial_trabajo": "Regional / subnacional",
+    "anio_inicio_actividades": 2014,
+    "proposito_principal": "Fortalecer la toma de decisiones sobre vida cultural en Bogotá, Colombia, integrando evidencia cuantitativa, cualitativa y territorial.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de vida cultural",
+        "tema_principal": "Vida cultural",
+        "periodicidad": "Bienal"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de Bogotá, Colombia",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      }
+    ],
+    "experiencia_presentable": "Metodología participativa para mapear actores y capacidades vinculadas con vida cultural en Bogotá, Colombia.",
+    "desafio_principal_conocimiento": "Actualizar instrumentos frente a cambios tecnológicos y nuevas prácticas culturales.",
+    "tema_prioritario_accion_investigacion": "Vida cultural; Fortalecimiento de capacidades metodológicas",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "Banco de Buenas Prácticas",
+        "pais": "Colombia",
+        "sitio_web": "https://red-observatorios.example.org/banco-de-buenas-practicas"
+      },
+      {
+        "nombre": "Observatorio Cultura",
+        "pais": "Argentina",
+        "sitio_web": "https://www.economicas.uba.ar/investigacion/institutos-y-centros/oc/"
+      }
+    ],
+    "autoriza_directorio_publico": "Sí, previa validación final",
+    "continuar_participacion_ruta": "No por ahora"
+  },
+  {
+    "id": "ENT-031",
+    "pais_ubicacion_principal": "COL",
+    "nombre_entidad": "Banco de Buenas Prácticas",
+    "slug": "banco-de-buenas-practicas",
+    "sigla": "BBP",
+    "sitio_web": "https://red-observatorios.example.org/banco-de-buenas-practicas",
+    "persona_diligencia": "Contacto institucional (demo) — Investigación y análisis",
+    "correo_contacto": "contacto.banco-de-buenas-practicas@example.org",
+    "naturaleza_institucional": "Gobierno local o municipal",
+    "escala_territorial_trabajo": "Nacional",
+    "anio_inicio_actividades": 2002,
+    "proposito_principal": "Observar tendencias de vida cultural y convertirlas en recursos accesibles para instituciones culturales, organizaciones sociales y ciudadanía de Bogotá, Colombia.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de vida cultural",
+        "tema_principal": "Vida cultural",
+        "periodicidad": "Anual"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de Bogotá, Colombia",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      }
+    ],
+    "experiencia_presentable": "Serie de estudios breves sobre vida cultural en Bogotá, Colombia, con visualizaciones y recomendaciones para equipos técnicos.",
+    "desafio_principal_conocimiento": "Conectar la evidencia producida con decisiones de política, programación y financiación.",
+    "tema_prioritario_accion_investigacion": "Vida cultural; Comparabilidad de indicadores",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "Dirección Observatorio y Gestión del Conocimiento Cultural",
+        "pais": "Colombia",
+        "sitio_web": "https://red-observatorios.example.org/direccion-observatorio-y-gestion-del-conocimiento-cultural"
+      },
+      {
+        "nombre": "Observatorio de Ciudadanía Cultural",
+        "pais": "Argentina",
+        "sitio_web": "https://www.undav.edu.ar/index.php?idcateg=528"
+      }
+    ],
+    "autoriza_directorio_publico": "Sí",
+    "continuar_participacion_ruta": "Sí"
+  },
+  {
+    "id": "ENT-032",
+    "pais_ubicacion_principal": "COL",
+    "nombre_entidad": "Dirección Observatorio y Gestión del Conocimiento Cultural",
+    "slug": "direccion-observatorio-y-gestion-del-conocimiento-cultural",
+    "sigla": "DOGCC",
+    "sitio_web": "https://red-observatorios.example.org/direccion-observatorio-y-gestion-del-conocimiento-cultural",
+    "persona_diligencia": "Contacto institucional (demo) — Cooperación y redes",
+    "correo_contacto": "contacto.direccion-observatorio-y-gestion-del-conocimi@example.org",
+    "naturaleza_institucional": "Gobierno local o municipal",
+    "escala_territorial_trabajo": "Multiescalar",
+    "anio_inicio_actividades": 2006,
+    "proposito_principal": "Conectar investigación y gestión pública para comprender vida cultural, recreación, deporte, comportamientos ciudadanos en Bogotá, Colombia, documentar brechas y promover respuestas colaborativas.",
+    "mediciones_representativas": [
+      {
+        "nombre": "Panorama de vida cultural",
+        "tema_principal": "Vida cultural",
+        "periodicidad": "Bienal"
+      },
+      {
+        "nombre": "Mapa de actores y capacidades de Bogotá, Colombia",
+        "tema_principal": "Ecosistema cultural y territorial",
+        "periodicidad": "Actualización anual"
+      },
+      {
+        "nombre": "Pulso de participación y comportamientos",
+        "tema_principal": "Recreación, Deporte, Comportamientos ciudadanos",
+        "periodicidad": "Semestral"
+      }
+    ],
+    "experiencia_presentable": "Sistema de seguimiento de vida cultural, recreación, deporte, comportamientos ciudadanos en Bogotá, Colombia, combinando registros, encuestas y evidencia cualitativa.",
+    "desafio_principal_conocimiento": "Documentar metodologías y facilitar su transferencia a otros equipos de la región.",
+    "tema_prioritario_accion_investigacion": "Vida cultural; Comportamientos ciudadanos",
+    "iniciativas_recomendadas": [
+      {
+        "nombre": "Observatorio Cultura",
+        "pais": "Argentina",
+        "sitio_web": "https://www.economicas.uba.ar/investigacion/institutos-y-centros/oc/"
+      },
+      {
+        "nombre": "Observatorio del Patrimonio Cultural Arqueológico (OPCA)",
+        "pais": "Bolivia",
+        "sitio_web": "https://opca.umsa.bo"
+      }
+    ],
+    "autoriza_directorio_publico": "Sí",
+    "continuar_participacion_ruta": "Sí"
+  }
+]
