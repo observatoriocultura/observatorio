@@ -1,17 +1,6 @@
 <template>
   <section class="red-observatorios-lista">
-    <section class="red-observatorios-explorer" aria-labelledby="explorer-title">
-      <div class="explorer-heading">
-        <div>
-          <p class="explorer-kicker">Directorio</p>
-          <h2 id="explorer-title">Encuentra una entidad</h2>
-        </div>
-        <p class="explorer-count" aria-live="polite">
-          <strong>{{ entidadesFiltradas.length }}</strong>
-          de {{ entidades.length }} entidades
-        </p>
-      </div>
-
+    <section class="red-observatorios-search" aria-label="Buscar entidades">
       <ListSearchInput
         v-model="searchTerm"
         id="red-observatorios-search"
@@ -19,6 +8,10 @@
         aria-label="Buscar entidades de la Red de Observatorios"
         clear-label="Limpiar búsqueda de entidades"
       />
+      <p class="explorer-count" aria-live="polite">
+        <strong>{{ entidadesFiltradas.length }}</strong>
+        de {{ entidades.length }} entidades
+      </p>
     </section>
 
     <p v-if="loading" class="red-observatorios-message" role="status">
@@ -34,10 +27,19 @@
       class="entities-grid"
       aria-label="Entidades de la Red de Observatorios"
     >
-      <article v-for="entidad in entidadesFiltradas" :key="entidad.id" class="entity-card">
+      <article
+        v-for="entidad in entidadesFiltradas"
+        :key="entidad.id"
+        class="entity-card"
+        role="button"
+        tabindex="0"
+        :aria-label="`Ver información de ${entidad.nombre_entidad}`"
+        @click="openEntity(entidad)"
+        @keydown.enter="openEntity(entidad)"
+        @keydown.space.prevent="openEntity(entidad)"
+      >
         <div class="entity-card-topline">
-          <span class="entity-acronym">{{ entidad.sigla || entidad.id }}</span>
-          <span class="entity-country">
+          <span class="entity-country-flag-slot">
             <img
               v-if="getCountryFlagUrl(entidad.pais_ubicacion_principal)"
               class="entity-country-flag"
@@ -46,6 +48,8 @@
               aria-hidden="true"
             />
             <i v-else class="bi bi-geo-alt" aria-hidden="true"></i>
+          </span>
+          <span class="entity-country">
             {{ getCountryName(entidad.pais_ubicacion_principal) }}
           </span>
         </div>
@@ -86,6 +90,7 @@
           class="entity-link"
           target="_blank"
           rel="noopener noreferrer"
+          @click.stop
         >
           Visitar sitio web
           <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
@@ -96,12 +101,20 @@
     <p v-else class="red-observatorios-message" role="status">
       No encontramos entidades que coincidan con “{{ searchTerm }}”. Prueba con otro término.
     </p>
+
+    <RedObservatoriosModal
+      :entidad="selectedEntity"
+      :country-name="getCountryName"
+      :country-flag-url="getCountryFlagUrl"
+      @close="closeEntity"
+    />
   </section>
 </template>
 
 <script setup>
 import { computed, onMounted, ref } from 'vue'
 import ListSearchInput from '../../../components/ListSearchInput.vue'
+import RedObservatoriosModal from './RedObservatoriosModal.vue'
 
 const ENTIDADES_URL = `${import.meta.env.BASE_URL}content/2026/demo_red_observatorios/entidades.json`
 const PAISES_URL = `${import.meta.env.BASE_URL}resources/general/paises_ibero.js`
@@ -111,6 +124,7 @@ const searchTerm = ref('')
 const loading = ref(true)
 const error = ref('')
 const countryCatalog = ref(null)
+const selectedEntity = ref(null)
 
 const normalizeText = (value) => {
   return String(value || '')
@@ -157,6 +171,14 @@ const getTopics = (topics) => {
     .split(';')
     .map((topic) => topic.trim())
     .filter(Boolean)
+}
+
+const openEntity = (entidad) => {
+  selectedEntity.value = entidad
+}
+
+const closeEntity = () => {
+  selectedEntity.value = null
 }
 
 const loadCountryCatalog = () => {
@@ -218,44 +240,20 @@ onMounted(async () => {
   padding-top: clamp(1rem, 2.5vw, 2rem);
 }
 
-.explorer-kicker {
-  margin: 0 0 0.55rem;
-  color: var(--red-purple);
-  font-size: 0.76rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.red-observatorios-explorer {
+.red-observatorios-search {
   display: grid;
   gap: 1rem;
   margin-bottom: 1.8rem;
-  padding: clamp(1rem, 2.5vw, 1.5rem);
-  border: 1px solid var(--red-border);
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: 0 10px 30px rgba(24, 35, 43, 0.04);
-}
-
-.explorer-heading {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.explorer-heading h2 {
-  margin: 0;
-  color: var(--red-ink);
-  font-size: clamp(1.25rem, 2.3vw, 1.65rem);
+  margin-right: auto;
+  margin-left: auto;
+  width: min(100%, 720px);
 }
 
 .explorer-count {
-  flex: 0 0 auto;
-  margin: 0 0 0.1rem;
+  margin: 0;
   color: var(--red-muted);
   font-size: 0.9rem;
+  text-align: center;
 }
 
 .explorer-count strong {
@@ -297,38 +295,34 @@ onMounted(async () => {
   padding: 1rem 1rem 0.75rem;
 }
 
-.entity-acronym {
-  display: inline-flex;
-  align-items: center;
-  min-height: 1.8rem;
-  border-radius: 999px;
-  background: #f0ebf7;
-  padding: 0.25rem 0.6rem;
-  color: var(--red-purple-dark);
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-}
-
 .entity-country {
   min-width: 0;
   color: var(--red-muted);
-  font-size: 0.82rem;
+  font-size: 0.9rem;
+  font-weight: 700;
   text-align: right;
 }
 
-.entity-country i {
+.entity-country-flag-slot {
+  display: inline-flex;
+  width: 28px;
+  min-width: 28px;
+  height: 21px;
+  align-items: center;
+  justify-content: center;
+}
+
+.entity-country-flag-slot i {
   color: var(--red-purple);
+  font-size: 1.1rem;
 }
 
 .entity-country-flag {
   display: inline-block;
-  width: 20px;
+  width: 28px;
   height: auto;
-  margin-right: 0.3rem;
   border-radius: 2px;
   box-shadow: 0 0 0 1px rgba(24, 35, 43, 0.08);
-  vertical-align: -0.1rem;
 }
 
 .entity-card-content {
@@ -441,12 +435,6 @@ onMounted(async () => {
 }
 
 @media (max-width: 580px) {
-  .explorer-heading {
-    align-items: start;
-    flex-direction: column;
-    gap: 0.45rem;
-  }
-
   .entities-grid {
     grid-template-columns: 1fr;
   }
