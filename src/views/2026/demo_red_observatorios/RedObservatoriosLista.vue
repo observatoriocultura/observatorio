@@ -22,8 +22,10 @@
       {{ error }}
     </p>
 
+    <RedObservatoriosCarousel v-if="showCarousel && !loading && !error" />
+
     <section
-      v-else-if="entidadesFiltradas.length"
+      v-if="!loading && !error && entidadesFiltradas.length"
       class="entities-grid"
       aria-label="Entidades de la Red de Observatorios"
     >
@@ -98,7 +100,7 @@
       </article>
     </section>
 
-    <p v-else class="red-observatorios-message" role="status">
+    <p v-else-if="!loading && !error" class="red-observatorios-message" role="status">
       No encontramos entidades que coincidan con “{{ searchTerm }}”. Prueba con otro término.
     </p>
 
@@ -114,6 +116,7 @@
 <script setup>
 import { computed, onMounted, ref } from 'vue'
 import ListSearchInput from '../../../components/ListSearchInput.vue'
+import RedObservatoriosCarousel from './RedObservatoriosCarousel.vue'
 import RedObservatoriosModal from './RedObservatoriosModal.vue'
 
 const ENTIDADES_URL = `${import.meta.env.BASE_URL}content/2026/demo_red_observatorios/entidades.json`
@@ -157,6 +160,8 @@ const entidadesFiltradas = computed(() => {
 
   return entidades.value.filter((entidad) => searchableEntityText(entidad).includes(query))
 })
+
+const showCarousel = computed(() => !searchTerm.value.trim())
 
 const getCountryName = (countryCode) => {
   return countryCatalog.value?.codeTo(countryCode) || countryCode || 'País no disponible'
