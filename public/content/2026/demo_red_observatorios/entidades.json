@@ -40,7 +40,9 @@
       }
     ],
     "autoriza_directorio_publico": "Sí",
-    "continuar_participacion_ruta": "Sí"
+    "continuar_participacion_ruta": "Sí",
+    "cant_conexiones": 2,
+    "color": "#75AADB"
   },
   {
     "id": "ENT-002",
@@ -88,7 +90,9 @@
       }
     ],
     "autoriza_directorio_publico": "Sí",
-    "continuar_participacion_ruta": "Sí"
+    "continuar_participacion_ruta": "Sí",
+    "cant_conexiones": 4,
+    "color": "#75AADB"
   },
   {
     "id": "ENT-003",
@@ -131,7 +135,9 @@
       }
     ],
     "autoriza_directorio_publico": "Sí",
-    "continuar_participacion_ruta": "Sí"
+    "continuar_participacion_ruta": "Sí",
+    "cant_conexiones": 2,
+    "color": "#D52B1E"
   },
   {
     "id": "ENT-004",
@@ -174,7 +180,9 @@
       }
     ],
     "autoriza_directorio_publico": "Sí",
-    "continuar_participacion_ruta": "Sí"
+    "continuar_participacion_ruta": "Sí",
+    "cant_conexiones": 2,
+    "color": "#FFDF00"
   },
   {
     "id": "ENT-005",
@@ -217,7 +225,9 @@
       }
     ],
     "autoriza_directorio_publico": "Sí, previa validación final",
-    "continuar_participacion_ruta": "Sí"
+    "continuar_participacion_ruta": "Sí",
+    "cant_conexiones": 3,
+    "color": "#FFDF00"
   },
   {
     "id": "ENT-006",
@@ -260,7 +270,9 @@
       }
     ],
     "autoriza_directorio_publico": "Sí",
-    "continuar_participacion_ruta": "Quisiera recibir más información antes de decidir"
+    "continuar_participacion_ruta": "Quisiera recibir más información antes de decidir",
+    "cant_conexiones": 4,
+    "color": "#FFDF00"
   },
   {
     "id": "ENT-007",
@@ -303,7 +315,9 @@
       }
     ],
     "autoriza_directorio_publico": "Sí",
-    "continuar_participacion_ruta": "Sí"
+    "continuar_participacion_ruta": "Sí",
+    "cant_conexiones": 2,
+    "color": "#FFDF00"
   },
   {
     "id": "ENT-008",
@@ -346,7 +360,9 @@
       }
     ],
     "autoriza_directorio_publico": "Sí",
-    "continuar_participacion_ruta": "Sí"
+    "continuar_participacion_ruta": "Sí",
+    "cant_conexiones": 2,
+    "color": "#0039A6"
   },
   {
     "id": "ENT-009",
@@ -394,7 +410,9 @@
       }
     ],
     "autoriza_directorio_publico": "Sí",
-    "continuar_participacion_ruta": "Sí"
+    "continuar_participacion_ruta": "Sí",
+    "cant_conexiones": 4,
+    "color": "#F4B400"
   },
   {
     "id": "ENT-010",
@@ -437,7 +455,9 @@
       }
     ],
     "autoriza_directorio_publico": "Sí, previa validación final",
-    "continuar_participacion_ruta": "Sí"
+    "continuar_participacion_ruta": "Sí",
+    "cant_conexiones": 2,
+    "color": "#F4B400"
   },
   {
     "id": "ENT-011",
@@ -480,7 +500,9 @@
       }
     ],
     "autoriza_directorio_publico": "Sí",
-    "continuar_participacion_ruta": "Sí"
+    "continuar_participacion_ruta": "Sí",
+    "cant_conexiones": 4,
+    "color": "#F4B400"
   },
   {
     "id": "ENT-012",
@@ -523,7 +545,9 @@
       }
     ],
     "autoriza_directorio_publico": "No",
-    "continuar_participacion_ruta": "Quisiera recibir más información antes de decidir"
+    "continuar_participacion_ruta": "Quisiera recibir más información antes de decidir",
+    "cant_conexiones": 4,
+    "color": "#F4B400"
   },
   {
     "id": "ENT-013",
@@ -566,7 +590,9 @@
       }
     ],
     "autoriza_directorio_publico": "Sí",
-    "continuar_participacion_ruta": "Sí"
+    "continuar_participacion_ruta": "Sí",
+    "cant_conexiones": 1,
+    "color": "#F4B400"
   },
   {
     "id": "ENT-014",
@@ -614,7 +640,9 @@
       }
     ],
     "autoriza_directorio_publico": "Sí",
-    "continuar_participacion_ruta": "Sí"
+    "continuar_participacion_ruta": "Sí",
+    "cant_conexiones": 3,
+    "color": "#002B7F"
   },
   {
     "id": "ENT-015",
@@ -657,7 +685,9 @@
       }
     ],
     "autoriza_directorio_publico": "Sí, previa validación final",
-    "continuar_participacion_ruta": "No por ahora"
+    "continuar_participacion_ruta": "No por ahora",
+    "cant_conexiones": 1,
+    "color": "#FF8C00"
   },
   {
     "id": "ENT-016",
@@ -700,7 +730,9 @@
       }
     ],
     "autoriza_directorio_publico": "Sí",
-    "continuar_participacion_ruta": "Sí"
+    "continuar_participacion_ruta": "Sí",
+    "cant_conexiones": 2,
+    "color": "#AA151B"
   },
   {
     "id": "ENT-017",
@@ -748,7 +780,9 @@
       }
     ],
     "autoriza_directorio_publico": "Sí",
-    "continuar_participacion_ruta": "Sí"
+    "continuar_participacion_ruta": "Sí",
+    "cant_conexiones": 1,
+    "color": "#AA151B"
   },
   {
     "id": "ENT-018",
@@ -791,7 +825,9 @@
       }
     ],
     "autoriza_directorio_publico": "Sí",
-    "continuar_participacion_ruta": "Quisiera recibir más información antes de decidir"
+    "continuar_participacion_ruta": "Quisiera recibir más información antes de decidir",
+    "cant_conexiones": 2,
+    "color": "#AA151B"
   },
   {
     "id": "ENT-019",
@@ -834,7 +870,9 @@
       }
     ],
     "autoriza_directorio_publico": "Sí",
-    "continuar_participacion_ruta": "Sí"
+    "continuar_participacion_ruta": "Sí",
+    "cant_conexiones": 1,
+    "color": "#AA151B"
   },
   {
     "id": "ENT-020",
@@ -882,7 +920,9 @@
       }
     ],
     "autoriza_directorio_publico": "Sí, previa validación final",
-    "continuar_participacion_ruta": "Sí"
+    "continuar_participacion_ruta": "Sí",
+    "cant_conexiones": 1,
+    "color": "#AA151B"
   },
   {
     "id": "ENT-021",
@@ -930,7 +970,9 @@
       }
     ],
     "autoriza_directorio_publico": "Sí",
-    "continuar_participacion_ruta": "Sí"
+    "continuar_participacion_ruta": "Sí",
+    "cant_conexiones": 1,
+    "color": "#00BCE4"
   },
   {
     "id": "ENT-022",
@@ -973,7 +1015,9 @@
       }
     ],
     "autoriza_directorio_publico": "Sí",
-    "continuar_participacion_ruta": "Sí"
+    "continuar_participacion_ruta": "Sí",
+    "cant_conexiones": 2,
+    "color": "#006847"
   },
   {
     "id": "ENT-023",
@@ -1016,7 +1060,9 @@
       }
     ],
     "autoriza_directorio_publico": "Sí",
-    "continuar_participacion_ruta": "Sí"
+    "continuar_participacion_ruta": "Sí",
+    "cant_conexiones": 3,
+    "color": "#006847"
   },
   {
     "id": "ENT-024",
@@ -1059,7 +1105,9 @@
       }
     ],
     "autoriza_directorio_publico": "No",
-    "continuar_participacion_ruta": "Quisiera recibir más información antes de decidir"
+    "continuar_participacion_ruta": "Quisiera recibir más información antes de decidir",
+    "cant_conexiones": 1,
+    "color": "#006847"
   },
   {
     "id": "ENT-025",
@@ -1102,7 +1150,9 @@
       }
     ],
     "autoriza_directorio_publico": "Sí, previa validación final",
-    "continuar_participacion_ruta": "Sí"
+    "continuar_participacion_ruta": "Sí",
+    "cant_conexiones": 4,
+    "color": "#006847"
   },
   {
     "id": "ENT-026",
@@ -1145,7 +1195,9 @@
       }
     ],
     "autoriza_directorio_publico": "Sí",
-    "continuar_participacion_ruta": "Sí"
+    "continuar_participacion_ruta": "Sí",
+    "cant_conexiones": 1,
+    "color": "#046A38"
   },
   {
     "id": "ENT-027",
@@ -1193,7 +1245,9 @@
       }
     ],
     "autoriza_directorio_publico": "Sí",
-    "continuar_participacion_ruta": "Sí"
+    "continuar_participacion_ruta": "Sí",
+    "cant_conexiones": 2,
+    "color": "#3A5DAE"
   },
   {
     "id": "ENT-028",
@@ -1236,7 +1290,9 @@
       }
     ],
     "autoriza_directorio_publico": "Sí",
-    "continuar_participacion_ruta": "Sí"
+    "continuar_participacion_ruta": "Sí",
+    "cant_conexiones": 2,
+    "color": "#3A5DAE"
   },
   {
     "id": "ENT-029",
@@ -1279,7 +1335,9 @@
       }
     ],
     "autoriza_directorio_publico": "Sí",
-    "continuar_participacion_ruta": "Sí"
+    "continuar_participacion_ruta": "Sí",
+    "cant_conexiones": 2,
+    "color": "#5CB3FF"
   },
   {
     "id": "ENT-030",
@@ -1322,7 +1380,9 @@
       }
     ],
     "autoriza_directorio_publico": "Sí, previa validación final",
-    "continuar_participacion_ruta": "No por ahora"
+    "continuar_participacion_ruta": "No por ahora",
+    "cant_conexiones": 1,
+    "color": "#F4B400"
   },
   {
     "id": "ENT-031",
@@ -1365,7 +1425,9 @@
       }
     ],
     "autoriza_directorio_publico": "Sí",
-    "continuar_participacion_ruta": "Sí"
+    "continuar_participacion_ruta": "Sí",
+    "cant_conexiones": 2,
+    "color": "#F4B400"
   },
   {
     "id": "ENT-032",
@@ -1413,6 +1475,8 @@
       }
     ],
     "autoriza_directorio_publico": "Sí",
-    "continuar_participacion_ruta": "Sí"
+    "continuar_participacion_ruta": "Sí",
+    "cant_conexiones": 3,
+    "color": "#F4B400"
   }
 ]

@@ -1,0 +1,1042 @@
+[
+  {
+    "entidad_id_1_pre": 26,
+    "entidad_id_2_pre": 10,
+    "entidad_id_1": "ENT-026",
+    "entidad_id_2": "ENT-010",
+    "mostrar": 0,
+    "random": 0.263461456818579
+  },
+  {
+    "entidad_id_1_pre": 5,
+    "entidad_id_2_pre": 32,
+    "entidad_id_1": "ENT-005",
+    "entidad_id_2": "ENT-032",
+    "mostrar": 0,
+    "random": 0.013037983642308348
+  },
+  {
+    "entidad_id_1_pre": 28,
+    "entidad_id_2_pre": 26,
+    "entidad_id_1": "ENT-028",
+    "entidad_id_2": "ENT-026",
+    "mostrar": 1,
+    "random": 0.7924872860644949
+  },
+  {
+    "entidad_id_1_pre": 10,
+    "entidad_id_2_pre": 22,
+    "entidad_id_1": "ENT-010",
+    "entidad_id_2": "ENT-022",
+    "mostrar": 0,
+    "random": 0.33717313890888134
+  },
+  {
+    "entidad_id_1_pre": 11,
+    "entidad_id_2_pre": 29,
+    "entidad_id_1": "ENT-011",
+    "entidad_id_2": "ENT-029",
+    "mostrar": 1,
+    "random": 0.569909041265765
+  },
+  {
+    "entidad_id_1_pre": 8,
+    "entidad_id_2_pre": 11,
+    "entidad_id_1": "ENT-008",
+    "entidad_id_2": "ENT-011",
+    "mostrar": 0,
+    "random": 0.2782233277081687
+  },
+  {
+    "entidad_id_1_pre": 1,
+    "entidad_id_2_pre": 24,
+    "entidad_id_1": "ENT-001",
+    "entidad_id_2": "ENT-024",
+    "mostrar": 1,
+    "random": 0.6842168701742292
+  },
+  {
+    "entidad_id_1_pre": 5,
+    "entidad_id_2_pre": 6,
+    "entidad_id_1": "ENT-005",
+    "entidad_id_2": "ENT-006",
+    "mostrar": 0,
+    "random": 0.36551439321185986
+  },
+  {
+    "entidad_id_1_pre": 30,
+    "entidad_id_2_pre": 1,
+    "entidad_id_1": "ENT-030",
+    "entidad_id_2": "ENT-001",
+    "mostrar": 1,
+    "random": 0.6778283531907274
+  },
+  {
+    "entidad_id_1_pre": 1,
+    "entidad_id_2_pre": 11,
+    "entidad_id_1": "ENT-001",
+    "entidad_id_2": "ENT-011",
+    "mostrar": 1,
+    "random": 0.6521348067719103
+  },
+  {
+    "entidad_id_1_pre": 17,
+    "entidad_id_2_pre": 18,
+    "entidad_id_1": "ENT-017",
+    "entidad_id_2": "ENT-018",
+    "mostrar": 1,
+    "random": 0.5939414250167823
+  },
+  {
+    "entidad_id_1_pre": 21,
+    "entidad_id_2_pre": 11,
+    "entidad_id_1": "ENT-021",
+    "entidad_id_2": "ENT-011",
+    "mostrar": 1,
+    "random": 0.8960817798610612
+  },
+  {
+    "entidad_id_1_pre": 32,
+    "entidad_id_2_pre": 13,
+    "entidad_id_1": "ENT-032",
+    "entidad_id_2": "ENT-013",
+    "mostrar": 0,
+    "random": 0.15837002445485882
+  },
+  {
+    "entidad_id_1_pre": 27,
+    "entidad_id_2_pre": 22,
+    "entidad_id_1": "ENT-027",
+    "entidad_id_2": "ENT-022",
+    "mostrar": 0,
+    "random": 0.06442375033837555
+  },
+  {
+    "entidad_id_1_pre": 10,
+    "entidad_id_2_pre": 21,
+    "entidad_id_1": "ENT-010",
+    "entidad_id_2": "ENT-021",
+    "mostrar": 0,
+    "random": 0.14420668809797343
+  },
+  {
+    "entidad_id_1_pre": 32,
+    "entidad_id_2_pre": 30,
+    "entidad_id_1": "ENT-032",
+    "entidad_id_2": "ENT-030",
+    "mostrar": 0,
+    "random": 0.16519654007517626
+  },
+  {
+    "entidad_id_1_pre": 11,
+    "entidad_id_2_pre": 15,
+    "entidad_id_1": "ENT-011",
+    "entidad_id_2": "ENT-015",
+    "mostrar": 1,
+    "random": 0.990414750976204
+  },
+  {
+    "entidad_id_1_pre": 5,
+    "entidad_id_2_pre": 10,
+    "entidad_id_1": "ENT-005",
+    "entidad_id_2": "ENT-010",
+    "mostrar": 0,
+    "random": 0.39487804090152967
+  },
+  {
+    "entidad_id_1_pre": 14,
+    "entidad_id_2_pre": 1,
+    "entidad_id_1": "ENT-014",
+    "entidad_id_2": "ENT-001",
+    "mostrar": 1,
+    "random": 0.7804900495111677
+  },
+  {
+    "entidad_id_1_pre": 2,
+    "entidad_id_2_pre": 16,
+    "entidad_id_1": "ENT-002",
+    "entidad_id_2": "ENT-016",
+    "mostrar": 1,
+    "random": 0.9655406642160255
+  },
+  {
+    "entidad_id_1_pre": 3,
+    "entidad_id_2_pre": 15,
+    "entidad_id_1": "ENT-003",
+    "entidad_id_2": "ENT-015",
+    "mostrar": 0,
+    "random": 0.4070023562126399
+  },
+  {
+    "entidad_id_1_pre": 18,
+    "entidad_id_2_pre": 15,
+    "entidad_id_1": "ENT-018",
+    "entidad_id_2": "ENT-015",
+    "mostrar": 1,
+    "random": 0.8945785789526111
+  },
+  {
+    "entidad_id_1_pre": 30,
+    "entidad_id_2_pre": 32,
+    "entidad_id_1": "ENT-030",
+    "entidad_id_2": "ENT-032",
+    "mostrar": 0,
+    "random": 0.3406030940021997
+  },
+  {
+    "entidad_id_1_pre": 22,
+    "entidad_id_2_pre": 14,
+    "entidad_id_1": "ENT-022",
+    "entidad_id_2": "ENT-014",
+    "mostrar": 1,
+    "random": 0.7912823183532678
+  },
+  {
+    "entidad_id_1_pre": 13,
+    "entidad_id_2_pre": 32,
+    "entidad_id_1": "ENT-013",
+    "entidad_id_2": "ENT-032",
+    "mostrar": 1,
+    "random": 0.8420732525469306
+  },
+  {
+    "entidad_id_1_pre": 30,
+    "entidad_id_2_pre": 10,
+    "entidad_id_1": "ENT-030",
+    "entidad_id_2": "ENT-010",
+    "mostrar": 1,
+    "random": 0.9391565871280387
+  },
+  {
+    "entidad_id_1_pre": 2,
+    "entidad_id_2_pre": 15,
+    "entidad_id_1": "ENT-002",
+    "entidad_id_2": "ENT-015",
+    "mostrar": 1,
+    "random": 0.6729079365209694
+  },
+  {
+    "entidad_id_1_pre": 17,
+    "entidad_id_2_pre": 26,
+    "entidad_id_1": "ENT-017",
+    "entidad_id_2": "ENT-026",
+    "mostrar": 0,
+    "random": 0.07203126119413872
+  },
+  {
+    "entidad_id_1_pre": 12,
+    "entidad_id_2_pre": 13,
+    "entidad_id_1": "ENT-012",
+    "entidad_id_2": "ENT-013",
+    "mostrar": 1,
+    "random": 0.6091442837547035
+  },
+  {
+    "entidad_id_1_pre": 10,
+    "entidad_id_2_pre": 25,
+    "entidad_id_1": "ENT-010",
+    "entidad_id_2": "ENT-025",
+    "mostrar": 0,
+    "random": 0.3876197502864246
+  },
+  {
+    "entidad_id_1_pre": 8,
+    "entidad_id_2_pre": 2,
+    "entidad_id_1": "ENT-008",
+    "entidad_id_2": "ENT-002",
+    "mostrar": 0,
+    "random": 0.09561413778974681
+  },
+  {
+    "entidad_id_1_pre": 6,
+    "entidad_id_2_pre": 13,
+    "entidad_id_1": "ENT-006",
+    "entidad_id_2": "ENT-013",
+    "mostrar": 1,
+    "random": 0.8867680529116317
+  },
+  {
+    "entidad_id_1_pre": 4,
+    "entidad_id_2_pre": 30,
+    "entidad_id_1": "ENT-004",
+    "entidad_id_2": "ENT-030",
+    "mostrar": 1,
+    "random": 0.7101430762693518
+  },
+  {
+    "entidad_id_1_pre": 2,
+    "entidad_id_2_pre": 28,
+    "entidad_id_1": "ENT-002",
+    "entidad_id_2": "ENT-028",
+    "mostrar": 1,
+    "random": 0.8133794408666059
+  },
+  {
+    "entidad_id_1_pre": 28,
+    "entidad_id_2_pre": 25,
+    "entidad_id_1": "ENT-028",
+    "entidad_id_2": "ENT-025",
+    "mostrar": 0,
+    "random": 0.27164979870184525
+  },
+  {
+    "entidad_id_1_pre": 11,
+    "entidad_id_2_pre": 19,
+    "entidad_id_1": "ENT-011",
+    "entidad_id_2": "ENT-019",
+    "mostrar": 0,
+    "random": 0.18267991369087477
+  },
+  {
+    "entidad_id_1_pre": 21,
+    "entidad_id_2_pre": 12,
+    "entidad_id_1": "ENT-021",
+    "entidad_id_2": "ENT-012",
+    "mostrar": 0,
+    "random": 0.2204763319035128
+  },
+  {
+    "entidad_id_1_pre": 2,
+    "entidad_id_2_pre": 6,
+    "entidad_id_1": "ENT-002",
+    "entidad_id_2": "ENT-006",
+    "mostrar": 0,
+    "random": 0.3985249190965837
+  },
+  {
+    "entidad_id_1_pre": 31,
+    "entidad_id_2_pre": 20,
+    "entidad_id_1": "ENT-031",
+    "entidad_id_2": "ENT-020",
+    "mostrar": 1,
+    "random": 0.6370765913251614
+  },
+  {
+    "entidad_id_1_pre": 4,
+    "entidad_id_2_pre": 7,
+    "entidad_id_1": "ENT-004",
+    "entidad_id_2": "ENT-007",
+    "mostrar": 0,
+    "random": 0.18887516705453966
+  },
+  {
+    "entidad_id_1_pre": 17,
+    "entidad_id_2_pre": 13,
+    "entidad_id_1": "ENT-017",
+    "entidad_id_2": "ENT-013",
+    "mostrar": 0,
+    "random": 0.025508779608998777
+  },
+  {
+    "entidad_id_1_pre": 7,
+    "entidad_id_2_pre": 31,
+    "entidad_id_1": "ENT-007",
+    "entidad_id_2": "ENT-031",
+    "mostrar": 0,
+    "random": 0.33805494541507675
+  },
+  {
+    "entidad_id_1_pre": 31,
+    "entidad_id_2_pre": 28,
+    "entidad_id_1": "ENT-031",
+    "entidad_id_2": "ENT-028",
+    "mostrar": 1,
+    "random": 0.8657455098415786
+  },
+  {
+    "entidad_id_1_pre": 9,
+    "entidad_id_2_pre": 2,
+    "entidad_id_1": "ENT-009",
+    "entidad_id_2": "ENT-002",
+    "mostrar": 0,
+    "random": 0.4112371969158436
+  },
+  {
+    "entidad_id_1_pre": 18,
+    "entidad_id_2_pre": 28,
+    "entidad_id_1": "ENT-018",
+    "entidad_id_2": "ENT-028",
+    "mostrar": 0,
+    "random": 0.2939817671336301
+  },
+  {
+    "entidad_id_1_pre": 18,
+    "entidad_id_2_pre": 27,
+    "entidad_id_1": "ENT-018",
+    "entidad_id_2": "ENT-027",
+    "mostrar": 0,
+    "random": 0.18769096929836748
+  },
+  {
+    "entidad_id_1_pre": 21,
+    "entidad_id_2_pre": 31,
+    "entidad_id_1": "ENT-021",
+    "entidad_id_2": "ENT-031",
+    "mostrar": 1,
+    "random": 0.9788661095567408
+  },
+  {
+    "entidad_id_1_pre": 7,
+    "entidad_id_2_pre": 21,
+    "entidad_id_1": "ENT-007",
+    "entidad_id_2": "ENT-021",
+    "mostrar": 0,
+    "random": 0.3222181750745652
+  },
+  {
+    "entidad_id_1_pre": 8,
+    "entidad_id_2_pre": 15,
+    "entidad_id_1": "ENT-008",
+    "entidad_id_2": "ENT-015",
+    "mostrar": 1,
+    "random": 0.9655013010762565
+  },
+  {
+    "entidad_id_1_pre": 14,
+    "entidad_id_2_pre": 7,
+    "entidad_id_1": "ENT-014",
+    "entidad_id_2": "ENT-007",
+    "mostrar": 1,
+    "random": 0.7070601119446553
+  },
+  {
+    "entidad_id_1_pre": 29,
+    "entidad_id_2_pre": 7,
+    "entidad_id_1": "ENT-029",
+    "entidad_id_2": "ENT-007",
+    "mostrar": 1,
+    "random": 0.6153892856475582
+  },
+  {
+    "entidad_id_1_pre": 12,
+    "entidad_id_2_pre": 28,
+    "entidad_id_1": "ENT-012",
+    "entidad_id_2": "ENT-028",
+    "mostrar": 1,
+    "random": 0.6181612556222834
+  },
+  {
+    "entidad_id_1_pre": 14,
+    "entidad_id_2_pre": 24,
+    "entidad_id_1": "ENT-014",
+    "entidad_id_2": "ENT-024",
+    "mostrar": 1,
+    "random": 0.7020773137512251
+  },
+  {
+    "entidad_id_1_pre": 9,
+    "entidad_id_2_pre": 3,
+    "entidad_id_1": "ENT-009",
+    "entidad_id_2": "ENT-003",
+    "mostrar": 0,
+    "random": 0.3994506293631911
+  },
+  {
+    "entidad_id_1_pre": 1,
+    "entidad_id_2_pre": 29,
+    "entidad_id_1": "ENT-001",
+    "entidad_id_2": "ENT-029",
+    "mostrar": 1,
+    "random": 0.6675793943563546
+  },
+  {
+    "entidad_id_1_pre": 8,
+    "entidad_id_2_pre": 6,
+    "entidad_id_1": "ENT-008",
+    "entidad_id_2": "ENT-006",
+    "mostrar": 1,
+    "random": 0.7067799431493603
+  },
+  {
+    "entidad_id_1_pre": 13,
+    "entidad_id_2_pre": 5,
+    "entidad_id_1": "ENT-013",
+    "entidad_id_2": "ENT-005",
+    "mostrar": 0,
+    "random": 0.20779749772989298
+  },
+  {
+    "entidad_id_1_pre": 21,
+    "entidad_id_2_pre": 6,
+    "entidad_id_1": "ENT-021",
+    "entidad_id_2": "ENT-006",
+    "mostrar": 0,
+    "random": 0.13000598193342794
+  },
+  {
+    "entidad_id_1_pre": 31,
+    "entidad_id_2_pre": 26,
+    "entidad_id_1": "ENT-031",
+    "entidad_id_2": "ENT-026",
+    "mostrar": 1,
+    "random": 0.9558789118381523
+  },
+  {
+    "entidad_id_1_pre": 12,
+    "entidad_id_2_pre": 8,
+    "entidad_id_1": "ENT-012",
+    "entidad_id_2": "ENT-008",
+    "mostrar": 1,
+    "random": 0.9087113911728141
+  },
+  {
+    "entidad_id_1_pre": 28,
+    "entidad_id_2_pre": 3,
+    "entidad_id_1": "ENT-028",
+    "entidad_id_2": "ENT-003",
+    "mostrar": 1,
+    "random": 0.5560705168538919
+  },
+  {
+    "entidad_id_1_pre": 32,
+    "entidad_id_2_pre": 22,
+    "entidad_id_1": "ENT-032",
+    "entidad_id_2": "ENT-022",
+    "mostrar": 1,
+    "random": 0.916138311416774
+  },
+  {
+    "entidad_id_1_pre": 27,
+    "entidad_id_2_pre": 16,
+    "entidad_id_1": "ENT-027",
+    "entidad_id_2": "ENT-016",
+    "mostrar": 1,
+    "random": 0.8681446113680834
+  },
+  {
+    "entidad_id_1_pre": 21,
+    "entidad_id_2_pre": 5,
+    "entidad_id_1": "ENT-021",
+    "entidad_id_2": "ENT-005",
+    "mostrar": 1,
+    "random": 0.7096002607261244
+  },
+  {
+    "entidad_id_1_pre": 2,
+    "entidad_id_2_pre": 20,
+    "entidad_id_1": "ENT-002",
+    "entidad_id_2": "ENT-020",
+    "mostrar": 0,
+    "random": 0.18047462690109395
+  },
+  {
+    "entidad_id_1_pre": 10,
+    "entidad_id_2_pre": 27,
+    "entidad_id_1": "ENT-010",
+    "entidad_id_2": "ENT-027",
+    "mostrar": 0,
+    "random": 0.22710563763332714
+  },
+  {
+    "entidad_id_1_pre": 21,
+    "entidad_id_2_pre": 26,
+    "entidad_id_1": "ENT-021",
+    "entidad_id_2": "ENT-026",
+    "mostrar": 1,
+    "random": 0.9205613983515316
+  },
+  {
+    "entidad_id_1_pre": 9,
+    "entidad_id_2_pre": 22,
+    "entidad_id_1": "ENT-009",
+    "entidad_id_2": "ENT-022",
+    "mostrar": 0,
+    "random": 0.2829582479183439
+  },
+  {
+    "entidad_id_1_pre": 10,
+    "entidad_id_2_pre": 6,
+    "entidad_id_1": "ENT-010",
+    "entidad_id_2": "ENT-006",
+    "mostrar": 0,
+    "random": 0.4831002845525577
+  },
+  {
+    "entidad_id_1_pre": 16,
+    "entidad_id_2_pre": 28,
+    "entidad_id_1": "ENT-016",
+    "entidad_id_2": "ENT-028",
+    "mostrar": 1,
+    "random": 0.9041116697323919
+  },
+  {
+    "entidad_id_1_pre": 30,
+    "entidad_id_2_pre": 9,
+    "entidad_id_1": "ENT-030",
+    "entidad_id_2": "ENT-009",
+    "mostrar": 0,
+    "random": 0.011016224475034142
+  },
+  {
+    "entidad_id_1_pre": 24,
+    "entidad_id_2_pre": 5,
+    "entidad_id_1": "ENT-024",
+    "entidad_id_2": "ENT-005",
+    "mostrar": 0,
+    "random": 0.4190839917769156
+  },
+  {
+    "entidad_id_1_pre": 31,
+    "entidad_id_2_pre": 15,
+    "entidad_id_1": "ENT-031",
+    "entidad_id_2": "ENT-015",
+    "mostrar": 1,
+    "random": 0.5933756135784337
+  },
+  {
+    "entidad_id_1_pre": 9,
+    "entidad_id_2_pre": 7,
+    "entidad_id_1": "ENT-009",
+    "entidad_id_2": "ENT-007",
+    "mostrar": 0,
+    "random": 0.11795072482837021
+  },
+  {
+    "entidad_id_1_pre": 26,
+    "entidad_id_2_pre": 21,
+    "entidad_id_1": "ENT-026",
+    "entidad_id_2": "ENT-021",
+    "mostrar": 1,
+    "random": 0.7304410696817548
+  },
+  {
+    "entidad_id_1_pre": 1,
+    "entidad_id_2_pre": 8,
+    "entidad_id_1": "ENT-001",
+    "entidad_id_2": "ENT-008",
+    "mostrar": 1,
+    "random": 0.9416165646621218
+  },
+  {
+    "entidad_id_1_pre": 16,
+    "entidad_id_2_pre": 5,
+    "entidad_id_1": "ENT-016",
+    "entidad_id_2": "ENT-005",
+    "mostrar": 1,
+    "random": 0.6707162217905551
+  },
+  {
+    "entidad_id_1_pre": 3,
+    "entidad_id_2_pre": 13,
+    "entidad_id_1": "ENT-003",
+    "entidad_id_2": "ENT-013",
+    "mostrar": 1,
+    "random": 0.6181347521902664
+  },
+  {
+    "entidad_id_1_pre": 27,
+    "entidad_id_2_pre": 15,
+    "entidad_id_1": "ENT-027",
+    "entidad_id_2": "ENT-015",
+    "mostrar": 0,
+    "random": 0.4736106099340831
+  },
+  {
+    "entidad_id_1_pre": 21,
+    "entidad_id_2_pre": 14,
+    "entidad_id_1": "ENT-021",
+    "entidad_id_2": "ENT-014",
+    "mostrar": 1,
+    "random": 0.6708352131436981
+  },
+  {
+    "entidad_id_1_pre": 6,
+    "entidad_id_2_pre": 20,
+    "entidad_id_1": "ENT-006",
+    "entidad_id_2": "ENT-020",
+    "mostrar": 0,
+    "random": 0.28594175328220284
+  },
+  {
+    "entidad_id_1_pre": 9,
+    "entidad_id_2_pre": 11,
+    "entidad_id_1": "ENT-009",
+    "entidad_id_2": "ENT-011",
+    "mostrar": 1,
+    "random": 0.8956029966172221
+  },
+  {
+    "entidad_id_1_pre": 6,
+    "entidad_id_2_pre": 19,
+    "entidad_id_1": "ENT-006",
+    "entidad_id_2": "ENT-019",
+    "mostrar": 0,
+    "random": 0.2481067160248298
+  },
+  {
+    "entidad_id_1_pre": 18,
+    "entidad_id_2_pre": 5,
+    "entidad_id_1": "ENT-018",
+    "entidad_id_2": "ENT-005",
+    "mostrar": 0,
+    "random": 0.0016071163573105895
+  },
+  {
+    "entidad_id_1_pre": 18,
+    "entidad_id_2_pre": 24,
+    "entidad_id_1": "ENT-018",
+    "entidad_id_2": "ENT-024",
+    "mostrar": 1,
+    "random": 0.839253578814281
+  },
+  {
+    "entidad_id_1_pre": 29,
+    "entidad_id_2_pre": 28,
+    "entidad_id_1": "ENT-029",
+    "entidad_id_2": "ENT-028",
+    "mostrar": 1,
+    "random": 0.7805294564644696
+  },
+  {
+    "entidad_id_1_pre": 20,
+    "entidad_id_2_pre": 13,
+    "entidad_id_1": "ENT-020",
+    "entidad_id_2": "ENT-013",
+    "mostrar": 0,
+    "random": 0.018638577535000422
+  },
+  {
+    "entidad_id_1_pre": 23,
+    "entidad_id_2_pre": 10,
+    "entidad_id_1": "ENT-023",
+    "entidad_id_2": "ENT-010",
+    "mostrar": 0,
+    "random": 0.20392340819059984
+  },
+  {
+    "entidad_id_1_pre": 32,
+    "entidad_id_2_pre": 19,
+    "entidad_id_1": "ENT-032",
+    "entidad_id_2": "ENT-019",
+    "mostrar": 1,
+    "random": 0.6766690271446487
+  },
+  {
+    "entidad_id_1_pre": 20,
+    "entidad_id_2_pre": 19,
+    "entidad_id_1": "ENT-020",
+    "entidad_id_2": "ENT-019",
+    "mostrar": 0,
+    "random": 0.42740701814939797
+  },
+  {
+    "entidad_id_1_pre": 8,
+    "entidad_id_2_pre": 24,
+    "entidad_id_1": "ENT-008",
+    "entidad_id_2": "ENT-024",
+    "mostrar": 0,
+    "random": 0.14363362898004972
+  },
+  {
+    "entidad_id_1_pre": 6,
+    "entidad_id_2_pre": 11,
+    "entidad_id_1": "ENT-006",
+    "entidad_id_2": "ENT-011",
+    "mostrar": 1,
+    "random": 0.6252538192606507
+  },
+  {
+    "entidad_id_1_pre": 32,
+    "entidad_id_2_pre": 9,
+    "entidad_id_1": "ENT-032",
+    "entidad_id_2": "ENT-009",
+    "mostrar": 1,
+    "random": 0.5521598960170934
+  },
+  {
+    "entidad_id_1_pre": 22,
+    "entidad_id_2_pre": 27,
+    "entidad_id_1": "ENT-022",
+    "entidad_id_2": "ENT-027",
+    "mostrar": 1,
+    "random": 0.6015011123543326
+  },
+  {
+    "entidad_id_1_pre": 6,
+    "entidad_id_2_pre": 32,
+    "entidad_id_1": "ENT-006",
+    "entidad_id_2": "ENT-032",
+    "mostrar": 1,
+    "random": 0.9619911682842879
+  },
+  {
+    "entidad_id_1_pre": 19,
+    "entidad_id_2_pre": 1,
+    "entidad_id_1": "ENT-019",
+    "entidad_id_2": "ENT-001",
+    "mostrar": 0,
+    "random": 0.0764880559270461
+  },
+  {
+    "entidad_id_1_pre": 30,
+    "entidad_id_2_pre": 5,
+    "entidad_id_1": "ENT-030",
+    "entidad_id_2": "ENT-005",
+    "mostrar": 0,
+    "random": 0.3493439116147504
+  },
+  {
+    "entidad_id_1_pre": 16,
+    "entidad_id_2_pre": 26,
+    "entidad_id_1": "ENT-016",
+    "entidad_id_2": "ENT-026",
+    "mostrar": 1,
+    "random": 0.6739303547836427
+  },
+  {
+    "entidad_id_1_pre": 32,
+    "entidad_id_2_pre": 17,
+    "entidad_id_1": "ENT-032",
+    "entidad_id_2": "ENT-017",
+    "mostrar": 1,
+    "random": 0.8701171390387368
+  },
+  {
+    "entidad_id_1_pre": 31,
+    "entidad_id_2_pre": 11,
+    "entidad_id_1": "ENT-031",
+    "entidad_id_2": "ENT-011",
+    "mostrar": 1,
+    "random": 0.8170223639202723
+  },
+  {
+    "entidad_id_1_pre": 16,
+    "entidad_id_2_pre": 29,
+    "entidad_id_1": "ENT-016",
+    "entidad_id_2": "ENT-029",
+    "mostrar": 1,
+    "random": 0.5244294306033903
+  },
+  {
+    "entidad_id_1_pre": 27,
+    "entidad_id_2_pre": 31,
+    "entidad_id_1": "ENT-027",
+    "entidad_id_2": "ENT-031",
+    "mostrar": 1,
+    "random": 0.7570447753618653
+  },
+  {
+    "entidad_id_1_pre": 19,
+    "entidad_id_2_pre": 22,
+    "entidad_id_1": "ENT-019",
+    "entidad_id_2": "ENT-022",
+    "mostrar": 0,
+    "random": 0.2928349081242504
+  },
+  {
+    "entidad_id_1_pre": 29,
+    "entidad_id_2_pre": 6,
+    "entidad_id_1": "ENT-029",
+    "entidad_id_2": "ENT-006",
+    "mostrar": 1,
+    "random": 0.719587810479117
+  },
+  {
+    "entidad_id_1_pre": 5,
+    "entidad_id_2_pre": 3,
+    "entidad_id_1": "ENT-005",
+    "entidad_id_2": "ENT-003",
+    "mostrar": 1,
+    "random": 0.5612156418150448
+  },
+  {
+    "entidad_id_1_pre": 32,
+    "entidad_id_2_pre": 14,
+    "entidad_id_1": "ENT-032",
+    "entidad_id_2": "ENT-014",
+    "mostrar": 1,
+    "random": 0.9674374208507022
+  },
+  {
+    "entidad_id_1_pre": 32,
+    "entidad_id_2_pre": 18,
+    "entidad_id_1": "ENT-032",
+    "entidad_id_2": "ENT-018",
+    "mostrar": 1,
+    "random": 0.7964937244748521
+  },
+  {
+    "entidad_id_1_pre": 17,
+    "entidad_id_2_pre": 7,
+    "entidad_id_1": "ENT-017",
+    "entidad_id_2": "ENT-007",
+    "mostrar": 0,
+    "random": 0.391706535484739
+  },
+  {
+    "entidad_id_1_pre": 18,
+    "entidad_id_2_pre": 7,
+    "entidad_id_1": "ENT-018",
+    "entidad_id_2": "ENT-007",
+    "mostrar": 1,
+    "random": 0.8393017969718094
+  },
+  {
+    "entidad_id_1_pre": 24,
+    "entidad_id_2_pre": 26,
+    "entidad_id_1": "ENT-024",
+    "entidad_id_2": "ENT-026",
+    "mostrar": 1,
+    "random": 0.890838179592048
+  },
+  {
+    "entidad_id_1_pre": 24,
+    "entidad_id_2_pre": 1,
+    "entidad_id_1": "ENT-024",
+    "entidad_id_2": "ENT-001",
+    "mostrar": 0,
+    "random": 0.21857282013240442
+  },
+  {
+    "entidad_id_1_pre": 3,
+    "entidad_id_2_pre": 5,
+    "entidad_id_1": "ENT-003",
+    "entidad_id_2": "ENT-005",
+    "mostrar": 0,
+    "random": 0.25820070793033967
+  },
+  {
+    "entidad_id_1_pre": 21,
+    "entidad_id_2_pre": 23,
+    "entidad_id_1": "ENT-021",
+    "entidad_id_2": "ENT-023",
+    "mostrar": 1,
+    "random": 0.7082603713848703
+  },
+  {
+    "entidad_id_1_pre": 18,
+    "entidad_id_2_pre": 3,
+    "entidad_id_1": "ENT-018",
+    "entidad_id_2": "ENT-003",
+    "mostrar": 1,
+    "random": 0.9413032742361237
+  },
+  {
+    "entidad_id_1_pre": 24,
+    "entidad_id_2_pre": 29,
+    "entidad_id_1": "ENT-024",
+    "entidad_id_2": "ENT-029",
+    "mostrar": 0,
+    "random": 0.09530591398883392
+  },
+  {
+    "entidad_id_1_pre": 13,
+    "entidad_id_2_pre": 22,
+    "entidad_id_1": "ENT-013",
+    "entidad_id_2": "ENT-022",
+    "mostrar": 1,
+    "random": 0.8679687123712496
+  },
+  {
+    "entidad_id_1_pre": 11,
+    "entidad_id_2_pre": 26,
+    "entidad_id_1": "ENT-011",
+    "entidad_id_2": "ENT-026",
+    "mostrar": 0,
+    "random": 0.23338109252900674
+  },
+  {
+    "entidad_id_1_pre": 17,
+    "entidad_id_2_pre": 15,
+    "entidad_id_1": "ENT-017",
+    "entidad_id_2": "ENT-015",
+    "mostrar": 0,
+    "random": 0.45652795742924157
+  },
+  {
+    "entidad_id_1_pre": 1,
+    "entidad_id_2_pre": 26,
+    "entidad_id_1": "ENT-001",
+    "entidad_id_2": "ENT-026",
+    "mostrar": 1,
+    "random": 0.8573272927553595
+  },
+  {
+    "entidad_id_1_pre": 19,
+    "entidad_id_2_pre": 4,
+    "entidad_id_1": "ENT-019",
+    "entidad_id_2": "ENT-004",
+    "mostrar": 1,
+    "random": 0.9782813048366203
+  },
+  {
+    "entidad_id_1_pre": 29,
+    "entidad_id_2_pre": 1,
+    "entidad_id_1": "ENT-029",
+    "entidad_id_2": "ENT-001",
+    "mostrar": 0,
+    "random": 0.03269403137535343
+  },
+  {
+    "entidad_id_1_pre": 27,
+    "entidad_id_2_pre": 30,
+    "entidad_id_1": "ENT-027",
+    "entidad_id_2": "ENT-030",
+    "mostrar": 0,
+    "random": 0.05177360102052497
+  },
+  {
+    "entidad_id_1_pre": 18,
+    "entidad_id_2_pre": 13,
+    "entidad_id_1": "ENT-018",
+    "entidad_id_2": "ENT-013",
+    "mostrar": 0,
+    "random": 0.2330672687859584
+  },
+  {
+    "entidad_id_1_pre": 16,
+    "entidad_id_2_pre": 3,
+    "entidad_id_1": "ENT-016",
+    "entidad_id_2": "ENT-003",
+    "mostrar": 0,
+    "random": 0.29114038240511886
+  },
+  {
+    "entidad_id_1_pre": 9,
+    "entidad_id_2_pre": 8,
+    "entidad_id_1": "ENT-009",
+    "entidad_id_2": "ENT-008",
+    "mostrar": 1,
+    "random": 0.8603315012487002
+  },
+  {
+    "entidad_id_1_pre": 25,
+    "entidad_id_2_pre": 5,
+    "entidad_id_1": "ENT-025",
+    "entidad_id_2": "ENT-005",
+    "mostrar": 1,
+    "random": 0.9668149921101916
+  },
+  {
+    "entidad_id_1_pre": 23,
+    "entidad_id_2_pre": 19,
+    "entidad_id_1": "ENT-023",
+    "entidad_id_2": "ENT-019",
+    "mostrar": 0,
+    "random": 0.050601307687950126
+  },
+  {
+    "entidad_id_1_pre": 12,
+    "entidad_id_2_pre": 2,
+    "entidad_id_1": "ENT-012",
+    "entidad_id_2": "ENT-002",
+    "mostrar": 0,
+    "random": 0.06878129719523773
+  },
+  {
+    "entidad_id_1_pre": 11,
+    "entidad_id_2_pre": 9,
+    "entidad_id_1": "ENT-011",
+    "entidad_id_2": "ENT-009",
+    "mostrar": 0,
+    "random": 0.10789009844030617
+  },
+  {
+    "entidad_id_1_pre": 30,
+    "entidad_id_2_pre": 16,
+    "entidad_id_1": "ENT-030",
+    "entidad_id_2": "ENT-016",
+    "mostrar": 1,
+    "random": 0.8834771232389032
+  }
+]
