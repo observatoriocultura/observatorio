@@ -24,6 +24,16 @@ import PaiView from '../views/pai/PaiView.vue'
 import MapaLocalidades from '../views/tools/MapaLocalidades.vue'
 import MapaPruebas from '../views/tools/MapaPruebas.vue'
 import IaChatTest from '../views/tools/IaChatTest.vue'
+import LoginView from '../views/auth/LoginView.vue'
+import RegisterView from '../views/auth/RegisterView.vue'
+import RecoveryPassword from '../views/auth/RecoveryPassword.vue'
+import NewPassword from '../views/auth/NewPassword.vue'
+import ProfileView from '../views/profile/ProfileView.vue'
+import ChangePassword from '../views/profiles/ChangePassword.vue'
+import ProfilesView from '../views/profiles/ProfilesView.vue'
+import ProfilesListView from '../views/profiles/ProfilesListView.vue'
+import EditProfileView from '../views/profiles/EditProfileView.vue'
+import { supabase } from '../lib/supabase'
 
 const routes = [
   {
@@ -163,6 +173,75 @@ const routes = [
     meta: { title: 'Demo Red de Observatorios | Observatorio' },
   },
   {
+    path: '/login',
+    name: 'login',
+    component: LoginView,
+    meta: { title: 'Iniciar sesión', isPublic: true, authMethod: 'password' },
+  },
+  {
+    path: '/login/link',
+    name: 'login-link',
+    component: LoginView,
+    meta: { title: 'Iniciar sesión con magic link', isPublic: true, authMethod: 'magic-link' },
+  },
+  {
+    path: '/register',
+    name: 'register',
+    component: RegisterView,
+    meta: { title: 'Registrarse', isPublic: true },
+  },
+  {
+    path: '/forgot-password',
+    name: 'forgot-password',
+    component: RecoveryPassword,
+    meta: { title: 'Recuperar contraseña', isPublic: true },
+  },
+  {
+    path: '/new-password',
+    name: 'new-password',
+    component: NewPassword,
+    meta: { title: 'Nueva contraseña', isPublic: true },
+  },
+  {
+    path: '/profile',
+    name: 'profile',
+    component: ProfileView,
+    meta: { title: 'Mi perfil', requiresAuth: true },
+  },
+  {
+    path: '/change_password',
+    name: 'change-password',
+    component: ChangePassword,
+    meta: { title: 'Cambiar contraseña', requiresAuth: true },
+  },
+  {
+    path: '/profiles',
+    component: ProfilesView,
+    meta: { requiresAuth: true, requiresAdmin: true },
+    children: [
+      {
+        path: '',
+        name: 'profiles',
+        component: ProfilesListView,
+        meta: {
+          title: 'Administrar usuarios',
+          requiresAuth: true,
+          requiresAdmin: true,
+        },
+      },
+      {
+        path: 'edit/:id',
+        name: 'edit-profile',
+        component: EditProfileView,
+        meta: {
+          title: 'Editar perfil',
+          requiresAuth: true,
+          requiresAdmin: true,
+        },
+      },
+    ],
+  },
+  {
     path: '/:year/:slug',
     name: 'Article',
     component: ArticleView,
@@ -175,10 +254,45 @@ const router = createRouter({
   routes,
 })
 
-router.beforeEach((to, from, next) => {
+router.beforeEach(async (to) => {
   const defaultTitle = 'Observatorio de Culturas - Bogotá'
   document.title = to.meta.title || defaultTitle
-  next()
+
+  const isAuthEntry = ['login', 'login-link', 'register'].includes(String(to.name))
+
+  if (!supabase) {
+    if (to.meta.requiresAuth) {
+      return { name: 'login', query: { redirect: to.fullPath } }
+    }
+    return true
+  }
+
+  const {
+    data: { session },
+    error: sessionError,
+  } = await supabase.auth.getSession()
+
+  if (to.meta.requiresAuth && (sessionError || !session)) {
+    return { name: 'login', query: { redirect: to.fullPath } }
+  }
+
+  if (isAuthEntry && session) {
+    return { name: 'profile' }
+  }
+
+  if (to.meta.requiresAdmin && session) {
+    const { data: profile, error: profileError } = await supabase
+      .from('profiles')
+      .select('role')
+      .eq('id', session.user.id)
+      .maybeSingle()
+
+    if (profileError || profile?.role !== 'admin') {
+      return { name: 'profile' }
+    }
+  }
+
+  return true
 })
 
 export default router
