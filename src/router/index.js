@@ -18,6 +18,7 @@ import SolicitudesTablero from '../views/2026/solicitudes_pai/SolicitudesTablero
 import ItdcLayout from '../views/2026/transformacion_digital/ItdcLayout.vue'
 import ContenidosMovilidad from '../views/2026/contenidos_movilidad/ContenidosMovilidad.vue'
 import RedObservatorios from '../views/2026/demo_red_observatorios/RedObservatorios.vue'
+import AvisosResiduos from '../views/2026/avisos_residuos_seguimiento/AvisosResiduos.vue'
 import MetaPdd from '../views/2026/meta_pdd/MetaPdd.vue'
 import MetaPddControl from '../views/2026/meta_pdd/MetaPddControl.vue'
 import PaiView from '../views/pai/PaiView.vue'
@@ -95,6 +96,12 @@ const routes = [
     name: 'Contenidos Movilidad',
     component: ContenidosMovilidad,
     meta: { title: 'Contenidos Movilidad | Observatorio' },
+  },
+  {
+    path: '/2026/avisos_residuos_seguimiento',
+    name: 'Avisos Residuos Seguimiento 2026',
+    component: AvisosResiduos,
+    meta: { title: 'Avisos de residuos | Observatorio' },
   },
   {
     path: '/meta-pdd-mediciones-observatorio',

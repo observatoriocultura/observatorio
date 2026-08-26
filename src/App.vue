@@ -149,6 +149,7 @@ onBeforeUnmount(() => {
 
 .main-content {
   flex: 1;
+  min-width: 0;
   transition: margin-left 320ms cubic-bezier(0.22, 1, 0.36, 1);
   min-height: 100vh;
   position: relative;
