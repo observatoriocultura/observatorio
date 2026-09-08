@@ -26,11 +26,12 @@ import MapaLocalidades from '../views/tools/MapaLocalidades.vue'
 import MapaPruebas from '../views/tools/MapaPruebas.vue'
 import IaChatTest from '../views/tools/IaChatTest.vue'
 import LoginView from '../views/auth/LoginView.vue'
+import AuthCallbackView from '../views/auth/AuthCallbackView.vue'
 import RegisterView from '../views/auth/RegisterView.vue'
 import RecoveryPassword from '../views/auth/RecoveryPassword.vue'
 import NewPassword from '../views/auth/NewPassword.vue'
+import CreateUser from '../views/auth/CreateUser.vue'
 import ProfileView from '../views/profile/ProfileView.vue'
-import ChangePassword from '../views/profiles/ChangePassword.vue'
 import ProfilesView from '../views/profiles/ProfilesView.vue'
 import ProfilesListView from '../views/profiles/ProfilesListView.vue'
 import EditProfileView from '../views/profiles/EditProfileView.vue'
@@ -192,6 +193,12 @@ const routes = [
     meta: { title: 'Iniciar sesión con magic link', isPublic: true, authMethod: 'magic-link' },
   },
   {
+    path: '/auth/callback',
+    name: 'auth-callback',
+    component: AuthCallbackView,
+    meta: { title: 'Validando acceso', isPublic: true, isAuthCallback: true },
+  },
+  {
     path: '/register',
     name: 'register',
     component: RegisterView,
@@ -216,12 +223,6 @@ const routes = [
     meta: { title: 'Mi perfil', requiresAuth: true },
   },
   {
-    path: '/change_password',
-    name: 'change-password',
-    component: ChangePassword,
-    meta: { title: 'Cambiar contraseña', requiresAuth: true },
-  },
-  {
     path: '/profiles',
     component: ProfilesView,
     meta: { requiresAuth: true, requiresAdmin: true },
@@ -232,6 +233,16 @@ const routes = [
         component: ProfilesListView,
         meta: {
           title: 'Administrar usuarios',
+          requiresAuth: true,
+          requiresAdmin: true,
+        },
+      },
+      {
+        path: 'create',
+        name: 'create-user',
+        component: CreateUser,
+        meta: {
+          title: 'Crear usuario',
           requiresAuth: true,
           requiresAdmin: true,
         },
@@ -266,6 +277,10 @@ router.beforeEach(async (to) => {
   document.title = to.meta.title || defaultTitle
 
   const isAuthEntry = ['login', 'login-link', 'register'].includes(String(to.name))
+
+  if (to.meta.isAuthCallback) {
+    return true
+  }
 
   if (!supabase) {
     if (to.meta.requiresAuth) {

@@ -7,6 +7,7 @@ import { REGISTRATION_ENABLED } from '../../constants/auth.js'
 import '../../assets/styles/auth.css'
 
 const route = useRoute()
+const authLogoUrl = `${import.meta.env.BASE_URL}resources/images/app/logotipo-navbar.png`
 
 const isMagicLinkLogin = computed(() => route.meta.authMethod === 'magic-link')
 </script>
@@ -18,9 +19,12 @@ const isMagicLinkLogin = computed(() => route.meta.authMethod === 'magic-link')
         <div class="col-12 col-sm-10 col-md-8 col-lg-5 col-xl-4">
           <section class="auth-card bg-white overflow-hidden">
             <div class="auth-card-body">
-              <div class="auth-brand" aria-label="Observatorio de Culturas Bogotá">
-                <span class="auth-brand-mark" aria-hidden="true">T</span>
-                <span>Observatorio de Culturas Bogotá</span>
+              <div class="auth-brand">
+                <img
+                  :src="authLogoUrl"
+                  alt="Observatorio y Gestión del Conocimiento Cultural"
+                  class="auth-brand-logo"
+                />
               </div>
 
               <nav class="auth-method-switch" aria-label="Método de inicio de sesión">

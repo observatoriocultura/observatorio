@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import { useToast } from 'vue-toastification'
 import { hasSupabaseConfig, supabase } from '../lib/supabase'
-import { getAppUrl } from '../lib/appUrl'
+import { getAuthCallbackUrl } from '../lib/authCallback'
 
 const toast = useToast()
 
@@ -19,6 +19,17 @@ const feedbackClasses = {
   error: 'alert-danger',
   warning: 'alert-warning',
   success: 'alert-success',
+}
+
+function getMagicLinkErrorMessage(error) {
+  const message = String(error?.message || '').trim()
+  const normalizedMessage = message.toLowerCase()
+
+  if (error?.code === 'otp_disabled' || normalizedMessage.includes('signups not allowed for otp')) {
+    return 'No existe un usuario registrado con este correo electrónico. Verifica la dirección o solicita la creación de una cuenta.'
+  }
+
+  return message || 'No se pudo enviar el magic link.'
 }
 
 async function handleLogin() {
@@ -49,7 +60,7 @@ async function handleLogin() {
       email,
       options: {
         shouldCreateUser: false,
-        emailRedirectTo: getAppUrl('profile'),
+        emailRedirectTo: getAuthCallbackUrl('magic-link'),
       },
     })
 
@@ -67,7 +78,7 @@ async function handleLogin() {
   } catch (error) {
     feedback.value = {
       type: 'error',
-      message: error.message || 'No se pudo enviar el magic link.',
+      message: getMagicLinkErrorMessage(error),
     }
   } finally {
     isSubmitting.value = false

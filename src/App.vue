@@ -9,7 +9,7 @@
       @navigate="handleSidebarNavigate"
     />
 
-    <main class="main-content" :style="{ marginLeft: isCollapsed ? '50px' : '240px' }">
+    <main class="main-content" :class="{ 'sidebar-collapsed': isCollapsed }">
       <router-view v-slot="{ Component }">
         <transition name="page-fade" mode="out-in">
           <component :is="Component" />
@@ -150,9 +150,14 @@ onBeforeUnmount(() => {
 .main-content {
   flex: 1;
   min-width: 0;
-  transition: margin-left 320ms cubic-bezier(0.22, 1, 0.36, 1);
+  margin-left: 260px;
+  transition: margin-left 260ms cubic-bezier(0.22, 1, 0.36, 1);
   min-height: 100vh;
   position: relative;
+}
+
+.main-content.sidebar-collapsed {
+  margin-left: 64px;
 }
 
 /* Transición suave entre páginas */
@@ -177,5 +182,12 @@ onBeforeUnmount(() => {
 body {
   margin: 0;
   padding: 0;
+}
+
+@media (max-width: 767.98px) {
+  .main-content,
+  .main-content.sidebar-collapsed {
+    margin-left: 0;
+  }
 }
 </style>

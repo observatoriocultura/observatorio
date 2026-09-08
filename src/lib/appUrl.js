@@ -8,3 +8,9 @@ export function getAppUrl(path = '') {
 
   return appUrl.toString()
 }
+
+export function getAppRootUrl() {
+  const basePath = import.meta.env.BASE_URL || '/'
+  const normalizedBasePath = basePath.endsWith('/') ? basePath : `${basePath}/`
+  return new URL(normalizedBasePath, window.location.origin).toString()
+}

@@ -24,9 +24,10 @@ if (import.meta.env.DEV && !hasSupabaseConfig) {
 export const supabase = hasSupabaseConfig
   ? createClient(supabaseUrl, supabasePublishableKey, {
       auth: {
+        flowType: 'pkce',
         persistSession: true,
         autoRefreshToken: true,
-        detectSessionInUrl: true,
+        detectSessionInUrl: false,
       },
     })
   : null

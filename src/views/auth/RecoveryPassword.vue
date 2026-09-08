@@ -3,15 +3,12 @@ import { computed, onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { useToast } from 'vue-toastification'
 import { hasSupabaseConfig, supabase } from '../../lib/supabase'
-import { getAppUrl } from '../../lib/appUrl'
-import {
-  forgetPasswordRecoveryRequest,
-  rememberPasswordRecoveryRequest,
-} from '../../lib/passwordRecoveryFlow'
+import { getAuthCallbackUrl } from '../../lib/authCallback'
 import '../../assets/styles/auth.css'
 
 const route = useRoute()
 const toast = useToast()
+const authLogoUrl = `${import.meta.env.BASE_URL}resources/images/app/logotipo-navbar.png`
 
 const form = ref({
   email: '',
@@ -32,31 +29,27 @@ const feedbackClasses = {
 
 const isFromProfile = computed(() => route.query?.from === 'profile')
 
-const pageTitle = computed(() => (
-  isAuthenticatedRecovery.value ? 'Restablecer contraseña' : 'Recuperar contraseña'
-))
+const pageTitle = computed(() =>
+  isAuthenticatedRecovery.value ? 'Restablecer contraseña' : 'Recuperar contraseña',
+)
 
-const pageSubtitle = computed(() => (
+const pageSubtitle = computed(() =>
   isAuthenticatedRecovery.value
     ? 'Enviaremos un enlace seguro al correo de tu cuenta para asignar una nueva contraseña.'
-    : 'Escribe el correo de tu cuenta y te enviaremos un enlace seguro.'
-))
+    : 'Escribe el correo de tu cuenta y te enviaremos un enlace seguro.',
+)
 
-const submitLabel = computed(() => (
-  isSubmitting.value ? 'Enviando...' : 'Enviar enlace'
-))
+const submitLabel = computed(() => (isSubmitting.value ? 'Enviando...' : 'Enviar enlace'))
 
-const footerCopy = computed(() => (
-  isAuthenticatedRecovery.value
-    ? '¿Quieres volver a tu perfil?'
-    : '¿Ya recordaste tu contraseña?'
-))
+const footerCopy = computed(() =>
+  isAuthenticatedRecovery.value ? '¿Quieres volver a tu perfil?' : '¿Ya recordaste tu contraseña?',
+)
 
-const footerLink = computed(() => (
+const footerLink = computed(() =>
   isAuthenticatedRecovery.value
     ? { to: '/profile', label: 'Volver al perfil' }
-    : { to: '/login', label: 'Inicia sesión' }
-))
+    : { to: '/login', label: 'Inicia sesión' },
+)
 
 function setFeedback(type, message) {
   feedback.value = { type, message }
@@ -111,10 +104,8 @@ async function handlePasswordRecovery() {
   isSubmitting.value = true
 
   try {
-    rememberPasswordRecoveryRequest()
-
     const { error } = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: getAppUrl('new-password'),
+      redirectTo: getAuthCallbackUrl('recovery'),
     })
 
     if (error) throw error
@@ -126,7 +117,6 @@ async function handlePasswordRecovery() {
     toast.success('Solicitud enviada. Revisa tu correo.')
     form.value.email = ''
   } catch (error) {
-    forgetPasswordRecoveryRequest()
     console.error('Error al enviar recuperación de contraseña:', error)
     setFeedback('error', error.message || 'No se pudo enviar el correo de recuperación.')
   } finally {
@@ -146,9 +136,12 @@ onMounted(() => {
         <div class="col-12 col-sm-10 col-md-8 col-lg-5 col-xl-4">
           <section class="auth-card bg-white overflow-hidden">
             <div class="auth-card-body">
-              <div class="auth-brand" aria-label="Observatorio de Culturas Bogotá">
-                <span class="auth-brand-mark" aria-hidden="true">T</span>
-                <span>Observatorio de Culturas Bogotá</span>
+              <div class="auth-brand">
+                <img
+                  :src="authLogoUrl"
+                  alt="Observatorio y Gestión del Conocimiento Cultural"
+                  class="auth-brand-logo"
+                />
               </div>
 
               <div class="auth-form-container">
@@ -171,7 +164,7 @@ onMounted(() => {
                       autocomplete="email"
                       required
                       :disabled="isSubmitting || isLoadingUserEmail"
-                    >
+                    />
                   </div>
 
                   <div

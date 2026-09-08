@@ -108,6 +108,13 @@ onMounted(async () => {
         <p class="text-muted mb-0">Gestiona los perfiles y roles de los usuarios registrados</p>
       </div>
       <div class="d-flex gap-2">
+        <router-link
+          :to="{ name: 'create-user' }"
+          class="btn btn-dark d-flex align-items-center gap-2"
+        >
+          <i class="bi bi-person-plus"></i>
+          <span>Crear usuario</span>
+        </router-link>
         <button
           v-if="selectedIds.length > 0"
           @click="openDeleteModal"
