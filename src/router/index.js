@@ -35,6 +35,7 @@ import ProfileView from '../views/profile/ProfileView.vue'
 import ProfilesView from '../views/profiles/ProfilesView.vue'
 import ProfilesListView from '../views/profiles/ProfilesListView.vue'
 import EditProfileView from '../views/profiles/EditProfileView.vue'
+import DataViz from '../views/dataviz/DataViz.vue'
 import { supabase } from '../lib/supabase'
 
 const routes = [
@@ -85,6 +86,12 @@ const routes = [
     name: 'Investigaciones',
     component: InvestigacionesView,
     meta: { title: 'Investigaciones' },
+  },
+  {
+    path: '/dataviz',
+    name: 'DataViz',
+    component: DataViz,
+    meta: { title: 'Visualización de datos | Observatorio' },
   },
   {
     path: '/2026/impactos-transformacion-digital-en-la-cultura',

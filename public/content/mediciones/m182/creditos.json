@@ -1,0 +1,52 @@
+[
+    {
+        "username":"diego.maldonado",
+        "nombre_mostrar":"Diego Maldonado",
+        "rol_en_encuesta":"Director del Observatorio",
+        "dato_mas_llamativo_encuesta":null,
+        "perfil":null,
+        "entidad":"Secretaría de Cultura, Recreación y Deporte",
+        "dependencia":"Dirección Observatorio y Gestión del Conocimiento Cultural",
+        "grupo":1
+    },
+    {
+        "username":"andrea.garcia",
+        "nombre_mostrar":"Andrea García Albarracín",
+        "rol_en_encuesta":"Líder de Investigación",
+        "dato_mas_llamativo_encuesta":null,
+        "perfil":"Equipo de Investigación del Sector Cultura, Recreación y Deporte",
+        "entidad":"Secretaría de Cultura, Recreación y Deporte",
+        "dependencia":"Dirección Observatorio y Gestión del Conocimiento Cultural",
+        "grupo":1
+    },
+    {
+        "username":"gisela.castrillon",
+        "nombre_mostrar":"Gisela Castrillón Moreno",
+        "rol_en_encuesta":"Estadística",
+        "dato_mas_llamativo_encuesta":null,
+        "perfil":"Líder del equipo de analítica y mediciones",
+        "entidad":"Secretaría de Cultura, Recreación y Deporte",
+        "dependencia":"Dirección Observatorio y Gestión del Conocimiento Cultural",
+        "grupo":1
+    },
+    {
+        "username":"mabel.ayala",
+        "nombre_mostrar":"Mábel Ayala Meneses",
+        "rol_en_encuesta":"Visualización de Datos",
+        "dato_mas_llamativo_encuesta":null,
+        "perfil":"Profesional Geoespacial - Procesamiento de datos",
+        "entidad":"Secretaría de Cultura, Recreación y Deporte",
+        "dependencia":"Dirección Observatorio y Gestión del Conocimiento Cultural",
+        "grupo":1
+    },
+    {
+        "username":"javier.ojeda",
+        "nombre_mostrar":"Mauricio Ojeda Pepinosa",
+        "rol_en_encuesta":"Visualización de Datos",
+        "dato_mas_llamativo_encuesta":null,
+        "perfil":"Líder del equipo de sistemas de información y narrativas",
+        "entidad":"Secretaría de Cultura, Recreación y Deporte",
+        "dependencia":"Dirección Observatorio y Gestión del Conocimiento Cultural",
+        "grupo":1
+    }
+]

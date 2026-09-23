@@ -4863,7 +4863,7 @@
         "codigo_variable":"P20.1",
         "indice_pregunta":79,
         "indice_variable":153,
-        "respuesta":2,
+        "respuesta":3,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":102.4639937651,
@@ -4873,7 +4873,7 @@
         "codigo_variable":"P20.1",
         "indice_pregunta":79,
         "indice_variable":153,
-        "respuesta":3,
+        "respuesta":2,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":102.4639937651,
@@ -19893,7 +19893,7 @@
         "codigo_variable":"P72.1",
         "indice_pregunta":171,
         "indice_variable":539,
-        "respuesta":32.0,
+        "respuesta":34.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":961.734382099,
@@ -19903,7 +19903,7 @@
         "codigo_variable":"P72.1",
         "indice_pregunta":171,
         "indice_variable":539,
-        "respuesta":34.0,
+        "respuesta":32.0,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":961.734382099,
@@ -22863,61 +22863,11 @@
         "codigo_variable":"D3_1",
         "indice_pregunta":200,
         "indice_variable":593,
-        "respuesta":4,
-        "respuesta_v2":"d. 25 a 35 años",
-        "respuesta_number":4.0,
-        "suma_factor":1517967.9962812916,
-        "cantidad_respuestas":1333
-    },
-    {
-        "codigo_variable":"D3_1",
-        "indice_pregunta":200,
-        "indice_variable":593,
-        "respuesta":5,
-        "respuesta_v2":"e. 36 a 45 años",
-        "respuesta_number":5.0,
-        "suma_factor":1203514.6942984741,
-        "cantidad_respuestas":1333
-    },
-    {
-        "codigo_variable":"D3_1",
-        "indice_pregunta":200,
-        "indice_variable":593,
-        "respuesta":6,
-        "respuesta_v2":"f. 46 a 55 años",
-        "respuesta_number":6.0,
-        "suma_factor":910823.527991969,
-        "cantidad_respuestas":905
-    },
-    {
-        "codigo_variable":"D3_1",
-        "indice_pregunta":200,
-        "indice_variable":593,
-        "respuesta":7,
-        "respuesta_v2":"g. 56 a 65 años",
-        "respuesta_number":7.0,
-        "suma_factor":905100.1751670608,
-        "cantidad_respuestas":765
-    },
-    {
-        "codigo_variable":"D3_1",
-        "indice_pregunta":200,
-        "indice_variable":593,
         "respuesta":3,
         "respuesta_v2":"c. 18 a 24 años",
         "respuesta_number":3.0,
-        "suma_factor":877782.6234550778,
-        "cantidad_respuestas":582
-    },
-    {
-        "codigo_variable":"D3_1",
-        "indice_pregunta":200,
-        "indice_variable":593,
-        "respuesta":8,
-        "respuesta_v2":"h. Mayores de 65 años",
-        "respuesta_number":8.0,
-        "suma_factor":799653.7257915357,
-        "cantidad_respuestas":580
+        "suma_factor":3489065.5058501898,
+        "cantidad_respuestas":3437
     },
     {
         "codigo_variable":"D3_1",
@@ -22926,8 +22876,18 @@
         "respuesta":2,
         "respuesta_v2":"b. 13 a 17 años",
         "respuesta_number":2.0,
-        "suma_factor":548422.0258652352,
-        "cantidad_respuestas":124
+        "suma_factor":1943329.8471082605,
+        "cantidad_respuestas":1152
+    },
+    {
+        "codigo_variable":"D3_1",
+        "indice_pregunta":200,
+        "indice_variable":593,
+        "respuesta":4,
+        "respuesta_v2":"d. 25 a 35 años",
+        "respuesta_number":4.0,
+        "suma_factor":1330869.415892194,
+        "cantidad_respuestas":1033
     },
     {
         "codigo_variable":"D4",
