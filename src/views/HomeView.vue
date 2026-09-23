@@ -23,11 +23,20 @@
 
         <div class="access-grid">
           <article v-for="block in accessBlocks" :key="block.title" class="access-card">
-            <span class="access-icon" :class="block.tone" aria-hidden="true">
+            <RouterLink
+              class="access-icon"
+              :class="block.tone"
+              :to="block.to"
+              :aria-label="block.linkLabel"
+            >
               <i class="bi" :class="block.icon"></i>
-            </span>
+            </RouterLink>
             <div class="access-copy">
-              <h3>{{ block.title }}</h3>
+              <h3>
+                <RouterLink class="access-title-link" :to="block.to">
+                  {{ block.title }}
+                </RouterLink>
+              </h3>
               <p>{{ block.description }}</p>
             </div>
             <RouterLink class="access-link" :to="block.to">
@@ -56,6 +65,15 @@ const accessBlocks = [
     to: '/investigaciones',
     icon: 'bi-clipboard-data',
     tone: 'tone-measurements',
+  },
+  {
+    title: 'Visualización de datos',
+    description:
+      'Explora tableros interactivos con indicadores, resultados y datos sobre las dinámicas culturales de Bogotá.',
+    linkLabel: 'Ver tableros',
+    to: '/dataviz',
+    icon: 'bi-bar-chart-line',
+    tone: 'tone-dataviz',
   },
   {
     title: 'Publicaciones',
@@ -164,7 +182,7 @@ p {
 
 .access-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: clamp(1rem, 2.4vw, 1.5rem);
 }
 
@@ -199,11 +217,17 @@ p {
   margin-bottom: 0.85rem;
   border-radius: 8px;
   font-size: 1.05rem;
+  text-decoration: none;
 }
 
 .tone-measurements {
   background: rgba(22, 100, 122, 0.1);
   color: var(--home-blue);
+}
+
+.tone-dataviz {
+  background: rgba(50, 32, 74, 0.1);
+  color: var(--home-purple);
 }
 
 .tone-publications {
@@ -226,6 +250,23 @@ h3 {
   font-size: 1rem;
   font-weight: 850;
   line-height: 1.2;
+}
+
+.access-title-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.access-title-link:hover,
+.access-title-link:focus {
+  color: var(--home-purple);
+  text-decoration: none;
+}
+
+.access-icon:focus-visible,
+.access-title-link:focus-visible {
+  outline: 3px solid rgba(50, 32, 74, 0.18);
+  outline-offset: 4px;
 }
 
 .access-copy p {
