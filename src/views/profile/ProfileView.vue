@@ -3,6 +3,12 @@ import { computed, onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useToast } from 'vue-toastification'
 import { supabase } from '../../lib/supabase'
+import {
+  PROFILE_GENDERS,
+  PROFILE_ROLE_KEYS,
+  getProfileRoleLabel,
+  normalizeProfileRole,
+} from '../../constants/catalogs'
 
 const router = useRouter()
 const toast = useToast()
@@ -13,7 +19,7 @@ function createEmptyProfile() {
     about: '',
     birth_date: '',
     gender: '',
-    role: 'subscriber',
+    role: PROFILE_ROLE_KEYS.SUBSCRIBER,
     updated_at: null,
   }
 }
@@ -26,10 +32,10 @@ const loadError = ref('')
 const isEditing = ref(false)
 const updateLoading = ref(false)
 
-const ROLE_LABELS = {
-  admin: { label: 'Administrador', class: 'role-admin' },
-  editor: { label: 'Editor', class: 'role-editor' },
-  subscriber: { label: 'Suscriptor', class: 'role-subscriber' },
+const ROLE_CLASSES = {
+  admin: 'role-admin',
+  editor: 'role-editor',
+  subscriber: 'role-subscriber',
 }
 
 const displayName = computed(
@@ -49,8 +55,8 @@ const userInitials = computed(() => {
 const aboutLength = computed(() => profile.value.about?.length || 0)
 
 function getRoleBadge(role) {
-  const normalizedRole = String(role || '').trim().toLowerCase()
-  return ROLE_LABELS[normalizedRole] || { label: 'Sin rol', class: 'role-default' }
+  const key = normalizeProfileRole(role)
+  return { label: getProfileRoleLabel(key), class: ROLE_CLASSES[key] || 'role-default' }
 }
 
 function formatBirthDate(dateValue) {
@@ -356,11 +362,9 @@ onMounted(loadProfile)
                     class="form-select"
                     :disabled="updateLoading"
                   >
-                    <option value="">Sin especificar</option>
-                    <option value="Hombre">Hombre</option>
-                    <option value="Mujer">Mujer</option>
-                    <option value="Otro">Otro</option>
-                    <option value="Prefiero no decirlo">Prefiero no decirlo</option>
+                    <option v-for="option in PROFILE_GENDERS" :key="option.key" :value="option.key">
+                      {{ option.label }}
+                    </option>
                   </select>
                 </div>
 

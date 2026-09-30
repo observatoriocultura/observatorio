@@ -1,6 +1,7 @@
 <script setup>
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
+import { PROFILE_ROLE_KEYS, getProfileRoleLabel, normalizeProfileRole } from '../../constants/catalogs'
 
 // Props que controlan el estado visual y la información del usuario.
 const props = defineProps({
@@ -50,24 +51,8 @@ const ALL_MENU_ITEMS = [
   },
 ]
 
-// Equivalencias para aceptar nombres alternativos de roles.
-const ROLE_ALIASES = {
-  administrator: 'admin',
-  administrador: 'admin',
-  administradora: 'admin',
-  suscriptor: 'subscriber',
-  suscriptora: 'subscriber',
-}
-
 // Roles permitidos por las opciones configuradas del menú.
 const KNOWN_MENU_ROLES = new Set(ALL_MENU_ITEMS.flatMap((item) => item.roles))
-
-// Texto visible asociado a cada rol reconocido.
-const ROLE_LABELS = {
-  admin: 'Administrador',
-  editor: 'Editor',
-  subscriber: 'Suscriptor',
-}
 
 // Menú filtrado según el rol normalizado del usuario actual.
 const menuItems = computed(() => {
@@ -91,7 +76,7 @@ const userDisplayName = computed(() => (
 ))
 
 // Etiqueta legible del rol actual del usuario.
-const userRoleLabel = computed(() => ROLE_LABELS[normalizeUserRole(props.user)] || 'Usuario')
+const userRoleLabel = computed(() => getProfileRoleLabel(normalizeUserRole(props.user)))
 
 // Iniciales del usuario para mostrar en su avatar.
 const userInitials = computed(() => {
@@ -115,13 +100,11 @@ function normalizeUserRole(user) {
   for (const rawRole of roleCandidates) {
     if (!rawRole) continue
 
-    const normalizedRole = String(rawRole).trim().toLowerCase()
-    const mappedRole = ROLE_ALIASES[normalizedRole] || normalizedRole
-
-    if (KNOWN_MENU_ROLES.has(mappedRole)) return mappedRole
+    const role = normalizeProfileRole(rawRole)
+    if (KNOWN_MENU_ROLES.has(role)) return role
   }
 
-  return 'subscriber'
+  return PROFILE_ROLE_KEYS.SUBSCRIBER
 }
 
 // Indica si una ruta corresponde a la sección activa del menú.

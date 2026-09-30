@@ -152,6 +152,7 @@
 import { computed, nextTick, onBeforeUnmount, onMounted, ref } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
 import { REGISTRATION_ENABLED } from '../../constants/auth.js'
+import { PROFILE_ROLE_KEYS, getProfileRoleLabel, normalizeProfileRole } from '../../constants/catalogs'
 
 defineOptions({ name: 'NavigationSidebar' })
 
@@ -188,6 +189,18 @@ const HOME_ITEM = {
 
 const AUTHENTICATED_ITEMS = [
   {
+    path: '/posts',
+    label: 'Publicaciones',
+    icon: 'bi-newspaper',
+    roles: ['admin', 'editor'],
+  },
+  {
+    path: '/files',
+    label: 'Gestión de archivos',
+    icon: 'bi-folder2-open',
+    roles: ['admin', 'editor'],
+  },
+  {
     path: '/profiles',
     label: 'Administrar usuarios',
     icon: 'bi-people',
@@ -212,20 +225,6 @@ const PUBLIC_ITEMS = [
     : []),
 ]
 
-const ROLE_ALIASES = {
-  administrator: 'admin',
-  administrador: 'admin',
-  administradora: 'admin',
-  suscriptor: 'subscriber',
-  suscriptora: 'subscriber',
-}
-
-const ROLE_LABELS = {
-  admin: 'Administrador',
-  editor: 'Editor',
-  subscriber: 'Suscriptor',
-}
-
 const userRole = computed(() => normalizeUserRole(props.user))
 
 const visibleMenuItems = computed(() => {
@@ -242,21 +241,18 @@ const userDisplayName = computed(
     'Usuario',
 )
 
-const userRoleLabel = computed(() => ROLE_LABELS[userRole.value] || 'Usuario')
+const userRoleLabel = computed(() => getProfileRoleLabel(userRole.value))
 const logoutButtonLabel = computed(() =>
   props.logoutLoading ? 'Cerrando sesión...' : 'Cerrar sesión',
 )
 
 function normalizeUserRole(user) {
   for (const candidate of [user?.role, user?.app_metadata?.role]) {
-    const normalized = String(candidate || '')
-      .trim()
-      .toLowerCase()
-    const mappedRole = ROLE_ALIASES[normalized] || normalized
-    if (ROLE_LABELS[mappedRole]) return mappedRole
+    const role = normalizeProfileRole(candidate)
+    if (role) return role
   }
 
-  return 'subscriber'
+  return PROFILE_ROLE_KEYS.SUBSCRIBER
 }
 
 function isMenuItemActive(path) {
@@ -601,7 +597,7 @@ onBeforeUnmount(() => {
 .sidebar-container.is-collapsed .user-summary {
   position: absolute;
   top: 12px;
-  left: calc((var(--sidebar-collapsed-width) - 41px) / 2);
+  left: 50%;
   width: 40px;
   height: 40px;
   min-width: 40px;
@@ -609,8 +605,16 @@ onBeforeUnmount(() => {
   min-height: 40px;
   flex: 0 0 40px;
   justify-content: center;
+  gap: 0;
   margin: 0;
   padding: 0;
+  overflow: hidden;
+  transform: translateX(-50%);
+}
+
+.sidebar-container.is-collapsed .user-details,
+.sidebar-container.is-collapsed .user-menu-chevron {
+  display: none;
 }
 
 .user-avatar {
@@ -637,6 +641,12 @@ onBeforeUnmount(() => {
   align-items: center;
   justify-content: center;
   line-height: 1;
+}
+
+.user-avatar i::before {
+  display: block;
+  line-height: 1;
+  vertical-align: 0;
 }
 
 .user-details {

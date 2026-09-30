@@ -51,7 +51,7 @@
 <script setup>
 import { computed } from 'vue'
 import ListSearchInput from '../../../components/ListSearchInput.vue'
-import { ENTIDADES } from '../../../constants/catalogos'
+import { ENTIDADES } from '../../../constants/catalogs'
 import { lineasInvestigacion } from '../constants'
 
 const props = defineProps({

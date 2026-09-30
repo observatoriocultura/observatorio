@@ -6,7 +6,7 @@ const route = useRoute()
 </script>
 
 <template>
-  <div class="profiles-view-container">
+  <div class="profiles-view-container pcrn-form">
     <!-- Menú administrativo solo si hay un ID de perfil en la ruta -->
     <div v-if="route.params.id && (route.name === 'edit-profile')" class="text-center pt-3">
       <ProfileAdminMenu :profile-id="route.params.id" />

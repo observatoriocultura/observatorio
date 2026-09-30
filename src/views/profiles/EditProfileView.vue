@@ -3,19 +3,24 @@ import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { onBeforeRouteLeave, useRoute, useRouter } from 'vue-router'
 import { useToast } from 'vue-toastification'
 import { supabase } from '../../lib/supabase'
+import {
+  PROFILE_GENDERS,
+  PROFILE_GENDER_VALUES,
+  PROFILE_ROLES,
+  PROFILE_ROLE_KEYS,
+  PROFILE_ROLE_VALUES,
+} from '../../constants/catalogs'
 
 const router = useRouter()
 const route = useRoute()
 const toast = useToast()
 
-const ALLOWED_GENDERS = ['', 'Hombre', 'Mujer', 'Otro', 'Prefiero no decirlo']
-const ALLOWED_ROLES = ['subscriber', 'editor', 'admin']
 const EMPTY_FORM = {
   full_name: '',
   about: '',
   birth_date: '',
   gender: '',
-  role: 'subscriber',
+  role: PROFILE_ROLE_KEYS.SUBSCRIBER,
 }
 
 const loading = ref(true)
@@ -45,7 +50,7 @@ function normalizeForm(values) {
     about: values.about.trim(),
     birth_date: values.birth_date || '',
     gender: values.gender || '',
-    role: values.role || 'subscriber',
+    role: values.role || PROFILE_ROLE_KEYS.SUBSCRIBER,
   }
 }
 
@@ -55,8 +60,8 @@ function validateForm() {
   if (!values.full_name) return 'El nombre completo es obligatorio.'
   if (values.full_name.length > 120) return 'El nombre no puede superar los 120 caracteres.'
   if (values.about.length > 500) return 'La descripción no puede superar los 500 caracteres.'
-  if (!ALLOWED_GENDERS.includes(values.gender)) return 'Selecciona un género válido.'
-  if (!ALLOWED_ROLES.includes(values.role)) return 'Selecciona un rol válido.'
+  if (!PROFILE_GENDER_VALUES.includes(values.gender)) return 'Selecciona un género válido.'
+  if (!PROFILE_ROLE_VALUES.includes(values.role)) return 'Selecciona un rol válido.'
   if (values.birth_date && values.birth_date > maxBirthDate) {
     return 'La fecha de nacimiento no puede estar en el futuro.'
   }
@@ -104,8 +109,8 @@ async function fetchProfile() {
       full_name: data.full_name || '',
       about: data.about || '',
       birth_date: data.birth_date || '',
-      gender: ALLOWED_GENDERS.includes(data.gender) ? data.gender : '',
-      role: ALLOWED_ROLES.includes(data.role) ? data.role : 'subscriber',
+      gender: PROFILE_GENDER_VALUES.includes(data.gender) ? data.gender : '',
+      role: PROFILE_ROLE_VALUES.includes(data.role) ? data.role : PROFILE_ROLE_KEYS.SUBSCRIBER,
     })
 
     form.value = { ...loadedForm }
@@ -215,7 +220,7 @@ onBeforeUnmount(() => window.removeEventListener('beforeunload', handleBeforeUnl
         <h1 class="h5 fw-bold mt-2">No se pudo abrir el perfil</h1>
         <p class="text-muted mb-3">{{ loadError }}</p>
         <div class="d-flex flex-wrap justify-content-center gap-2">
-          <button type="button" class="btn btn-dark action-button" @click="fetchProfile">
+          <button type="button" class="btn pcrn-btn-primary action-button" @click="fetchProfile">
             <i class="bi bi-arrow-clockwise me-2"></i>Reintentar
           </button>
           <router-link :to="{ name: 'profiles' }" class="btn btn-outline-secondary action-button">
@@ -248,7 +253,7 @@ onBeforeUnmount(() => window.removeEventListener('beforeunload', handleBeforeUnl
 
               <div class="row g-3">
                 <div class="col-12">
-                  <label for="full-name" class="form-label">Nombre completo</label>
+                  <label for="full-name" class="form-label fw-semibold">Nombre completo</label>
                   <input
                     id="full-name"
                     v-model="form.full_name"
@@ -264,28 +269,26 @@ onBeforeUnmount(() => window.removeEventListener('beforeunload', handleBeforeUnl
                 </div>
 
                 <div class="col-md-6">
-                  <label for="user-role" class="form-label">Rol</label>
+                  <label for="user-role" class="form-label fw-semibold">Rol</label>
                   <select id="user-role" v-model="form.role" class="form-select" :disabled="isOwnProfile">
-                    <option value="subscriber">Suscriptor</option>
-                    <option value="editor">Editor</option>
-                    <option value="admin">Administrador</option>
+                    <option v-for="option in PROFILE_ROLES" :key="option.key" :value="option.key">
+                      {{ option.label }}
+                    </option>
                   </select>
                   <div v-if="isOwnProfile" class="form-text">No puedes cambiar tu propio rol.</div>
                 </div>
 
                 <div class="col-md-6">
-                  <label for="gender" class="form-label">Género</label>
+                  <label for="gender" class="form-label fw-semibold">Género</label>
                   <select id="gender" v-model="form.gender" class="form-select">
-                    <option value="">Sin especificar</option>
-                    <option value="Hombre">Hombre</option>
-                    <option value="Mujer">Mujer</option>
-                    <option value="Otro">Otro</option>
-                    <option value="Prefiero no decirlo">Prefiero no decirlo</option>
+                    <option v-for="option in PROFILE_GENDERS" :key="option.key" :value="option.key">
+                      {{ option.label }}
+                    </option>
                   </select>
                 </div>
 
                 <div class="col-md-6">
-                  <label for="birth-date" class="form-label">Fecha de nacimiento</label>
+                  <label for="birth-date" class="form-label fw-semibold">Fecha de nacimiento</label>
                   <input
                     id="birth-date"
                     v-model="form.birth_date"
@@ -297,8 +300,8 @@ onBeforeUnmount(() => window.removeEventListener('beforeunload', handleBeforeUnl
 
                 <div class="col-12">
                   <div class="d-flex justify-content-between gap-3">
-                    <label for="about" class="form-label">Acerca de</label>
-                    <span class="character-count">{{ form.about.length }}/500</span>
+                    <label for="about" class="form-label fw-semibold">Acerca de</label>
+                    <span class="form-hint">{{ form.about.length }}/500</span>
                   </div>
                   <textarea
                     id="about"
@@ -312,11 +315,11 @@ onBeforeUnmount(() => window.removeEventListener('beforeunload', handleBeforeUnl
               </div>
             </div>
 
-            <div class="card-footer profile-actions d-flex flex-column-reverse flex-sm-row justify-content-end gap-2 p-3">
+            <div class="card-footer profile-actions form-actions d-flex flex-column-reverse flex-sm-row justify-content-end gap-2 p-3">
               <router-link :to="{ name: 'profiles' }" class="btn btn-light border action-button px-4">
                 Cancelar
               </router-link>
-              <button type="submit" class="btn btn-dark action-button px-4" :disabled="saveLoading || !hasChanges">
+              <button type="submit" class="btn pcrn-btn-primary action-button px-4" :disabled="saveLoading || !hasChanges">
                 <span v-if="saveLoading" class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
                 <i v-else class="bi bi-check2 me-2" aria-hidden="true"></i>
                 {{ saveLoading ? 'Guardando...' : 'Guardar cambios' }}
@@ -331,7 +334,7 @@ onBeforeUnmount(() => window.removeEventListener('beforeunload', handleBeforeUnl
 
 <style scoped>
 .edit-profile-page {
-  color: #202124;
+  color: var(--pcrn-text);
 }
 
 .edit-profile-shell {
@@ -344,19 +347,19 @@ onBeforeUnmount(() => window.removeEventListener('beforeunload', handleBeforeUnl
 }
 
 .profile-state-card {
-  background: #fff;
-  border: 1px solid #e9ecef;
+  background: var(--pcrn-surface);
+  border: 1px solid var(--pcrn-border-soft);
   padding: 3rem 1.5rem;
 }
 
 .profile-header {
-  background: #fff;
-  border-bottom: 1px solid #e9ecef;
+  background: var(--pcrn-surface);
+  border-bottom: 1px solid var(--pcrn-border-soft);
   padding: 1rem 1.25rem;
 }
 
 .unsaved-label {
-  color: #8a6100;
+  color: var(--pcrn-warning-text);
   font-size: 0.75rem;
   font-weight: 600;
   white-space: nowrap;
@@ -366,51 +369,27 @@ onBeforeUnmount(() => window.removeEventListener('beforeunload', handleBeforeUnl
   font-size: 0.45rem;
 }
 
-.form-label {
-  color: #343a40;
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin-bottom: 0.35rem;
-}
-
-.form-control,
-.form-select {
-  border-color: #ced4da;
-  border-radius: 0.5rem;
-  font-size: 0.95rem;
-  height: 2.5rem;
-}
-
 textarea.form-control {
-  height: auto;
   min-height: 5.5rem;
   resize: vertical;
 }
 
-.form-control:focus,
-.form-select:focus {
-  border-color: #495057;
-  box-shadow: 0 0 0 0.18rem rgba(33, 37, 41, 0.08);
-}
-
-.form-text,
-.character-count {
-  color: #7a828a;
+.form-text {
+  color: var(--pcrn-muted);
   font-size: 0.75rem;
 }
 
 .profile-actions {
-  background: #fafafa;
-  border-top: 1px solid #e9ecef;
+  background: var(--pcrn-surface-muted);
+  border-top: 1px solid var(--pcrn-border-soft);
 }
 
 .action-button {
   align-items: center;
-  border-radius: 0.5rem;
   display: inline-flex;
   font-size: 0.9rem;
   font-weight: 600;
-  height: 2.5rem;
+  min-height: 44px;
   justify-content: center;
 }
 

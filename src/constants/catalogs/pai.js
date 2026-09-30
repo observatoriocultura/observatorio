@@ -1,3 +1,4 @@
+// Catálogo de entidades del PAI. Las vistas filtran por sigla y ordenan con orden.
 export const ENTIDADES = [
   {
     orden: 0,

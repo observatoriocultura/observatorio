@@ -4,12 +4,12 @@ import { useRouter } from 'vue-router'
 import { useToast } from 'vue-toastification'
 import { getInvitationRedirectUrl } from '../../lib/authCallback'
 import { hasSupabaseConfig, supabase } from '../../lib/supabase'
+import { PROFILE_ROLES, PROFILE_ROLE_KEYS, PROFILE_ROLE_VALUES } from '../../constants/catalogs'
 
 const router = useRouter()
 const toast = useToast()
 
-const ALLOWED_ROLES = ['subscriber', 'editor', 'admin']
-const EMPTY_FORM = Object.freeze({ email: '', display_name: '', role: 'subscriber' })
+const EMPTY_FORM = Object.freeze({ email: '', display_name: '', role: PROFILE_ROLE_KEYS.SUBSCRIBER })
 
 const form = ref({ ...EMPTY_FORM })
 const feedback = ref({ type: '', message: '' })
@@ -21,7 +21,7 @@ const canSubmit = computed(
     !isSubmitting.value &&
     form.value.email.trim() &&
     form.value.display_name.trim() &&
-    ALLOWED_ROLES.includes(form.value.role),
+    PROFILE_ROLE_VALUES.includes(form.value.role),
 )
 
 function validateForm() {
@@ -30,7 +30,7 @@ function validateForm() {
 
   if (!email || !displayName) return 'Completa todos los campos para continuar.'
   if (displayName.length > 120) return 'El nombre no puede superar los 120 caracteres.'
-  if (!ALLOWED_ROLES.includes(form.value.role)) return 'Selecciona un rol válido.'
+  if (!PROFILE_ROLE_VALUES.includes(form.value.role)) return 'Selecciona un rol válido.'
 
   return ''
 }
@@ -167,9 +167,9 @@ async function handleSubmit() {
                   required
                   :disabled="isSubmitting"
                 >
-                  <option value="subscriber">Suscriptor</option>
-                  <option value="editor">Editor</option>
-                  <option value="admin">Administrador</option>
+                  <option v-for="option in PROFILE_ROLES" :key="option.key" :value="option.key">
+                    {{ option.label }}
+                  </option>
                 </select>
               </div>
             </div>

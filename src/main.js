@@ -12,6 +12,7 @@ import 'vue-toastification/dist/index.css'
 // ✅ Importar estilos globales
 import './assets/main.css'
 import './assets/css/pacarina.css'
+import './assets/styles/dogcc/forms.css'
 
 const toastOptions = {
   position: 'top-right',

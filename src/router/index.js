@@ -35,6 +35,16 @@ import ProfileView from '../views/profile/ProfileView.vue'
 import ProfilesView from '../views/profiles/ProfilesView.vue'
 import ProfilesListView from '../views/profiles/ProfilesListView.vue'
 import EditProfileView from '../views/profiles/EditProfileView.vue'
+import FilesListView from '../views/files/FilesListView.vue'
+import FilesCreateView from '../views/files/FilesCreateView.vue'
+import FilesEditView from '../views/files/FilesEditView.vue'
+import PostsView from '../views/posts/PostsView.vue'
+import PostsListView from '../views/posts/PostsListView.vue'
+import CreatePostView from '../views/posts/CreatePostView.vue'
+import EditPostView from '../views/posts/EditPostView.vue'
+import EditPostContent from '../views/posts/EditPostContent.vue'
+import PostImagesView from '../views/posts/PostImagesView.vue'
+import PostPreviewView from '../views/posts/PostPreviewView.vue'
 import DataViz from '../views/dataviz/DataViz.vue'
 import { supabase } from '../lib/supabase'
 
@@ -267,6 +277,49 @@ const routes = [
     ],
   },
   {
+    path: '/posts',
+    component: PostsView,
+    meta: { requiresAuth: true, allowedRoles: ['admin', 'editor'] },
+    children: [
+      { path: '', name: 'posts', component: PostsListView, meta: { title: 'Publicaciones' } },
+      { path: 'new', name: 'new-post', component: CreatePostView, meta: { title: 'Nueva publicación' } },
+      { path: 'edit/:id', name: 'edit-post', component: EditPostView, meta: { title: 'Editar publicación' } },
+      { path: 'content/:id', name: 'edit-post-content', component: EditPostContent, meta: { title: 'Contenido de publicación' } },
+      { path: 'images/:id', name: 'images-post', component: PostImagesView, meta: { title: 'Imágenes de publicación' } },
+      { path: 'preview/:id', name: 'preview-post', component: PostPreviewView, meta: { title: 'Vista previa de publicación' } },
+    ],
+  },
+  {
+    path: '/files',
+    name: 'files',
+    component: FilesListView,
+    meta: {
+      title: 'Gestión de archivos',
+      requiresAuth: true,
+      allowedRoles: ['admin', 'editor'],
+    },
+  },
+  {
+    path: '/files/new',
+    name: 'file-create',
+    component: FilesCreateView,
+    meta: {
+      title: 'Subir archivo',
+      requiresAuth: true,
+      allowedRoles: ['admin', 'editor'],
+    },
+  },
+  {
+    path: '/files/edit/:id',
+    name: 'file-edit',
+    component: FilesEditView,
+    meta: {
+      title: 'Editar archivo',
+      requiresAuth: true,
+      allowedRoles: ['admin', 'editor'],
+    },
+  },
+  {
     path: '/:year/:slug',
     name: 'Article',
     component: ArticleView,
@@ -284,13 +337,19 @@ router.beforeEach(async (to) => {
   document.title = to.meta.title || defaultTitle
 
   const isAuthEntry = ['login', 'login-link', 'register'].includes(String(to.name))
+  const allowedRoles = to.meta.requiresAdmin
+    ? ['admin']
+    : Array.isArray(to.meta.allowedRoles)
+      ? to.meta.allowedRoles.map((role) => String(role).trim().toLowerCase())
+      : []
+  const requiresRestrictedRole = allowedRoles.length > 0
 
   if (to.meta.isAuthCallback) {
     return true
   }
 
   if (!supabase) {
-    if (to.meta.requiresAuth) {
+    if (to.meta.requiresAuth || requiresRestrictedRole) {
       return { name: 'login', query: { redirect: to.fullPath } }
     }
     return true
@@ -301,7 +360,7 @@ router.beforeEach(async (to) => {
     error: sessionError,
   } = await supabase.auth.getSession()
 
-  if (to.meta.requiresAuth && (sessionError || !session)) {
+  if ((to.meta.requiresAuth || requiresRestrictedRole) && (sessionError || !session)) {
     return { name: 'login', query: { redirect: to.fullPath } }
   }
 
@@ -309,14 +368,16 @@ router.beforeEach(async (to) => {
     return { name: 'profile' }
   }
 
-  if (to.meta.requiresAdmin && session) {
+  if (requiresRestrictedRole && session) {
     const { data: profile, error: profileError } = await supabase
       .from('profiles')
       .select('role')
       .eq('id', session.user.id)
       .maybeSingle()
 
-    if (profileError || profile?.role !== 'admin') {
+    const currentRole = String(profile?.role || '').trim().toLowerCase()
+
+    if (profileError || !allowedRoles.includes(currentRole)) {
       return { name: 'profile' }
     }
   }

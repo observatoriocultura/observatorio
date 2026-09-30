@@ -1,0 +1,57 @@
+:root {
+  /* Paleta de la versión DOGCC */
+  --pcrn-brand-100: #cfc2e7;
+  --pcrn-brand-500: #6a4aa7;
+  --pcrn-brand-600: #654096;
+  --pcrn-brand-900: #27135b;
+  --pcrn-amber-100: #fcdea0;
+  --pcrn-amber-500: #fbb62d;
+  --pcrn-amber-700: #e6a000;
+  --pcrn-green-400: #2dc44e;
+  --pcrn-green-500: #30a338;
+  --pcrn-red-400: #f34a5e;
+  --pcrn-red-500: #ee3248;
+
+  /* Roles generales: usar estos nombres en los componentes */
+  --pcrn-primary: var(--pcrn-brand-600);
+  --pcrn-primary-hover: var(--pcrn-brand-900);
+  --pcrn-primary-soft: var(--pcrn-brand-100);
+  --pcrn-on-primary: #ffffff;
+  --pcrn-secondary: var(--pcrn-amber-500);
+  --pcrn-secondary-hover: var(--pcrn-amber-700);
+  --pcrn-secondary-soft: var(--pcrn-amber-100);
+  --pcrn-on-secondary: #27135b;
+
+  --pcrn-bg: #fcfcfc;
+  --pcrn-surface: #ffffff;
+  --pcrn-surface-muted: #fafafa;
+  --pcrn-border: #ced4da;
+  --pcrn-border-soft: #e9ecef;
+  --pcrn-text: #212529;
+  --pcrn-heading: #111827;
+  --pcrn-muted: #6c757d;
+  --pcrn-focus-ring: rgba(101, 64, 150, 0.18);
+
+  --pcrn-success: var(--pcrn-green-500);
+  --pcrn-warning: var(--pcrn-amber-700);
+  --pcrn-warning-text: #785900;
+  --pcrn-danger: var(--pcrn-red-500);
+
+  /* Enlaces y navegación */
+  --pcrn-link: #346fbd;
+  --pcrn-link-hover: #5e4293;
+  --pcrn-nav-bg: var(--pcrn-bg);
+  --pcrn-nav-text: #5e4293;
+  --pcrn-nav-active-bg: var(--pcrn-bg);
+  --pcrn-nav-active-text: #5f4099;
+
+  /* Acentos para visualizaciones o categorías, sin significado de estado */
+  --pcrn-accent-purple: #5e4296;
+  --pcrn-accent-blue: #2d62a9;
+  --pcrn-accent-teal: #0097a7;
+  --pcrn-accent-green: var(--pcrn-green-500);
+  --pcrn-accent-amber: var(--pcrn-amber-700);
+  --pcrn-accent-orange: #ec6c38;
+  --pcrn-accent-red: var(--pcrn-red-500);
+  --pcrn-accent-pink: #ea3471;
+}

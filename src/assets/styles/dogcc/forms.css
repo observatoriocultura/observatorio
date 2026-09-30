@@ -1,0 +1,146 @@
+@import './colors.css';
+
+/* Estilos de formularios de esta versión; pcrn identifica las clases reutilizables. */
+.pcrn-form .section-kicker {
+  color: var(--pcrn-muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.pcrn-form .section-title {
+  color: var(--pcrn-heading);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.pcrn-form .form-hint {
+  color: var(--pcrn-muted);
+  flex-shrink: 0;
+  font-size: 0.8rem;
+}
+
+.pcrn-form .form-control,
+.pcrn-form .form-select,
+.pcrn-form .input-group-text,
+.pcrn-form .btn {
+  border-radius: 4px;
+}
+
+.pcrn-form .input-group > .form-control {
+  border-radius: 0;
+}
+
+.pcrn-form .input-group > .input-group-text {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.pcrn-form .input-group > .btn {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.pcrn-form .form-control:focus,
+.pcrn-form .form-select:focus,
+.pcrn-form .form-check-input:focus {
+  border-color: var(--pcrn-primary);
+  box-shadow: 0 0 0 0.2rem var(--pcrn-focus-ring);
+}
+
+.pcrn-form .form-check-input {
+  cursor: pointer;
+}
+
+.pcrn-form .form-check-input:checked {
+  background-color: var(--pcrn-primary);
+  border-color: var(--pcrn-primary);
+}
+
+.pcrn-form .list-search-input .list-search-control:focus-within {
+  border-color: var(--pcrn-primary);
+  box-shadow: 0 0 0 0.2rem var(--pcrn-focus-ring);
+}
+
+.pcrn-btn-primary {
+  --bs-btn-color: var(--pcrn-on-primary);
+  --bs-btn-bg: var(--pcrn-primary);
+  --bs-btn-border-color: var(--pcrn-primary);
+  --bs-btn-hover-color: var(--pcrn-on-primary);
+  --bs-btn-hover-bg: var(--pcrn-primary-hover);
+  --bs-btn-hover-border-color: var(--pcrn-primary-hover);
+  --bs-btn-active-color: var(--pcrn-on-primary);
+  --bs-btn-active-bg: var(--pcrn-primary-hover);
+  --bs-btn-active-border-color: var(--pcrn-primary-hover);
+  --bs-btn-disabled-color: var(--pcrn-on-primary);
+  --bs-btn-disabled-bg: var(--pcrn-primary);
+  --bs-btn-disabled-border-color: var(--pcrn-primary);
+
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.pcrn-btn-primary:focus-visible {
+  box-shadow: 0 0 0 0.2rem var(--pcrn-focus-ring);
+}
+
+.pcrn-form .btn-outline-dark {
+  --bs-btn-color: var(--pcrn-primary);
+  --bs-btn-border-color: var(--pcrn-primary);
+  --bs-btn-hover-bg: var(--pcrn-primary);
+  --bs-btn-hover-border-color: var(--pcrn-primary);
+  --bs-btn-active-bg: var(--pcrn-primary-hover);
+  --bs-btn-active-border-color: var(--pcrn-primary-hover);
+}
+
+.pcrn-form .form-actions .btn,
+.pcrn-form .editor-actions .btn {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  min-height: 44px;
+}
+
+.pcrn-form .form-actions .btn {
+  line-height: 1.2;
+  padding-bottom: 0.625rem;
+  padding-top: 0.625rem;
+}
+
+.pcrn-form .form-actions .spinner-border {
+  flex-shrink: 0;
+}
+
+/* Acciones compactas de las filas en listados. */
+.pcrn-list-actions {
+  align-items: center;
+  display: flex;
+  gap: 0.25rem;
+  justify-content: flex-end;
+}
+
+.pcrn-list-action {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
+  color: var(--pcrn-muted);
+  display: inline-flex;
+  flex: 0 0 2rem;
+  height: 2rem;
+  justify-content: center;
+  text-decoration: none;
+  width: 2rem;
+}
+
+.pcrn-list-action:hover {
+  background: var(--pcrn-primary-soft);
+  color: var(--pcrn-primary-hover);
+}
+
+.pcrn-list-action:focus-visible {
+  background: var(--pcrn-primary-soft);
+  color: var(--pcrn-primary-hover);
+  outline: 2px solid var(--pcrn-primary);
+  outline-offset: 2px;
+}

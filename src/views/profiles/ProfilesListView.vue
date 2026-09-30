@@ -2,6 +2,7 @@
 import { ref, onMounted, computed } from 'vue'
 import { supabase } from '../../lib/supabase'
 import ModalDelete from '../../components/ModalDelete.vue'
+import { getProfileRoleLabel, normalizeProfileRole } from '../../constants/catalogs'
 
 const profiles = ref([])
 const loading = ref(true)
@@ -10,10 +11,10 @@ const selectedIds = ref([])
 const showDeleteModal = ref(false)
 const currentUserId = ref(null)
 
-const ROLE_LABELS = {
-  admin: { label: 'Admin', class: 'text-bg-dark' },
-  editor: { label: 'Editor', class: 'text-bg-primary' },
-  subscriber: { label: 'Suscriptor', class: 'text-bg-secondary' },
+const ROLE_CLASSES = {
+  admin: 'profile-role-admin',
+  editor: 'profile-role-editor',
+  subscriber: 'profile-role-subscriber',
 }
 
 async function fetchProfiles() {
@@ -83,7 +84,11 @@ const isAllSelected = computed(() =>
 )
 
 function getRoleBadge(role) {
-  return ROLE_LABELS[role] || { label: role || 'Sin rol', class: 'text-bg-light' }
+  const key = normalizeProfileRole(role)
+  return {
+    label: key ? getProfileRoleLabel(key) : role || 'Sin rol',
+    class: ROLE_CLASSES[key] || 'profile-role-subscriber',
+  }
 }
 
 function formatDate(dateStr) {
@@ -110,7 +115,7 @@ onMounted(async () => {
       <div class="d-flex gap-2">
         <router-link
           :to="{ name: 'create-user' }"
-          class="btn btn-dark d-flex align-items-center gap-2"
+          class="btn pcrn-btn-primary d-flex align-items-center gap-2"
         >
           <i class="bi bi-person-plus"></i>
           <span>Crear usuario</span>
@@ -186,7 +191,7 @@ onMounted(async () => {
                 <span class="badge text-uppercase" :class="getRoleBadge(profile.role).class">
                   {{ getRoleBadge(profile.role).label }}
                 </span>
-                <span v-if="profile.id === currentUserId" class="badge text-bg-info ms-2">
+                <span v-if="profile.id === currentUserId" class="badge profile-own-badge ms-2">
                   TÚ
                 </span>
               </td>
@@ -200,9 +205,9 @@ onMounted(async () => {
                 <small class="text-muted">{{ formatDate(profile.updated_at) }}</small>
               </td>
               <td class="pe-4 text-end">
-                <div class="btn-group">
-                  <router-link :to="`/profiles/edit/${profile.id}`" class="btn btn-sm btn-outline-dark border-0" title="Editar">
-                    <i class="bi bi-pencil"></i>
+                <div class="pcrn-list-actions">
+                  <router-link :to="`/profiles/edit/${profile.id}`" class="pcrn-list-action" title="Editar" aria-label="Editar">
+                    <i class="bi bi-pencil" aria-hidden="true"></i>
                   </router-link>
                 </div>
               </td>
@@ -234,20 +239,36 @@ onMounted(async () => {
   letter-spacing: 0.03em;
 }
 
+.profile-role-admin {
+  background: var(--pcrn-primary);
+  color: var(--pcrn-on-primary);
+}
+
+.profile-role-editor {
+  background: var(--pcrn-secondary);
+  color: var(--pcrn-on-secondary);
+}
+
+.profile-role-subscriber {
+  background: var(--pcrn-surface-muted);
+  color: var(--pcrn-muted);
+}
+
+.profile-own-badge {
+  background: var(--pcrn-primary-soft);
+  color: var(--pcrn-primary-hover);
+}
+
 .table thead th {
   font-size: 0.85rem;
   text-transform: uppercase;
-  color: #6c757d;
+  color: var(--pcrn-muted);
   letter-spacing: 0.05em;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
-.form-check-input {
-  cursor: pointer;
-}
-
 .table-hover tbody tr:hover {
-  background-color: rgba(0,0,0,0.01);
+  background-color: var(--pcrn-bg);
 }
 </style>
