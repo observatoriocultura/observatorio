@@ -320,6 +320,12 @@ const routes = [
     },
   },
   {
+    path: '/divulgacion/datos-a-la-calle',
+    name: 'Datos a la Calle',
+    component: () => import('../views/divulgacion/datos_a_la_calle/DatosALaCalle.vue'),
+    meta: { title: 'Datos a la Calle | Observatorio' },
+  },
+  {
     path: '/:year/:slug',
     name: 'Article',
     component: ArticleView,
