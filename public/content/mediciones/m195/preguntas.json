@@ -3903,7 +3903,7 @@
         "codigo":"P77",
         "etiqueta_1":77,
         "enunciado_1":"Si ve canales de televisión por internet o redes sociales, ¿a través de qué dispositivos lo hace?",
-        "instruccion":null,
+        "instruccion":"(Se toma como base los que respondieron \"Internet\" y \"Redes sociales\" en la pregunta 73)",
         "url_imagen":null,
         "palabras_clave":"dispositivos para ver televisión, televisión por internet, redes sociales, computador, tableta, celular, smartphone, televisor inteligente",
         "cantidad_variables":4.0,
