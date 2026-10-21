@@ -1856,8 +1856,8 @@
         "respuesta":0,
         "respuesta_v2":"No",
         "respuesta_number":0.0,
-        "suma_factor":6716508.7009389745,
-        "cantidad_respuestas":5578
+        "suma_factor":894307.7965150455,
+        "cantidad_respuestas":709
     },
     {
         "codigo_variable":"P12_0",
@@ -1876,8 +1876,8 @@
         "respuesta":0,
         "respuesta_v2":"No",
         "respuesta_number":0.0,
-        "suma_factor":6614441.1015382651,
-        "cantidad_respuestas":5477
+        "suma_factor":792240.197114336,
+        "cantidad_respuestas":608
     },
     {
         "codigo_variable":"P12_1",
@@ -1896,8 +1896,8 @@
         "respuesta":0,
         "respuesta_v2":"No",
         "respuesta_number":0.0,
-        "suma_factor":6637041.9215281149,
-        "cantidad_respuestas":5512
+        "suma_factor":814841.0171041861,
+        "cantidad_respuestas":643
     },
     {
         "codigo_variable":"P12_2",
@@ -1916,8 +1916,8 @@
         "respuesta":0,
         "respuesta_v2":"No",
         "respuesta_number":0.0,
-        "suma_factor":6687740.8647338757,
-        "cantidad_respuestas":5571
+        "suma_factor":865539.9603099463,
+        "cantidad_respuestas":702
     },
     {
         "codigo_variable":"P12_3",
@@ -1936,8 +1936,8 @@
         "respuesta":0,
         "respuesta_v2":"No",
         "respuesta_number":0.0,
-        "suma_factor":6720371.4326128801,
-        "cantidad_respuestas":5588
+        "suma_factor":898170.528188951,
+        "cantidad_respuestas":719
     },
     {
         "codigo_variable":"P12_4",
@@ -1953,21 +1953,21 @@
         "codigo_variable":"P12_5",
         "indice_pregunta":62,
         "indice_variable":93,
-        "respuesta":0,
-        "respuesta_v2":"No",
-        "respuesta_number":0.0,
-        "suma_factor":6251334.9775668196,
-        "cantidad_respuestas":5213
-    },
-    {
-        "codigo_variable":"P12_5",
-        "indice_pregunta":62,
-        "indice_variable":93,
         "respuesta":1,
         "respuesta_v2":"Sí",
         "respuesta_number":1.0,
         "suma_factor":511929.7912838247,
         "cantidad_respuestas":409
+    },
+    {
+        "codigo_variable":"P12_5",
+        "indice_pregunta":62,
+        "indice_variable":93,
+        "respuesta":0,
+        "respuesta_v2":"No",
+        "respuesta_number":0.0,
+        "suma_factor":429134.0731428905,
+        "cantidad_respuestas":344
     },
     {
         "codigo_variable":"P12_6",
@@ -1976,8 +1976,8 @@
         "respuesta":0,
         "respuesta_v2":"No",
         "respuesta_number":0.0,
-        "suma_factor":6717579.9449379519,
-        "cantidad_respuestas":5588
+        "suma_factor":895379.0405140228,
+        "cantidad_respuestas":719
     },
     {
         "codigo_variable":"P12_6",
@@ -1996,8 +1996,8 @@
         "respuesta":0,
         "respuesta_v2":"No",
         "respuesta_number":0.0,
-        "suma_factor":6725959.8108696193,
-        "cantidad_respuestas":5591
+        "suma_factor":903758.9064456902,
+        "cantidad_respuestas":722
     },
     {
         "codigo_variable":"P12_7",
@@ -2016,8 +2016,8 @@
         "respuesta":0,
         "respuesta_v2":"No",
         "respuesta_number":0.0,
-        "suma_factor":6737711.0821778458,
-        "cantidad_respuestas":5595
+        "suma_factor":915510.1777539162,
+        "cantidad_respuestas":726
     },
     {
         "codigo_variable":"P12_8",
@@ -2036,8 +2036,8 @@
         "respuesta":0,
         "respuesta_v2":"No",
         "respuesta_number":0.0,
-        "suma_factor":6759041.5083321789,
-        "cantidad_respuestas":5617
+        "suma_factor":936840.6039082496,
+        "cantidad_respuestas":748
     },
     {
         "codigo_variable":"P12_9",
@@ -2056,8 +2056,8 @@
         "respuesta":0,
         "respuesta_v2":"No",
         "respuesta_number":0.0,
-        "suma_factor":6643043.6379388217,
-        "cantidad_respuestas":5524
+        "suma_factor":820842.7335148924,
+        "cantidad_respuestas":655
     },
     {
         "codigo_variable":"P12_10",
@@ -2076,8 +2076,8 @@
         "respuesta":0,
         "respuesta_v2":"No",
         "respuesta_number":0.0,
-        "suma_factor":6680901.7541727191,
-        "cantidad_respuestas":5548
+        "suma_factor":858700.8497487904,
+        "cantidad_respuestas":679
     },
     {
         "codigo_variable":"P12_11",
@@ -2096,8 +2096,8 @@
         "respuesta":0,
         "respuesta_v2":"No",
         "respuesta_number":0.0,
-        "suma_factor":6746828.796972678,
-        "cantidad_respuestas":5613
+        "suma_factor":924627.8925487484,
+        "cantidad_respuestas":744
     },
     {
         "codigo_variable":"P12_12",
@@ -2116,8 +2116,8 @@
         "respuesta":0,
         "respuesta_v2":"No",
         "respuesta_number":0.0,
-        "suma_factor":6741083.8614952713,
-        "cantidad_respuestas":5593
+        "suma_factor":918882.9570713424,
+        "cantidad_respuestas":724
     },
     {
         "codigo_variable":"P12_13",
@@ -2136,8 +2136,8 @@
         "respuesta":0,
         "respuesta_v2":"No",
         "respuesta_number":0.0,
-        "suma_factor":6733773.5170004582,
-        "cantidad_respuestas":5591
+        "suma_factor":911572.612576529,
+        "cantidad_respuestas":722
     },
     {
         "codigo_variable":"P12_14",
@@ -2156,8 +2156,8 @@
         "respuesta":0,
         "respuesta_v2":"No",
         "respuesta_number":0.0,
-        "suma_factor":6720840.7304329816,
-        "cantidad_respuestas":5576
+        "suma_factor":898639.8260090526,
+        "cantidad_respuestas":707
     },
     {
         "codigo_variable":"P12_15",
@@ -4863,7 +4863,7 @@
         "codigo_variable":"P20.1",
         "indice_pregunta":79,
         "indice_variable":153,
-        "respuesta":2,
+        "respuesta":3,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":102.4639937651,
@@ -4873,7 +4873,7 @@
         "codigo_variable":"P20.1",
         "indice_pregunta":79,
         "indice_variable":153,
-        "respuesta":3,
+        "respuesta":2,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":102.4639937651,
@@ -18533,16 +18533,6 @@
         "codigo_variable":"P63.1",
         "indice_pregunta":159,
         "indice_variable":505,
-        "respuesta":2,
-        "respuesta_v2":null,
-        "respuesta_number":null,
-        "suma_factor":770.8639535475,
-        "cantidad_respuestas":1
-    },
-    {
-        "codigo_variable":"P63.1",
-        "indice_pregunta":159,
-        "indice_variable":505,
         "respuesta":6,
         "respuesta_v2":null,
         "respuesta_number":null,
@@ -18554,6 +18544,16 @@
         "indice_pregunta":159,
         "indice_variable":505,
         "respuesta":5,
+        "respuesta_v2":null,
+        "respuesta_number":null,
+        "suma_factor":770.8639535475,
+        "cantidad_respuestas":1
+    },
+    {
+        "codigo_variable":"P63.1",
+        "indice_pregunta":159,
+        "indice_variable":505,
+        "respuesta":2,
         "respuesta_v2":null,
         "respuesta_number":null,
         "suma_factor":770.8639535475,
