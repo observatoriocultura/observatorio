@@ -1,0 +1,45 @@
+/* Inter se carga desde Google Fonts en src/assets/base.css (display=swap). */
+.red-observatorios,
+.red-observatorios-modal {
+  --red-font: 'Inter', sans-serif;
+  --red-background: #f0ece4;
+  --red-surface: #ffffff;
+  --red-ink: #241207;
+  --red-muted: #756456;
+  --red-border: #e5ded4;
+  --red-soft: #f7f4ee;
+  --red-accent: #241207;
+  --red-blue: #aab8cc;
+  --red-focus: #68523e;
+  color: var(--red-ink);
+  font-family: var(--red-font);
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.red-observatorios :is(h1, h2, h3, h4),
+.red-observatorios-modal :is(h1, h2, h3, h4) {
+  font-family: var(--red-font);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+}
+
+.red-observatorios :is(button, input, select),
+.red-observatorios-modal :is(button, input, select) {
+  font-family: inherit;
+}
+
+.red-observatorios :focus-visible,
+.red-observatorios-modal :focus-visible {
+  outline: 2px solid var(--red-focus);
+  outline-offset: 5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .red-observatorios *,
+  .red-observatorios-modal * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

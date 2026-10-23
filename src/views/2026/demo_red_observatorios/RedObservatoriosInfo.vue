@@ -2,10 +2,10 @@
   <article class="red-observatorios-info">
     <header class="info-header">
       <p class="info-eyebrow">Red de Observatorios</p>
-      <h1>Explora las entidades de la red</h1>
+      <h1>Muchas miradas.<br />Una conversación común.</h1>
       <p class="info-lead">
-        Conoce los observatorios, centros de pensamiento y organizaciones vinculadas con la
-        cultura que hacen parte de esta primera versión demostrativa de la red.
+        Conoce los observatorios, centros de pensamiento y organizaciones vinculadas con la cultura
+        que hacen parte de esta primera versión demostrativa de la red.
       </p>
     </header>
 
@@ -15,13 +15,15 @@
         <h2 id="demo-title">Este sitio es un prototipo</h2>
         <p>
           La información, las fichas y las conexiones que se presentan son demostrativas. Este
-          prototipo permite probar la organización del directorio, la exploración de entidades y
-          las posibilidades de relación entre iniciativas; no constituye todavía un registro
-          oficial de la red. Los contenidos deberán validarse con cada organización antes de su
-          publicación definitiva.
+          prototipo permite probar la organización del directorio, la exploración de entidades y las
+          posibilidades de relación entre iniciativas; no constituye todavía un registro oficial de
+          la red. Los contenidos deberán validarse con cada organización antes de su publicación
+          definitiva.
         </p>
       </div>
     </aside>
+
+    <RedObservatoriosCarousel />
 
     <div class="info-grid">
       <section class="info-section" aria-labelledby="network-title">
@@ -30,14 +32,12 @@
         <p>
           Es una comunidad iberoamericana en construcción que reúne observatorios, universidades,
           centros de pensamiento, fundaciones, sistemas de información y otras iniciativas que
-          producen o gestionan conocimiento sobre la vida cultural y los comportamientos
-          ciudadanos.
+          producen o gestionan conocimiento sobre la vida cultural y los comportamientos ciudadanos.
         </p>
         <p>
           Parte del reconocimiento de que la región ya cuenta con experiencias, metodologías y
           capacidades de medición valiosas. La red busca hacerlas visibles y ponerlas en diálogo
-          para comprender mejor el lugar de la cultura en las ciudades y los países de
-          Iberoamérica.
+          para comprender mejor el lugar de la cultura en las ciudades y los países de Iberoamérica.
         </p>
       </section>
 
@@ -111,31 +111,36 @@
   </article>
 </template>
 
+<script setup>
+import RedObservatoriosCarousel from './RedObservatoriosCarousel.vue'
+</script>
+
 <style scoped>
 .red-observatorios-info {
-  padding-top: clamp(1rem, 2.5vw, 2rem);
+  padding-top: clamp(2rem, 5vw, 4.5rem);
 }
 
 .info-header {
   max-width: 780px;
-  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+  margin-bottom: clamp(2rem, 4vw, 3rem);
 }
 
 .info-eyebrow,
 .info-section-kicker {
   margin: 0 0 0.55rem;
-  color: var(--red-purple);
+  color: var(--red-accent);
   font-size: 0.76rem;
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 .info-header h1 {
   margin: 0 0 0.85rem;
-  color: var(--red-purple-dark);
-  font-size: clamp(2rem, 4vw, 3.35rem);
-  letter-spacing: -0.035em;
+  color: var(--red-ink);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 400;
+  letter-spacing: -0.06em;
   line-height: 1.05;
 }
 
@@ -152,21 +157,21 @@
   grid-template-columns: auto minmax(0, 1fr);
   gap: 1rem;
   margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
-  border: 1px solid #cbb9df;
-  border-radius: 16px;
-  background: #f3eef8;
+  border: 1px solid #e5ded4;
+  border-radius: 28px;
+  background: #e7dfd2;
   padding: clamp(1rem, 2.5vw, 1.5rem);
 }
 
 .demo-notice > i {
-  color: var(--red-purple);
+  color: var(--red-accent);
   font-size: 1.5rem;
 }
 
 .demo-notice h2 {
   margin: 0 0 0.4rem;
-  color: var(--red-purple-dark);
-  font-size: 1.1rem;
+  color: var(--red-ink);
+  font-size: 1.4rem;
 }
 
 .demo-notice p,
@@ -180,17 +185,17 @@
 .info-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: 24px;
+  margin-bottom: 24px;
 }
 
 .info-section,
 .questions-section,
 .outcomes-section {
   border: 1px solid var(--red-border);
-  border-radius: 16px;
-  background: #fff;
-  padding: clamp(1.1rem, 2.5vw, 1.6rem);
+  border-radius: 28px;
+  background: var(--red-surface);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
 }
 
 .info-section h2,
@@ -198,7 +203,7 @@
 .outcomes-section h2 {
   margin: 0 0 0.85rem;
   color: var(--red-ink);
-  font-size: clamp(1.25rem, 2.4vw, 1.65rem);
+  font-size: clamp(1.6rem, 2.4vw, 2rem);
 }
 
 .info-section p + p {
@@ -223,12 +228,12 @@
 }
 
 .purpose-list i {
-  color: var(--red-purple);
+  color: var(--red-accent);
   text-align: center;
 }
 
 .questions-section {
-  margin-bottom: 1rem;
+  margin-bottom: 24px;
 }
 
 .questions-heading {
@@ -243,13 +248,13 @@
 
 .questions-grid blockquote {
   margin: 0;
-  border-left: 3px solid var(--red-purple);
+  border-left: 3px solid var(--red-accent);
   border-radius: 0 10px 10px 0;
-  background: #faf8fc;
+  background: #f7f4ee;
   padding: 1rem;
-  color: var(--red-purple-dark);
+  color: var(--red-ink);
   font-size: 0.95rem;
-  font-weight: 650;
+  font-weight: 400;
   line-height: 1.55;
 }
 
@@ -260,12 +265,12 @@
 }
 
 .outcomes-grid > div {
-  border-top: 1px solid #edf0f2;
+  border-top: 1px solid #e5ded4;
   padding-top: 1rem;
 }
 
 .outcomes-grid i {
-  color: var(--red-purple);
+  color: var(--red-accent);
   font-size: 1.25rem;
 }
 

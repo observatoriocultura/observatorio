@@ -15,7 +15,7 @@ export const getGoogleSheetCsvUrl = ({ fileId, gid }) => {
   return url.toString()
 }
 
-export const fetchGoogleSheetCsv = async ({ fileId, gid }) => {
+export const fetchGoogleSheetCsv = async ({ fileId, gid, requiredHeaders = [] }) => {
   const url = getGoogleSheetCsvUrl({ fileId, gid })
   const response = await fetch(url)
 
@@ -24,13 +24,25 @@ export const fetchGoogleSheetCsv = async ({ fileId, gid }) => {
   }
 
   const csv = await response.text()
+
+  if (/^\s*<(?:!doctype\s+html|html)\b/i.test(csv)) {
+    throw new Error('Google Sheets returned HTML instead of CSV. Check public read access.')
+  }
+
   const result = Papa.parse(csv, {
     header: true,
-    skipEmptyLines: true,
+    skipEmptyLines: 'greedy',
+    transformHeader: (header) => header.replace(/^\uFEFF/, '').trim(),
   })
 
   if (result.errors.length > 0) {
     throw new Error(`Could not parse Google Sheets CSV. ${result.errors[0].message}`)
+  }
+
+  const missingHeaders = requiredHeaders.filter((header) => !result.meta.fields?.includes(header))
+
+  if (missingHeaders.length > 0) {
+    throw new Error(`Google Sheets CSV is missing required headers: ${missingHeaders.join(', ')}`)
   }
 
   return result.data

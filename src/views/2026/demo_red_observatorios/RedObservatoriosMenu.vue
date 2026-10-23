@@ -4,15 +4,27 @@
       :to="getTabLocation('explorar')"
       class="red-observatorios-nav-tab"
       :class="{ active: currentTab === 'explorar' }"
+      :aria-current="currentTab === 'explorar' ? 'page' : undefined"
     >
       <i class="bi bi-search" aria-hidden="true"></i>
       Explorar
     </RouterLink>
 
     <RouterLink
+      :to="getTabLocation('mapa')"
+      class="red-observatorios-nav-tab"
+      :class="{ active: currentTab === 'mapa' }"
+      :aria-current="currentTab === 'mapa' ? 'page' : undefined"
+    >
+      <i class="bi bi-map" aria-hidden="true"></i>
+      Mapa
+    </RouterLink>
+
+    <RouterLink
       :to="getTabLocation('conexiones')"
       class="red-observatorios-nav-tab"
       :class="{ active: currentTab === 'conexiones' }"
+      :aria-current="currentTab === 'conexiones' ? 'page' : undefined"
     >
       <i class="bi bi-diagram-3" aria-hidden="true"></i>
       Conexiones
@@ -22,6 +34,7 @@
       :to="getTabLocation('informacion')"
       class="red-observatorios-nav-tab"
       :class="{ active: currentTab === 'informacion' }"
+      :aria-current="currentTab === 'informacion' ? 'page' : undefined"
     >
       <i class="bi bi-info-circle" aria-hidden="true"></i>
       Información
@@ -38,7 +51,7 @@ const route = useRoute()
 const currentTab = computed(() => {
   const tab = route.query.tab
 
-  return ['explorar', 'conexiones', 'informacion'].includes(tab) ? tab : 'explorar'
+  return ['explorar', 'mapa', 'conexiones', 'informacion'].includes(tab) ? tab : 'explorar'
 })
 
 const getTabLocation = (tab) => ({
@@ -55,45 +68,47 @@ const getTabLocation = (tab) => ({
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.25rem;
-  padding: 0.3rem 0 0.8rem;
+  gap: clamp(0.75rem, 3vw, 2.5rem);
+  padding: 0.25rem 0 1rem;
+  border-bottom: 1px solid var(--red-border);
 }
 
 .red-observatorios-nav-tab {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  border-radius: 10px;
-  padding: 0.45rem 1rem;
-  color: var(--red-muted, #5c6972);
-  font-size: 0.9rem;
-  font-weight: 700;
+  min-height: 44px;
+  border-bottom: 1px solid transparent;
+  padding: 0.5rem 0.1rem;
+  color: var(--red-muted);
+  font-size: 0.8rem;
+  font-weight: 500;
   text-decoration: none;
   transition:
     color 0.2s ease,
-    background-color 0.2s ease;
+    border-color 0.2s ease;
 }
 
 .red-observatorios-nav-tab:hover,
 .red-observatorios-nav-tab:focus {
-  background: #f2eef7;
-  color: var(--red-purple-dark, #32204a);
+  color: var(--red-ink);
+  border-bottom-color: var(--red-ink);
 }
 
 .red-observatorios-nav-tab.active {
-  background: #e9e2f1;
-  color: var(--red-purple-dark, #32204a);
+  border-bottom-color: var(--red-ink);
+  color: var(--red-ink);
 }
 
 .red-observatorios-nav-tab:focus-visible {
-  outline: 3px solid rgba(101, 64, 150, 0.2);
-  outline-offset: 2px;
+  outline: 2px solid var(--red-focus);
+  outline-offset: 5px;
 }
 
 @media (max-width: 600px) {
   .red-observatorios-nav-tab {
-    padding: 0.6rem 0.8rem;
-    font-size: 0.85rem;
+    padding: 0.6rem 0.1rem;
+    font-size: 0.75rem;
   }
 }
 </style>

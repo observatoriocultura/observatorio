@@ -4,104 +4,80 @@
       <ListSearchInput
         v-model="searchTerm"
         id="red-observatorios-search"
-        placeholder="Buscar por nombre, sigla, país o tema..."
+        placeholder="Buscar por nombre, país, ciudad o descripción..."
         aria-label="Buscar entidades de la Red de Observatorios"
         clear-label="Limpiar búsqueda de entidades"
       />
       <p class="explorer-count" aria-live="polite">
         <strong>{{ entidadesFiltradas.length }}</strong>
-        de {{ entidades.length }} entidades
+        de {{ entidades.length }} entidades y personas
       </p>
     </section>
 
-    <p v-if="loading" class="red-observatorios-message" role="status">
-      Cargando entidades...
-    </p>
-
-    <p v-else-if="error" class="red-observatorios-message red-observatorios-message-error">
-      {{ error }}
-    </p>
-
-    <RedObservatoriosCarousel v-if="showCarousel && !loading && !error" />
-
     <section
-      v-if="!loading && !error && entidadesFiltradas.length"
+      v-if="entidadesFiltradas.length"
       class="entities-grid"
       aria-label="Entidades de la Red de Observatorios"
     >
-      <article
-        v-for="entidad in entidadesFiltradas"
-        :key="entidad.id"
-        class="entity-card"
-        role="button"
-        tabindex="0"
-        :aria-label="`Ver información de ${entidad.nombre_entidad}`"
-        @click="openEntity(entidad)"
-        @keydown.enter="openEntity(entidad)"
-        @keydown.space.prevent="openEntity(entidad)"
-      >
-        <div class="entity-card-topline">
-          <span class="entity-country-flag-slot">
+      <article v-for="entidad in entidadesFiltradas" :key="entidad.id" class="entity-card">
+        <div class="entity-cover" :class="getCoverClass(entidad)">
+          <span class="entity-country">
             <img
-              v-if="getCountryFlagUrl(entidad.pais_ubicacion_principal)"
+              v-if="getCountryFlagUrl(entidad.pais_territorio)"
               class="entity-country-flag"
-              :src="getCountryFlagUrl(entidad.pais_ubicacion_principal)"
+              :src="getCountryFlagUrl(entidad.pais_territorio)"
               alt=""
               aria-hidden="true"
             />
             <i v-else class="bi bi-geo-alt" aria-hidden="true"></i>
+            {{ getCountryName(entidad.pais_territorio) }}
           </span>
-          <span class="entity-country">
-            {{ getCountryName(entidad.pais_ubicacion_principal) }}
+          <img
+            v-if="entidad.logo_url && !failedLogos.has(entidad.logo_url)"
+            :src="entidad.logo_url"
+            class="entity-logo"
+            alt=""
+            loading="lazy"
+            @error="failedLogos.add(entidad.logo_url)"
+          />
+          <span v-else class="entity-monogram" aria-hidden="true">{{
+            getInitials(entidad.nombre)
+          }}</span>
+          <span class="entity-cover-caption" aria-hidden="true">
+            {{ getEntityFieldLabel('tipo_actor', entidad.tipo_actor) }} · Red de Observatorios
           </span>
         </div>
 
         <div class="entity-card-content">
-          <h3>{{ entidad.nombre_entidad }}</h3>
-          <p class="entity-purpose">{{ entidad.proposito_principal }}</p>
+          <h2>{{ entidad.nombre }}</h2>
+          <p v-if="entidad.subtitulo" class="entity-subtitle">{{ entidad.subtitulo }}</p>
+          <p v-if="entidad.descripcion" class="entity-purpose">{{ entidad.descripcion }}</p>
 
-          <dl class="entity-facts">
-            <div>
-              <dt>Naturaleza</dt>
-              <dd>{{ entidad.naturaleza_institucional }}</dd>
-            </div>
-            <div>
-              <dt>Escala de trabajo</dt>
-              <dd>{{ entidad.escala_territorial_trabajo }}</dd>
-            </div>
-            <div>
-              <dt>Desde</dt>
-              <dd>{{ entidad.anio_inicio_actividades }}</dd>
-            </div>
-          </dl>
+          <p class="entity-meta">
+            <span>{{ getEntityFieldLabel('tipo_entidad', entidad.tipo_entidad) }}</span>
+            <span aria-hidden="true">/</span>
+            <span>{{ getEntityFieldLabel('escala_territorial', entidad.escala_territorial) }}</span>
+          </p>
 
-          <div v-if="entidad.tema_prioritario_accion_investigacion" class="entity-topics">
-            <span
-              v-for="tema in getTopics(entidad.tema_prioritario_accion_investigacion)"
-              :key="tema"
-              class="entity-topic"
-            >
-              {{ tema }}
-            </span>
-          </div>
+          <button
+            type="button"
+            class="entity-open-button"
+            :aria-label="`Conocer a ${entidad.nombre}`"
+            aria-haspopup="dialog"
+            @click="openEntity(entidad)"
+          >
+            Conocer <span aria-hidden="true">→</span>
+          </button>
         </div>
-
-        <a
-          v-if="entidad.sitio_web"
-          :href="entidad.sitio_web"
-          class="entity-link"
-          target="_blank"
-          rel="noopener noreferrer"
-          @click.stop
-        >
-          Visitar sitio web
-          <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
-        </a>
       </article>
     </section>
 
-    <p v-else-if="!loading && !error" class="red-observatorios-message" role="status">
-      No encontramos entidades que coincidan con “{{ searchTerm }}”. Prueba con otro término.
+    <p v-else class="red-observatorios-message" role="status">
+      {{
+        searchTerm.trim()
+          ? `No encontramos registros que coincidan con “${searchTerm}”. Prueba con otro término.`
+          : 'Aún no hay entidades o personas registradas en el directorio.'
+      }}
     </p>
 
     <RedObservatoriosModal
@@ -116,18 +92,45 @@
 <script setup>
 import { computed, onMounted, ref } from 'vue'
 import ListSearchInput from '../../../components/ListSearchInput.vue'
-import RedObservatoriosCarousel from './RedObservatoriosCarousel.vue'
+import { getEntityFieldLabel } from '../../../utils/redObservatorios.js'
 import RedObservatoriosModal from './RedObservatoriosModal.vue'
 
-const ENTIDADES_URL = `${import.meta.env.BASE_URL}content/2026/demo_red_observatorios/entidades.json`
 const PAISES_URL = `${import.meta.env.BASE_URL}resources/general/paises_ibero.js`
 
-const entidades = ref([])
+const props = defineProps({
+  entidades: {
+    type: Array,
+    required: true,
+  },
+})
+
 const searchTerm = ref('')
-const loading = ref(true)
-const error = ref('')
 const countryCatalog = ref(null)
 const selectedEntity = ref(null)
+const failedLogos = ref(new Set())
+
+const getInitials = (name) => {
+  const words = String(name)
+    .split(/\s+/)
+    .filter((word) => !/^(de|del|la|el|los|las|y|e|do|da|dos|das|o|a)$/i.test(word))
+  return words
+    .slice(0, 2)
+    .map((word) => Array.from(word)[0])
+    .join('')
+    .toUpperCase()
+}
+
+const getCoverClass = (entidad) => {
+  if (entidad.tipo_actor === 'persona') return 'entity-cover-sage'
+  return (
+    {
+      observatorio: 'entity-cover-blue',
+      red: 'entity-cover-peach',
+      'grupo-investigacion': 'entity-cover-sand',
+      entidad: 'entity-cover-yellow',
+    }[entidad.tipo_entidad] || 'entity-cover-sand'
+  )
+}
 
 const normalizeText = (value) => {
   return String(value || '')
@@ -139,14 +142,16 @@ const normalizeText = (value) => {
 const searchableEntityText = (entidad) => {
   return normalizeText(
     [
-      entidad.nombre_entidad,
-      entidad.sigla,
-      entidad.pais_ubicacion_principal,
-      getCountryName(entidad.pais_ubicacion_principal),
-      entidad.naturaleza_institucional,
-      entidad.escala_territorial_trabajo,
-      entidad.proposito_principal,
-      entidad.tema_prioritario_accion_investigacion,
+      entidad.nombre,
+      entidad.subtitulo,
+      entidad.pais_territorio,
+      getCountryName(entidad.pais_territorio),
+      entidad.ciudad,
+      getEntityFieldLabel('tipo_actor', entidad.tipo_actor),
+      getEntityFieldLabel('tipo_entidad', entidad.tipo_entidad),
+      getEntityFieldLabel('naturaleza_institucional', entidad.naturaleza_institucional),
+      getEntityFieldLabel('escala_territorial', entidad.escala_territorial),
+      entidad.descripcion,
     ].join(' '),
   )
 }
@@ -155,27 +160,19 @@ const entidadesFiltradas = computed(() => {
   const query = normalizeText(searchTerm.value.trim())
 
   if (!query) {
-    return entidades.value
+    return props.entidades
   }
 
-  return entidades.value.filter((entidad) => searchableEntityText(entidad).includes(query))
+  return props.entidades.filter((entidad) => searchableEntityText(entidad).includes(query))
 })
 
-const showCarousel = computed(() => !searchTerm.value.trim())
-
 const getCountryName = (countryCode) => {
-  return countryCatalog.value?.codeTo(countryCode) || countryCode || 'País no disponible'
+  const name = countryCatalog.value?.codeTo(countryCode)
+  return (name && name !== 'ND' ? name : countryCode) || 'País no disponible'
 }
 
 const getCountryFlagUrl = (countryCode) => {
   return countryCatalog.value?.flagIconUrl(countryCode) || ''
-}
-
-const getTopics = (topics) => {
-  return String(topics)
-    .split(';')
-    .map((topic) => topic.trim())
-    .filter(Boolean)
 }
 
 const openEntity = (entidad) => {
@@ -206,242 +203,290 @@ const loadCountryCatalog = () => {
   })
 }
 
-const loadEntities = async () => {
-  try {
-    const response = await fetch(ENTIDADES_URL)
-
-    if (!response.ok) {
-      throw new Error('No se pudo cargar el directorio de entidades.')
-    }
-
-    const data = await response.json()
-
-    if (!Array.isArray(data)) {
-      throw new Error('El archivo de entidades no tiene un formato válido.')
-    }
-
-    entidades.value = data
-  } catch (loadError) {
-    console.error('Error cargando las entidades de la red:', loadError)
-    error.value = 'No se pudieron cargar las entidades. Intenta nuevamente más tarde.'
-  } finally {
-    loading.value = false
-  }
-}
-
 onMounted(async () => {
   try {
     await loadCountryCatalog()
   } catch (catalogError) {
     console.error('Error cargando el catálogo de países:', catalogError)
   }
-
-  await loadEntities()
 })
 </script>
 
 <style scoped>
-.red-observatorios-lista {
-  padding-top: clamp(1rem, 2.5vw, 2rem);
-}
-
 .red-observatorios-search {
-  display: grid;
-  gap: 1rem;
-  margin-bottom: 1.8rem;
-  margin-right: auto;
-  margin-left: auto;
-  width: min(100%, 720px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
+.red-observatorios-search :deep(.list-search-input) {
+  max-width: 680px;
+}
+.red-observatorios-search :deep(.list-search-control) {
+  min-height: 58px;
+  padding: 0.65rem 0.85rem 0.65rem 1.25rem;
+  gap: 0.8rem;
+  border-color: var(--red-border);
+  background: var(--red-surface);
+}
+.red-observatorios-search :deep(.list-search-control:focus-within) {
+  border-color: var(--red-focus);
+  box-shadow: 0 0 0 3px rgb(104 82 62 / 12%);
+}
+.red-observatorios-search :deep(.list-search-field) {
+  color: var(--red-ink);
+  font-weight: 400;
+}
+.red-observatorios-search :deep(.list-search-field::placeholder),
+.red-observatorios-search :deep(.list-search-icon),
+.red-observatorios-search :deep(.list-search-clear) {
+  color: var(--red-muted);
+}
+.red-observatorios-search :deep(.list-search-clear-visible:hover),
+.red-observatorios-search :deep(.list-search-clear-visible:focus) {
+  background: var(--red-soft);
+  color: var(--red-ink);
+  outline-color: var(--red-focus);
+}
 .explorer-count {
+  flex-shrink: 0;
   margin: 0;
   color: var(--red-muted);
-  font-size: 0.9rem;
-  text-align: center;
+  font-size: 0.8rem;
 }
-
 .explorer-count strong {
-  color: var(--red-purple);
-  font-size: 1.1rem;
+  color: var(--red-ink);
+  font-weight: 600;
 }
-
 .entities-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 24px;
+  align-items: stretch;
 }
-
 .entity-card {
+  position: relative;
   display: flex;
   min-width: 0;
   flex-direction: column;
-  border: 1px solid var(--red-border);
-  border-radius: 14px;
-  background: #fff;
-  overflow: hidden;
+  border: 1px solid rgb(36 18 7 / 3%);
+  border-radius: 28px;
+  background: var(--red-surface);
+  box-shadow: 0 5px 16px rgb(36 18 7 / 3%);
   transition:
-    border-color 0.2s ease,
     box-shadow 0.2s ease,
     transform 0.2s ease;
 }
-
 .entity-card:hover {
-  border-color: #cbb9df;
-  box-shadow: 0 14px 32px rgba(50, 32, 74, 0.1);
-  transform: translateY(-2px);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgb(36 18 7 / 8%);
 }
-
-.entity-card-topline {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  padding: 1rem 1rem 0.75rem;
+.entity-cover {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 27px 27px 0 0;
+  background: var(--cover-background, #d9cfc0);
+  color: var(--red-ink);
 }
-
+.entity-cover-blue {
+  --cover-background: #aab8cc;
+}
+.entity-cover-peach {
+  --cover-background: #dcb6a4;
+}
+.entity-cover-sand {
+  --cover-background: #d9cfc0;
+}
+.entity-cover-yellow {
+  --cover-background: #e8dcaa;
+}
+.entity-cover-sage {
+  --cover-background: #c4cec0;
+}
+.entity-cover::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 83%;
+  aspect-ratio: 1;
+  top: 23%;
+  left: -28%;
+  border: 1px solid rgb(36 18 7 / 18%);
+  border-radius: 50%;
+}
+.entity-cover::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 53%;
+  aspect-ratio: 1;
+  right: -13%;
+  top: -12%;
+  background: rgb(255 255 255 / 21%);
+  transform: rotate(22deg);
+}
 .entity-country {
-  min-width: 0;
-  color: var(--red-muted);
-  font-size: 0.9rem;
-  font-weight: 700;
-  text-align: right;
-}
-
-.entity-country-flag-slot {
+  position: absolute;
+  top: 18px;
+  left: 18px;
   display: inline-flex;
-  width: 28px;
-  min-width: 28px;
-  height: 21px;
+  max-width: calc(100% - 36px);
   align-items: center;
-  justify-content: center;
+  gap: 0.4rem;
+  border-radius: 999px;
+  padding: 0.3rem 0.7rem;
+  background: var(--red-surface);
+  font-size: 0.7rem;
+  font-weight: 500;
 }
-
-.entity-country-flag-slot i {
-  color: var(--red-purple);
-  font-size: 1.1rem;
-}
-
 .entity-country-flag {
-  display: inline-block;
-  width: 28px;
+  width: 18px;
   height: auto;
   border-radius: 2px;
-  box-shadow: 0 0 0 1px rgba(24, 35, 43, 0.08);
 }
-
+.entity-monogram {
+  font-size: clamp(4rem, 7vw, 7rem);
+  font-weight: 400;
+  letter-spacing: -0.09em;
+  line-height: 1;
+}
+.entity-logo {
+  width: 60%;
+  height: 54%;
+  object-fit: contain;
+}
+.entity-cover-caption {
+  position: absolute;
+  bottom: 18px;
+  left: 22px;
+  right: 22px;
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
 .entity-card-content {
+  display: flex;
   flex: 1;
-  padding: 0 1rem 1rem;
+  flex-direction: column;
+  min-width: 0;
+  padding: 28px;
 }
-
-.entity-card h3 {
-  margin: 0 0 0.7rem;
+.entity-card h2 {
+  margin: 0 0 0.75rem;
   color: var(--red-ink);
-  font-size: 1.08rem;
-  line-height: 1.25;
+  font-size: clamp(1.5rem, 2.1vw, 1.9rem);
+  font-weight: 400;
+  line-height: 1.12;
+  overflow-wrap: anywhere;
 }
-
+.entity-subtitle {
+  margin: 0 0 1rem;
+  color: var(--red-muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
 .entity-purpose {
   display: -webkit-box;
   overflow: hidden;
-  margin: 0 0 1rem;
+  margin: 0 0 1.2rem;
   color: var(--red-muted);
-  font-size: 0.88rem;
-  line-height: 1.5;
+  font-size: 0.93rem;
+  line-height: 1.65;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
-  line-clamp: 4;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
 }
-
-.entity-facts {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 0.7rem 1rem;
-  margin: 0;
-  padding-top: 0.85rem;
-  border-top: 1px solid #edf0f2;
-}
-
-.entity-facts div:first-child {
-  grid-column: 1 / -1;
-}
-
-.entity-facts dt {
-  margin-bottom: 0.15rem;
-  color: #7a858c;
-  font-size: 0.7rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.entity-facts dd {
-  margin: 0;
-  color: var(--red-ink);
-  font-size: 0.8rem;
-  line-height: 1.35;
-}
-
-.entity-topics {
+.entity-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.35rem;
-  margin-top: 1rem;
+  gap: 0.3rem 0.5rem;
+  margin: auto 0 1.25rem;
+  padding-top: 0.4rem;
+  color: var(--red-muted);
+  font-size: 0.7rem;
 }
-
-.entity-topic {
-  border-radius: 5px;
-  background: #f4f6f7;
-  padding: 0.28rem 0.45rem;
-  color: #53616a;
-  font-size: 0.72rem;
-  line-height: 1.25;
-}
-
-.entity-link {
-  display: flex;
+.entity-open-button {
+  align-self: flex-start;
+  display: inline-flex;
+  min-height: 44px;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  border-top: 1px solid #edf0f2;
-  padding: 0.85rem 1rem;
-  color: var(--red-purple);
-  font-size: 0.83rem;
-  font-weight: 800;
-  text-decoration: none;
+  gap: 0.6rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--red-ink);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
-
-.entity-link:hover,
-.entity-link:focus {
-  background: #faf8fc;
-  color: var(--red-purple-dark);
+.entity-open-button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: 28px;
+  cursor: pointer;
 }
-
-.entity-link:focus-visible {
-  outline: 3px solid rgba(101, 64, 150, 0.2);
-  outline-offset: -3px;
+.entity-open-button:focus-visible {
+  outline: none;
 }
-
+.entity-open-button:focus-visible::after {
+  outline: 2px solid var(--red-focus);
+  outline-offset: 5px;
+}
+.entity-open-button span {
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+.entity-card:hover .entity-open-button span {
+  transform: translateX(4px);
+}
 .red-observatorios-message {
-  margin: 2rem auto 0;
+  margin: 0;
+  padding: 3rem 1.5rem;
+  border-radius: 28px;
+  background: var(--red-surface);
   color: var(--red-muted);
   text-align: center;
 }
-
-.red-observatorios-message-error {
-  color: #a23838;
-}
-
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
   .entities-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-
-@media (max-width: 580px) {
+@media (max-width: 760px) {
+  .red-observatorios-search {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .red-observatorios-search :deep(.list-search-input) {
+    max-width: none;
+  }
+  .explorer-count {
+    text-align: right;
+  }
+}
+@media (max-width: 620px) {
   .entities-grid {
     grid-template-columns: 1fr;
+  }
+  .entity-card-content {
+    padding: 24px;
+  }
+  .entity-monogram {
+    font-size: clamp(5rem, 20vw, 8rem);
+  }
+  .entity-card h2 {
+    font-size: 1.75rem;
   }
 }
 </style>

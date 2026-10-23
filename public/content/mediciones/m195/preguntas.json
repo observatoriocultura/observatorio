@@ -1373,7 +1373,7 @@
         "codigo":"P12",
         "etiqueta_1":12,
         "enunciado_1":"Esa(s) actividad(es) artística(s) o creativa(s), ¿Dónde la(s) realiza principalmente?",
-        "instruccion":"Respuesta espontánea",
+        "instruccion":"Quienes respondieron Sí en la pregunta 2",
         "url_imagen":null,
         "palabras_clave":"lugares de práctica artística, espacios culturales, espacio público, hogar, instituciones educativas, espacios de trabajo, centros Crea, programa Nidos, centros filarmónicos, espacios comunitarios",
         "cantidad_variables":16.0,

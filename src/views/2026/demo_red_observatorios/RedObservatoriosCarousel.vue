@@ -80,9 +80,7 @@
             </button>
           </div>
 
-          <span class="carousel-counter">
-            {{ activeIndex + 1 }} / {{ images.length }}
-          </span>
+          <span class="carousel-counter"> {{ activeIndex + 1 }} / {{ images.length }} </span>
         </div>
       </div>
     </div>
@@ -209,16 +207,16 @@ onUnmounted(() => {
 
 .carousel {
   overflow: hidden;
-  border: 1px solid var(--red-border, #e2e6ea);
-  border-radius: 18px;
+  border: 1px solid var(--red-border);
+  border-radius: 28px;
   background: #fff;
-  box-shadow: 0 16px 42px rgba(50, 32, 74, 0.1);
+  box-shadow: 0 16px 42px rgba(36, 18, 7, 0.05);
 }
 
 .carousel-stage {
   position: relative;
   overflow: hidden;
-  background: #ebe7ef;
+  background: #e5ded4;
 }
 
 .carousel-item img {
@@ -234,14 +232,14 @@ onUnmounted(() => {
 .carousel-control::before {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(26, 19, 35, 0.35), transparent);
+  background: linear-gradient(90deg, rgba(36, 18, 7, 0.35), transparent);
   content: '';
   opacity: 0;
   transition: opacity 0.2s ease;
 }
 
 .carousel-control-next::before {
-  background: linear-gradient(270deg, rgba(26, 19, 35, 0.35), transparent);
+  background: linear-gradient(270deg, rgba(36, 18, 7, 0.35), transparent);
 }
 
 .carousel-control:hover::before,
@@ -256,9 +254,9 @@ onUnmounted(() => {
   height: 2.6rem;
   border: 1px solid rgba(255, 255, 255, 0.65);
   border-radius: 50%;
-  background-color: rgba(50, 32, 74, 0.76);
+  background-color: rgba(36, 18, 7, 0.76);
   background-size: 48%;
-  box-shadow: 0 5px 16px rgba(26, 19, 35, 0.2);
+  box-shadow: 0 5px 16px rgba(36, 18, 7, 0.2);
   backdrop-filter: blur(6px);
 }
 
@@ -268,9 +266,9 @@ onUnmounted(() => {
   align-items: center;
   gap: 1.5rem;
   min-height: 88px;
-  padding: 1rem 1.25rem;
-  border-top: 1px solid var(--red-border, #e2e6ea);
-  background: linear-gradient(120deg, #fff 0%, #faf8fc 100%);
+  padding: 1.5rem;
+  border-top: 1px solid var(--red-border);
+  background: linear-gradient(120deg, #fff 0%, #f7f4ee 100%);
 }
 
 .carousel-description {
@@ -279,18 +277,18 @@ onUnmounted(() => {
 
 .carousel-kicker {
   margin: 0 0 0.2rem;
-  color: var(--red-purple, #654096);
+  color: var(--red-accent);
   font-size: 0.68rem;
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 .carousel-caption-text {
   margin: 0;
-  color: var(--red-ink, #18232b);
+  color: var(--red-ink);
   font-size: clamp(0.95rem, 1.6vw, 1.12rem);
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.35;
 }
 
@@ -311,10 +309,10 @@ onUnmounted(() => {
   align-items: center;
   justify-content: center;
   flex: 0 0 auto;
-  border: 1px solid #ddd5e6;
+  border: 1px solid #e5ded4;
   border-radius: 50%;
   background: #fff;
-  color: var(--red-purple, #654096);
+  color: var(--red-accent);
   transition:
     border-color 0.2s ease,
     background-color 0.2s ease,
@@ -322,8 +320,8 @@ onUnmounted(() => {
 }
 
 .carousel-playback:hover {
-  border-color: var(--red-purple, #654096);
-  background: var(--red-purple, #654096);
+  border-color: var(--red-accent);
+  background: var(--red-accent);
   color: #fff;
 }
 
@@ -353,7 +351,7 @@ onUnmounted(() => {
   width: 7px;
   height: 7px;
   border-radius: 999px;
-  background: #c8c0d1;
+  background: #c8bcae;
   transition:
     width 0.2s ease,
     background-color 0.2s ease;
@@ -361,12 +359,12 @@ onUnmounted(() => {
 
 .carousel-indicator.active span {
   width: 20px;
-  background: var(--red-purple, #654096);
+  background: var(--red-accent);
 }
 
 .carousel-counter {
   min-width: 36px;
-  color: var(--red-muted, #5c6871);
+  color: var(--red-muted);
   font-size: 0.78rem;
   font-variant-numeric: tabular-nums;
   text-align: right;
@@ -375,7 +373,7 @@ onUnmounted(() => {
 .carousel-playback:focus-visible,
 .carousel-indicator:focus-visible,
 .carousel-control:focus-visible {
-  outline: 3px solid rgba(101, 64, 150, 0.35);
+  outline: 3px solid rgba(104, 82, 62, 0.4);
   outline-offset: 2px;
 }
 
@@ -396,7 +394,7 @@ onUnmounted(() => {
 
 @media (max-width: 575px) {
   .carousel {
-    border-radius: 13px;
+    border-radius: 24px;
   }
 
   .carousel-toolbar {

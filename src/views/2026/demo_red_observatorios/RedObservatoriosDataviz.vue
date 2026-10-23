@@ -5,16 +5,16 @@
         <p class="eyebrow">Conexiones</p>
         <h1 id="connections-title">Un ecosistema de conocimiento conectado</h1>
         <p class="dataviz-intro">
-          Esta demostración presenta posibles relaciones de intercambio, colaboración y circulación de
-          conocimiento entre las entidades de la red. Los vínculos son simulados y permiten explorar cómo
-          podría verse el ecosistema en conjunto.
+          Esta demostración presenta posibles relaciones de intercambio, colaboración y circulación
+          de conocimiento entre las entidades de la red. Los vínculos son simulados y permiten
+          explorar cómo podría verse el ecosistema en conjunto.
         </p>
       </div>
 
       <div class="dataviz-metrics" aria-label="Resumen de la red">
         <div class="metric">
           <strong>{{ entityCount }}</strong>
-          <span>entidades</span>
+          <span>entidades y personas</span>
         </div>
         <div class="metric">
           <strong>{{ connectionCount }}</strong>
@@ -31,6 +31,12 @@
     <div v-else-if="error" class="dataviz-status dataviz-status--error" role="alert">
       <i class="bi bi-exclamation-circle" aria-hidden="true"></i>
       <span>{{ error }}</span>
+    </div>
+
+    <div v-else-if="!connectionCount" class="dataviz-status dataviz-empty" role="status">
+      <i class="bi bi-diagram-3" aria-hidden="true"></i>
+      <h2>Un espacio para encontrarnos.</h2>
+      <p>Aún no hay vínculos disponibles para explorar entre los actores del directorio.</p>
     </div>
 
     <div v-else class="charts-stack">
@@ -53,8 +59,9 @@
             </p>
           </div>
           <p class="chart-note">
-            Cada segmento representa una entidad. Las bandas muestran vínculos simulados de colaboración o
-            intercambio de conocimiento; su presencia no implica una relación institucional confirmada.
+            Cada segmento representa una entidad. Las bandas muestran vínculos simulados de
+            colaboración o intercambio de conocimiento; su presencia no implica una relación
+            institucional confirmada.
           </p>
         </div>
       </article>
@@ -73,14 +80,14 @@
               <h2>Entidades que conectan el ecosistema</h2>
             </div>
             <p>
-              Las entidades con más vínculos adquieren mayor presencia y ayudan a identificar posibles
-              articuladores, puentes y espacios de intercambio dentro de la red.
+              Las entidades con más vínculos adquieren mayor presencia y ayudan a identificar
+              posibles articuladores, puentes y espacios de intercambio dentro de la red.
             </p>
           </div>
           <p class="chart-note">
-            Cada nodo representa una entidad: su tamaño refleja la cantidad de vínculos visibles y su color
-            identifica el país. Las líneas muestran conexiones simuladas y pueden explorarse de forma
-            interactiva.
+            Cada nodo representa una entidad: su tamaño refleja la cantidad de vínculos visibles y
+            su color identifica el país. Las líneas muestran conexiones simuladas y pueden
+            explorarse de forma interactiva.
           </p>
         </div>
       </article>
@@ -93,36 +100,37 @@ import Highcharts from 'highcharts/es-modules/masters/highcharts.src.js'
 import 'highcharts/es-modules/masters/modules/sankey.src.js'
 import 'highcharts/es-modules/masters/modules/dependency-wheel.src.js'
 import 'highcharts/es-modules/masters/modules/networkgraph.src.js'
-import { nextTick, onMounted, onUnmounted, ref } from 'vue'
+import { computed, nextTick, onMounted, onUnmounted, ref } from 'vue'
+import { getRigccCountryColor } from '../../../constants/catalogs/index.js'
+import { getEntityFieldLabel } from '../../../utils/redObservatorios.js'
 
-const ENTIDADES_URL = `${import.meta.env.BASE_URL}content/2026/demo_red_observatorios/entidades.json`
 const CONEXIONES_URL = `${import.meta.env.BASE_URL}content/2026/demo_red_observatorios/conexiones.json`
+
+const props = defineProps({
+  entidades: {
+    type: Array,
+    required: true,
+  },
+})
 
 const dependencyChartContainer = ref(null)
 const chartContainer = ref(null)
 const loading = ref(true)
 const error = ref('')
-const entityCount = ref(0)
+const entityCount = computed(() => props.entidades.length)
 const connectionCount = ref(0)
 
 let dependencyChartInstance = null
 let chartInstance = null
 let resizeObserver = null
 
-const DEFAULT_NODE_COLOR = '#654096'
-
-const escapeHtml = (value) => String(value ?? '')
-  .replaceAll('&', '&amp;')
-  .replaceAll('<', '&lt;')
-  .replaceAll('>', '&gt;')
-  .replaceAll('"', '&quot;')
-  .replaceAll("'", '&#039;')
-
-const getEntityColor = (entity) => {
-  const color = String(entity.color || '').trim()
-
-  return /^#[0-9a-f]{6}$/i.test(color) ? color : DEFAULT_NODE_COLOR
-}
+const escapeHtml = (value) =>
+  String(value ?? '')
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#039;')
 
 const createGraphData = (entities, connections) => {
   const entitiesById = new Map(entities.map((entity) => [entity.id, entity]))
@@ -155,21 +163,18 @@ const createGraphData = (entities, connections) => {
 
     return {
       id: entity.id,
-      name: entity.sigla || entity.id,
-      color: getEntityColor(entity),
+      name: entity.nombre.length > 35 ? `${entity.nombre.slice(0, 32)}…` : entity.nombre,
+      color: getRigccCountryColor(entity.pais_territorio),
       marker: {
         radius: Math.max(7, Math.min(16, 6 + degree * 1.2)),
         lineColor: '#ffffff',
         lineWidth: 2,
       },
       custom: {
-        name: entity.nombre_entidad,
-        country: entity.pais_ubicacion_principal || 'ND',
-        nature: entity.naturaleza_institucional || 'No informado',
-        scale: entity.escala_territorial_trabajo || 'No informado',
-        year: entity.anio_inicio_actividades || 'No informado',
-        purpose: entity.proposito_principal || 'No informado',
-        topics: entity.tema_prioritario_accion_investigacion || 'No informado',
+        name: entity.nombre,
+        country: entity.pais_territorio || 'ND',
+        nature: getEntityFieldLabel('naturaleza_institucional', entity.naturaleza_institucional),
+        scale: getEntityFieldLabel('escala_territorial', entity.escala_territorial),
         degree,
       },
     }
@@ -193,17 +198,18 @@ const createTooltip = (point) => {
 
   return [
     `<b>${escapeHtml(custom.name || point.name)}</b>`,
-    `<span>${escapeHtml(custom.country)} · ${escapeHtml(point.name)}</span>`,
+    `<span>${escapeHtml(custom.country)}</span>`,
     `<span>${escapeHtml(custom.nature)}</span>`,
-    `<span>${escapeHtml(custom.scale)} · desde ${escapeHtml(custom.year)}</span>`,
+    `<span>${escapeHtml(custom.scale)}</span>`,
     `<span>${custom.degree} vínculos</span>`,
   ].join('<br>')
 }
 
-const createDependencyLinks = (links) => links.map((link) => ({
-  ...link,
-  weight: 1,
-}))
+const createDependencyLinks = (links) =>
+  links.map((link) => ({
+    ...link,
+    weight: 1,
+  }))
 
 const renderDependencyWheel = (nodes, links) => {
   dependencyChartInstance = Highcharts.chart(dependencyChartContainer.value, {
@@ -225,7 +231,7 @@ const renderDependencyWheel = (nodes, links) => {
     tooltip: {
       useHTML: true,
       backgroundColor: '#ffffff',
-      borderColor: '#e2e6ea',
+      borderColor: '#e5ded4',
       borderRadius: 10,
       shadow: false,
       formatter() {
@@ -243,7 +249,7 @@ const renderDependencyWheel = (nodes, links) => {
           distance: 12,
           nodeFormat: '{point.name}',
           style: {
-            color: '#32204a',
+            color: '#241207',
             fontSize: '10px',
             fontWeight: '600',
             textOutline: 'none',
@@ -251,34 +257,33 @@ const renderDependencyWheel = (nodes, links) => {
         },
       },
     },
-    series: [{
-      type: 'dependencywheel',
-      name: 'Conexiones',
-      data: createDependencyLinks(links),
-      nodes,
-      size: '88%',
-    }],
+    series: [
+      {
+        type: 'dependencywheel',
+        name: 'Conexiones',
+        data: createDependencyLinks(links),
+        nodes,
+        size: '88%',
+      },
+    ],
     responsive: {
-      rules: [{
-        condition: {
-          maxWidth: 575,
-        },
-        chartOptions: {
-          chart: {
-            height: 500,
+      rules: [
+        {
+          condition: {
+            maxWidth: 575,
+          },
+          chartOptions: {
+            chart: {
+              height: 500,
+            },
           },
         },
-      }],
+      ],
     },
   })
 }
 
-const renderChart = (entities, connections) => {
-  const { nodes, links } = createGraphData(entities, connections)
-
-  entityCount.value = nodes.length
-  connectionCount.value = links.length
-
+const renderChart = (nodes, links) => {
   renderDependencyWheel(nodes, links)
 
   chartInstance = Highcharts.chart(chartContainer.value, {
@@ -295,12 +300,13 @@ const renderChart = (entities, connections) => {
       enabled: false,
     },
     accessibility: {
-      description: 'Mapa de relaciones simuladas entre las entidades del directorio de observatorios.',
+      description:
+        'Mapa de relaciones simuladas entre las entidades del directorio de observatorios.',
     },
     tooltip: {
       useHTML: true,
       backgroundColor: '#ffffff',
-      borderColor: '#e2e6ea',
+      borderColor: '#e5ded4',
       borderRadius: 10,
       shadow: false,
       formatter() {
@@ -311,7 +317,7 @@ const renderChart = (entities, connections) => {
       networkgraph: {
         draggable: true,
         link: {
-          color: '#c8bfd5',
+          color: '#c8bcae',
           width: 1.2,
         },
         layoutAlgorithm: {
@@ -333,7 +339,7 @@ const renderChart = (entities, connections) => {
             return this.point.isNode && degree >= 6 ? this.point.name : ''
           },
           style: {
-            color: '#32204a',
+            color: '#241207',
             fontSize: '10px',
             fontWeight: '600',
             textOutline: 'none',
@@ -341,23 +347,27 @@ const renderChart = (entities, connections) => {
         },
       },
     },
-    series: [{
-      type: 'networkgraph',
-      name: 'Conexiones',
-      data: links,
-      nodes,
-    }],
+    series: [
+      {
+        type: 'networkgraph',
+        name: 'Conexiones',
+        data: links,
+        nodes,
+      },
+    ],
     responsive: {
-      rules: [{
-        condition: {
-          maxWidth: 575,
-        },
-        chartOptions: {
-          chart: {
-            height: 520,
+      rules: [
+        {
+          condition: {
+            maxWidth: 575,
+          },
+          chartOptions: {
+            chart: {
+              height: 520,
+            },
           },
         },
-      }],
+      ],
     },
   })
 }
@@ -367,26 +377,25 @@ const loadData = async () => {
   error.value = ''
 
   try {
-    const responses = await Promise.all([
-      fetch(ENTIDADES_URL),
-      fetch(CONEXIONES_URL),
-    ])
+    const response = await fetch(CONEXIONES_URL)
+    if (!response.ok) {
+      throw new Error(`No se pudo cargar ${response.url}`)
+    }
+    const connections = await response.json()
 
-    responses.forEach((response) => {
-      if (!response.ok) {
-        throw new Error(`No se pudo cargar ${response.url}`)
-      }
-    })
-
-    const [entities, connections] = await Promise.all(responses.map((response) => response.json()))
-
-    if (!Array.isArray(entities) || !Array.isArray(connections)) {
+    if (!Array.isArray(connections)) {
       throw new Error('El formato de los datos de conexiones no es válido.')
     }
 
+    // Conservar solo vínculos cuyos dos identificadores existan en la fuente actual.
+    const { nodes, links } = createGraphData(props.entidades, connections)
+    connectionCount.value = links.length
     loading.value = false
+
+    if (!links.length) return
+
     await nextTick()
-    renderChart(entities, connections)
+    renderChart(nodes, links)
   } catch (loadError) {
     error.value = 'No fue posible cargar el gráfico de conexiones. Intenta nuevamente más tarde.'
     console.error(loadError)
@@ -398,7 +407,11 @@ const loadData = async () => {
 onMounted(async () => {
   await loadData()
 
-  if (typeof ResizeObserver !== 'undefined' && dependencyChartContainer.value && chartContainer.value) {
+  if (
+    typeof ResizeObserver !== 'undefined' &&
+    dependencyChartContainer.value &&
+    chartContainer.value
+  ) {
     resizeObserver = new ResizeObserver(() => {
       dependencyChartInstance?.reflow()
       chartInstance?.reflow()
@@ -417,7 +430,7 @@ onUnmounted(() => {
 
 <style scoped>
 .red-observatorios-dataviz {
-  padding: clamp(1.25rem, 3vw, 2.5rem) 0 1rem;
+  padding: clamp(2rem, 5vw, 4.5rem) 0 1rem;
 }
 
 .dataviz-header {
@@ -425,12 +438,12 @@ onUnmounted(() => {
   align-items: flex-end;
   justify-content: space-between;
   gap: 2rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 2.5rem;
 }
 
 .eyebrow {
   margin: 0 0 0.45rem;
-  color: var(--red-purple, #654096);
+  color: var(--red-accent);
   font-size: 0.76rem;
   font-weight: 800;
   letter-spacing: 0.12em;
@@ -439,15 +452,16 @@ onUnmounted(() => {
 
 h1 {
   margin: 0;
-  color: var(--red-purple-dark, #32204a);
-  font-size: clamp(1.7rem, 3vw, 2.45rem);
-  line-height: 1.1;
+  color: var(--red-ink);
+  font-size: clamp(2.5rem, 4.5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.05;
 }
 
 .dataviz-intro {
   max-width: 680px;
   margin: 0.85rem 0 0;
-  color: var(--red-muted, #5c6871);
+  color: var(--red-muted);
   line-height: 1.6;
 }
 
@@ -462,17 +476,18 @@ h1 {
   gap: 0.1rem;
   min-width: 80px;
   padding-left: 1rem;
-  border-left: 1px solid var(--red-border, #e2e6ea);
+  border-left: 1px solid var(--red-border);
 }
 
 .metric strong {
-  color: var(--red-purple-dark, #32204a);
-  font-size: 1.55rem;
+  color: var(--red-ink);
+  font-size: 2rem;
+  font-weight: 400;
   line-height: 1;
 }
 
 .metric span {
-  color: var(--red-muted, #5c6871);
+  color: var(--red-muted);
   font-size: 0.8rem;
 }
 
@@ -485,8 +500,8 @@ h1 {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
   overflow: hidden;
-  border: 1px solid var(--red-border, #e2e6ea);
-  border-radius: 16px;
+  border: 1px solid var(--red-border);
+  border-radius: 28px;
   background: #fff;
 }
 
@@ -496,8 +511,8 @@ h1 {
   justify-content: center;
   gap: 1.5rem;
   padding: clamp(1.5rem, 3vw, 2.5rem);
-  border-left: 1px solid var(--red-border, #e2e6ea);
-  background: linear-gradient(145deg, #fff 0%, #faf8fc 100%);
+  border-left: 1px solid var(--red-border);
+  background: linear-gradient(145deg, #fff 0%, #f7f4ee 100%);
 }
 
 .chart-heading {
@@ -507,20 +522,20 @@ h1 {
 
 .chart-heading h2 {
   margin: 0;
-  color: var(--red-purple-dark, #32204a);
-  font-size: 1.25rem;
+  color: var(--red-ink);
+  font-size: 1.6rem;
 }
 
 .chart-heading > p {
   margin: 0;
-  color: var(--red-muted, #5c6871);
+  color: var(--red-muted);
   font-size: 0.9rem;
   line-height: 1.65;
 }
 
 .chart-kicker {
   margin: 0 0 0.25rem;
-  color: var(--red-purple, #654096);
+  color: var(--red-accent);
   font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.1em;
@@ -535,8 +550,8 @@ h1 {
 .chart-note {
   margin: 0;
   padding-top: 1.25rem;
-  border-top: 1px solid var(--red-border, #e2e6ea);
-  color: var(--red-muted, #5c6871);
+  border-top: 1px solid var(--red-border);
+  color: var(--red-muted);
   font-size: 0.82rem;
   line-height: 1.6;
 }
@@ -547,11 +562,43 @@ h1 {
   align-items: center;
   justify-content: center;
   gap: 0.65rem;
-  color: var(--red-muted, #5c6871);
+  color: var(--red-muted);
 }
 
 .dataviz-status--error {
   color: #a33d48;
+}
+
+.dataviz-empty {
+  min-height: 320px;
+  flex-direction: column;
+  padding: clamp(2rem, 5vw, 4rem);
+  border-radius: 28px;
+  background: var(--red-surface);
+  text-align: center;
+}
+
+.dataviz-empty > i {
+  display: grid;
+  width: 64px;
+  height: 64px;
+  place-items: center;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  background: var(--red-background);
+  color: var(--red-ink);
+  font-size: 1.5rem;
+}
+
+.dataviz-empty h2 {
+  margin: 0;
+  color: var(--red-ink);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+}
+
+.dataviz-empty p {
+  max-width: 48ch;
+  margin: 0;
 }
 
 @media (max-width: 900px) {
@@ -570,7 +617,7 @@ h1 {
   .chart-copy {
     order: -1;
     padding: 1.5rem;
-    border-bottom: 1px solid var(--red-border, #e2e6ea);
+    border-bottom: 1px solid var(--red-border);
     border-left: 0;
   }
 }
