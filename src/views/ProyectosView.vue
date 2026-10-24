@@ -1,8 +1,10 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { computed, inject, onMounted, ref } from 'vue'
 import { RouterLink } from 'vue-router'
+import { normalizeProfileRole, PROFILE_ROLE_KEYS } from '../constants/catalogs'
 import { fetchGoogleSheetCsv } from '../utils/googleSheets'
 
+const currentUser = inject('currentUser', ref(null))
 const contenidos = ref([])
 const loading = ref(false)
 const errorMessage = ref('')
@@ -11,6 +13,24 @@ const defaultThumbnailUrl = `${baseUrl}resources/images/app/portada_16_9.jpg`
 const sheetFileId =
   import.meta.env.VITE_PROYECTOS_SHEET_ID ?? '159HVaL2GEIQZhUuqdwKfi_bmZW3dqp5WjKlJYyJ0Bvk'
 const sheetGid = import.meta.env.VITE_PROYECTOS_SHEET_GID ?? '518894995'
+
+const contenidosVisibles = computed(() =>
+  contenidos.value.filter((contenido) => {
+    switch (contenido.visibility) {
+      case 'public':
+        return true
+      case 'private':
+        return Boolean(currentUser.value)
+      case 'hidden':
+        return (
+          Boolean(currentUser.value) &&
+          normalizeProfileRole(currentUser.value.role) === PROFILE_ROLE_KEYS.ADMIN
+        )
+      default:
+        return false
+    }
+  }),
+)
 
 const pickFirst = (row, keys) => keys.map((key) => row[key]).find((value) => value?.trim?.())
 
@@ -32,6 +52,7 @@ const normalizeContenido = (row) => ({
   tag: pickFirst(row, ['tag', 'categoria', 'categoría', 'etiqueta']) ?? 'Contenido',
   year: pickFirst(row, ['year', 'anio', 'año']) ?? null,
   date: pickFirst(row, ['date', 'fecha', 'vigencia']) ?? null,
+  visibility: String(row.visibility ?? '').trim().toLowerCase(),
 })
 
 const loadContenidos = async () => {
@@ -44,6 +65,7 @@ const loadContenidos = async () => {
     const rows = await fetchGoogleSheetCsv({
       fileId: sheetFileId,
       gid: sheetGid,
+      requiredHeaders: ['visibility'],
     })
     const sheetContenidos = rows
       .map(normalizeContenido)
@@ -80,12 +102,12 @@ onMounted(loadContenidos)
 
       <p v-if="loading" class="status-message">Cargando contenidos...</p>
       <p v-else-if="errorMessage" class="status-message status-error">{{ errorMessage }}</p>
-      <p v-else-if="contenidos.length === 0" class="status-message">
+      <p v-else-if="contenidosVisibles.length === 0" class="status-message">
         No hay contenidos disponibles.
       </p>
 
       <div class="content-grid">
-        <article v-for="(contenido, index) in contenidos" :key="index" class="content-card">
+        <article v-for="(contenido, index) in contenidosVisibles" :key="index" class="content-card">
           <div class="card-meta">
             <span class="tag">{{ contenido.tag }}</span>
             <span v-if="contenido.date" class="date">{{ contenido.date }}</span>

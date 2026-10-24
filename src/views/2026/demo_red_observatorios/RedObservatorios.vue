@@ -14,6 +14,7 @@
             encuentra afinidades y abre nuevas conversaciones.
           </p>
         </header>
+        <RedObservatoriosCarousel v-if="currentTab === 'explorar'" />
         <div v-if="currentTab !== 'informacion' && loading" class="data-status" role="status">
           Cargando entidades y personas de la red...
         </div>
@@ -38,6 +39,7 @@
 import { computed, defineAsyncComponent, onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { fetchRedObservatoriosEntities } from '../../../utils/redObservatorios.js'
+import RedObservatoriosCarousel from './RedObservatoriosCarousel.vue'
 import RedObservatoriosDataviz from './RedObservatoriosDataviz.vue'
 import RedObservatoriosInfo from './RedObservatoriosInfo.vue'
 import RedObservatoriosLista from './RedObservatoriosLista.vue'
@@ -113,48 +115,48 @@ const currentTab = computed(() => {
 
 .directory-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
-  align-items: end;
-  gap: clamp(2rem, 5vw, 5rem);
-  padding: clamp(2rem, 5vw, 4.5rem) 0 clamp(2rem, 4vw, 3.5rem);
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  padding: 1.25rem 0 1.5rem;
 }
 
 .directory-eyebrow {
-  margin: 0 0 1.25rem;
-  font-size: 0.7rem;
+  margin: 0 0 0.75rem;
+  font-size: 0.65rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 .directory-hero h1 {
-  max-width: 16ch;
+  max-width: 24ch;
   margin: 0;
   color: var(--red-ink);
-  font-size: clamp(3rem, 6.1vw, 5.5rem);
+  font-size: clamp(1.8rem, 3vw, 2.75rem);
   font-weight: 400;
-  letter-spacing: -0.065em;
-  line-height: 1.02;
+  letter-spacing: -0.045em;
+  line-height: 1.12;
   text-wrap: balance;
 }
 
 .directory-intro {
   max-width: 38ch;
-  margin: 0 0 0.25rem auto;
+  margin: 0 0 0 auto;
   color: var(--red-muted);
-  font-size: clamp(1rem, 1.45vw, 1.2rem);
-  line-height: 1.65;
+  font-size: clamp(0.9rem, 1.1vw, 1rem);
+  line-height: 1.6;
   text-align: right;
 }
 
 @media (max-width: 760px) {
   .directory-hero {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   .directory-hero h1 {
-    font-size: clamp(2.35rem, 8vw, 3.8rem);
+    font-size: clamp(1.75rem, 5.5vw, 2.25rem);
   }
 
   .directory-intro {

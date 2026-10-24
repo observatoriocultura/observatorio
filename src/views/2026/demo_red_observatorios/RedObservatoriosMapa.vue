@@ -1,30 +1,5 @@
 <template>
-  <section class="red-observatorios-mapa" aria-labelledby="directory-map-title">
-    <header class="map-header">
-      <div>
-        <p class="map-eyebrow">La red en el territorio</p>
-        <h1 id="directory-map-title">Miradas que habitan Iberoamérica.</h1>
-        <p class="map-intro">
-          Descubre dónde están las entidades y personas de la red. Selecciona una ciudad para
-          conocer sus participantes.
-        </p>
-      </div>
-      <dl class="map-metrics" aria-label="Cobertura del mapa">
-        <div>
-          <dt>registros ubicados</dt>
-          <dd>{{ locatedCount }}</dd>
-        </div>
-        <div>
-          <dt>ciudades</dt>
-          <dd>{{ mapData.groups.length }}</dd>
-        </div>
-        <div>
-          <dt>países y territorios</dt>
-          <dd>{{ countryCount }}</dd>
-        </div>
-      </dl>
-    </header>
-
+  <section class="red-observatorios-mapa" aria-label="Mapa de la Red de Observatorios">
     <div class="map-panel">
       <div class="map-toolbar">
         <label class="map-city-picker">
@@ -85,6 +60,20 @@
             {{ country.label }}
           </li>
         </ul>
+        <dl class="map-metrics" aria-label="Cobertura del mapa">
+          <div>
+            <dt>registros ubicados</dt>
+            <dd>{{ locatedCount }}</dd>
+          </div>
+          <div>
+            <dt>ciudades</dt>
+            <dd>{{ mapData.groups.length }}</dd>
+          </div>
+          <div>
+            <dt>países y territorios</dt>
+            <dd>{{ countryCount }}</dd>
+          </div>
+        </dl>
       </footer>
     </div>
 
@@ -468,39 +457,16 @@ onBeforeUnmount(disposeMap)
 
 <style scoped>
 .red-observatorios-mapa {
-  padding: clamp(2rem, 5vw, 4.5rem) 0 1rem;
-}
-.map-header {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 2rem;
-  margin-bottom: 2.5rem;
-}
-.map-eyebrow {
-  margin: 0 0 1rem;
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-.map-header h1 {
-  max-width: 17ch;
-  margin: 0;
-  color: var(--red-ink);
-  font-size: clamp(2.5rem, 4.5vw, 4rem);
-  line-height: 1.05;
-}
-.map-intro {
-  max-width: 56ch;
-  margin: 1rem 0 0;
-  color: var(--red-muted);
+  padding: 1.25rem 0 1rem;
 }
 .map-metrics {
+  grid-column: 1 / -1;
   display: flex;
-  flex-shrink: 0;
+  flex-wrap: wrap;
   gap: 1.25rem;
   margin: 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--red-border);
 }
 .map-metrics div {
   display: flex;
@@ -533,6 +499,7 @@ onBeforeUnmount(disposeMap)
   justify-content: space-between;
   gap: 1rem;
   padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--red-border);
 }
 .map-city-picker {
   display: grid;
@@ -766,15 +733,6 @@ onBeforeUnmount(disposeMap)
 .map-popup-detail:hover {
   text-decoration: underline;
   text-underline-offset: 4px;
-}
-@media (max-width: 900px) {
-  .map-header {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-  .map-metrics {
-    flex-wrap: wrap;
-  }
 }
 @media (max-width: 600px) {
   .map-toolbar {

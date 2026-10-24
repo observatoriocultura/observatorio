@@ -198,6 +198,12 @@ const routes = [
     meta: { title: 'Demo Red de Observatorios | Observatorio' },
   },
   {
+    path: '/test/demo-red-observatorios/:slug',
+    name: 'Perfil Red de Observatorios',
+    component: () => import('../views/2026/demo_red_observatorios/RedObservatoriosPerfil.vue'),
+    meta: { title: 'Perfil | Red de Observatorios' },
+  },
+  {
     path: '/login',
     name: 'login',
     component: LoginView,

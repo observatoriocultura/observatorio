@@ -54,6 +54,7 @@ export const getEntityUrl = (value) => {
 
 export const normalizeEntities = (rows) => {
   const ids = new Set()
+  const slugs = new Set()
 
   return rows
     .filter((row) => String(row.nombre ?? '').trim())
@@ -70,8 +71,18 @@ export const normalizeEntities = (rows) => {
 
       ids.add(fields.id)
 
+      // Mantener los slugs de la fuente; el ID permite enlazar también registros sin slug.
+      const slug = fields.slug || `entidad-${fields.id}`
+      if (slugs.has(slug)) {
+        throw new Error(
+          'El directorio contiene slugs duplicados; cada perfil requiere una ruta única.',
+        )
+      }
+      slugs.add(slug)
+
       return {
         ...fields,
+        slug,
         pais_territorio: (fields.pais_territorio || '').toUpperCase(),
         url_principal: getEntityUrl(fields.url_principal),
         logo_url: getEntityUrl(fields.logo_url),

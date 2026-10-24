@@ -304,3 +304,77 @@ export function normalizeRigccCity(value, pais = '') {
 export function getRigccCityLabel(value, pais = '') {
   return RIGCC_CITY_LABELS[normalizeRigccCity(value, pais)] || String(value || 'Sin ciudad')
 }
+
+// Tipos presentes en rigcc_entidades_detalles y su diccionario, revisados el 2026-10-24.
+export const RIGCC_DETAIL_TYPE_KEYS = Object.freeze({
+  TOPIC: 'tema',
+  RESEARCH: 'investigacion',
+  METHODOLOGY: 'metodologia',
+  SOURCE: 'fuente',
+  PRODUCT: 'producto',
+  SHARED_CAPACITY: 'capacidad_compartida',
+  LINK: 'enlace',
+})
+
+export const RIGCC_DETAIL_TYPES = Object.freeze([
+  {
+    key: RIGCC_DETAIL_TYPE_KEYS.TOPIC,
+    label: 'Tema',
+    groupLabel: 'Temas de trabajo',
+    icon: 'bi-tags',
+  },
+  {
+    key: RIGCC_DETAIL_TYPE_KEYS.RESEARCH,
+    label: 'Investigación',
+    groupLabel: 'Investigaciones',
+    icon: 'bi-journal-text',
+  },
+  {
+    key: RIGCC_DETAIL_TYPE_KEYS.METHODOLOGY,
+    label: 'Metodología',
+    groupLabel: 'Metodologías',
+    icon: 'bi-diagram-3',
+  },
+  {
+    key: RIGCC_DETAIL_TYPE_KEYS.SOURCE,
+    label: 'Fuente',
+    groupLabel: 'Fuentes de información',
+    icon: 'bi-database',
+  },
+  {
+    key: RIGCC_DETAIL_TYPE_KEYS.PRODUCT,
+    label: 'Producto',
+    groupLabel: 'Productos y recursos',
+    icon: 'bi-box-seam',
+  },
+  {
+    key: RIGCC_DETAIL_TYPE_KEYS.SHARED_CAPACITY,
+    label: 'Capacidad compartida',
+    groupLabel: 'Capacidades para compartir',
+    icon: 'bi-people',
+  },
+  {
+    key: RIGCC_DETAIL_TYPE_KEYS.LINK,
+    label: 'Enlace',
+    groupLabel: 'Enlaces de interés',
+    icon: 'bi-link-45deg',
+  },
+])
+
+export function getRigccDetailType(value) {
+  const key = String(value ?? '')
+    .trim()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLocaleLowerCase('es')
+    .replace(/[-\s]+/g, '_')
+  return RIGCC_DETAIL_TYPES.find((type) => type.key === key) || null
+}
+
+export function normalizeRigccDetailType(value) {
+  return getRigccDetailType(value)?.key || ''
+}
+
+export function getRigccDetailTypeLabel(value) {
+  return getRigccDetailType(value)?.label || String(value || 'Sin tipo de detalle')
+}

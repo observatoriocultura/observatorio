@@ -83,3 +83,32 @@ test('solo permite enlaces web seguros en sitios, perfiles y logos', () => {
   assert.equal(getEntityUrl(' www.example.org/perfil '), 'https://www.example.org/perfil')
   assert.equal(getEntityUrl('https://example.org/perfil'), 'https://example.org/perfil')
 })
+
+test('conserva los slugs de la fuente y da una ruta estable a los registros sin slug', () => {
+  const entities = normalizeEntities([
+    { id: '1', nombre: 'Observatorio cultural', slug: ' observatorio-cultural ' },
+    { id: '2', nombre: 'Otra entidad' },
+  ])
+  assert.equal(entities[0].slug, 'observatorio-cultural')
+  assert.equal(entities[1].slug, 'entidad-2')
+  assert.equal(normalizeEntities([{ id: '2', nombre: 'Nombre actualizado' }])[0].slug, 'entidad-2')
+})
+
+test('rechaza rutas de perfil ambiguas en lugar de abrir otra entidad', () => {
+  assert.throws(
+    () =>
+      normalizeEntities([
+        { id: '1', nombre: 'Primera', slug: 'observatorio' },
+        { id: '2', nombre: 'Segunda', slug: 'observatorio' },
+      ]),
+    /slugs duplicados/,
+  )
+  assert.throws(
+    () =>
+      normalizeEntities([
+        { id: '1', nombre: 'Primera', slug: 'entidad-2' },
+        { id: '2', nombre: 'Segunda' },
+      ]),
+    /slugs duplicados/,
+  )
+})

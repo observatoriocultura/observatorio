@@ -59,15 +59,24 @@
             <span>{{ getEntityFieldLabel('escala_territorial', entidad.escala_territorial) }}</span>
           </p>
 
-          <button
-            type="button"
-            class="entity-open-button"
-            :aria-label="`Conocer a ${entidad.nombre}`"
-            aria-haspopup="dialog"
-            @click="openEntity(entidad)"
-          >
-            Conocer <span aria-hidden="true">→</span>
-          </button>
+          <div class="entity-card-actions">
+            <button
+              type="button"
+              class="entity-open-button"
+              :aria-label="`Conocer a ${entidad.nombre}`"
+              aria-haspopup="dialog"
+              @click="openEntity(entidad)"
+            >
+              Conocer <span aria-hidden="true">→</span>
+            </button>
+            <RouterLink
+              :to="{ name: 'Perfil Red de Observatorios', params: { slug: entidad.slug } }"
+              class="entity-profile-link"
+              :aria-label="`Ver más sobre ${entidad.nombre}`"
+            >
+              Ver más <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+            </RouterLink>
+          </div>
         </div>
       </article>
     </section>
@@ -91,6 +100,7 @@
 
 <script setup>
 import { computed, onMounted, ref } from 'vue'
+import { RouterLink } from 'vue-router'
 import ListSearchInput from '../../../components/ListSearchInput.vue'
 import { getEntityFieldLabel } from '../../../utils/redObservatorios.js'
 import RedObservatoriosModal from './RedObservatoriosModal.vue'
@@ -411,6 +421,31 @@ onMounted(async () => {
   padding-top: 0.4rem;
   color: var(--red-muted);
   font-size: 0.7rem;
+}
+.entity-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+}
+.entity-profile-link {
+  position: relative;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 44px;
+  border: 1px solid var(--red-border);
+  border-radius: 999px;
+  padding: 0.5rem 0.85rem;
+  background: var(--red-soft);
+  color: var(--red-ink);
+  font-size: 0.75rem;
+  text-decoration: none;
+}
+.entity-profile-link:hover {
+  border-color: var(--red-ink);
 }
 .entity-open-button {
   align-self: flex-start;

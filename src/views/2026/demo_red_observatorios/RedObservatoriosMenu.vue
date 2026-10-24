@@ -17,7 +17,7 @@
       :aria-current="currentTab === 'mapa' ? 'page' : undefined"
     >
       <i class="bi bi-map" aria-hidden="true"></i>
-      Mapa
+      Lugares
     </RouterLink>
 
     <RouterLink
@@ -55,7 +55,7 @@ const currentTab = computed(() => {
 })
 
 const getTabLocation = (tab) => ({
-  path: route.path,
+  name: 'Demo Red de Observatorios',
   query: {
     ...route.query,
     tab,
@@ -70,7 +70,6 @@ const getTabLocation = (tab) => ({
   justify-content: center;
   gap: clamp(0.75rem, 3vw, 2.5rem);
   padding: 0.25rem 0 1rem;
-  border-bottom: 1px solid var(--red-border);
 }
 
 .red-observatorios-nav-tab {

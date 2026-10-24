@@ -23,8 +23,6 @@
       </div>
     </aside>
 
-    <RedObservatoriosCarousel />
-
     <div class="info-grid">
       <section class="info-section" aria-labelledby="network-title">
         <p class="info-section-kicker">La iniciativa</p>
@@ -110,10 +108,6 @@
     </section>
   </article>
 </template>
-
-<script setup>
-import RedObservatoriosCarousel from './RedObservatoriosCarousel.vue'
-</script>
 
 <style scoped>
 .red-observatorios-info {

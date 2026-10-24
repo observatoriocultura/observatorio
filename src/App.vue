@@ -21,7 +21,7 @@
 </template>
 
 <script setup>
-import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, provide, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useToast } from 'vue-toastification'
 import Sidebar from './components/navigation/Sidebar.vue'
@@ -51,6 +51,8 @@ const sidebarUser = computed(() => {
     role: profile.value?.role || 'subscriber',
   }
 })
+
+provide('currentUser', sidebarUser)
 
 async function syncSession(session, showLoading = false) {
   const requestId = ++sessionRequestId

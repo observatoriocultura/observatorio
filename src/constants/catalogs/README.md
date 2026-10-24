@@ -7,7 +7,7 @@ los catálogos y helpers desde `src/constants/catalogs`.
 - `posts.js`: tipo y visibilidad de publicaciones.
 - `profiles.js`: roles y géneros de perfiles.
 - `pai.js`: entidades con los metadatos que requiere el módulo PAI.
-- `rigcc.js`: países con su paleta pastel y ciudades con coordenadas para el demo Red de Observatorios.
+- `rigcc.js`: países, ciudades y tipos de detalle para el demo Red de Observatorios.
 - `index.js`: punto único de exportación.
 
 Para añadir una opción, actualizar primero su catálogo y luego consumir el array
@@ -68,3 +68,29 @@ entidades o personas. Las fuentes están documentadas en las notas de la tabla
 `ciudades`; las decisiones de ubicación permanecen en `rigcc_entidades.notas`.
 Actualizar este catálogo al revisar esa tabla, sin duplicarlo en otro archivo
 estático.
+
+## Tipos de detalle del demo RIGCC
+
+`RIGCC_DETAIL_TYPES` conserva las siete keys de `tipo_detalle` de la hoja
+`rigcc_entidades_detalles`: `tema`, `investigacion`, `metodologia`, `fuente`,
+`producto`, `capacidad_compartida` y `enlace`. Cada opción tiene `key`, `label`,
+`groupLabel` para agrupar en el perfil e `icon` de Bootstrap Icons.
+`RIGCC_DETAIL_TYPE_KEYS` permite comparar valores sin repetir cadenas.
+
+`getRigccDetailType` devuelve una opción o `null`;
+`normalizeRigccDetailType` acepta variantes conocidas de tildes, mayúsculas,
+espacios y guiones, y devuelve `''` para tipos desconocidos.
+`getRigccDetailTypeLabel` conserva el texto de un tipo desconocido, sin añadir
+opciones al catálogo.
+
+`src/utils/redObservatoriosDetalles.js` lee remotamente la pestaña con gid
+`195791648` mediante `fetchGoogleSheetCsv`. Los detalles se asocian por
+`entidad_id`, se ordenan por `orden` y se agrupan con este catálogo. Las filas
+sin ID reciben una clave local para la interfaz, sin inventar IDs persistidos.
+Los tipos desconocidos se conservan en «Otros detalles».
+
+La selección pública solo incluye `publicado`; `borrador` requiere activar
+`includeDrafts` y `archivado` se excluye. El perfil del demo pasa `include-drafts`
+a `RedObservatoriosPerfilDetalles.vue` porque los 930 registros revisados el
+2026-10-24 están en borrador; se muestran etiquetados. La carga de estos detalles
+es independiente de los datos principales del perfil y ofrece reintento.
