@@ -1,7 +1,7 @@
 <template>
   <section class="red-observatorios-mapa" aria-label="Mapa de la Red de Observatorios">
     <div class="map-panel">
-      <div class="map-toolbar">
+      <div ref="mapToolbar" class="map-toolbar">
         <label class="map-city-picker">
           <span>Ir a una ciudad</span>
           <select
@@ -23,7 +23,7 @@
         </button>
       </div>
 
-      <div class="map-stage" :aria-busy="loading">
+      <div ref="mapStage" class="map-stage" :aria-busy="loading">
         <div
           ref="mapContainer"
           class="map-canvas"
@@ -31,6 +31,18 @@
           aria-label="Mapa de ciudades de la Red de Observatorios de Iberoamérica"
           aria-describedby="directory-map-help"
         ></div>
+        <RedObservatoriosMapaAbanico
+          v-if="fanVisible && selectedGroup && fanPoint"
+          :key="selectedCityKey"
+          ref="fan"
+          :group="selectedGroup"
+          :point="fanPoint"
+          :width="mapSize.width"
+          :height="mapSize.height"
+          :country-name="getCountryName(selectedGroup.city.pais)"
+          :color="getRigccCountryColor(selectedGroup.city.pais)"
+          @close="closeFan(true)"
+        />
         <div v-if="loading" class="map-status" role="status">Cargando el mapa de la red…</div>
         <div v-else-if="error" class="map-status" role="alert">
           <p>{{ error }}</p>
@@ -90,70 +102,17 @@
         </li>
       </ul>
     </details>
-
-    <Teleport v-if="popupTarget && selectedGroup" :to="popupTarget">
-      <section
-        class="map-popup"
-        role="dialog"
-        aria-modal="false"
-        aria-labelledby="map-popup-title"
-        @keydown.esc.stop.prevent="closePopup(true)"
-      >
-        <button
-          ref="popupCloseButton"
-          class="map-popup-close"
-          type="button"
-          aria-label="Cerrar ficha de la ciudad"
-          @click="closePopup(true)"
-        >
-          <i class="bi bi-x-lg" aria-hidden="true"></i>
-        </button>
-        <p class="map-popup-country">{{ getCountryName(selectedGroup.city.pais) }}</p>
-        <h2 id="map-popup-title">{{ selectedGroup.city.label }}</h2>
-        <p class="map-popup-count">
-          {{ selectedGroup.entities.length }}
-          {{
-            selectedGroup.entities.length === 1
-              ? 'participante de la red'
-              : 'participantes de la red'
-          }}
-        </p>
-        <ul class="map-popup-entities">
-          <li v-for="entity in selectedGroup.entities" :key="entity.id">
-            <p class="map-popup-type">{{ getEntityFieldLabel('tipo_actor', entity.tipo_actor) }}</p>
-            <h3>{{ entity.nombre }}</h3>
-            <p v-if="entity.descripcion" class="map-popup-description">{{ entity.descripcion }}</p>
-            <details v-if="entity.notas" class="map-popup-notes">
-              <summary>Notas del registro</summary>
-              <p>{{ entity.notas }}</p>
-            </details>
-            <button class="map-popup-detail" type="button" @click="selectedEntity = entity">
-              Ver ficha <span aria-hidden="true">→</span>
-            </button>
-          </li>
-        </ul>
-      </section>
-    </Teleport>
-
-    <RedObservatoriosModal
-      title-id="red-observatorios-mapa-modal-title"
-      :entidad="selectedEntity"
-      :country-name="getCountryName"
-      :country-flag-url="getCountryFlagUrl"
-      @close="selectedEntity = null"
-    />
   </section>
 </template>
 
 <script setup>
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
-import { Map as MapLibreMap, NavigationControl, Popup, setWorkerUrl } from 'maplibre-gl'
+import { Map as MapLibreMap, NavigationControl, setWorkerUrl } from 'maplibre-gl'
 import mapWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url'
 import 'maplibre-gl/dist/maplibre-gl.css'
-import { RIGCC_COUNTRIES } from '../../../constants/catalogs/index.js'
+import { RIGCC_COUNTRIES, getRigccCountryColor } from '../../../constants/catalogs/index.js'
 import { createObservatoriosMapData } from '../../../utils/redObservatoriosMapa.js'
-import { getEntityFieldLabel } from '../../../utils/redObservatorios.js'
-import RedObservatoriosModal from './RedObservatoriosModal.vue'
+import RedObservatoriosMapaAbanico from './RedObservatoriosMapaAbanico.vue'
 
 const COUNTRIES_URL = `${import.meta.env.BASE_URL}content/2026/demo_red_observatorios/iberoamerica.geojson`
 const POINTS_SOURCE = 'rigcc-cities'
@@ -161,14 +120,17 @@ const HIT_LAYER = 'rigcc-city-targets'
 const props = defineProps({ entidades: { type: Array, required: true } })
 
 const mapContainer = ref(null)
+const mapStage = ref(null)
+const mapToolbar = ref(null)
+const fan = ref(null)
+const fanPoint = ref(null)
+const fanVisible = ref(false)
+const mapSize = ref({ width: 0, height: 0 })
 const loading = ref(true)
 const ready = ref(false)
 const error = ref('')
 const countries = ref([])
 const selectedCityKey = ref('')
-const selectedEntity = ref(null)
-const popupTarget = ref(null)
-const popupCloseButton = ref(null)
 const mapData = computed(() => createObservatoriosMapData(props.entidades))
 const locatedCount = computed(() => props.entidades.length - mapData.value.unlocated.length)
 const countryCount = computed(() => new Set(mapData.value.groups.map(({ city }) => city.pais)).size)
@@ -186,62 +148,106 @@ const countriesByCode = computed(
 )
 
 let map = null
-let popup = null
+let selectionPending = false
+let selectionTrigger = null
+let compactMode = null
 let resizeObserver = null
 let requestController = null
 let countryBounds = null
 
 const getCountryName = (code) =>
   countriesByCode.value.get(code)?.nombre || code || 'País no informado'
-const getCountryFlagUrl = (code) => {
-  const iso2 = countriesByCode.value.get(code)?.iso_a2
-  return iso2 ? `https://flagcdn.com/w20/${iso2.toLowerCase()}.png` : ''
-}
-
-function closePopup(restoreFocus = false) {
+function closeFan(restoreFocus = false) {
+  const trigger = selectionTrigger
   if (selectedCityKey.value && map?.getSource(POINTS_SOURCE)) {
     map.setFeatureState({ source: POINTS_SOURCE, id: selectedCityKey.value }, { selected: false })
   }
-  popup?.remove()
-  popup = null
-  popupTarget.value = null
+  selectionPending = false
+  selectionTrigger = null
+  fanVisible.value = false
+  fanPoint.value = null
   selectedCityKey.value = ''
-  if (restoreFocus) map?.getCanvas().focus({ preventScroll: true })
+  if (restoreFocus) {
+    if (trigger?.isConnected && typeof trigger.focus === 'function')
+      trigger.focus({ preventScroll: true })
+    else map?.getCanvas().focus({ preventScroll: true })
+  }
 }
 
-async function selectCity(key) {
+function updateFanPosition() {
+  if (!map || !mapContainer.value) return
+  const { clientWidth: width, clientHeight: height } = mapContainer.value
+  if (width !== mapSize.value.width || height !== mapSize.value.height)
+    mapSize.value = { width, height }
+  const group = selectedGroup.value
+  if (!group) return
+  const point = map.project([group.city.longitud, group.city.latitud])
+  if (!selectionPending && (point.x < 0 || point.x > width || point.y < 0 || point.y > height)) {
+    closeFan()
+    return
+  }
+  fanPoint.value = { x: point.x, y: point.y }
+}
+
+function finishSelection() {
+  if (!selectionPending || !selectedGroup.value) return
+  selectionPending = false
+  updateFanPosition()
+  if (!selectedCityKey.value) return
+  fanVisible.value = true
+  const key = selectedCityKey.value
+  nextTick(() => {
+    if (fanVisible.value && selectedCityKey.value === key) fan.value?.focusClose()
+  })
+}
+
+function handleMapResize() {
+  const wasCompact = compactMode
+  const key = selectedCityKey.value
+  updateFanPosition()
+  const isCompact = mapSize.value.width < 760 || mapSize.value.height < 500
+  compactMode = isCompact
+  if (key && wasCompact !== null && wasCompact !== isCompact) selectCity(key)
+}
+
+function selectCity(key) {
   if (!ready.value || !map) return
   const group = mapData.value.groups.find(({ city }) => city.key === key)
-  closePopup()
+  const trigger = document.activeElement
+  closeFan()
+  map.stop()
   if (!group) return
-
   selectedCityKey.value = key
-  popupTarget.value = document.createElement('div')
-  popup = new Popup({
-    closeButton: false,
-    closeOnClick: false,
-    focusAfterOpen: false,
-    maxWidth: '340px',
-    offset: 12,
-  })
-    .setLngLat([group.city.longitud, group.city.latitud])
-    .setDOMContent(popupTarget.value)
+  selectionTrigger = trigger
+  selectionPending = true
+  updateFanPosition()
   map.setFeatureState({ source: POINTS_SOURCE, id: key }, { selected: true })
+  const compact = mapSize.value.width < 760 || mapSize.value.height < 500
+  compactMode = compact
   map.easeTo({
     center: [group.city.longitud, group.city.latitud],
     zoom: Math.max(map.getZoom(), 4),
-    duration: 450,
+    offset: [0, compact ? -Math.min(160, mapSize.value.height * 0.28) : 0],
+    duration: window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ? 0 : 450,
   })
-  const currentPopup = popup
-  await nextTick()
-  if (popup !== currentPopup || !map) return
-  popup.addTo(map)
-  popupCloseButton.value?.focus({ preventScroll: true })
+  if (!map.isMoving()) finishSelection()
+}
+
+function handleOutsideInteraction(event) {
+  if (!selectedCityKey.value || !(event.target instanceof Node)) return
+  if (mapStage.value?.contains(event.target) || mapToolbar.value?.contains(event.target)) return
+  closeFan()
+}
+
+function handleEscape(event) {
+  if (event.key !== 'Escape' || !selectedCityKey.value) return
+  event.preventDefault()
+  closeFan(true)
 }
 
 function resetView(duration = 450) {
   if (!map || !countryBounds) return
-  closePopup()
+  closeFan()
   map.fitBounds(countryBounds, { padding: window.innerWidth < 600 ? 24 : 48, duration })
 }
 
@@ -261,7 +267,7 @@ function countryFill() {
 function handleMapClick(event) {
   const features = map.queryRenderedFeatures(event.point, { layers: [HIT_LAYER] })
   if (!features.length) {
-    closePopup()
+    closeFan()
     return
   }
   // En puntos próximos, elegir el centro más cercano al clic.
@@ -282,13 +288,14 @@ function disposeMap() {
   requestController = null
   resizeObserver?.disconnect()
   resizeObserver = null
-  closePopup()
+  closeFan()
   map?.remove()
   map = null
 }
 
 function handleMapError(event) {
   if (!map) return
+  closeFan()
   console.error('Error mostrando el mapa de la red:', event.error || event)
   ready.value = false
   loading.value = false
@@ -422,6 +429,11 @@ async function initializeMap() {
       loading.value = false
       syncMapData()
       resetView(0)
+      updateFanPosition()
+      compactMode = mapSize.value.width < 760 || mapSize.value.height < 500
+      map.on('move', updateFanPosition)
+      map.on('moveend', finishSelection)
+      map.on('resize', handleMapResize)
       map.on('click', handleMapClick)
       map.on('mouseenter', HIT_LAYER, () => {
         map.getCanvas().style.cursor = 'pointer'
@@ -445,14 +457,21 @@ async function initializeMap() {
 }
 
 watch(mapData, () => {
-  closePopup()
-  selectedEntity.value = null
+  closeFan()
   if (!ready.value) return
   syncMapData()
 })
 
-onMounted(initializeMap)
-onBeforeUnmount(disposeMap)
+onMounted(() => {
+  document.addEventListener('pointerdown', handleOutsideInteraction)
+  document.addEventListener('keydown', handleEscape)
+  initializeMap()
+})
+onBeforeUnmount(() => {
+  document.removeEventListener('pointerdown', handleOutsideInteraction)
+  document.removeEventListener('keydown', handleEscape)
+  disposeMap()
+})
 </script>
 
 <style scoped>
@@ -541,6 +560,7 @@ onBeforeUnmount(disposeMap)
 }
 .map-stage {
   position: relative;
+  overflow: hidden;
 }
 .map-canvas {
   width: 100%;
@@ -611,14 +631,6 @@ onBeforeUnmount(disposeMap)
 .map-unlocated ul {
   margin-bottom: 0;
 }
-.map-canvas :deep(.maplibregl-popup-content) {
-  padding: 0;
-  border-radius: 20px;
-  box-shadow: 0 12px 36px rgb(36 18 7 / 15%);
-}
-.map-canvas :deep(.maplibregl-popup) {
-  z-index: 3;
-}
 .map-canvas :deep(.maplibregl-ctrl-group) {
   overflow: hidden;
   border: 1px solid var(--red-border);
@@ -632,107 +644,6 @@ onBeforeUnmount(disposeMap)
 .map-canvas :deep(.maplibregl-ctrl-attrib) {
   font-family: var(--red-font);
   font-size: 10px;
-}
-.map-popup {
-  position: relative;
-  width: min(320px, calc(100vw - 80px));
-  max-height: min(300px, 48vh);
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  padding: 1.25rem;
-  color: var(--red-ink);
-  font-family: var(--red-font);
-  line-height: 1.6;
-}
-.map-popup-close {
-  position: absolute;
-  top: 0.6rem;
-  right: 0.6rem;
-  display: grid;
-  place-items: center;
-  width: 36px;
-  height: 36px;
-  border: 0;
-  border-radius: 50%;
-  background: var(--red-soft);
-  color: var(--red-ink);
-}
-.map-popup-country {
-  margin: 0 2rem 0.35rem 0;
-  color: var(--red-muted);
-  font-size: 0.7rem;
-}
-.map-popup h2 {
-  margin: 0 1.75rem 0 0;
-  font-size: 1.5rem;
-  line-height: 1.15;
-}
-.map-popup-count {
-  margin: 0.5rem 0 1rem;
-  color: var(--red-muted);
-  font-size: 0.7rem;
-}
-.map-popup-entities {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.map-popup-entities li {
-  border-top: 1px solid var(--red-border);
-  padding: 1rem 0 0;
-  overflow-wrap: anywhere;
-}
-.map-popup-entities li + li {
-  margin-top: 1rem;
-}
-.map-popup-type {
-  margin: 0 0 0.35rem;
-  color: var(--red-muted);
-  font-size: 0.65rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-.map-popup h3 {
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.35;
-}
-.map-popup-description {
-  display: -webkit-box;
-  overflow: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  margin: 0.5rem 0 0;
-  color: var(--red-muted);
-  font-size: 0.75rem;
-}
-.map-popup-notes {
-  margin-top: 0.75rem;
-  color: var(--red-muted);
-  font-size: 0.7rem;
-}
-.map-popup-notes summary {
-  cursor: pointer;
-}
-.map-popup-notes p {
-  margin: 0.5rem 0 0;
-  white-space: pre-line;
-}
-.map-popup-detail {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  min-height: 44px;
-  padding: 0.5rem 0;
-  border: 0;
-  background: transparent;
-  color: var(--red-ink);
-  font-size: 0.75rem;
-  font-weight: 500;
-}
-.map-popup-detail:hover {
-  text-decoration: underline;
-  text-underline-offset: 4px;
 }
 @media (max-width: 600px) {
   .map-toolbar {
@@ -750,9 +661,6 @@ onBeforeUnmount(disposeMap)
     grid-template-columns: 1fr;
     gap: 0.75rem;
     padding: 1rem;
-  }
-  .map-popup {
-    max-height: min(240px, 48vh);
   }
 }
 </style>
