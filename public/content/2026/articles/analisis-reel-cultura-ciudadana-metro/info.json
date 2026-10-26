@@ -1,65 +1,77 @@
-﻿{
+{
   "title": "Análisis de reel sobre cultura ciudadana en el metro",
   "author": "Mabel Ayala Meneses",
   "date": "2026-03-10",
   "table_of_contents": [
     {
-      "title": "1. Introducción",
+      "number": "1",
+      "title": "Introducción",
       "slug": "intro",
       "level": 1
     },
     {
-      "title": "2. Metodología de análisis",
+      "number": "2",
+      "title": "Metodología de análisis",
       "slug": "metodologia",
       "level": 1
     },
     {
-      "title": "3. Resultados del análisis",
+      "number": "3",
+      "title": "Resultados del análisis",
       "slug": "resultados",
       "level": 1
     },
     {
-      "title": "3.1 Reacción generada por el reel",
+      "number": "3.1",
+      "title": "Reacción generada por el reel",
       "slug": "r31",
       "level": 2
     },
     {
-      "title": "3.2 Tipo de conversación que abrió el reel",
+      "number": "3.2",
+      "title": "Tipo de conversación que abrió el reel",
       "slug": "r32",
       "level": 2
     },
     {
-      "title": "3.3 Problemas mencionados por los usuarios",
+      "number": "3.3",
+      "title": "Problemas mencionados por los usuarios",
       "slug": "r33",
       "level": 2
     },
     {
-      "title": "3.4 Normas de cultura ciudadana mencionadas",
+      "number": "3.4",
+      "title": "Normas de cultura ciudadana mencionadas",
       "slug": "r34",
       "level": 2
     },
     {
-      "title": "3.5 Normas que generan mayor reacción emocional",
+      "number": "3.5",
+      "title": "Normas que generan mayor reacción emocional",
       "slug": "r35",
       "level": 2
     },
     {
-      "title": "3.6 Actores y responsabilidades percibidas",
+      "number": "3.6",
+      "title": "Actores y responsabilidades percibidas",
       "slug": "r36",
       "level": 2
     },
     {
-      "title": "3.7 Problemas asociados por actor",
+      "number": "3.7",
+      "title": "Problemas asociados por actor",
       "slug": "r37",
       "level": 2
     },
     {
-      "title": "4. Hallazgos clave",
+      "number": "4",
+      "title": "Hallazgos clave",
       "slug": "hallazgos",
       "level": 1
     },
     {
-      "title": "5. Conclusiones",
+      "number": "5",
+      "title": "Conclusiones",
       "slug": "conclusiones",
       "level": 1
     }

@@ -4,57 +4,68 @@
   "date": "2026-02-11",
   "table_of_contents": [
     {
-      "title": "1. Introducción",
+      "number": "1",
+      "title": "Introducción",
       "slug": "intro",
       "level": 1
     },
     {
-      "title": "2. Metodología",
+      "number": "2",
+      "title": "Metodología",
       "slug": "metodo",
       "level": 1
     },
     {
-      "title": "3. Resultados del análisis",
+      "number": "3",
+      "title": "Resultados del análisis",
       "slug": "resultados",
       "level": 1
     },
     {
-      "title": "3.1 Distribución del sentimiento",
+      "number": "3.1",
+      "title": "Distribución del sentimiento",
       "slug": "r31",
       "level": 2
     },
     {
-      "title": "3.2 Análisis DOFA",
+      "number": "3.2",
+      "title": "Análisis DOFA",
       "slug": "r32",
       "level": 2
     },
     {
-      "title": "3.3 Principales categorías",
+      "number": "3.3",
+      "title": "Principales categorías",
       "slug": "r33",
       "level": 2
     },
     {
-      "title": "3.4 Sentimiento por categoría",
+      "number": "3.4",
+      "title": "Sentimiento por categoría",
       "slug": "r34",
       "level": 2
     },
     {
-      "title": "3.5 Ideas de solución",
+      "number": "3.5",
+      "title": "Ideas de solución",
       "slug": "r35",
       "level": 2
     },
     {
-      "title": "3.6 Nube de palabras",
+      "number": "3.6",
+      "title": "Nube de palabras",
       "slug": "r36",
       "level": 2
     },
     {
-      "title": "3.7 Actores mencionados",
+      "number": "3.7",
+      "title": "Actores mencionados",
       "slug": "r37",
       "level": 2
     },
     {
-      "title": "3.8 Referencias territoriales",
+      "number": "3.8",
+      "title": "Referencias territoriales",
       "slug": "r38",
       "level": 2
     }

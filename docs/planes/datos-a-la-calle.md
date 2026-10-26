@@ -113,7 +113,7 @@ No se necesitan nuevas dependencias ni consultas a servicios para el contenido d
 
 Archivo: `src/router/index.js`.
 
-Registrar una ruta explícita antes de la ruta genérica `/:year/:slug`, para que “divulgacion” no se interprete como el año de un artículo:
+Registrar una ruta explícita para la demo. Los artículos utilizan la ruta `/contenidos/:year/:slug`:
 
 ```js
 {

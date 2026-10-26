@@ -1,0 +1,92 @@
+{
+  "title": "Análisis territorial de parques y escenarios deportivos en Bogotá",
+  "author": "Equipo Sistemas de Información y Narrativas, DOGCC",
+  "date": "2026-10-14",
+  "table_of_contents": [
+    {
+      "number": null,
+      "title": "Resumen ejecutivo",
+      "slug": "resumen",
+      "level": 1
+    },
+    {
+      "number": "1",
+      "title": "Necesidad institucional y antecedentes",
+      "slug": "contexto",
+      "level": 1
+    },
+    {
+      "number": "2",
+      "title": "Preguntas, objetivos y alcance",
+      "slug": "objetivos",
+      "level": 1
+    },
+    {
+      "number": "3",
+      "title": "Metodología de priorización y cálculo",
+      "slug": "metodologia",
+      "level": 1
+    },
+    {
+      "number": null,
+      "title": "Cálculo del puntaje y orden territorial",
+      "slug": "metodo-priorizacion",
+      "level": 2
+    },
+    {
+      "number": "4",
+      "title": "Capas incorporadas y generación de variables territoriales",
+      "slug": "datos",
+      "level": 1
+    },
+    {
+      "number": "5",
+      "title": "Mejoras de interfaz y funcionalidades de GeoFocus 2",
+      "slug": "herramienta",
+      "level": 1
+    },
+    {
+      "number": null,
+      "title": "Configuración con IA y ajuste de criterios",
+      "slug": "inteligencia-artificial",
+      "level": 2
+    },
+    {
+      "number": "6",
+      "title": "Revisión y pruebas de aplicación por el IDRD",
+      "slug": "ejercicios",
+      "level": 1
+    },
+    {
+      "number": "7",
+      "title": "Adaptación de registros de uso y aprovechamiento a GeoFocus",
+      "slug": "registro",
+      "level": 1
+    },
+    {
+      "number": null,
+      "title": "Diccionario básico de adaptación",
+      "slug": "campos-registro",
+      "level": 2
+    },
+    {
+      "number": "8",
+      "title": "Uso institucional, actualización y continuidad",
+      "slug": "guia-uso",
+      "level": 1
+    },
+    {
+      "number": "9",
+      "title": "Conclusiones",
+      "slug": "conclusiones",
+      "level": 1
+    },
+    {
+      "number": null,
+      "title": "Referencias documentales",
+      "slug": "referencias",
+      "level": 1
+    }
+  ],
+  "abstract": "Informe de la investigación 149 del Plan Anual de Investigaciones 2026 sobre la actualización de GeoFocus y su aplicación a la información territorial del IDRD. Presenta las 76 variables incorporadas, la metodología de cálculo, las mejoras de consulta y priorización y las orientaciones para integrar registros de uso y aprovechamiento, junto con las conclusiones sobre continuidad y crecimiento de la herramienta."
+}

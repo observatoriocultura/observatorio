@@ -1,0 +1,1559 @@
+<div class="geofocus-doc">
+  <style>
+    .geofocus-doc {
+      --gf-ink: #243247;
+      --gf-muted: #596579;
+      --gf-line: #dde4eb;
+      --gf-accent: #215c55;
+      color: var(--gf-ink);
+      font-family: inherit;
+      font-size: 1rem;
+      line-height: 1.75;
+      overflow-wrap: anywhere;
+    }
+    .geofocus-doc *,
+    .geofocus-doc *::before,
+    .geofocus-doc *::after {
+      box-sizing: border-box;
+    }
+    .geofocus-doc section {
+      margin: 3.5rem 0 0;
+      padding: 0;
+      background: transparent;
+      border: 0;
+    }
+    .geofocus-doc section,
+    .geofocus-doc h3 {
+      scroll-margin-top: 1.5rem;
+    }
+    .geofocus-doc h2 {
+      margin: 0 0 1.5rem;
+      padding-bottom: 0.9rem;
+      border-bottom: 1px solid var(--gf-line);
+      font-size: 1.5rem;
+      line-height: 1.35;
+      color: #172b36;
+    }
+    .geofocus-doc h3 {
+      margin: 2rem 0 0.85rem;
+      font-size: 1.12rem;
+      line-height: 1.45;
+      font-weight: 700;
+      color: #172b36;
+    }
+    .geofocus-doc p {
+      margin: 0 0 1.1rem;
+    }
+    .geofocus-doc ul,
+    .geofocus-doc ol {
+      margin: 1rem 0 1.5rem;
+      padding-left: 1.5rem;
+    }
+    .geofocus-doc li {
+      margin: 0.6rem 0;
+    }
+    .geofocus-doc a {
+      color: var(--gf-accent);
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+    }
+    .geofocus-doc a:focus-visible {
+      outline: 2px solid var(--gf-accent);
+      outline-offset: 4px;
+    }
+    .geofocus-doc code {
+      color: #20564f;
+      background: #f0f5f3;
+      padding: 0.12em 0.3em;
+      border-radius: 4px;
+      font-size: 0.88em;
+    }
+    .geofocus-doc .gf-overview {
+      padding: 1.5rem;
+      border: 1px solid #cfddd7;
+      border-radius: 12px;
+      background: #f5f8f6;
+    }
+    .geofocus-doc .gf-eyebrow {
+      margin-bottom: 0.8rem;
+      color: #326257;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.76rem;
+      font-weight: 700;
+    }
+    .geofocus-doc .gf-subtitle {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      font-weight: 600;
+      color: #172b36;
+    }
+    .geofocus-doc .gf-meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .geofocus-doc .gf-meta dt {
+      color: var(--gf-muted);
+      font-size: 0.8rem;
+      margin-bottom: 0.25rem;
+    }
+    .geofocus-doc .gf-meta dd {
+      margin: 0;
+      font-size: 0.94rem;
+      line-height: 1.5;
+    }
+    .geofocus-doc .gf-note {
+      margin: 1.5rem 0;
+      padding: 1rem 1.25rem;
+      border-left: 3px solid #b88e35;
+      border-radius: 0 6px 6px 0;
+      background: #faf6ec;
+      color: #61512d;
+      font-size: 0.93rem;
+    }
+    .geofocus-doc .gf-note p:last-child {
+      margin-bottom: 0;
+    }
+    .geofocus-doc .gf-note-label {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .geofocus-doc .gf-reading {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+      margin: 1.5rem 0;
+    }
+    .geofocus-doc .gf-reading div {
+      border: 1px solid var(--gf-line);
+      border-radius: 8px;
+      padding: 1rem;
+    }
+    .geofocus-doc .gf-reading strong {
+      display: block;
+      margin-bottom: 0.35rem;
+      color: #215c55;
+    }
+    .geofocus-doc .gf-reading p {
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    .geofocus-doc .gf-table-wrap {
+      max-width: 100%;
+      overflow-x: auto;
+      margin: 1.5rem 0;
+      border: 1px solid var(--gf-line);
+      border-radius: 8px;
+    }
+    .geofocus-doc .gf-table-wrap:focus-visible {
+      outline: 2px solid var(--gf-accent);
+      outline-offset: 3px;
+    }
+    .geofocus-doc table {
+      width: 100%;
+      min-width: 540px;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    .geofocus-doc caption {
+      caption-side: top;
+      padding: 1rem;
+      background: #f5f8f6;
+      color: #243247;
+      text-align: left;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+    .geofocus-doc th,
+    .geofocus-doc td {
+      padding: 0.85rem 1rem;
+      border-top: 1px solid var(--gf-line);
+      text-align: left;
+      vertical-align: top;
+    }
+    .geofocus-doc thead th {
+      background: #edf3ef;
+      color: #284b42;
+    }
+    .geofocus-doc tbody th {
+      width: 27%;
+      font-weight: 600;
+    }
+    .geofocus-doc .gf-formula {
+      margin: 1.5rem 0;
+      padding: 1.25rem;
+      background: #f3f6f8;
+      border: 1px solid var(--gf-line);
+      border-radius: 8px;
+    }
+    .geofocus-doc .gf-equation {
+      font-family: ui-monospace, monospace;
+      font-size: 1rem;
+      line-height: 2;
+    }
+    .geofocus-doc .gf-formula figcaption {
+      font-size: 0.88rem;
+      color: var(--gf-muted);
+      line-height: 1.6;
+    }
+    .geofocus-doc .gf-screenshot {
+      margin: 1.5rem 0 2rem;
+    }
+    .geofocus-doc .gf-screenshot a {
+      display: block;
+    }
+    .geofocus-doc .gf-screenshot img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border: 1px solid var(--gf-line);
+      border-radius: 8px;
+      background: #f5f8f6;
+    }
+    .geofocus-doc .gf-screenshot figcaption {
+      margin-top: 0.65rem;
+      color: var(--gf-muted);
+      font-size: 0.86rem;
+      line-height: 1.6;
+    }
+    .geofocus-doc .gf-steps li {
+      padding-left: 0.5rem;
+      margin: 1rem 0;
+    }
+    .geofocus-doc .gf-steps li::marker {
+      font-weight: 700;
+      color: var(--gf-accent);
+    }
+    .geofocus-doc .gf-source {
+      font-size: 0.88rem;
+      color: var(--gf-muted);
+    }
+    @media (max-width: 640px) {
+      .geofocus-doc .gf-meta,
+      .geofocus-doc .gf-reading {
+        grid-template-columns: 1fr;
+      }
+      .geofocus-doc .gf-overview {
+        padding: 1.1rem;
+      }
+      .geofocus-doc h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+
+  <div class="gf-overview">
+    <p class="gf-eyebrow">Informe de investigación · GeoFocus 2 · Enfoque IDRD</p>
+    <p class="gf-subtitle">Análisis territorial de parques y escenarios deportivos en Bogotá</p>
+    <p>
+      La investigación actualizó GeoFocus para organizar información territorial del IDRD y
+      facilitar su consulta y priorización. Este informe presenta la metodología, las variables
+      incorporadas, las mejoras funcionales y los mecanismos de continuidad institucional.
+    </p>
+    <dl class="gf-meta">
+      <div>
+        <dt>Marco del trabajo</dt>
+        <dd>Investigación 149 · Plan Anual de Investigaciones 2026</dd>
+      </div>
+      <div>
+        <dt>Entidad solicitante</dt>
+        <dd>Instituto Distrital de Recreación y Deporte — IDRD</dd>
+      </div>
+      <div>
+        <dt>Equipo del Observatorio</dt>
+        <dd>Sistemas de Información y Narrativas</dd>
+      </div>
+      <div>
+        <dt>Producto</dt>
+        <dd>Informe de investigación y documentación metodológica</dd>
+      </div>
+    </dl>
+    <p class="gf-source">
+      Subsecretaría de Cultura Ciudadana y Gestión del Conocimiento<br />
+      Dirección Observatorio y Gestión del Conocimiento Cultural
+    </p>
+  </div>
+  <div class="gf-reading" aria-label="Orientación de lectura">
+    <div>
+      <strong>Comprender el método</strong>
+      <p>
+        Las secciones 3 y 4 explican la generación de variables, la estandarización y el cálculo de
+        prioridades.
+      </p>
+    </div>
+    <div>
+      <strong>Usar GeoFocus</strong>
+      <p>
+        La sección 5 presenta la configuración con IA, el ajuste de criterios y la consulta de
+        resultados.
+      </p>
+    </div>
+    <div>
+      <strong>Dar continuidad</strong>
+      <p>
+        Las secciones 7 a 9 describen la adaptación de registros, el acompañamiento y el crecimiento
+        de la herramienta.
+      </p>
+    </div>
+  </div>
+  <p>
+    Herramienta disponible:
+    <a
+      href="https://www.prototipos-sicc.com/app/geofocus/panel/"
+      target="_blank"
+      rel="noopener noreferrer"
+      >Acceder a GeoFocus</a
+    >.
+  </p>
+  <figure class="gf-screenshot">
+    <a
+      href="https://www.prototipos-sicc.com/app/geofocus/panel/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Acceder a la herramienta GeoFocus en una nueva pestaña"
+    >
+      <img
+        src="content/2026/articles/geofocus-2-enfoque-idrd/images/inicio.png"
+        alt="Mapa de variables de GeoFocus 2 con selección de capa base, tema, variable y orientación."
+        width="1366"
+        height="768"
+        loading="lazy"
+        decoding="async"
+      />
+    </a>
+    <figcaption>Consulta de variables territoriales en GeoFocus.</figcaption>
+  </figure>
+  <section id="resumen" aria-labelledby="resumen-titulo">
+    <h2 id="resumen-titulo">Resumen ejecutivo</h2>
+    <p>
+      La investigación 149 del Plan Anual de Investigaciones 2026 tuvo como objetivo realizar la
+      actualización y apropiación de GeoFocus para su aplicación a la información territorial del
+      IDRD. El trabajo integró capas sobre parques, escenarios y entorno, mejoras en la consulta y
+      priorización, y orientaciones para el uso institucional y la actualización de la herramienta.
+    </p>
+    <p>
+      GeoFocus 2 reúne
+      <strong
+        >76 variables territoriales en 6 temas, atribuidas a 7 entidades; 47 corresponden al
+        IDRD</strong
+      >. Se organizaron indicadores de infraestructura recreativa y deportiva, mobiliario, áreas,
+      proximidad y contexto territorial. La metodología transforma las capas geográficas en valores
+      por sector catastral y los combina mediante estandarización, pesos y sentidos de priorización.
+      La capa base y las variables de GeoFocus 1 continúan disponibles.
+    </p>
+    <p>
+      Las mejoras incorporan la selección de criterios mediante lenguaje natural con IA, el ajuste
+      manual de variables y ponderaciones, las orientaciones y filtros del mapa, el resaltado
+      progresivo y el informe de resultados con los quince territorios de mayor puntaje. Los
+      productos comprenden el inventario de variables, la guía metodológica de cálculo, la interfaz
+      actualizada y la ruta de adaptación de registros de uso y aprovechamiento.
+    </p>
+    <p>
+      El IDRD cuenta con acceso mediante su persona de contacto y con el acompañamiento del equipo
+      Sistemas de Información y Narrativas. Los ejercicios de aplicación institucional se
+      desarrollan en el capítulo 6. La continuidad comprende la incorporación de registros de uso
+      una vez consolidados por el IDRD, la ampliación temática y la difusión de GeoFocus entre las
+      entidades del sector. El alcance es la caracterización y comparación territorial para apoyar
+      decisiones institucionales.
+    </p>
+    <p class="gf-source">
+      Palabras clave: parques y escenarios deportivos, GeoFocus, análisis territorial, priorización
+      multicriterio, gestión del conocimiento, IDRD.
+    </p>
+  </section>
+  <section id="contexto" aria-labelledby="contexto-titulo">
+    <h2 id="contexto-titulo">1. Necesidad institucional y antecedentes</h2>
+    <h3>Necesidad de información del IDRD</h3>
+    <p>
+      La investigación atendió la necesidad del IDRD de consultar y relacionar información sobre
+      parques, escenarios deportivos y su entorno. La lectura conjunta de infraestructura,
+      equipamientos, seguridad, educación y transporte aporta elementos para reconocer diferencias
+      territoriales y apoyar la planeación y la gestión institucional [1].
+    </p>
+    <p>
+      El trabajo fortaleció la capacidad de organizar y combinar esa información en GeoFocus. Cada
+      escenario permite seleccionar criterios de acuerdo con un propósito específico y comparar
+      territorios sobre una misma base geográfica. La interpretación considera el significado de las
+      variables, su cobertura y la configuración utilizada.
+    </p>
+    <h3>Antecedentes y continuidad del desarrollo</h3>
+    <p>
+      GeoFocus tiene como antecedente la investigación 60,
+      <em>Metodología de priorización geográfica multivariada</em>, desarrollada en 2024 por la
+      Dirección Observatorio y Gestión del Conocimiento Cultural. Su propósito fue consolidar
+      información para caracterizar y calificar los barrios de Bogotá como apoyo a las decisiones de
+      la Secretaría de Cultura, Recreación y Deporte y sus entidades adscritas, tomando como
+      referencia la estrategia Barrios Vivos [4, 5].
+    </p>
+    <p>
+      El desarrollo inicial se organizó sobre una capa base de 1.169 polígonos de barrios. Las capas
+      temáticas se transformaron en variables mediante conteos, filtros e intersecciones espaciales,
+      y sus valores se llevaron a una escala común para combinar pesos y sentidos de priorización.
+      Se construyeron un prototipo web y un modelo relacional para gestionar territorios, variables,
+      valores y escenarios. Esta metodología se presenta en el
+      <a
+        href="https://drive.google.com/file/d/1Y_hXUsLkupgoUzaXuba0pvEQiAD9zr9f/view"
+        target="_blank"
+        rel="noopener noreferrer"
+        >informe metodológico de la versión inicial</a
+      >
+      [4, pp. 3-8].
+    </p>
+    <p>
+      La
+      <a
+        href="https://observatoriocultura.github.io/observatorio/#/investigaciones?investigacion_id=60"
+        target="_blank"
+        rel="noopener noreferrer"
+        >ficha de la investigación 60</a
+      >
+      reúne el objetivo, la descripción, el equipo investigador y los productos: informe,
+      presentación, prototipo funcional y video demostrativo. También permite consultar el
+      <a
+        href="https://docs.google.com/spreadsheets/d/1rFjiNh1tuxwThBsdOfdDFQMXlcriV9SJ/edit"
+        target="_blank"
+        rel="noopener noreferrer"
+        >diccionario de datos</a
+      >
+      y las
+      <a
+        href="https://docs.google.com/spreadsheets/d/1NkEuWwUobCGap52sNVEd-41iIHphwwC8/edit?gid=469321301#gid=469321301"
+        target="_blank"
+        rel="noopener noreferrer"
+        >variables calculadas por barrio</a
+      >
+      de esa primera versión [5].
+    </p>
+    <p>
+      <strong>En GeoFocus 2 siguen funcionando la capa base y las variables de GeoFocus 1.</strong>
+      La actualización conserva la consulta y la construcción de escenarios con esos insumos y
+      amplía el catálogo y las funcionalidades para el trabajo con el IDRD.
+    </p>
+    <p>
+      La investigación 149 articuló esta base metodológica con inventarios y servicios geográficos
+      del IDRD y otras entidades. Se incorporaron variables sobre infraestructura, mobiliario, áreas
+      de parques y entorno, y se actualizaron los controles de configuración, mapas y presentación
+      de resultados. El modelo mantiene la relación entre capas base, territorios, variables y
+      escenarios de priorización [2].
+    </p>
+    <h3>Gestión del conocimiento y productos</h3>
+    <p>
+      El trabajo articuló datos sistematizados, metodología de cálculo, interfaz de visualización y
+      documentación de uso como productos complementarios para la gestión del conocimiento [3]. El
+      equipo Sistemas de Información y Narrativas realizó la organización de información, el
+      procesamiento territorial, los ajustes funcionales y la documentación metodológica, y dispuso
+      un canal de acompañamiento para la aplicación institucional de GeoFocus.
+    </p>
+  </section>
+  <section id="objetivos" aria-labelledby="objetivos-titulo">
+    <h2 id="objetivos-titulo">2. Preguntas, objetivos y alcance</h2>
+    <h3>Pregunta orientadora</h3>
+    <p>
+      ¿Cómo actualizar GeoFocus y favorecer su apropiación institucional para aplicarlo a la
+      información territorial del IDRD?
+    </p>
+    <h3>Objetivo general</h3>
+    <p>
+      Realizar la actualización y apropiación de GeoFocus para su aplicación a la información
+      territorial del IDRD.
+    </p>
+    <h3>Categorías principales</h3>
+    <ol>
+      <li>Capas geográficas sobre parques, escenarios y entorno.</li>
+      <li>Interfaz y funcionalidades existentes de consulta y priorización.</li>
+      <li>Uso institucional, actualización periódica y posibles enfoques de análisis.</li>
+    </ol>
+    <h3>Alcance y unidades de análisis</h3>
+    <p>
+      La investigación comprendió la organización de información geográfica, la generación de
+      variables territoriales y la actualización de la interfaz de GeoFocus. El trabajo se
+      desarrolló entre la Dirección Observatorio y Gestión del Conocimiento Cultural y el IDRD, con
+      fuentes complementarias de otras entidades. La metodología se basó en información existente y
+      en procesamiento geográfico.
+    </p>
+    <p>
+      El parque o escenario es un equipamiento; una actividad es un registro de operación; y el
+      sector catastral es la unidad de agregación de las nuevas variables. Estas unidades se
+      relacionan mediante identificadores y reglas espaciales. El puntaje territorial describe la
+      combinación de atributos del sector y su lectura se complementa con la información específica
+      de cada equipamiento.
+    </p>
+    <p>
+      El alcance es la caracterización y priorización territorial. Los análisis de acceso, oferta o
+      uso emplean fuentes, denominadores y métodos acordes con cada pregunta. Las decisiones de
+      intervención combinan estos resultados con la valoración técnica del IDRD.
+    </p>
+    <h3>Productos y acciones desarrolladas</h3>
+    <div
+      class="gf-table-wrap"
+      tabindex="0"
+      role="region"
+      aria-label="Productos y acciones desarrolladas"
+    >
+      <table>
+        <caption>
+          Productos de la investigación y aplicación institucional
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Componente</th>
+            <th scope="col">Producto o acción</th>
+            <th scope="col">Aplicación</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Información territorial</th>
+            <td>
+              Inventario de 76 variables, incluidas 47 del IDRD, y metodología de generación de
+              indicadores por sector catastral.
+            </td>
+            <td>Consulta y combinación de información sobre parques, escenarios y entorno.</td>
+          </tr>
+          <tr>
+            <th scope="row">Interfaz y priorización</th>
+            <td>
+              Configuración con IA, ajuste manual de criterios, filtros y orientaciones del mapa e
+              informe con el top 15.
+            </td>
+            <td>
+              Recorrido integrado desde el propósito de análisis hasta la consulta de resultados.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Adaptación de datos de uso</th>
+            <td>
+              Ruta de procesamiento y diccionario básico para registros de actividades, asistencias
+              y mantenimiento.
+            </td>
+            <td>
+              Preparación de indicadores de uso y aprovechamiento a partir de la información que
+              consolide el IDRD.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Acceso y acompañamiento</th>
+            <td>
+              Acceso concedido a la persona de contacto del IDRD y canal de comunicación con
+              Sistemas de Información y Narrativas.
+            </td>
+            <td>
+              Consulta institucional, ejercicios de aplicación y coordinación de ajustes del
+              catálogo.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Continuidad</th>
+            <td>
+              Orientaciones para identificar, describir, procesar e incorporar nuevas capas y
+              variables.
+            </td>
+            <td>Actualización periódica y ampliación temática de GeoFocus.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>Continuidad de los registros de uso y aprovechamiento</h3>
+    <p>
+      Al cierre de la investigación, el IDRD continúa implementando la recolección de datos de uso y
+      aprovechamiento de parques y equipamientos. Para articular esta información con GeoFocus se
+      elaboraron las orientaciones y el diccionario del capítulo 7.
+    </p>
+    <p>
+      Cuando estos registros estén consolidados, el Observatorio apoyará la revisión de su
+      estructura y calidad, su correspondencia territorial y la generación de indicadores para
+      incorporarlos a GeoFocus. Este acompañamiento forma parte de la continuidad institucional
+      descrita en el capítulo 8.
+    </p>
+  </section>
+  <section id="metodologia" aria-labelledby="metodologia-titulo">
+    <h2 id="metodologia-titulo">3. Metodología de priorización y cálculo</h2>
+    <p>
+      GeoFocus construye un orden de prioridad territorial mediante la combinación ponderada de
+      variables cuantitativas. Cada escenario representa un propósito de análisis definido por el
+      usuario: selecciona una capa base, elige los indicadores pertinentes y establece la
+      importancia y el sentido de cada uno. El resultado expresa qué territorios reúnen en mayor
+      medida los criterios de esa configuración.
+    </p>
+
+    <h3>Unidad de análisis y selección de criterios</h3>
+    <p>
+      La capa base determina el conjunto de territorios que se calcula, por ejemplo barrios o
+      sectores catastrales. Cada variable contiene mediciones asociadas a esas unidades. El
+      escenario utiliza los indicadores de su capa y, para cada uno, combina dos parámetros:
+    </p>
+    <ul>
+      <li>
+        <strong>Peso:</strong> expresa la importancia relativa de la variable en puntos. No es
+        necesario que los pesos sumen cien; su participación depende de la proporción frente al
+        total seleccionado.
+      </li>
+      <li>
+        <strong>Sentido:</strong> el directo (<code>+1</code>) favorece valores altos; el inverso
+        (<code>−1</code>) favorece valores bajos. Su elección depende de si el escenario busca, por
+        ejemplo, mayor presencia de un atributo o mayor necesidad de atención.
+      </li>
+    </ul>
+
+    <h3>Estandarización de las variables</h3>
+    <p>
+      Para combinar indicadores con diferentes unidades y magnitudes, GeoFocus utiliza valores
+      previamente estandarizados mediante puntajes Z. A cada medición se le resta la media de los
+      valores registrados de la variable y se divide por su desviación estándar:
+    </p>
+    <figure class="gf-formula">
+      <p
+        class="gf-equation"
+        aria-label="Puntaje z: valor original menos la media, dividido por la desviación estándar"
+      >
+        z<sub>ij</sub> = (x<sub>ij</sub> − μ<sub>j</sub>) / σ<sub>j</sub>
+      </p>
+      <figcaption>
+        <strong>i</strong>: territorio; <strong>j</strong>: variable; <strong>x</strong>: medición
+        original; <strong>μ</strong>: media; <strong>σ</strong>: desviación estándar.
+      </figcaption>
+    </figure>
+    <p>
+      Un puntaje Z positivo indica un valor superior a la media y uno negativo, un valor inferior.
+      Esta transformación permite combinar escalas distintas, pero no convierte los datos en
+      porcentajes ni en probabilidades. La actualización de valores estandarizados se ejecuta cuando
+      la desviación estándar es mayor que cero; una variable constante requiere revisión y no debe
+      asumirse automáticamente estandarizada en cero.
+    </p>
+
+    <h3 id="metodo-priorizacion">Cálculo del puntaje y orden territorial</h3>
+    <p>
+      Para cada territorio se multiplican los valores estandarizados por sus pesos y sentidos, se
+      suman los aportes y se divide entre la suma de los pesos seleccionados:
+    </p>
+    <figure class="gf-formula">
+      <p
+        class="gf-equation"
+        aria-label="Puntaje territorial: suma de valores z por peso y sentido, dividida por la suma de pesos"
+      >
+        P<sub>i</sub> = Σ<sub>j</sub>(z<sub>ij</sub> · w<sub>j</sub> · s<sub>j</sub>) /
+        Σ<sub>j</sub>w<sub>j</sub>
+      </p>
+      <figcaption>
+        <strong>P</strong>: puntaje ponderado del escenario; <strong>w</strong>: peso;
+        <strong>s</strong>: sentido directo o inverso. El cálculo se realiza con las mediciones
+        disponibles de las variables seleccionadas.
+      </figcaption>
+    </figure>
+    <p>
+      El sistema guarda el puntaje de cada territorio y asigna posiciones de mayor a menor valor. En
+      caso de empate, utiliza el identificador interno del territorio como criterio de orden. Los
+      resultados también se estandarizan entre sí, por lo que se conservan dos medidas: el puntaje
+      ponderado y su puntaje Z posterior.
+    </p>
+    <p>
+      La tabla y el mapa consultan el <strong>puntaje ponderado</strong>. La exportación presenta el
+      resultado estandarizado bajo el nombre <code>puntaje_calculado</code>; ambos deben
+      distinguirse al comparar cifras. La consulta inicial devuelve hasta quince territorios
+      destacados, sin limitar a esos quince el universo procesado. La configuración se guarda junto
+      con el escenario y, al recalcular, se invalida su descripción automática anterior.
+    </p>
+
+    <h3>Representación en tablas y mapas</h3>
+    <p>
+      La visualización combina los valores numéricos con los polígonos de la capa base mediante una
+      llave territorial común. La correspondencia se establece por código, no por posición de las
+      filas ni por igualdad entre la cantidad de mediciones y la cantidad de polígonos. El mapa
+      puede mostrar una variable individual o el resultado ponderado del escenario.
+    </p>
+    <p>
+      Los colores se distribuyen entre el mínimo y el máximo de los valores con correspondencia en
+      la geometría visible. El cero se representa como un dato válido y la ausencia de valor
+      numérico se identifica como «Sin dato». Por ello, la cobertura visible puede diferir del
+      conjunto calculado. Cambiar la orientación, el acercamiento o el modo de visualización no
+      modifica la fórmula ni los puntajes guardados.
+    </p>
+
+    <h3>Criterios de interpretación</h3>
+    <p>
+      Cuando falta la medición de una variable para un territorio, ese aporte no se suma al
+      numerador, pero su peso permanece en el denominador. El resultado no equivale a un promedio
+      recalculado solo con los datos disponibles: la cobertura debe considerarse al interpretar las
+      posiciones. La ausencia de registro tampoco equivale a un cero observado.
+    </p>
+    <p>
+      La prioridad es relativa al conjunto de territorios, variables, pesos y sentidos del
+      escenario. Cambiar esos parámetros puede modificar el orden. El apoyo de inteligencia
+      artificial puede proponer criterios o explicar la configuración; el cálculo numérico se
+      ejecuta mediante el algoritmo descrito. Su resultado apoya la comparación territorial y debe
+      leerse según el propósito del análisis y la calidad de las mediciones.
+    </p>
+  </section>
+  <section id="datos" aria-labelledby="datos-titulo">
+    <h2 id="datos-titulo">4. Capas incorporadas y generación de variables territoriales</h2>
+    <p>
+      La actualización de GeoFocus 2 en el marco de la investigación priorizada para el IDRD reúne
+      <strong>76 variables territoriales</strong>, distribuidas en <strong>6 temas</strong> y
+      atribuidas a <strong>7 entidades</strong>. El conjunto amplía la caracterización de parques,
+      escenarios, mobiliarios y entorno, y permite combinar esa información con oferta cultural,
+      educación, seguridad y transporte.
+    </p>
+    <p class="gf-source">
+      El
+      <a
+        href="https://docs.google.com/spreadsheets/d/1CJaeCwMDVdyRwkOvJJJA_MJjd1VDOdB3MrBOAYhALzE/edit?gid=0#gid=0"
+        target="_blank"
+        rel="noopener noreferrer"
+        >inventario de capas y variables de GeoFocus 2</a
+      >
+      organiza el catálogo por tema y entidad. Las cifras corresponden a variables con clave única:
+      una capa de origen puede generar varios indicadores.
+    </p>
+
+    <h3>Resumen por tema y entidad</h3>
+    <div
+      class="gf-table-wrap"
+      tabindex="0"
+      role="region"
+      aria-label="Resumen del inventario por tema y entidad"
+    >
+      <table>
+        <caption>
+          Variables registradas por tema y entidad
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Tema</th>
+            <th scope="col">Entidad registrada</th>
+            <th scope="col">Variables</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Ambiente</th>
+            <td>IDRD</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <th scope="row">Cultura</th>
+            <td>IDARTES</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <th scope="row">Cultura</th>
+            <td>SCRD</td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <th scope="row">Equipamientos</th>
+            <td>IDRD</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <th scope="row">Equipamientos</th>
+            <td>SED</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <th scope="row">Movilidad</th>
+            <td>EMB</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <th scope="row">Movilidad</th>
+            <td>IDRD</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <th scope="row">Movilidad</th>
+            <td>TRANSMILENIO S.A.</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <th scope="row">Recreación y Deporte</th>
+            <td>IDRD</td>
+            <td>23</td>
+          </tr>
+          <tr>
+            <th scope="row">Seguridad</th>
+            <td>SDSCJ</td>
+            <td>5</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th scope="row" colspan="2">Total del inventario</th>
+            <td><strong>76</strong></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <p>
+      La información cultural comprende agentes y colectivos artísticos, bibliotecas, espacios de
+      lectura y equipamientos como teatros, museos, auditorios y salas de cine. El entorno se
+      complementa con la proximidad a colegios y a estaciones del Metro y TransMilenio, así como con
+      incidentes reportados de riñas, narcóticos, disparos, hurto y porte ilegal de armas. La
+      entidad consignada identifica la atribución de cada variable en el inventario, incluso cuando
+      su temática corresponde a un ámbito diferente.
+    </p>
+
+    <h3>Contenido específico de las capas del IDRD</h3>
+    <p>
+      <strong>47 de las 76 variables están atribuidas al IDRD</strong>, equivalentes al
+      <strong>61,8 %</strong> del inventario. Se distribuyen entre Recreación y Deporte,
+      Equipamientos, Ambiente y Movilidad, y permiten describir cuatro componentes:
+    </p>
+    <ul>
+      <li>
+        <strong>Infraestructura recreativa y deportiva:</strong> superficies de canchas y campos,
+        escenarios deportivos, piscinas, pistas, plazoletas, zonas lúdicas infantiles, recreación
+        canina, gimnasios y áreas libres; mobiliario deportivo y de ejercicio, y longitud de
+        recorridos de Ciclovía.
+      </li>
+      <li>
+        <strong>Dotación y funcionamiento de los parques:</strong> mobiliarios técnicos de
+        infraestructura y servicios públicos, edificaciones, zonas de circulación y estacionamiento,
+        cerramientos y barandas. Incluye desagregaciones de mobiliario urbano como bancas, canecas,
+        señalización, bebederos, luminarias y cicloparqueaderos, además de tipos de gimnasio.
+      </li>
+      <li>
+        <strong>Componentes ambientales:</strong> superficies de corredores ecológicos de protección
+        y de zonas ecológicas naturales y artificiales.
+      </li>
+      <li>
+        <strong>Presencia y proximidad de la oferta:</strong> la categoría de parques nuevos, la
+        proporción del sector ocupada por parques existentes y las distancias al parque, piscina,
+        cancha o campo, pista, escenario deportivo y gimnasio especializado más cercanos.
+      </li>
+    </ul>
+    <p>
+      Estos indicadores caracterizan la infraestructura y su distribución territorial. Los registros
+      de asistencia, actividades y aprovechamiento que el IDRD continúa consolidando constituyen una
+      línea complementaria de incorporación posterior, según lo expuesto en los capítulos 2 y 7.
+    </p>
+
+    <h3>Metodología ejecutiva de cálculo a partir de capas geográficas</h3>
+    <p>
+      Las variables se generan al transformar geometrías de puntos, líneas y polígonos en valores
+      asociados a cada <strong>sector catastral</strong>, identificado mediante
+      <code>territorio_id</code>. La
+      <a
+        href="https://docs.google.com/document/d/19wKcFBdErUIhxgAOXYA8Ulox31_vYf3V/edit"
+        target="_blank"
+        rel="noopener noreferrer"
+        >guía metodológica para la generación de indicadores territoriales en GeoFocus</a
+      >
+      presenta las operaciones de cálculo y la estructura de las salidas.
+    </p>
+    <div
+      class="gf-table-wrap"
+      tabindex="0"
+      role="region"
+      aria-label="Operaciones para generar variables territoriales"
+    >
+      <table>
+        <caption>
+          Operaciones de cálculo y unidades resultantes
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Indicador</th>
+            <th scope="col">Operación territorial</th>
+            <th scope="col">Resultado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Conteo</th>
+            <td>Asignar cada punto al sector correspondiente y contar los elementos.</td>
+            <td>Número de elementos</td>
+          </tr>
+          <tr>
+            <th scope="row">Conteo por categoría</th>
+            <td>
+              Agrupar los elementos por sector y por una clasificación homologada de la fuente.
+            </td>
+            <td>Número por categoría</td>
+          </tr>
+          <tr>
+            <th scope="row">Longitud</th>
+            <td>
+              Intersectar las líneas con los sectores y sumar la longitud de los segmentos
+              contenidos en cada uno.
+            </td>
+            <td>Metros</td>
+          </tr>
+          <tr>
+            <th scope="row">Área</th>
+            <td>Intersectar los polígonos con los sectores y sumar las superficies resultantes.</td>
+            <td>Metros cuadrados</td>
+          </tr>
+          <tr>
+            <th scope="row">Proximidad</th>
+            <td>
+              Medir la distancia lineal desde el punto de referencia del sector hasta el elemento
+              más cercano.
+            </td>
+            <td>Metros</td>
+          </tr>
+          <tr>
+            <th scope="row">Proporción territorial</th>
+            <td>Dividir el área del elemento dentro del sector entre el área total del sector.</td>
+            <td>Proporción de 0 a 1</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      Los indicadores de proximidad del catálogo utilizan un punto representativo interior de cada
+      sector y calculan la distancia al elemento más cercano. La medida expresa cercanía en línea
+      recta. Para la proporción de parques se excluyen los propuestos y se integran las geometrías
+      de los existentes antes de intersectarlas, evitando contar superficies superpuestas más de una
+      vez.
+    </p>
+    <p>
+      Las variables de seguridad tienen un tratamiento distinto: sus incidentes ya están
+      consolidados por sector catastral y se vinculan a la base de GeoFocus mediante el código
+      territorial. Su incorporación no requiere volver a contar puntos ni redistribuir los
+      incidentes espacialmente.
+    </p>
+
+    <h3>Preparación, documentación e incorporación</h3>
+    <ol class="gf-steps">
+      <li>
+        <strong>Preparar las fuentes.</strong> Definir el indicador, revisar geometrías y categorías
+        y utilizar un sistema de coordenadas proyectadas con unidades métricas para medir
+        longitudes, áreas y distancias.
+      </li>
+      <li>
+        <strong>Calcular y agregar.</strong> Ejecutar el cruce espacial o la vinculación por código
+        y obtener un valor por sector y variable. Homologar categorías cuando aporten información
+        útil; por ejemplo, una capa de mobiliario puede producir indicadores separados de bancas,
+        canecas o luminarias.
+      </li>
+      <li>
+        <strong>Organizar las salidas.</strong> Mantener separados la ficha descriptiva de la
+        variable y sus valores territoriales. La ficha identifica clave, nombre, tema, subtema,
+        unidad, entidad, referencia temporal, fuente y método; los valores se relacionan con
+        <code>territorio_id</code> y la clave del indicador.
+      </li>
+      <li>
+        <strong>Validar e incorporar.</strong> Comprobar claves únicas, unidades, cobertura y
+        correspondencia territorial. Conservar valores originales para que GeoFocus realice después
+        la estandarización y ponderación descritas en el capítulo 3.
+      </li>
+    </ol>
+    <p>
+      El cero representa ausencia comprobada del elemento en indicadores de conteo, longitud, área o
+      proporción; el valor nulo identifica los casos sin resultado verificable. La selección de
+      variables considera el posible doble peso de una dimensión cuando se combinan un total y todas
+      sus categorías. Cada indicador conserva su unidad y referencia temporal, de modo que la
+      comparación tenga en cuenta los distintos cortes de las fuentes.
+    </p>
+  </section>
+  <section id="herramienta" aria-labelledby="herramienta-titulo">
+    <h2 id="herramienta-titulo">5. Mejoras de interfaz y funcionalidades de GeoFocus 2</h2>
+    <p>
+      GeoFocus 2 integra la configuración asistida por inteligencia artificial, la revisión manual
+      de criterios, la exploración del mapa y la presentación de resultados en un mismo recorrido.
+      Las mejoras facilitan pasar de un propósito escrito en lenguaje natural a un escenario de
+      priorización con variables, sentidos y pesos explícitos.
+    </p>
+
+    <h3>Gestión de escenarios de priorización</h3>
+    <p>
+      El listado de priorizaciones permite buscar y retomar ejercicios existentes o crear uno nuevo.
+      Cada escenario identifica su nombre, descripción y capa base, facilitando la organización de
+      pruebas y consultas con diferentes propósitos institucionales.
+    </p>
+    <figure class="gf-screenshot">
+      <a
+        href="content/2026/articles/geofocus-2-enfoque-idrd/images/capitulo-05-01-listado-priorizaciones.png"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Ampliar figura 5.1"
+      >
+        <img
+          src="content/2026/articles/geofocus-2-enfoque-idrd/images/capitulo-05-01-listado-priorizaciones.png"
+          alt="Listado de escenarios de priorización con buscador, capa base y acceso para crear una nueva priorización."
+          width="1366"
+          height="768"
+          loading="lazy"
+          decoding="async"
+        />
+      </a>
+      <figcaption>
+        <strong>Figura 5.1.</strong> Gestión y consulta de los escenarios de priorización.
+      </figcaption>
+    </figure>
+
+    <h3 id="inteligencia-artificial">Configuración con IA y ajuste de criterios</h3>
+    <p>
+      Se incorporó un campo de <strong>prompt en lenguaje natural</strong> para describir qué se
+      quiere priorizar. A partir de esa instrucción, la IA propone las variables del catálogo
+      pertinentes para el objetivo, el sentido de cada una —directo o inverso— y su ponderación. El
+      usuario puede expresar tanto los atributos de interés como la importancia que desea darles.
+    </p>
+    <p>
+      La propuesta se presenta en una tabla editable. Antes de ejecutar el cálculo se pueden
+      <strong>agregar o retirar variables, cambiar sus sentidos y modificar sus pesos</strong>. Esto
+      permite revisar la selección sugerida y ajustarla al conocimiento técnico del IDRD. Al pulsar
+      <strong>Calcular</strong>, se guarda la configuración utilizada y se obtienen los puntajes del
+      escenario.
+    </p>
+    <figure class="gf-screenshot">
+      <a
+        href="content/2026/articles/geofocus-2-enfoque-idrd/images/capitulo-05-02-prompt-seleccion-variables-ponderacion.png"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Ampliar figura 5.2"
+      >
+        <img
+          src="content/2026/articles/geofocus-2-enfoque-idrd/images/capitulo-05-02-prompt-seleccion-variables-ponderacion.png"
+          alt="Campo para describir el objetivo en lenguaje natural y tabla editable con selección, sentido y ponderación de las variables."
+          width="1366"
+          height="768"
+          loading="lazy"
+          decoding="async"
+        />
+      </a>
+      <figcaption>
+        <strong>Figura 5.2.</strong> Configuración asistida por IA y ajuste manual de variables,
+        sentidos y pesos.
+      </figcaption>
+    </figure>
+
+    <h3 id="mapa-priorizacion">Orientación del mapa y filtros de polígonos</h3>
+    <p>
+      El mapa dispone de diferentes orientaciones de ángulo para que cada usuario consulte la ciudad
+      desde la disposición que le resulte más cómoda. También permite alternar entre el resultado
+      general y la consulta de variables individuales, con colores y leyendas que facilitan
+      reconocer las diferencias entre territorios.
+    </p>
+    <p>
+      El selector de polígonos destacados permite concentrar la vista en los
+      <strong>10, 15, 25 o 50 territorios con mayor puntaje</strong>. Esta selección facilita
+      comparar los primeros lugares y reconocer su distribución espacial. El filtro actúa sobre la
+      presentación del mapa y conserva los criterios y puntajes del escenario calculado.
+    </p>
+
+    <h3>Resaltado progresivo de los territorios priorizados</h3>
+    <p>
+      Al ejecutar el cálculo, la interfaz presenta progresivamente el resaltado de los polígonos
+      priorizados. Esta transición ayuda a seguir visualmente la aparición de los territorios
+      destacados y a reconocer sus patrones de concentración o dispersión. La animación presenta los
+      resultados obtenidos con la combinación de variables, sentidos y ponderaciones.
+    </p>
+    <figure class="gf-screenshot">
+      <a
+        href="content/2026/articles/geofocus-2-enfoque-idrd/images/capitulo-05-03-mapa-priorizacion-poligonos-color.png"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Ampliar figura 5.3"
+      >
+        <img
+          src="content/2026/articles/geofocus-2-enfoque-idrd/images/capitulo-05-03-mapa-priorizacion-poligonos-color.png"
+          alt="Mapa con polígonos coloreados según el puntaje, selector de polígonos destacados y control de orientación."
+          width="1366"
+          height="768"
+          loading="lazy"
+          decoding="async"
+        />
+      </a>
+      <figcaption>
+        <strong>Figura 5.3.</strong> Mapa de priorización con controles de orientación y selección
+        de polígonos destacados.
+      </figcaption>
+    </figure>
+
+    <h3 id="informe-priorizacion">Informe con IA y listado de los quince primeros territorios</h3>
+    <p>
+      La sección <strong>Resultados</strong> reúne el propósito del ejercicio, la configuración
+      guardada, una explicación generada con IA y el listado del
+      <strong>top 15 de polígonos con mayor puntaje</strong>. Cada fila permite consultar la
+      posición del territorio, su identificación, referencias territoriales disponibles y el puntaje
+      obtenido.
+    </p>
+    <p>
+      La IA aporta la explicación de los criterios de priorización; el listado y los puntajes
+      proceden del cálculo del escenario. La presentación integrada facilita revisar cómo se
+      configuró el ejercicio, consultar sus principales resultados y volver al mapa para
+      interpretarlos territorialmente.
+    </p>
+    <figure class="gf-screenshot">
+      <a
+        href="content/2026/articles/geofocus-2-enfoque-idrd/images/capitulo-05-04-tabla-resultados-poligonos-priorizados.png"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Ampliar figura 5.4"
+      >
+        <img
+          src="content/2026/articles/geofocus-2-enfoque-idrd/images/capitulo-05-04-tabla-resultados-poligonos-priorizados.png"
+          alt="Informe con explicación generada por IA y tabla de territorios ordenados por su puntaje de priorización."
+          width="1366"
+          height="768"
+          loading="lazy"
+          decoding="async"
+        />
+      </a>
+      <figcaption>
+        <strong>Figura 5.4.</strong> Informe del escenario y listado de los quince territorios con
+        mayor puntaje.
+      </figcaption>
+    </figure>
+    <p class="gf-source">
+      Las capturas ilustran las funcionalidades con escenarios de prueba. Los territorios y puntajes
+      visibles corresponden a esas configuraciones.
+    </p>
+  </section>
+  <section id="ejercicios" aria-labelledby="ejercicios-titulo">
+    <h2 id="ejercicios-titulo">6. Revisión y pruebas de aplicación por el IDRD</h2>
+    <aside class="gf-note">
+      <strong class="gf-note-label">Pendiente de revisión y pruebas del IDRD</strong>
+      <p>
+        Se concedió acceso a GeoFocus a la persona de contacto encargada en el IDRD. La revisión
+        funcional y las pruebas de aplicación institucional quedan a cargo de la entidad, con el
+        acompañamiento del equipo Sistemas de Información y Narrativas del Observatorio.
+      </p>
+    </aside>
+    <p>
+      Las pruebas permitirán revisar la pertinencia de las variables para las necesidades del IDRD,
+      la configuración de escenarios y la interpretación de los resultados. El recorrido comprende:
+    </p>
+    <ul>
+      <li>Consultar las capas y fichas de las variables incorporadas.</li>
+      <li>
+        Plantear una necesidad de análisis y revisar la propuesta de selección, sentidos y pesos.
+      </li>
+      <li>
+        Ejecutar el cálculo y consultar los polígonos destacados, los filtros del mapa y el informe.
+      </li>
+      <li>
+        Comunicar observaciones, dificultades de uso y ajustes requeridos mediante el contacto
+        existente.
+      </li>
+    </ul>
+    <p>
+      Los resultados de esta revisión se documentarán a partir de la retroalimentación del IDRD. Las
+      capturas del capítulo 5 ilustran el funcionamiento de la herramienta con escenarios de prueba;
+      la revisión institucional permitirá precisar sus aplicaciones y necesidades de ajuste.
+    </p>
+  </section>
+  <section id="registro" aria-labelledby="registro-titulo">
+    <h2 id="registro-titulo">7. Adaptación de registros de uso y aprovechamiento a GeoFocus</h2>
+    <h3>Punto de partida: el registro detallado del IDRD</h3>
+    <p>
+      El IDRD desarrolla el registro detallado de uso y aprovechamiento de parques. Como producto de
+      esta investigación se definió una ruta para transformar esos registros en indicadores
+      compatibles con GeoFocus, conservando el detalle y la trazabilidad en la fuente institucional.
+      El esquema articula actividades, asistencias y acciones de mantenimiento con la identificación
+      de cada parque y su correspondencia territorial.
+    </p>
+    <p class="gf-source">
+      El portal SIGT-IDRD ilustra la consulta de esta información mediante las vistas de
+      <a
+        href="https://jhao21.github.io/sigt-idrd-portal/index.html?idParque=08-355#resumen"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Resumen</a
+      >,
+      <a
+        href="https://jhao21.github.io/sigt-idrd-portal/index.html?idParque=08-355#novedades"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Mantenimiento</a
+      >,
+      <a
+        href="https://jhao21.github.io/sigt-idrd-portal/index.html?idParque=08-355#actividades"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Actividades</a
+      >
+      y
+      <a
+        href="https://jhao21.github.io/sigt-idrd-portal/index.html?idParque=08-355#reporte-parque"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Reporte Parque, ejemplo 08-355</a
+      >
+      [8].
+    </p>
+    <figure class="gf-screenshot">
+      <a
+        href="content/2026/articles/geofocus-2-enfoque-idrd/images/capitulo-07-01-ejemplo-recoleccion-datos-uso-idrd.png"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Ampliar figura 7.1"
+      >
+        <img
+          src="content/2026/articles/geofocus-2-enfoque-idrd/images/capitulo-07-01-ejemplo-recoleccion-datos-uso-idrd.png"
+          alt="Vista de mantenimiento del portal SIGT-IDRD con mapa de parques y gráficos de acciones por categoría y tipo de novedad."
+          width="1456"
+          height="897"
+          loading="lazy"
+          decoding="async"
+        />
+      </a>
+      <figcaption>
+        <strong>Figura 7.1.</strong> Ejemplo de visualización de registros del IDRD: acciones de
+        mantenimiento por parque, categoría y tipo de novedad en el portal SIGT-IDRD.
+      </figcaption>
+    </figure>
+    <p>
+      El esquema mantiene separados los registros de actividades y mantenimiento e identifica si
+      cada actividad corresponde a una sesión, un evento o una programación recurrente. El
+      procesamiento utiliza la extracción completa del periodo de análisis para obtener los
+      agregados; los listados recientes del portal sirven como consulta del detalle.
+    </p>
+
+    <h3 id="campos-registro">Diccionario básico de adaptación</h3>
+    <p>
+      El diccionario básico organiza los campos de origen, sus tipos y las reglas de tratamiento
+      para el análisis. Conserva los nombres del registro y documenta las equivalencias utilizadas
+      en la preparación de indicadores.
+    </p>
+    <div
+      class="gf-table-wrap"
+      tabindex="0"
+      role="region"
+      aria-label="Diccionario básico de adaptación de registros IDRD"
+    >
+      <table>
+        <caption>
+          Campos de origen y tratamiento para el análisis
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Campo de origen</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Tratamiento para el análisis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><code>ID_Parque</code>, <code>Nombre_Parque</code></th>
+            <td>Texto</td>
+            <td>
+              Usar el código como llave estable y el nombre como etiqueta. Conservar guiones y ceros
+              iniciales, como en <code>08-355</code>.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"><code>ID_Actividad</code>, <code>ID_Reporte</code></th>
+            <td>Texto</td>
+            <td>
+              Identificar y depurar cada tipo de registro por separado. Evitar unir directamente
+              ambas tablas por parque, pues se multiplicarían las filas.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"><code>Fecha</code> y <code>Hora</code>, cuando esté disponible</th>
+            <td>Fecha y hora</td>
+            <td>
+              Homologar formatos y fijar el periodo de análisis. No inferir duración ni horas de uso
+              sin inicio y finalización comprobados.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <code>Tipo_Actividad</code>, <code>Programa</code>, <code>Linea</code>
+            </th>
+            <td>Categorías</td>
+            <td>
+              Unificar catálogos y generar conteos por categoría cuando la cobertura sea comparable.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"><code>Asistentes</code></th>
+            <td>Entero no negativo</td>
+            <td>
+              Sumar participaciones válidas y registrar el método de conteo. Mantener la diferencia
+              entre cero y dato faltante.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <code>Categoria</code>, <code>Elemento</code>, <code>Tipo_Novedad</code>
+            </th>
+            <td>Categorías</td>
+            <td>
+              Clasificar acciones de mantenimiento. Su conteo describe acciones registradas; por sí
+              solo no mide uso, deterioro ni resolución de necesidades.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"><code>Codigo_Localidad</code>, <code>Codigo_UPL</code></th>
+            <td>Texto de catálogo</td>
+            <td>
+              Conservar como contexto territorial complementario. No equivalen a las llaves internas
+              de barrios o sectores de GeoFocus.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      La preparación de cada corte registra fuente, fecha de extracción, inicio y fin del periodo,
+      cobertura, método de conteo y reglas de depuración. El identificador del escenario dentro del
+      parque se conserva cuando existe, para distinguir el equipamiento de sus espacios internos.
+    </p>
+
+    <h3>Conversión al esquema territorial de GeoFocus</h3>
+    <ol class="gf-steps">
+      <li>
+        <strong>Preparar el detalle.</strong> Obtener actividades y mantenimiento del mismo periodo,
+        comprobar unicidad de las llaves, fechas, categorías y valores de asistencia. Documentar
+        registros incompletos y conservar una copia del corte utilizado.
+      </li>
+      <li>
+        <strong>Construir la correspondencia territorial.</strong> Relacionar
+        <code>ID_Parque</code> con el <code>territorio_id</code> de la capa elegida en GeoFocus
+        mediante el catálogo y la cartografía oficial. Los centros aproximados del mapa público
+        sirven para visualizar; no sustituyen esa asignación. Para parques que intersecten varios
+        territorios, acordar una regla que evite duplicar actividades y asistencias.
+      </li>
+      <li>
+        <strong>Agregar por territorio y periodo.</strong> Contar actividades distintas, sumar
+        asistencias válidas y contar acciones de mantenimiento por separado. Mantener el detalle por
+        parque como respaldo y reportar los registros sin correspondencia territorial.
+      </li>
+      <li>
+        <strong>Preparar los archivos de carga.</strong> Organizar una tabla intermedia con
+        <code>capa</code>, <code>territorio_id</code>, <code>indicador</code>,
+        <code>periodo_inicio</code>, <code>periodo_fin</code> y <code>valor</code>, exportable a CSV
+        UTF-8. Los indicadores se adaptan a los encabezados y al orden de columnas de la plantilla
+        de GeoFocus. Antes de importar se verifica la correspondencia entre la denominación
+        <code>poligono_id</code> de la plantilla y el <code>territorio_id</code> utilizado en el
+        procesamiento [2].
+      </li>
+      <li>
+        <strong>Registrar y comprobar la variable.</strong> Completar su ficha con nombre,
+        descripción, unidad, fuente IDRD, periodo, capa, método de agregación y cobertura. Cargar
+        valores originales y verificar su estandarización en GeoFocus, contrastando conteos y sumas
+        entre el detalle, los agregados y las salidas. Después, recalcular los escenarios afectados.
+      </li>
+    </ol>
+
+    <h3>Indicadores iniciales y uso en escenarios</h3>
+    <p>
+      El esquema contempla indicadores de <strong>actividades registradas</strong>,
+      <strong>asistencias reportadas</strong>, <strong>parques con actividades</strong> y
+      <strong>acciones de mantenimiento registradas</strong> por territorio y periodo. Los desgloses
+      por programa, línea o categoría amplían las posibilidades de análisis. Cada combinación de
+      indicador, periodo y capa queda identificada para conservar comparaciones reproducibles.
+    </p>
+    <p>
+      Estos indicadores permiten explorar la distribución de la oferta registrada y combinarla con
+      infraestructura y contexto poblacional. El sentido y el peso se definen según el propósito del
+      escenario y la cobertura de la información. Las asistencias representan participaciones, y la
+      medición de personas únicas o de ocupación requiere definiciones y datos específicos. El
+      registro institucional describe las actividades capturadas por el sistema y se complementa con
+      otras fuentes para estudiar usos espontáneos del parque.
+    </p>
+    <p>
+      La incorporación aplica controles de unicidad, consistencia temporal y correspondencia
+      territorial. Distingue cero observado de ausencia de reporte y conserva los valores faltantes.
+      Las actualizaciones definen expresamente qué registros se corrigen o retiran, dado que la
+      importación conserva los registros ausentes en el nuevo archivo.
+    </p>
+  </section>
+  <section id="guia-uso" aria-labelledby="guia-uso-titulo">
+    <h2 id="guia-uso-titulo">8. Uso institucional, actualización y continuidad</h2>
+    <p>
+      GeoFocus puede ampliarse con nuevas capas o variables según las necesidades de información del
+      IDRD. También pueden revisarse, ajustarse o retirarse elementos del catálogo cuando cambien
+      las fuentes o los propósitos de análisis. Este acompañamiento está disponible mediante el
+      contacto existente con el equipo
+      <strong
+        >Sistemas de Información y Narrativas de la Dirección Observatorio y Gestión del
+        Conocimiento Cultural</strong
+      >.
+    </p>
+    <p>
+      El proceso comienza con una conversación para acordar qué agregar, modificar o quitar y para
+      qué se utilizará la información. A partir de ese acuerdo se identifican las fuentes, se
+      describen las variables y sus unidades, se define el procesamiento territorial y se preparan y
+      revisan los valores para su inclusión en GeoFocus. La periodicidad de actualización se
+      acordará según las necesidades del IDRD y la disponibilidad de cada fuente.
+    </p>
+    <p>
+      Cuando el IDRD consolide los registros de uso y aprovechamiento, este mismo canal permitirá
+      coordinar su revisión y adaptación al esquema territorial de la herramienta, siguiendo las
+      orientaciones del capítulo 7.
+    </p>
+    <p>
+      <strong
+        >Se espera que en versiones futuras las entidades puedan cargar sus propias capas
+        directamente en GeoFocus.</strong
+      >
+      Esta capacidad se plantea como una línea de evolución para facilitar la actualización y
+      ampliar la autonomía institucional en la gestión de la información.
+    </p>
+  </section>
+  <section id="conclusiones" aria-labelledby="conclusiones-titulo">
+    <h2 id="conclusiones-titulo">9. Conclusiones</h2>
+    <p>
+      La investigación produjo una actualización de GeoFocus que integra información territorial,
+      metodología de generación de variables y funcionalidades de consulta y priorización para el
+      IDRD. Los resultados se concretan en los siguientes componentes y líneas de continuidad.
+    </p>
+    <h3>Información territorial organizada para el IDRD</h3>
+    <p>
+      GeoFocus 2 reúne <strong>76 variables, de las cuales 47 corresponden al IDRD</strong>. La
+      información permite comparar infraestructura recreativa y deportiva, mobiliario, áreas de
+      parques, proximidad y condiciones del entorno sobre una base común. La capa base y las
+      variables de GeoFocus 1 continúan disponibles, conservando la posibilidad de realizar
+      ejercicios con los insumos de ambas versiones.
+    </p>
+    <h3>Metodología y funcionalidades integradas</h3>
+    <p>
+      Se estableció una ruta para transformar capas geográficas en indicadores por sector catastral
+      y combinarlos mediante valores estandarizados, pesos y sentidos. La interfaz incorpora
+      configuración mediante lenguaje natural, ajuste manual de criterios, orientaciones y filtros
+      del mapa, resaltado progresivo e informe con el top 15. El resultado es un recorrido que
+      conecta el propósito de análisis, la configuración del escenario y la interpretación
+      territorial de los puntajes.
+    </p>
+    <h3>Aplicación institucional y datos de uso</h3>
+    <p>
+      Se concedió acceso a la persona de contacto del IDRD y se estableció el acompañamiento del
+      equipo Sistemas de Información y Narrativas. El canal existente permite coordinar ajustes del
+      catálogo y apoyar el uso de la herramienta. La ruta de adaptación y el diccionario de
+      registros de actividades, asistencias y mantenimiento constituyen la base metodológica para
+      incorporar la información de uso y aprovechamiento que consolide el IDRD.
+    </p>
+    <h3>Crecimiento permanente y articulación con el sector</h3>
+    <p>
+      El equipo
+      <strong
+        >Sistemas de Información y Narrativas continuará con la búsqueda, preparación y adición de
+        variables a la capa base más reciente</strong
+      >, incorporando información disponible de otras temáticas. Esta continuidad incluirá las
+      variables asociadas a los <strong>índices y subíndices de cultura ciudadana de 2025</strong>,
+      para ampliar las dimensiones de análisis y los posibles escenarios de priorización.
+    </p>
+    <p>
+      La herramienta se compartirá con las entidades del sector para darla a conocer y promover su
+      utilización. Se espera que esta articulación aporte nuevas capas y variables que enriquezcan
+      el catálogo y sus posibilidades de aplicación. La búsqueda de información, su preparación
+      territorial y el intercambio con las entidades orientan el crecimiento permanente de GeoFocus.
+    </p>
+    <h3>Continuidad operativa del apoyo de inteligencia artificial</h3>
+    <p>
+      Actualmente, GeoFocus utiliza <strong>créditos gratuitos de la API de IA Gemini</strong> para
+      sus funciones de asistencia. Si se amplían el uso y las necesidades de la herramienta, podría
+      requerirse la <strong>contratación del servicio de la API</strong> para disponer de una
+      capacidad de atención y una cobertura más apropiadas para la Secretaría y las entidades del
+      sector. Esta posibilidad forma parte de las condiciones de sostenibilidad y ampliación de
+      GeoFocus.
+    </p>
+  </section>
+  <section id="referencias" aria-labelledby="referencias-titulo">
+    <h2 id="referencias-titulo">Referencias documentales</h2>
+    <p class="gf-source">
+      Las siguientes fuentes sustentan los antecedentes, el inventario de variables, la metodología
+      de cálculo y las orientaciones de uso presentadas en este documento. Los productos
+      complementarios y anexos estarán disponibles en la ficha final de la investigación.
+    </p>
+    <p>
+      [1] Dirección Observatorio y Gestión del Conocimiento Cultural e IDRD.
+      <a
+        href="https://docs.google.com/spreadsheets/d/1rcJbCRGoVEJgNBv-rRcfCHso6zNfZ4IwZlqRe6ILvc4/edit"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Plan de trabajo de la investigación 149</a
+      >. Pestañas Plan de trabajo, Encuentro e Investigación. 2026.
+    </p>
+    <p>
+      [2] GeoFocus. <em>Documentación conceptual y técnica de GeoFocus 2</em>. Documento interno
+      <code>2026_geofocus.md</code>. Octubre de 2026.
+    </p>
+    <p>
+      [3] Dirección Observatorio y Gestión del Conocimiento Cultural.
+      <em>Glosario base del Observatorio</em>. Documento de contexto institucional
+      <code>2026_glosario_base_observatorio.json</code>.
+    </p>
+    <p>
+      [4] Secretaría de Cultura, Recreación y Deporte. Dirección Observatorio y Gestión del
+      Conocimiento Cultural.
+      <a
+        href="https://drive.google.com/file/d/1Y_hXUsLkupgoUzaXuba0pvEQiAD9zr9f/view"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Priorización geográfica multivariada. Informe metodológico</a
+      >. Fecha de elaboración: noviembre de 2024.
+    </p>
+    <p>
+      [5] Observatorio de Cultura.
+      <a
+        href="https://observatoriocultura.github.io/observatorio/#/investigaciones?investigacion_id=60"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Ficha de la investigación 60: Metodología de priorización geográfica multivariada</a
+      >. Vigencia 2024. Reúne la descripción del proyecto inicial y los enlaces al informe,
+      presentación, prototipo, video demostrativo, diccionario y variables calculadas por barrio.
+    </p>
+    <p>
+      [6]
+      <a
+        href="https://docs.google.com/spreadsheets/d/1CJaeCwMDVdyRwkOvJJJA_MJjd1VDOdB3MrBOAYhALzE/edit?gid=0#gid=0"
+        target="_blank"
+        rel="noopener noreferrer"
+        >2026 Descripciones capas</a
+      >. Inventario de variables de GeoFocus 2. Clasificación por tema y entidad, descripción y
+      metodología de cálculo de los indicadores.
+    </p>
+    <p>
+      [7] Dirección Observatorio y Gestión del Conocimiento Cultural. Equipo Sistemas de Información
+      y Narrativas.
+      <a
+        href="https://docs.google.com/document/d/19wKcFBdErUIhxgAOXYA8Ulox31_vYf3V/edit"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Guía metodológica para la generación de indicadores territoriales en GeoFocus</a
+      >. Octubre de 2026. Orientaciones de procesamiento espacial, desagregación por categorías,
+      organización de variables y controles de consistencia.
+    </p>
+    <p>
+      [8] Portal SIGT-IDRD. Referencias de visualización de registros:
+      <a
+        href="https://jhao21.github.io/sigt-idrd-portal/index.html?idParque=08-355#resumen"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Resumen</a
+      >,
+      <a
+        href="https://jhao21.github.io/sigt-idrd-portal/index.html?idParque=08-355#novedades"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Mantenimiento</a
+      >,
+      <a
+        href="https://jhao21.github.io/sigt-idrd-portal/index.html?idParque=08-355#actividades"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Actividades</a
+      >
+      y
+      <a
+        href="https://jhao21.github.io/sigt-idrd-portal/index.html?idParque=08-355#reporte-parque"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Reporte Parque, ejemplo 08-355</a
+      >. Visualización de registros de actividades, asistencias y mantenimiento por parque.
+    </p>
+    <p>
+      [9] Dirección Observatorio y Gestión del Conocimiento Cultural.
+      <a
+        href="https://docs.google.com/document/d/1uGS8Ze9zBOKObYknNLoGRndnsSvrtU1QIoNT65xPVRU/edit?tab=t.0"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Investigación 149: Análisis territorial de parques y escenarios deportivos en Bogotá</a
+      >. Octubre de 2026.
+    </p>
+  </section>
+</div>

@@ -332,7 +332,7 @@ const routes = [
     meta: { title: 'Datos a la Calle | Observatorio' },
   },
   {
-    path: '/:year/:slug',
+    path: '/contenidos/:year/:slug',
     name: 'Article',
     component: ArticleView,
     meta: { title: 'Artículo' },
