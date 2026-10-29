@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
 import { supabase } from '../../lib/supabase'
-import ModalDelete from '../../components/ModalDelete.vue'
+import ModalDelete from '../../components/tools/ModalDelete.vue'
 import { getProfileRoleLabel, normalizeProfileRole } from '../../constants/catalogs'
 
 const profiles = ref([])

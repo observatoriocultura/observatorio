@@ -1,8 +1,8 @@
 <script setup>
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import LoginForm from '../../components/LoginForm.vue'
-import EmailLoginForm from '../../components/EmailLoginForm.vue'
+import LoginForm from '../../components/auth/LoginForm.vue'
+import EmailLoginForm from '../../components/auth/EmailLoginForm.vue'
 import { REGISTRATION_ENABLED } from '../../constants/auth.js'
 import '../../assets/styles/auth.css'
 

@@ -2,8 +2,8 @@
 import { computed, onMounted, ref, watch } from 'vue'
 import { useToast } from 'vue-toastification'
 import { supabase } from '../../lib/supabase'
-import ModalDelete from '../../components/ModalDelete.vue'
-import ListSearchInput from '../../components/ListSearchInput.vue'
+import ModalDelete from '../../components/tools/ModalDelete.vue'
+import ListSearchInput from '../../components/tools/ListSearchInput.vue'
 
 const toast = useToast()
 

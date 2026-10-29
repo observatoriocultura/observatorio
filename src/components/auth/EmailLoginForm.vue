@@ -1,13 +1,12 @@
 <script setup>
 import { ref } from 'vue'
 import { useToast } from 'vue-toastification'
-import { hasSupabaseConfig, supabase } from '../lib/supabase'
-import { getAuthCallbackUrl } from '../lib/authCallback'
+import { hasSupabaseConfig, supabase } from '../../lib/supabase'
+import { getAuthCallbackUrl } from '../../lib/authCallback'
 
 const toast = useToast()
 
 const form = ref({
-  name: '',
   email: '',
 })
 const feedback = ref({
@@ -22,7 +21,18 @@ const feedbackClasses = {
   success: 'alert-success',
 }
 
-async function handleRegister() {
+function getMagicLinkErrorMessage(error) {
+  const message = String(error?.message || '').trim()
+  const normalizedMessage = message.toLowerCase()
+
+  if (error?.code === 'otp_disabled' || normalizedMessage.includes('signups not allowed for otp')) {
+    return 'No existe un usuario registrado con este correo electrónico. Verifica la dirección o solicita la creación de una cuenta.'
+  }
+
+  return message || 'No se pudo enviar el magic link.'
+}
+
+async function handleLogin() {
   feedback.value = { type: '', message: '' }
 
   if (!supabase) {
@@ -33,13 +43,12 @@ async function handleRegister() {
     return
   }
 
-  const name = form.value.name.trim()
   const email = form.value.email.trim().toLowerCase()
 
-  if (!name || !email) {
+  if (!email) {
     feedback.value = {
       type: 'warning',
-      message: 'Completa tu nombre y correo electronico para continuar.',
+      message: 'Completa el correo electronico para continuar.',
     }
     return
   }
@@ -50,12 +59,8 @@ async function handleRegister() {
     const { error } = await supabase.auth.signInWithOtp({
       email,
       options: {
-        shouldCreateUser: true,
-        emailRedirectTo: getAuthCallbackUrl('registration'),
-        data: {
-          name,
-          full_name: name,
-        },
+        shouldCreateUser: false,
+        emailRedirectTo: getAuthCallbackUrl('magic-link'),
       },
     })
 
@@ -67,14 +72,13 @@ async function handleRegister() {
       type: 'success',
       message: 'Te enviamos un magic link. Revisa tu correo para iniciar sesion.',
     }
-    toast.success('Registro enviado. Revisa tu correo para usar el magic link.')
+    toast.success('Magic link enviado. Revisa tu correo para iniciar sesion.')
 
-    form.value.name = ''
     form.value.email = ''
   } catch (error) {
     feedback.value = {
       type: 'error',
-      message: error.message || 'No se pudo completar el registro.',
+      message: getMagicLinkErrorMessage(error),
     }
   } finally {
     isSubmitting.value = false
@@ -85,31 +89,17 @@ async function handleRegister() {
 <template>
   <div class="auth-form-container">
     <div class="auth-heading">
-      <h2 class="auth-title h3 fw-bold">Crear cuenta</h2>
+      <h2 class="auth-title h3 fw-bold">Acceso por enlace</h2>
       <p class="auth-subtitle">
-        Completa tus datos y confirma el acceso desde tu correo.
+        Te enviaremos un enlace de acceso seguro a tu correo.
       </p>
     </div>
 
-    <form class="auth-form" @submit.prevent="handleRegister">
+    <form class="auth-form" @submit.prevent="handleLogin">
       <div class="auth-field">
-        <label for="email-register-name" class="form-label">Nombre y apellido</label>
+        <label for="email-login-email" class="form-label">Correo electronico</label>
         <input
-          id="email-register-name"
-          v-model="form.name"
-          type="text"
-          class="form-control"
-          placeholder="Tu nombre y apellido"
-          autocomplete="name"
-          required
-          :disabled="isSubmitting"
-        >
-      </div>
-
-      <div class="auth-field">
-        <label for="email-register-email" class="form-label">Correo electronico</label>
-        <input
-          id="email-register-email"
+          id="email-login-email"
           v-model="form.email"
           type="email"
           class="form-control"
@@ -145,7 +135,7 @@ async function handleRegister() {
           class="spinner-border spinner-border-sm me-2"
           aria-hidden="true"
         ></span>
-        {{ isSubmitting ? 'Enviando...' : 'Registrarme' }}
+        {{ isSubmitting ? 'Enviando...' : 'Enviar link de inicio' }}
       </button>
     </form>
   </div>

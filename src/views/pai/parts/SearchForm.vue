@@ -50,7 +50,7 @@
 
 <script setup>
 import { computed } from 'vue'
-import ListSearchInput from '../../../components/ListSearchInput.vue'
+import ListSearchInput from '../../../components/tools/ListSearchInput.vue'
 import { ENTIDADES } from '../../../constants/catalogs'
 import { lineasInvestigacion } from '../constants'
 

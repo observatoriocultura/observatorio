@@ -33,8 +33,8 @@ Dependencias principales:
 - Cliente Supabase: [`../../lib/supabase.js`](../../lib/supabase.js)
 - Rutas: [`../../router/index.js`](../../router/index.js)
 - Menú lateral: [`../../components/navigation/Sidebar.vue`](../../components/navigation/Sidebar.vue)
-- Buscador reutilizable: [`../../components/ListSearchInput.vue`](../../components/ListSearchInput.vue)
-- Confirmación de eliminación: [`../../components/ModalDelete.vue`](../../components/ModalDelete.vue)
+- Buscador reutilizable: [`../../components/tools/ListSearchInput.vue`](../../components/tools/ListSearchInput.vue)
+- Confirmación de eliminación: [`../../components/tools/ModalDelete.vue`](../../components/tools/ModalDelete.vue)
 
 ## 3. Acceso, rutas y menú
 

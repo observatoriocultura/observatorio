@@ -60,7 +60,7 @@
 </template>
 
 <script setup>
-import ListSearchInput from '../../components/ListSearchInput.vue'
+import ListSearchInput from '../../components/tools/ListSearchInput.vue'
 
 defineProps({
   investigaciones: {

@@ -3,7 +3,7 @@ import { computed, ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { useToast } from 'vue-toastification'
 import { supabase } from '../../lib/supabase'
-import ModalDelete from '../../components/ModalDelete.vue'
+import ModalDelete from '../../components/tools/ModalDelete.vue'
 
 const route = useRoute()
 const toast = useToast()

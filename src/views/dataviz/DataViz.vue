@@ -192,7 +192,7 @@
 <script setup>
 import { computed, nextTick, onBeforeUnmount, onMounted, ref } from 'vue'
 import { Modal } from 'bootstrap'
-import ListSearchInput from '../../components/ListSearchInput.vue'
+import ListSearchInput from '../../components/tools/ListSearchInput.vue'
 import { fetchGoogleSheetCsv } from '../../utils/googleSheets'
 
 // Identificador del archivo de Google Sheets que contiene los tableros.

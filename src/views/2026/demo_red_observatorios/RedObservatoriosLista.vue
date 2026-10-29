@@ -101,7 +101,7 @@
 <script setup>
 import { computed, onMounted, ref } from 'vue'
 import { RouterLink } from 'vue-router'
-import ListSearchInput from '../../../components/ListSearchInput.vue'
+import ListSearchInput from '../../../components/tools/ListSearchInput.vue'
 import { getEntityFieldLabel } from '../../../utils/redObservatorios.js'
 import RedObservatoriosModal from './RedObservatoriosModal.vue'
 

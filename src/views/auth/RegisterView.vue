@@ -1,5 +1,5 @@
 <script setup>
-import EmailRegisterForm from '../../components/EmailRegisterForm.vue'
+import EmailRegisterForm from '../../components/auth/EmailRegisterForm.vue'
 import '../../assets/styles/auth.css'
 
 const authLogoUrl = `${import.meta.env.BASE_URL}resources/images/app/logotipo-navbar.png`

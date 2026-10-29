@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useToast } from 'vue-toastification'
-import { hasSupabaseConfig, supabase } from '../lib/supabase'
+import { hasSupabaseConfig, supabase } from '../../lib/supabase'
 
 const router = useRouter()
 const toast = useToast()
