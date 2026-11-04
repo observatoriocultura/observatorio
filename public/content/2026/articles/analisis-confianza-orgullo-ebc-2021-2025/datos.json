@@ -1,0 +1,1786 @@
+{
+  "titulo": "Confianza y orgullo en Bogotá · EBC 2021–2025",
+  "fecha_consulta": "2026-11-04",
+  "unidad": "Recuentos expandidos / porcentajes; no usar como n muestral",
+  "alcance": "Tabulados agregados de las preguntas seleccionadas. Sin microdatos, diseño muestral ni errores estándar para comparar años.",
+  "fuentes": {
+    "consolidado": {
+      "url": "https://docs.google.com/spreadsheets/d/1meRi-ko2HdDgNJPT8R-GgXXyEu4eOTBPdo1F6A6_FzU/edit?gid=144090919#gid=144090919",
+      "rangos": ["datos!A1:AC40", "datos!A41:AC180", "fuentes!A1:H30"],
+      "nota": "datos contiene 61 filas con valores. info!A1:H30 está vacío."
+    },
+    "original_2021": {
+      "url": "https://drive.google.com/file/d/1UrJRtwC_EjLihD_HfBh8SzNdLOYlnM26/view",
+      "titulo": "Tablas resultados Encuesta Indicadores público.xlsx",
+      "nota": "Lectura del tabulado general mediante extracción CSV de Drive. Índices CSV conservados para localizar evidencia."
+    },
+    "original_2023": {
+      "url": "https://docs.google.com/spreadsheets/d/1r34jp34mSAm61-PwtouiomsxXmQcfXn2/edit?gid=663605612#gid=663605612",
+      "nota": "Valores tomados del consolidado; original Office no contrastado en contenido."
+    },
+    "original_2024": {
+      "url": "https://docs.google.com/spreadsheets/d/1KghfS4-pJxIJFLqYhNjOSGOoc8EtoYVh/edit?gid=1756563016#gid=1756563016",
+      "nota": "Valores tomados del consolidado; original Office no contrastado en contenido."
+    },
+    "original_2025": {
+      "url": "https://drive.google.com/file/d/1UZZ6I5ckUUhkNy9LEbD1oSIyhHHg71mB/view",
+      "titulo": "Tablas de salida.xlsx",
+      "nota": "TABLAS EXPANDIDAS: columnas A:D de las preguntas seleccionadas. TABLAS SIN EXPANDIR: C1355=5860, sin usar para inferencia entre años."
+    }
+  },
+  "reglas": {
+    "porcentaje": "100 * suma(recuentos de categorías seleccionadas) / total del año e indicador",
+    "baja_confianza": "Nada + Poco. Normal se conserva separado de Mucho.",
+    "orgullo_positivo_2021": "Orgulloso + Muy orgulloso; aproximación conceptual, no equivalencia al Sí de otros años.",
+    "sensibilidad_2023": "100 * Sí / (Sí + No). Se excluye No sabe solo en esta sensibilidad; no corrige diferencias de instrumento.",
+    "cambio_pp": "porcentaje final - porcentaje inicial; se calcula antes de redondear",
+    "redondeo": "Un decimal en contenido; cálculos conservan precisión. Diferencias de 1 en recuentos consolidados se toleran como redondeo.",
+    "faltantes": "Ausencia de un resultado se conserva como no disponible, nunca cero. La serie regular de la EBC es bienal: 2021, 2023 y 2025; por eso no hay una medición regular de 2022. Los datos de 2024 proceden del seguimiento especial de O+C y no incluyen confianza interpersonal ni orgullo atribuido en el consolidado.",
+    "inferencia": "Resultados descriptivos; no se afirman significancia estadística, cambios individuales, correlaciones ni causalidad."
+  },
+  "correcciones": [
+    {
+      "indicador": "alcaldia",
+      "year": 2025,
+      "consolidado": {
+        "recuento_mucho": 163,
+        "porcentaje_mucho": 0
+      },
+      "original": {
+        "recuento_mucho": 162512.48249349926,
+        "porcentaje_mucho": 2.365882785505584
+      },
+      "accion": "Se usa distribución completa del tabulado original."
+    },
+    {
+      "indicador": "servidores",
+      "year": 2025,
+      "consolidado": {
+        "recuento_mucho": 163,
+        "porcentaje_mucho": 0
+      },
+      "original": {
+        "recuento_mucho": 163305.66377118064,
+        "porcentaje_mucho": 2.3774300457643562
+      },
+      "accion": "Se usa distribución completa del tabulado original."
+    },
+    {
+      "indicador": "orgullo_otros",
+      "year": 2021,
+      "problema": "El consolidado repite la distribución ordinal de orgullo personal por vivir en Bogotá.",
+      "original": {
+        "si": 3867059.740541916,
+        "no": 2684803.2594581097,
+        "porcentaje_si": 59.02229244631498
+      },
+      "accion": "Se usa respuesta Sí/No de la pregunta 43 del tabulado original."
+    }
+  ],
+  "observaciones": [
+    {
+      "indicador": "alcaldia",
+      "year": 2021,
+      "total": 6551863,
+      "categorias": [
+        {
+          "respuesta": "si",
+          "recuento": 1552338.762713544,
+          "porcentaje_reportado": 23.693089472620844,
+          "origen": "Tabulado general, índice CSV 366"
+        },
+        {
+          "respuesta": "no",
+          "recuento": 4999524.237286473,
+          "porcentaje_reportado": 76.30691052737917,
+          "origen": "Tabulado general, índice CSV 367"
+        }
+      ],
+      "fuente": "original_2021",
+      "rango": "Tabulado general, índices CSV 366–367",
+      "consolidado_original": {
+        "total": 6551863,
+        "categorias": [
+          {
+            "respuesta": "si",
+            "recuento": 1552339,
+            "porcentaje_reportado": 24,
+            "origen": "datos!N9:P9"
+          },
+          {
+            "respuesta": "no",
+            "recuento": 4999524,
+            "porcentaje_reportado": 76,
+            "origen": "datos!N10:P10"
+          }
+        ],
+        "rango": "datos!N8:P12"
+      }
+    },
+    {
+      "indicador": "alcaldia",
+      "year": 2023,
+      "total": 6716656,
+      "categorias": [
+        {
+          "respuesta": "Nada",
+          "recuento": 2259813,
+          "porcentaje_reportado": 34,
+          "origen": "datos!J9:L9"
+        },
+        {
+          "respuesta": "Poco",
+          "recuento": 2889911,
+          "porcentaje_reportado": 43,
+          "origen": "datos!J10:L10"
+        },
+        {
+          "respuesta": "Normal",
+          "recuento": 1402840,
+          "porcentaje_reportado": 21,
+          "origen": "datos!J11:L11"
+        },
+        {
+          "respuesta": "Mucho",
+          "recuento": 164091,
+          "porcentaje_reportado": 2,
+          "origen": "datos!J12:L12"
+        }
+      ],
+      "fuente": "consolidado",
+      "rango": "datos!J8:L12"
+    },
+    {
+      "indicador": "alcaldia",
+      "year": 2024,
+      "total": 6796781,
+      "categorias": [
+        {
+          "respuesta": "Nada",
+          "recuento": 2552805,
+          "porcentaje_reportado": 37.6,
+          "origen": "datos!F9:H9"
+        },
+        {
+          "respuesta": "Poco",
+          "recuento": 2421472,
+          "porcentaje_reportado": 35.6,
+          "origen": "datos!F10:H10"
+        },
+        {
+          "respuesta": "Normal",
+          "recuento": 1703230,
+          "porcentaje_reportado": 25.1,
+          "origen": "datos!F11:H11"
+        },
+        {
+          "respuesta": "Mucho",
+          "recuento": 119274,
+          "porcentaje_reportado": 1.8,
+          "origen": "datos!F12:H12"
+        }
+      ],
+      "fuente": "consolidado",
+      "rango": "datos!F8:H12"
+    },
+    {
+      "indicador": "alcaldia",
+      "year": 2025,
+      "total": 6868999.744582474,
+      "categorias": [
+        {
+          "respuesta": "Nada",
+          "recuento": 1547511.2897946376,
+          "porcentaje_reportado": 22.528917562053305,
+          "origen": "'TABLAS EXPANDIDAS'!B1356:D1356"
+        },
+        {
+          "respuesta": "Poco",
+          "recuento": 3161777.9116874984,
+          "porcentaje_reportado": 46.02966995567539,
+          "origen": "'TABLAS EXPANDIDAS'!B1357:D1357"
+        },
+        {
+          "respuesta": "Normal",
+          "recuento": 1997198.060606922,
+          "porcentaje_reportado": 29.07552969676693,
+          "origen": "'TABLAS EXPANDIDAS'!B1358:D1358"
+        },
+        {
+          "respuesta": "Mucho",
+          "recuento": 162512.48249349926,
+          "porcentaje_reportado": 2.3658827855055837,
+          "origen": "'TABLAS EXPANDIDAS'!B1359:D1359"
+        }
+      ],
+      "fuente": "original_2025",
+      "rango": "'TABLAS EXPANDIDAS'!A1355:D1359",
+      "consolidado_original": {
+        "total": 6869000,
+        "categorias": [
+          {
+            "respuesta": "Nada",
+            "recuento": 1547511,
+            "porcentaje_reportado": 22.53,
+            "origen": "datos!B9:D9"
+          },
+          {
+            "respuesta": "Poco",
+            "recuento": 3161778,
+            "porcentaje_reportado": 46.03,
+            "origen": "datos!B10:D10"
+          },
+          {
+            "respuesta": "Normal",
+            "recuento": 1997198,
+            "porcentaje_reportado": 29.08,
+            "origen": "datos!B11:D11"
+          },
+          {
+            "respuesta": "Mucho",
+            "recuento": 163,
+            "porcentaje_reportado": 0,
+            "origen": "datos!B12:D12"
+          }
+        ],
+        "rango": "datos!B8:D12"
+      },
+      "pregunta": "28.2 Dígame que tanto confía en...: b. La alcaldía Mayor y sus entidades"
+    },
+    {
+      "indicador": "servidores",
+      "year": 2023,
+      "total": 6716656,
+      "categorias": [
+        {
+          "respuesta": "Nada",
+          "recuento": 1852116,
+          "porcentaje_reportado": 28,
+          "origen": "datos!J16:L16"
+        },
+        {
+          "respuesta": "Poco",
+          "recuento": 2701098,
+          "porcentaje_reportado": 40,
+          "origen": "datos!J17:L17"
+        },
+        {
+          "respuesta": "Normal",
+          "recuento": 1769128,
+          "porcentaje_reportado": 26,
+          "origen": "datos!J18:L18"
+        },
+        {
+          "respuesta": "Mucho",
+          "recuento": 394314,
+          "porcentaje_reportado": 6,
+          "origen": "datos!J19:L19"
+        }
+      ],
+      "fuente": "consolidado",
+      "rango": "datos!J15:L19"
+    },
+    {
+      "indicador": "servidores",
+      "year": 2024,
+      "total": 6796781,
+      "categorias": [
+        {
+          "respuesta": "Nada",
+          "recuento": 2519547,
+          "porcentaje_reportado": 37.1,
+          "origen": "datos!F16:H16"
+        },
+        {
+          "respuesta": "Poco",
+          "recuento": 2409730,
+          "porcentaje_reportado": 35.5,
+          "origen": "datos!F17:H17"
+        },
+        {
+          "respuesta": "Normal",
+          "recuento": 1781198,
+          "porcentaje_reportado": 26.2,
+          "origen": "datos!F18:H18"
+        },
+        {
+          "respuesta": "Mucho",
+          "recuento": 86307,
+          "porcentaje_reportado": 1.3,
+          "origen": "datos!F19:H19"
+        }
+      ],
+      "fuente": "consolidado",
+      "rango": "datos!F15:H19"
+    },
+    {
+      "indicador": "servidores",
+      "year": 2025,
+      "total": 6868999.744582474,
+      "categorias": [
+        {
+          "respuesta": "Nada",
+          "recuento": 1217333.9309415536,
+          "porcentaje_reportado": 17.722142614747586,
+          "origen": "'TABLAS EXPANDIDAS'!B1366:D1366"
+        },
+        {
+          "respuesta": "Poco",
+          "recuento": 3019893.8434839235,
+          "porcentaje_reportado": 43.96409893399239,
+          "origen": "'TABLAS EXPANDIDAS'!B1367:D1367"
+        },
+        {
+          "respuesta": "Normal",
+          "recuento": 2468466.306385917,
+          "porcentaje_reportado": 35.93632840549713,
+          "origen": "'TABLAS EXPANDIDAS'!B1368:D1368"
+        },
+        {
+          "respuesta": "Mucho",
+          "recuento": 163305.66377118064,
+          "porcentaje_reportado": 2.3774300457643562,
+          "origen": "'TABLAS EXPANDIDAS'!B1369:D1369"
+        }
+      ],
+      "fuente": "original_2025",
+      "rango": "'TABLAS EXPANDIDAS'!A1365:D1369",
+      "consolidado_original": {
+        "total": 6869000,
+        "categorias": [
+          {
+            "respuesta": "Nada",
+            "recuento": 1217334,
+            "porcentaje_reportado": 17.72,
+            "origen": "datos!B16:D16"
+          },
+          {
+            "respuesta": "Poco",
+            "recuento": 3019894,
+            "porcentaje_reportado": 43.96,
+            "origen": "datos!B17:D17"
+          },
+          {
+            "respuesta": "Normal",
+            "recuento": 2468466,
+            "porcentaje_reportado": 35.94,
+            "origen": "datos!B18:D18"
+          },
+          {
+            "respuesta": "Mucho",
+            "recuento": 163,
+            "porcentaje_reportado": 0,
+            "origen": "datos!B19:D19"
+          }
+        ],
+        "rango": "datos!B15:D19"
+      },
+      "pregunta": "28.3 Dígame que tanto confía en...: c. Los servidores del Distrito"
+    },
+    {
+      "indicador": "vecinos",
+      "year": 2021,
+      "total": 6551863,
+      "categorias": [
+        {
+          "respuesta": "si",
+          "recuento": 3590395.517867343,
+          "porcentaje_reportado": 54.79961223040431,
+          "origen": "Tabulado general, índice CSV 501"
+        },
+        {
+          "respuesta": "no",
+          "recuento": 2961467.4821326914,
+          "porcentaje_reportado": 45.20038776959598,
+          "origen": "Tabulado general, índice CSV 502"
+        }
+      ],
+      "fuente": "original_2021",
+      "rango": "Tabulado general, índices CSV 501–502",
+      "consolidado_original": {
+        "total": 6551863,
+        "categorias": [
+          {
+            "respuesta": "si",
+            "recuento": 3590396,
+            "porcentaje_reportado": 55,
+            "origen": "datos!N25:P25"
+          },
+          {
+            "respuesta": "no",
+            "recuento": 2961467,
+            "porcentaje_reportado": 45,
+            "origen": "datos!N26:P26"
+          }
+        ],
+        "rango": "datos!N24:P27"
+      }
+    },
+    {
+      "indicador": "vecinos",
+      "year": 2023,
+      "total": 6716656,
+      "categorias": [
+        {
+          "respuesta": "Si",
+          "recuento": 1829070,
+          "porcentaje_reportado": 27,
+          "origen": "datos!J25:L25"
+        },
+        {
+          "respuesta": "No",
+          "recuento": 3969159,
+          "porcentaje_reportado": 59,
+          "origen": "datos!J26:L26"
+        },
+        {
+          "respuesta": "No sabe",
+          "recuento": 918427,
+          "porcentaje_reportado": 14,
+          "origen": "datos!J27:L27"
+        }
+      ],
+      "fuente": "consolidado",
+      "rango": "datos!J24:L27"
+    },
+    {
+      "indicador": "vecinos",
+      "year": 2025,
+      "total": 6868999.744582474,
+      "categorias": [
+        {
+          "respuesta": "Si",
+          "recuento": 2877469.3207953586,
+          "porcentaje_reportado": 41.89065988923345,
+          "origen": "'TABLAS EXPANDIDAS'!B1897:D1897"
+        },
+        {
+          "respuesta": "No",
+          "recuento": 3991530.4237872423,
+          "porcentaje_reportado": 58.10934011076839,
+          "origen": "'TABLAS EXPANDIDAS'!B1898:D1898"
+        }
+      ],
+      "fuente": "original_2025",
+      "rango": "'TABLAS EXPANDIDAS'!A1896:D1898",
+      "consolidado_original": {
+        "total": 6869000,
+        "categorias": [
+          {
+            "respuesta": "Si",
+            "recuento": 2877469,
+            "porcentaje_reportado": 41.89,
+            "origen": "datos!B25:D25"
+          },
+          {
+            "respuesta": "No",
+            "recuento": 3991530,
+            "porcentaje_reportado": 58.11,
+            "origen": "datos!B26:D26"
+          }
+        ],
+        "rango": "datos!B24:D27"
+      },
+      "pregunta": "51.1 Por lo general usted confía en: a. Los vecinos"
+    },
+    {
+      "indicador": "amigos",
+      "year": 2021,
+      "total": 6551863,
+      "categorias": [
+        {
+          "respuesta": "si",
+          "recuento": 4245937.886843808,
+          "porcentaje_reportado": 64.8050468522281,
+          "origen": "Tabulado general, índice CSV 503"
+        },
+        {
+          "respuesta": "no",
+          "recuento": 2305925.113156222,
+          "porcentaje_reportado": 35.19495314777211,
+          "origen": "Tabulado general, índice CSV 504"
+        }
+      ],
+      "fuente": "original_2021",
+      "rango": "Tabulado general, índices CSV 503–504",
+      "consolidado_original": {
+        "total": 6551863,
+        "categorias": [
+          {
+            "respuesta": "si",
+            "recuento": 4245938,
+            "porcentaje_reportado": 65,
+            "origen": "datos!N31:P31"
+          },
+          {
+            "respuesta": "no",
+            "recuento": 2305925,
+            "porcentaje_reportado": 35,
+            "origen": "datos!N32:P32"
+          }
+        ],
+        "rango": "datos!N30:P33"
+      }
+    },
+    {
+      "indicador": "amigos",
+      "year": 2023,
+      "total": 6716656,
+      "categorias": [
+        {
+          "respuesta": "Si",
+          "recuento": 2230982,
+          "porcentaje_reportado": 33,
+          "origen": "datos!J31:L31"
+        },
+        {
+          "respuesta": "No",
+          "recuento": 4003530,
+          "porcentaje_reportado": 60,
+          "origen": "datos!J32:L32"
+        },
+        {
+          "respuesta": "No sabe",
+          "recuento": 482143,
+          "porcentaje_reportado": 7,
+          "origen": "datos!J33:L33"
+        }
+      ],
+      "fuente": "consolidado",
+      "rango": "datos!J30:L33"
+    },
+    {
+      "indicador": "amigos",
+      "year": 2025,
+      "total": 6868999.744582474,
+      "categorias": [
+        {
+          "respuesta": "Si",
+          "recuento": 3617803.4591607135,
+          "porcentaje_reportado": 52.66856301769477,
+          "origen": "'TABLAS EXPANDIDAS'!B1905:D1905"
+        },
+        {
+          "respuesta": "No",
+          "recuento": 3251196.285421888,
+          "porcentaje_reportado": 47.331436982307075,
+          "origen": "'TABLAS EXPANDIDAS'!B1906:D1906"
+        }
+      ],
+      "fuente": "original_2025",
+      "rango": "'TABLAS EXPANDIDAS'!A1904:D1906",
+      "consolidado_original": {
+        "total": 6869000,
+        "categorias": [
+          {
+            "respuesta": "Si",
+            "recuento": 3617803,
+            "porcentaje_reportado": 52.67,
+            "origen": "datos!B31:D31"
+          },
+          {
+            "respuesta": "No",
+            "recuento": 3251196,
+            "porcentaje_reportado": 47.33,
+            "origen": "datos!B32:D32"
+          }
+        ],
+        "rango": "datos!B30:D33"
+      },
+      "pregunta": "51.2 Por lo general usted confía en: b. Los amigos"
+    },
+    {
+      "indicador": "parientes",
+      "year": 2021,
+      "total": 6551863,
+      "categorias": [
+        {
+          "respuesta": "si",
+          "recuento": 5127766.746293773,
+          "porcentaje_reportado": 78.26425470578002,
+          "origen": "Tabulado general, índice CSV 505"
+        },
+        {
+          "respuesta": "no",
+          "recuento": 1424096.253706238,
+          "porcentaje_reportado": 21.735745294219896,
+          "origen": "Tabulado general, índice CSV 506"
+        }
+      ],
+      "fuente": "original_2021",
+      "rango": "Tabulado general, índices CSV 505–506",
+      "consolidado_original": {
+        "total": 6551863,
+        "categorias": [
+          {
+            "respuesta": "si",
+            "recuento": 5127767,
+            "porcentaje_reportado": 78,
+            "origen": "datos!N36:P36"
+          },
+          {
+            "respuesta": "no",
+            "recuento": 1424096,
+            "porcentaje_reportado": 22,
+            "origen": "datos!N37:P37"
+          }
+        ],
+        "rango": "datos!N35:P38"
+      }
+    },
+    {
+      "indicador": "parientes",
+      "year": 2023,
+      "total": 6716656,
+      "categorias": [
+        {
+          "respuesta": "Si",
+          "recuento": 3248233,
+          "porcentaje_reportado": 48,
+          "origen": "datos!J36:L36"
+        },
+        {
+          "respuesta": "No",
+          "recuento": 2971761,
+          "porcentaje_reportado": 44,
+          "origen": "datos!J37:L37"
+        },
+        {
+          "respuesta": "No sabe",
+          "recuento": 496662,
+          "porcentaje_reportado": 7,
+          "origen": "datos!J38:L38"
+        }
+      ],
+      "fuente": "consolidado",
+      "rango": "datos!J35:L38"
+    },
+    {
+      "indicador": "parientes",
+      "year": 2025,
+      "total": 6868999.744582474,
+      "categorias": [
+        {
+          "respuesta": "Si",
+          "recuento": 4566672.543788423,
+          "porcentaje_reportado": 66.48235134074828,
+          "origen": "'TABLAS EXPANDIDAS'!B1913:D1913"
+        },
+        {
+          "respuesta": "No",
+          "recuento": 2302327.2007941576,
+          "porcentaje_reportado": 33.51764865925326,
+          "origen": "'TABLAS EXPANDIDAS'!B1914:D1914"
+        }
+      ],
+      "fuente": "original_2025",
+      "rango": "'TABLAS EXPANDIDAS'!A1912:D1914",
+      "consolidado_original": {
+        "total": 6869000,
+        "categorias": [
+          {
+            "respuesta": "Si",
+            "recuento": 4566673,
+            "porcentaje_reportado": 66.48,
+            "origen": "datos!B36:D36"
+          },
+          {
+            "respuesta": "No",
+            "recuento": 2302327,
+            "porcentaje_reportado": 33.52,
+            "origen": "datos!B37:D37"
+          }
+        ],
+        "rango": "datos!B35:D38"
+      },
+      "pregunta": "51.3 Por lo general usted confía en: c. Los parientes (familiares)"
+    },
+    {
+      "indicador": "habitantes",
+      "year": 2021,
+      "total": 6551863,
+      "categorias": [
+        {
+          "respuesta": "si",
+          "recuento": 1412170.4096901382,
+          "porcentaje_reportado": 21.553723111886416,
+          "origen": "Tabulado general, índice CSV 509"
+        },
+        {
+          "respuesta": "no",
+          "recuento": 5139692.590309867,
+          "porcentaje_reportado": 78.44627688811342,
+          "origen": "Tabulado general, índice CSV 510"
+        }
+      ],
+      "fuente": "original_2021",
+      "rango": "Tabulado general, índices CSV 509–510",
+      "consolidado_original": {
+        "total": 6551863,
+        "categorias": [
+          {
+            "respuesta": "si",
+            "recuento": 1412170,
+            "porcentaje_reportado": 22,
+            "origen": "datos!N42:P42"
+          },
+          {
+            "respuesta": "no",
+            "recuento": 5139693,
+            "porcentaje_reportado": 78,
+            "origen": "datos!N43:P43"
+          }
+        ],
+        "rango": "datos!N41:P44"
+      }
+    },
+    {
+      "indicador": "habitantes",
+      "year": 2023,
+      "total": 6716656,
+      "categorias": [
+        {
+          "respuesta": "Si",
+          "recuento": 1306121,
+          "porcentaje_reportado": 19,
+          "origen": "datos!J42:L42"
+        },
+        {
+          "respuesta": "No",
+          "recuento": 4878481,
+          "porcentaje_reportado": 73,
+          "origen": "datos!J43:L43"
+        },
+        {
+          "respuesta": "No sabe",
+          "recuento": 532054,
+          "porcentaje_reportado": 8,
+          "origen": "datos!J44:L44"
+        }
+      ],
+      "fuente": "consolidado",
+      "rango": "datos!J41:L44"
+    },
+    {
+      "indicador": "habitantes",
+      "year": 2025,
+      "total": 6868999.744582474,
+      "categorias": [
+        {
+          "respuesta": "Si",
+          "recuento": 1911635.1763077774,
+          "porcentaje_reportado": 27.82989150371521,
+          "origen": "'TABLAS EXPANDIDAS'!B1929:D1929"
+        },
+        {
+          "respuesta": "No",
+          "recuento": 4957364.56827477,
+          "porcentaje_reportado": 72.17010849628585,
+          "origen": "'TABLAS EXPANDIDAS'!B1930:D1930"
+        }
+      ],
+      "fuente": "original_2025",
+      "rango": "'TABLAS EXPANDIDAS'!A1928:D1930",
+      "consolidado_original": {
+        "total": 6869000,
+        "categorias": [
+          {
+            "respuesta": "Si",
+            "recuento": 1911635,
+            "porcentaje_reportado": 27.83,
+            "origen": "datos!B42:D42"
+          },
+          {
+            "respuesta": "No",
+            "recuento": 4957365,
+            "porcentaje_reportado": 72.17,
+            "origen": "datos!B43:D43"
+          }
+        ],
+        "rango": "datos!B41:D44"
+      },
+      "pregunta": "51.5 Por lo general usted confía en: e. Los demás habitantes de Bogotá"
+    },
+    {
+      "indicador": "orgullo_propio",
+      "year": 2021,
+      "total": 6551863,
+      "categorias": [
+        {
+          "respuesta": "nada orgulloso",
+          "recuento": 182311.12663605547,
+          "porcentaje_reportado": 2.782584535666497,
+          "origen": "Tabulado general, índice CSV 541"
+        },
+        {
+          "respuesta": "poco orgulloso",
+          "recuento": 1128391.6226555016,
+          "porcentaje_reportado": 17.22245447829875,
+          "origen": "Tabulado general, índice CSV 542"
+        },
+        {
+          "respuesta": "orgulloso",
+          "recuento": 3623399.414049261,
+          "porcentaje_reportado": 55.303345232481995,
+          "origen": "Tabulado general, índice CSV 543"
+        },
+        {
+          "respuesta": "muy orgulloso",
+          "recuento": 1617760.836659205,
+          "porcentaje_reportado": 24.69161575355286,
+          "origen": "Tabulado general, índice CSV 544"
+        }
+      ],
+      "fuente": "original_2021",
+      "rango": "Tabulado general, índices CSV 541–544",
+      "consolidado_original": {
+        "total": 6551863,
+        "categorias": [
+          {
+            "respuesta": "nada orgulloso",
+            "recuento": 182311,
+            "porcentaje_reportado": 3,
+            "origen": "datos!N49:P49"
+          },
+          {
+            "respuesta": "poco orgulloso",
+            "recuento": 1128392,
+            "porcentaje_reportado": 17,
+            "origen": "datos!N50:P50"
+          },
+          {
+            "respuesta": "orgulloso",
+            "recuento": 3623399,
+            "porcentaje_reportado": 55,
+            "origen": "datos!N51:P51"
+          },
+          {
+            "respuesta": "muy orgulloso",
+            "recuento": 1617761,
+            "porcentaje_reportado": 25,
+            "origen": "datos!N52:P52"
+          }
+        ],
+        "rango": "datos!N48:P52"
+      }
+    },
+    {
+      "indicador": "orgullo_propio",
+      "year": 2023,
+      "total": 6716656,
+      "categorias": [
+        {
+          "respuesta": "Si",
+          "recuento": 3532271,
+          "porcentaje_reportado": 53,
+          "origen": "datos!J49:L49"
+        },
+        {
+          "respuesta": "No",
+          "recuento": 1906471,
+          "porcentaje_reportado": 28,
+          "origen": "datos!J50:L50"
+        },
+        {
+          "respuesta": "No sabe",
+          "recuento": 1277914,
+          "porcentaje_reportado": 19,
+          "origen": "datos!J51:L51"
+        }
+      ],
+      "fuente": "consolidado",
+      "rango": "datos!J48:L52"
+    },
+    {
+      "indicador": "orgullo_propio",
+      "year": 2024,
+      "total": 6796781,
+      "categorias": [
+        {
+          "respuesta": "Si",
+          "recuento": 5646815,
+          "porcentaje_reportado": 83.1,
+          "origen": "datos!F49:H49"
+        },
+        {
+          "respuesta": "No",
+          "recuento": 1149966,
+          "porcentaje_reportado": 16.9,
+          "origen": "datos!F50:H50"
+        }
+      ],
+      "fuente": "consolidado",
+      "rango": "datos!F48:H52"
+    },
+    {
+      "indicador": "orgullo_propio",
+      "year": 2025,
+      "total": 6868999.744582474,
+      "categorias": [
+        {
+          "respuesta": "Si",
+          "recuento": 4723734.650576059,
+          "porcentaje_reportado": 68.76888668254254,
+          "origen": "'TABLAS EXPANDIDAS'!B2079:D2079"
+        },
+        {
+          "respuesta": "No",
+          "recuento": 2145265.0940064997,
+          "porcentaje_reportado": 31.231113317458682,
+          "origen": "'TABLAS EXPANDIDAS'!B2080:D2080"
+        }
+      ],
+      "fuente": "original_2025",
+      "rango": "'TABLAS EXPANDIDAS'!A2078:D2080",
+      "consolidado_original": {
+        "total": 6869000,
+        "categorias": [
+          {
+            "respuesta": "Si",
+            "recuento": 4723735,
+            "porcentaje_reportado": 68.77,
+            "origen": "datos!B49:D49"
+          },
+          {
+            "respuesta": "No",
+            "recuento": 2145265,
+            "porcentaje_reportado": 31.23,
+            "origen": "datos!B50:D50"
+          }
+        ],
+        "rango": "datos!B48:D52"
+      },
+      "pregunta": "55. Dígame si usted se siente orgulloso de vivir en Bogotá"
+    },
+    {
+      "indicador": "orgullo_otros",
+      "year": 2021,
+      "total": 6551863,
+      "categorias": [
+        {
+          "respuesta": "si",
+          "recuento": 3867059.740541916,
+          "porcentaje_reportado": 59.022292446314985,
+          "origen": "Tabulado general, índice CSV 545"
+        },
+        {
+          "respuesta": "no",
+          "recuento": 2684803.2594581097,
+          "porcentaje_reportado": 40.977707553685164,
+          "origen": "Tabulado general, índice CSV 546"
+        }
+      ],
+      "fuente": "original_2021",
+      "rango": "Tabulado general, índices CSV 545–546",
+      "consolidado_original": {
+        "total": 6551863,
+        "categorias": [
+          {
+            "respuesta": "nada orgulloso",
+            "recuento": 182311,
+            "porcentaje_reportado": 3,
+            "origen": "datos!N58:P58"
+          },
+          {
+            "respuesta": "poco orgulloso",
+            "recuento": 1128392,
+            "porcentaje_reportado": 17,
+            "origen": "datos!N59:P59"
+          },
+          {
+            "respuesta": "orgulloso",
+            "recuento": 3623399,
+            "porcentaje_reportado": 55,
+            "origen": "datos!N60:P60"
+          },
+          {
+            "respuesta": "muy orgulloso",
+            "recuento": 1617761,
+            "porcentaje_reportado": 25,
+            "origen": "datos!N61:P61"
+          }
+        ],
+        "rango": "datos!N57:P61"
+      }
+    },
+    {
+      "indicador": "orgullo_otros",
+      "year": 2023,
+      "total": 6716656,
+      "categorias": [
+        {
+          "respuesta": "Si",
+          "recuento": 3033393,
+          "porcentaje_reportado": 45,
+          "origen": "datos!J58:L58"
+        },
+        {
+          "respuesta": "No",
+          "recuento": 3083717,
+          "porcentaje_reportado": 46,
+          "origen": "datos!J59:L59"
+        },
+        {
+          "respuesta": "No sabe",
+          "recuento": 599546,
+          "porcentaje_reportado": 9,
+          "origen": "datos!J60:L60"
+        }
+      ],
+      "fuente": "consolidado",
+      "rango": "datos!J57:L61"
+    },
+    {
+      "indicador": "orgullo_otros",
+      "year": 2025,
+      "total": 6868999.744582474,
+      "categorias": [
+        {
+          "respuesta": "Si",
+          "recuento": 4978723.930846206,
+          "porcentaje_reportado": 72.48106152242742,
+          "origen": "'TABLAS EXPANDIDAS'!B2087:D2087"
+        },
+        {
+          "respuesta": "No",
+          "recuento": 1890275.8137363417,
+          "porcentaje_reportado": 27.51893847757364,
+          "origen": "'TABLAS EXPANDIDAS'!B2088:D2088"
+        }
+      ],
+      "fuente": "original_2025",
+      "rango": "'TABLAS EXPANDIDAS'!A2086:D2088",
+      "consolidado_original": {
+        "total": 6869000,
+        "categorias": [
+          {
+            "respuesta": "Si",
+            "recuento": 4978724,
+            "porcentaje_reportado": 72.48,
+            "origen": "datos!B58:D58"
+          },
+          {
+            "respuesta": "No",
+            "recuento": 1890276,
+            "porcentaje_reportado": 27.52,
+            "origen": "datos!B59:D59"
+          }
+        ],
+        "rango": "datos!B57:D61"
+      },
+      "pregunta": "56. ¿Usted cree que la mayoría de las personas habitantes de Bogotá se sienten orgullosas de la ciudad?"
+    }
+  ],
+  "resultados": {
+    "confianza_personal": [
+      {
+        "indicador": "parientes",
+        "afirmativo_total": {
+          "2021": 78.26425470578022,
+          "2023": 48.360865883260956,
+          "2025": 66.48235134074828
+        },
+        "afirmativo_sobre_si_no_2023": 52.222445873742004,
+        "cambio_2023_2025_pp": 18.121485457487324,
+        "cambio_2021_2025_pp": -11.781903365031937
+      },
+      {
+        "indicador": "amigos",
+        "afirmativo_total": {
+          "2021": 64.80504685222826,
+          "2023": 33.21566565267002,
+          "2025": 52.66856301769477
+        },
+        "afirmativo_sobre_si_no_2023": 35.784388577646496,
+        "cambio_2023_2025_pp": 19.452897365024754,
+        "cambio_2021_2025_pp": -12.136483834533486
+      },
+      {
+        "indicador": "vecinos",
+        "afirmativo_total": {
+          "2021": 54.799612230404435,
+          "2023": 27.231854661009884,
+          "2025": 41.89065988923345
+        },
+        "afirmativo_sobre_si_no_2023": 31.545321856035695,
+        "cambio_2023_2025_pp": 14.658805228223564,
+        "cambio_2021_2025_pp": -12.908952341170988
+      },
+      {
+        "indicador": "habitantes",
+        "afirmativo_total": {
+          "2021": 21.55372311188647,
+          "2023": 19.44600110531193,
+          "2025": 27.82989150371521
+        },
+        "afirmativo_sobre_si_no_2023": 21.118917595667433,
+        "cambio_2023_2025_pp": 8.383890398403281,
+        "cambio_2021_2025_pp": 6.27616839182874
+      }
+    ],
+    "confianza_baja": [
+      {
+        "indicador": "alcaldia",
+        "porcentaje": {
+          "2023": 76.67095054443759,
+          "2024": 73.18577720835789,
+          "2025": 68.55858751772868
+        }
+      },
+      {
+        "indicador": "servidores",
+        "porcentaje": {
+          "2023": 67.78989425690403,
+          "2024": 72.52369908637633,
+          "2025": 61.68624154873997
+        }
+      }
+    ],
+    "orgullo_propio": {
+      "afirmativo_2023": 52.589726197083785,
+      "afirmativo_2024": 83.08072600838544,
+      "afirmativo_2025": 68.76888668254254,
+      "positivo_2021_proxy": 79.99496098603505,
+      "cambio_2024_2025_pp": -14.311839325842897,
+      "afirmativo_sobre_si_no_2023": 64.94647107731899
+    },
+    "orgullo_otros": {
+      "afirmativo": {
+        "2021": 59.02229244631513,
+        "2023": 45.16225038173758,
+        "2025": 72.48106152242742
+      },
+      "brecha_otros_menos_propio_2023_pp": -7.427475815346206,
+      "brecha_otros_menos_propio_2025_pp": 3.712174839884881
+    }
+  },
+  "consolidado_crudo": {
+    "sheet": "datos",
+    "filas": [
+      [
+        "Año",
+        "",
+        "2025",
+        "2025",
+        "",
+        "",
+        "2024",
+        "2024",
+        "",
+        "",
+        "2023",
+        "2023",
+        "",
+        "",
+        "2021",
+        "2021"
+      ],
+      [
+        "Fuente",
+        "",
+        "https://docs.google.com/spreadsheets/d/1UZZ6I5ckUUhkNy9LEbD1oSIyhHHg71mB/edit?gid=1603525267#gid=1603525267",
+        "",
+        "",
+        "",
+        "https://docs.google.com/spreadsheets/d/1KghfS4-pJxIJFLqYhNjOSGOoc8EtoYVh/edit?gid=1756563016#gid=1756563016",
+        "",
+        "",
+        "",
+        "https://docs.google.com/spreadsheets/d/1r34jp34mSAm61-PwtouiomsxXmQcfXn2/edit?gid=663605612#gid=663605612",
+        "",
+        "",
+        "",
+        "https://docs.google.com/spreadsheets/d/1UrJRtwC_EjLihD_HfBh8SzNdLOYlnM26/edit?gid=1059856243#gid=1059856243"
+      ],
+      [],
+      [
+        "Pregunta Confianza Entidades",
+        "Dígame que tanto confía en...",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "En general se puede confiar en: b. La alcaldía Mayor y sus entidades"
+      ],
+      [],
+      [
+        "",
+        "",
+        "Recuento",
+        "Porcentaje",
+        "",
+        "Respuesta",
+        "Recuento",
+        "Porcentaje",
+        "",
+        "Respuesta",
+        "Recuento",
+        "Porcentaje",
+        "",
+        "Respuesta",
+        "Recuento",
+        "Porcentaje"
+      ],
+      ["Subpregunta 1", "Confianza en la Alcaldía y sus instituciones"],
+      [
+        "",
+        "Total",
+        "6.869.000",
+        "100,00%",
+        "",
+        "Total",
+        "6.796.781",
+        "100,00%",
+        "",
+        "Total",
+        "6.716.656",
+        "100%",
+        "",
+        "Total",
+        "6.551.863",
+        "100%"
+      ],
+      [
+        "",
+        "Nada",
+        "1.547.511",
+        "22,53%",
+        "",
+        "Nada",
+        "2.552.805",
+        "37,60%",
+        "",
+        "Nada",
+        "2.259.813",
+        "34%",
+        "",
+        "si",
+        "1.552.339",
+        "24%"
+      ],
+      [
+        "",
+        "Poco",
+        "3.161.778",
+        "46,03%",
+        "",
+        "Poco",
+        "2.421.472",
+        "35,60%",
+        "",
+        "Poco",
+        "2.889.911",
+        "43%",
+        "",
+        "no",
+        "4.999.524",
+        "76%"
+      ],
+      [
+        "",
+        "Normal",
+        "1.997.198",
+        "29,08%",
+        "",
+        "Normal",
+        "1.703.230",
+        "25,10%",
+        "",
+        "Normal",
+        "1.402.840",
+        "21%"
+      ],
+      ["", "Mucho", "163", "0,00%", "", "Mucho", "119.274", "1,80%", "", "Mucho", "164.091", "2%"],
+      [],
+      ["Subpregunta 2", "Confianza en los servidores del distrito"],
+      [
+        "",
+        "Total",
+        "6.869.000",
+        "100,00%",
+        "",
+        "Total",
+        "6.796.781",
+        "100,00%",
+        "",
+        "Total",
+        "6.716.656",
+        "100%"
+      ],
+      [
+        "",
+        "Nada",
+        "1.217.334",
+        "17,72%",
+        "",
+        "Nada",
+        "2.519.547",
+        "37,10%",
+        "",
+        "Nada",
+        "1.852.116",
+        "28%"
+      ],
+      [
+        "",
+        "Poco",
+        "3.019.894",
+        "43,96%",
+        "",
+        "Poco",
+        "2.409.730",
+        "35,50%",
+        "",
+        "Poco",
+        "2.701.098",
+        "40%"
+      ],
+      [
+        "",
+        "Normal",
+        "2.468.466",
+        "35,94%",
+        "",
+        "Normal",
+        "1.781.198",
+        "26,20%",
+        "",
+        "Normal",
+        "1.769.128",
+        "26%"
+      ],
+      ["", "Mucho", "163", "0,00%", "", "Mucho", "86.307", "1,30%", "", "Mucho", "394.314", "6%"],
+      [],
+      ["Pregunta Confianza Personal", "Por lo general usted confía en"],
+      ["", "Confianza en familiares, amigos, vecinos, demás"],
+      ["Subpregunta 1", "Los vecinos"],
+      [
+        "",
+        "Total",
+        "6.869.000",
+        "100,00%",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Total",
+        "6.716.656",
+        "100%",
+        "",
+        "Total",
+        "6.551.863",
+        "100%"
+      ],
+      [
+        "",
+        "Si",
+        "2.877.469",
+        "41,89%",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Si",
+        "1.829.070",
+        "27%",
+        "",
+        "si",
+        "3.590.396",
+        "55%"
+      ],
+      [
+        "",
+        "No",
+        "3.991.530",
+        "58,11%",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "No",
+        "3.969.159",
+        "59%",
+        "",
+        "no",
+        "2.961.467",
+        "45%"
+      ],
+      ["", "No Sabe", "", "", "", "", "", "", "", "No sabe", "918.427", "14%"],
+      [],
+      ["Subpregunta 2", "Los amigos"],
+      [
+        "",
+        "Total",
+        "6.869.000",
+        "100,00%",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Total",
+        "6.716.656",
+        "100%",
+        "",
+        "Total",
+        "6.551.863",
+        "100%"
+      ],
+      [
+        "",
+        "Si",
+        "3.617.803",
+        "52,67%",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Si",
+        "2.230.982",
+        "33%",
+        "",
+        "si",
+        "4.245.938",
+        "65%"
+      ],
+      [
+        "",
+        "No",
+        "3.251.196",
+        "47,33%",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "No",
+        "4.003.530",
+        "60%",
+        "",
+        "no",
+        "2.305.925",
+        "35%"
+      ],
+      ["", "", "", "", "", "", "", "", "", "No sabe", "482.143", "7%"],
+      ["Subpregunta 3", "Los parientes"],
+      [
+        "",
+        "Total",
+        "6.869.000",
+        "100,00%",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Total",
+        "6.716.656",
+        "100%",
+        "",
+        "Total",
+        "6.551.863",
+        "100%"
+      ],
+      [
+        "",
+        "Si",
+        "4.566.673",
+        "66,48%",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Si",
+        "3.248.233",
+        "48%",
+        "",
+        "si",
+        "5.127.767",
+        "78%"
+      ],
+      [
+        "",
+        "No",
+        "2.302.327",
+        "33,52%",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "No",
+        "2.971.761",
+        "44%",
+        "",
+        "no",
+        "1.424.096",
+        "22%"
+      ],
+      ["", "No sabe", "", "", "", "", "", "", "", "No sabe", "496.662", "7%"],
+      [],
+      ["Subpregunta 4", "Los demás habitantes de Bogotá"],
+      [
+        "",
+        "Total",
+        "6.869.000",
+        "100,00%",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Total",
+        "6.716.656",
+        "100%",
+        "",
+        "Total",
+        "6.551.863",
+        "100%"
+      ],
+      [
+        "",
+        "Si",
+        "1.911.635",
+        "27,83%",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Si",
+        "1.306.121",
+        "19%",
+        "",
+        "si",
+        "1.412.170",
+        "22%"
+      ],
+      [
+        "",
+        "No",
+        "4.957.365",
+        "72,17%",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "No",
+        "4.878.481",
+        "73%",
+        "",
+        "no",
+        "5.139.693",
+        "78%"
+      ],
+      ["", "", "", "", "", "", "", "", "", "No sabe", "532.054", "8%"],
+      [],
+      [
+        "Pregunta Orgullo propia",
+        "Dígame si usted se siente orgulloso de vivir en Bogotá",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Dígame ¿qué tan orgulloso  se siente de vivir en Bogotá?"
+      ],
+      ["", "Orgullo de vivir en la ciudad"],
+      [
+        "",
+        "Total",
+        "6.869.000",
+        "100,00%",
+        "",
+        "Total",
+        "6.796.781",
+        "100,00%",
+        "",
+        "Total",
+        "6.716.656",
+        "100%",
+        "",
+        "Total",
+        "6.551.863",
+        "100%"
+      ],
+      [
+        "",
+        "Si",
+        "4.723.735",
+        "68,77%",
+        "",
+        "Si",
+        "5.646.815",
+        "83,10%",
+        "",
+        "Si",
+        "3.532.271",
+        "53%",
+        "",
+        "nada orgulloso",
+        "182.311",
+        "3%"
+      ],
+      [
+        "",
+        "No",
+        "2.145.265",
+        "31,23%",
+        "",
+        "No",
+        "1.149.966",
+        "16,90%",
+        "",
+        "No",
+        "1.906.471",
+        "28%",
+        "",
+        "poco orgulloso",
+        "1.128.392",
+        "17%"
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "No sabe",
+        "1.277.914",
+        "19%",
+        "",
+        "orgulloso",
+        "3.623.399",
+        "55%"
+      ],
+      ["", "", "", "", "", "", "", "", "", "", "", "", "", "muy orgulloso", "1.617.761", "25%"],
+      [],
+      [
+        "Pregunta Orgullo de los demás",
+        "¿Usted cree que la mayoría de las personas habitantes de Bogotá se sienten orgullosas de la ciudad?",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "¿Usted cree que la mayoría de las personas habitantes de Bogotá se sienten orgullosas de la ciudad?"
+      ],
+      ["", "Orgullo que los demás sienten de vivir en la ciudad"],
+      [],
+      [
+        "",
+        "Total",
+        "6.869.000",
+        "100,00%",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Total",
+        "6.716.656",
+        "100%",
+        "",
+        "Total",
+        "6.551.863",
+        "100%"
+      ],
+      [
+        "",
+        "Si",
+        "4.978.724",
+        "72,48%",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Si",
+        "3.033.393",
+        "45%",
+        "",
+        "nada orgulloso",
+        "182.311",
+        "3%"
+      ],
+      [
+        "",
+        "No",
+        "1.890.276",
+        "27,52%",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "No",
+        "3.083.717",
+        "46%",
+        "",
+        "poco orgulloso",
+        "1.128.392",
+        "17%"
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "No sabe",
+        "599.546",
+        "9%",
+        "",
+        "orgulloso",
+        "3.623.399",
+        "55%"
+      ],
+      ["", "", "", "", "", "", "", "", "", "", "", "", "", "muy orgulloso", "1.617.761", "25%"]
+    ]
+  },
+  "contexto_mediciones": {
+    "encuesta": "Encuesta Bienal de Culturas (EBC)",
+    "periodicidad": "Cada dos años",
+    "serie_regular": [2021, 2023, 2025],
+    "medicion_especial": {
+      "year": 2024,
+      "proposito": "Seguimiento del indicador O+C (Legado Orgullo y Confianza)",
+      "alcance_en_el_informe": ["Confianza institucional", "Orgullo personal por vivir en Bogotá"]
+    },
+    "ausencia_2022": "2022 no corresponde a una aplicación regular de la EBC por su periodicidad bienal.",
+    "origen_contexto": "Contexto institucional proporcionado por el usuario."
+  }
+}
