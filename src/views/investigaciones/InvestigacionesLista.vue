@@ -32,7 +32,7 @@
         >
           <div class="card h-100 border-0 bg-transparent">
             <img
-              :src="`${baseUrl}content/investigaciones/thumbnails/${investigacion.id}.jpg`"
+              :src="`${thumbnailsBaseUrl}${investigacion.id}.jpg`"
               class="card-img-top rounded-4 mb-2 object-fit-cover"
               style="aspect-ratio: 16/9"
               :alt="investigacion.titulo"
@@ -61,6 +61,8 @@
 
 <script setup>
 import ListSearchInput from '../../components/tools/ListSearchInput.vue'
+
+const thumbnailsBaseUrl = 'https://vkbvmifeinhobmdqqvgo.supabase.co/storage/v1/object/public/general/investigaciones/'
 
 defineProps({
   investigaciones: {

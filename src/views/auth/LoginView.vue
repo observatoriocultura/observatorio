@@ -50,7 +50,7 @@ const isMagicLinkLogin = computed(() => route.meta.authMethod === 'magic-link')
               <div v-if="REGISTRATION_ENABLED" class="auth-footer">
                 <p class="text-muted mb-0">
                   ¿No tienes una cuenta?
-                  <RouterLink to="/register" class="auth-link fw-bold text-decoration-none">
+                  <RouterLink :to="{ name: 'register' }" class="auth-link fw-bold text-decoration-none">
                     Regístrate
                   </RouterLink>
                 </p>

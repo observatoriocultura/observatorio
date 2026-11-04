@@ -4,6 +4,7 @@ import { useRoute } from 'vue-router'
 import { useToast } from 'vue-toastification'
 import { hasSupabaseConfig, supabase } from '../../lib/supabase'
 import { getAuthCallbackUrl } from '../../lib/authCallback'
+import { getAuthEmailValidationError, normalizeAuthEmail } from '../../lib/authEmailPolicy'
 import '../../assets/styles/auth.css'
 
 const route = useRoute()
@@ -55,14 +56,6 @@ function setFeedback(type, message) {
   feedback.value = { type, message }
 }
 
-function getEmailValidationError(email) {
-  if (!email) return 'Ingresa tu correo electrónico para continuar.'
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    return 'Ingresa un correo electrónico válido.'
-  }
-  return ''
-}
-
 async function loadAuthenticatedUserEmail() {
   if (!supabase || !isFromProfile.value) return
 
@@ -93,8 +86,8 @@ async function handlePasswordRecovery() {
     return
   }
 
-  const email = form.value.email.trim().toLowerCase()
-  const validationError = getEmailValidationError(email)
+  const email = normalizeAuthEmail(form.value.email)
+  const validationError = getAuthEmailValidationError(email)
 
   if (validationError) {
     setFeedback('warning', validationError)

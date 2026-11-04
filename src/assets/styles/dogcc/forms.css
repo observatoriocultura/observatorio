@@ -1,5 +1,17 @@
 @import './colors.css';
 
+/* Enlaces de texto reutilizables en los módulos de la aplicación. */
+.pcrn-link {
+  color: var(--pcrn-link);
+  text-decoration: none;
+}
+
+.pcrn-link:hover,
+.pcrn-link:focus-visible {
+  color: var(--pcrn-link-hover);
+  text-decoration: underline;
+}
+
 /* Estilos de formularios de esta versión; pcrn identifica las clases reutilizables. */
 .pcrn-form .section-kicker {
   color: var(--pcrn-muted);

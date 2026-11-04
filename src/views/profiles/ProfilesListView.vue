@@ -22,13 +22,15 @@ async function fetchProfiles() {
   selectedIds.value = []
 
   try {
-    const { data, error } = await supabase
-      .from('profiles')
-      .select('*')
-      .order('updated_at', { ascending: false })
+    const [{ data, error }, { data: emails, error: emailsError }] = await Promise.all([
+      supabase.from('profiles').select('*').order('updated_at', { ascending: false }),
+      supabase.rpc('list_profile_emails'),
+    ])
 
     if (error) throw error
-    profiles.value = data
+    if (emailsError) throw emailsError
+    const emailById = new Map(emails.map(({ id, email }) => [id, email]))
+    profiles.value = data.map(profile => ({ ...profile, email: emailById.get(profile.id) }))
   } catch (err) {
     console.error('Error fetching profiles:', err)
     feedback.value = { type: 'danger', message: 'No se pudieron cargar los usuarios. Revisa tu conexión.' }
@@ -93,7 +95,10 @@ function getRoleBadge(role) {
 
 function formatDate(dateStr) {
   if (!dateStr) return '—'
-  return new Date(dateStr).toLocaleDateString('es-CO', { year: 'numeric', month: 'short', day: 'numeric' })
+  // Las fechas sin hora representan un día de calendario, no un instante UTC.
+  const date = new Date(/^\d{4}-\d{2}-\d{2}$/.test(dateStr) ? `${dateStr}T00:00:00` : dateStr)
+  if (Number.isNaN(date.getTime())) return '—'
+  return date.toLocaleDateString('es-CO', { year: 'numeric', month: 'short', day: 'numeric' })
 }
 
 onMounted(async () => {
@@ -184,8 +189,11 @@ onMounted(async () => {
                 >
               </td>
               <td>
-                <div class="fw-bold text-dark">{{ profile.full_name || '—' }}</div>
-                <small class="text-muted d-block text-truncate" style="max-width: 200px;">{{ profile.id }}</small>
+                <router-link
+                  :to="{ name: 'read-profile', params: { id: profile.id } }"
+                  class="fw-bold pcrn-link"
+                >{{ profile.full_name || 'Sin nombre registrado' }}</router-link>
+                <small class="text-muted d-block text-truncate" style="max-width: 200px;" :title="profile.email">{{ profile.email || 'Sin correo registrado' }}</small>
               </td>
               <td>
                 <span class="badge text-uppercase" :class="getRoleBadge(profile.role).class">

@@ -38,8 +38,8 @@
   --pcrn-danger: var(--pcrn-red-500);
 
   /* Enlaces y navegación */
-  --pcrn-link: #346fbd;
-  --pcrn-link-hover: #5e4293;
+  --pcrn-link: var(--pcrn-primary);
+  --pcrn-link-hover: var(--pcrn-primary-hover);
   --pcrn-nav-bg: var(--pcrn-bg);
   --pcrn-nav-text: #5e4293;
   --pcrn-nav-active-bg: var(--pcrn-bg);

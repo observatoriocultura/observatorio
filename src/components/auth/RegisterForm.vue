@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useToast } from 'vue-toastification'
 import { hasSupabaseConfig, supabase } from '../../lib/supabase'
+import { getAuthEmailValidationError, normalizeAuthEmail } from '../../lib/authEmailPolicy'
 
 const router = useRouter()
 const toast = useToast()
@@ -36,11 +37,18 @@ async function handleRegister() {
     return
   }
 
-  if (!form.value.email || !form.value.password) {
+  const email = normalizeAuthEmail(form.value.email)
+  if (!email || !form.value.password) {
     feedback.value = {
       type: 'warning',
       message: 'Completa el correo y la contraseña para continuar.',
     }
+    return
+  }
+
+  const emailError = getAuthEmailValidationError(email)
+  if (emailError) {
+    feedback.value = { type: 'warning', message: emailError }
     return
   }
 
@@ -64,7 +72,7 @@ async function handleRegister() {
 
   try {
     const { data, error } = await supabase.auth.signUp({
-      email: form.value.email,
+      email,
       password: form.value.password,
     })
 

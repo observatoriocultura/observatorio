@@ -57,3 +57,27 @@ El sitio quedara disponible en `https://observatoriocultura.github.io/observator
 ```sh
 npm run lint
 ```
+
+## Dominios de correo permitidos en autenticación
+
+La lista se edita en `supabase/config/registration-policy.json`, en `allowedEmailDomains`.
+Escribe dominios completos sin `@`, por ejemplo `gmail.com`. La comparación es exacta:
+autorizar `scrd.gov.co` no autoriza sus subdominios ni dominios con un sufijo adicional.
+
+`src/lib/authEmailPolicy.js` comparte esta configuración entre los formularios de registro,
+ingreso con contraseña, Magic Link, recuperación de contraseña e invitación administrativa.
+En producción, los cambios del JSON requieren compilar y publicar de nuevo la aplicación.
+
+Esta validación del navegador no restringe las llamadas directas a Supabase. Para completar
+la restricción de registro se debe configurar el hook **Before User Created** en Supabase Auth
+y sincronizar su lista de dominios con este JSON al desplegar. El hook aún no está configurado
+por estos cambios. Para restringir también cuentas existentes y cambios de correo se necesitan
+controles de servidor adicionales; el hook solo controla la creación de usuarios.
+
+Referencia: https://supabase.com/docs/guides/auth/auth-hooks/before-user-created-hook
+
+Pruebas de la política de correo:
+
+```sh
+node --test tests/auth-email-policy.test.js
+```

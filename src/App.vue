@@ -10,9 +10,12 @@
     />
 
     <main class="main-content" :class="{ 'sidebar-collapsed': isCollapsed }">
-      <router-view v-slot="{ Component }">
+      <router-view v-slot="{ Component, route }">
         <transition name="page-fade" mode="out-in">
-          <component :is="Component" />
+          <!-- Algunas vistas tienen varias raíces; la transición requiere un elemento HTML. -->
+          <div v-if="Component" :key="route.matched[0]?.path || route.path" class="route-page">
+            <component :is="Component" />
+          </div>
         </transition>
       </router-view>
     </main>

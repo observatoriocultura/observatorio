@@ -15,6 +15,11 @@ const props = defineProps({
 
 const menuItems = computed(() => [
   {
+    label: 'Ver perfil',
+    to: `/profiles/read/${props.profileId}`,
+    icon: 'bi bi-person',
+  },
+  {
     label: 'Editar',
     to: `/profiles/edit/${props.profileId}`,
     icon: 'bi bi-pencil',

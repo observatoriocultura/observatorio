@@ -217,7 +217,7 @@ const PUBLIC_ITEMS = [
   ...(REGISTRATION_ENABLED
     ? [
         {
-          path: '/register',
+          path: '/signin',
           label: 'Registrarse',
           icon: 'bi-person-plus',
         },

@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import { useToast } from 'vue-toastification'
 import { hasSupabaseConfig, supabase } from '../../lib/supabase'
 import { getAuthCallbackUrl } from '../../lib/authCallback'
+import { getAuthEmailValidationError, normalizeAuthEmail } from '../../lib/authEmailPolicy'
 
 const toast = useToast()
 
@@ -25,6 +26,14 @@ function getMagicLinkErrorMessage(error) {
   const message = String(error?.message || '').trim()
   const normalizedMessage = message.toLowerCase()
 
+  if (error?.code === 'over_email_send_rate_limit' || normalizedMessage.includes('email rate limit exceeded')) {
+    return 'Se alcanzó el límite de envío de correos de acceso. Inténtalo más tarde o ingresa con tu contraseña si ya tienes una configurada.'
+  }
+
+  if (error?.code === 'over_request_rate_limit') {
+    return 'Se han realizado demasiadas solicitudes de acceso. Espera unos minutos antes de intentarlo de nuevo.'
+  }
+
   if (error?.code === 'otp_disabled' || normalizedMessage.includes('signups not allowed for otp')) {
     return 'No existe un usuario registrado con este correo electrónico. Verifica la dirección o solicita la creación de una cuenta.'
   }
@@ -33,6 +42,7 @@ function getMagicLinkErrorMessage(error) {
 }
 
 async function handleLogin() {
+  if (isSubmitting.value) return
   feedback.value = { type: '', message: '' }
 
   if (!supabase) {
@@ -43,12 +53,13 @@ async function handleLogin() {
     return
   }
 
-  const email = form.value.email.trim().toLowerCase()
+  const email = normalizeAuthEmail(form.value.email)
+  const emailError = getAuthEmailValidationError(email)
 
-  if (!email) {
+  if (emailError) {
     feedback.value = {
       type: 'warning',
-      message: 'Completa el correo electronico para continuar.',
+      message: emailError,
     }
     return
   }
@@ -70,9 +81,9 @@ async function handleLogin() {
 
     feedback.value = {
       type: 'success',
-      message: 'Te enviamos un magic link. Revisa tu correo para iniciar sesion.',
+      message: 'Revisa tu correo para continuar con el acceso. Si tu cuenta aún no está confirmada, recibirás primero un enlace de confirmación.',
     }
-    toast.success('Magic link enviado. Revisa tu correo para iniciar sesion.')
+    toast.success('Enlace enviado. Revisa tu correo para continuar.')
 
     form.value.email = ''
   } catch (error) {
@@ -92,6 +103,10 @@ async function handleLogin() {
       <h2 class="auth-title h3 fw-bold">Acceso por enlace</h2>
       <p class="auth-subtitle">
         Te enviaremos un enlace de acceso seguro a tu correo.
+      </p>
+      <p class="small text-muted">
+        Si es tu primer acceso, el correo puede pedirte confirmar la cuenta.
+        Abre el enlace en el mismo navegador desde el que lo solicitaste.
       </p>
     </div>
 

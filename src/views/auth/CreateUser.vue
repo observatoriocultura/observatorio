@@ -4,6 +4,7 @@ import { useRouter } from 'vue-router'
 import { useToast } from 'vue-toastification'
 import { getInvitationRedirectUrl } from '../../lib/authCallback'
 import { hasSupabaseConfig, supabase } from '../../lib/supabase'
+import { getAuthEmailValidationError, normalizeAuthEmail } from '../../lib/authEmailPolicy'
 import { PROFILE_ROLES, PROFILE_ROLE_KEYS, PROFILE_ROLE_VALUES } from '../../constants/catalogs'
 
 const router = useRouter()
@@ -25,10 +26,12 @@ const canSubmit = computed(
 )
 
 function validateForm() {
-  const email = form.value.email.trim().toLowerCase()
+  const email = normalizeAuthEmail(form.value.email)
   const displayName = form.value.display_name.trim()
 
   if (!email || !displayName) return 'Completa todos los campos para continuar.'
+  const emailError = getAuthEmailValidationError(email)
+  if (emailError) return emailError
   if (displayName.length > 120) return 'El nombre no puede superar los 120 caracteres.'
   if (!PROFILE_ROLE_VALUES.includes(form.value.role)) return 'Selecciona un rol válido.'
 
@@ -57,7 +60,7 @@ async function handleSubmit() {
   try {
     const { data, error } = await supabase.functions.invoke('invite-user', {
       body: {
-        email: form.value.email.trim().toLowerCase(),
+        email: normalizeAuthEmail(form.value.email),
         display_name: form.value.display_name.trim(),
         role: form.value.role,
         redirect_to: getInvitationRedirectUrl(),

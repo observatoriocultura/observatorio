@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import { useToast } from 'vue-toastification'
 import { hasSupabaseConfig, supabase } from '../../lib/supabase'
 import { getAuthCallbackUrl } from '../../lib/authCallback'
+import { getAuthEmailValidationError, normalizeAuthEmail } from '../../lib/authEmailPolicy'
 
 const toast = useToast()
 
@@ -34,13 +35,19 @@ async function handleRegister() {
   }
 
   const name = form.value.name.trim()
-  const email = form.value.email.trim().toLowerCase()
+  const email = normalizeAuthEmail(form.value.email)
 
   if (!name || !email) {
     feedback.value = {
       type: 'warning',
       message: 'Completa tu nombre y correo electronico para continuar.',
     }
+    return
+  }
+
+  const emailError = getAuthEmailValidationError(email)
+  if (emailError) {
+    feedback.value = { type: 'warning', message: emailError }
     return
   }
 

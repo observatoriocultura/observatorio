@@ -35,6 +35,7 @@ import ProfileView from '../views/profile/ProfileView.vue'
 import ProfilesView from '../views/profiles/ProfilesView.vue'
 import ProfilesListView from '../views/profiles/ProfilesListView.vue'
 import EditProfileView from '../views/profiles/EditProfileView.vue'
+import ReadProfileView from '../views/profiles/ReadProfileView.vue'
 import FilesListView from '../views/files/FilesListView.vue'
 import FilesCreateView from '../views/files/FilesCreateView.vue'
 import FilesEditView from '../views/files/FilesEditView.vue'
@@ -222,7 +223,8 @@ const routes = [
     meta: { title: 'Validando acceso', isPublic: true, isAuthCallback: true },
   },
   {
-    path: '/register',
+    path: '/signin',
+    alias: '/register',
     name: 'register',
     component: RegisterView,
     meta: { title: 'Registrarse', isPublic: true },
@@ -266,6 +268,16 @@ const routes = [
         component: CreateUser,
         meta: {
           title: 'Crear usuario',
+          requiresAuth: true,
+          requiresAdmin: true,
+        },
+      },
+      {
+        path: 'read/:id',
+        name: 'read-profile',
+        component: ReadProfileView,
+        meta: {
+          title: 'Perfil de usuario',
           requiresAuth: true,
           requiresAdmin: true,
         },

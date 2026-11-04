@@ -1,1 +1,1 @@
-export const REGISTRATION_ENABLED = false
+export const REGISTRATION_ENABLED = true
