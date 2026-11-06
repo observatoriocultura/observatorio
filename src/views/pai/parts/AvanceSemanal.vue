@@ -503,7 +503,7 @@ const renderTimelineChart = async () => {
         dataLabels: {
           enabled: true,
           allowOverlap: true,
-          format: '{point.y:.1f}%',
+          format: '{point.y:.0f}',
           style: {
             color: '#212529',
             fontSize: '11px',

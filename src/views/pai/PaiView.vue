@@ -132,7 +132,7 @@ const cargarInvestigaciones = async () => {
   const { data, error } = await supabase
     .from('gio_investigaciones')
     .select(
-      'id, nombre_clave, titulo, tema, descripcion, linea_investigacion, year_vigencia, entidad, dependencia, palabras_clave, avance, avance_planeacion, avance_instrumentos, avance_recoleccion, avance_documentacion, avance_finalizacion, cantidad_productos, cantidad_hallazgos, cantidad_radicados, cantidad_paginas',
+      'id, nombre_clave, titulo, tema, descripcion, linea_investigacion, year_vigencia, entidad, dependencia, palabras_clave, estado, radicado_socializacion, avance, avance_planeacion, avance_instrumentos, avance_recoleccion, avance_documentacion, avance_finalizacion, cantidad_productos, cantidad_hallazgos, cantidad_radicados, cantidad_paginas',
     )
     .filter('year_vigencia', 'eq', String(year.value))
     .order('id', { ascending: true })

@@ -1,3 +1,5 @@
+export { ESTADOS_INVESTIGACION, ESTADOS_INVESTIGACION_KEYS } from '../constants_pai.js'
+
 // Catálogo de entidades del PAI. Las vistas filtran por sigla y ordenan con orden.
 export const ENTIDADES = [
   {

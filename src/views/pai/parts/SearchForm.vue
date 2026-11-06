@@ -9,7 +9,7 @@
     <p class="pai-list-filter-counter" aria-live="polite">
       <span>{{ resultCount }}</span> de {{ totalCount }} mediciones
     </p>
-    <div class="pai-list-filters">
+    <div class="pai-list-filters" :class="{ 'pai-list-filters-con-estado': showEstadoFilter }">
       <select
         :value="selectedLinea"
         class="pai-list-filter"
@@ -34,6 +34,19 @@
           {{ item.nombre }}
         </option>
       </select>
+      <select
+        v-if="showEstadoFilter"
+        :value="selectedEstado"
+        class="pai-list-filter"
+        :class="{ 'filter-active': selectedEstado }"
+        aria-label="Filtrar investigaciones por estado"
+        @change="emit('update:selectedEstado', $event.target.value)"
+      >
+        <option value="">Todos los estados</option>
+        <option v-for="item in ESTADOS_INVESTIGACION" :key="item.key" :value="item.key">
+          {{ item.label }}
+        </option>
+      </select>
       <button
         v-if="hasActiveFilters"
         type="button"
@@ -52,6 +65,7 @@
 import { computed } from 'vue'
 import ListSearchInput from '../../../components/tools/ListSearchInput.vue'
 import { ENTIDADES } from '../../../constants/catalogs'
+import { ESTADOS_INVESTIGACION } from '../../../constants/constants_pai'
 import { lineasInvestigacion } from '../constants'
 
 const props = defineProps({
@@ -67,6 +81,14 @@ const props = defineProps({
     type: String,
     default: '',
   },
+  selectedEstado: {
+    type: String,
+    default: '',
+  },
+  showEstadoFilter: {
+    type: Boolean,
+    default: false,
+  },
   resultCount: {
     type: Number,
     default: 0,
@@ -81,16 +103,22 @@ const emit = defineEmits([
   'update:searchTerm',
   'update:selectedLinea',
   'update:selectedEntidad',
+  'update:selectedEstado',
 ])
 
 const hasActiveFilters = computed(
-  () => props.searchTerm !== '' || props.selectedLinea !== '' || props.selectedEntidad !== '',
+  () =>
+    props.searchTerm !== '' ||
+    props.selectedLinea !== '' ||
+    props.selectedEntidad !== '' ||
+    props.selectedEstado !== '',
 )
 
 const clearFilters = () => {
   emit('update:searchTerm', '')
   emit('update:selectedLinea', '')
   emit('update:selectedEntidad', '')
+  emit('update:selectedEstado', '')
 }
 </script>
 
@@ -175,6 +203,10 @@ const clearFilters = () => {
 @media (min-width: 576px) {
   .pai-list-filters {
     grid-template-columns: repeat(2, minmax(0, 1fr)) auto;
+  }
+
+  .pai-list-filters-con-estado {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
   }
 }
 

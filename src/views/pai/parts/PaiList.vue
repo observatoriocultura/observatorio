@@ -4,6 +4,8 @@
       v-model:search-term="searchTerm"
       v-model:selected-linea="selectedLinea"
       v-model:selected-entidad="selectedEntidad"
+      v-model:selected-estado="selectedEstado"
+      show-estado-filter
       :result-count="investigacionesFiltradas.length"
       :total-count="props.investigaciones.length"
     />
@@ -41,6 +43,33 @@
           </p>
           <h3 class="h5 mb-2">{{ investigacion.nombre_clave }}</h3>
           <p>{{ investigacion.titulo }}</p>
+          <dl class="investigacion-datos">
+            <div v-for="dato in datosInvestigacion" :key="dato.key">
+              <dt>{{ dato.label }}</dt>
+              <dd class="investigacion-valor">
+                <span
+                  :class="
+                    dato.key === 'estado' && formatDato(investigacion.estado)
+                      ? ['label', getEstadoClass(investigacion.estado)]
+                      : null
+                  "
+                >{{ formatDato(investigacion[dato.key]) || 'Sin registrar' }}</span>
+                <i
+                  class="bi investigacion-cumplimiento"
+                  :class="
+                    dato.cumple(investigacion[dato.key])
+                      ? 'bi-check-circle-fill text-success'
+                      : 'bi-circle text-danger'
+                  "
+                  :title="dato.description"
+                  aria-hidden="true"
+                ></i>
+                <span class="visually-hidden">
+                  {{ dato.cumple(investigacion[dato.key]) ? 'Cumplido' : 'Pendiente' }}
+                </span>
+              </dd>
+            </div>
+          </dl>
           <div class="investigacion-metricas" aria-label="Indicadores numericos">
             <div
               v-for="indicador in indicadoresNumericos"
@@ -48,7 +77,24 @@
               class="investigacion-metrica"
             >
               <span>{{ indicador.label }}</span>
-              <strong>{{ formatIndicador(investigacion[indicador.key], indicador.type) }}</strong>
+              <div class="investigacion-valor">
+                <strong>{{ formatIndicador(investigacion[indicador.key], indicador.type) }}</strong>
+                <template v-if="indicador.cumple">
+                  <i
+                    class="bi investigacion-cumplimiento"
+                    :class="
+                      indicador.cumple(investigacion[indicador.key])
+                        ? 'bi-check-circle-fill text-success'
+                        : 'bi-circle text-danger'
+                    "
+                    :title="indicador.description"
+                    aria-hidden="true"
+                  ></i>
+                  <span class="visually-hidden">
+                    {{ indicador.cumple(investigacion[indicador.key]) ? 'Cumplido' : 'Pendiente' }}
+                  </span>
+                </template>
+              </div>
             </div>
           </div>
         </RouterLink>
@@ -114,6 +160,7 @@ const currentInvestigacionId = ref(null)
 const searchTerm = ref('')
 const selectedLinea = ref('')
 const selectedEntidad = ref('')
+const selectedEstado = ref('')
 const validSections = ['list', 'details']
 const normalizeSection = (section) => (validSections.includes(section) ? section : null)
 const requestedInvestigacionId = computed(
@@ -146,14 +193,16 @@ const investigacionesFiltradas = computed(() => {
   const search = normalizeSearchText(searchTerm.value)
   const linea = normalizeSearchText(selectedLinea.value)
   const entidad = normalizeSearchText(selectedEntidad.value)
-  if (!search && !linea && !entidad) return props.investigaciones
+  const estado = normalizeSearchText(selectedEstado.value).trim()
+  if (!search && !linea && !entidad && !estado) return props.investigaciones
 
   return props.investigaciones.filter((investigacion) => {
     const matchesLinea =
       !linea || normalizeSearchText(investigacion.linea_investigacion) === linea
     const matchesEntidad = !entidad || normalizeSearchText(getInvestigacionEntidad(investigacion)) === entidad
+    const matchesEstado = !estado || normalizeSearchText(investigacion.estado).trim() === estado
 
-    if (!matchesLinea || !matchesEntidad) return false
+    if (!matchesLinea || !matchesEntidad || !matchesEstado) return false
     if (!search) return true
 
     const searchableText = [
@@ -260,6 +309,10 @@ watch(selectedEntidad, () => {
   setCurrentSection('list')
 })
 
+watch(selectedEstado, () => {
+  setCurrentSection('list')
+})
+
 const getLineaClass = (linea) => `bg-${toClassName(linea)}`
 const getEntidadClass = (entidad) => `bg-${toClassName(entidad)}`
 const getAvanceValue = (value) => {
@@ -268,12 +321,42 @@ const getAvanceValue = (value) => {
   return Math.min(Math.max(Math.round(avance), 0), 100)
 }
 const formatAvance = (value) => `${getAvanceValue(value)}%`
+const formatDato = (value) => String(value ?? '').trim()
+const getEstadoClass = (estado) => `estado-investigacion-${toClassName(formatDato(estado))}`
+const datosInvestigacion = [
+  {
+    key: 'estado',
+    label: 'Estado',
+    description: 'Requiere el estado 5 Finalizada.',
+    cumple: (value) => formatDato(value) === '5 Finalizada',
+  },
+  {
+    key: 'radicado_socializacion',
+    label: 'Radicado socialización',
+    description: 'Requiere un radicado de socialización registrado.',
+    cumple: (value) => formatDato(value).length > 0,
+  },
+]
 const indicadoresNumericos = [
-  { key: 'avance', label: 'Avance', type: 'percent' },
-  { key: 'cantidad_productos', label: 'Productos' },
-  { key: 'cantidad_paginas', label: 'Páginas' },
-  { key: 'cantidad_hallazgos', label: 'Hallazgos' },
-  { key: 'cantidad_radicados', label: 'Radicados' },
+  {
+    key: 'avance',
+    label: 'Avance',
+    type: 'percent',
+    description: 'Requiere un avance del 100%.',
+    cumple: (value) => Number(value) === 100,
+  },
+  {
+    key: 'cantidad_productos',
+    label: 'Productos',
+    description: 'Requiere al menos un producto.',
+    cumple: (value) => Number.isFinite(Number(value)) && Number(value) >= 1,
+  },
+  {
+    key: 'cantidad_hallazgos',
+    label: 'Hallazgos',
+    description: 'Requiere al menos un hallazgo.',
+    cumple: (value) => Number.isFinite(Number(value)) && Number(value) >= 1,
+  },
 ]
 const formatNumber = (value) => {
   const number = Number(value)
@@ -363,10 +446,31 @@ const formatIndicador = (value, type) => (type === 'percent' ? formatAvance(valu
 
 .investigacion-metricas {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.35rem;
   margin-top: auto;
   padding-top: 0.75rem;
+}
+
+.investigacion-datos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin: 0 0 0.25rem;
+}
+
+.investigacion-datos dt {
+  color: #6c757d;
+  font-size: 0.65rem;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.investigacion-datos dd {
+  margin: 0.2rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
 }
 
 .investigacion-metrica {
@@ -378,7 +482,7 @@ const formatIndicador = (value, type) => (type === 'percent' ? formatAvance(valu
   padding-top: 0.35rem;
 }
 
-.investigacion-metrica span {
+.investigacion-metrica > span {
   color: #6c757d;
   font-size: 0.62rem;
   font-weight: 700;
@@ -391,6 +495,20 @@ const formatIndicador = (value, type) => (type === 'percent' ? formatAvance(valu
   color: #212529;
   font-size: 0.86rem;
   line-height: 1.1;
+}
+
+.investigacion-valor {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.investigacion-cumplimiento {
+  flex-shrink: 0;
+  color: #6c757d;
+  font-size: 0.75rem;
+  line-height: 1;
 }
 
 @media (min-width: 576px) {

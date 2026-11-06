@@ -6,7 +6,7 @@ los catálogos y helpers desde `src/constants/catalogs`.
 
 - `posts.js`: tipo y visibilidad de publicaciones.
 - `profiles.js`: roles y géneros de perfiles.
-- `pai.js`: entidades con los metadatos que requiere el módulo PAI.
+- `pai.js`: entidades y estados de investigación con los metadatos que requiere el módulo PAI.
 - `rigcc.js`: países, ciudades y tipos de detalle para el demo Red de Observatorios.
 - `index.js`: punto único de exportación.
 
@@ -29,6 +29,12 @@ temporal solo después de verificar el resultado.
 
 `pai.js` conserva los metadatos de `ENTIDADES` (`orden`, `sigla`, `sector` y `color`)
 porque el filtro usa `sigla` como valor.
+
+Los estados se definen en `src/constants/constants_pai.js` y se reexportan desde
+`pai.js`. `ESTADOS_INVESTIGACION` incluye `key`, `label`, `orden`, `className`,
+`color` y `textColor`; las clases y colores corresponden a `src/assets/styles/pai.css`.
+`ESTADOS_INVESTIGACION_KEYS` conserva los valores completos con número y texto,
+como `5 Finalizada`, para las comparaciones de estado.
 
 ## Países y ciudades del demo RIGCC
 

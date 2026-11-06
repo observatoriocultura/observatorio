@@ -21,6 +21,42 @@
   background-color: #d9ead3;
 }
 
+/* Estados de investigación */
+.estado-investigacion-1-sin-iniciar {
+  background-color: #ffcfc9;
+  color: #b10202;
+}
+
+.estado-investigacion-2-en-ejecucion {
+  background-color: #bfe1f6;
+  color: #0a53a8;
+}
+
+.estado-investigacion-3-en-pausa {
+  background-color: #ffe5a0;
+  color: #473821;
+}
+
+.estado-investigacion-4-entregada {
+  background-color: #e6cff2;
+  color: #653596;
+}
+
+.estado-investigacion-5-finalizada {
+  background-color: #d4edbc;
+  color: #11734b;
+}
+
+.estado-investigacion-6-no-aplica {
+  background-color: #e6e6e6;
+  color: #5a5a5a;
+}
+
+.estado-investigacion-9-cancelada {
+  background-color: #3d3d3d;
+  color: #ffffff;
+}
+
 /**
 * Estilos para la sección de productos del PAI
 * Iconos de tipos de productos, colores
