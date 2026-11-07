@@ -2,9 +2,11 @@
 import { computed, onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { fetchGoogleSheetCsv } from '../../../utils/googleSheets'
+import AvisosResiduosBarrios from './AvisosResiduosBarrios.vue'
 import AvisosResiduosDataviz from './AvisosResiduosDataviz.vue'
 import AvisosResiduosMenu from './AvisosResiduosMenu.vue'
 import AvisosResiduosTablas from './AvisosResiduosTablas.vue'
+import { summarizeAvisosByBarrio } from './avisosResiduos.js'
 
 const SHEET_FILE_ID = '12EEkpPWrmgc7V-x69DpasVG78rojksTu8J_dUotTEjY'
 const route = useRoute()
@@ -35,10 +37,11 @@ const dateTo = ref('')
 
 const currentTab = computed(() => {
   const tab = route.query.tab
-  return ['calendario', 'tablas'].includes(tab) ? tab : 'calendario'
+  return ['calendario', 'tablas'].includes(tab) ? tab : 'barrios'
 })
 
 const avisosDataset = computed(() => datasets.value.find((dataset) => dataset.id === 'avisos'))
+const barriosDataset = computed(() => datasets.value.find((dataset) => dataset.id === 'barrios'))
 
 const sheetDateToIso = (value) => {
   const match = String(value ?? '')
@@ -78,6 +81,10 @@ const filteredAvisos = computed(() => {
     )
   })
 })
+
+const indicadoresPorBarrio = computed(() =>
+  summarizeAvisosByBarrio(filteredAvisos.value, barriosDataset.value.rows),
+)
 
 const dateFilterError = computed(() => {
   if (dateFrom.value && dateTo.value && dateFrom.value > dateTo.value) {
@@ -151,7 +158,7 @@ onMounted(loadDatasets)
 <template>
   <main class="avisos-view">
     <div class="page-shell">
-      <AvisosResiduosMenu />
+      <AvisosResiduosMenu :current-tab="currentTab" />
 
       <header class="page-header">
         <div class="page-header-copy">
@@ -163,17 +170,12 @@ onMounted(loadDatasets)
           </p>
         </div>
 
-        <form class="date-filter" @submit.prevent>
+        <form class="date-filter" aria-labelledby="avisos-date-filter-title" @submit.prevent>
           <div class="date-filter-heading">
-            <span>Filtrar por fechas</span>
-            <button
-              type="button"
-              class="date-filter-reset"
-              :disabled="avisosDataset.loading || !avisosDateBounds.min"
-              @click="resetDateFilter"
-            >
-              Restablecer
-            </button>
+            <span id="avisos-date-filter-title">Filtrar por fechas</span>
+            <p v-if="!dateFilterError && dateFrom && dateTo" class="date-filter-range">
+              {{ formatDateForInputLabel(dateFrom) }} – {{ formatDateForInputLabel(dateTo) }}
+            </p>
           </div>
           <div class="date-filter-fields">
             <label>
@@ -199,14 +201,27 @@ onMounted(loadDatasets)
               />
             </label>
           </div>
+          <button
+            type="button"
+            class="date-filter-reset"
+            :disabled="avisosDataset.loading || !avisosDateBounds.min"
+            @click="resetDateFilter"
+          >
+            Restablecer
+          </button>
           <p v-if="dateFilterError" class="date-filter-error" role="alert">
             {{ dateFilterError }}
           </p>
-          <p v-else-if="dateFrom && dateTo" class="date-filter-range">
-            {{ formatDateForInputLabel(dateFrom) }} – {{ formatDateForInputLabel(dateTo) }}
-          </p>
         </form>
       </header>
+
+      <AvisosResiduosBarrios
+        v-if="currentTab === 'barrios'"
+        :rows="indicadoresPorBarrio"
+        :loading="avisosDataset.loading || barriosDataset.loading"
+        :error="avisosDataset.error || barriosDataset.error"
+        @retry="loadDatasets"
+      />
 
       <AvisosResiduosDataviz
         v-show="currentTab === 'calendario'"
@@ -230,7 +245,7 @@ onMounted(loadDatasets)
   min-height: 100vh;
   min-width: 0;
   overflow-x: hidden;
-  padding: 3.5rem 1.5rem;
+  padding: 1.25rem 1.5rem 2rem;
   color: #18201c;
   background:
     radial-gradient(circle at top right, rgba(91, 157, 112, 0.16), transparent 30rem),
@@ -245,18 +260,21 @@ onMounted(loadDatasets)
 
 .page-header {
   display: flex;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
-  gap: 2.5rem;
-  margin-bottom: 2.5rem;
+  gap: 0.85rem 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .page-header-copy {
-  max-width: 760px;
+  min-width: 0;
+  max-width: 44rem;
+  flex: 1 1 19rem;
 }
 
 .eyebrow {
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.35rem;
   color: #317449;
   font-size: 0.78rem;
   font-weight: 800;
@@ -265,24 +283,29 @@ onMounted(loadDatasets)
 }
 
 h1 {
-  margin: 0 0 1rem;
-  font-size: clamp(2.25rem, 5vw, 4rem);
+  margin: 0 0 0.4rem;
+  font-size: clamp(1.75rem, 3.2vw, 2.75rem);
   font-weight: 850;
-  line-height: 1.05;
+  line-height: 1.1;
   letter-spacing: -0.04em;
 }
 
 .lead {
   margin: 0;
   color: #607068;
-  font-size: 1.08rem;
-  line-height: 1.65;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .date-filter {
-  width: min(100%, 340px);
-  flex: 0 0 340px;
-  padding: 1rem;
+  display: flex;
+  min-width: 0;
+  max-width: 100%;
+  flex: 0 1 35rem;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem 0.65rem;
+  padding: 0.6rem 0.75rem;
   border: 1px solid #d8e2da;
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.82);
@@ -290,18 +313,16 @@ h1 {
 }
 
 .date-filter-heading {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  margin-bottom: 0.75rem;
   color: #33493b;
   font-size: 0.8rem;
   font-weight: 800;
 }
 
 .date-filter-reset {
-  padding: 0;
+  min-height: 2.25rem;
+  margin-left: auto;
+  padding: 0.3rem 0.45rem;
+  align-self: end;
   border: 0;
   color: #317449;
   background: transparent;
@@ -320,13 +341,15 @@ h1 {
 
 .date-filter-fields {
   display: grid;
+  min-width: 0;
+  flex: 1 1 15rem;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.65rem;
+  gap: 0.5rem;
 }
 
 .date-filter-fields label {
   display: grid;
-  gap: 0.3rem;
+  gap: 0.15rem;
   color: #6a7871;
   font-size: 0.68rem;
   font-weight: 750;
@@ -336,7 +359,8 @@ h1 {
 .date-filter-fields input {
   width: 100%;
   min-width: 0;
-  padding: 0.55rem 0.6rem;
+  min-height: 2.25rem;
+  padding: 0.35rem 0.5rem;
   border: 1px solid #cbd8cf;
   border-radius: 8px;
   color: #293a30;
@@ -359,42 +383,37 @@ h1 {
 
 .date-filter-range,
 .date-filter-error {
-  margin: 0.65rem 0 0;
+  margin: 0;
   font-size: 0.72rem;
 }
 
 .date-filter-range {
-  color: #738078;
+  color: #607068;
+  font-weight: 500;
 }
 
 .date-filter-error {
+  flex-basis: 100%;
   color: #a03636;
-}
-
-@media (max-width: 980px) {
-  .page-header {
-    flex-direction: column;
-  }
-
-  .page-header-copy,
-  .date-filter {
-    width: 100%;
-    max-width: none;
-  }
-
-  .date-filter {
-    flex-basis: auto;
-  }
 }
 
 @media (max-width: 767px) {
   .avisos-view {
-    padding: 2.25rem 1rem;
+    padding: 0.85rem 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .date-filter-heading {
+    display: flex;
+    flex: 1 0 100%;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.15rem 0.65rem;
   }
 
-  .page-header {
-    margin-bottom: 1.75rem;
+  .date-filter-fields {
+    flex-basis: 13rem;
   }
-
 }
 </style>

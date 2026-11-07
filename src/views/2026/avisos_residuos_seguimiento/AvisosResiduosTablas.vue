@@ -150,8 +150,8 @@ const requestRetry = () => emit('retry', activeDataset.value.id)
   display: flex;
   align-items: end;
   justify-content: space-between;
-  gap: 1.5rem;
-  margin-bottom: 1rem;
+  gap: 0.4rem 1.25rem;
+  margin-bottom: 0.75rem;
 }
 
 .section-kicker {
@@ -181,14 +181,14 @@ const requestRetry = () => emit('retry', activeDataset.value.id)
 .dataset-tabs {
   display: flex;
   gap: 0.65rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .dataset-tab {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
-  padding: 0.7rem 1rem;
+  padding: 0.5rem 0.85rem;
   border: 1px solid #d9e0dc;
   border-radius: 999px;
   color: #506058;
@@ -238,7 +238,7 @@ const requestRetry = () => emit('retry', activeDataset.value.id)
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1.4rem 1.5rem;
+  padding: 1rem 1.25rem;
   border-bottom: 1px solid #e7ebe8;
 }
 
@@ -375,7 +375,7 @@ tbody tr:last-child td {
 
   .dataset-heading {
     align-items: flex-start;
-    padding: 1.15rem;
+    padding: 0.85rem 1rem;
   }
 }
 </style>

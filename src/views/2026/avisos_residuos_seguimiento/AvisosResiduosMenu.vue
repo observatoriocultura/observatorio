@@ -1,13 +1,16 @@
 <script setup>
-import { computed } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
 
-const route = useRoute()
-
-const currentTab = computed(() => {
-  const tab = route.query.tab
-  return ['calendario', 'tablas'].includes(tab) ? tab : 'calendario'
+defineProps({
+  currentTab: { type: String, required: true },
 })
+
+const route = useRoute()
+const tabs = [
+  { id: 'barrios', label: 'Barrios', icon: 'bi-geo-alt' },
+  { id: 'calendario', label: 'Calendario', icon: 'bi-calendar3' },
+  { id: 'tablas', label: 'Tablas', icon: 'bi-table' },
+]
 
 const getTabLocation = (tab) => ({
   path: route.path,
@@ -21,21 +24,15 @@ const getTabLocation = (tab) => ({
 <template>
   <nav class="avisos-residuos-nav" aria-label="Secciones de avisos de residuos">
     <RouterLink
-      :to="getTabLocation('calendario')"
+      v-for="tab in tabs"
+      :key="tab.id"
+      :to="getTabLocation(tab.id)"
       class="avisos-residuos-nav-tab"
-      :class="{ active: currentTab === 'calendario' }"
+      :class="{ active: currentTab === tab.id }"
+      :aria-current-value="currentTab === tab.id ? 'page' : 'false'"
     >
-      <i class="bi bi-calendar3" aria-hidden="true"></i>
-      Calendario
-    </RouterLink>
-
-    <RouterLink
-      :to="getTabLocation('tablas')"
-      class="avisos-residuos-nav-tab"
-      :class="{ active: currentTab === 'tablas' }"
-    >
-      <i class="bi bi-table" aria-hidden="true"></i>
-      Tablas
+      <i class="bi" :class="tab.icon" aria-hidden="true"></i>
+      {{ tab.label }}
     </RouterLink>
   </nav>
 </template>
@@ -46,7 +43,7 @@ const getTabLocation = (tab) => ({
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.25rem;
-  padding: 0.3rem 0 0.8rem;
+  padding: 0 0 0.65rem;
 }
 
 .avisos-residuos-nav-tab {
@@ -82,7 +79,7 @@ const getTabLocation = (tab) => ({
 
 @media (max-width: 600px) {
   .avisos-residuos-nav-tab {
-    padding: 0.6rem 0.8rem;
+    padding: 0.5rem 0.8rem;
     font-size: 0.85rem;
   }
 }

@@ -1,5 +1,6 @@
 <script setup>
 import { computed, nextTick, ref, watch } from 'vue'
+import { normalizeAvisoState } from './avisosResiduos.js'
 
 const props = defineProps({
   avisos: {
@@ -66,38 +67,6 @@ const parseSheetDate = (value) => {
 
 const timestampToIso = (timestamp) => new Date(timestamp).toISOString().slice(0, 10)
 
-const normalizeState = (value) => {
-  const original = String(value ?? '').trim()
-  const normalized = original
-    .toLocaleLowerCase('es-CO')
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-
-  if (normalized === 'si') {
-    return { key: 'yes', value: 2, label: 'Sí se realizó', shortLabel: 'Sí' }
-  }
-
-  if (normalized === 'no') {
-    return { key: 'no', value: 1, label: 'No se realizó', shortLabel: 'No' }
-  }
-
-  if (!normalized || /^[-–—]$/.test(original)) {
-    return {
-      key: 'not-expected',
-      value: 0,
-      label: 'No se esperaba aviso',
-      shortLabel: 'No programado',
-    }
-  }
-
-  return {
-    key: 'missing',
-    value: null,
-    label: 'Estado sin información válida',
-    shortLabel: 'Sin información',
-  }
-}
-
 const normalizedAvisos = computed(() =>
   props.avisos
     .map((aviso) => {
@@ -111,7 +80,7 @@ const normalizedAvisos = computed(() =>
         barrio,
         timestamp,
         dateIso: timestampToIso(timestamp),
-        state: normalizeState(aviso.estado_aviso),
+        state: normalizeAvisoState(aviso.estado_aviso),
       }
     })
     .filter(Boolean),
@@ -478,8 +447,8 @@ watch(
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  gap: 2rem;
-  padding: 1.5rem;
+  gap: 0.85rem 1.25rem;
+  padding: 1.05rem 1.25rem;
   border-bottom: 1px solid #e7ebe8;
 }
 
@@ -540,7 +509,7 @@ watch(
 
 .matrix-region {
   min-width: 0;
-  padding-top: 0.9rem;
+  padding-top: 0.65rem;
 }
 
 .matrix-scroll {
@@ -873,7 +842,7 @@ watch(
 
 @media (max-width: 600px) {
   .dataviz-header {
-    padding: 1.15rem;
+    padding: 0.9rem 1rem;
   }
 
   .metrics {
