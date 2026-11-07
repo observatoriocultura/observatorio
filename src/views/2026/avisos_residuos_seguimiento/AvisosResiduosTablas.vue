@@ -25,7 +25,10 @@ const emptyDataset = {
 }
 
 const activeDataset = computed(
-  () => props.datasets.find((dataset) => dataset.id === activeDatasetId.value) ?? props.datasets[0] ?? emptyDataset,
+  () =>
+    props.datasets.find((dataset) => dataset.id === activeDatasetId.value) ??
+    props.datasets[0] ??
+    emptyDataset,
 )
 
 const displayedRows = computed(() =>
@@ -53,65 +56,64 @@ const requestRetry = () => emit('retry', activeDataset.value.id)
 </script>
 
 <template>
-  <section class="tables-section" aria-labelledby="avisos-tablas-title">
-    <div class="tables-section-heading">
+  <section class="tables-section avisos-panel" aria-labelledby="avisos-tablas-title">
+    <header class="avisos-panel-header">
       <div>
-        <p class="section-kicker">Datos de origen</p>
-        <h2 id="avisos-tablas-title">Tablas de seguimiento</h2>
+        <h2 id="avisos-tablas-title" class="avisos-panel-title">Tablas de seguimiento</h2>
+        <p class="avisos-panel-description">
+          Consulta los registros de origen de avisos y barrios.
+        </p>
       </div>
-      <p class="tables-section-description">
-        Explora los registros utilizados para construir la visualización.
-      </p>
-    </div>
+      <nav class="dataset-tabs" aria-label="Tablas disponibles">
+        <button
+          v-for="dataset in datasets"
+          :key="dataset.id"
+          type="button"
+          class="dataset-tab avisos-button"
+          :class="{ 'dataset-tab--active': activeDatasetId === dataset.id }"
+          :aria-pressed="activeDatasetId === dataset.id"
+          @click="activeDatasetId = dataset.id"
+        >
+          <span>{{ dataset.title }}</span>
+          <span v-if="!dataset.loading && !dataset.error" class="row-count">
+            {{ dataset.id === 'avisos' ? filteredAvisos.length : dataset.rows.length }}
+          </span>
+        </button>
+      </nav>
+    </header>
 
-    <nav class="dataset-tabs" aria-label="Tablas disponibles">
-      <button
-        v-for="dataset in datasets"
-        :key="dataset.id"
-        type="button"
-        class="dataset-tab"
-        :class="{ 'dataset-tab--active': activeDatasetId === dataset.id }"
-        :aria-pressed="activeDatasetId === dataset.id"
-        @click="activeDatasetId = dataset.id"
-      >
-        <span>{{ dataset.title }}</span>
-        <span v-if="!dataset.loading && !dataset.error" class="row-count">
-          {{ dataset.id === 'avisos' ? filteredAvisos.length : dataset.rows.length }}
-        </span>
-      </button>
-    </nav>
-
-    <div class="dataset-card">
+    <div>
       <div class="dataset-heading">
         <div>
-          <h3>{{ activeDataset.title }}</h3>
-          <p>
-            {{ activeDataset.description }}
+          <h3 id="avisos-active-dataset-title">
+            {{ activeDataset.title }}
             <span v-if="!activeDataset.loading && !activeDataset.error" class="dataset-count">
-              {{ displayedRows.length }} registro{{ displayedRows.length === 1 ? '' : 's' }} visibles
+              {{ displayedRows.length }} registro{{ displayedRows.length === 1 ? '' : 's' }}
+              visibles
             </span>
-          </p>
+          </h3>
+          <p class="avisos-note">{{ activeDataset.description }}</p>
         </div>
         <button
           v-if="activeDataset.error"
           type="button"
-          class="retry-button"
+          class="avisos-button"
           @click="requestRetry"
         >
           Reintentar
         </button>
       </div>
 
-      <div v-if="activeDataset.loading" class="state-message" role="status">
+      <div v-if="activeDataset.loading" class="avisos-state" role="status">
         <span class="spinner" aria-hidden="true"></span>
         Cargando {{ activeDataset.title.toLocaleLowerCase('es-CO') }}…
       </div>
 
-      <div v-else-if="activeDataset.error" class="state-message state-message--error" role="alert">
+      <div v-else-if="activeDataset.error" class="avisos-state" role="alert">
         {{ activeDataset.error }}
       </div>
 
-      <div v-else-if="displayedRows.length === 0" class="state-message">
+      <div v-else-if="displayedRows.length === 0" class="avisos-state">
         {{
           activeDataset.rows.length === 0
             ? 'Esta tabla no contiene registros.'
@@ -119,7 +121,13 @@ const requestRetry = () => emit('retry', activeDataset.value.id)
         }}
       </div>
 
-      <div v-else class="table-scroll">
+      <div
+        v-else
+        class="table-scroll avisos-scroll"
+        role="region"
+        aria-labelledby="avisos-active-dataset-title"
+        tabindex="0"
+      >
         <table>
           <thead>
             <tr>
@@ -142,95 +150,33 @@ const requestRetry = () => emit('retry', activeDataset.value.id)
 </template>
 
 <style scoped>
-.tables-section {
-  min-width: 0;
-}
-
-.tables-section-heading {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 0.4rem 1.25rem;
-  margin-bottom: 0.75rem;
-}
-
-.section-kicker {
-  margin: 0 0 0.35rem;
-  color: #317449;
-  font-size: 0.7rem;
-  font-weight: 800;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-}
-
-.tables-section h2 {
-  margin: 0;
-  color: #1e2923;
-  font-size: 1.35rem;
-  font-weight: 800;
-}
-
-.tables-section-description {
-  max-width: 28rem;
-  margin: 0;
-  color: #6a7871;
-  font-size: 0.9rem;
-  text-align: right;
-}
-
 .dataset-tabs {
   display: flex;
-  gap: 0.65rem;
-  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.4rem;
 }
 
 .dataset-tab {
   display: inline-flex;
   align-items: center;
-  gap: 0.65rem;
-  padding: 0.5rem 0.85rem;
-  border: 1px solid #d9e0dc;
-  border-radius: 999px;
-  color: #506058;
-  background: rgba(255, 255, 255, 0.7);
-  font-weight: 750;
-  transition:
-    color 160ms ease,
-    border-color 160ms ease,
-    background-color 160ms ease;
-}
-
-.dataset-tab:hover {
-  border-color: #8dac98;
-  color: #225e37;
+  gap: 0.4rem;
+  color: var(--avisos-muted);
 }
 
 .dataset-tab--active {
-  border-color: #276a3e;
-  color: #fff;
-  background: #276a3e;
+  border-color: #b8d4bf;
+  color: var(--avisos-green-text);
+  background: var(--avisos-green-soft);
 }
 
 .row-count {
   min-width: 1.65rem;
-  padding: 0.08rem 0.45rem;
-  border-radius: 999px;
-  color: inherit;
-  background: rgba(255, 255, 255, 0.18);
+  padding: 0.08rem 0.35rem;
+  border-radius: 5px;
+  background: var(--avisos-soft);
   font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
   text-align: center;
-}
-
-.dataset-tab:not(.dataset-tab--active) .row-count {
-  background: #e8eeea;
-}
-
-.dataset-card {
-  overflow: hidden;
-  border: 1px solid #dfe5e1;
-  border-radius: 18px;
-  background: #fff;
-  box-shadow: 0 16px 45px rgba(29, 54, 38, 0.08);
 }
 
 .dataset-heading {
@@ -238,59 +184,31 @@ const requestRetry = () => emit('retry', activeDataset.value.id)
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1rem 1.25rem;
-  border-bottom: 1px solid #e7ebe8;
+  padding: 0.65rem var(--avisos-panel-padding);
+  border-bottom: 1px solid var(--avisos-divider);
 }
 
 .dataset-heading h3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.55rem;
   margin: 0 0 0.25rem;
-  font-size: 1.2rem;
+  font-size: 0.98rem;
   font-weight: 800;
 }
 
-.dataset-heading p {
-  margin: 0;
-  color: #6a7871;
-  font-size: 0.9rem;
-}
-
 .dataset-count {
-  display: block;
-  margin-top: 0.28rem;
-  color: #317449;
+  color: var(--avisos-green-text);
   font-size: 0.75rem;
   font-weight: 750;
-}
-
-.retry-button {
-  padding: 0.55rem 0.85rem;
-  border: 1px solid #276a3e;
-  border-radius: 8px;
-  color: #276a3e;
-  background: #fff;
-  font-weight: 750;
-}
-
-.state-message {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  min-height: 14rem;
-  padding: 2rem;
-  color: #647169;
-  text-align: center;
-}
-
-.state-message--error {
-  color: #a03636;
 }
 
 .spinner {
   width: 1.2rem;
   height: 1.2rem;
   border: 2px solid #c9d8ce;
-  border-top-color: #276a3e;
+  border-top-color: var(--avisos-green);
   border-radius: 50%;
   animation: spin 700ms linear infinite;
 }
@@ -310,8 +228,8 @@ table {
 
 th,
 td {
-  padding: 0.8rem 1rem;
-  border-bottom: 1px solid #edf0ee;
+  padding: 0.55rem 0.85rem;
+  border-bottom: 1px solid var(--avisos-divider);
   text-align: left;
   vertical-align: top;
 }
@@ -320,8 +238,8 @@ th {
   position: sticky;
   top: 0;
   z-index: 1;
-  color: #405048;
-  background: #f2f6f3;
+  color: var(--avisos-ink);
+  background: var(--avisos-soft);
   font-size: 0.74rem;
   font-weight: 800;
   letter-spacing: 0.035em;
@@ -331,7 +249,7 @@ th {
 
 td {
   max-width: 30rem;
-  color: #3e4943;
+  color: var(--avisos-ink);
   line-height: 1.45;
 }
 
@@ -340,7 +258,7 @@ tbody tr:nth-child(even) td {
 }
 
 tbody tr:hover td {
-  background: #f0f7f2;
+  background: var(--avisos-soft);
 }
 
 tbody tr:last-child td {
@@ -350,32 +268,6 @@ tbody tr:last-child td {
 @keyframes spin {
   to {
     transform: rotate(360deg);
-  }
-}
-
-@media (max-width: 980px) {
-  .tables-section-heading {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .tables-section-description {
-    text-align: left;
-  }
-}
-
-@media (max-width: 767px) {
-  .dataset-tabs {
-    overflow-x: auto;
-  }
-
-  .dataset-tab {
-    flex: 0 0 auto;
-  }
-
-  .dataset-heading {
-    align-items: flex-start;
-    padding: 0.85rem 1rem;
   }
 }
 </style>

@@ -1,5 +1,7 @@
 <script setup>
 import { computed, ref } from 'vue'
+import { RouterLink, useRoute } from 'vue-router'
+import AvisosResiduosBarriosGrafico from './AvisosResiduosBarriosGrafico.vue'
 
 const props = defineProps({
   rows: { type: Array, required: true },
@@ -8,6 +10,14 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['retry'])
+const route = useRoute()
+
+const getBarrioLocation = (barrioKey) => ({
+  path: route.path,
+  query: { ...route.query, tab: 'por-barrio', barrio: barrioKey },
+  hash: route.hash,
+})
+
 const percentFormatter = new Intl.NumberFormat('es-CO', {
   style: 'percent',
   maximumFractionDigits: 1,
@@ -24,7 +34,7 @@ const sortableColumns = [
   { key: 'cantidad_avisos_cumple_franja', label: 'Avisos dentro de la franja' },
   { key: 'porcentaje_avisos_cumple_franja', label: '% dentro de la franja' },
 ]
-const sortIcons = { ascending: 'bi-arrow-up', descending: 'bi-arrow-down' }
+const sortIcons = { ascending: 'bi-caret-up-fill', descending: 'bi-caret-down-fill' }
 const sortKey = ref('compliance')
 const sortDirection = ref('descending')
 
@@ -80,16 +90,37 @@ const formatClockTime = (minutes) => {
 </script>
 
 <template>
-  <section class="compliance-card" aria-labelledby="barrios-compliance-title">
-    <header class="compliance-header">
-      <h2 id="barrios-compliance-title">Cumplimiento de avisos</h2>
-      <p id="barrios-compliance-description">
-        Resultados por barrio para el periodo seleccionado. El cumplimiento de avisos se calcula
-        sobre los registros marcados como Sí o No. La hora promedio y la desviación usan los avisos
-        realizados con hora válida. Una desviación menor indica mayor constancia. El porcentaje
-        dentro de la franja se calcula sobre todos los avisos realizados.
-      </p>
-      <div v-if="!loading && !error && rows.length" class="color-keys">
+  <AvisosResiduosBarriosGrafico v-if="!loading && !error && rows.length" :rows="rows" />
+
+  <section class="compliance-card avisos-panel" aria-labelledby="barrios-compliance-title">
+    <header class="avisos-panel-header">
+      <div>
+        <h2 id="barrios-compliance-title" class="avisos-panel-title">Indicadores por barrio</h2>
+        <p id="barrios-compliance-description" class="avisos-panel-description">
+          Ordena los indicadores desde los encabezados o abre el detalle mensual de un barrio.
+        </p>
+      </div>
+      <details v-if="!loading && !error && rows.length" class="indicator-guide">
+        <summary>Cómo se calculan</summary>
+        <p class="avisos-note">
+          El cumplimiento usa los registros marcados como Sí o No. La hora promedio y la desviación
+          usan los avisos realizados con hora válida. Una desviación menor indica mayor constancia.
+          El porcentaje dentro de la franja se calcula sobre todos los avisos realizados.
+        </p>
+      </details>
+    </header>
+
+    <p v-if="loading" class="avisos-state" role="status">Cargando comparativa de barrios…</p>
+    <div v-else-if="error" class="avisos-state">
+      <p role="alert">{{ error }}</p>
+      <button type="button" class="avisos-button" @click="emit('retry')">Reintentar</button>
+    </div>
+    <p v-else-if="rows.length === 0" class="avisos-state">
+      No hay barrios para comparar en el periodo seleccionado.
+    </p>
+
+    <template v-else>
+      <div class="color-keys">
         <div class="color-key">
           <strong>Porcentajes</strong>
           <span class="percent-low">Bajo (&lt;50 %)</span>
@@ -103,122 +134,105 @@ const formatClockTime = (minutes) => {
           <span class="clock-night">Noche (18:00–05:59)</span>
         </div>
       </div>
-    </header>
-
-    <p v-if="loading" class="table-message" role="status">Cargando comparativa de barrios…</p>
-    <div v-else-if="error" class="table-message">
-      <p class="error-text" role="alert">{{ error }}</p>
-      <button type="button" class="retry-button" @click="emit('retry')">Reintentar</button>
-    </div>
-    <p v-else-if="rows.length === 0" class="table-message">
-      No hay barrios para comparar en el periodo seleccionado.
-    </p>
-
-    <div
-      v-else
-      class="table-scroll"
-      role="region"
-      aria-labelledby="barrios-compliance-title"
-      tabindex="0"
-    >
-      <table aria-describedby="barrios-compliance-description">
-        <thead>
-          <tr>
-            <th scope="col">Barrio</th>
-            <th
-              v-for="column in sortableColumns"
-              :key="column.key"
-              scope="col"
-              :class="column.key === 'compliance' ? 'compliance-column' : 'count'"
-              :aria-sort="sortKey === column.key ? sortDirection : undefined"
-            >
-              <button type="button" class="sort-button" @click="sortBy(column.key)">
-                <span>
-                  {{ column.label }}
-                  <span
-                    v-if="column.status"
-                    :class="column.key === 'completed' ? 'yes-label' : 'no-label'"
-                  >
-                    ({{ column.status }})
+      <div
+        class="table-scroll avisos-scroll"
+        role="region"
+        aria-labelledby="barrios-compliance-title"
+        tabindex="0"
+      >
+        <table aria-describedby="barrios-compliance-description">
+          <thead>
+            <tr>
+              <th scope="col">Barrio</th>
+              <th
+                v-for="column in sortableColumns"
+                :key="column.key"
+                scope="col"
+                :class="column.key === 'compliance' ? 'compliance-column' : 'count'"
+                :aria-sort="sortKey === column.key ? sortDirection : undefined"
+              >
+                <button type="button" class="sort-button" @click="sortBy(column.key)">
+                  <span>
+                    {{ column.label }}
+                    <span
+                      v-if="column.status"
+                      :class="column.key === 'completed' ? 'yes-label' : 'no-label'"
+                    >
+                      ({{ column.status }})
+                    </span>
                   </span>
+                  <i
+                    class="bi sort-icon"
+                    :class="sortKey === column.key ? sortIcons[sortDirection] : 'bi-chevron-expand'"
+                    aria-hidden="true"
+                  ></i>
+                </button>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="row in sortedRows" :key="row.key">
+              <th scope="row">
+                <RouterLink
+                  class="barrio-link"
+                  :to="getBarrioLocation(row.key)"
+                  aria-current-value="false"
+                >
+                  {{ row.name }}
+                </RouterLink>
+              </th>
+              <td class="count">{{ row.completed }}</td>
+              <td class="count">{{ row.missed }}</td>
+              <td :class="getPercentClass(row.compliance)">
+                <div v-if="row.compliance !== null" class="compliance-value">
+                  <span class="compliance-bar" aria-hidden="true">
+                    <span :style="{ width: `${row.compliance * 100}%` }"></span>
+                  </span>
+                  <span class="count">{{ percentFormatter.format(row.compliance) }}</span>
+                </div>
+                <span v-else class="empty-value">Sin avisos evaluables</span>
+              </td>
+              <td class="count" :class="getClockClass(row.hora_promedio)">
+                <span v-if="row.hora_promedio !== null">{{
+                  formatClockTime(row.hora_promedio)
+                }}</span>
+                <span v-else class="empty-value">Sin dato</span>
+              </td>
+              <td class="count">{{ row.horas_validas }}</td>
+              <td class="count">
+                <span v-if="row.desviacion_estandar_aviso !== null">
+                  {{ minutesFormatter.format(row.desviacion_estandar_aviso) }}
                 </span>
-                <i
-                  class="bi"
-                  :class="sortKey === column.key ? sortIcons[sortDirection] : 'bi-arrow-down-up'"
-                  aria-hidden="true"
-                ></i>
-              </button>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="row in sortedRows" :key="row.key">
-            <th scope="row">{{ row.name }}</th>
-            <td class="count">{{ row.completed }}</td>
-            <td class="count">{{ row.missed }}</td>
-            <td :class="getPercentClass(row.compliance)">
-              <div v-if="row.compliance !== null" class="compliance-value">
-                <span class="compliance-bar" aria-hidden="true">
-                  <span :style="{ width: `${row.compliance * 100}%` }"></span>
+              </td>
+              <td class="count">{{ row.cantidad_avisos_cumple_franja }}</td>
+              <td class="count" :class="getPercentClass(row.porcentaje_avisos_cumple_franja)">
+                <span v-if="row.porcentaje_avisos_cumple_franja !== null">
+                  {{ percentFormatter.format(row.porcentaje_avisos_cumple_franja) }}
                 </span>
-                <span class="count">{{ percentFormatter.format(row.compliance) }}</span>
-              </div>
-              <span v-else class="empty-value">Sin avisos evaluables</span>
-            </td>
-            <td class="count" :class="getClockClass(row.hora_promedio)">
-              <span v-if="row.hora_promedio !== null">{{
-                formatClockTime(row.hora_promedio)
-              }}</span>
-              <span v-else class="empty-value">Sin dato</span>
-            </td>
-            <td class="count">{{ row.horas_validas }}</td>
-            <td class="count">
-              <span v-if="row.desviacion_estandar_aviso !== null">
-                {{ minutesFormatter.format(row.desviacion_estandar_aviso) }}
-              </span>
-            </td>
-            <td class="count">{{ row.cantidad_avisos_cumple_franja }}</td>
-            <td class="count" :class="getPercentClass(row.porcentaje_avisos_cumple_franja)">
-              <span v-if="row.porcentaje_avisos_cumple_franja !== null">
-                {{ percentFormatter.format(row.porcentaje_avisos_cumple_franja) }}
-              </span>
-              <span v-else class="empty-value">Sin avisos realizados</span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+                <span v-else class="empty-value">Sin avisos realizados</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </template>
   </section>
 </template>
 
 <style scoped>
-.compliance-card {
-  overflow: hidden;
-  border: 1px solid #dfe5e1;
-  border-radius: 16px;
-  background: #fff;
+.indicator-guide {
+  color: var(--avisos-green-text);
+  font-size: 0.8rem;
 }
 
-.compliance-header {
-  padding: 1.05rem 1.25rem;
+.indicator-guide summary {
+  padding: 0.35rem 0;
+  font-weight: 750;
+  cursor: pointer;
 }
 
-.compliance-header h2 {
-  margin: 0 0 0.35rem;
-  color: #1e2923;
-  font-size: clamp(1.3rem, 2.5vw, 1.65rem);
-  font-weight: 800;
-}
-
-.compliance-header p,
-.table-message,
-.empty-value {
-  color: #56665d;
-}
-
-.compliance-header p,
-.table-message p {
-  margin: 0;
+.indicator-guide p {
+  max-width: 48rem;
 }
 
 .color-keys,
@@ -230,7 +244,7 @@ const formatClockTime = (minutes) => {
 
 .color-keys {
   gap: 0.5rem 1.25rem;
-  margin-top: 0.6rem;
+  padding: 0.55rem var(--avisos-panel-padding);
 }
 
 .color-key {
@@ -243,63 +257,84 @@ const formatClockTime = (minutes) => {
   border-radius: 6px;
 }
 
-.table-message {
-  margin: 0;
-  padding: 0 1.25rem 1.05rem;
-}
-
-.error-text {
-  color: #a03636;
-}
-
-.retry-button {
-  margin-top: 0.75rem;
-  padding: 0.4rem 0.75rem;
-  border: 1px solid #276a3e;
-  border-radius: 8px;
-  color: #276a3e;
-  background: #fff;
-  font-weight: 700;
+.empty-value {
+  color: var(--avisos-muted);
 }
 
 .table-scroll {
   overflow-x: auto;
 }
 
-.table-scroll:focus-visible {
-  outline: 2px solid #276a3e;
-  outline-offset: -2px;
-}
-
 table {
   width: 100%;
   min-width: 69rem;
-  border-collapse: collapse;
-  font-size: 0.9rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.87rem;
 }
 
 th,
 td {
   padding: 0.45rem 0.85rem;
+  border-top: 1px solid var(--avisos-divider);
   text-align: left;
 }
 
 thead {
-  color: #33493b;
-  background: #f0f7f2;
+  color: var(--avisos-ink);
+  background: var(--avisos-soft);
 }
 
 thead th {
   padding-block: 0.7rem;
+  font-size: 0.82rem;
+  line-height: 1.35;
 }
 
-tbody tr {
-  border-top: 1px solid #e7ebe8;
+thead th:first-child,
+tbody th[scope='row'] {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  width: clamp(9rem, 16vw, 13rem);
+  box-shadow: 1px 0 var(--avisos-divider);
+}
+
+thead th:first-child {
+  background: var(--avisos-soft);
+}
+
+tbody th[scope='row'] {
+  background: var(--avisos-surface);
+}
+
+th[aria-sort] {
+  background: var(--avisos-green-soft);
 }
 
 .count {
   text-align: right;
   font-variant-numeric: tabular-nums;
+}
+
+.barrio-link {
+  display: inline-block;
+  padding: 0.12rem 0.45rem;
+  border-radius: 6px;
+  color: var(--avisos-green-text);
+  background: var(--avisos-soft);
+  text-decoration: none;
+  transition: background-color 140ms ease;
+}
+
+.barrio-link:hover {
+  color: var(--avisos-green-text);
+  background: var(--avisos-green-soft);
+}
+
+.barrio-link:focus-visible {
+  outline: 2px solid var(--avisos-green);
+  outline-offset: 2px;
 }
 
 .sort-button {
@@ -315,17 +350,27 @@ tbody tr {
 }
 
 .sort-button:hover {
-  color: #276a3e;
+  color: var(--avisos-green-text);
   text-decoration: underline;
 }
 
 .sort-button:focus-visible {
-  outline: 2px solid #276a3e;
+  outline: 2px solid var(--avisos-green);
   outline-offset: 3px;
 }
 
+.sort-icon {
+  flex: none;
+  color: #62726a;
+  font-size: 0.75rem;
+}
+
+th[aria-sort] .sort-icon {
+  color: var(--avisos-green);
+}
+
 .yes-label {
-  color: #276a3e;
+  color: var(--avisos-green-text);
 }
 
 .no-label {
@@ -379,6 +424,6 @@ tbody tr {
 .compliance-bar span {
   display: block;
   height: 100%;
-  background: #317449;
+  background: var(--avisos-green);
 }
 </style>

@@ -1,5 +1,21 @@
 const trim = (value) => String(value ?? '').trim()
 
+export const PILOT_MONTHS = [
+  { key: '2026-06', label: 'Junio' },
+  { key: '2026-07', label: 'Julio' },
+  { key: '2026-08', label: 'Agosto' },
+  { key: '2026-09', label: 'Septiembre' },
+  { key: '2026-10', label: 'Octubre' },
+]
+
+export const sheetDateToIso = (value) => {
+  const match = trim(value).match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/)
+  if (!match) return ''
+
+  const [, day, month, year] = match
+  return `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`
+}
+
 export const normalizeAvisoState = (value) => {
   const original = trim(value)
   const normalized = original
@@ -144,4 +160,28 @@ export const summarizeAvisosByBarrio = (avisos, barrios) => {
       (a, b) =>
         (b.compliance ?? -1) - (a.compliance ?? -1) || a.name.localeCompare(b.name, 'es-CO'),
     )
+}
+
+export const summarizeAvisosByBarrioAndMonth = (avisos, barrios) => {
+  const avisosByMonth = new Map(PILOT_MONTHS.map(({ key }) => [key, []]))
+
+  for (const aviso of avisos) {
+    const month = sheetDateToIso(aviso.fecha).slice(0, 7)
+    avisosByMonth.get(month)?.push(aviso)
+  }
+
+  const monthlySummaries = PILOT_MONTHS.map(
+    ({ key }) =>
+      new Map(
+        summarizeAvisosByBarrio(avisosByMonth.get(key), barrios).map((row) => [row.key, row]),
+      ),
+  )
+
+  return summarizeAvisosByBarrio(avisos, barrios)
+    .map(({ key, name }) => ({
+      key,
+      name,
+      months: monthlySummaries.map((month) => month.get(key) ?? null),
+    }))
+    .sort((a, b) => a.name.localeCompare(b.name, 'es-CO'))
 }

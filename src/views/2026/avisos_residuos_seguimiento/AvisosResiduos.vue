@@ -5,8 +5,13 @@ import { fetchGoogleSheetCsv } from '../../../utils/googleSheets'
 import AvisosResiduosBarrios from './AvisosResiduosBarrios.vue'
 import AvisosResiduosDataviz from './AvisosResiduosDataviz.vue'
 import AvisosResiduosMenu from './AvisosResiduosMenu.vue'
+import AvisosResiduosPorBarrio from './AvisosResiduosPorBarrio.vue'
 import AvisosResiduosTablas from './AvisosResiduosTablas.vue'
-import { summarizeAvisosByBarrio } from './avisosResiduos.js'
+import {
+  sheetDateToIso,
+  summarizeAvisosByBarrio,
+  summarizeAvisosByBarrioAndMonth,
+} from './avisosResiduos.js'
 
 const SHEET_FILE_ID = '12EEkpPWrmgc7V-x69DpasVG78rojksTu8J_dUotTEjY'
 const route = useRoute()
@@ -37,22 +42,11 @@ const dateTo = ref('')
 
 const currentTab = computed(() => {
   const tab = route.query.tab
-  return ['calendario', 'tablas'].includes(tab) ? tab : 'barrios'
+  return ['por-barrio', 'calendario', 'tablas'].includes(tab) ? tab : 'barrios'
 })
 
 const avisosDataset = computed(() => datasets.value.find((dataset) => dataset.id === 'avisos'))
 const barriosDataset = computed(() => datasets.value.find((dataset) => dataset.id === 'barrios'))
-
-const sheetDateToIso = (value) => {
-  const match = String(value ?? '')
-    .trim()
-    .match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/)
-
-  if (!match) return ''
-
-  const [, day, month, year] = match
-  return `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`
-}
 
 const avisosDateBounds = computed(() => {
   const dates = avisosDataset.value.rows
@@ -75,15 +69,17 @@ const filteredAvisos = computed(() => {
     const date = sheetDateToIso(row.fecha)
 
     return (
-      date &&
-      (!dateFrom.value || date >= dateFrom.value) &&
-      (!dateTo.value || date <= dateTo.value)
+      date && (!dateFrom.value || date >= dateFrom.value) && (!dateTo.value || date <= dateTo.value)
     )
   })
 })
 
 const indicadoresPorBarrio = computed(() =>
   summarizeAvisosByBarrio(filteredAvisos.value, barriosDataset.value.rows),
+)
+
+const indicadoresPorBarrioYMes = computed(() =>
+  summarizeAvisosByBarrioAndMonth(filteredAvisos.value, barriosDataset.value.rows),
 )
 
 const dateFilterError = computed(() => {
@@ -109,7 +105,10 @@ const resetDateFilter = () => {
 const syncDateBounds = (rows) => {
   if (!rows.length) return
 
-  const dates = rows.map((row) => sheetDateToIso(row.fecha)).filter(Boolean).sort()
+  const dates = rows
+    .map((row) => sheetDateToIso(row.fecha))
+    .filter(Boolean)
+    .sort()
   if (!dates.length) return
 
   if (!dateFrom.value) dateFrom.value = dates[0]
@@ -158,16 +157,11 @@ onMounted(loadDatasets)
 <template>
   <main class="avisos-view">
     <div class="page-shell">
-      <AvisosResiduosMenu :current-tab="currentTab" />
-
       <header class="page-header">
         <div class="page-header-copy">
           <p class="eyebrow">Seguimiento 2026</p>
           <h1>Avisos de residuos</h1>
-          <p class="lead">
-            Consulta los avisos registrados y la información de los barrios vinculados al
-            seguimiento.
-          </p>
+          <p class="lead">Consulta el cumplimiento y los horarios de aviso por barrio.</p>
         </div>
 
         <form class="date-filter" aria-labelledby="avisos-date-filter-title" @submit.prevent>
@@ -178,9 +172,10 @@ onMounted(loadDatasets)
             </p>
           </div>
           <div class="date-filter-fields">
-            <label>
+            <label class="avisos-field">
               <span>Desde</span>
               <input
+                class="avisos-control"
                 type="date"
                 :value="dateFrom"
                 :min="avisosDateBounds.min"
@@ -189,9 +184,10 @@ onMounted(loadDatasets)
                 @change="handleDateFromChange"
               />
             </label>
-            <label>
+            <label class="avisos-field">
               <span>Hasta</span>
               <input
+                class="avisos-control"
                 type="date"
                 :value="dateTo"
                 :min="dateFrom || avisosDateBounds.min"
@@ -203,7 +199,7 @@ onMounted(loadDatasets)
           </div>
           <button
             type="button"
-            class="date-filter-reset"
+            class="date-filter-reset avisos-button"
             :disabled="avisosDataset.loading || !avisosDateBounds.min"
             @click="resetDateFilter"
           >
@@ -215,9 +211,19 @@ onMounted(loadDatasets)
         </form>
       </header>
 
+      <AvisosResiduosMenu :current-tab="currentTab" />
+
       <AvisosResiduosBarrios
         v-if="currentTab === 'barrios'"
         :rows="indicadoresPorBarrio"
+        :loading="avisosDataset.loading || barriosDataset.loading"
+        :error="avisosDataset.error || barriosDataset.error"
+        @retry="loadDatasets"
+      />
+
+      <AvisosResiduosPorBarrio
+        v-else-if="currentTab === 'por-barrio'"
+        :rows="indicadoresPorBarrioYMes"
         :loading="avisosDataset.loading || barriosDataset.loading"
         :error="avisosDataset.error || barriosDataset.error"
         @retry="loadDatasets"
@@ -240,16 +246,16 @@ onMounted(loadDatasets)
   </main>
 </template>
 
+<style src="./avisosResiduos.css"></style>
+
 <style scoped>
 .avisos-view {
   min-height: 100vh;
   min-width: 0;
   overflow-x: hidden;
-  padding: 1.25rem 1.5rem 2rem;
-  color: #18201c;
-  background:
-    radial-gradient(circle at top right, rgba(91, 157, 112, 0.16), transparent 30rem),
-    #f5f7f5;
+  padding: 1.3rem clamp(0.85rem, 2.4vw, 2rem) 2rem;
+  color: var(--avisos-ink);
+  background: radial-gradient(circle at top right, rgb(49 138 81 / 7%), transparent 30rem), #f7faf7;
 }
 
 .page-shell {
@@ -264,7 +270,7 @@ onMounted(loadDatasets)
   align-items: center;
   justify-content: space-between;
   gap: 0.85rem 1.5rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.8rem;
 }
 
 .page-header-copy {
@@ -275,16 +281,16 @@ onMounted(loadDatasets)
 
 .eyebrow {
   margin: 0 0 0.35rem;
-  color: #317449;
-  font-size: 0.78rem;
+  color: var(--avisos-green-text);
+  font-size: 0.73rem;
   font-weight: 800;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.11em;
   text-transform: uppercase;
 }
 
 h1 {
   margin: 0 0 0.4rem;
-  font-size: clamp(1.75rem, 3.2vw, 2.75rem);
+  font-size: clamp(1.75rem, 3vw, 2.55rem);
   font-weight: 850;
   line-height: 1.1;
   letter-spacing: -0.04em;
@@ -292,8 +298,8 @@ h1 {
 
 .lead {
   margin: 0;
-  color: #607068;
-  font-size: 0.95rem;
+  color: var(--avisos-muted);
+  font-size: 0.94rem;
   line-height: 1.5;
 }
 
@@ -306,37 +312,22 @@ h1 {
   align-items: center;
   gap: 0.45rem 0.65rem;
   padding: 0.6rem 0.75rem;
-  border: 1px solid #d8e2da;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.82);
-  box-shadow: 0 10px 28px rgba(29, 54, 38, 0.06);
+  border: 1px solid var(--avisos-border);
+  border-radius: 10px;
+  background: var(--avisos-surface);
+  box-shadow: var(--avisos-shadow);
 }
 
 .date-filter-heading {
-  color: #33493b;
+  color: var(--avisos-ink);
   font-size: 0.8rem;
   font-weight: 800;
 }
 
 .date-filter-reset {
-  min-height: 2.25rem;
   margin-left: auto;
-  padding: 0.3rem 0.45rem;
   align-self: end;
-  border: 0;
-  color: #317449;
-  background: transparent;
-  font-size: 0.72rem;
-  font-weight: 750;
-}
-
-.date-filter-reset:hover:not(:disabled) {
-  text-decoration: underline;
-}
-
-.date-filter-reset:disabled {
-  color: #a5b1aa;
-  cursor: not-allowed;
+  font-size: 0.77rem;
 }
 
 .date-filter-fields {
@@ -347,38 +338,9 @@ h1 {
   gap: 0.5rem;
 }
 
-.date-filter-fields label {
-  display: grid;
-  gap: 0.15rem;
-  color: #6a7871;
-  font-size: 0.68rem;
-  font-weight: 750;
-  text-transform: uppercase;
-}
-
 .date-filter-fields input {
   width: 100%;
-  min-width: 0;
-  min-height: 2.25rem;
-  padding: 0.35rem 0.5rem;
-  border: 1px solid #cbd8cf;
-  border-radius: 8px;
-  color: #293a30;
-  background: #fff;
-  font: inherit;
-  font-size: 0.82rem;
-  text-transform: none;
-}
-
-.date-filter-fields input:focus {
-  outline: 2px solid rgba(49, 116, 73, 0.28);
-  outline-offset: 1px;
-  border-color: #317449;
-}
-
-.date-filter-fields input:disabled {
-  color: #9aa69f;
-  background: #f3f6f4;
+  font-variant-numeric: tabular-nums;
 }
 
 .date-filter-range,
@@ -388,32 +350,52 @@ h1 {
 }
 
 .date-filter-range {
-  color: #607068;
+  color: var(--avisos-muted);
   font-weight: 500;
 }
 
 .date-filter-error {
   flex-basis: 100%;
-  color: #a03636;
+  color: var(--avisos-error);
 }
 
 @media (max-width: 767px) {
   .avisos-view {
     padding: 0.85rem 1rem 1.5rem;
   }
+
+  .page-header-copy {
+    padding-left: 2.5rem;
+  }
 }
 
 @media (max-width: 600px) {
+  .date-filter {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
   .date-filter-heading {
     display: flex;
-    flex: 1 0 100%;
     flex-wrap: wrap;
     align-items: baseline;
     gap: 0.15rem 0.65rem;
   }
 
   .date-filter-fields {
-    flex-basis: 13rem;
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .date-filter-reset {
+    grid-column: 2;
+    grid-row: 1;
+    min-height: 2rem;
+    align-self: center;
+  }
+
+  .date-filter-error {
+    grid-column: 1 / -1;
   }
 }
 </style>

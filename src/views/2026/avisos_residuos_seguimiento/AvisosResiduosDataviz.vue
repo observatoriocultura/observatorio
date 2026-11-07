@@ -177,7 +177,6 @@ const summary = computed(() => {
   return {
     completed,
     missed,
-    notScheduled: values.filter((value) => value === 0).length,
     compliance: expected > 0 ? Math.round((completed / expected) * 100) : 0,
   }
 })
@@ -282,12 +281,11 @@ watch(
 </script>
 
 <template>
-  <section class="dataviz-card" aria-labelledby="avisos-dataviz-title">
-    <header class="dataviz-header">
+  <section class="dataviz-card avisos-panel" aria-labelledby="avisos-dataviz-title">
+    <header class="avisos-panel-header">
       <div>
-        <p class="section-kicker">Visualización temporal</p>
-        <h2 id="avisos-dataviz-title">Cumplimiento de avisos por barrio</h2>
-        <p>Cada celda representa el estado del aviso para un barrio en una fecha determinada.</p>
+        <h2 id="avisos-dataviz-title" class="avisos-panel-title">Calendario de avisos</h2>
+        <p class="avisos-panel-description">Consulta el estado diario de los avisos por barrio.</p>
       </div>
 
       <div v-if="normalizedAvisos.length" class="metrics" aria-label="Resumen de avisos">
@@ -303,23 +301,19 @@ watch(
           <span>No realizados</span>
           <strong>{{ summary.missed }}</strong>
         </article>
-        <article>
-          <span>No programados</span>
-          <strong>{{ summary.notScheduled }}</strong>
-        </article>
       </div>
     </header>
 
-    <div v-if="loading" class="dataviz-state" role="status">
+    <div v-if="loading" class="avisos-state" role="status">
       <span class="dataviz-spinner" aria-hidden="true"></span>
       Preparando visualización…
     </div>
 
-    <div v-else-if="error" class="dataviz-state dataviz-state--error" role="alert">
+    <div v-else-if="error" class="avisos-state" role="alert">
       La visualización estará disponible cuando se puedan cargar los avisos.
     </div>
 
-    <div v-else-if="normalizedAvisos.length === 0" class="dataviz-state">
+    <div v-else-if="normalizedAvisos.length === 0" class="avisos-state">
       No hay avisos con barrio y fecha válidos para visualizar.
     </div>
 
@@ -398,7 +392,9 @@ watch(
           <span class="selected-state" :class="`selected-state--${selectedCell.state.key}`">
             {{ selectedCell.state.label }}
           </span>
-          <span v-if="selectedCell.aviso?.hora_aviso">Hora: {{ selectedCell.aviso.hora_aviso }}</span>
+          <span v-if="selectedCell.aviso?.hora_aviso"
+            >Hora: {{ selectedCell.aviso.hora_aviso }}</span
+          >
           <span v-if="selectedCell.aviso?.control">Control: {{ selectedCell.aviso.control }}</span>
           <span v-if="selectedCell.aviso?.notas">Notas: {{ selectedCell.aviso.notas }}</span>
         </template>
@@ -406,7 +402,7 @@ watch(
       </div>
     </div>
 
-    <p v-if="normalizedAvisos.length" class="chart-note">
+    <p v-if="normalizedAvisos.length" class="chart-note avisos-note">
       El porcentaje de cumplimiento considera únicamente los registros en los que se esperaba un
       aviso. Desplaza la matriz horizontalmente para recorrer todas las fechas.
     </p>
@@ -433,78 +429,38 @@ watch(
 </template>
 
 <style scoped>
-.dataviz-card {
-  margin-bottom: 2rem;
-  min-width: 0;
-  overflow: hidden;
-  border: 1px solid #dfe5e1;
-  border-radius: 18px;
-  background: #fff;
-  box-shadow: 0 16px 45px rgba(29, 54, 38, 0.08);
-}
-
-.dataviz-header {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 0.85rem 1.25rem;
-  padding: 1.05rem 1.25rem;
-  border-bottom: 1px solid #e7ebe8;
-}
-
-.section-kicker {
-  margin: 0 0 0.4rem;
-  color: #317449;
-  font-size: 0.7rem;
-  font-weight: 800;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-}
-
-.dataviz-header h2 {
-  margin: 0 0 0.4rem;
-  color: #1e2923;
-  font-size: 1.35rem;
-  font-weight: 800;
-}
-
-.dataviz-header p:last-child {
-  margin: 0;
-  color: #6a7871;
-  font-size: 0.9rem;
-}
-
 .metrics {
   display: grid;
-  grid-template-columns: repeat(4, minmax(86px, 1fr));
-  gap: 0.5rem;
-  flex: 0 0 auto;
+  grid-template-columns: repeat(3, minmax(86px, 1fr));
+  gap: 0.4rem;
+  flex: 0 1 auto;
 }
 
 .metrics article {
-  min-width: 90px;
-  padding: 0.65rem 0.8rem;
-  border-radius: 10px;
-  background: #f2f6f3;
+  min-width: 0;
+  padding: 0.45rem 0.65rem;
+  border: 1px solid var(--avisos-divider);
+  border-radius: 8px;
+  background: var(--avisos-soft);
 }
 
 .metrics span {
   display: block;
-  color: #6d7b73;
-  font-size: 0.66rem;
-  font-weight: 700;
-  text-transform: uppercase;
+  color: var(--avisos-muted);
+  font-size: 0.74rem;
+  font-weight: 750;
 }
 
 .metrics strong {
   display: block;
   margin-top: 0.1rem;
-  color: #277044;
-  font-size: 1.25rem;
+  color: var(--avisos-green-text);
+  font-size: 1.18rem;
+  font-variant-numeric: tabular-nums;
 }
 
 .metrics .metric--alert strong {
-  color: #bd4141;
+  color: var(--avisos-error);
 }
 
 .matrix-region {
@@ -515,6 +471,7 @@ watch(
 .matrix-scroll {
   --cell-size: 13px;
   --cell-gap: 3px;
+  --matrix-row-height: calc(var(--cell-size) + 7px);
   --label-width: 205px;
   width: 100%;
   min-width: 0;
@@ -528,7 +485,7 @@ watch(
 .contribution-matrix {
   width: max-content;
   min-width: 100%;
-  padding: 0 1.25rem 1rem 0;
+  padding: 0 var(--avisos-panel-padding) 0.7rem 0;
 }
 
 .matrix-header-row,
@@ -547,10 +504,10 @@ watch(
   display: flex;
   align-items: center;
   width: var(--label-width);
-  padding: 0 0.85rem 0 1.25rem;
-  border-right: 1px solid #e4e9e6;
-  color: #46554c;
-  background: #fff;
+  padding: 0 0.65rem 0 var(--avisos-panel-padding);
+  border-right: 1px solid var(--avisos-divider);
+  color: var(--avisos-ink);
+  background: var(--avisos-surface);
   font-size: 0.72rem;
 }
 
@@ -564,9 +521,11 @@ watch(
 }
 
 .barrio-label {
-  min-height: calc(var(--cell-size) + var(--cell-gap));
+  display: block;
+  min-height: var(--matrix-row-height);
   overflow: hidden;
   font-weight: 650;
+  line-height: var(--matrix-row-height);
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -602,7 +561,7 @@ watch(
 .date-grid {
   align-content: center;
   align-items: center;
-  min-height: calc(var(--cell-size) + var(--cell-gap));
+  min-height: var(--matrix-row-height);
 }
 
 .contribution-cell {
@@ -659,8 +618,8 @@ watch(
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.8rem 1.5rem;
-  border-top: 1px solid #edf0ee;
+  padding: 0.65rem var(--avisos-panel-padding);
+  border-top: 1px solid var(--avisos-divider);
 }
 
 .legend {
@@ -715,11 +674,11 @@ watch(
   flex-wrap: wrap;
   gap: 0.35rem 0.8rem;
   min-height: 2.65rem;
-  margin: 0 1.5rem 1rem;
+  margin: 0 var(--avisos-panel-padding) 0.75rem;
   padding: 0.65rem 0.8rem;
   border-radius: 8px;
   color: #5e6d64;
-  background: #f4f7f5;
+  background: var(--avisos-soft);
   font-size: 0.78rem;
 }
 
@@ -744,36 +703,18 @@ watch(
   color: #68766e;
 }
 
-.dataviz-state {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.7rem;
-  min-height: 22rem;
-  padding: 2rem;
-  color: #69776f;
-  text-align: center;
-}
-
-.dataviz-state--error {
-  color: #a03636;
-}
-
 .dataviz-spinner {
   width: 1.15rem;
   height: 1.15rem;
   border: 2px solid #c9d8ce;
-  border-top-color: #276a3e;
+  border-top-color: var(--avisos-green);
   border-radius: 50%;
   animation: spin 700ms linear infinite;
 }
 
 .chart-note {
-  margin: 0;
-  padding: 0.9rem 1.5rem 1.15rem;
-  border-top: 1px solid #edf0ee;
-  color: #738078;
-  font-size: 0.78rem;
+  padding: 0.65rem var(--avisos-panel-padding);
+  border-top: 1px solid var(--avisos-divider);
 }
 
 .matrix-tooltip {
@@ -821,11 +762,6 @@ watch(
 }
 
 @media (max-width: 980px) {
-  .dataviz-header {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
   .metrics {
     width: 100%;
   }
@@ -841,32 +777,14 @@ watch(
 }
 
 @media (max-width: 600px) {
-  .dataviz-header {
-    padding: 0.9rem 1rem;
-  }
-
   .metrics {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .matrix-scroll {
     --cell-size: 12px;
     --cell-gap: 3px;
     --label-width: 155px;
-  }
-
-  .matrix-corner,
-  .barrio-label {
-    padding-left: 1rem;
-  }
-
-  .matrix-footer,
-  .chart-note {
-    padding-inline: 1.15rem;
-  }
-
-  .selected-detail {
-    margin-inline: 1.15rem;
   }
 }
 
