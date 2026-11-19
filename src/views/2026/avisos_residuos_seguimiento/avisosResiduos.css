@@ -108,6 +108,18 @@
   line-height: 1.45;
 }
 
+:where(.avisos-view) .operator-badge {
+  display: inline-block;
+  padding: 0.12rem 0.45rem;
+  border-radius: 5px;
+  color: var(--operator-text, #54665d);
+  background: var(--operator-bg, #edf1ee);
+  font-size: 0.73rem;
+  font-weight: 750;
+  line-height: 1.45;
+  white-space: nowrap;
+}
+
 :where(.avisos-view) .avisos-state {
   display: flex;
   flex-wrap: wrap;

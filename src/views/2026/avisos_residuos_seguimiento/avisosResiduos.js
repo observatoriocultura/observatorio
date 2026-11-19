@@ -1,5 +1,14 @@
 const trim = (value) => String(value ?? '').trim()
 
+export const isBarrioInSeguimiento = (row) => {
+  // La Castellana (ID 8) quedó fuera del ejercicio de recolección.
+  const id = trim(row.barrio_id ?? row.id)
+  const name = trim(row.barrio ?? row.nombre_barrio)
+    .replace(/\s+/g, ' ')
+    .toLocaleLowerCase('es-CO')
+  return id !== '8' && name !== 'la castellana'
+}
+
 export const PILOT_MONTHS = [
   { key: '2026-06', label: 'Junio' },
   { key: '2026-07', label: 'Julio' },
@@ -50,6 +59,59 @@ export const normalizeAvisoState = (value) => {
 
 const getBarrioKey = (id, name) => (id ? `id:${id}` : `name:${name}`)
 
+export const createBarriosLookup = (barrios) => {
+  const operators = [...new Set(barrios.map((barrio) => trim(barrio.ase)).filter(Boolean))].sort(
+    (a, b) => a.localeCompare(b, 'es-CO'),
+  )
+  const colors = new Map(
+    operators.map((operator, index) => [operator, `${(210 + index * 137.508) % 360}`]),
+  )
+  const lookup = new Map()
+  const names = new Map()
+
+  for (const barrio of barrios) {
+    const name = trim(barrio.nombre_barrio)
+    if (!name) continue
+    const key = getBarrioKey(trim(barrio.id), name)
+    const ase = trim(barrio.ase) || 'Sin operador'
+    const hue = colors.get(ase)
+    const entry = {
+      key,
+      name,
+      ase,
+      displayName: `${name} - ${ase}`,
+      operatorStyle:
+        hue === undefined
+          ? {}
+          : {
+              '--operator-bg': `hsl(${hue} 60% 94%)`,
+              '--operator-text': `hsl(${hue} 55% 28%)`,
+            },
+    }
+    lookup.set(key, entry)
+    names.set(name, names.has(name) && names.get(name)?.key !== key ? null : entry)
+  }
+
+  for (const [name, entry] of names) {
+    if (entry) lookup.set(getBarrioKey('', name), entry)
+  }
+  return lookup
+}
+
+export const getBarrioIdentity = (aviso, lookup) => {
+  const name = trim(aviso.barrio)
+  const key = getBarrioKey(trim(aviso.barrio_id), name)
+  return (
+    lookup.get(key) ?? {
+      key,
+      name,
+      ase: 'Sin operador',
+      displayName: `${name} - Sin operador`,
+      operatorStyle: {},
+    }
+  )
+}
+
 const MINUTES_PER_DAY = 24 * 60
 const RADIANS_PER_MINUTE = (2 * Math.PI) / MINUTES_PER_DAY
 
@@ -91,9 +153,8 @@ const summarizeHorario = (minutes) => {
   return { horas_validas, hora_promedio, desviacion_estandar_aviso }
 }
 
-const createBarrioSummary = (key, name) => ({
-  key,
-  name,
+const createBarrioSummary = (identity) => ({
+  ...identity,
   completed: 0,
   missed: 0,
   hours: [],
@@ -102,35 +163,23 @@ const createBarrioSummary = (key, name) => ({
 
 export const summarizeAvisosByBarrio = (avisos, barrios) => {
   const summaries = new Map()
-  const idsByName = new Map()
+  const lookup = createBarriosLookup(barrios)
 
-  for (const barrio of barrios) {
-    const name = trim(barrio.nombre_barrio)
-    if (!name) continue
-
-    const id = trim(barrio.id)
-    const key = getBarrioKey(id, name)
-    summaries.set(key, createBarrioSummary(key, name))
-
-    if (id) {
-      const previousId = idsByName.get(name)
-      idsByName.set(name, previousId === undefined || previousId === id ? id : null)
-    }
+  for (const entry of lookup.values()) {
+    summaries.set(entry.key, createBarrioSummary(entry))
   }
 
   for (const aviso of avisos) {
     const { key: state } = normalizeAvisoState(aviso.estado_aviso)
     if (state !== 'yes' && state !== 'no') continue
 
-    const name = trim(aviso.barrio)
-    const id = trim(aviso.barrio_id) || idsByName.get(name)
-    const key = getBarrioKey(id, name)
-    let summary = summaries.get(key)
+    const identity = getBarrioIdentity(aviso, lookup)
+    let summary = summaries.get(identity.key)
 
     if (!summary) {
-      if (!name) continue
-      summary = createBarrioSummary(key, name)
-      summaries.set(key, summary)
+      if (!identity.name) continue
+      summary = createBarrioSummary(identity)
+      summaries.set(identity.key, summary)
     }
 
     if (state === 'yes') {
@@ -178,9 +227,12 @@ export const summarizeAvisosByBarrioAndMonth = (avisos, barrios) => {
   )
 
   return summarizeAvisosByBarrio(avisos, barrios)
-    .map(({ key, name }) => ({
+    .map(({ key, name, ase, displayName, operatorStyle }) => ({
       key,
       name,
+      ase,
+      displayName,
+      operatorStyle,
       months: monthlySummaries.map((month) => month.get(key) ?? null),
     }))
     .sort((a, b) => a.name.localeCompare(b.name, 'es-CO'))

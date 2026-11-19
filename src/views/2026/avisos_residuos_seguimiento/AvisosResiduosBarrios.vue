@@ -144,6 +144,7 @@ const formatClockTime = (minutes) => {
           <thead>
             <tr>
               <th scope="col">Barrio</th>
+              <th scope="col">Operador</th>
               <th
                 v-for="column in sortableColumns"
                 :key="column.key"
@@ -181,6 +182,9 @@ const formatClockTime = (minutes) => {
                   {{ row.name }}
                 </RouterLink>
               </th>
+              <td>
+                <span class="operator-badge" :style="row.operatorStyle">{{ row.ase }}</span>
+              </td>
               <td class="count">{{ row.completed }}</td>
               <td class="count">{{ row.missed }}</td>
               <td :class="getPercentClass(row.compliance)">

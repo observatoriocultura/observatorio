@@ -1,13 +1,73 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
 import {
+  isBarrioInSeguimiento,
   PILOT_MONTHS,
   summarizeAvisosByBarrio,
   summarizeAvisosByBarrioAndMonth,
+  createBarriosLookup,
+  getBarrioIdentity,
 } from '../src/views/2026/avisos_residuos_seguimiento/avisosResiduos.js'
 
 const barrios = [{ id: '1', nombre_barrio: 'Belén' }]
 const aviso = (estado_aviso, hora_aviso) => ({ barrio_id: '1', estado_aviso, hora_aviso })
+
+test('excluye La Castellana tanto del catálogo como de los avisos', () => {
+  const catalog = [
+    ...barrios,
+    { id: 8, nombre_barrio: 'La Castellana' },
+    { nombre_barrio: ' LA  CASTELLANA ' },
+  ].filter(isBarrioInSeguimiento)
+  const records = [
+    { ...aviso('Sí', '08:00'), fecha: '01/06/2026' },
+    { barrio_id: '8', barrio: 'Nombre anterior', estado_aviso: 'Sí', fecha: '01/06/2026' },
+    { barrio: 'la castellana', estado_aviso: 'No', fecha: '01/06/2026' },
+  ].filter(isBarrioInSeguimiento)
+
+  assert.deepEqual(catalog, barrios)
+  assert.equal(records.length, 1)
+  assert.deepEqual(
+    summarizeAvisosByBarrio(records, catalog).map((row) => row.name),
+    ['Belén'],
+  )
+  assert.deepEqual(
+    summarizeAvisosByBarrioAndMonth(records, catalog).map((row) => row.name),
+    ['Belén'],
+  )
+})
+
+test('asocia el operador por ID y conserva la etiqueta y el color en el resumen mensual', () => {
+  const catalog = [
+    { id: '1', nombre_barrio: 'Belén', ase: ' Operador A ' },
+    { id: '2', nombre_barrio: 'Centro', ase: 'Operador B' },
+    { id: '3', nombre_barrio: 'Villa', ase: 'Operador A' },
+  ]
+  const records = [{ ...aviso('Sí', '08:00'), barrio: 'Nombre anterior', fecha: '01/06/2026' }]
+  const summary = summarizeAvisosByBarrio(records, catalog).find((row) => row.key === 'id:1')
+  const monthly = summarizeAvisosByBarrioAndMonth(records, catalog).find(
+    (row) => row.key === 'id:1',
+  )
+  const lookup = createBarriosLookup(catalog)
+
+  assert.equal(summary.displayName, 'Belén - Operador A')
+  assert.equal(summary.ase, 'Operador A')
+  assert.deepEqual(monthly.operatorStyle, summary.operatorStyle)
+  assert.equal(monthly.months[0].displayName, summary.displayName)
+  assert.deepEqual(lookup.get('id:3').operatorStyle, summary.operatorStyle)
+  assert.notDeepEqual(lookup.get('id:2').operatorStyle, summary.operatorStyle)
+  assert.deepEqual(createBarriosLookup([...catalog].reverse()).get('id:1'), lookup.get('id:1'))
+  assert.equal(getBarrioIdentity({ barrio: 'Belén' }, lookup).ase, 'Operador A')
+  assert.equal(getBarrioIdentity({ barrio_id: '999', barrio: 'Belén' }, lookup).ase, 'Sin operador')
+})
+
+test('no asigna un operador por un nombre de barrio ambiguo', () => {
+  const lookup = createBarriosLookup([
+    { id: '1', nombre_barrio: 'Centro', ase: 'A' },
+    { id: '2', nombre_barrio: 'Centro', ase: 'B' },
+  ])
+  assert.equal(getBarrioIdentity({ barrio: 'Centro' }, lookup).ase, 'Sin operador')
+  assert.equal(getBarrioIdentity({ barrio_id: '2', barrio: 'Centro' }, lookup).ase, 'B')
+})
 
 test('calcula los indicadores horarios sin alterar el conteo de avisos', () => {
   const [summary] = summarizeAvisosByBarrio(

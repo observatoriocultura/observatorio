@@ -87,12 +87,16 @@ const chartOptions = computed(() => {
       style: { fontFamily: 'inherit' },
       animation: false,
     },
-    title: { text: null },
+    title: {
+      text: barrio.value?.displayName ?? null,
+      align: 'left',
+      style: { fontSize: '14px', color: 'var(--avisos-muted)', fontWeight: '600' },
+    },
     credits: { enabled: false },
     legend: { enabled: isCompliance },
     lang: { accessibility: { defaultChartTitle: 'Evolución mensual por barrio' } },
     accessibility: {
-      description: `${label} de ${barrio.value?.name ?? ''}, de junio a octubre de 2026.`,
+      description: `${label} de ${barrio.value?.displayName ?? ''}, de junio a octubre de 2026.`,
       point: { valueDescriptionFormat: '{point.category}, {point.custom.label}.' },
     },
     xAxis: { categories: monthLabels, lineColor: 'var(--avisos-border)' },
@@ -191,7 +195,9 @@ const chartContainer = useAvisosResiduosChart(chartOptions)
         <label class="avisos-field">
           Barrio
           <select class="avisos-control" :value="barrioKey" @change="selectBarrio">
-            <option v-for="item in rows" :key="item.key" :value="item.key">{{ item.name }}</option>
+            <option v-for="item in rows" :key="item.key" :value="item.key">
+              {{ item.displayName }}
+            </option>
           </select>
         </label>
         <label class="avisos-field">

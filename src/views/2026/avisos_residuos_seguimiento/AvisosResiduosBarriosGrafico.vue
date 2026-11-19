@@ -42,7 +42,7 @@ const chartRows = computed(() => {
 })
 
 const missingNames = computed(() =>
-  props.rows.filter((row) => !Number.isFinite(row[metricKey.value])).map((row) => row.name),
+  props.rows.filter((row) => !Number.isFinite(row[metricKey.value])).map((row) => row.displayName),
 )
 
 const chartOptions = computed(() => {
@@ -53,7 +53,7 @@ const chartOptions = computed(() => {
   return {
     chart: {
       type: 'bar',
-      height: Math.max(180, chartRows.value.length * 26 + 42),
+      height: Math.max(180, chartRows.value.length * 32 + 42),
       spacing: [4, 66, 4, 0],
       style: { fontFamily: 'inherit' },
       animation: false,
@@ -67,10 +67,10 @@ const chartOptions = computed(() => {
       point: { valueDescriptionFormat: '{point.name}, {point.custom.label}.' },
     },
     xAxis: {
-      categories: chartRows.value.map((row) => row.name),
+      categories: chartRows.value.map((row) => row.displayName),
       lineWidth: 0,
       tickLength: 0,
-      labels: { style: { color: 'var(--avisos-muted)', width: '220px', textOverflow: 'ellipsis' } },
+      labels: { style: { color: 'var(--avisos-muted)', width: '300px', textOverflow: 'ellipsis' } },
     },
     yAxis: {
       min: 0,
@@ -115,7 +115,7 @@ const chartOptions = computed(() => {
         data: chartRows.value.map((row) => {
           const value = row[key] * (isPercent ? 100 : 1)
           return {
-            name: row.name,
+            name: row.displayName,
             y: value,
             custom: {
               label: `${numberFormatter.format(value)}${suffix}`,

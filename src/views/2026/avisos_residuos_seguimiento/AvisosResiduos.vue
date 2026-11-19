@@ -8,6 +8,7 @@ import AvisosResiduosMenu from './AvisosResiduosMenu.vue'
 import AvisosResiduosPorBarrio from './AvisosResiduosPorBarrio.vue'
 import AvisosResiduosTablas from './AvisosResiduosTablas.vue'
 import {
+  isBarrioInSeguimiento,
   sheetDateToIso,
   summarizeAvisosByBarrio,
   summarizeAvisosByBarrioAndMonth,
@@ -130,10 +131,11 @@ const loadDataset = async (dataset) => {
   dataset.error = ''
 
   try {
-    dataset.rows = await fetchGoogleSheetCsv({
+    const rows = await fetchGoogleSheetCsv({
       fileId: SHEET_FILE_ID,
       gid: dataset.gid,
     })
+    dataset.rows = rows.filter(isBarrioInSeguimiento)
     if (dataset.id === 'avisos') syncDateBounds(dataset.rows)
   } catch (error) {
     console.error(`No fue posible cargar la tabla ${dataset.title}.`, error)
@@ -232,8 +234,9 @@ onMounted(loadDatasets)
       <AvisosResiduosDataviz
         v-show="currentTab === 'calendario'"
         :avisos="filteredAvisos"
-        :loading="avisosDataset.loading"
-        :error="avisosDataset.error"
+        :catalogo-barrios="barriosDataset.rows"
+        :loading="avisosDataset.loading || barriosDataset.loading"
+        :error="avisosDataset.error || barriosDataset.error"
       />
 
       <AvisosResiduosTablas

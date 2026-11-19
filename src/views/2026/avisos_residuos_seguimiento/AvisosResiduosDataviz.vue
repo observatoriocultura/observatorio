@@ -1,12 +1,13 @@
 <script setup>
 import { computed, nextTick, ref, watch } from 'vue'
-import { normalizeAvisoState } from './avisosResiduos.js'
+import { createBarriosLookup, getBarrioIdentity, normalizeAvisoState } from './avisosResiduos.js'
 
 const props = defineProps({
   avisos: {
     type: Array,
     default: () => [],
   },
+  catalogoBarrios: { type: Array, default: () => [] },
   loading: {
     type: Boolean,
     default: false,
@@ -66,11 +67,13 @@ const parseSheetDate = (value) => {
 }
 
 const timestampToIso = (timestamp) => new Date(timestamp).toISOString().slice(0, 10)
+const barrioLookup = computed(() => createBarriosLookup(props.catalogoBarrios))
 
 const normalizedAvisos = computed(() =>
   props.avisos
     .map((aviso) => {
-      const barrio = String(aviso.barrio ?? '').trim()
+      const identity = getBarrioIdentity(aviso, barrioLookup.value)
+      const barrio = identity.name
       const timestamp = parseSheetDate(aviso.fecha)
 
       if (!barrio || timestamp === null) return null
@@ -78,6 +81,10 @@ const normalizedAvisos = computed(() =>
       return {
         ...aviso,
         barrio,
+        barrioKey: identity.key,
+        ase: identity.ase,
+        displayName: identity.displayName,
+        operatorStyle: identity.operatorStyle,
         timestamp,
         dateIso: timestampToIso(timestamp),
         state: normalizeAvisoState(aviso.estado_aviso),
@@ -86,7 +93,9 @@ const normalizedAvisos = computed(() =>
     .filter(Boolean),
 )
 
-const barrios = computed(() => [...new Set(normalizedAvisos.value.map((aviso) => aviso.barrio))])
+const barrios = computed(() => [
+  ...new Map(normalizedAvisos.value.map((aviso) => [aviso.barrioKey, aviso])).values(),
+])
 
 const dates = computed(() => {
   const sourceDates = normalizedAvisos.value.map((aviso) => aviso.timestamp)
@@ -135,7 +144,7 @@ const avisoByCell = computed(
   () =>
     new Map(
       normalizedAvisos.value.map((aviso) => [
-        `${aviso.barrio}${DATE_SEPARATOR}${aviso.dateIso}`,
+        `${aviso.barrioKey}${DATE_SEPARATOR}${aviso.dateIso}`,
         aviso,
       ]),
     ),
@@ -149,15 +158,20 @@ const missingState = {
 }
 
 const gridRows = computed(() =>
-  barrios.value.map((barrio, rowIndex) => ({
-    barrio,
+  barrios.value.map((identity, rowIndex) => ({
+    barrio: identity.barrio,
+    barrioKey: identity.barrioKey,
+    ase: identity.ase,
+    displayName: identity.displayName,
+    operatorStyle: identity.operatorStyle,
     rowIndex,
     cells: dates.value.map((date, columnIndex) => {
-      const aviso = avisoByCell.value.get(`${barrio}${DATE_SEPARATOR}${date.iso}`)
+      const aviso = avisoByCell.value.get(`${identity.barrioKey}${DATE_SEPARATOR}${date.iso}`)
 
       return {
-        key: `${barrio}${DATE_SEPARATOR}${date.iso}`,
-        barrio,
+        key: `${identity.barrioKey}${DATE_SEPARATOR}${date.iso}`,
+        barrio: identity.barrio,
+        displayName: identity.displayName,
         rowIndex,
         columnIndex,
         date,
@@ -187,7 +201,7 @@ const dateGridStyle = computed(() => ({
 
 const formatCellAriaLabel = (cell) => {
   const details = [
-    cell.barrio,
+    cell.displayName,
     cell.date.label,
     cell.state.label,
     cell.aviso?.hora_aviso ? `hora ${cell.aviso.hora_aviso}` : '',
@@ -344,9 +358,10 @@ watch(
             </div>
           </div>
 
-          <div v-for="row in gridRows" :key="row.barrio" class="matrix-row" role="row">
-            <div class="barrio-label" role="rowheader" :title="row.barrio">
-              {{ row.barrio }}
+          <div v-for="row in gridRows" :key="row.barrioKey" class="matrix-row" role="row">
+            <div class="barrio-label" role="rowheader" :title="row.displayName">
+              <span class="barrio-name">{{ row.barrio }}</span>
+              <span class="operator-badge" :style="row.operatorStyle">{{ row.ase }}</span>
             </div>
             <div class="date-grid" :style="dateGridStyle" role="presentation">
               <button
@@ -387,7 +402,7 @@ watch(
 
       <div class="selected-detail" aria-live="polite">
         <template v-if="selectedCell">
-          <strong>{{ selectedCell.barrio }}</strong>
+          <strong>{{ selectedCell.displayName }}</strong>
           <span>{{ selectedCell.date.label }}</span>
           <span class="selected-state" :class="`selected-state--${selectedCell.state.key}`">
             {{ selectedCell.state.label }}
@@ -416,7 +431,7 @@ watch(
         role="tooltip"
       >
         <span class="matrix-tooltip-date">{{ tooltip.cell.date.label }}</span>
-        <strong>{{ tooltip.cell.barrio }}</strong>
+        <strong>{{ tooltip.cell.displayName }}</strong>
         <span>{{ tooltip.cell.state.label }}</span>
         <span v-if="tooltip.cell.aviso?.hora_aviso">Hora: {{ tooltip.cell.aviso.hora_aviso }}</span>
         <span v-if="tooltip.cell.aviso?.control">Control: {{ tooltip.cell.aviso.control }}</span>
@@ -471,8 +486,8 @@ watch(
 .matrix-scroll {
   --cell-size: 13px;
   --cell-gap: 3px;
-  --matrix-row-height: calc(var(--cell-size) + 7px);
-  --label-width: 205px;
+  --matrix-row-height: 38px;
+  --label-width: 300px;
   width: 100%;
   min-width: 0;
   max-width: 100%;
@@ -521,13 +536,25 @@ watch(
 }
 
 .barrio-label {
-  display: block;
+  gap: 0.4rem;
   min-height: var(--matrix-row-height);
   overflow: hidden;
   font-weight: 650;
-  line-height: var(--matrix-row-height);
-  text-overflow: ellipsis;
+  line-height: 1.35;
   white-space: nowrap;
+}
+
+.barrio-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.barrio-label .operator-badge {
+  flex: none;
+  max-width: 45%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .month-grid,
@@ -784,7 +811,19 @@ watch(
   .matrix-scroll {
     --cell-size: 12px;
     --cell-gap: 3px;
-    --label-width: 155px;
+    --label-width: 190px;
+  }
+
+  .barrio-label {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.1rem;
+  }
+
+  .barrio-name,
+  .barrio-label .operator-badge {
+    max-width: 100%;
   }
 }
 
