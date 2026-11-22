@@ -17,6 +17,7 @@ import SolicitudesInfo from '../views/2026/solicitudes_pai/SolicitudesInfo.vue'
 import SolicitudesTablero from '../views/2026/solicitudes_pai/SolicitudesTablero.vue'
 import ItdcLayout from '../views/2026/transformacion_digital/ItdcLayout.vue'
 import ContenidosMovilidad from '../views/2026/contenidos_movilidad/ContenidosMovilidad.vue'
+import IndiceDerechosCulturales from '../views/2026/indice_derechos_culturales/IndiceDerechosCulturales.vue'
 import RedObservatorios from '../views/2026/demo_red_observatorios/RedObservatorios.vue'
 import AvisosResiduos from '../views/2026/avisos_residuos_seguimiento/AvisosResiduos.vue'
 import MetaPdd from '../views/2026/meta_pdd/MetaPdd.vue'
@@ -115,6 +116,12 @@ const routes = [
     name: 'Contenidos Movilidad',
     component: ContenidosMovilidad,
     meta: { title: 'Contenidos Movilidad | Observatorio' },
+  },
+  {
+    path: '/2026/indice_derechos_culturales',
+    name: 'Índice de Derechos Culturales',
+    component: IndiceDerechosCulturales,
+    meta: { title: 'Índice de Derechos Culturales | Observatorio' },
   },
   {
     path: '/2026/avisos_residuos_seguimiento',

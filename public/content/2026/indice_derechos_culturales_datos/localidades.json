@@ -1,0 +1,218 @@
+[
+  {
+    "cod_localidad": 1,
+    "localidad_residencia": "Usaquén",
+    "nombre": "Usaquén",
+    "abreviatura": "USQN",
+    "key": "usaquen",
+    "es_localidad": 1,
+    "sector": "1. Nororiente"
+  },
+  {
+    "cod_localidad": 2,
+    "localidad_residencia": "Chapinero",
+    "nombre": "Chapinero",
+    "abreviatura": "CHAP",
+    "key": "chapinero",
+    "es_localidad": 1,
+    "sector": "4. Oriente"
+  },
+  {
+    "cod_localidad": 3,
+    "localidad_residencia": "Santa Fe",
+    "nombre": "Santa Fe",
+    "abreviatura": "STFE",
+    "key": "santafe",
+    "es_localidad": 1,
+    "sector": "5. Centro"
+  },
+  {
+    "cod_localidad": 4,
+    "localidad_residencia": "San Cristóbal",
+    "nombre": "San Cristóbal",
+    "abreviatura": "SCRI",
+    "key": "san_cristobal",
+    "es_localidad": 1,
+    "sector": "6. Sur oriente"
+  },
+  {
+    "cod_localidad": 5,
+    "localidad_residencia": "Usme",
+    "nombre": "Usme",
+    "abreviatura": "USME",
+    "key": "usme",
+    "es_localidad": 1,
+    "sector": "6. Sur oriente"
+  },
+  {
+    "cod_localidad": 6,
+    "localidad_residencia": "Tunjuelito",
+    "nombre": "Tunjuelito",
+    "abreviatura": "TJLT",
+    "key": "tunjuelito",
+    "es_localidad": 1,
+    "sector": "7. Sur occidente"
+  },
+  {
+    "cod_localidad": 7,
+    "localidad_residencia": "Bosa",
+    "nombre": "Bosa",
+    "abreviatura": "BOSA",
+    "key": "bosa",
+    "es_localidad": 1,
+    "sector": "7. Sur occidente"
+  },
+  {
+    "cod_localidad": 8,
+    "localidad_residencia": "Kennedy",
+    "nombre": "Kennedy",
+    "abreviatura": "KENN",
+    "key": "kennedy",
+    "es_localidad": 1,
+    "sector": "7. Sur occidente"
+  },
+  {
+    "cod_localidad": 9,
+    "localidad_residencia": "Fontibón",
+    "nombre": "Fontibón",
+    "abreviatura": "FONT",
+    "key": "fontibon",
+    "es_localidad": 1,
+    "sector": "3. Occidente"
+  },
+  {
+    "cod_localidad": 10,
+    "localidad_residencia": "Engativá",
+    "nombre": "Engativá",
+    "abreviatura": "ENGT",
+    "key": "engativa",
+    "es_localidad": 1,
+    "sector": "3. Occidente"
+  },
+  {
+    "cod_localidad": 11,
+    "localidad_residencia": "Suba",
+    "nombre": "Suba",
+    "abreviatura": "SUBA",
+    "key": "suba",
+    "es_localidad": 1,
+    "sector": "2. Noroccidente"
+  },
+  {
+    "cod_localidad": 12,
+    "localidad_residencia": "Barrios Unidos",
+    "nombre": "Barrios Unidos",
+    "abreviatura": "BUNI",
+    "key": "barrios_unidos",
+    "es_localidad": 1,
+    "sector": "4. Oriente"
+  },
+  {
+    "cod_localidad": 13,
+    "localidad_residencia": "Teusaquillo",
+    "nombre": "Teusaquillo",
+    "abreviatura": "TQLL",
+    "key": "teusaquillo",
+    "es_localidad": 1,
+    "sector": "4. Oriente"
+  },
+  {
+    "cod_localidad": 14,
+    "localidad_residencia": "Los Mártires",
+    "nombre": "Los Mártires",
+    "abreviatura": "LMAR",
+    "key": "los_martires",
+    "es_localidad": 1,
+    "sector": "5. Centro"
+  },
+  {
+    "cod_localidad": 15,
+    "localidad_residencia": "Antonio Nariño",
+    "nombre": "Antonio Nariño",
+    "abreviatura": "ANAR",
+    "key": "antonio_narino",
+    "es_localidad": 1,
+    "sector": "5. Centro"
+  },
+  {
+    "cod_localidad": 16,
+    "localidad_residencia": "Puente Aranda",
+    "nombre": "Puente Aranda",
+    "abreviatura": "PTAR",
+    "key": "puente_aranda",
+    "es_localidad": 1,
+    "sector": "5. Centro"
+  },
+  {
+    "cod_localidad": 17,
+    "localidad_residencia": "La Candelaria",
+    "nombre": "La Candelaria",
+    "abreviatura": "LCAN",
+    "key": "la_candelaria",
+    "es_localidad": 1,
+    "sector": "5. Centro"
+  },
+  {
+    "cod_localidad": 18,
+    "localidad_residencia": "Rafael Uribe Uribe",
+    "nombre": "Rafael Uribe Uribe",
+    "abreviatura": "RAUU",
+    "key": "rafael_uribe_uribe",
+    "es_localidad": 1,
+    "sector": "6. Sur oriente"
+  },
+  {
+    "cod_localidad": 19,
+    "localidad_residencia": "Ciudad Bolívar",
+    "nombre": "Ciudad Bolívar",
+    "abreviatura": "CBOL",
+    "key": "ciudad_bolivar",
+    "es_localidad": 1,
+    "sector": "7. Sur occidente"
+  },
+  {
+    "cod_localidad": 20,
+    "localidad_residencia": "Sumapaz",
+    "nombre": "Sumapaz",
+    "abreviatura": "SMPZ",
+    "key": "sumapaz",
+    "es_localidad": 1,
+    "sector": "8. Rural"
+  },
+  {
+    "cod_localidad": 21,
+    "localidad_residencia": "Fuera de Bogotá",
+    "nombre": "Fuera de Bogotá",
+    "abreviatura": "NA",
+    "key": "fuera_bogota",
+    "es_localidad": 0,
+    "sector": "9. No aplica"
+  },
+  {
+    "cod_localidad": 97,
+    "localidad_residencia": "Bogotá",
+    "nombre": "Bogotá",
+    "abreviatura": "BGTA",
+    "key": "bogota",
+    "es_localidad": 0,
+    "sector": "9. No aplica"
+  },
+  {
+    "cod_localidad": 99,
+    "localidad_residencia": "NS/NR",
+    "nombre": "NS/NR",
+    "abreviatura": "ND",
+    "key": "ns_nr",
+    "es_localidad": 0,
+    "sector": "9. No disponible"
+  },
+  {
+    "cod_localidad": 98,
+    "localidad_residencia": "NA",
+    "nombre": "No Aplica",
+    "abreviatura": "NA",
+    "key": "na",
+    "es_localidad": 0,
+    "sector": "9. No disponible"
+  }
+]

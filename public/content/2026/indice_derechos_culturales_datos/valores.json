@@ -1,0 +1,884 @@
+[
+  {
+    "codigo": "C1",
+    "cod_localidad": 97,
+    "localidad": "Bogotá",
+    "valor": 0.544834496
+  },
+  {
+    "codigo": "C1",
+    "cod_localidad": 15,
+    "localidad": "Antonio Nariño",
+    "valor": 0.520843065
+  },
+  {
+    "codigo": "C1",
+    "cod_localidad": 12,
+    "localidad": "Barrios Unidos",
+    "valor": 0.5244513485
+  },
+  {
+    "codigo": "C1",
+    "cod_localidad": 7,
+    "localidad": "Bosa",
+    "valor": 0.5211432471
+  },
+  {
+    "codigo": "C1",
+    "cod_localidad": 2,
+    "localidad": "Chapinero",
+    "valor": 0.5675185447
+  },
+  {
+    "codigo": "C1",
+    "cod_localidad": 19,
+    "localidad": "Ciudad Bolívar",
+    "valor": 0.5744461467
+  },
+  {
+    "codigo": "C1",
+    "cod_localidad": 10,
+    "localidad": "Engativá",
+    "valor": 0.5402996776
+  },
+  {
+    "codigo": "C1",
+    "cod_localidad": 9,
+    "localidad": "Fontibón",
+    "valor": 0.5546307639
+  },
+  {
+    "codigo": "C1",
+    "cod_localidad": 8,
+    "localidad": "Kennedy",
+    "valor": 0.5685155212
+  },
+  {
+    "codigo": "C1",
+    "cod_localidad": 17,
+    "localidad": "La Candelaria",
+    "valor": 0.5488075364
+  },
+  {
+    "codigo": "C1",
+    "cod_localidad": 14,
+    "localidad": "Los Mártires",
+    "valor": 0.4934678248
+  },
+  {
+    "codigo": "C1",
+    "cod_localidad": 16,
+    "localidad": "Puente Aranda",
+    "valor": 0.5845018351
+  },
+  {
+    "codigo": "C1",
+    "cod_localidad": 18,
+    "localidad": "Rafael Uribe Uribe",
+    "valor": 0.5502622235
+  },
+  {
+    "codigo": "C1",
+    "cod_localidad": 4,
+    "localidad": "San Cristóbal",
+    "valor": 0.4951704889
+  },
+  {
+    "codigo": "C1",
+    "cod_localidad": 3,
+    "localidad": "Santa Fe",
+    "valor": 0.5332023678
+  },
+  {
+    "codigo": "C1",
+    "cod_localidad": 11,
+    "localidad": "Suba",
+    "valor": 0.5461824832
+  },
+  {
+    "codigo": "C1",
+    "cod_localidad": 20,
+    "localidad": "Sumapaz",
+    "valor": 0.5553512464
+  },
+  {
+    "codigo": "C1",
+    "cod_localidad": 13,
+    "localidad": "Teusaquillo",
+    "valor": 0.5952580199
+  },
+  {
+    "codigo": "C1",
+    "cod_localidad": 6,
+    "localidad": "Tunjuelito",
+    "valor": 0.5105728188
+  },
+  {
+    "codigo": "C1",
+    "cod_localidad": 1,
+    "localidad": "Usaquén",
+    "valor": 0.532008132
+  },
+  {
+    "codigo": "C1",
+    "cod_localidad": 5,
+    "localidad": "Usme",
+    "valor": 0.5191020424
+  },
+  {
+    "codigo": "C2",
+    "cod_localidad": 97,
+    "localidad": "Bogotá",
+    "valor": 0.5576082539
+  },
+  {
+    "codigo": "C2",
+    "cod_localidad": 15,
+    "localidad": "Antonio Nariño",
+    "valor": 0.5476254351
+  },
+  {
+    "codigo": "C2",
+    "cod_localidad": 12,
+    "localidad": "Barrios Unidos",
+    "valor": 0.6433043021
+  },
+  {
+    "codigo": "C2",
+    "cod_localidad": 7,
+    "localidad": "Bosa",
+    "valor": 0.574413743
+  },
+  {
+    "codigo": "C2",
+    "cod_localidad": 2,
+    "localidad": "Chapinero",
+    "valor": 0.5517245289
+  },
+  {
+    "codigo": "C2",
+    "cod_localidad": 19,
+    "localidad": "Ciudad Bolívar",
+    "valor": 0.5300398111
+  },
+  {
+    "codigo": "C2",
+    "cod_localidad": 10,
+    "localidad": "Engativá",
+    "valor": 0.5989011741
+  },
+  {
+    "codigo": "C2",
+    "cod_localidad": 9,
+    "localidad": "Fontibón",
+    "valor": 0.5025703124
+  },
+  {
+    "codigo": "C2",
+    "cod_localidad": 8,
+    "localidad": "Kennedy",
+    "valor": 0.568844225
+  },
+  {
+    "codigo": "C2",
+    "cod_localidad": 17,
+    "localidad": "La Candelaria",
+    "valor": 0.4568241245
+  },
+  {
+    "codigo": "C2",
+    "cod_localidad": 14,
+    "localidad": "Los Mártires",
+    "valor": 0.4588336069
+  },
+  {
+    "codigo": "C2",
+    "cod_localidad": 16,
+    "localidad": "Puente Aranda",
+    "valor": 0.5469941933
+  },
+  {
+    "codigo": "C2",
+    "cod_localidad": 18,
+    "localidad": "Rafael Uribe Uribe",
+    "valor": 0.561252565
+  },
+  {
+    "codigo": "C2",
+    "cod_localidad": 4,
+    "localidad": "San Cristóbal",
+    "valor": 0.4996311762
+  },
+  {
+    "codigo": "C2",
+    "cod_localidad": 3,
+    "localidad": "Santa Fe",
+    "valor": 0.5503543095
+  },
+  {
+    "codigo": "C2",
+    "cod_localidad": 11,
+    "localidad": "Suba",
+    "valor": 0.600351843
+  },
+  {
+    "codigo": "C2",
+    "cod_localidad": 20,
+    "localidad": "Sumapaz",
+    "valor": 0.5921010848
+  },
+  {
+    "codigo": "C2",
+    "cod_localidad": 13,
+    "localidad": "Teusaquillo",
+    "valor": 0.5874267014
+  },
+  {
+    "codigo": "C2",
+    "cod_localidad": 6,
+    "localidad": "Tunjuelito",
+    "valor": 0.5037327155
+  },
+  {
+    "codigo": "C2",
+    "cod_localidad": 1,
+    "localidad": "Usaquén",
+    "valor": 0.512876461
+  },
+  {
+    "codigo": "C2",
+    "cod_localidad": 5,
+    "localidad": "Usme",
+    "valor": 0.5032009227
+  },
+  {
+    "codigo": "C3",
+    "cod_localidad": 97,
+    "localidad": "Bogotá",
+    "valor": 0.4891103358
+  },
+  {
+    "codigo": "C3",
+    "cod_localidad": 15,
+    "localidad": "Antonio Nariño",
+    "valor": 0.5372585599
+  },
+  {
+    "codigo": "C3",
+    "cod_localidad": 12,
+    "localidad": "Barrios Unidos",
+    "valor": 0.46887875
+  },
+  {
+    "codigo": "C3",
+    "cod_localidad": 7,
+    "localidad": "Bosa",
+    "valor": 0.53358947
+  },
+  {
+    "codigo": "C3",
+    "cod_localidad": 2,
+    "localidad": "Chapinero",
+    "valor": 0.435636413
+  },
+  {
+    "codigo": "C3",
+    "cod_localidad": 19,
+    "localidad": "Ciudad Bolívar",
+    "valor": 0.4832551093
+  },
+  {
+    "codigo": "C3",
+    "cod_localidad": 10,
+    "localidad": "Engativá",
+    "valor": 0.5630560296
+  },
+  {
+    "codigo": "C3",
+    "cod_localidad": 9,
+    "localidad": "Fontibón",
+    "valor": 0.5213750742
+  },
+  {
+    "codigo": "C3",
+    "cod_localidad": 8,
+    "localidad": "Kennedy",
+    "valor": 0.4527214715
+  },
+  {
+    "codigo": "C3",
+    "cod_localidad": 17,
+    "localidad": "La Candelaria",
+    "valor": 0.5152639381
+  },
+  {
+    "codigo": "C3",
+    "cod_localidad": 14,
+    "localidad": "Los Mártires",
+    "valor": 0.4306105127
+  },
+  {
+    "codigo": "C3",
+    "cod_localidad": 16,
+    "localidad": "Puente Aranda",
+    "valor": 0.4494803773
+  },
+  {
+    "codigo": "C3",
+    "cod_localidad": 18,
+    "localidad": "Rafael Uribe Uribe",
+    "valor": 0.4367278418
+  },
+  {
+    "codigo": "C3",
+    "cod_localidad": 4,
+    "localidad": "San Cristóbal",
+    "valor": 0.3946688247
+  },
+  {
+    "codigo": "C3",
+    "cod_localidad": 3,
+    "localidad": "Santa Fe",
+    "valor": 0.4564933631
+  },
+  {
+    "codigo": "C3",
+    "cod_localidad": 11,
+    "localidad": "Suba",
+    "valor": 0.5462972881
+  },
+  {
+    "codigo": "C3",
+    "cod_localidad": 20,
+    "localidad": "Sumapaz",
+    "valor": 0.4296123353
+  },
+  {
+    "codigo": "C3",
+    "cod_localidad": 13,
+    "localidad": "Teusaquillo",
+    "valor": 0.3972152269
+  },
+  {
+    "codigo": "C3",
+    "cod_localidad": 6,
+    "localidad": "Tunjuelito",
+    "valor": 0.4276296672
+  },
+  {
+    "codigo": "C3",
+    "cod_localidad": 1,
+    "localidad": "Usaquén",
+    "valor": 0.4951344048
+  },
+  {
+    "codigo": "C3",
+    "cod_localidad": 5,
+    "localidad": "Usme",
+    "valor": 0.4011982793
+  },
+  {
+    "codigo": "C4",
+    "cod_localidad": 97,
+    "localidad": "Bogotá",
+    "valor": 0.4664503041
+  },
+  {
+    "codigo": "C4",
+    "cod_localidad": 15,
+    "localidad": "Antonio Nariño",
+    "valor": 0.5582451876
+  },
+  {
+    "codigo": "C4",
+    "cod_localidad": 12,
+    "localidad": "Barrios Unidos",
+    "valor": 0.2337347515
+  },
+  {
+    "codigo": "C4",
+    "cod_localidad": 7,
+    "localidad": "Bosa",
+    "valor": 0.5176191661
+  },
+  {
+    "codigo": "C4",
+    "cod_localidad": 2,
+    "localidad": "Chapinero",
+    "valor": 0.4018218625
+  },
+  {
+    "codigo": "C4",
+    "cod_localidad": 19,
+    "localidad": "Ciudad Bolívar",
+    "valor": 0.5733421838
+  },
+  {
+    "codigo": "C4",
+    "cod_localidad": 10,
+    "localidad": "Engativá",
+    "valor": 0.3148964886
+  },
+  {
+    "codigo": "C4",
+    "cod_localidad": 9,
+    "localidad": "Fontibón",
+    "valor": 0.5213561104
+  },
+  {
+    "codigo": "C4",
+    "cod_localidad": 8,
+    "localidad": "Kennedy",
+    "valor": 0.4310138514
+  },
+  {
+    "codigo": "C4",
+    "cod_localidad": 17,
+    "localidad": "La Candelaria",
+    "valor": 0.7857425316
+  },
+  {
+    "codigo": "C4",
+    "cod_localidad": 14,
+    "localidad": "Los Mártires",
+    "valor": 0.7304623558
+  },
+  {
+    "codigo": "C4",
+    "cod_localidad": 16,
+    "localidad": "Puente Aranda",
+    "valor": 0.3479468671
+  },
+  {
+    "codigo": "C4",
+    "cod_localidad": 18,
+    "localidad": "Rafael Uribe Uribe",
+    "valor": 0.4939059827
+  },
+  {
+    "codigo": "C4",
+    "cod_localidad": 4,
+    "localidad": "San Cristóbal",
+    "valor": 0.3616920733
+  },
+  {
+    "codigo": "C4",
+    "cod_localidad": 3,
+    "localidad": "Santa Fe",
+    "valor": 0.4124101428
+  },
+  {
+    "codigo": "C4",
+    "cod_localidad": 11,
+    "localidad": "Suba",
+    "valor": 0.4224982844
+  },
+  {
+    "codigo": "C4",
+    "cod_localidad": 20,
+    "localidad": "Sumapaz",
+    "valor": 0.3296858459
+  },
+  {
+    "codigo": "C4",
+    "cod_localidad": 13,
+    "localidad": "Teusaquillo",
+    "valor": 0.4530771287
+  },
+  {
+    "codigo": "C4",
+    "cod_localidad": 6,
+    "localidad": "Tunjuelito",
+    "valor": 0.6745361534
+  },
+  {
+    "codigo": "C4",
+    "cod_localidad": 1,
+    "localidad": "Usaquén",
+    "valor": 0.6866473888
+  },
+  {
+    "codigo": "C4",
+    "cod_localidad": 5,
+    "localidad": "Usme",
+    "valor": 0.4966617048
+  },
+  {
+    "codigo": "C5",
+    "cod_localidad": 97,
+    "localidad": "Bogotá",
+    "valor": 0.5584684725
+  },
+  {
+    "codigo": "C5",
+    "cod_localidad": 15,
+    "localidad": "Antonio Nariño",
+    "valor": 0.512968892
+  },
+  {
+    "codigo": "C5",
+    "cod_localidad": 12,
+    "localidad": "Barrios Unidos",
+    "valor": 0.5714419547
+  },
+  {
+    "codigo": "C5",
+    "cod_localidad": 7,
+    "localidad": "Bosa",
+    "valor": 0.4646446732
+  },
+  {
+    "codigo": "C5",
+    "cod_localidad": 2,
+    "localidad": "Chapinero",
+    "valor": 0.6255618139
+  },
+  {
+    "codigo": "C5",
+    "cod_localidad": 19,
+    "localidad": "Ciudad Bolívar",
+    "valor": 0.7068067564
+  },
+  {
+    "codigo": "C5",
+    "cod_localidad": 10,
+    "localidad": "Engativá",
+    "valor": 0.5170656157
+  },
+  {
+    "codigo": "C5",
+    "cod_localidad": 9,
+    "localidad": "Fontibón",
+    "valor": 0.3333067758
+  },
+  {
+    "codigo": "C5",
+    "cod_localidad": 8,
+    "localidad": "Kennedy",
+    "valor": 0.7065674016
+  },
+  {
+    "codigo": "C5",
+    "cod_localidad": 17,
+    "localidad": "La Candelaria",
+    "valor": 0.6023302952
+  },
+  {
+    "codigo": "C5",
+    "cod_localidad": 14,
+    "localidad": "Los Mártires",
+    "valor": 0.5788357988
+  },
+  {
+    "codigo": "C5",
+    "cod_localidad": 16,
+    "localidad": "Puente Aranda",
+    "valor": 0.8188740783
+  },
+  {
+    "codigo": "C5",
+    "cod_localidad": 18,
+    "localidad": "Rafael Uribe Uribe",
+    "valor": 0.62240789
+  },
+  {
+    "codigo": "C5",
+    "cod_localidad": 4,
+    "localidad": "San Cristóbal",
+    "valor": 0.4528942816
+  },
+  {
+    "codigo": "C5",
+    "cod_localidad": 3,
+    "localidad": "Santa Fe",
+    "valor": 0.6094833118
+  },
+  {
+    "codigo": "C5",
+    "cod_localidad": 11,
+    "localidad": "Suba",
+    "valor": 0.5640121523
+  },
+  {
+    "codigo": "C5",
+    "cod_localidad": 20,
+    "localidad": "Sumapaz",
+    "valor": 0.6200564829
+  },
+  {
+    "codigo": "C5",
+    "cod_localidad": 13,
+    "localidad": "Teusaquillo",
+    "valor": 0.6402201115
+  },
+  {
+    "codigo": "C5",
+    "cod_localidad": 6,
+    "localidad": "Tunjuelito",
+    "valor": 0.6439290103
+  },
+  {
+    "codigo": "C5",
+    "cod_localidad": 1,
+    "localidad": "Usaquén",
+    "valor": 0.5060429343
+  },
+  {
+    "codigo": "C5",
+    "cod_localidad": 5,
+    "localidad": "Usme",
+    "valor": 0.4876310764
+  },
+  {
+    "codigo": "C6",
+    "cod_localidad": 97,
+    "localidad": "Bogotá",
+    "valor": 0.3886532835
+  },
+  {
+    "codigo": "C6",
+    "cod_localidad": 15,
+    "localidad": "Antonio Nariño",
+    "valor": 0.4497829353
+  },
+  {
+    "codigo": "C6",
+    "cod_localidad": 12,
+    "localidad": "Barrios Unidos",
+    "valor": 0.3084514463
+  },
+  {
+    "codigo": "C6",
+    "cod_localidad": 7,
+    "localidad": "Bosa",
+    "valor": 0.4110519623
+  },
+  {
+    "codigo": "C6",
+    "cod_localidad": 2,
+    "localidad": "Chapinero",
+    "valor": 0.3348050077
+  },
+  {
+    "codigo": "C6",
+    "cod_localidad": 19,
+    "localidad": "Ciudad Bolívar",
+    "valor": 0.4166793784
+  },
+  {
+    "codigo": "C6",
+    "cod_localidad": 10,
+    "localidad": "Engativá",
+    "valor": 0.3555231536
+  },
+  {
+    "codigo": "C6",
+    "cod_localidad": 9,
+    "localidad": "Fontibón",
+    "valor": 0.3795584976
+  },
+  {
+    "codigo": "C6",
+    "cod_localidad": 8,
+    "localidad": "Kennedy",
+    "valor": 0.391288468
+  },
+  {
+    "codigo": "C6",
+    "cod_localidad": 17,
+    "localidad": "La Candelaria",
+    "valor": 0.4515518964
+  },
+  {
+    "codigo": "C6",
+    "cod_localidad": 14,
+    "localidad": "Los Mártires",
+    "valor": 0.4603242057
+  },
+  {
+    "codigo": "C6",
+    "cod_localidad": 16,
+    "localidad": "Puente Aranda",
+    "valor": 0.4117172085
+  },
+  {
+    "codigo": "C6",
+    "cod_localidad": 18,
+    "localidad": "Rafael Uribe Uribe",
+    "valor": 0.4330535107
+  },
+  {
+    "codigo": "C6",
+    "cod_localidad": 4,
+    "localidad": "San Cristóbal",
+    "valor": 0.3820672951
+  },
+  {
+    "codigo": "C6",
+    "cod_localidad": 3,
+    "localidad": "Santa Fe",
+    "valor": 0.4721323001
+  },
+  {
+    "codigo": "C6",
+    "cod_localidad": 11,
+    "localidad": "Suba",
+    "valor": 0.3710273932
+  },
+  {
+    "codigo": "C6",
+    "cod_localidad": 20,
+    "localidad": "Sumapaz",
+    "valor": 0.4058609604
+  },
+  {
+    "codigo": "C6",
+    "cod_localidad": 13,
+    "localidad": "Teusaquillo",
+    "valor": 0.4247231978
+  },
+  {
+    "codigo": "C6",
+    "cod_localidad": 6,
+    "localidad": "Tunjuelito",
+    "valor": 0.390163043
+  },
+  {
+    "codigo": "C6",
+    "cod_localidad": 1,
+    "localidad": "Usaquén",
+    "valor": 0.3272767748
+  },
+  {
+    "codigo": "C6",
+    "cod_localidad": 5,
+    "localidad": "Usme",
+    "valor": 0.471436371
+  },
+  {
+    "codigo": "IDC",
+    "cod_localidad": 97,
+    "localidad": "Bogotá",
+    "valor": 0.500854191
+  },
+  {
+    "codigo": "IDC",
+    "cod_localidad": 15,
+    "localidad": "Antonio Nariño",
+    "valor": 0.5211206792
+  },
+  {
+    "codigo": "IDC",
+    "cod_localidad": 12,
+    "localidad": "Barrios Unidos",
+    "valor": 0.4583770922
+  },
+  {
+    "codigo": "IDC",
+    "cod_localidad": 7,
+    "localidad": "Bosa",
+    "valor": 0.5037437103
+  },
+  {
+    "codigo": "IDC",
+    "cod_localidad": 2,
+    "localidad": "Chapinero",
+    "valor": 0.4861780285
+  },
+  {
+    "codigo": "IDC",
+    "cod_localidad": 19,
+    "localidad": "Ciudad Bolívar",
+    "valor": 0.547428231
+  },
+  {
+    "codigo": "IDC",
+    "cod_localidad": 10,
+    "localidad": "Engativá",
+    "valor": 0.4816236899
+  },
+  {
+    "codigo": "IDC",
+    "cod_localidad": 9,
+    "localidad": "Fontibón",
+    "valor": 0.4687995891
+  },
+  {
+    "codigo": "IDC",
+    "cod_localidad": 8,
+    "localidad": "Kennedy",
+    "valor": 0.5198251565
+  },
+  {
+    "codigo": "IDC",
+    "cod_localidad": 17,
+    "localidad": "La Candelaria",
+    "valor": 0.5600867204
+  },
+  {
+    "codigo": "IDC",
+    "cod_localidad": 14,
+    "localidad": "Los Mártires",
+    "valor": 0.5254223841
+  },
+  {
+    "codigo": "IDC",
+    "cod_localidad": 16,
+    "localidad": "Puente Aranda",
+    "valor": 0.5265857599
+  },
+  {
+    "codigo": "IDC",
+    "cod_localidad": 18,
+    "localidad": "Rafael Uribe Uribe",
+    "valor": 0.5162683356
+  },
+  {
+    "codigo": "IDC",
+    "cod_localidad": 4,
+    "localidad": "San Cristóbal",
+    "valor": 0.43102069
+  },
+  {
+    "codigo": "IDC",
+    "cod_localidad": 3,
+    "localidad": "Santa Fe",
+    "valor": 0.5056792992
+  },
+  {
+    "codigo": "IDC",
+    "cod_localidad": 11,
+    "localidad": "Suba",
+    "valor": 0.5083949074
+  },
+  {
+    "codigo": "IDC",
+    "cod_localidad": 20,
+    "localidad": "Sumapaz",
+    "valor": 0.4887779926
+  },
+  {
+    "codigo": "IDC",
+    "cod_localidad": 13,
+    "localidad": "Teusaquillo",
+    "valor": 0.5163200644
+  },
+  {
+    "codigo": "IDC",
+    "cod_localidad": 6,
+    "localidad": "Tunjuelito",
+    "valor": 0.5250939014
+  },
+  {
+    "codigo": "IDC",
+    "cod_localidad": 1,
+    "localidad": "Usaquén",
+    "valor": 0.5099976826
+  },
+  {
+    "codigo": "IDC",
+    "cod_localidad": 5,
+    "localidad": "Usme",
+    "valor": 0.4798717328
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "codigo": "C1",
+    "nombre": "Todas las culturas, todas las personas y todos los territorios cuentan",
+    "nombre_corto": "Acceso y prácticas",
+    "descripcion": "Describe las oportunidades y capacidades para ejercer los derechos culturales, reconociendo la diversidad de personas, culturas y territorios. Reúne prácticas artísticas y creativas, asistencia y acceso cultural, patrimonios y memorias, pertenencia, lectura, escritura y oralidad, medios comunitarios, espacio público y equipamientos culturales.",
+    "grupo": "IDC",
+    "tipo": "Subíndice",
+    "categoria": "Coordenada"
+  },
+  {
+    "codigo": "C2",
+    "nombre": "Transformaciones culturales para la igualdad y el diálogo intercultural",
+    "nombre_corto": "Igualdad",
+    "descripcion": "Aborda los factores culturales que favorecen o limitan la igualdad, el respeto a las diferencias y la convivencia. Reúne reconocimiento intercultural, rechazo de estereotipos, orgullo por vivir en Bogotá, relaciones con personas distintas y experiencias frente a hechos violentos de discriminación.",
+    "grupo": "IDC",
+    "tipo": "Subíndice",
+    "categoria": "Coordenada"
+  },
+  {
+    "codigo": "C3",
+    "nombre": "Somos la vida y los ecosistemas",
+    "nombre_corto": "Ambiente",
+    "descripcion": "Vincula el ejercicio de los derechos culturales con relaciones respetuosas entre las personas, la naturaleza y los ecosistemas. Recoge prácticas y percepciones sobre cuidado ambiental, responsabilidad ciudadana en la protección del agua, ahorro y reutilización, regeneración de ecosistemas y participación en asociaciones o grupos ambientales.",
+    "grupo": "IDC",
+    "tipo": "Subíndice",
+    "categoria": "Coordenada"
+  },
+  {
+    "codigo": "C4",
+    "nombre": "Acción colectiva, tejido social y redes de comunidades creadoras",
+    "nombre_corto": "Acción colectiva",
+    "descripcion": "Se refiere a la interacción, la asociatividad y la cooperación que sostienen el tejido social y las comunidades creadoras. El subíndice reúne el trabajo en red y la participación en organizaciones sociales como expresiones de acción colectiva.",
+    "grupo": "IDC",
+    "tipo": "Subíndice",
+    "categoria": "Coordenada"
+  },
+  {
+    "codigo": "C5",
+    "nombre": "Pervivencia y generación de riqueza",
+    "nombre_corto": "Economía",
+    "descripcion": "Aborda las condiciones económicas que contribuyen a la continuidad de las iniciativas y prácticas culturales. El subíndice reúne el cobro por actividades artísticas o creativas, los recursos destinados a su realización y el gasto cultural.",
+    "grupo": "IDC",
+    "tipo": "Subíndice",
+    "categoria": "Coordenada"
+  },
+  {
+    "codigo": "C6",
+    "nombre": "Gobernanza cultural, cuidado de lo público y participación incidente",
+    "nombre_corto": "Organización",
+    "descripcion": "Se refiere a las posibilidades de organizarse, participar e influir en las decisiones públicas relacionadas con la vida cultural. Reúne la organización y participación en procesos culturales, la participación en espacios promovidos por el Distrito y la percepción sobre las condiciones para una participación incidente.",
+    "grupo": "IDC",
+    "tipo": "Subíndice",
+    "categoria": "Coordenada"
+  },
+  {
+    "codigo": "IDC",
+    "nombre": "Índice de Derechos Culturales",
+    "nombre_corto": "IDC",
+    "descripcion": "Sintetiza las condiciones, percepciones y prácticas asociadas al ejercicio de los derechos culturales en Bogotá. Se calcula como el promedio simple de seis subíndices o coordenadas, construidos a partir de 27 indicadores de la Encuesta Bienal de Culturas. Su escala va de 0 a 1; valores más altos expresan condiciones más favorables. No equivale al porcentaje de personas que ejercen todos sus derechos culturales.",
+    "grupo": "IDC",
+    "tipo": "Índice",
+    "categoria": "Total"
+  }
+]
