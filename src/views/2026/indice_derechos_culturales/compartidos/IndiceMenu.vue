@@ -3,7 +3,6 @@ defineProps({ modelValue: { type: String, default: 'matriz' } })
 const emit = defineEmits(['update:modelValue'])
 const vistas = [
   { codigo: 'matriz', nombre: 'Matriz', icono: 'bi-grid-3x3' },
-  { codigo: 'tabla', nombre: 'Tabla', icono: 'bi-table' },
   { codigo: 'mapa', nombre: 'Mapa', icono: 'bi-map' },
   { codigo: 'info', nombre: 'Acerca de', icono: 'bi-info-circle' },
 ]

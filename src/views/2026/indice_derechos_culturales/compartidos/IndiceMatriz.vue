@@ -1,24 +1,22 @@
 <script setup>
-import { computed, ref } from 'vue'
+import { computed } from 'vue'
 import IndiceLeyenda from './IndiceLeyenda.vue'
+import { ordenarSubindices } from '../configuracion.js'
 import { CODIGO_BOGOTA, crearRanking, descripcionColorBogota } from './ranking.js'
 
 const props = defineProps({
   subindices: { type: Array, required: true },
   localidades: { type: Array, required: true },
   valores: { type: Array, required: true },
+  configuracion: { type: Object, required: true },
 })
 
-const ordenarPor = ref('IDC')
-const ordenAsc = ref(false)
+const ordenarPor = defineModel('ordenarPor', { type: String, required: true })
+const ordenAsc = defineModel('ordenAsc', { type: Boolean, default: false })
 const columnas = computed(() =>
-  [...props.subindices].sort((a, b) => {
-    if (a.codigo === b.codigo) return 0
-    if (a.codigo === 'IDC') return -1
-    if (b.codigo === 'IDC') return 1
-    return a.codigo.localeCompare(b.codigo, 'es', { numeric: true })
-  }),
+  ordenarSubindices(props.subindices, props.configuracion.codigoTotal),
 )
+const anchoMinimo = computed(() => `${Math.max(740, 210 + columnas.value.length * 100)}px`)
 
 // Cada columna conserva su ranking propio, independiente del orden visible de las filas.
 const rankings = computed(
@@ -89,21 +87,19 @@ function describirCelda(celda, columna) {
     <section class="matriz-panel idc-panel" aria-label="Matriz de índices por localidad">
       <header class="matriz-cabecera">
         <div>
-          <span class="idc-eyebrow">Comparación conjunta</span>
-          <h2>Índice y coordenadas por localidad</h2>
+          <h2>Índice y {{ configuracion.plural }} por localidad</h2>
         </div>
         <span class="matriz-orden"
           >Orden: <strong>{{ ordenarPor }}</strong> ·
           {{ ordenAsc ? 'Menor a mayor' : 'Mayor a menor' }}</span
         >
       </header>
-      <p class="idc-note matriz-ayuda">
-        Selecciona el código de una columna para ordenar sus valores. El color de cada casilla
-        corresponde al puesto de la localidad dentro de esa columna.
-      </p>
-      <p class="matriz-ayuda-movil idc-note">
-        <i class="bi bi-arrow-left-right" aria-hidden="true"></i>Desliza la tabla para ver todas las
-        coordenadas.
+      <p
+        class="matriz-ayuda-movil idc-note"
+        :class="{ 'matriz-ayuda-amplia': columnas.length > 7 }"
+      >
+        <i class="bi bi-arrow-left-right" aria-hidden="true"></i>Desplázate horizontalmente para ver
+        todas las columnas.
       </p>
 
       <div
@@ -112,10 +108,17 @@ function describirCelda(celda, columna) {
         role="region"
         aria-label="Tabla de valores. Puedes desplazarte horizontalmente para ver todas las columnas."
       >
-        <table class="matriz-tabla">
+        <table class="matriz-tabla" :style="{ minWidth: anchoMinimo }">
           <caption class="visually-hidden">
-            Valores en escala de 0 a 1 para el IDC y sus seis subíndices. Bogotá se mantiene en la
-            primera fila. Las localidades están ordenadas por
+            Valores en escala de 0 a 1 para
+            {{
+              configuracion.codigo
+            }}
+            y sus
+            {{
+              columnas.length - 1
+            }}
+            subíndices. Bogotá se mantiene en la primera fila. Las localidades están ordenadas por
             {{
               ordenarPor
             }}, de
@@ -193,7 +196,7 @@ function describirCelda(celda, columna) {
       <div class="idc-note matriz-notas">
         <p>
           Los colores se calculan por separado para cada índice y se conservan al reordenar las
-          filas. La posición de una fila en la matriz no indica su puesto en todas las coordenadas.
+          filas. La posición de una fila en la matriz no indica su puesto en todos los subíndices.
         </p>
         <p>
           Bogotá usa el color de su puesto equivalente en cada columna y permanece fuera del ranking
@@ -226,7 +229,7 @@ function describirCelda(celda, columna) {
   gap: 1rem;
 }
 .matriz-cabecera h2 {
-  margin: 0.4rem 0 0;
+  margin: 0;
   font-size: 1.1rem;
   line-height: 1.5;
   font-weight: 550;
@@ -241,14 +244,16 @@ function describirCelda(celda, columna) {
   font-weight: 600;
   color: var(--idc-accent);
 }
-.matriz-ayuda {
-  margin-block: 0.85rem 1.25rem;
-  max-width: 85ch;
-}
 .matriz-ayuda-movil {
   display: none;
 }
+.matriz-ayuda-amplia {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 .matriz-scroll {
+  margin-top: 1rem;
   overflow-x: auto;
   overflow-y: hidden;
   max-width: 100%;
@@ -260,7 +265,6 @@ function describirCelda(celda, columna) {
 .matriz-tabla {
   table-layout: fixed;
   width: 100%;
-  min-width: 820px;
   border-collapse: separate;
   border-spacing: 3px;
   font-size: 0.8rem;
@@ -281,6 +285,9 @@ function describirCelda(celda, columna) {
 }
 .matriz-tabla thead th:first-child {
   text-align: right;
+}
+.matriz-tabla thead tr:first-child th {
+  font-size: 0.78rem;
 }
 .matriz-tabla thead button {
   display: inline-flex;
@@ -320,7 +327,7 @@ function describirCelda(celda, columna) {
   position: sticky;
   left: 0;
   z-index: 1;
-  width: 25%;
+  width: 210px;
   min-width: 190px;
   background: #fff;
 }
@@ -373,10 +380,8 @@ function describirCelda(celda, columna) {
     gap: 0.5rem;
     margin-bottom: 0.75rem;
   }
-  .matriz-tabla {
-    min-width: 740px;
-  }
   .matriz-tabla .col-localidad {
+    width: 170px;
     min-width: 150px;
   }
 }

@@ -121,7 +121,7 @@ const routes = [
     path: '/2026/indice_derechos_culturales',
     name: 'Índice de Derechos Culturales',
     component: IndiceDerechosCulturales,
-    meta: { title: 'Índice de Derechos Culturales | Observatorio' },
+    meta: { title: 'Derechos Culturales · IDC e IHC | Observatorio' },
   },
   {
     path: '/2026/avisos_residuos_seguimiento',

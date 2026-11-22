@@ -1,56 +1,88 @@
 <template>
   <section class="idc-tablero">
     <header class="tablero-cabecera">
-      <div class="tablero-identidad">
-        <span class="tablero-marca" aria-hidden="true">IDC</span>
-        <h1>Índice de Derechos Culturales</h1>
-      </div>
-      <IndiceMenu v-model="vistaActiva" />
+      <IndiceGrupoSelector v-model="grupoActivo" />
+      <component :is="menus[grupoActivo]" v-model="vistaActiva" />
     </header>
 
     <IndiceInfo v-if="vistaActiva === 'info'" />
     <p v-else-if="cargando" class="tablero-estado" role="status">Cargando datos...</p>
     <p v-else-if="error" class="tablero-estado text-danger" role="alert">{{ error }}</p>
-    <template v-else>
-      <IndiceTabla
-        v-if="vistaActiva === 'tabla'"
-        v-model="indiceSeleccionado"
-        :subindices="subindices"
-        :localidades="localidades"
-        :valores="valores"
-      />
-      <IndiceMapa
-        v-else-if="vistaActiva === 'mapa'"
-        v-model="indiceSeleccionado"
-        :subindices="subindices"
-        :localidades="localidades"
-        :valores="valores"
-      />
-      <IndiceMatriz
-        v-else-if="vistaActiva === 'matriz'"
-        :subindices="subindices"
-        :localidades="localidades"
-        :valores="valores"
-      />
-    </template>
+    <component
+      :is="vistas[grupoActivo][vistaActiva]"
+      v-else
+      :key="`${grupoActivo}-${vistaActiva}`"
+      v-bind="propiedadesVista"
+    />
   </section>
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue'
-import IndiceTabla from './indice/IndiceTabla.vue'
-import IndiceMenu from './indice/IndiceMenu.vue'
-import IndiceMapa from './indice/IndiceMapa.vue'
-import IndiceInfo from './indice/IndiceInfo.vue'
-import IndiceMatriz from './indice/IndiceMatriz.vue'
+import { computed, onMounted, reactive, ref } from 'vue'
+import IndiceGrupoSelector from './IndiceGrupoSelector.vue'
+import IndiceInfo from './IndiceInfo.vue'
+import IdcMenu from './idc/IdcMenu.vue'
+import IdcMatriz from './idc/IdcMatriz.vue'
+import IdcMapa from './idc/IdcMapa.vue'
+import IhcMenu from './ihc/IhcMenu.vue'
+import IhcMatriz from './ihc/IhcMatriz.vue'
+import IhcMapa from './ihc/IhcMapa.vue'
+import { GRUPOS, crearEstadoGrupo } from './configuracion.js'
+
+const menus = { IDC: IdcMenu, IHC: IhcMenu }
+const vistas = {
+  IDC: { matriz: IdcMatriz, mapa: IdcMapa },
+  IHC: { matriz: IhcMatriz, mapa: IhcMapa },
+}
 
 const subindices = ref([])
 const localidades = ref([])
 const valores = ref([])
-const indiceSeleccionado = ref('IDC')
+const grupoActivo = ref('IDC')
 const vistaActiva = ref('matriz')
+const estados = reactive(
+  Object.fromEntries(Object.values(GRUPOS).map((grupo) => [grupo.codigo, crearEstadoGrupo(grupo)])),
+)
 const cargando = ref(true)
 const error = ref('')
+
+const subindicesGrupo = computed(() =>
+  subindices.value.filter((item) => item.grupo === grupoActivo.value),
+)
+const valoresGrupo = computed(() => {
+  const codigos = new Set(subindicesGrupo.value.map((item) => item.codigo))
+  return valores.value.filter((item) => codigos.has(item.codigo))
+})
+
+// El estado vive aquí para conservarlo aunque se desmonte una vista o su mapa.
+const propiedadesVista = computed(() => {
+  const estado = estados[grupoActivo.value]
+  const datos = {
+    subindices: subindicesGrupo.value,
+    localidades: localidades.value,
+    valores: valoresGrupo.value,
+  }
+  if (vistaActiva.value === 'matriz') {
+    return {
+      ...datos,
+      ordenarPor: estado.ordenMatrizPor,
+      ordenAsc: estado.ordenMatrizAsc,
+      'onUpdate:ordenarPor': (codigo) => {
+        estado.ordenMatrizPor = codigo
+      },
+      'onUpdate:ordenAsc': (ascendente) => {
+        estado.ordenMatrizAsc = ascendente
+      },
+    }
+  }
+  return {
+    ...datos,
+    modelValue: estado.indice,
+    'onUpdate:modelValue': (codigo) => {
+      estado.indice = codigo
+    },
+  }
+})
 
 async function leerDatos(nombre) {
   const ruta = `${import.meta.env.BASE_URL}content/2026/indice_derechos_culturales_datos/${nombre}.json`
@@ -78,7 +110,7 @@ onMounted(async () => {
     localidades.value = datosLocalidades
     valores.value = datosValores
   } catch (err) {
-    console.error('Error al cargar los datos del Índice de Derechos Culturales:', err)
+    console.error('Error al cargar los datos del informe IDC e IHC:', err)
     error.value = 'No fue posible cargar los datos. Intenta recargar la página.'
   } finally {
     cargando.value = false
@@ -155,37 +187,6 @@ onMounted(async () => {
   padding-bottom: 0;
   margin-bottom: 1.25rem;
 }
-.tablero-identidad {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-}
-.tablero-marca {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-  padding: 0;
-  flex-shrink: 0;
-  width: 36px;
-  height: 36px;
-  border: 1px solid #ded8e5;
-  border-radius: 10px;
-  background: var(--idc-soft);
-  color: var(--idc-accent);
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-}
-.tablero-identidad h1 {
-  margin: 0;
-  font-size: 0.85rem;
-  font-weight: 650;
-  line-height: 1.5;
-  letter-spacing: 0.065em;
-  text-transform: uppercase;
-  color: var(--idc-ink);
-}
 .tablero-estado {
   padding: 3rem 1rem;
   text-align: center;
@@ -206,13 +207,6 @@ onMounted(async () => {
   }
 }
 @media (max-width: 767px) {
-  .tablero-marca {
-    display: none;
-  }
-  .tablero-identidad {
-    min-height: 36px;
-    padding-left: 2.85rem;
-  }
   .tablero-cabecera {
     flex-wrap: wrap;
     gap: 1rem;

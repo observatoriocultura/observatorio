@@ -2,8 +2,8 @@
   {
     "codigo": "C1",
     "nombre": "Todas las culturas, todas las personas y todos los territorios cuentan",
-    "nombre_corto": "Acceso y prácticas",
     "descripcion": "Describe las oportunidades y capacidades para ejercer los derechos culturales, reconociendo la diversidad de personas, culturas y territorios. Reúne prácticas artísticas y creativas, asistencia y acceso cultural, patrimonios y memorias, pertenencia, lectura, escritura y oralidad, medios comunitarios, espacio público y equipamientos culturales.",
+    "nombre_corto": "Acceso y prácticas",
     "grupo": "IDC",
     "tipo": "Subíndice",
     "categoria": "Coordenada"
@@ -11,8 +11,8 @@
   {
     "codigo": "C2",
     "nombre": "Transformaciones culturales para la igualdad y el diálogo intercultural",
-    "nombre_corto": "Igualdad",
     "descripcion": "Aborda los factores culturales que favorecen o limitan la igualdad, el respeto a las diferencias y la convivencia. Reúne reconocimiento intercultural, rechazo de estereotipos, orgullo por vivir en Bogotá, relaciones con personas distintas y experiencias frente a hechos violentos de discriminación.",
+    "nombre_corto": "Igualdad",
     "grupo": "IDC",
     "tipo": "Subíndice",
     "categoria": "Coordenada"
@@ -20,8 +20,8 @@
   {
     "codigo": "C3",
     "nombre": "Somos la vida y los ecosistemas",
-    "nombre_corto": "Ambiente",
     "descripcion": "Vincula el ejercicio de los derechos culturales con relaciones respetuosas entre las personas, la naturaleza y los ecosistemas. Recoge prácticas y percepciones sobre cuidado ambiental, responsabilidad ciudadana en la protección del agua, ahorro y reutilización, regeneración de ecosistemas y participación en asociaciones o grupos ambientales.",
+    "nombre_corto": "Ambiente",
     "grupo": "IDC",
     "tipo": "Subíndice",
     "categoria": "Coordenada"
@@ -29,8 +29,8 @@
   {
     "codigo": "C4",
     "nombre": "Acción colectiva, tejido social y redes de comunidades creadoras",
-    "nombre_corto": "Acción colectiva",
     "descripcion": "Se refiere a la interacción, la asociatividad y la cooperación que sostienen el tejido social y las comunidades creadoras. El subíndice reúne el trabajo en red y la participación en organizaciones sociales como expresiones de acción colectiva.",
+    "nombre_corto": "Acción colectiva",
     "grupo": "IDC",
     "tipo": "Subíndice",
     "categoria": "Coordenada"
@@ -38,8 +38,8 @@
   {
     "codigo": "C5",
     "nombre": "Pervivencia y generación de riqueza",
-    "nombre_corto": "Economía",
     "descripcion": "Aborda las condiciones económicas que contribuyen a la continuidad de las iniciativas y prácticas culturales. El subíndice reúne el cobro por actividades artísticas o creativas, los recursos destinados a su realización y el gasto cultural.",
+    "nombre_corto": "Economía",
     "grupo": "IDC",
     "tipo": "Subíndice",
     "categoria": "Coordenada"
@@ -47,8 +47,8 @@
   {
     "codigo": "C6",
     "nombre": "Gobernanza cultural, cuidado de lo público y participación incidente",
-    "nombre_corto": "Organización",
     "descripcion": "Se refiere a las posibilidades de organizarse, participar e influir en las decisiones públicas relacionadas con la vida cultural. Reúne la organización y participación en procesos culturales, la participación en espacios promovidos por el Distrito y la percepción sobre las condiciones para una participación incidente.",
+    "nombre_corto": "Organización",
     "grupo": "IDC",
     "tipo": "Subíndice",
     "categoria": "Coordenada"
@@ -56,9 +56,108 @@
   {
     "codigo": "IDC",
     "nombre": "Índice de Derechos Culturales",
-    "nombre_corto": "IDC",
     "descripcion": "Sintetiza las condiciones, percepciones y prácticas asociadas al ejercicio de los derechos culturales en Bogotá. Se calcula como el promedio simple de seis subíndices o coordenadas, construidos a partir de 27 indicadores de la Encuesta Bienal de Culturas. Su escala va de 0 a 1; valores más altos expresan condiciones más favorables. No equivale al porcentaje de personas que ejercen todos sus derechos culturales.",
+    "nombre_corto": "IDC",
     "grupo": "IDC",
+    "tipo": "Índice",
+    "categoria": "Total"
+  },
+  {
+    "codigo": "H01",
+    "nombre": "Construcción de paz y respeto a la diferencia para la solución pacífica de conflictos y la convivencia",
+    "descripcion": null,
+    "nombre_corto": "Paz y convivencia",
+    "grupo": "IHC",
+    "tipo": "Subíndice",
+    "categoria": "Horizonte"
+  },
+  {
+    "codigo": "H02",
+    "nombre": "Recuperación de confianza y cuidado de lo público",
+    "descripcion": null,
+    "nombre_corto": "Confianza y cuidado de lo público",
+    "grupo": "IHC",
+    "tipo": "Subíndice",
+    "categoria": "Horizonte"
+  },
+  {
+    "codigo": "H03",
+    "nombre": "Profundización de una cultura política para la democracia y la participación efectiva",
+    "descripcion": null,
+    "nombre_corto": "Cultura política y participación",
+    "grupo": "IHC",
+    "tipo": "Subíndice",
+    "categoria": "Horizonte"
+  },
+  {
+    "codigo": "H04",
+    "nombre": "Nuevos vínculos sociales y solidaridades frente a los cambios demográficos y poblacionales",
+    "descripcion": null,
+    "nombre_corto": "Vínculos sociales y solidaridad",
+    "grupo": "IHC",
+    "tipo": "Subíndice",
+    "categoria": "Horizonte"
+  },
+  {
+    "codigo": "H05",
+    "nombre": "Hacia el cuidado del agua, el ambiente y todas las formas de vida",
+    "descripcion": null,
+    "nombre_corto": "Agua, ambiente y vida",
+    "grupo": "IHC",
+    "tipo": "Subíndice",
+    "categoria": "Horizonte"
+  },
+  {
+    "codigo": "H06",
+    "nombre": "Productividad empática, amable y humanizada",
+    "descripcion": null,
+    "nombre_corto": "Productividad empática",
+    "grupo": "IHC",
+    "tipo": "Subíndice",
+    "categoria": "Horizonte"
+  },
+  {
+    "codigo": "H07",
+    "nombre": "Aprovechamiento de las tecnologías y las transformaciones digitales",
+    "descripcion": null,
+    "nombre_corto": "Tecnologías y transformaciones digitales",
+    "grupo": "IHC",
+    "tipo": "Subíndice",
+    "categoria": "Horizonte"
+  },
+  {
+    "codigo": "H08",
+    "nombre": "Movilidad sostenible y formas empáticas de habitar la ciudad",
+    "descripcion": null,
+    "nombre_corto": "Movilidad sostenible",
+    "grupo": "IHC",
+    "tipo": "Subíndice",
+    "categoria": "Horizonte"
+  },
+  {
+    "codigo": "H09",
+    "nombre": "Promoción del cuidado de otros y del cuidado de sí para la salud y el bienestar",
+    "descripcion": null,
+    "nombre_corto": "Cuidado de otros y de sí",
+    "grupo": "IHC",
+    "tipo": "Subíndice",
+    "categoria": "Horizonte"
+  },
+  {
+    "codigo": "H10",
+    "nombre": "Nuevas formas de ser, hacer y habitar el mundo desde la formación y las prácticas culturales a lo largo de la vida",
+    "descripcion": null,
+    "nombre_corto": "Formación y prácticas culturales",
+    "grupo": "IHC",
+    "tipo": "Subíndice",
+    "categoria": "Horizonte"
+  },
+  {
+    "codigo": "IHC",
+    "nombre": "Índice de Derecho a la Ciudad y Derechos Culturales",
+    "descripcion": null,
+    "nombre_corto": "Índice de Horizontes",
+    "grupo": "IHC",
     "tipo": "Índice",
     "categoria": "Total"
   }

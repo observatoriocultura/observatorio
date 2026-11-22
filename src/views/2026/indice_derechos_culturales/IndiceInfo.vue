@@ -1,5 +1,5 @@
 <script setup>
-import { COLORES_POR_PUESTO } from './ranking.js'
+import { COLORES_POR_PUESTO } from './compartidos/ranking.js'
 </script>
 
 <template>
@@ -7,21 +7,22 @@ import { COLORES_POR_PUESTO } from './ranking.js'
     <header class="info-intro">
       <div class="info-presentacion">
         <span class="idc-eyebrow">Acerca del tablero</span>
-        <h2>Una mirada a los derechos culturales de Bogotá.</h2>
+        <h2>Dos índices para explorar Bogotá.</h2>
         <p>
-          El Índice de Derechos Culturales (IDC) reúne condiciones, percepciones y prácticas
-          asociadas al ejercicio de estos derechos. Permite comparar los resultados de la ciudad y
-          sus localidades, y aporta al seguimiento del Plan de Cultura de Bogotá 2038.
+          Este informe reúne dos miradas complementarias: el Índice de Derechos Culturales (IDC) y
+          el Índice de Derecho a la Ciudad y Derechos Culturales, presentado como Índice de
+          Horizontes (IHC). Compara los resultados de las 20 localidades y el total de la ciudad, en
+          el marco del Plan de Cultura de Bogotá 2038. Esta guía explica ambos grupos.
         </p>
       </div>
-      <dl class="info-cifras" aria-label="Estructura del índice">
+      <dl class="info-cifras" aria-label="Estructura del informe">
         <div>
-          <dt>Coordenadas</dt>
+          <dt>Coordenadas IDC</dt>
           <dd>6</dd>
         </div>
         <div>
-          <dt>Indicadores</dt>
-          <dd>27</dd>
+          <dt>Horizontes IHC</dt>
+          <dd>10</dd>
         </div>
         <div>
           <dt>Localidades<br /><span>y total Bogotá</span></dt>
@@ -31,29 +32,49 @@ import { COLORES_POR_PUESTO } from './ranking.js'
     </header>
 
     <div class="info-documento idc-panel">
+      <section class="info-grupos" aria-label="Los dos índices del informe">
+        <div>
+          <span class="idc-eyebrow">IDC · C1–C6</span>
+          <h3>Índice de Derechos Culturales</h3>
+          <p>
+            Se organiza en seis coordenadas que reúnen condiciones, percepciones y prácticas
+            asociadas al ejercicio de los derechos culturales: acceso y prácticas, igualdad,
+            ambiente, acción colectiva, economía y organización.
+          </p>
+        </div>
+        <div>
+          <span class="idc-eyebrow">IHC · H01–H10</span>
+          <h3>Índice de Horizontes</h3>
+          <p>
+            Reúne diez horizontes del derecho a la ciudad y los derechos culturales: paz y
+            convivencia, confianza y cuidado de lo público, participación, vínculos sociales,
+            ambiente, productividad, tecnologías, movilidad, bienestar y formación cultural.
+          </p>
+        </div>
+      </section>
       <div class="info-principal">
         <section class="info-seccion">
           <span class="seccion-etiqueta"><span>01</span> Interpretar</span>
           <h3>Una escala común de 0 a 1</h3>
           <p>
-            Un valor más alto refleja mejores condiciones para el ejercicio de los derechos
-            culturales. Un resultado intermedio expresa la coexistencia de condiciones favorables y
-            desfavorables.
+            Un valor más alto expresa condiciones más favorables en el indicador seleccionado.
+            Compara las localidades dentro de un mismo índice o subíndice. El punto medio de la
+            escala no establece un umbral de cumplimiento.
           </p>
           <div class="escala-valor" aria-label="Escala del índice de 0 a 1">
             <div>
               <strong>0</strong><span>Mayores<br />dificultades</span>
             </div>
             <div>
-              <strong>0,5</strong><span>Condiciones<br />mixtas</span>
+              <strong>0,5</strong><span>Punto medio<br />de la escala</span>
             </div>
             <div>
               <strong>1</strong><span>Mejores<br />condiciones</span>
             </div>
           </div>
           <p class="aclaracion">
-            El IDC es un promedio de sus seis subíndices. No equivale al porcentaje de personas que
-            ejercen todos sus derechos culturales.
+            Un puntaje de 0,558 no significa que el 55,8 % de las personas ejerza sus derechos
+            culturales. Es un valor del índice, no un porcentaje de población.
           </p>
         </section>
 
@@ -64,27 +85,31 @@ import { COLORES_POR_PUESTO } from './ranking.js'
             <li>
               <i class="bi bi-sliders2" aria-hidden="true"></i>
               <div>
-                <h4>Elige una coordenada</h4>
-                <p>Selecciona el IDC general o uno de los subíndices C1–C6.</p>
+                <h4>Elige IDC o IHC</h4>
+                <p>
+                  Cambia de grupo en el menú superior. IDC reúne las coordenadas C1–C6; IHC, los
+                  horizontes H01–H10. Cada grupo incluye también su índice total.
+                </p>
               </div>
             </li>
             <li>
               <i class="bi bi-layout-split" aria-hidden="true"></i>
               <div>
-                <h4>Cambia de perspectiva</h4>
+                <h4>Compara en la matriz</h4>
                 <p>
-                  Ordena los resultados en la tabla, explora las localidades en el mapa o compara
-                  todas las coordenadas en la matriz. La selección se conserva entre tabla y mapa.
+                  Cada columna es un indicador. Selecciona su código para ordenar las localidades;
+                  vuelve a pulsarlo para invertir el orden. Bogotá permanece en la primera fila.
                 </p>
               </div>
             </li>
             <li>
               <i class="bi bi-geo-alt" aria-hidden="true"></i>
               <div>
-                <h4>Compara con la ciudad</h4>
+                <h4>Explora en el mapa y su tabla</h4>
                 <p>
-                  Bogotá permanece como referencia. En el mapa, usa el zoom y pasa sobre una
-                  localidad para consultar su valor y puesto.
+                  Elige un indicador en el selector lateral o desplegable. Los nombres cortos tienen
+                  el nombre completo como ayuda. El mapa y la tabla se actualizan juntos; usa el
+                  zoom y pasa sobre una localidad para consultar su valor y puesto.
                 </p>
               </div>
             </li>
@@ -102,7 +127,7 @@ import { COLORES_POR_PUESTO } from './ranking.js'
               <dd>Representa el valor del índice en escala de 0 a 1.</dd>
             </div>
             <div>
-              <dt>Color de la barra y del mapa</dt>
+              <dt>Color de las barras, casillas y localidades del mapa</dt>
               <dd>
                 Representa la posición entre las 20 localidades. El puesto 1 es el valor más alto;
                 el 20, el más bajo.
@@ -110,7 +135,8 @@ import { COLORES_POR_PUESTO } from './ranking.js'
             </div>
           </dl>
           <p class="idc-note mb-0">
-            El puesto y el color se mantienen al invertir el orden de la tabla.
+            Cada columna de la matriz tiene su propio ranking. Reordenar las filas no cambia sus
+            colores. Cada grupo conserva su selección y el orden de la matriz mientras navegas.
           </p>
         </div>
         <div class="guia-color">
@@ -123,7 +149,7 @@ import { COLORES_POR_PUESTO } from './ranking.js'
             ></span>
           </div>
           <div class="muestra-etiquetas">
-            <span>1 · Altos</span><span>10–11 · Medios</span><span>20 · Bajos</span>
+            <span>1 · Mayor valor</span><span>10–11</span><span>20 · Menor valor</span>
           </div>
           <p>
             Verde, amarillo y rojo pastel comparan puestos dentro de la selección actual. No indican
@@ -150,9 +176,9 @@ import { COLORES_POR_PUESTO } from './ranking.js'
           <section>
             <h4>Cálculo</h4>
             <p>
-              Cada subíndice es el promedio simple de sus indicadores y el IDC es el promedio simple
-              de las seis coordenadas: oportunidades culturales, igualdad y diálogo intercultural,
-              vida y ecosistemas, acción colectiva, generación de riqueza y gobernanza cultural.
+              El IDC es el promedio simple de sus seis coordenadas, construidas a partir de 27
+              indicadores. El IHC es el promedio simple de sus diez horizontes. El tablero utiliza
+              los resultados entregados para cada índice y subíndice, con su precisión original.
             </p>
           </section>
           <section>
@@ -160,14 +186,16 @@ import { COLORES_POR_PUESTO } from './ranking.js'
             <p>
               Se muestran tres decimales y se ordena con la precisión original. Dos valores que se
               ven iguales pueden ocupar puestos distintos. Los empates se resuelven por código de
-              localidad. El símbolo — indica ausencia de datos, no cero.
+              localidad. Un valor ausente se muestra como —; en la columna de posición, Bogotá
+              también lleva — porque no participa en el ranking.
             </p>
           </section>
           <section>
             <h4>Fuentes y alcance</h4>
             <p>
-              Los datos proceden de distintos módulos y años de la Encuesta Bienal de Culturas. Este
-              tablero presenta una medición del índice; no muestra variaciones entre periodos.
+              Los resultados suministrados se construyen con indicadores de la Encuesta Bienal de
+              Culturas. El tablero presenta una medición de cada índice; no muestra variaciones
+              entre periodos. Los resultados de Bogotá se incorporan como referencia de ciudad.
             </p>
           </section>
           <section>
@@ -180,6 +208,19 @@ import { COLORES_POR_PUESTO } from './ranking.js'
           </section>
         </div>
       </details>
+      <footer class="info-fuente">
+        <div>
+          <span class="idc-eyebrow">Datos del informe</span>
+          <p>Consulta el catálogo de indicadores, las localidades y los valores originales.</p>
+        </div>
+        <a
+          href="https://docs.google.com/spreadsheets/d/1_BgpPnUPy8pCMLXlMJ0xYf379JMlMzw6ukPtPHyQ-Ck/edit?gid=551854597#gid=551854597"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Consultar datos fuente <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+          ><span class="visually-hidden"> (abre en otra pestaña)</span></a
+        >
+      </footer>
     </div>
   </article>
 </template>
@@ -189,13 +230,13 @@ import { COLORES_POR_PUESTO } from './ranking.js'
   display: grid;
   grid-template-columns: minmax(0, 1.6fr) minmax(280px, 1fr);
   align-items: end;
-  gap: 3rem;
-  padding: 1rem 0.25rem 2.5rem;
+  gap: 2rem;
+  padding: 0.5rem 0.25rem 1.75rem;
 }
 .info-presentacion h2 {
   max-width: 23ch;
   margin: 0.8rem 0 1rem;
-  font-size: clamp(1.8rem, 2.7vw, 2.5rem);
+  font-size: clamp(1.65rem, 2.4vw, 2.15rem);
   font-weight: 500;
   line-height: 1.22;
   letter-spacing: -0.035em;
@@ -206,7 +247,7 @@ import { COLORES_POR_PUESTO } from './ranking.js'
   max-width: 62ch;
   margin: 0;
   color: var(--idc-muted);
-  line-height: 1.85;
+  line-height: 1.75;
 }
 .info-cifras {
   display: grid;
@@ -232,7 +273,7 @@ import { COLORES_POR_PUESTO } from './ranking.js'
 }
 .info-cifras dd {
   margin: 0 0 0.65rem;
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 450;
   line-height: 1;
   letter-spacing: -0.05em;
@@ -240,6 +281,63 @@ import { COLORES_POR_PUESTO } from './ranking.js'
 }
 .info-documento {
   overflow: hidden;
+}
+.info-documento > :is(.info-grupos, .info-principal, .info-comparacion) {
+  padding: clamp(1.15rem, 2.5vw, 2rem);
+  gap: clamp(1.5rem, 3vw, 3rem);
+}
+.info-grupos > div {
+  min-width: 0;
+}
+.info-grupos > div + div {
+  border-left: 1px solid var(--idc-line);
+  padding-left: clamp(1.5rem, 3vw, 3rem);
+}
+.info-fuente {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem clamp(1.15rem, 2.5vw, 2rem);
+  border-top: 1px solid var(--idc-line);
+  background: #faf9fb;
+}
+.info-fuente p {
+  margin: 0.35rem 0 0;
+  font-size: 0.8rem;
+  color: var(--idc-muted);
+}
+.info-fuente a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 550;
+  color: var(--idc-accent);
+  text-underline-offset: 3px;
+  flex-shrink: 0;
+}
+.info-fuente a:focus-visible {
+  outline: 2px solid var(--idc-accent);
+  outline-offset: 4px;
+  border-radius: 3px;
+}
+.info-grupos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(2rem, 4vw, 4rem);
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  background: #faf9fb;
+  border-bottom: 1px solid var(--idc-line);
+}
+.info-grupos h3 {
+  margin-top: 0.6rem;
+}
+.info-grupos p {
+  margin: 0;
+  color: var(--idc-muted);
+  font-size: 0.825rem;
+  line-height: 1.85;
 }
 .info-principal,
 .info-comparacion {
@@ -321,7 +419,7 @@ h3 {
 }
 .info-seccion .aclaracion {
   margin: 0;
-  font-size: 0.73rem;
+  font-size: 0.8rem;
   padding-left: 0.8rem;
   border-left: 2px solid var(--idc-line);
 }
@@ -344,7 +442,7 @@ h3 {
 }
 .pasos-lectura h4 {
   margin: 0 0 0.35rem;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 550;
 }
 .pasos-lectura p {
@@ -425,7 +523,7 @@ h3 {
   padding: 1.15rem clamp(1.25rem, 3vw, 2.5rem);
   cursor: pointer;
   color: var(--idc-muted);
-  font-size: 0.75rem;
+  font-size: 0.8rem;
 }
 .notas-lectura summary::-webkit-details-marker {
   display: none;
@@ -469,10 +567,21 @@ h3 {
   }
 }
 @media (max-width: 650px) {
+  .info-grupos > div + div {
+    border-left: 0;
+    border-top: 1px solid var(--idc-line);
+    padding-left: 0;
+    padding-top: 1.5rem;
+  }
+  .info-fuente {
+    align-items: flex-start;
+    flex-direction: column;
+  }
   .info-intro {
     padding-bottom: 1.75rem;
   }
   .info-principal,
+  .info-grupos,
   .info-comparacion,
   .notas-grid {
     grid-template-columns: minmax(0, 1fr);

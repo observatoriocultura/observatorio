@@ -1,32 +1,35 @@
 <script setup>
 import { computed } from 'vue'
+import { ordenarSubindices } from '../configuracion.js'
 
 const props = defineProps({
   subindices: { type: Array, required: true },
-  modelValue: { type: String, default: 'IDC' },
+  configuracion: { type: Object, required: true },
+  modelValue: { type: String, required: true },
 })
 const emit = defineEmits(['update:modelValue'])
 const opciones = computed(() =>
-  [...props.subindices].sort((a, b) => {
-    if (a.codigo === b.codigo) return 0
-    if (a.codigo === 'IDC') return -1
-    if (b.codigo === 'IDC') return 1
-    return a.codigo.localeCompare(b.codigo, 'es', { numeric: true })
-  }),
+  ordenarSubindices(props.subindices, props.configuracion.codigoTotal),
 )
 </script>
 
 <template>
   <nav class="indices-sidebar idc-panel" aria-label="Índice y subíndices">
-    <span class="selector-titulo idc-eyebrow">Índice y coordenadas</span>
+    <span class="selector-titulo idc-eyebrow">Índice y {{ configuracion.plural }}</span>
     <select
       class="selector-mobile"
-      aria-label="Seleccionar índice o coordenada"
+      :aria-label="`Seleccionar índice o ${configuracion.singular}`"
       :value="modelValue"
+      :title="opciones.find((opcion) => opcion.codigo === modelValue)?.nombre"
       @change="emit('update:modelValue', $event.target.value)"
     >
-      <option v-for="opcion in opciones" :key="opcion.codigo" :value="opcion.codigo">
-        {{ opcion.codigo }} · {{ opcion.nombre }}
+      <option
+        v-for="opcion in opciones"
+        :key="opcion.codigo"
+        :value="opcion.codigo"
+        :title="opcion.nombre"
+      >
+        {{ opcion.codigo }} · {{ opcion.nombre_corto || opcion.nombre }}
       </option>
     </select>
     <div class="selector-opciones">
@@ -37,10 +40,12 @@ const opciones = computed(() =>
         class="indice-opcion"
         :class="{ activa: modelValue === opcion.codigo }"
         :aria-pressed="modelValue === opcion.codigo"
+        :title="opcion.nombre"
+        :aria-label="`${opcion.codigo} · ${opcion.nombre}`"
         @click="emit('update:modelValue', opcion.codigo)"
       >
         <span class="indice-codigo">{{ opcion.codigo }}</span>
-        <span>{{ opcion.nombre }}</span>
+        <span>{{ opcion.nombre_corto || opcion.nombre }}</span>
       </button>
     </div>
   </nav>
