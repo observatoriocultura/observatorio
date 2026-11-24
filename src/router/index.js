@@ -20,6 +20,7 @@ import ContenidosMovilidad from '../views/2026/contenidos_movilidad/ContenidosMo
 import IndiceDerechosCulturales from '../views/2026/indice_derechos_culturales/IndiceDerechosCulturales.vue'
 import RedObservatorios from '../views/2026/demo_red_observatorios/RedObservatorios.vue'
 import AvisosResiduos from '../views/2026/avisos_residuos_seguimiento/AvisosResiduos.vue'
+import ConsumoAgua from '../views/2026/consumo_agua_bogota/ConsumoAgua.vue'
 import MetaPdd from '../views/2026/meta_pdd/MetaPdd.vue'
 import MetaPddControl from '../views/2026/meta_pdd/MetaPddControl.vue'
 import PaiView from '../views/pai/PaiView.vue'
@@ -128,6 +129,12 @@ const routes = [
     name: 'Avisos Residuos Seguimiento 2026',
     component: AvisosResiduos,
     meta: { title: 'Avisos de residuos | Observatorio' },
+  },
+  {
+    path: '/2026/consumo_agua_bogota',
+    name: 'Consumo de agua en Bogotá',
+    component: ConsumoAgua,
+    meta: { title: 'Consumo de agua en Bogotá | Observatorio' },
   },
   {
     path: '/meta-pdd-mediciones-observatorio',
