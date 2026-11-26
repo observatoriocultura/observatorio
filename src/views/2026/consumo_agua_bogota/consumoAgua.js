@@ -62,6 +62,9 @@ export const normalizarPeriodo = (value) => {
 export const filtrarConsumosPorPeriodo = (consumos, periodo) =>
   periodo === null ? consumos : consumos.filter((registro) => registro.periodo === periodo)
 
+export const filtrarConsumosPorRangoPeriodo = (consumos, inicial, final) =>
+  consumos.filter((registro) => registro.periodo >= inicial && registro.periodo <= final)
+
 export const filtrarConsumosPorClaseUso = (consumos, codigo) =>
   codigo === null ? consumos : consumos.filter((registro) => registro.clase_uso_cod === codigo)
 
@@ -101,8 +104,8 @@ export const resumirPeriodosConsumo = (periodos) => {
   }
 }
 
-// Mantiene los 24 meses en orden, incluso cuando la clase no tiene registros.
-export const sumarConsumoPorPeriodo = (consumos) => {
+// Mantiene los meses solicitados en orden, incluso cuando no tienen registros.
+export const sumarConsumoPorPeriodo = (consumos, periodos = PERIODOS_CONSUMO) => {
   const totales = new Map()
 
   for (const registro of consumos) {
@@ -112,7 +115,7 @@ export const sumarConsumoPorPeriodo = (consumos) => {
     totales.set(registro.periodo, total)
   }
 
-  return PERIODOS_CONSUMO.map((periodo) => {
+  return periodos.map((periodo) => {
     const total = totales.get(periodo.id) ?? { consumo_m3: 0, cuentas_unicas: 0 }
 
     return {
@@ -123,17 +126,24 @@ export const sumarConsumoPorPeriodo = (consumos) => {
   })
 }
 
-// Recibe los consumos ya filtrados. Cada serie conserva los 24 meses y su propio cociente de sumas.
+// Cada serie conserva los meses solicitados y su propio cociente de sumas.
 export const crearSeriesConsumoPorDimension = (
   consumos,
   dimension = 'ninguna',
-  { clasesUso = [], localidades = [] } = {},
+  { clasesUso = [], localidades = [], periodos = PERIODOS_CONSUMO } = {},
 ) => {
   const desglose = DESGLOSES_CONSUMO.find((opcion) => opcion.id === dimension)
   if (!desglose) throw new Error(`Dimensión de desglose inválida: ${dimension}`)
 
   if (!desglose.campo) {
-    return [{ id: 'total', nombre: 'Total', codigo: 0, periodos: sumarConsumoPorPeriodo(consumos) }]
+    return [
+      {
+        id: 'total',
+        nombre: 'Total',
+        codigo: 0,
+        periodos: sumarConsumoPorPeriodo(consumos, periodos),
+      },
+    ]
   }
 
   const nombres = new Map(
@@ -158,7 +168,7 @@ export const crearSeriesConsumoPorDimension = (
         dimension === 'estrato'
           ? `Estrato ${codigo}`
           : (nombres.get(codigo) ?? `${desglose.nombre} ${codigo}`),
-      periodos: sumarConsumoPorPeriodo(registros),
+      periodos: sumarConsumoPorPeriodo(registros, periodos),
     }))
 }
 

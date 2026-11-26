@@ -7,11 +7,13 @@ import ConsumoAguaControlSegmentado from './ConsumoAguaControlSegmentado.vue'
 import { crearTablaConsumoTsv } from './consumoAguaExport.js'
 import {
   DESGLOSES_CONSUMO,
+  PERIODOS_CONSUMO,
   VARIABLES_CONSUMO,
   crearSeriesConsumoPorDimension,
   filtrarConsumosPorClaseUso,
   filtrarConsumosPorEstrato,
   filtrarConsumosPorLocalidad,
+  filtrarConsumosPorRangoPeriodo,
   prepararClasesUso,
   prepararConsumos,
   prepararLocalidades,
@@ -34,6 +36,24 @@ const claseUsoSeleccionada = ref(null)
 const estratoSeleccionado = ref(null)
 const opcionesEstrato = [1, 2, 3, 4, 5, 6]
 const localidadSeleccionada = ref(null)
+const periodoInicial = ref(202403)
+const periodoFinal = ref(202512)
+const periodosSeleccionados = computed(() =>
+  PERIODOS_CONSUMO.filter(
+    (periodo) => periodo.id >= periodoInicial.value && periodo.id <= periodoFinal.value,
+  ),
+)
+const etiquetaPeriodo = computed(
+  () =>
+    `${periodosSeleccionados.value[0].etiqueta} – ${periodosSeleccionados.value.at(-1).etiqueta}`,
+)
+
+function ajustarRango(extremo) {
+  if (periodoInicial.value > periodoFinal.value) {
+    if (extremo === 'inicial') periodoFinal.value = periodoInicial.value
+    else periodoInicial.value = periodoFinal.value
+  }
+}
 const variableSeleccionada = ref('consumo_m3')
 const opcionesVariable = VARIABLES_CONSUMO.map((variable) => ({
   id: variable.id,
@@ -49,12 +69,16 @@ const variableGrafica = computed(() =>
 )
 
 const registrosFiltrados = computed(() =>
-  filtrarConsumosPorLocalidad(
-    filtrarConsumosPorEstrato(
-      filtrarConsumosPorClaseUso(registros.value, claseUsoSeleccionada.value),
-      estratoSeleccionado.value,
+  filtrarConsumosPorRangoPeriodo(
+    filtrarConsumosPorLocalidad(
+      filtrarConsumosPorEstrato(
+        filtrarConsumosPorClaseUso(registros.value, claseUsoSeleccionada.value),
+        estratoSeleccionado.value,
+      ),
+      localidadSeleccionada.value,
     ),
-    localidadSeleccionada.value,
+    periodoInicial.value,
+    periodoFinal.value,
   ),
 )
 const etiquetaClaseUso = computed(
@@ -62,11 +86,14 @@ const etiquetaClaseUso = computed(
     clasesUso.value.find((clase) => clase.clase_uso_cod === claseUsoSeleccionada.value)
       ?.clase_uso ?? 'Todas las clases de uso',
 )
-const consumoPorPeriodo = computed(() => sumarConsumoPorPeriodo(registrosFiltrados.value))
+const consumoPorPeriodo = computed(() =>
+  sumarConsumoPorPeriodo(registrosFiltrados.value, periodosSeleccionados.value),
+)
 const seriesGrafica = computed(() =>
   crearSeriesConsumoPorDimension(registrosFiltrados.value, desgloseSeleccionado.value, {
     clasesUso: clasesUso.value,
     localidades: localidades.value,
+    periodos: periodosSeleccionados.value,
   }),
 )
 const etiquetaLocalidad = computed(
@@ -219,11 +246,40 @@ onMounted(async () => {
           </option>
         </select>
       </div>
+      <div>
+        <label for="periodo-inicial-consumo" class="form-label">Periodo inicial</label>
+        <select
+          id="periodo-inicial-consumo"
+          v-model="periodoInicial"
+          class="form-select"
+          :class="{ 'filtro-activo': periodoInicial !== PERIODOS_CONSUMO[0].id }"
+          @change="ajustarRango('inicial')"
+        >
+          <option v-for="periodo in PERIODOS_CONSUMO" :key="periodo.id" :value="periodo.id">
+            {{ periodo.etiqueta }}
+          </option>
+        </select>
+      </div>
+      <div>
+        <label for="periodo-final-consumo" class="form-label">Periodo final</label>
+        <select
+          id="periodo-final-consumo"
+          v-model="periodoFinal"
+          class="form-select"
+          :class="{ 'filtro-activo': periodoFinal !== PERIODOS_CONSUMO.at(-1).id }"
+          @change="ajustarRango('final')"
+        >
+          <option v-for="periodo in PERIODOS_CONSUMO" :key="periodo.id" :value="periodo.id">
+            {{ periodo.etiqueta }}
+          </option>
+        </select>
+      </div>
     </div>
     <ConsumoAguaGrafica
       v-if="!cargando && !error"
       :periodos="consumoPorPeriodo"
       :contexto="contextoSeleccion"
+      :rango-periodo="etiquetaPeriodo"
       :variable="variableGrafica"
       :series="seriesGrafica"
       :desglose="desgloseSeleccionado"
@@ -249,7 +305,7 @@ onMounted(async () => {
       <div class="tabla-cabecera">
         <div>
           <h2 id="detalle-mensual">Detalle mensual</h2>
-          <p>{{ contextoSeleccion }} · Enero de 2024 a diciembre de 2025</p>
+          <p>{{ contextoSeleccion }} · {{ etiquetaPeriodo }}</p>
         </div>
         <button
           type="button"
@@ -269,6 +325,9 @@ onMounted(async () => {
             Consumo, cuentas y consumo promedio por mes.
             {{
               contextoSeleccion
+            }}.
+            {{
+              etiquetaPeriodo
             }}.
           </caption>
           <thead>
@@ -363,8 +422,8 @@ onMounted(async () => {
 }
 .informe-filtros {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px 20px;
+  grid-template-columns: 1.15fr 0.85fr 1.15fr 1.2fr 1.2fr;
+  gap: 12px;
   margin-bottom: 24px;
   padding: 18px 20px;
   border: 1px solid #dedede;
@@ -392,13 +451,15 @@ onMounted(async () => {
   font-weight: 700;
 }
 .form-select {
+  min-width: 0;
+  width: 100%;
   min-height: 38px;
   padding-top: 6px;
   padding-bottom: 6px;
   border-color: #d9d9d9;
   border-radius: 8px;
   color: #41464d;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 500;
 }
 .form-select.filtro-activo {

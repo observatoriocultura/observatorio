@@ -6,6 +6,9 @@ import {
   filtrarConsumosPorEstrato,
   filtrarConsumosPorLocalidad,
   prepararConsumos,
+  PERIODOS_CONSUMO,
+  filtrarConsumosPorRangoPeriodo,
+  sumarConsumoPorPeriodo,
   resumirPeriodosConsumo,
 } from './consumoAgua.js'
 import { crearTablaConsumoTsv } from './consumoAguaExport.js'
@@ -72,6 +75,39 @@ const catalogos = {
     { localidad_cod: 20, nombre: 'Sumapaz' },
   ],
 }
+
+test('El rango incluye sus extremos y limita meses, series, resumen y exportación', () => {
+  const periodos = PERIODOS_CONSUMO.filter((mes) => mes.id >= 202403 && mes.id <= 202512)
+  const filtrados = filtrarConsumosPorRangoPeriodo(consumos, 202403, 202512)
+  assert.equal(periodos.length, 22)
+  assert.deepEqual(
+    filtrados.map((fila) => fila.periodo),
+    [202403, 202512],
+  )
+  const tabla = sumarConsumoPorPeriodo(filtrados, periodos)
+  assert.equal(tabla.length, 22)
+  assert.equal(tabla[0].id, 202403)
+  assert.equal(tabla.at(-1).id, 202512)
+  assert.equal(resumirPeriodosConsumo(tabla).consumo_m3, 8)
+  assert.equal(resumirPeriodosConsumo(tabla).consumo_promedio, 8)
+  assert.equal(crearTablaConsumoTsv(tabla).split('\r\n').length, 24)
+  for (const dimension of ['ninguna', 'clase_uso', 'localidad', 'estrato']) {
+    const series = crearSeriesConsumoPorDimension(filtrados, dimension, { ...catalogos, periodos })
+    assert.ok(
+      series.every((serie) => serie.periodos.length === 22 && serie.periodos[0].id === 202403),
+    )
+  }
+})
+
+test('El rango admite un solo mes, el cambio de año y recuperar los 24 meses', () => {
+  assert.equal(filtrarConsumosPorRangoPeriodo(consumos, 202401, 202401).length, 3)
+  const cambioAnio = PERIODOS_CONSUMO.filter((mes) => mes.id >= 202412 && mes.id <= 202501)
+  assert.deepEqual(
+    sumarConsumoPorPeriodo([], cambioAnio).map((mes) => mes.id),
+    [202412, 202501],
+  )
+  assert.equal(filtrarConsumosPorRangoPeriodo(consumos, 202401, 202512).length, consumos.length)
+})
 
 test('El resumen muestra el máximo mensual y divide por la suma de cuentas, no por el máximo', () => {
   const [serie] = crearSeriesConsumoPorDimension(consumos)

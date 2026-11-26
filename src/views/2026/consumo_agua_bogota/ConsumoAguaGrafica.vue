@@ -6,6 +6,7 @@ import 'highcharts/es-modules/masters/modules/accessibility.src.js'
 const props = defineProps({
   periodos: { type: Array, required: true },
   contexto: { type: String, required: true },
+  rangoPeriodo: { type: String, required: true },
   variable: { type: Object, required: true },
   series: { type: Array, required: true },
   desglose: { type: String, default: 'ninguna' },
@@ -106,6 +107,7 @@ const opciones = computed(() => ({
     labels: { style: { color: '#6b6b6b', fontSize: '11px' } },
   },
   yAxis: {
+    min: 0,
     title: { text: escala.value.unidad, style: { color: '#6b6b6b' } },
     gridLineColor: '#ededed',
     maxPadding: 0.18,
@@ -156,7 +158,7 @@ const opciones = computed(() => ({
     },
   },
   accessibility: {
-    description: `${variable.value.nombre} mensual. ${props.contexto}. Enero de 2024 a diciembre de 2025. ${tieneDesglose.value ? `Series por ${props.desglose.replace('_', ' ')}.` : 'Serie total.'}`,
+    description: `${variable.value.nombre} mensual. ${props.contexto}. ${props.rangoPeriodo}. ${tieneDesglose.value ? `Series por ${props.desglose.replace('_', ' ')}.` : 'Serie total.'}`,
   },
   series: seriesHighcharts.value,
   responsive: {
@@ -200,7 +202,7 @@ onBeforeUnmount(destruirGrafica)
     <header class="grafica-cabecera">
       <div>
         <h2 id="evolucion-mensual">{{ variable.nombre }} por mes</h2>
-        <p>{{ contexto }} · Enero de 2024 a diciembre de 2025</p>
+        <p>{{ contexto }} · {{ rangoPeriodo }}</p>
       </div>
       <span class="grafica-unidad">{{ escala.unidad }}</span>
     </header>
